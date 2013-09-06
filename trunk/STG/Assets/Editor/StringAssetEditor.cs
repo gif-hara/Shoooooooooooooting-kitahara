@@ -10,8 +10,9 @@
 using UnityEngine;
 using UnityEditor;
 using System.Collections;
+using System.Collections.Generic;
 
-//[CustomEditor( typeof( StringAsset ) )]
+[CustomEditor( typeof( StringAsset ) )]
 public class StringAssetEditor : A_EditorScriptableObject<StringAsset>
 {
 	public override void OnInspectorGUI ()
@@ -23,7 +24,9 @@ public class StringAssetEditor : A_EditorScriptableObject<StringAsset>
 			if( DrawElement( i ) )	break;
 		}
 	}
-	
+	/// <summary>
+	/// システムの描画.
+	/// </summary>
 	private void DrawSystem()
 	{
 		Enclose( "System", () =>
@@ -36,19 +39,21 @@ public class StringAssetEditor : A_EditorScriptableObject<StringAsset>
 		
 		Line();
 	}
-	
+	/// <summary>
+	/// 要素の描画.
+	/// </summary>
+	/// <returns>
+	/// The element.
+	/// </returns>
+	/// <param name='i'>
+	/// If set to <c>true</c> i.
+	/// </param>
 	private bool DrawElement( int i )
 	{
 		bool isDelete = false;
 		
-		Enclose( "Key", () =>
-		{
-			Target.key[i] = EditorGUILayout.TextArea( Target.key[i] );
-		}, false, false );
-		Enclose( "Asset", () =>
-		{
-			Target.asset[i] = EditorGUILayout.TextArea( Target.asset[i] );
-		}, false, false );
+		SetStringAndDirty( "Key", Target.key, i );
+		SetStringAndDirty( "Asset", Target.asset, i );
 		Button( "Delete", () =>
 		{
 			Target.Delete( i );
@@ -57,5 +62,26 @@ public class StringAssetEditor : A_EditorScriptableObject<StringAsset>
 		Line();
 		
 		return isDelete;
+	}
+	/// <summary>
+	/// 文字列設定とEditor通知処理.
+	/// </summary>
+	/// <param name='list'>
+	/// List.
+	/// </param>
+	/// <param name='i'>
+	/// I.
+	/// </param>
+	private void SetStringAndDirty( string encloseLabel, List<string> list, int i )
+	{
+		Enclose( encloseLabel, () =>
+		{
+			var input = EditorGUILayout.TextArea( list[i] );
+			if( list[i].CompareTo( input ) != 0 )
+			{
+				list[i] = input;
+				EditorUtility.SetDirty( target );
+			}
+		}, false, false );
 	}
 }
