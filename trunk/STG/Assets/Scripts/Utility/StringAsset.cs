@@ -84,7 +84,7 @@ public class StringAsset : ScriptableObject
 		// 実体が無ければ新規生成.
 		if( instance == null )
 		{
-			instance = Resources.Load( "Asset/StringAsset" ) as StringAsset;
+			instance = Resources.Load( "StringAsset/StringAsset" ) as StringAsset;
 			findDictionary = new Dictionary<string, string>();
 			for( int i=0,imax=instance.key.Count; i<imax; i++ )
 			{

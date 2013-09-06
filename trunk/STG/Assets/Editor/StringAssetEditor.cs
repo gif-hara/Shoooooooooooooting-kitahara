@@ -42,6 +42,7 @@ public class StringAssetEditor : A_EditorScriptableObject<StringAsset>
 			Button( "Add", () =>
 			{
 				Target.Add();
+				EditorUtility.SetDirty( target );
 			}, Width( 60.0f ) );
 		}, true, false );
 		
@@ -84,12 +85,14 @@ public class StringAssetEditor : A_EditorScriptableObject<StringAsset>
 			Button( "Up", () =>
 			{
 				Target.Swap( i, i-1 );
+				EditorUtility.SetDirty( target );
 			},  Width( 50.0f ) );
 			
 			// 要素を一つ下へスワップ.
 			Button( "Down", () =>
 			{
 				Target.Swap( i, i+1 );
+				EditorUtility.SetDirty( target );
 			},  Width( 50.0f ) );
 			
 			Space();
@@ -98,6 +101,7 @@ public class StringAssetEditor : A_EditorScriptableObject<StringAsset>
 			Button( "Delete", () =>
 			{
 				Target.Delete( i );
+				EditorUtility.SetDirty( target );
 				isDelete = true;
 			}, Width( 60.0f ) );
 		});
