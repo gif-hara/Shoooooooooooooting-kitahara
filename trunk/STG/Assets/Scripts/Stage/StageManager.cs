@@ -30,6 +30,11 @@ public class StageManager : GameMonoBehaviour
 	public GameObject prefabStopAction;
 	
 	/// <summary>
+	/// プレハブ生成プレハブ.
+	/// </summary>
+	public GameObject prefabPrefabCreator;
+	
+	/// <summary>
 	/// タイムライン.
 	/// </summary>
 	public int timeLine;
