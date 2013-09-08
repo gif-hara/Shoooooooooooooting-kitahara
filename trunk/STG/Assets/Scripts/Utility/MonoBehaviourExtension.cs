@@ -46,7 +46,7 @@ public class MonoBehaviourExtension : MonoBehaviour
 	}
 	private GameObject go = null;
 	
-	public virtual void Awake()
+	public virtual void Start()
 	{
 		cachedTransform = transform;
 	}

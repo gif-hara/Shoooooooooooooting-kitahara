@@ -25,7 +25,8 @@ public abstract class A_Collider : GameMonoBehaviour
 	
 	void Update()
 	{
-		UpdatePositionZ();
+		var pos = cachedTransform.position;
+		cachedTransform.position = new Vector3( pos.x, pos.y, 0.0f );
 	}
 	
 	public abstract void OnCollision( A_Collider target );

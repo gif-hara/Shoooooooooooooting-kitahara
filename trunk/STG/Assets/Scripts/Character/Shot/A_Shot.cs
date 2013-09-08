@@ -13,13 +13,14 @@ using System.Collections;
 
 public abstract class A_Shot : GameMonoBehaviour
 {
+	private const float DestroyDistance = 450.0f * 450.0f;
+	
 	void Update()
 	{
 		int benchMarkId = ScriptProfiler.Begin( this );
 		
 		// 画面外への移動による死亡処理.
-		float distance = 450.0f;
-		if( cachedTransform.position.sqrMagnitude >= (distance * distance)  )
+		if( cachedTransform.position.sqrMagnitude >= DestroyDistance  )
 		{
 			Destroy( gameObject );
 		}

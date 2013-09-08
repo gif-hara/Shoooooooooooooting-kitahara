@@ -11,29 +11,29 @@ using UnityEngine;
 using System.Collections;
 
 
-public class AutoMove : MonoBehaviour
+public class AutoMove : MonoBehaviourExtension
 {
 	public float speed;
 	
 	public Vector3 velocity;
 	
-	private Transform trans;
+	private Vector3 cachedVelocity = Vector2.zero;
 	
-	// Use this for initialization
-	void Start()
+	public override void Start()
 	{
-		trans = transform;
+		base.Start();
+		cachedVelocity = velocity * speed;
 	}
-
+		
 	// Update is called once per frame
 	void Update()
 	{
-		trans.localPosition += velocity * speed;
+		cachedTransform.localPosition += cachedVelocity;
 	}
 	
 	void OnDrawGizmos()
 	{
 		Gizmos.color = Color.red;
-		Gizmos.DrawLine( trans.position, trans.position + ( velocity * 9999.0f ) );
+		Gizmos.DrawLine( cachedTransform.position, cachedTransform.position + ( velocity * 9999.0f ) );
 	}
 }
