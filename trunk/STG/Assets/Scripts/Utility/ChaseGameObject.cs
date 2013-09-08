@@ -25,8 +25,9 @@ public class ChaseGameObject : GameMonoBehaviour
 	public float speed;
 	
 	// Update is called once per frame
-	void LateUpdate()
+	public override void LateUpdate()
 	{
+		base.LateUpdate();
 		if( refChaseObject == null )	return;
 		
 		Trans.position = Vector3.Lerp( Trans.position, refChaseObject.position, speed );

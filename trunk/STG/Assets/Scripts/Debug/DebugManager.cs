@@ -55,8 +55,9 @@ public class DebugManager : A_GUIElement
 	public static bool IsNotLifeDecrement{ get{ return isNotLifeDecrement; } }
 	private static bool isNotLifeDecrement = false;
 		
-	void Update()
+	public override void Update()
 	{
+		base.Update();
 		// !~ ゲームレベルデバッグ.
 		for( int i=0; i<10; i++ )
 		{

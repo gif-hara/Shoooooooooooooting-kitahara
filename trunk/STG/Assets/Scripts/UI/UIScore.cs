@@ -39,8 +39,9 @@ public class UIScore : GameMonoBehaviour
 	/// </summary>
 	private const string AssetKey = "ScoreUIFormat";
 	
-	void LateUpdate()
+	public override void LateUpdate()
 	{
+		base.LateUpdate();
 		var message = StringAsset.Format( AssetKey, GameManager.Score );
 		refTextMeshList.ForEach( (obj) =>
 		{

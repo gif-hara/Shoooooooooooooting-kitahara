@@ -18,14 +18,16 @@ public class PlayerLookAt : GameMonoBehaviour
 	private LookAtObject refLookAtObject;
 	
 	// Use this for initialization
-	void Start()
+	public override void Start()
 	{
+		base.Start();
 		refLookAtObject = LookAtObject.Begin( Trans, ReferenceManager.refPlayer.transform, lookSpeed );
 	}
 
 	// Update is called once per frame
-	void Update()
+	public override void Update()
 	{
+		base.Update();
 		Trans.rotation = refLookAtObject.Trans.rotation;
 	}
 }

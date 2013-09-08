@@ -80,19 +80,22 @@ public class Player : GameMonoBehaviour
 	private readonly Vector3 initialPosition = new Vector3( 0.0f, -200.0f, 0.0f );
 	
 	// Use this for initialization
-	void Awake()
+	public override void Awake()
 	{
+		base.Awake();
 		ReferenceManager.refPlayer = this;
 	}
 	
-	void Start()
+	public override void Start()
 	{
+		base.Start();
 		Relocation();
 	}
 
 	// Update is called once per frame
-	void Update()
+	public override void Update()
 	{
+		base.Update();
 		UpdateBarrierPoint();
 		UpdateRenderer();
 		invincibleTime--;

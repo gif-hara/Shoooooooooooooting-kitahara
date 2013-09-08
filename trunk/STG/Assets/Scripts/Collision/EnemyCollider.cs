@@ -20,13 +20,15 @@ public class EnemyCollider : A_Collider
 	
 	public List<EnemyControllerBase> refEnemyControllerBaseList;
 	
-	void Awake()
+	public override void Awake()
 	{
+		base.Awake();
 		ReferenceManager.refCollisionManager.AddEnemyCollider( this );
 	}
 	
-	void Update()
+	public override void Update()
 	{
+		base.Update();
 		UpdatePositionZ();
 	}
 	

@@ -14,8 +14,9 @@ using System.Collections.Generic;
 
 public class FrameRateUtility : A_Singleton<FrameRateUtility>
 {
-	void Awake()
+	public override void Awake()
 	{
+		base.Awake();
 		Instance = this;
 	}
 	public static void StartCoroutine( int frame, System.Action func )

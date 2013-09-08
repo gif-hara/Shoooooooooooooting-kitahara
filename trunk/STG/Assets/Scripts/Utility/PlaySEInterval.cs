@@ -21,14 +21,16 @@ public class PlaySEInterval : GameMonoBehaviour
 	private int maxInterval;
 	
 	// Use this for initialization
-	void Start()
+	public override void Start()
 	{
+		base.Start();
 		maxInterval = interval;
 	}
 	
 	// Update is called once per frame
-	void Update()
+	public override void Update()
 	{
+		base.Update();
 		if( interval <= 0 )
 		{
 			ReferenceManager.refSoundManager.Play( label );

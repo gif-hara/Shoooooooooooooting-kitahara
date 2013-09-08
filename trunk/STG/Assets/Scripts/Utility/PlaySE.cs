@@ -18,14 +18,10 @@ public class PlaySE : GameMonoBehaviour
 	
 	public int delay;
 	
-	// Use this for initialization
-	void Start()
-	{
-	}
-	
 	// Update is called once per frame
-	void Update()
+	public override void Update()
 	{
+		base.Update();
 		if( delay <= 0 )
 		{
 			ReferenceManager.refSoundManager.Play( label );

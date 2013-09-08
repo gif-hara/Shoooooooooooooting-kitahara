@@ -15,8 +15,9 @@ public class EnemyShotCollider : A_Collider
 {
 	public EnemyShot refEnemyShot;
 	
-	void Awake()
+	public override void Awake()
 	{
+		base.Awake();
 		ReferenceManager.refCollisionManager.AddEnemyShotCollider( this );
 	}
 	public override void OnCollision (A_Collider target)

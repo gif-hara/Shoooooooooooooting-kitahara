@@ -35,8 +35,9 @@ public class EnemyShotCreator : GameMonoBehaviour
 	private List<EnemyShotCreateComponentBase> componentFromSetList = new List<EnemyShotCreateComponentBase>();
 	private List<EnemyShotCreateComponentBase> componentFromAddList = new List<EnemyShotCreateComponentBase>();
 	
-	void Awake()
+	public override void Awake()
 	{
+		base.Awake();
 		var list = new List<EnemyShotCreateComponentBase>( gameObject.GetComponents<EnemyShotCreateComponentBase>() );
 		list.ForEach( (obj) =>
 		{
@@ -52,8 +53,9 @@ public class EnemyShotCreator : GameMonoBehaviour
 		});
 	}
 	
-	void LateUpdate()
+	public override void LateUpdate()
 	{
+		base.LateUpdate();
 		if( !isSleep )
 		{
 			UpdateCreateShot();

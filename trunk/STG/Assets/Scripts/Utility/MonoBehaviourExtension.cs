@@ -46,8 +46,20 @@ public class MonoBehaviourExtension : MonoBehaviour
 	}
 	private GameObject go = null;
 	
+	public virtual void Awake()
+	{
+		
+	}
 	public virtual void Start()
 	{
 		cachedTransform = transform;
+	}
+	public virtual void Update()	
+	{
+		
+	}
+	public virtual void LateUpdate()
+	{
+	
 	}
 }

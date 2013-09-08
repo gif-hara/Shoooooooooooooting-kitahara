@@ -47,20 +47,23 @@ public class StageManager : GameMonoBehaviour
 	
 	private List<A_StageTimeLineActionable> currentActionableList = new List<A_StageTimeLineActionable>();
 	
-	void Awake()
+	public override void Awake()
 	{
+		base.Awake();
 		ReferenceManager.refStageManager = this;
 	}
 	// Use this for initialization
-	void Start()
+	public override void Start()
 	{
+		base.Start();
 		InitActionableList();
 		SetNextActionableList();
 	}
 
 	// Update is called once per frame
-	void Update()
+	public override void Update()
 	{
+		base.Update();
 		Action();
 		timeLine++;
 	}

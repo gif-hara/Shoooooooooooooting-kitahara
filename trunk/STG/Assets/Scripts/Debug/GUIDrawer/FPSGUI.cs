@@ -19,13 +19,15 @@ public class FPSGUI : A_GUIElement
 	private string frameRateStr = "";
 	private const float INTERVAL = 0.5f; // この時間おきにFPSを計算して表示させる
 	
-	void Start()
+	public override void Start()
 	{
+		base.Start();
 		oldTime = Time.realtimeSinceStartup;
 	}
 	
-	void Update()
+	public override void Update()
 	{
+		base.Update();
 		frame++;
 		float time = Time.realtimeSinceStartup - oldTime;
 		if (time >= INTERVAL)

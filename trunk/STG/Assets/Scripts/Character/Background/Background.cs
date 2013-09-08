@@ -23,14 +23,16 @@ public class Background : GameMonoBehaviour
 	private int offsetCount = 0;
 	
 	// Use this for initialization
-	void Start()
+	public override void Start()
 	{
+		base.Start();
 		refMaterial = refRenderer.sharedMaterial;
 	}
 
 	// Update is called once per frame
-	void Update()
+	public override void Update()
 	{
+		base.Update();
 		refMaterial.mainTextureOffset = new Vector2( 0, (float)(-offsetCount * speed) / 60.0f );
 		offsetCount++;
 	}

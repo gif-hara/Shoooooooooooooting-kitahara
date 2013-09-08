@@ -132,8 +132,9 @@ public abstract class A_ObjectMove : MonoBehaviourExtension
 	protected const float OverDistance = 1500.0f;
 	
 	// Update is called once per frame
-	protected virtual void Update()
+	public override void Update()
 	{
+		base.Update();
 		if( data.delayFrame > 0 )
 		{
 			data.delayFrame--;

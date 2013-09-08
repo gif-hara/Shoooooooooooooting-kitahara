@@ -23,16 +23,18 @@ public class ObjectMoveChasePlayer : A_ObjectMove
 	private bool isDisableLookAtComponent = false;
 	
 	// Use this for initialization
-	void Start()
+	public override void Start()
 	{
+		base.Start();
 		refPlayer = ReferenceManager.Instance.refPlayer.Trans;
 
 		var newObj = new GameObject( "[ObjectMoveChasePlayer]RotationObject" );
 		rotationObject = newObj.transform;
 	}
 	
-	void LateUpdate()
+	public override void LateUpdate()
 	{
+		base.LateUpdate();
 		if( data.delayFrame > 0 )	return;
 		
 		if( data.isSyncRotation )

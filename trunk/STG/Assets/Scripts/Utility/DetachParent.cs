@@ -15,8 +15,9 @@ using System.Collections.Generic;
 public class DetachParent : GameMonoBehaviour
 {
 	// Use this for initialization
-	void Awake()
+	public override void Awake()
 	{
+		base.Awake();
 		Trans.parent = null;
 	}
 }

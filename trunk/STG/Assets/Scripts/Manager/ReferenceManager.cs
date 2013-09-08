@@ -104,8 +104,9 @@ public class ReferenceManager : A_Singleton<ReferenceManager>
 	/// </summary>
 	public List<GameObject> prefabPlayerList;
 	
-	void Awake()
+	public override void Awake()
 	{
+		base.Awake();
 		Instance = this;
 	}
 }

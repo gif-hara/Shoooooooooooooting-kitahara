@@ -15,8 +15,9 @@ public abstract class A_Shot : GameMonoBehaviour
 {
 	private const float DestroyDistance = 450.0f * 450.0f;
 	
-	void Update()
+	public override void Update()
 	{
+		base.Update();
 		int benchMarkId = ScriptProfiler.Begin( this );
 		
 		// 画面外への移動による死亡処理.

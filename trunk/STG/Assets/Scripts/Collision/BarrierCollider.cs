@@ -14,8 +14,9 @@ using System.Collections.Generic;
 
 public class BarrierCollider : A_Collider
 {
-	void Awake()
+	public override void Awake()
 	{
+		base.Awake();
 		ReferenceManager.refCollisionManager.AddBarrierCollider( this );
 	}
 

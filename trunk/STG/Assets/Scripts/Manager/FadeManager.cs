@@ -26,13 +26,15 @@ public class FadeManager : GameMonoBehaviour
 	
 	private Color toColor = Color.white;
 	
-	void Start()
+	public override void Start()
 	{
+		base.Start();
 		refMaterial = refRenderer.material;
 	}
 	
-	void Update()
+	public override void Update()
 	{
+		base.Update();
 		int id = ScriptProfiler.Begin( this );
 		UpdateDuration();
 		ScriptProfiler.End( this, id );

@@ -23,14 +23,16 @@ public class InputBarrier : A_InputAction
 	private GameObject currentBarrier;
 	
 	// Use this for initialization
-	void Start()
+	public override void Start()
 	{
+		base.Start();
 		decorateManager = new DecorateManager<A_InputAction>( this );
 	}
 
 	// Update is called once per frame
-	void Update()
+	public override void Update()
 	{
+		base.Update();
 		UpdateIsValid();
 	}
 	

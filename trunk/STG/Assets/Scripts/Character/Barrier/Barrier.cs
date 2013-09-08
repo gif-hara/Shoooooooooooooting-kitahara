@@ -21,14 +21,16 @@ public class Barrier : GameMonoBehaviour
 	private Player player;
 	
 	// Use this for initialization
-	void Start()
+	public override void Start()
 	{
+		base.Start();
 		player = ReferenceManager.refPlayer;
 	}
 
 	// Update is called once per frame
-	void Update()
+	public override void Update()
 	{
+		base.Update();
 		UpdatePosition();
 		UpdateParticleScale();
 	}

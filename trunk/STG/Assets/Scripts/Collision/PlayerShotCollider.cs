@@ -19,13 +19,15 @@ public class PlayerShotCollider : A_Collider
 	
 	private bool isEnemyCollision = false;
 	
-	void Awake()
+	public override void Awake()
 	{
+		base.Awake();
 		ReferenceManager.refCollisionManager.AddPlayerShotCollider( this );
 	}
 	
-	void Update()
+	public override void Update()
 	{
+		base.Update();
 		UpdatePositionZ();
 		if( refParent.transform.position.y >= 300.0f )
 		{

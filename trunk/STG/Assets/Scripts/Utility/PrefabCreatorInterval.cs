@@ -27,8 +27,9 @@ public class PrefabCreatorInterval : GameMonoBehaviour
 	private int currentInterval = 0;
 	
 	// Use this for initialization
-	void Start()
+	public override void Start()
 	{
+		base.Start();
 		if( refParent == null )
 		{
 			refParent = transform;
@@ -36,8 +37,9 @@ public class PrefabCreatorInterval : GameMonoBehaviour
 	}
 
 	// Update is called once per frame
-	void Update()
+	public override void Update()
 	{
+		base.Update();
 		if( currentInterval >= interval )
 		{
 			Vector3 pos = new Vector3( Random.Range( min.x, max.x ), Random.Range( min.y, max.y ), 0.0f );

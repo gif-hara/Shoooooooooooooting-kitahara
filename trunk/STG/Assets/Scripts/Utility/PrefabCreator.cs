@@ -37,23 +37,26 @@ public class PrefabCreator : GameMonoBehaviour
 	
 	public int delay;
 	
-	void Awake()
+	public override void Awake()
 	{
+		base.Awake();
 		if( createType == CreateType.Awake )
 		{
 			Create();
 		}
 	}
 	// Use this for initialization
-	void Start()
+	public override void Start()
 	{
+		base.Start();
 		if( createType == CreateType.Start )
 		{
 			Create();
 		}
 	}
-	void Update()
+	public override void Update()
 	{
+		base.Update();
 		if( createType != CreateType.Update )	return;
 		
 		if( delay <= 0 )

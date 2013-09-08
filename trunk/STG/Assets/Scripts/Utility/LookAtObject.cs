@@ -20,14 +20,10 @@ public class LookAtObject : MonoBehaviourExtension
 	
 	public float lookSpeed;
 	
-	// Use this for initialization
-	void Start()
-	{
-	}
-	
 	// Update is called once per frame
-	void Update()
+	public override void Update()
 	{
+		base.Update();
 		SyncRotationObjectPosition();
 		
 		if( lookSpeed >= 1.0f )

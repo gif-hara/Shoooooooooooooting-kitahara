@@ -18,8 +18,9 @@ public class EnemyShotSeparateCurve : GameMonoBehaviour
 	
 	public EnemyShotCreateComponent.Element element;
 	
-	void Update()
+	public override void Update()
 	{
+		base.Update();
 		targetList.ForEach( (obj) =>
 		{
 			obj.separate = element.EvaluteFloorToInt();

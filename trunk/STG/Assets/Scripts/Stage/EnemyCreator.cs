@@ -35,9 +35,6 @@ public class EnemyCreator : A_StageTimeLineActionable
 	/// </summary>
 	public bool isIconDraw;
 		
-	void Update()
-	{
-	}
 	void OnDrawGizmos()
 	{
 		if( isIconDraw )

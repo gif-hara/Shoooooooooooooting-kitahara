@@ -15,8 +15,9 @@ public class GameDefine : A_Singleton<GameDefine>
 {	
 	public float ColliderLayer = 0.0f;
 	
-	void Awake()
+	public override void Awake()
 	{
+		base.Awake();
 		Instance = this;
 	}
 }

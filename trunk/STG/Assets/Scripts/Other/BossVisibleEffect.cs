@@ -90,14 +90,16 @@ public class BossVisibleEffect : GameMonoBehaviour
 	private readonly Color WarningUpdateFromColor = new Color( 1.0f, 1.0f, 1.0f, 0.4f );
 	
 	// Use this for initialization
-	void Start()
+	public override void Start()
 	{
+		base.Start();
 		InitWarningRenderer();
 	}
 	
 	// Update is called once per frame
-	void Update()
+	public override void Update()
 	{
+		base.Update();
 		UpdateFade();
 		UpdateLineEffect();
 		UpdatePlaySE();

@@ -86,19 +86,22 @@ public class EnemyController : EnemyControllerBase
 	public bool IsDead{ get{ return isDead; } }
 	private bool isDead = false;
 		
-	void Awake()
+	public override void Awake()
 	{
+		base.Awake();
 		maxHp = hp;
 	}
 	// Use this for initialization
-	protected virtual void Start()
+	public override void Start()
 	{
+		base.Start();
 		AttachComponent();
 	}
 
 	// Update is called once per frame
-	protected virtual void Update()
+	public override void Update()
 	{
+		base.Update();
 		UpdateCompleteMoveComponent();
 		
 		invincibleTimer--;

@@ -17,8 +17,9 @@ public class EnemyShotFreeze : EnemyShotCreateComponentSeparate
 	
 	public int freezedInterval;
 	
-	void Start()
+	public override void Start()
 	{
+		base.Start();
 		if( awakeFreeze )
 		{
 			owner.enabled = false;

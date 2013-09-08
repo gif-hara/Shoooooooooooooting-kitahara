@@ -21,15 +21,17 @@ public class UIBarrier : GameMonoBehaviour
 	public float barSpeed;
 	
 	// Use this for initialization
-	void Start()
+	public override void Start()
 	{
+		base.Start();
 		var player = ReferenceManager.refPlayer;
 		refBar.Initialize( player.maxSpecialPoint, player.CurrentSpecialPoint );
 	}
 
 	// Update is called once per frame
-	void LateUpdate()
+	public override void LateUpdate()
 	{
+		base.LateUpdate();
 		refBar.Current += ((float)ReferenceManager.refPlayer.CurrentSpecialPoint - refBar.Current) / barSpeed;
 	}
 

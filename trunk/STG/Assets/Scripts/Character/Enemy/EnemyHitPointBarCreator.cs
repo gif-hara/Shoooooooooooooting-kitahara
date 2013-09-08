@@ -19,8 +19,9 @@ public class EnemyHitPointBarCreator : GameMonoBehaviour
 	private UIEnemyHitPointBar refBarConrtoller;
 	
 	// Use this for initialization
-	void Start()
+	public override void Start()
 	{
+		base.Start();
 		refBarConrtoller = InstantiateAsChild( ReferenceManager.refUILayer, ReferenceManager.prefabEnemyHitPointBar ).GetComponent<UIEnemyHitPointBar>();
 		refBarConrtoller.Initialize( refEnemy );
 	}

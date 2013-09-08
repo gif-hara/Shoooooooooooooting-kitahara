@@ -87,17 +87,13 @@ public class SoundManager : GameMonoBehaviour
 	private List<SoundEntityData> entityDataList = new List<SoundEntityData>();
 	
 	// Use this for initialization
-	void Awake()
+	public override void Awake()
 	{
+		base.Awake();
 		InitClipDictionary();
 		InitEntityList();
 	}
 
-	// Update is called once per frame
-	void Update()
-	{
-	}
-	
 	public void Play( string label )
 	{
 		entityDataList[clipDictionary[label].Index].GetEntity().Play();

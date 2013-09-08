@@ -17,8 +17,9 @@ public class PlayerCollider : A_Collider
 	
 	public GameObject prefabCollisionEffect;
 	
-	void Awake()
+	public override void Awake()
 	{
+		base.Awake();
 		ReferenceManager.refCollisionManager.AddPlayerCollider( this );
 		InstantiateAsChild( transform, prefabCollisionEffect );
 	}

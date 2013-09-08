@@ -65,14 +65,16 @@ public class EnemyFlashController : EnemyControllerBase
 	private const float DamageColorNormalize = 0.1f;
 	
 	// Use this for initialization
-	void Start()
+	public override void Start()
 	{
+		base.Start();
 		InitMaterialList();
 	}
 
 	// Update is called once per frame
-	void LateUpdate()
+	public override void LateUpdate()
 	{
+		base.LateUpdate();
 		UpdateColor();
 		duration--;
 	}

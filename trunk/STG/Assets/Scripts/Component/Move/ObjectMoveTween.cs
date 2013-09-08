@@ -18,8 +18,9 @@ public class ObjectMoveTween : A_ObjectMove
 {
 	private Vector3 initialPosition;
 	
-	void Start()
+	public override void Start()
 	{
+		base.Start();
 		initialPosition = refTrans.position;
 	}
 	

@@ -37,14 +37,16 @@ public class UIEnemyHitPointBar : GameMonoBehaviour
 	private const int StartEffectTime = 60;
 	
 	// Use this for initialization
-	void Start()
+	public override void Start()
 	{
+		base.Start();
 		ReferenceManager.refScore.SetPosition( UIScore.Visibility.Hidden );
 	}
 
 	// Update is called once per frame
-	void Update()
+	public override void Update()
 	{
+		base.Update();
 		UpdateBar();
 	}
 	/// <summary>

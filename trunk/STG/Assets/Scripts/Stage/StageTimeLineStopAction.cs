@@ -49,8 +49,9 @@ public class StageTimeLineStopAction : A_StageTimeLineActionable
 	/// </summary>
 	private int destroyEnemyNum = 0;
 	
-	void Update()
+	public override void Update()
 	{
+		base.Update();
 		if( !isStop )	return;
 		
 		UpdateDelayDuration();

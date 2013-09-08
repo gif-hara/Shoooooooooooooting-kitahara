@@ -26,14 +26,16 @@ public class InputShot : A_InputAction
 	private int timer;
 	
 	// Use this for initialization
-	void Start()
+	public override void Start()
 	{
+		base.Start();
 		decorateManager = new DecorateManager<A_InputAction>( this );
 	}
 
 	// Update is called once per frame
-	void Update()
+	public override void Update()
 	{
+		base.Update();
 		int benchMarkId = ScriptProfiler.Begin( this );
 		
 		if( Input.GetKey( KeyCode.Z ) && timer >= interval )

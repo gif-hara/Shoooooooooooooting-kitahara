@@ -66,8 +66,9 @@ public class GameManager : GameMonoBehaviour
 	/// </summary>
 	private const int GameLevelMax = 100;
 	
-	void Awake()
+	public override void Awake()
 	{
+		base.Awake();
 		Application.targetFrameRate = 60;
 		CreatePlayer();
 		
@@ -77,14 +78,10 @@ public class GameManager : GameMonoBehaviour
 		}
 	}
 	
-	// Use this for initialization
-	void Start()
-	{
-	}
-
 	// Update is called once per frame
-	void Update()
+	public override void Update()
 	{
+		base.Update();
 		gameLevel = gameLevel > GameLevelMax ? GameLevelMax : gameLevel;
 		gameLevel = gameLevel < 0 ? 0 : gameLevel;
 	}

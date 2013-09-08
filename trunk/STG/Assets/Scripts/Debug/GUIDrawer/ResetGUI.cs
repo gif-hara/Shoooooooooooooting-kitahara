@@ -16,15 +16,6 @@ public class ResetGUI : A_GUIElement
 {
 	public string sceneName;
 	
-	// Use this for initialization
-	void Start()
-	{
-	}
-
-	// Update is called once per frame
-	void Update()
-	{
-	}
 	public override void Draw()
 	{
 		Button( "Reset", () =>
