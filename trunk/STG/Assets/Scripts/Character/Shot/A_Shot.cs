@@ -17,7 +17,12 @@ public abstract class A_Shot : GameMonoBehaviour
 	{
 		int benchMarkId = ScriptProfiler.Begin( this );
 		
-		Destroy();
+		// 画面外への移動による死亡処理.
+		float distance = 450.0f;
+		if( cachedTransform.position.sqrMagnitude >= (distance * distance)  )
+		{
+			Destroy( gameObject );
+		}
 		
 		ScriptProfiler.End( this, benchMarkId );
 	}
@@ -46,7 +51,6 @@ public abstract class A_Shot : GameMonoBehaviour
 	protected void Destroy()
 	{
 		float distance = 450.0f;
-		
 		if( Vector3.Distance( Vector3.zero, Trans.position ) >= distance )
 		{
 			Destroy( gameObject );

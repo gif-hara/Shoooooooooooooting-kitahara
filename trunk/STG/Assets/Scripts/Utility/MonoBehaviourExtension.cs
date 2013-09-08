@@ -13,6 +13,7 @@ using System.Collections;
 
 public class MonoBehaviourExtension : MonoBehaviour
 {
+	
 	/// <summary>
 	/// transform高速アクセスプロパティ.
 	/// </summary>
@@ -23,11 +24,11 @@ public class MonoBehaviourExtension : MonoBehaviour
 	{
 		get
 		{
-			if( trans == null ){ trans = transform; }
-			return trans;
+			if( cachedTransform == null ){ cachedTransform = transform; }
+			return cachedTransform;
 		}
 	}
-	private Transform trans = null;
+	protected Transform cachedTransform = null;
 	
 	/// <summary>
 	/// gameObject高速アクセスプロパティ.
@@ -44,4 +45,9 @@ public class MonoBehaviourExtension : MonoBehaviour
 		}
 	}
 	private GameObject go = null;
+	
+	public virtual void Awake()
+	{
+		cachedTransform = transform;
+	}
 }

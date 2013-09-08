@@ -7,6 +7,7 @@
 *     * Author      : Hiroki_Kitahara.
 */
 /*===========================================================================*/
+//#define USE_PROFILE
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -15,6 +16,7 @@ using System.Text;
 
 public class ScriptProfiler : GameMonoBehaviour
 {
+#if USE_PROFILE
 	public class BenchMarkData
 	{
 		private float startTime;
@@ -149,4 +151,28 @@ public class ScriptProfiler : GameMonoBehaviour
 		
 		dataDictionary = new Dictionary<string, BenchMarkListData>();
 	}
+#else
+	/// <summary>
+	/// スクリプトベンチマークの開始.
+	/// </summary>
+	/// <param name='scriptName'>
+	/// スクリプト名.
+	/// </param>
+	public static int Begin( object obj )
+	{
+		return 0;
+	}
+	/// <summary>
+	/// スクリプトベンチマークの終了.
+	/// </summary>
+	/// <param name='scriptName'>
+	/// スクリプト名.
+	/// </param>
+	/// <param name='id'>
+	/// Begin関数で返したID.
+	/// </param>
+	public static void End( object obj, int id )
+	{
+	}
+#endif
 }
