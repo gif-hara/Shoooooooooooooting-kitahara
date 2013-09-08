@@ -22,7 +22,7 @@ public class StageTimeLinePrefabCreateActionEditor : A_StageTimeLineActionEditor
 			DrawTimeLine();
 			
 			var tmpPrefab = Target.prefab;
-			Target.prefab = EditorGUILayout.ObjectField( "Prefab", Target.prefab, typeof( GameObject ) ) as GameObject;
+			Target.prefab = EditorGUILayout.ObjectField( "Prefab", Target.prefab, typeof( GameObject ), true ) as GameObject;
 			
 			if( tmpPrefab != Target.prefab )
 			{

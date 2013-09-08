@@ -33,8 +33,6 @@ public class UITable : MonoBehaviour
 	public bool keepWithinPanel = false;
 	public OnReposition onReposition;
 
-	UIPanel mPanel;
-	UIDraggablePanel mDrag;
 	bool mStarted = false;
 
 	/// <summary>
@@ -135,12 +133,10 @@ public class UITable : MonoBehaviour
 			for (int i = 0; i < myTrans.childCount; ++i)
 			{
 				Transform child = myTrans.GetChild(i);
-				if (child && (!hideInactive || child.gameObject.active)) children.Add(child);
+				if (child && (!hideInactive || child.gameObject.activeSelf)) children.Add(child);
 			}
 			if (sorted) children.Sort(SortByName);
 			if (children.Count > 0) RepositionVariableSize(children);
-			if (mPanel != null && mDrag == null) mPanel.ConstrainTargetToBounds(myTrans, true);
-			if (mDrag != null) mDrag.UpdateScrollbars(true);
 		}
 		else repositionNow = true;
 	}
@@ -153,11 +149,6 @@ public class UITable : MonoBehaviour
 	{
 		mStarted = true;
 
-		if (keepWithinPanel)
-		{
-			mPanel = NGUITools.FindInParents<UIPanel>(gameObject);
-			mDrag = NGUITools.FindInParents<UIDraggablePanel>(gameObject);
-		}
 		Reposition();
 	}
 
