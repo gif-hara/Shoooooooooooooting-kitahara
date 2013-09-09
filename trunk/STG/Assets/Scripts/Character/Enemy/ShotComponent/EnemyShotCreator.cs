@@ -14,22 +14,54 @@ using System.Collections.Generic;
 
 public class EnemyShotCreator : GameMonoBehaviour
 {
+	/// <summary>
+	/// ショットID.
+	/// </summary>
 	public int shotId;
-
+	
+	/// <summary>
+	/// 速度.
+	/// </summary>
 	public float speed;
 	
+	/// <summary>
+	/// 発射間隔.
+	/// </summary>
 	public int interval;
 	
+	/// <summary>
+	/// 発射数.
+	/// </summary>
 	public int number;
 	
+	/// <summary>
+	/// 発射範囲.
+	/// </summary>
 	public float range;
 	
+	/// <summary>
+	/// 発射ロックフラグ.
+	/// </summary>
+	public bool isLock = false;
+	
+	/// <summary>
+	/// 発射処理の休憩フラグ.
+	/// </summary>
 	private bool isSleep = false;
 	
+	/// <summary>
+	/// 休憩フレーム.
+	/// </summary>
 	private int sleepFrame = 0;
 	
+	/// <summary>
+	/// 現在の発射間隔.
+	/// </summary>
 	private int currentInterval = 0;
 	
+	/// <summary>
+	/// 発射した総数.
+	/// </summary>
 	private int totalShotCount = 0;
 	
 	private List<EnemyShotCreateComponentBase> componentFromSetList = new List<EnemyShotCreateComponentBase>();
@@ -103,6 +135,13 @@ public class EnemyShotCreator : GameMonoBehaviour
 	}
 	protected void CreateShot()
 	{
+		// ロックされていたら撃たない.
+		if( isLock )
+		{
+			totalShotCount++;
+			return;
+		}
+		
 		if( number == 1 )
 		{
 			CreateShot( 0.0f );
