@@ -15,9 +15,19 @@ Platform assembly: C:\Users\hiroki\Documents\Unity Projects\STG\trunk\STG\Build\
 Loading C:\Users\hiroki\Documents\Unity Projects\STG\trunk\STG\Build\Game_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
 Platform assembly: C:\Users\hiroki\Documents\Unity Projects\STG\trunk\STG\Build\Game_Data\Managed\NGUI.dll (this message is harmless)
 Loading C:\Users\hiroki\Documents\Unity Projects\STG\trunk\STG\Build\Game_Data\Managed\NGUI.dll into Unity Child Domain
-- Completed reload, in  0.035 seconds
+- Completed reload, in  0.033 seconds
 desktop: 1366x768 60Hz; virtual: 3286x1645 at -1920,-877
 <RI> Initializing input.
 <RI> Input initialized.
 Platform assembly: C:\Users\hiroki\Documents\Unity Projects\STG\trunk\STG\Build\Game_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\hiroki\Documents\Unity Projects\STG\trunk\STG\Build\Game_Data\Managed\System.dll (this message is harmless)
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Component:InternalGetGameObject ()
+  at UnityEngine.Component.get_gameObject () [0x00000] in <filename unknown>:0 
+  at MonoBehaviourExtension.get_GO () [0x00000] in <filename unknown>:0 
+  at UIScore.SetPosition (Visibility vis) [0x00000] in <filename unknown>:0 
+  at UIEnemyHitPointBar.EndEffect () [0x00000] in <filename unknown>:0 
+  at EnemyHitPointBarCreator.OnDestroy () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
