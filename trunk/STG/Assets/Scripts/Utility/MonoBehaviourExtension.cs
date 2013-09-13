@@ -28,7 +28,7 @@ public class MonoBehaviourExtension : MonoBehaviour
 			return cachedTransform;
 		}
 	}
-	protected Transform cachedTransform = null;
+	public Transform cachedTransform = null;
 	
 	/// <summary>
 	/// gameObject高速アクセスプロパティ.

@@ -24,6 +24,8 @@ public class PrefabCreatorInterval : GameMonoBehaviour
 	
 	public int interval;
 	
+	public int createNum;
+	
 	private int currentInterval = 0;
 	
 	// Use this for initialization
@@ -34,6 +36,16 @@ public class PrefabCreatorInterval : GameMonoBehaviour
 		{
 			refParent = transform;
 		}
+		
+//		for( int i=0; i<interval; i++ )
+//		{
+//			Vector3 pos = new Vector3( Random.Range( min.x, max.x ), Random.Range( min.y, max.y ), 0.0f );
+//			var obj = InstantiateAsChild( Trans, prefabList[Random.Range( 0, prefabList.Count)] ).transform;
+//			obj.localPosition = pos;
+//			obj.parent = refParent;
+//			currentInterval = 0;
+//			enabled = false;
+//		}
 	}
 
 	// Update is called once per frame
@@ -47,6 +59,11 @@ public class PrefabCreatorInterval : GameMonoBehaviour
 			obj.localPosition = pos;
 			obj.parent = refParent;
 			currentInterval = 0;
+			if( createNum <= 0 )
+			{
+				enabled = false;
+			}
+			createNum--;
 			return;
 		}
 		

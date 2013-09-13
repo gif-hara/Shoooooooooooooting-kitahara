@@ -32,7 +32,7 @@ public class EnemyFlashController : EnemyControllerBase
 	/// <summary>
 	/// マテリアルリスト.
 	/// </summary>
-	private List<Material> materialList;
+	private List<Mesh> meshList;
 	
 	/// <summary>
 	/// 現在のマテリアルの色保持.
@@ -68,7 +68,7 @@ public class EnemyFlashController : EnemyControllerBase
 	public override void Start()
 	{
 		base.Start();
-		InitMaterialList();
+		InitMeshList();
 	}
 
 	// Update is called once per frame
@@ -81,10 +81,10 @@ public class EnemyFlashController : EnemyControllerBase
 	
 	void OnDestroy()
 	{
-		if( materialList == null )	return;
-		for( int i=0,imax=materialList.Count; i<imax; i++ )
+		if( meshList == null )	return;
+		for( int i=0,imax=meshList.Count; i<imax; i++ )
 		{
-			Destroy( materialList[i] );
+			Destroy( meshList[i] );
 		}
 		for( int i=0,imax=refRendererList.Count; i<imax; i++ )
 		{
@@ -101,12 +101,12 @@ public class EnemyFlashController : EnemyControllerBase
 		duration = AddDuration;
 	}
 	
-	private void InitMaterialList()
+	private void InitMeshList()
 	{
-		materialList = new List<Material>();
+		meshList = new List<Mesh>();
 		refRendererList.ForEach( (obj) =>
 		{
-			materialList.Add( obj.material );
+			meshList.Add( obj.GetComponent<MeshFilter>().mesh );
 		});
 	}
 	
@@ -115,9 +115,14 @@ public class EnemyFlashController : EnemyControllerBase
 		var current = GetColor;
 		if( currentColor == current )	return;
 		
-		materialList.ForEach( (obj) =>
+		meshList.ForEach( (obj) =>
 		{
-			obj.color = current;
+			Color[] colors = new Color[obj.colors.Length];
+			for( int i=0,imax=colors.Length; i<imax; i++ )
+			{
+				colors[i] = current;
+			}
+			obj.colors = colors;
 		});
 		currentColor = current;
 	}

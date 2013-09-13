@@ -84,15 +84,15 @@ public class ScriptProfiler : GameMonoBehaviour
 	
 	private static Dictionary<string, BenchMarkListData> dataDictionary = new Dictionary<string, BenchMarkListData>();
 	
-	// Use this for initialization
-	void Start()
+	public override void Start()
 	{
+		base.Start();
 		myGUIText = guiText;
 	}
 
-	// Update is called once per frame
-	void LateUpdate()
+	public override void LateUpdate()
 	{
+		base.LateUpdate();
 		Report();
 	}
 	/// <summary>

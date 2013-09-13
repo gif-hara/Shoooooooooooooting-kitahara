@@ -15,10 +15,17 @@ public class EnemyShotCollider : A_Collider
 {
 	public EnemyShot refEnemyShot;
 	
-	public override void Awake()
+	private Vector2 varianceId;
+	
+	public override void Start()
 	{
-		base.Awake();
-		ReferenceManager.refCollisionManager.AddEnemyShotCollider( this );
+		base.Start();
+		varianceId = ReferenceManager.refCollisionManager.AddEnemyShotCollider( this );
+	}
+	public override void Update()
+	{
+		base.Update();
+		varianceId = ReferenceManager.refCollisionManager.VarianceEnemyShotColliderList( this, varianceId );
 	}
 	public override void OnCollision (A_Collider target)
 	{
