@@ -14,15 +14,27 @@ using System.Collections.Generic;
 
 public class MeshUVOffset : MonoBehaviourExtension
 {
+	public GameObject refDestroyObject;
+	
 	public MeshFilter refMesh;
-	
-	public List<Vector2> uvs;
-	
-	private Mesh mesh;
-	
+		
 	public int tileX;
 	
 	public int tileY;
+	
+	public int interval;
+	
+	public bool loop;
+	
+	private Mesh mesh;
+	
+	private int timer = 0;
+	
+	private int offset = 0;
+	
+	private float intervalX = 0.0f;
+	
+	private float intervalY = 0.0f;
 	
 	private readonly Vector2 UVLeftDown = new Vector2( 0.0f, 0.0f );
 	
@@ -36,7 +48,8 @@ public class MeshUVOffset : MonoBehaviourExtension
 	public override void Start()
 	{
 		mesh = refMesh.mesh;
-		var uv = mesh.uv;
+		Initialize();
+		UpdateUv();
 		foreach( var u in mesh.uv )
 		{
 			Debug.Log( "uv = " + u );
@@ -54,6 +67,47 @@ public class MeshUVOffset : MonoBehaviourExtension
 	// Update is called once per frame
 	public override void Update ()
 	{
-		mesh.uv = uvs.ToArray();
+		
+		if( timer >= interval )
+		{
+			offset++;
+			if( !loop && offset >= (tileX * tileY) )
+			{
+				Destroy( refDestroyObject );
+			}
+			UpdateUv();
+			timer = 0;
+			return;
+		}
+		timer++;
+	}
+	
+	private void Initialize()
+	{
+		intervalX = 1.0f / tileX;
+		intervalY = 1.0f / tileY;
+	}
+	
+	private void UpdateUv()
+	{
+		float left = intervalX * (offset % tileX);
+		float top = 1.0f - (intervalY * (float)(offset / tileX));
+		float right = (intervalX * (offset % tileX)) + intervalX;
+		float bottom = 1.0f - (intervalY * (float)((offset / tileX) + 1));
+		
+		Debug.Log( string.Format( "left = {1}{0}top = {2}{0}right = {3}{0}bottom = {4}{0}",
+			System.Environment.NewLine,
+			left,
+			top,
+			right,
+			bottom
+			));
+		
+		Vector2[] uvList = new Vector2[4];
+		uvList[0] = new Vector2( left, bottom );
+		uvList[1] = new Vector2( right, bottom );
+		uvList[2] = new Vector2( left, top );
+		uvList[3] = new Vector2( right, top );
+		mesh.uv = uvList;
 	}
 }
