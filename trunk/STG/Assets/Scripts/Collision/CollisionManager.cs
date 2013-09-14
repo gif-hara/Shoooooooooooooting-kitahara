@@ -7,6 +7,7 @@
 *     * Author      : Hiroki_Kitahara.
 */
 /*===========================================================================*/
+//#define OnDrawGizmos
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -61,6 +62,7 @@ public class CollisionManager : GameMonoBehaviour
 		ScriptProfiler.End( this, benchMarkId );
 	}
 	
+#if OnDrawGizmos
 	void OnDrawGizmos()
 	{
 		// Xの敵弾分散線の描画.
@@ -79,6 +81,7 @@ public class CollisionManager : GameMonoBehaviour
 			Gizmos.DrawLine( new Vector3( -StageX, currentY, 0.0f ), new Vector3( StageX, currentY, 0.0f ) );
 		}
 	}
+#endif
 	/// <summary>
 	/// 敵コライダーの追加.
 	/// </summary>
@@ -176,6 +179,8 @@ public class CollisionManager : GameMonoBehaviour
 				yList.AddRange( enemyShotVarianceList[y][x] );
 			}
 		}
+		
+		yList.RemoveAll( (obj) => obj == null );
 		
 		for( int i=0,imax=xList.Count; i<imax; i++ )
 		{
