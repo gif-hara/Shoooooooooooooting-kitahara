@@ -28,6 +28,7 @@ public class MonoBehaviourExtension : MonoBehaviour
 			return cachedTransform;
 		}
 	}
+	[HideInInspector]
 	public Transform cachedTransform = null;
 	
 	/// <summary>
