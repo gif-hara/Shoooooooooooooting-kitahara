@@ -80,6 +80,8 @@ public class SoundManager : GameMonoBehaviour
 	
 	public GameObject prefabSoundEntity;
 	
+	public float masterVolume;
+	
 	public List<ClipData> refClipList;
 	
 	private Dictionary<string, ClipDictionaryData> clipDictionary = new Dictionary<string, ClipDictionaryData>();
