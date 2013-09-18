@@ -14,10 +14,19 @@ using System.Collections.Generic;
 
 public class DetachParent : GameMonoBehaviour
 {
+	public int delay;
+	
 	// Use this for initialization
 	public override void Awake()
 	{
 		base.Awake();
-		Trans.parent = null;
+		if( delay <= 0 )
+		{
+			Trans.parent = null;
+		}
+		else
+		{
+			FrameRateUtility.StartCoroutine( delay, () => Trans.parent = null );
+		}
 	}
 }

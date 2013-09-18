@@ -16,6 +16,8 @@ public class EnemyDestroyAllShotRemove : GameMonoBehaviour
 {
 	void OnDestroy()
 	{
+		if( ReferenceManager.refEnemyShotLayer == null )	return;
+		
 		var shotList = ReferenceManager.refEnemyShotLayer.GetComponentsInChildren<EnemyShot>();
 		foreach( var shot in shotList )
 		{
