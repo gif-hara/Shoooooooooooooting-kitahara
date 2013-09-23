@@ -45,6 +45,11 @@ public class EnemyShotCreator : GameMonoBehaviour
 	public bool isLock = false;
 	
 	/// <summary>
+	/// プレイヤーが自分より座標が上へ存在しているか.
+	/// </summary>
+	public bool isPlayerTop = false;
+	
+	/// <summary>
 	/// 発射処理の休憩フラグ.
 	/// </summary>
 	private bool isSleep = false;
@@ -136,7 +141,8 @@ public class EnemyShotCreator : GameMonoBehaviour
 	protected void CreateShot()
 	{
 		// ロックされていたら撃たない.
-		if( isLock )
+		// プレイヤーが上へ存在していたら撃たない.
+		if( isLock || isPlayerTop )
 		{
 			totalShotCount++;
 			return;
