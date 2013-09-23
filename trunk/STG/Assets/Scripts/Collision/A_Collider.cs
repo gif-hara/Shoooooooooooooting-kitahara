@@ -23,11 +23,20 @@ public abstract class A_Collider : GameMonoBehaviour
 	}
 	public float radius;
 	
+	public int delayUpdate = 0;
+	
 	public override void Update()
 	{
-		base.Update();
-		var pos = cachedTransform.position;
-		cachedTransform.position = new Vector3( pos.x, pos.y, 0.0f );
+		if( delayUpdate <= 0 )
+		{
+			base.Update();
+			var pos = cachedTransform.position;
+			cachedTransform.position = new Vector3( pos.x, pos.y, 0.0f );
+		}
+		else
+		{
+			delayUpdate--;
+		}
 	}
 	
 	public abstract void OnCollision( A_Collider target );
@@ -36,7 +45,8 @@ public abstract class A_Collider : GameMonoBehaviour
 	
 	protected void UpdatePositionZ()
 	{
-		PositionZ = GameDefine.ColliderLayer;
+		var pos = cachedTransform.position;
+		cachedTransform.position = new Vector3( pos.x, pos.y, GameDefine.ColliderLayer );
 	}
 	
 	void OnDrawGizmos()

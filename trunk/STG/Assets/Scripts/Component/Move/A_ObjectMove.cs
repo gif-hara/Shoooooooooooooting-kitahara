@@ -108,7 +108,7 @@ public abstract class A_ObjectMove : MonoBehaviourExtension
 	/// <summary>
 	/// 移動処理に必要なデータ.
 	/// </summary>
-	protected Data data;
+	public Data data;
 	
 	/// <summary>
 	/// 現在のデュラーション.

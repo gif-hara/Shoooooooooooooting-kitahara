@@ -20,16 +20,23 @@ public class EnemyCollider : A_Collider
 	
 	public List<EnemyControllerBase> refEnemyControllerBaseList;
 	
+	private Vector3 initialPosition;
+	
 	public override void Awake()
 	{
 		base.Awake();
 		ReferenceManager.refCollisionManager.AddEnemyCollider( this );
 	}
 	
+	public override void Start()
+	{
+		base.Start();
+		initialPosition = cachedTransform.localPosition;
+	}
+	
 	public override void Update()
 	{
 		base.Update();
-		UpdatePositionZ();
 	}
 	
 	public override void OnCollision (A_Collider target)

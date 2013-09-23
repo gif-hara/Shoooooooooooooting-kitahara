@@ -16,6 +16,8 @@ public class AddPositionFromVelocity : MonoBehaviour
 {
 	public Transform refTarget;
 	
+	public bool isRandom;
+	
 	public Vector3 velocity;
 	
 	public int delay;
@@ -30,7 +32,15 @@ public class AddPositionFromVelocity : MonoBehaviour
 	void Start()
 	{
 		maxDuration = duration;
-		velocity = velocity.normalized;
+		
+		if( isRandom )
+		{
+			velocity = Random.insideUnitCircle;
+		}
+		else
+		{
+			velocity = velocity.normalized;
+		}
 	}
 	
 	// Update is called once per frame

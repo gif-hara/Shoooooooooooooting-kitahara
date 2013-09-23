@@ -16,6 +16,8 @@ public class PrefabCreatorInterval : GameMonoBehaviour
 {
 	public Transform refParent;
 	
+	public bool isParentDetach;
+	
 	public List<GameObject> prefabList;
 	
 	public Vector2 min;
@@ -57,13 +59,21 @@ public class PrefabCreatorInterval : GameMonoBehaviour
 			Vector3 pos = new Vector3( Random.Range( min.x, max.x ), Random.Range( min.y, max.y ), 0.0f );
 			var obj = InstantiateAsChild( Trans, prefabList[Random.Range( 0, prefabList.Count)] ).transform;
 			obj.localPosition = pos;
-			obj.parent = refParent;
+			
+			if( isParentDetach )
+			{
+				obj.parent = null;
+			}
+			else
+			{
+				obj.parent = refParent;
+			}
 			currentInterval = 0;
+			createNum--;
 			if( createNum <= 0 )
 			{
 				enabled = false;
 			}
-			createNum--;
 			return;
 		}
 		
