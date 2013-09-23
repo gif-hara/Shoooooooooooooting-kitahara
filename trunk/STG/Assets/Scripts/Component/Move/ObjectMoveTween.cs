@@ -18,16 +18,13 @@ public class ObjectMoveTween : A_ObjectMove
 {
 	private Vector3 initialPosition;
 	
-	private bool isInitialize = false;
-	
+	protected override void InitMove()
+	{
+		base.InitMove();
+		initialPosition = refTrans.position;
+	}
 	protected override void UpdateMove()
 	{
-		if( !isInitialize )
-		{
-			initialPosition = refTrans.position;
-			isInitialize = true;
-		}
-		
 		refTrans.position = Vector3.Lerp( initialPosition, data.targetPosition, data.curve0.Evaluate( Duration ) );
 		currentDuration++;
 		

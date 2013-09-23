@@ -143,6 +143,7 @@ public class EnemyCreatorEditor : A_StageTimeLineActionEditor<EnemyCreator>
 			DrawOnInspectorObjectMoveTween,
 			DrawOnInspectorObjectMoveChasePlayer,
 			DrawOnInspectorObjectMoveRandomRect,
+			DrawOnInspectorObjectMoveITweenPath,
 		};
 		
 		int id = ObjectMoveUtility.MoveTypeStringsToList.FindIndex( (obj) => obj == typeName );
@@ -190,6 +191,7 @@ public class EnemyCreatorEditor : A_StageTimeLineActionEditor<EnemyCreator>
 			DrawOnSceneViewObjectMoveTween,
 			DrawOnSceneViewObjectMoveChasePlayer,
 			DrawOnSceneViewObjectMoveRandomRect,
+			DrawOnSceneViewObjectMoveITweenPath,
 		};
 		
 		int id = ObjectMoveUtility.MoveTypeStringsToList.FindIndex( (obj) => obj == typeName );
@@ -213,6 +215,9 @@ public class EnemyCreatorEditor : A_StageTimeLineActionEditor<EnemyCreator>
 		Handles.DrawLine( new Vector3( rect.width, rect.y, 0.0f ), new Vector3( rect.width, rect.height, 0.0f ) );
 		Handles.DrawLine( new Vector3( rect.x, rect.height, 0.0f ), new Vector3( rect.width, rect.height, 0.0f ) );
 		Handles.Label( new Vector3( rect.x, rect.y, 0.0f ), "Range" );
+	}
+	private void DrawOnSceneViewObjectMoveITweenPath( A_ObjectMove.Data data )
+	{
 	}
 #endregion //Draw OnSceneView
 #region      Draw OnInspector
@@ -266,6 +271,10 @@ public class EnemyCreatorEditor : A_StageTimeLineActionEditor<EnemyCreator>
 	{
 		data.initFuncName = EditorGUILayout.TextField( "Init Func", data.initFuncName );
 	}
+	private void DrawOnInspectorObjectMovePrefabiTween( A_ObjectMove.Data data )
+	{
+		data.prefabiTweenPath = EditorGUILayout.ObjectField( "iTween Path", data.prefabiTweenPath, typeof( GameObject ), false )as GameObject;
+	}
 	private void DrawOnInspectorObjectMoveTween( A_ObjectMove.Data data )
 	{
 		Enclose( "Tween", () =>
@@ -309,6 +318,17 @@ public class EnemyCreatorEditor : A_StageTimeLineActionEditor<EnemyCreator>
 				DrawOnInspectorObjectMoveDelayFrame( data );
 				DrawOnInspectorObjectMoveDurationFrame( data );
 				DrawOnInspectorObjectMoveInitFuncName( data );
+			});
+		});
+	}
+	private void DrawOnInspectorObjectMoveITweenPath( A_ObjectMove.Data data )
+	{
+		Enclose( "iTween Path", () =>
+		{
+			Vertical( () =>
+			{
+				DrawOnInspectorObjectMovePrefabiTween( data );
+				DrawOnInspectorObjectMoveSpeed( data );
 			});
 		});
 	}

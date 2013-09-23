@@ -83,6 +83,11 @@ public abstract class A_ObjectMove : MonoBehaviourExtension
 		/// </summary>
 		public string initFuncName;
 		
+		/// <summary>
+		/// iTweenPathを包含しているプレハブ.
+		/// </summary>
+		public GameObject prefabiTweenPath;
+		
 		public Data( ObjectMoveUtility.MoveType type )
 		{
 			targetPosition = Vector3.zero;

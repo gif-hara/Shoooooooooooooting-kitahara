@@ -20,6 +20,7 @@ public class ObjectMoveUtility
 		ObjectMoveTween,
 		ObjectMoveChasePlayer,
 		ObjectMoveRandomRect,
+		ObjectMoveITweenPath,
 	}
 	
 	public static A_ObjectMove CreateObjectMove( Transform parent, A_ObjectMove.Data data )
