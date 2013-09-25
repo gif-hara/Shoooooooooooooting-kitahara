@@ -111,7 +111,7 @@ public class EnemyShotCreator : GameMonoBehaviour
 		isSleep = false;
 		sleepFrame = 0;
 		currentInterval = 0;
-		UpdateCreateShot();
+//		UpdateCreateShot();
 	}
 	public void InitCurrentInterval( int value )
 	{
