@@ -30,7 +30,7 @@ public class ActiveSetterFromReferenceNull : MonoBehaviourExtension
 	public bool isActive;
 	
 	// Update is called once per frame
-	void Update ()
+	public override void Update ()
 	{
 		bool isProc = true;
 		for( int i=0,imax=refNullTarget.Length; i<imax; i++ )
