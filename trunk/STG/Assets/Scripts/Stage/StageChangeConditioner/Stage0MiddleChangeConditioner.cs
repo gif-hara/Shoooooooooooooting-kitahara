@@ -1,6 +1,6 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : Stage0ChangeConditioner.cs
+*     * FileName    : Stage0MiddleChangeConditioner.cs
 *
 *     * Description : ステージ０のステージ切り替え条件処理.
 *
@@ -12,7 +12,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 
-public class Stage0ChangeConditioner : A_StageChangeConditioner
+public class Stage0MiddleChangeConditioner : A_StageChangeConditioner
 {
 	public override bool Condition()
 	{
