@@ -10,6 +10,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 
 
 public class DebugManager : A_GUIElement
@@ -18,6 +19,11 @@ public class DebugManager : A_GUIElement
 	/// リセットGUI参照.
 	/// </summary>
 	public ResetGUI refResetGUI;
+	
+	/// <summary>
+	/// ストップウォッチGUI参照.
+	/// </summary>
+	public StopWatchGUI refStopWatchGUI;
 	
 	/// <summary>
 	/// プレイヤー攻撃力を異常値にするか？.
@@ -101,18 +107,37 @@ public class DebugManager : A_GUIElement
 		{
 			isNotLifeDecrement = !isNotLifeDecrement;
 		});
+		
+		// ストップウォッチトグル.
+		KeyPush( KeyCode.Y, () =>
+		{
+			refStopWatchGUI.Toggle();
+		});
+		
+		// ストップウォッチリセット.
+		KeyPush( KeyCode.U, () =>
+		{
+			refStopWatchGUI.Reset();
+		});
 	}
 	
 	public override void Draw()
 	{
-		Vertical( () =>
-		{
-			Label( string.Format( StringAsset.Get( "Format_DebugIsInsanelyForce" ), isInsanelyForce.ToString() ) );
-			Label( string.Format( StringAsset.Get( "Format_DebugIsInvincible" ), isInvincible.ToString() ) );
-			Label( string.Format( StringAsset.Get( "Format_DebugIsSpecialPointInfinity" ), isSpecialPointInfinity.ToString() ) );
-			Label( StringAsset.Get( "Format_DebugReset" ) );
-			Label( string.Format( StringAsset.Get( "Format_DebugIsNotDecrement" ), isNotLifeDecrement.ToString() ) );
-		});
+		var builder = new StringBuilder();
+		builder.AppendFormat( StringAsset.Get( "Format_DebugIsInsanelyForce" ), isInsanelyForce.ToString() );
+		builder.AppendLine();
+		builder.AppendFormat( StringAsset.Get( "Format_DebugIsInvincible" ), isInvincible.ToString() );
+		builder.AppendLine();
+		builder.AppendFormat( StringAsset.Get( "Format_DebugIsSpecialPointInfinity" ), isSpecialPointInfinity.ToString() );
+		builder.AppendLine();
+		builder.Append( StringAsset.Get( "Format_DebugReset" ) );
+		builder.AppendLine();
+		builder.AppendFormat( StringAsset.Get( "Format_DebugIsNotDecrement" ), isNotLifeDecrement.ToString() );
+		builder.AppendLine();
+		builder.Append( StringAsset.Get( "Format_DebugStopWatchToggle" ) );
+		builder.AppendLine();
+		builder.Append( StringAsset.Get( "Format_DebugStopWatchReset" ) );
+		Label( builder.ToString() );
 	}
 	
 	private void KeyPush( KeyCode keyCode, System.Action func )
