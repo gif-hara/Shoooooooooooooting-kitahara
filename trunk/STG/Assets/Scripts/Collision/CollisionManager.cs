@@ -35,10 +35,9 @@ public class CollisionManager : GameMonoBehaviour
 	
 	private const float StageY = 350.0f;
 	
-	// Use this for initialization
-	public override void Start()
+	public override void Awake()
 	{
-		base.Start();
+		base.Awake();
 		enemyShotVarianceList = new List<List<List<A_Collider>>>();
 		for( int y=0; y<enemyShotCollisionTileY; y++ )
 		{
@@ -48,6 +47,11 @@ public class CollisionManager : GameMonoBehaviour
 				enemyShotVarianceList[y].Add( new List<A_Collider>() );
 			}
 		}
+	}
+	// Use this for initialization
+	public override void Start()
+	{
+		base.Start();
 	}
 
 	// Update is called once per frame
