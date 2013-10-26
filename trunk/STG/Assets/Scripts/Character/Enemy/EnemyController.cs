@@ -85,6 +85,11 @@ public class EnemyController : EnemyControllerBase
 	/// </summary>
 	public bool IsDead{ get{ return isDead; } }
 	private bool isDead = false;
+	
+	/// <summary>
+	/// 拡張更新関数.
+	/// </summary>
+	public event System.Action updateFunc = null;
 		
 	public override void Awake()
 	{
@@ -105,6 +110,11 @@ public class EnemyController : EnemyControllerBase
 		UpdateCompleteMoveComponent();
 		
 		invincibleTimer--;
+		
+		if( updateFunc != null )
+		{
+			updateFunc();
+		}
 	}
 	/// <summary>
 	/// ダメージ処理.
