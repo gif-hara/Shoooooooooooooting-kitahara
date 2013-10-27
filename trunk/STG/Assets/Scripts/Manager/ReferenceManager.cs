@@ -85,6 +85,12 @@ public class ReferenceManager : A_Singleton<ReferenceManager>
 	public UIScore refScore;
 	
 	/// <summary>
+	/// カメラの親オブジェクト参照.
+	/// シェイク可能なカメラが入っている.
+	/// </summary>
+	public GameObject refCameraParent;
+	
+	/// <summary>
 	/// 敵ヒットポイントバープレハブ.
 	/// </summary>
 	public GameObject prefabEnemyHitPointBar;

@@ -79,5 +79,23 @@ public class PrefabCreatorInterval : GameMonoBehaviour
 		
 		currentInterval++;
 	}
-
+	
+	void OnDrawGizmos()
+	{
+		if( !enabled )	return;
+		
+		var center = refParent == null ? Vector3.zero : refParent.position;
+		
+		// 左.
+		Gizmos.DrawLine( new Vector3( center.x + min.x, center.y + min.y, 0.0f ), new Vector3( center.x + min.x, center.y + max.y, 0.0f ) );
+		
+		// 上.
+		Gizmos.DrawLine( new Vector3( center.x + min.x, center.y + min.y, 0.0f ), new Vector3( center.x + max.x, center.y + min.y, 0.0f ) );
+		
+		// 右.
+		Gizmos.DrawLine( new Vector3( center.x + max.x, center.y + min.y, 0.0f ), new Vector3( center.x + max.x, center.y + max.y, 0.0f ) );
+		
+		// 下.
+		Gizmos.DrawLine( new Vector3( center.x + min.x, center.y + max.y, 0.0f ), new Vector3( center.x + max.x, center.y + max.y, 0.0f ) );
+	}
 }

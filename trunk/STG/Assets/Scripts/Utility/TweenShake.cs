@@ -45,6 +45,7 @@ public class TweenShake : MonoBehaviour
 			instance = go.AddComponent<TweenShake>();
 		}
 		
+		instance.enabled = true;
 		instance.initialPosition = initialPos;
 		instance.duration = duration;
 		instance.rate = rate;

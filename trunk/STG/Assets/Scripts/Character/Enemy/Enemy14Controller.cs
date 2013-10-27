@@ -18,6 +18,18 @@ public class Enemy14Controller : GameMonoBehaviour
 	
 	private EnemyController refController;
 	
+	/// <summary>
+	/// 状態0終了時に有効化するオブジェクト.
+	/// </summary>
+	[SerializeField]
+	private GameObject state0EndEventObject;
+	
+	/// <summary>
+	/// 状態0が終了するヒットポイント.
+	/// </summary>
+	[SerializeField]
+	private int state0EndHitPoint;
+	
 	public override void Awake()
 	{
 		stateFunc = State0;
@@ -32,16 +44,15 @@ public class Enemy14Controller : GameMonoBehaviour
 	
 	private void State0()
 	{
-		Debug.Log( "0" );
-		
-		if( refController.Hp <= 50000 )
+		if( refController.Hp <= state0EndHitPoint )
 		{
+			
+			state0EndEventObject.SetActive( true );
 			stateFunc = State1;
 		}
 	}
 	
 	private void State1()
 	{
-		Debug.Log( "1" );
 	}
 }

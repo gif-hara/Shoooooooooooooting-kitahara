@@ -1,6 +1,6 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : MonoBehaviourEnableSetter.cs
+*     * FileName    : GameObjectEnableSetter.cs
 *
 *     * Description : .
 *
@@ -12,17 +12,17 @@ using System.Collections;
 using System.Collections.Generic;
 
 
-public class MonoBehaviourEnableSetter : A_DelayEvent
+public class GameObjectEnableSetter : A_DelayEvent
 {
-	public List<MonoBehaviour> refTargetList;
+	public List<GameObject> refTargetList;
 	
 	public bool isEnable;
 	
 	protected override void OnDelayEvent()
 	{
-			refTargetList.ForEach( (obj) =>
-			{
-				obj.enabled = isEnable;	
-			});
+		refTargetList.ForEach( (obj) =>
+		{
+			obj.SetActive( isEnable );
+		});
 	}
 }

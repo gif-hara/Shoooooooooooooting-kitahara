@@ -14,11 +14,25 @@ using System.Collections.Generic;
 
 public class PlaySEInterval : GameMonoBehaviour
 {
+	/// <summary>
+	/// 再生するラベル.
+	/// </summary>
 	public string label;
 	
+	/// <summary>
+	/// 再生間隔.
+	/// </summary>
 	public int interval;
 	
+	/// <summary>
+	/// 再生回数.
+	/// </summary>
+	[SerializeField]
+	private int playNum;
+	
 	private int maxInterval;
+	
+	private int currentPlayNum = 0;
 	
 	// Use this for initialization
 	public override void Start()
@@ -35,6 +49,12 @@ public class PlaySEInterval : GameMonoBehaviour
 		{
 			ReferenceManager.refSoundManager.Play( label );
 			interval = maxInterval;
+			currentPlayNum++;
+			
+			if( playNum != 0 && playNum <= currentPlayNum )
+			{
+				enabled = false;
+			}
 		}
 		else
 		{

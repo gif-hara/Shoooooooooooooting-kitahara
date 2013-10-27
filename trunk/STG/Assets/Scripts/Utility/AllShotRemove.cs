@@ -1,6 +1,6 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : MonoBehaviourEnableSetter.cs
+*     * FileName    : AllShotRemove.cs
 *
 *     * Description : .
 *
@@ -12,17 +12,16 @@ using System.Collections;
 using System.Collections.Generic;
 
 
-public class MonoBehaviourEnableSetter : A_DelayEvent
+public class AllShotRemove : A_DelayEvent
 {
-	public List<MonoBehaviour> refTargetList;
-	
-	public bool isEnable;
-	
 	protected override void OnDelayEvent()
 	{
-			refTargetList.ForEach( (obj) =>
-			{
-				obj.enabled = isEnable;	
-			});
+		if( ReferenceManager.refEnemyShotLayer == null )	return;
+		
+		var shotList = ReferenceManager.refEnemyShotLayer.GetComponentsInChildren<EnemyShot>();
+		foreach( var shot in shotList )
+		{
+			shot.Explosion();
+		}
 	}
 }

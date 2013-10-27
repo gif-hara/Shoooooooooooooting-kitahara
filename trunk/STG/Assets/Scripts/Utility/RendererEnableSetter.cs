@@ -12,7 +12,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 
-public class RendererEnableSetter : MonoBehaviour
+public class RendererEnableSetter : A_DelayEvent
 {
 	/// <summary>
 	/// enableの設定をするターゲット.
@@ -24,23 +24,11 @@ public class RendererEnableSetter : MonoBehaviour
 	/// </summary>
 	public bool isVisible;
 	
-	/// <summary>
-	/// 遅延時間.
-	/// </summary>
-	public int delay;
-	
-	// Update is called once per frame
-	void Update()
+	protected override void OnDelayEvent()
 	{
-		if( delay <= 0 )
+		refTargetList.ForEach( (obj) =>
 		{
-			refTargetList.ForEach( (obj) =>
-			{
-				obj.enabled = isVisible;
-			});
-			enabled = false;
-		}
-		
-		delay--;
+			obj.enabled = isVisible;
+		});
 	}
 }
