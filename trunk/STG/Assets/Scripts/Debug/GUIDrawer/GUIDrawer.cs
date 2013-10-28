@@ -16,6 +16,9 @@ public class GUIDrawer : MonoBehaviour
 {
 	private List<A_GUIElement> elementList;
 	
+	[SerializeField]
+	private Rect boxRect;
+	
 	void Awake()
 	{
 		elementList = new List<A_GUIElement>();
@@ -28,6 +31,7 @@ public class GUIDrawer : MonoBehaviour
 	
 	void OnGUI()
 	{
+		GUI.Box( boxRect, "" );
 		GUILayout.BeginVertical();
 		elementList.ForEach( (obj) =>
 		{
