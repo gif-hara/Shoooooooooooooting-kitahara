@@ -55,10 +55,11 @@ public class Barrier : A_SpecialModeContent
 	private int currentDuration = 0;
 	
 	// Use this for initialization
-	public override void Start()
+	public override void Awake()
 	{
-		base.Start();
+		base.Awake();
 		player = ReferenceManager.refPlayer;
+		player.SetInvincible( duration + 60 );
 	}
 
 	// Update is called once per frame

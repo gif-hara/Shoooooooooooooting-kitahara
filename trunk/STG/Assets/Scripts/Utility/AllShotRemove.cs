@@ -16,6 +16,11 @@ public class AllShotRemove : A_DelayEvent
 {
 	protected override void OnDelayEvent()
 	{
+		AllRemove();
+	}
+	
+	public static void AllRemove()
+	{
 		if( ReferenceManager.refEnemyShotLayer == null )	return;
 		
 		var shotList = ReferenceManager.refEnemyShotLayer.GetComponentsInChildren<EnemyShot>();

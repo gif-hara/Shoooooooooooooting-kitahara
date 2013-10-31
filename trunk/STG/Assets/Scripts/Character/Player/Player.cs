@@ -15,15 +15,6 @@ using System.Collections.Generic;
 public class Player : GameMonoBehaviour
 {
 	/// <summary>
-	/// スペシャルポイントの状態定義.
-	/// </summary>
-	public enum SpecialPointState : int
-	{
-		Charge,
-		Use,
-	}
-	
-	/// <summary>
 	/// コンテンツオブジェクト参照.
 	/// </summary>
 	public GameObject refContent;
@@ -53,11 +44,6 @@ public class Player : GameMonoBehaviour
 	/// </summary>
 	public int CurrentSpecialPoint{ get{ return currentSpecialPoint; } }
 	private int currentSpecialPoint = 0;
-	
-	/// <summary>
-	/// バリア更新処理タイプ.
-	/// </summary>
-	private SpecialPointState barrierUpdateType = SpecialPointState.Charge;
 	
 	/// <summary>
 	/// 無敵時間.
@@ -119,7 +105,19 @@ public class Player : GameMonoBehaviour
 	{
 		isSpecialMode = false;
 	}
-	
+	/// <summary>
+	/// 無敵時間の設定.
+	/// </summary>
+	/// <param name='value'>
+	/// Value.
+	/// </param>
+	public void SetInvincible( int value )
+	{
+		invincibleTime = value;
+	}
+	/// <summary>
+	/// ミス処理.
+	/// </summary>
 	public void Miss()
 	{
 		if( IsInvincible )	return;
@@ -132,15 +130,12 @@ public class Player : GameMonoBehaviour
 			StartCoroutine( ResurrectionCoroutine() );
 		}
 	}
-	
-	public float BarrierPointNormalize
-	{
-		get
-		{
-			return (float)currentSpecialPoint / maxSpecialPoint;
-		}
-	}
-	
+	/// <summary>
+	/// 無敵中であるか？.
+	/// </summary>
+	/// <value>
+	/// <c>true</c> if this instance is invincible; otherwise, <c>false</c>.
+	/// </value>
 	public bool IsInvincible
 	{
 		get
@@ -153,15 +148,10 @@ public class Player : GameMonoBehaviour
 			{
 				return true;
 			}
-			if( barrierUpdateType == SpecialPointState.Use )
-			{
-				return true;
-			}
 			
 			return false;
 		}
 	}
-	
 	/// <summary>
 	/// 座標を初期値に戻す.
 	/// </summary>

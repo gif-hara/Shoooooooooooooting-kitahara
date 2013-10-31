@@ -29,6 +29,12 @@ public class PlayerShotCollider : A_Collider
 	public GameObject prefabExplosion;
 	
 	/// <summary>
+	/// 衝突した際に死亡するか.
+	/// </summary>
+	[SerializeField]
+	private bool isCollisionDead = true;
+	
+	/// <summary>
 	/// 敵と衝突したか.
 	/// </summary>
 	private bool isEnemyCollision = false;
@@ -51,6 +57,8 @@ public class PlayerShotCollider : A_Collider
 
 	public override void OnCollision (A_Collider target)
 	{
+		if( !isCollisionDead )	return;
+		
 		Instantiate( prefabExplosion, refParent.transform.position, prefabExplosion.transform.rotation );
 		Destroy( refParent );
 		isEnemyCollision = true;

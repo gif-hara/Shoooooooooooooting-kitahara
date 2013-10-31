@@ -1,6 +1,6 @@
 /*===========================================================================*/
 /*
-*     * FileName    : InputBarrier.cs
+*     * FileName    : InputSpecialMode.cs
 *
 *     * Description : .
 *
@@ -12,11 +12,13 @@ using System.Collections;
 using System.Collections.Generic;
 
 
-public class InputBarrier : A_InputAction
+public class InputSpecialMode : A_InputAction
 {
-	public Player refPlayer;
+	[SerializeField]
+	private Player refPlayer;
 	
-	public GameObject prefabBarrier;
+	[SerializeField]
+	private GameObject prefabInSpecialModeContent;
 	
 	// Use this for initialization
 	public override void Start()
@@ -36,13 +38,7 @@ public class InputBarrier : A_InputAction
 	{
 		if( Input.GetKeyDown( KeyCode.X ) )
 		{
-			refPlayer.StartSpecialMode( prefabBarrier );
+			refPlayer.StartSpecialMode( prefabInSpecialModeContent );
 		}
-//		else if( Input.GetKeyUp( KeyCode.X ) && isValid )
-//		{
-//			isValid = false;
-//			Destroy( currentBarrier );
-//			refPlayer.EndBarrier();
-//		}
 	}
 }
