@@ -100,17 +100,17 @@ public class Player : GameMonoBehaviour
 	/// <summary>
 	/// SPモードの開始処理.
 	/// </summary>
-	public void StartSpecialMode( GameObject inBarrierPrefab )
+	public void StartSpecialMode( GameObject inSpecialModeContentPrefab )
 	{
 		if( isSpecialMode )	return;
 		
-		var barrier = inBarrierPrefab.GetComponent<Barrier>();
+		var spContent = inSpecialModeContentPrefab.GetComponent<A_SpecialModeContent>();
 		
-		if( !barrier.CanExecute( this ) )	return;
+		if( !spContent.CanExecute( this ) )	return;
 		
 		isSpecialMode = true;
-		currentSpecialPoint -= barrier.NeedPoint;
-		Instantiate( inBarrierPrefab );
+		currentSpecialPoint -= spContent.NeedPoint;
+		InstantiateAsChild( cachedTransform, inSpecialModeContentPrefab );
 	}
 	/// <summary>
 	/// SPモードの終了処理.

@@ -12,7 +12,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 
-public class Barrier : GameMonoBehaviour
+public class Barrier : A_SpecialModeContent
 {
 	/// <summary>
 	/// パーティクル参照.
@@ -25,14 +25,7 @@ public class Barrier : GameMonoBehaviour
 	/// </summary>
 	[SerializeField]
 	private BarrierCollider refCollider;
-	
-	/// <summary>
-	/// 発動に必要なSPポイント.
-	/// </summary>
-	public int NeedPoint{ get{ return needPoint; } }
-	[SerializeField]
-	private int needPoint;
-	
+		
 	/// <summary>
 	/// 効果時間.
 	/// </summary>
@@ -82,19 +75,6 @@ public class Barrier : GameMonoBehaviour
 		}
 		
 		currentDuration++;
-	}
-	/// <summary>
-	/// 発動可能か？.
-	/// </summary>
-	/// <returns>
-	/// <c>true</c> if this instance can execute the specified player; otherwise, <c>false</c>.
-	/// </returns>
-	/// <param name='player'>
-	/// If set to <c>true</c> player.
-	/// </param>
-	public bool CanExecute( Player player )
-	{
-		return player.CurrentSpecialPoint >= needPoint;
 	}
 	/// <summary>
 	/// 座標の更新処理.
