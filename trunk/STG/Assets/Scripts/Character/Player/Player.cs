@@ -34,17 +34,12 @@ public class Player : GameMonoBehaviour
 	public List<Renderer> refRenderer;
 	
 	/// <summary>
-	/// スペシャルポイント最大値.
+	/// SPポイント最大値.
 	/// </summary>
 	public int maxSpecialPoint;
 	
 	/// <summary>
-	/// バリア発動可能に必要な値.
-	/// </summary>
-	public int canSpecialPoint;
-	
-	/// <summary>
-	/// バリアポイント加算値.
+	/// SPポイント加算値.
 	/// </summary>
 	public int addSpecialPoint;
 	
@@ -54,12 +49,7 @@ public class Player : GameMonoBehaviour
 	public float barrierSize;
 	
 	/// <summary>
-	/// バリアサイズのアニメーションカーブ.
-	/// </summary>
-	public AnimationCurve barrierSizeCurve;
-	
-	/// <summary>
-	/// 現在のバリアポイント.
+	/// 現在のSPポイント.
 	/// </summary>
 	public int CurrentSpecialPoint{ get{ return currentSpecialPoint; } }
 	private int currentSpecialPoint = 0;
@@ -73,6 +63,11 @@ public class Player : GameMonoBehaviour
 	/// 無敵時間.
 	/// </summary>
 	private int invincibleTime = 0;
+	
+	/// <summary>
+	/// SPモードフラグ.
+	/// </summary>
+	private bool isSpecialMode = false;
 	
 	/// <summary>
 	/// 初期座標.
@@ -102,15 +97,27 @@ public class Player : GameMonoBehaviour
 		
 		UpdateDebug();
 	}
-	
-	public void BarrierExecute()
+	/// <summary>
+	/// SPモードの開始処理.
+	/// </summary>
+	public void StartSpecialMode( GameObject inBarrierPrefab )
 	{
-		currentSpecialPoint -= canSpecialPoint;
-		barrierUpdateType = SpecialPointState.Use;
+		if( isSpecialMode )	return;
+		
+		var barrier = inBarrierPrefab.GetComponent<Barrier>();
+		
+		if( !barrier.CanExecute( this ) )	return;
+		
+		isSpecialMode = true;
+		currentSpecialPoint -= barrier.NeedPoint;
+		Instantiate( inBarrierPrefab );
 	}
-	public void EndBarrier()
+	/// <summary>
+	/// SPモードの終了処理.
+	/// </summary>
+	public void EndSpecialMode()
 	{
-		barrierUpdateType = SpecialPointState.Charge;
+		isSpecialMode = false;
 	}
 	
 	public void Miss()
@@ -123,14 +130,6 @@ public class Player : GameMonoBehaviour
 		if( GameManager.Life > 0 )
 		{
 			StartCoroutine( ResurrectionCoroutine() );
-		}
-	}
-	
-	public bool IsBarrierExecute
-	{
-		get
-		{
-			return currentSpecialPoint >= canSpecialPoint;
 		}
 	}
 	
@@ -163,14 +162,9 @@ public class Player : GameMonoBehaviour
 		}
 	}
 	
-	public float CurrentBarrierSize
-	{
-		get
-		{
-			return barrierSizeCurve.Evaluate( BarrierPointNormalize ) * barrierSize;
-		}
-	}
-	
+	/// <summary>
+	/// 座標を初期値に戻す.
+	/// </summary>
 	private void Relocation()
 	{
 		Trans.position = initialPosition;
@@ -180,22 +174,19 @@ public class Player : GameMonoBehaviour
 	/// </summary>
 	private void UpdateBarrierPoint()
 	{
-		if( barrierUpdateType == SpecialPointState.Charge )
-		{
-			currentSpecialPoint += addSpecialPoint;
-			currentSpecialPoint = currentSpecialPoint > maxSpecialPoint ? maxSpecialPoint : currentSpecialPoint;
-		}
-		else
-		{
-			if( currentSpecialPoint <= 0 )
-			{
-				invincibleTime = 60;
-				EndBarrier();
-				return;
-			}
-			currentSpecialPoint--;
-			currentSpecialPoint = currentSpecialPoint < 0 ? 0 : currentSpecialPoint;
-		}
+		currentSpecialPoint += addSpecialPoint;
+		currentSpecialPoint = currentSpecialPoint > maxSpecialPoint ? maxSpecialPoint : currentSpecialPoint;
+//		else
+//		{
+//			if( currentSpecialPoint <= 0 )
+//			{
+//				invincibleTime = 60;
+//				EndBarrier();
+//				return;
+//			}
+//			currentSpecialPoint--;
+//			currentSpecialPoint = currentSpecialPoint < 0 ? 0 : currentSpecialPoint;
+//		}
 		
 		// デバッグが有効なら常に最大値にする.
 		if( DebugManager.IsSpecialPointInfinity )

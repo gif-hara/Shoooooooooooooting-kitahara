@@ -18,10 +18,6 @@ public class InputBarrier : A_InputAction
 	
 	public GameObject prefabBarrier;
 	
-	private bool isValid = false;
-	
-	private GameObject currentBarrier;
-	
 	// Use this for initialization
 	public override void Start()
 	{
@@ -38,22 +34,15 @@ public class InputBarrier : A_InputAction
 	
 	private void UpdateIsValid()
 	{
-		if( Input.GetKeyDown( KeyCode.X ) && !isValid && refPlayer.IsBarrierExecute )
+		if( Input.GetKeyDown( KeyCode.X ) )
 		{
-			isValid = true;
-			currentBarrier = InstantiateAsChild( refPlayer.Trans, prefabBarrier );
-			refPlayer.BarrierExecute();
+			refPlayer.StartSpecialMode( prefabBarrier );
 		}
-		else if( Input.GetKeyUp( KeyCode.X ) && isValid )
-		{
-			isValid = false;
-			Destroy( currentBarrier );
-			refPlayer.EndBarrier();
-		}
-		
-		if( refPlayer.CurrentSpecialPoint <= 0 )
-		{
-			Destroy( currentBarrier );
-		}
+//		else if( Input.GetKeyUp( KeyCode.X ) && isValid )
+//		{
+//			isValid = false;
+//			Destroy( currentBarrier );
+//			refPlayer.EndBarrier();
+//		}
 	}
 }
