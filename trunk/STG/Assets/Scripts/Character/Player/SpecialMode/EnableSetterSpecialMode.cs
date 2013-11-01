@@ -1,6 +1,6 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : Bomb.cs
+*     * FileName    : EnableSetterSpecialMode.cs
 *
 *     * Description : .
 *
@@ -12,7 +12,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 
-public class Bomb : A_SpecialModeContent
+public class EnableSetterSpecialMode : A_SpecialModeContent
 {
 	/// <summary>
 	/// 効果時間.
@@ -38,6 +38,13 @@ public class Bomb : A_SpecialModeContent
 		player.SetInvincible( duration + 60 );
 	}
 	
+	public override void Start()
+	{
+		base.Start();
+		cachedTransform.parent = cachedTransform.parent.parent;
+		cachedTransform.position = Vector3.zero;
+	}
+
 	// Update is called once per frame
 	public override void Update()
 	{
@@ -49,6 +56,7 @@ public class Bomb : A_SpecialModeContent
 			player.EndSpecialMode();
 		}
 		
+		AllShotRemove.AllRemove();
 		currentDuration++;
 	}
 }
