@@ -21,6 +21,12 @@ public class Bomb : A_SpecialModeContent
 	private int duration;
 	
 	/// <summary>
+	/// 追加するゲームレベル.
+	/// </summary>
+	[SerializeField]
+	private int addGameLevel;
+	
+	/// <summary>
 	/// プレイヤー参照.
 	/// </summary>
 	private Player player;
@@ -34,6 +40,7 @@ public class Bomb : A_SpecialModeContent
 	public override void Awake()
 	{
 		base.Awake();
+		GameManager.AddGameLevel( addGameLevel );
 		player = ReferenceManager.refPlayer;
 		player.SetInvincible( duration + 60 );
 	}

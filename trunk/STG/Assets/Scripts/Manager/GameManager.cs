@@ -96,6 +96,11 @@ public class GameManager : GameMonoBehaviour
 		gameLevelExperience += value;
 		GameLevelUp();
 	}
+	
+	public void AddGameLevel( int value )
+	{
+		gameLevel += value;
+	}
 	/// <summary>
 	/// 敵弾がバリアと衝突した際のゲームレベル経験値上昇処理.
 	/// </summary>
