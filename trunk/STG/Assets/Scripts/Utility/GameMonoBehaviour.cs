@@ -76,6 +76,8 @@ public class GameMonoBehaviour : MonoBehaviourExtension
 	/// </param>
 	public static GameObject InstantiateAsChild( GameObject parent, GameObject prefab )
 	{
+//		GameObject obj = ObjectPool.Reuse( prefab.GetComponent<PoolEntity>() ).gameObject;
+//		obj.transform.parent = parent.transform;
 		GameObject obj = NGUITools.AddChild( parent, prefab );
 		obj.transform.localScale = prefab.transform.localScale;
 		
