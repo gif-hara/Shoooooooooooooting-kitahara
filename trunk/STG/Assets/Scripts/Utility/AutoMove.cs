@@ -32,9 +32,9 @@ public class AutoMove : MonoBehaviourExtension
 		cachedTransform.localPosition += cachedVelocity;
 	}
 	
-	void OnDrawGizmos()
-	{
-		Gizmos.color = Color.red;
-		Gizmos.DrawLine( cachedTransform.position, cachedTransform.position + ( velocity * 9999.0f ) );
-	}
+//	void OnDrawGizmos()
+//	{
+//		Gizmos.color = Color.red;
+//		Gizmos.DrawLine( cachedTransform.position, cachedTransform.position + ( velocity * 9999.0f ) );
+//	}
 }

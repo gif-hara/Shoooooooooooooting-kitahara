@@ -31,6 +31,7 @@ public class ObjectMoveTween : A_ObjectMove
 		if( currentDuration > data.durationFrame )
 		{
 			isComplete = true;
+			enabled = false;
 			if( data.isDestroy )
 			{
 				Destroy( refTrans.gameObject );

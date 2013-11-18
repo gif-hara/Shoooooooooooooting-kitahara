@@ -96,13 +96,18 @@ public class GameManager : GameMonoBehaviour
 		gameLevelExperience += value;
 		GameLevelUp();
 	}
+	
+	public void AddGameLevel( int value )
+	{
+		gameLevel += value;
+	}
 	/// <summary>
 	/// 敵弾がバリアと衝突した際のゲームレベル経験値上昇処理.
 	/// </summary>
-	public void AddGameLevelExperienceFromEnemyShot()
+	public void AddGameLevelExperienceFromEnemyShot( int deleteNum = 1 )
 	{
-		collisionEnemyShot++;
-		AddGameLevelExperience( 1.0f );
+		collisionEnemyShot += deleteNum;
+		AddGameLevelExperience( deleteNum );
 	}
 	/// <summary>
 	/// スコアの加算.

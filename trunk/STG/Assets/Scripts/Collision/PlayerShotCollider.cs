@@ -29,6 +29,12 @@ public class PlayerShotCollider : A_Collider
 	public GameObject prefabExplosion;
 	
 	/// <summary>
+	/// 衝突した際に死亡するか.
+	/// </summary>
+	[SerializeField]
+	private bool isCollisionDead = true;
+	
+	/// <summary>
 	/// 敵と衝突したか.
 	/// </summary>
 	private bool isEnemyCollision = false;
@@ -43,7 +49,7 @@ public class PlayerShotCollider : A_Collider
 	{
 		base.Update();
 		UpdatePositionZ();
-		if( refParent.transform.position.y >= 300.0f )
+		if( Vector3.Distance( Vector3.zero, refParent.transform.position ) >= 600.0f )
 		{
 			Destroy( refParent );
 		}
@@ -51,6 +57,8 @@ public class PlayerShotCollider : A_Collider
 
 	public override void OnCollision (A_Collider target)
 	{
+		if( !isCollisionDead )	return;
+		
 		Instantiate( prefabExplosion, refParent.transform.position, prefabExplosion.transform.rotation );
 		Destroy( refParent );
 		isEnemyCollision = true;

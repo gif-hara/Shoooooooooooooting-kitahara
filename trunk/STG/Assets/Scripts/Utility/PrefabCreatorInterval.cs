@@ -2,7 +2,7 @@
 /*
 *     * FileName    : PrefabCreatorInterval.cs
 *
-*     * Description : .
+*     * Description : 一定間隔でプレハブを生成するコンポーネント.
 *
 *     * Author      : Hiroki_Kitahara.
 */
@@ -14,18 +14,46 @@ using System.Collections.Generic;
 
 public class PrefabCreatorInterval : GameMonoBehaviour
 {
-	public Transform refParent;
+	/// <summary>
+	/// 親オブジェクト参照.
+	/// </summary>
+	[SerializeField]
+	private Transform refParent;
 	
-	public bool isParentDetach;
+	/// <summary>
+	/// 生成した時に親を外すか.
+	/// </summary>
+	[SerializeField]
+	private bool isParentDetach;
 	
-	public List<GameObject> prefabList;
+	/// <summary>
+	/// 生成するプレハブ.
+	/// </summary>
+	[SerializeField]
+	private List<GameObject> prefabList;
 	
+	/// <summary>
+	/// 生成最低値.
+	/// </summary>
+	[SerializeField]
 	public Vector2 min;
 	
+	/// <summary>
+	/// 生成最大値.
+	/// </summary>
+	[SerializeField]
 	public Vector2 max;
 	
+	/// <summary>
+	/// 生成間隔.
+	/// </summary>
+	[SerializeField]
 	public int interval;
 	
+	/// <summary>
+	/// 生成する回数.
+	/// </summary>
+	[SerializeField]
 	public int createNum;
 	
 	private int currentInterval = 0;
