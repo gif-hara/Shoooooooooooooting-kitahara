@@ -83,6 +83,7 @@ public class iTween : MonoBehaviour{
 	private Vector3 preUpdate;
 	private Vector3 postUpdate;
 	private NamedValueColor namedcolorvalue;
+	public AnimationCurve curve;
 
     private float lastRealTime; // Added by PressPlay
     private bool useRealTime; // Added by PressPlay
@@ -129,7 +130,8 @@ public class iTween : MonoBehaviour{
 		easeOutElastic,
 		easeInOutElastic,
 		/* GFX47 MOD END */
-		punch
+		punch,
+		animationCurve,
 	}
 	
 	/// <summary>
@@ -1429,6 +1431,7 @@ public class iTween : MonoBehaviour{
 	/// A <see cref="System.Object"/> for arguments to be sent to the "oncomplete" method.
 	/// </param>
 	public static void MoveTo(GameObject target, Hashtable args){
+		
 		//clean args:
 		args = iTween.CleanArgs(args);
 		
@@ -6735,20 +6738,19 @@ public class iTween : MonoBehaviour{
 		}
 		if(!args.Contains("target")){
 			args["target"] = target;
-		}		
+		}
 		tweens.Insert(0,args);
-		target.AddComponent("iTween");
+		var instance = target.AddComponent("iTween") as iTween;
 	}		
 	
 	//cast any accidentally supplied doubles and ints as floats as iTween only uses floats internally and unify parameter case:
 	static Hashtable CleanArgs(Hashtable args){
 		Hashtable argsCopy = new Hashtable(args.Count);
 		Hashtable argsCaseUnified = new Hashtable(args.Count);
-		
+
 		foreach (DictionaryEntry item in args) {
 			argsCopy.Add(item.Key, item.Value);
 		}
-		
 		foreach (DictionaryEntry item in argsCopy) {
 			if(item.Value.GetType() == typeof(System.Int32)){
 				int original = (int)item.Value;
@@ -6767,9 +6769,10 @@ public class iTween : MonoBehaviour{
 			argsCaseUnified.Add(item.Key.ToString().ToLower(), item.Value);
 		}	
 		
+		
 		//swap back case unification:
 		args = argsCaseUnified;
-				
+
 		return args;
 	}	
 	
@@ -7011,6 +7014,9 @@ public class iTween : MonoBehaviour{
 			ease = new EasingFunction(easeInOutElastic);
 			break;
 		/* GFX47 MOD END */
+		case EaseType.animationCurve:
+			ease = new EasingFunction(easeAnimationCurve);
+			break;
 		}
 	}
 	
@@ -7024,7 +7030,7 @@ public class iTween : MonoBehaviour{
         }
         else
         {
-            runningTime += Time.deltaTime;
+            runningTime += 1.0f;
         }
 
 		if(reverse){
@@ -7436,6 +7442,11 @@ public class iTween : MonoBehaviour{
 		return a * Mathf.Pow(2, -10 * (value-=1)) * Mathf.Sin((value * d - s) * (2 * Mathf.PI) / p) * 0.5f + end + start;
 	}		
 	/* GFX47 MOD END */
+	
+	private float easeAnimationCurve( float start, float end, float value )
+	{
+		return start + ((end - start) * curve.Evaluate(value));
+	}
 	
 	#endregion	
 	

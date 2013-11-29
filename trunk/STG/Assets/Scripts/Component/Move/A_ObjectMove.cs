@@ -88,6 +88,12 @@ public abstract class A_ObjectMove : MonoBehaviourExtension
 		/// </summary>
 		public GameObject prefabiTweenPath;
 		
+		/// <summary>
+		/// オフセット.
+		/// iTweenのパスの移動に使用する.
+		/// </summary>
+		public Vector2 offset;
+		
 		public Data( ObjectMoveUtility.MoveType type )
 		{
 			targetPosition = Vector3.zero;

@@ -275,6 +275,10 @@ public class EnemyCreatorEditor : A_StageTimeLineActionEditor<EnemyCreator>
 	{
 		data.prefabiTweenPath = EditorGUILayout.ObjectField( "iTween Path", data.prefabiTweenPath, typeof( GameObject ), false )as GameObject;
 	}
+	private void DrawOnInspectorObjectMoveOffset( A_ObjectMove.Data data )
+	{
+		data.offset = EditorGUILayout.Vector2Field( "Offset", data.offset );
+	}
 	private void DrawOnInspectorObjectMoveTween( A_ObjectMove.Data data )
 	{
 		Enclose( "Tween", () =>
@@ -328,7 +332,10 @@ public class EnemyCreatorEditor : A_StageTimeLineActionEditor<EnemyCreator>
 			Vertical( () =>
 			{
 				DrawOnInspectorObjectMovePrefabiTween( data );
-				DrawOnInspectorObjectMoveSpeed( data );
+				DrawOnInspectorObjectMoveCurve0( data );
+				DrawOnInspectorObjectMoveDelayFrame( data );
+				DrawOnInspectorObjectMoveDurationFrame( data );
+				DrawOnInspectorObjectMoveOffset( data );
 			});
 		});
 	}
