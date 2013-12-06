@@ -17,14 +17,22 @@ public class ObjectMoveITweenPath : A_ObjectMove
 	protected override void InitMove()
 	{
 		base.InitMove();
-		var refPath = data.prefabiTweenPath.GetComponent<iTweenPath>();
-		refTrans.position = refPath.nodes[0];
+		var nodes = new List<Vector3>( data.prefabiTweenPath.GetComponent<iTweenPath>().nodes );
+		for( int i=0; i<nodes.Count; i++ )
+		{
+			var path = nodes[i];
+			nodes[i] = new Vector3( path.x + data.offset.x, path.y + data.offset.y, path.z );
+		}
+		
+		refTrans.position = nodes[0];
 		iTween.MoveTo( refTrans.gameObject, iTween.Hash(
-			"path", refPath.nodes.ToArray(),
-			"speed", data.speed,
+			"path", nodes.ToArray(),
+			"time", data.durationFrame,
 			"oncompletetarget", gameObject,
-			"oncomplete", "OnComplete" )
+			"oncomplete", "OnComplete",
+			"easetype", iTween.EaseType.animationCurve )
 			);
+		refTrans.gameObject.GetComponent<iTween>().curve = data.curve0;
 	}
 	protected override void UpdateMove()
 	{
