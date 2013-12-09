@@ -24,6 +24,14 @@ public class ObjectMoveITweenPath : A_ObjectMove
 			nodes[i] = new Vector3( path.x + data.offset.x, path.y + data.offset.y, path.z );
 		}
 		
+		if( data.isReverse )
+		{
+			for( int i=0,imax=nodes.Count; i<imax; i++ )
+			{
+				nodes[i] = new Vector3( -nodes[i].x, nodes[i].y, nodes[i].z );
+			}
+		}
+		
 		refTrans.position = nodes[0];
 		iTween.MoveTo( refTrans.gameObject, iTween.Hash(
 			"path", nodes.ToArray(),

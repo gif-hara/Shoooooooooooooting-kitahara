@@ -279,6 +279,10 @@ public class EnemyCreatorEditor : A_StageTimeLineActionEditor<EnemyCreator>
 	{
 		data.offset = EditorGUILayout.Vector2Field( "Offset", data.offset );
 	}
+	private void DrawOnInspectorObjectMoveIsReverse( A_ObjectMove.Data data )
+	{
+		data.isReverse = EditorGUILayout.Toggle( "Is Reverse", data.isReverse );
+	}
 	private void DrawOnInspectorObjectMoveTween( A_ObjectMove.Data data )
 	{
 		Enclose( "Tween", () =>
@@ -336,6 +340,7 @@ public class EnemyCreatorEditor : A_StageTimeLineActionEditor<EnemyCreator>
 				DrawOnInspectorObjectMoveDelayFrame( data );
 				DrawOnInspectorObjectMoveDurationFrame( data );
 				DrawOnInspectorObjectMoveOffset( data );
+				DrawOnInspectorObjectMoveIsReverse( data );
 			});
 		});
 	}

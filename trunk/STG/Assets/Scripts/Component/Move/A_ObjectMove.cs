@@ -94,6 +94,11 @@ public abstract class A_ObjectMove : MonoBehaviourExtension
 		/// </summary>
 		public Vector2 offset;
 		
+		/// <summary>
+		/// iTweenのパスを反転させるか.
+		/// </summary>
+		public bool isReverse;
+		
 		public Data( ObjectMoveUtility.MoveType type )
 		{
 			targetPosition = Vector3.zero;
