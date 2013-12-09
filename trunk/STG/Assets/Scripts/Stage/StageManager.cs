@@ -40,17 +40,15 @@ public class StageManager : GameMonoBehaviour
 	public GameObject prefabStageChange;
 	
 	/// <summary>
-	/// タイムライン.
+	/// タイムライン管理者クラス.
 	/// </summary>
-	public int timeLine;
+	public StageTimeLineManager timeLineManager;
 	
-	public List<A_StageTimeLineActionable> actionableList;
+	public StageActionableListManager actionableListManager;
 	
 	public const float StageX = 800.0f;
 	
 	public const float StageY = 600.0f;
-	
-	private List<A_StageTimeLineActionable> currentActionableList = new List<A_StageTimeLineActionable>();
 	
 	public override void Awake()
 	{
@@ -61,16 +59,19 @@ public class StageManager : GameMonoBehaviour
 	public override void Start()
 	{
 		base.Start();
-		InitActionableList();
-		SetNextActionableList();
+		actionableListManager.Initialize( Trans, timeLineManager );
 	}
 
 	// Update is called once per frame
 	public override void Update()
 	{
 		base.Update();
-		Action();
-		timeLine++;
+		actionableListManager.Update();
+		timeLineManager.Update();
+		
+#if UNITY_EDITOR
+		actionableListManager.AllSync();
+#endif
 	}
 	
 	void OnDrawGizmos()
@@ -82,13 +83,13 @@ public class StageManager : GameMonoBehaviour
 		Gizmos.color = Color.green;
 		Gizmos.DrawLine( new Vector3( 0.0f, 1.0f, 0.0f ), new Vector3( 0,  2.0f, 0.0f ) );
 		
-		Gizmos.color = new Color( 0.9f, 0.75f, 0.7f, 1.0f );
-		Gizmos.DrawLine( new Vector3( -StageX / 2.0f, (StageY / 2.0f ) + timeLine, 0.0f ), new Vector3( 0.0f, (StageY / 2.0f ) + timeLine, 0.0f ) );
+//		Gizmos.color = new Color( 0.9f, 0.75f, 0.7f, 1.0f );
+//		Gizmos.DrawLine( new Vector3( -StageX / 2.0f, (StageY / 2.0f ) + timeLineManager.TimeLine, 0.0f ), new Vector3( 0.0f, (StageY / 2.0f ) + timeLineManager.TimeLine, 0.0f ) );
 	}
 	
 	public void SetTimeLine( int _timeLine )
 	{
-		timeLine = _timeLine;
+		timeLineManager.TimeLine = _timeLine;
 	}
 	
 	public void StartTimeLine()
@@ -101,52 +102,4 @@ public class StageManager : GameMonoBehaviour
 		enabled = false;
 	}
 	
-	private void Action()
-	{
-		if( currentActionableList.Count == 0 )	return;
-		
-		if( currentActionableList[0].timeLine == timeLine )
-		{
-			currentActionableList.ForEach( (obj) =>
-			{
-				obj.Action();
-			});
-			
-			SetNextActionableList();
-		}
-	}
-	
-	private void InitActionableList()
-	{
-		actionableList.Clear();
-		for( int i=0,imax=Trans.childCount; i<imax; i++ )
-		{
-			var creator = Trans.GetChild( i ).GetComponent<A_StageTimeLineActionable>();
-			if( creator == null )	continue;
-			
-			actionableList.Add( creator );
-		}
-		actionableList.RemoveAll( (obj) => obj.timeLine < timeLine );
-		actionableList.Sort( (x, y) => x.timeLine - y.timeLine );
-	}
-	
-	private void SetNextActionableList()
-	{
-		currentActionableList.Clear();
-		if( actionableList.Count == 0 )	return;
-		
-		var actionable = actionableList[0];
-		int timeLine = actionable.timeLine;
-		do
-		{
-			timeLine = actionable.timeLine;
-			currentActionableList.Add( actionable );
-			actionableList.RemoveAt( 0 );
-			if( actionableList.Count == 0 )
-			{
-				break;
-			}
-			actionable = actionableList[0];
-		}while( timeLine == actionable.timeLine );
-	}
 }

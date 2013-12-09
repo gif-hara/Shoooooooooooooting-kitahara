@@ -22,13 +22,28 @@ public abstract class A_StageTimeLineActionable : GameMonoBehaviour
 	/// <summary>
 	/// 自分自身の初期座標.
 	/// </summary>
-	public static Vector3 myInitialPosition = new Vector3( -400.0f, 300.0f, 0.0f );
+//	public static Vector3 myInitialPosition = new Vector3( -400.0f, 300.0f, 0.0f );
+	public static Vector3 myInitialPosition = new Vector3( 0.0f, 300.0f, 0.0f );
 	
 	/// <summary>
 	/// アクション処理.
 	/// </summary>
 	public abstract void Action();
 	
+	private static StageManager stageManager;
+	
+	public virtual void OnDrawGizmos()
+	{
+		if( !IsOutTime )	return;
+		
+		// TimeLineによる線描画.
+		Gizmos.color = Color.red;
+		Vector3 fromPos = Trans.position + Vector3.left * 400.0f;
+		Gizmos.DrawLine(
+			fromPos,
+			fromPos + Vector3.right * ( StageManager.StageX )
+			);
+	}
 	/// <summary>
 	/// 初期化.
 	/// </summary>
@@ -46,7 +61,16 @@ public abstract class A_StageTimeLineActionable : GameMonoBehaviour
 	public void SyncData()
 	{
 		gameObject.name = GameObjectName;
-		Trans.position = myInitialPosition + Vector3.up * timeLine;
+		Trans.position = myInitialPosition + Vector3.up * (timeLine - CurrentStageManager.timeLineManager.TimeLine);
+		//gameObject.SetActive( IsOutTime );
+	}
+	
+	public bool IsOutTime
+	{
+		get
+		{
+			return timeLine > CurrentStageManager.timeLineManager.TimeLine;
+		}
 	}
 	/// <summary>
 	/// ゲームオブジェクトの名前を返す.
@@ -55,4 +79,16 @@ public abstract class A_StageTimeLineActionable : GameMonoBehaviour
 	/// The name of the game object.
 	/// </value>
 	protected abstract string GameObjectName{ get; }
+	
+	protected StageManager CurrentStageManager
+	{
+		get
+		{
+			if( stageManager == null || stageManager.actionableListManager == null )
+			{
+				stageManager = GameObject.FindWithTag( "Stage" ).GetComponent<StageManager>();
+			}
+			return stageManager;
+		}
+	}
 }

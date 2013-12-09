@@ -35,20 +35,14 @@ public class EnemyCreator : A_StageTimeLineActionable
 	/// </summary>
 	public bool isIconDraw;
 		
-	void OnDrawGizmos()
+	public override void OnDrawGizmos()
 	{
 		if( isIconDraw )
 		{
 			Gizmos.DrawIcon( initialPosition, string.Format( "Enemy{0}.tga", enemyId ), false );
 		}
 		
-		// TimeLineによる線描画.
-		Gizmos.color = Color.red;
-		Vector3 fromPos = Trans.position;
-		Gizmos.DrawLine(
-			fromPos,
-			fromPos + Vector3.right * ( StageManager.StageX / 2.0f )
-			);
+		base.OnDrawGizmos();
 	}	
 	
 	public void Initialize( int enemyId, int timeLine )

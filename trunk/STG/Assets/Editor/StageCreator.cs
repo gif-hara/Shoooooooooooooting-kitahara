@@ -30,6 +30,8 @@ public class StageCreator : A_EditorMonoBehaviour<StageManager>
 		{
 			e.isIconDraw = false;
 		}
+		
+		AllSyncChildren();
 	}
 	
 	public override void OnInspectorGUI ()
@@ -49,11 +51,12 @@ public class StageCreator : A_EditorMonoBehaviour<StageManager>
 	{
 		Horizontal( () =>
 		{
-			int oldTimeLine = Target.timeLine;
-			Target.timeLine = EditorGUILayout.IntField( "TimeLine", Target.timeLine );
-			if( oldTimeLine != Target.timeLine )
+			int oldTimeLine = Target.timeLineManager.TimeLine;
+			Target.timeLineManager.TimeLine = EditorGUILayout.IntField( "TimeLine", Target.timeLineManager.TimeLine );
+			if( oldTimeLine != Target.timeLineManager.TimeLine )
 			{
 				SceneView.RepaintAll();
+				AllSyncChildren();
 			}
 		});
 	}
@@ -64,7 +67,7 @@ public class StageCreator : A_EditorMonoBehaviour<StageManager>
 	{
 		DrawActionableObjectCreateButton( "Enemy Create", Target.prefabEnemyCreator, (obj) =>
 		{
-			(obj as EnemyCreator).Initialize( 0, Target.timeLine );
+			(obj as EnemyCreator).Initialize( 0, Target.timeLineManager.TimeLine );
 		});
 	}
 	/// <summary>
@@ -88,16 +91,16 @@ public class StageCreator : A_EditorMonoBehaviour<StageManager>
 		{
 			Button( "Sync", () =>
 			{
-				Target.actionableList = new List<A_StageTimeLineActionable>();
+				Target.actionableListManager.ActionableList = new List<A_StageTimeLineActionable>();
 				for( int i=0,imax=Target.transform.childCount; i<imax; i++ )
 				{
 					var creator = Target.Trans.GetChild( i ).GetComponent<A_StageTimeLineActionable>();
 					if( creator == null )	continue;
 					
-					Target.actionableList.Add( creator );
+					Target.actionableListManager.ActionableList.Add( creator );
 				}
 				
-				Target.actionableList.Sort( (x, y) => x.timeLine - y.timeLine );
+				Target.actionableListManager.ActionableList.Sort( (x, y) => x.timeLine - y.timeLine );
 			});
 		});
 	}
@@ -151,11 +154,16 @@ public class StageCreator : A_EditorMonoBehaviour<StageManager>
 				
 				// Actionableオブジェクトの初期化.
 				var actionable = obj.GetComponent<A_StageTimeLineActionable>();
-				actionable.Initialize( Target.timeLine );
+				actionable.Initialize( Target.timeLineManager.TimeLine );
 				
 				// あとは各々で初期化が必要な場合は処理をする.
 				initialFunc( actionable );
 			});
 		});
+	}
+	
+	private void AllSyncChildren()
+	{
+		Target.actionableListManager.AllSync();
 	}
 }
