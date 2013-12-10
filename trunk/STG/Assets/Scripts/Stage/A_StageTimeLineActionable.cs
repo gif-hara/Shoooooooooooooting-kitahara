@@ -23,7 +23,7 @@ public abstract class A_StageTimeLineActionable : GameMonoBehaviour
 	/// 自分自身の初期座標.
 	/// </summary>
 //	public static Vector3 myInitialPosition = new Vector3( -400.0f, 300.0f, 0.0f );
-	public static Vector3 myInitialPosition = new Vector3( 0.0f, 300.0f, 0.0f );
+	public static Vector3 myInitialPosition = new Vector3( -400.0f, 300.0f, 0.0f );
 	
 	/// <summary>
 	/// アクション処理.
@@ -61,7 +61,8 @@ public abstract class A_StageTimeLineActionable : GameMonoBehaviour
 	public void SyncData()
 	{
 		gameObject.name = GameObjectName;
-		Trans.position = myInitialPosition + Vector3.up * (timeLine - CurrentStageManager.timeLineManager.TimeLine);
+//		Trans.position = myInitialPosition + Vector3.up * (timeLine - CurrentStageManager.timeLineManager.TimeLine);
+		Trans.position = myInitialPosition + Vector3.up * timeLine;
 		//gameObject.SetActive( IsOutTime );
 	}
 	

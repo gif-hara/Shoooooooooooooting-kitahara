@@ -69,6 +69,11 @@ public class StageActionableListManager
 		}
 	}
 	
+	public void Sort( System.Comparison<A_StageTimeLineActionable> comparison )
+	{
+		actionableList.Sort( comparison );
+	}
+	
 	private void InitActionableList()
 	{
 		actionableList.Clear();

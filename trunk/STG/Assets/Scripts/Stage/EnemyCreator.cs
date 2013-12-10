@@ -52,6 +52,17 @@ public class EnemyCreator : A_StageTimeLineActionable
 		SyncData();
 	}
 	
+	public void OffsetPosition( Vector3 offset )
+	{
+		var initPos = initialPosition;
+		initialPosition = new Vector3( initPos.x + offset.x, initPos.y + offset.y, initPos.z + offset.z );
+		foreach( var d in dataList )
+		{
+			initPos = d.targetPosition;
+			d.targetPosition = new Vector3( initPos.x + offset.x, initPos.y + offset.y, initPos.z + offset.z );
+		}
+	}
+	
 	public override void Action()
 	{
 		var obj = InstantiateAsChild( ReferenceManager.refEnemyLayer, ReferenceManager.prefabEnemyList[enemyId] );

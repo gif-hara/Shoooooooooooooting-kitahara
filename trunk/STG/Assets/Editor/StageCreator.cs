@@ -21,7 +21,7 @@ public class StageCreator : A_EditorMonoBehaviour<StageManager>
 	/// <summary>
 	/// CreateActionableObjectの描画幅.
 	/// </summary>
-	private const float CreateActionableObjectWidth = 140.0f;
+	private const float CreateActionableObjectWidth = 250.0f;
 	
 	void OnEnable()
 	{
@@ -32,19 +32,19 @@ public class StageCreator : A_EditorMonoBehaviour<StageManager>
 		}
 		
 		AllSyncChildren();
+		StringComparer comparer = new StringComparer();
+		Target.prefabActionableObjectList.Sort( (x, y) => comparer.Compare( x.gameObject.name, y.gameObject.name ) );
 	}
 	
 	public override void OnInspectorGUI ()
 	{
 		base.OnInspectorGUI();
 		DrawTimeLine();
+		DrawSyncButton();
 		Enclose( "Create Actionable Object", () =>
 		{
-			DrawCreateEnemyCreatorButton();
-			DrawFadeActionButton();
-			DrawStopActionButton();
+			DrawActionableObject();
 		}, true, true );
-		DrawSyncButton();
 	}
 	
 	private void DrawTimeLine()
@@ -60,27 +60,15 @@ public class StageCreator : A_EditorMonoBehaviour<StageManager>
 			}
 		});
 	}
-	/// <summary>
-	/// 敵生成アクションプレハブ生成ボタンの描画.
-	/// </summary>
-	private void DrawCreateEnemyCreatorButton()
+	private void DrawActionableObject()
 	{
-		DrawActionableObjectCreateButton( "Enemy Create", Target.prefabEnemyCreator, (obj) =>
+		foreach( var a in Target.prefabActionableObjectList )
 		{
-			(obj as EnemyCreator).Initialize( 0, Target.timeLineManager.TimeLine );
-		});
-	}
-	/// <summary>
-	/// フェードアクションプレハブ生成ボタンの描画.
-	/// </summary>
-	private void DrawFadeActionButton()
-	{
-		DrawActionableObjectCreateButton( "Fade Action", Target.prefabFadeAction, (obj) => {} );
-	}
-	
-	private void DrawStopActionButton()
-	{
-		DrawActionableObjectCreateButton( "TimeLine Stop Action", Target.prefabStopAction, (obj) => {} );
+			DrawActionableObjectCreateButton( a.gameObject, (obj) =>
+			{
+				obj.Initialize( Target.timeLineManager.TimeLine );
+			});
+		}
 	}
 	/// <summary>
 	/// Syncボタンの描画.
@@ -132,20 +120,17 @@ public class StageCreator : A_EditorMonoBehaviour<StageManager>
 	/// <summary>
 	/// A_StageTimeLineActionableオブジェクトの生成ボタンの描画と初期化.
 	/// </summary>
-	/// <param name='label'>
-	/// Label.
-	/// </param>
 	/// <param name='prefab'>
 	/// Prefab.
 	/// </param>
 	/// <param name='initialFunc'>
 	/// Initial func.
 	/// </param>
-	private void DrawActionableObjectCreateButton( string label, GameObject prefab, System.Action<A_StageTimeLineActionable> initialFunc )
+	private void DrawActionableObjectCreateButton( GameObject prefab, System.Action<A_StageTimeLineActionable> initialFunc )
 	{
 		Horizontal( () =>
 		{
-			Label( label, Width( CreateActionableObjectWidth ) );
+			Label( prefab.name, Width( CreateActionableObjectWidth ) );
 			Button( "Create", () =>
 			{
 				// オブジェクトの生成.

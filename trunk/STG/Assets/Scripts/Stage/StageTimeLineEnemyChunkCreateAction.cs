@@ -24,6 +24,16 @@ public class StageTimeLineEnemyChunkCreateAction : A_StageTimeLineActionable
 	/// </summary>
 	public int interval;
 	
+	/// <summary>
+	/// 名前の拡張.
+	/// </summary>
+	public string extensionName;
+	
+	/// <summary>
+	/// オフセット.
+	/// </summary>
+	public Vector2 offset;
+	
 	private bool isUpdate = false;
 	
 	// Use this for initialization
@@ -37,6 +47,7 @@ public class StageTimeLineEnemyChunkCreateAction : A_StageTimeLineActionable
 		for( int i=0,imax=actionableListManager.ActionableList.Count; i<imax; i++ )
 		{
 			actionableListManager.ActionableList[i].timeLine += interval * i;
+			(actionableListManager.ActionableList[i] as EnemyCreator).OffsetPosition( offset );
 		}
 		
 		actionableListManager.SetNextActionableList();
@@ -60,7 +71,7 @@ public class StageTimeLineEnemyChunkCreateAction : A_StageTimeLineActionable
 	{
 		get
 		{
-			return string.Format( "[{0}~{1}] EnemyChunkCreate", timeLine, timeLine + ((actionableListManager.ActionableList.Count - 1) * interval) );
+			return string.Format( "[{0}~{1}] EnemyChunkCreate_{2}", timeLine, timeLine + ((actionableListManager.ActionableList.Count - 1) * interval), extensionName );
 		}
 	}
 }

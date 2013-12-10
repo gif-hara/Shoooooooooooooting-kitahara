@@ -24,6 +24,7 @@ public class StageTimeLineEnemyChunkCreateActionEditor : A_StageTimeLineActionEd
 		{
 			DrawTimeLine();
 			DrawInterval();
+			DrawExtensionName();
 		});
 	}
 	
@@ -39,6 +40,22 @@ public class StageTimeLineEnemyChunkCreateActionEditor : A_StageTimeLineActionEd
 			if( interval != Target.interval )
 			{
 				Target.interval = interval;
+				Target.SyncData();
+			}
+		});
+	}
+
+	/// <summary>
+	/// 名前の拡張設定.
+	/// </summary>
+	private void DrawExtensionName()
+	{
+		Horizontal( () =>
+		{
+			string extensionName = EditorGUILayout.TextField( "Extension Name", Target.extensionName );
+			if( string.Compare( extensionName, Target.extensionName ) != 0 )
+			{
+				Target.extensionName = extensionName;
 				Target.SyncData();
 			}
 		});

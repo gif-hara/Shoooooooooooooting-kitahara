@@ -15,30 +15,10 @@ using System.Collections.Generic;
 public class StageManager : GameMonoBehaviour
 {
 	/// <summary>
-	/// 敵生成者プレハブ.
+	/// ステージアクションプレハブリスト.
 	/// </summary>
-	public GameObject prefabEnemyCreator;
-	
-	/// <summary>
-	/// フェードアクションプレハブ.
-	/// </summary>
-	public GameObject prefabFadeAction;
-	
-	/// <summary>
-	/// ストップアクションプレハブ.
-	/// </summary>
-	public GameObject prefabStopAction;
-	
-	/// <summary>
-	/// プレハブ生成プレハブ.
-	/// </summary>
-	public GameObject prefabPrefabCreator;
-	
-	/// <summary>
-	/// ステージ切り替えプレハブ.
-	/// </summary>
-	public GameObject prefabStageChange;
-	
+	public List<A_StageTimeLineActionable> prefabActionableObjectList;
+		
 	/// <summary>
 	/// タイムライン管理者クラス.
 	/// </summary>
