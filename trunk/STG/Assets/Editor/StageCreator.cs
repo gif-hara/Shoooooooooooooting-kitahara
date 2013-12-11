@@ -143,6 +143,9 @@ public class StageCreator : A_EditorMonoBehaviour<StageManager>
 				
 				// あとは各々で初期化が必要な場合は処理をする.
 				initialFunc( actionable );
+				
+				// 生成したゲームオブジェクトをInspectorに表示する.
+				Selection.activeGameObject = obj;
 			});
 		});
 	}
