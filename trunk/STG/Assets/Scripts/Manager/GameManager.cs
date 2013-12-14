@@ -17,7 +17,19 @@ public class GameManager : GameMonoBehaviour
 	/// <summary>
 	/// ゲームレベル.
 	/// </summary>
-	public int GameLevel{ get{ return gameLevel; } }
+	public int GameLevel
+	{
+		set
+		{
+			gameLevel = value;
+			gameLevel = gameLevel <= 0 ? 0 : gameLevel;
+			gameLevel = gameLevel >= 100 ? 100 : gameLevel;
+		}
+		get
+		{
+			return gameLevel;
+		}
+	}
 	public int gameLevel = 0;
 	
 	/// <summary>
@@ -60,7 +72,7 @@ public class GameManager : GameMonoBehaviour
 	/// </summary>
 	public List<int> DestroyEnemyNumList{ get{ return destroyEnemyNumList; } }
 	private List<int> destroyEnemyNumList = new List<int>();
-	
+
 	/// <summary>
 	/// ゲームレベル最大値.
 	/// </summary>

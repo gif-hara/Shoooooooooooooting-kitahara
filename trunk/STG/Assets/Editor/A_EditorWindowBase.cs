@@ -128,6 +128,16 @@ public class A_EditorWindowBase : EditorWindow
 	{
 		return EditorGUILayout.IntField( label, value, options );
 	}
+
+	protected float FloatField( string label, float value, params GUILayoutOption[] options )
+	{
+		return EditorGUILayout.FloatField( label, value, options );
+	}
+
+	protected float FloatField( float value, params GUILayoutOption[] options )
+	{
+		return EditorGUILayout.FloatField( value, options );
+	}
 	/// <summary>
 	/// 囲いレイアウト付きで描画を行う.
 	/// </summary>

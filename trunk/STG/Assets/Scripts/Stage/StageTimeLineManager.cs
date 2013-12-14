@@ -17,7 +17,18 @@ public class StageTimeLineManager
 	/// <summary>
 	/// タイムライン.
 	/// </summary>
-	public int TimeLine{ set{ timeLine = value; } get{ return timeLine; } }
+	public int TimeLine
+	{
+		set
+		{
+			timeLine = value;
+			timeLine = timeLine <= 0 ? 0 : timeLine;
+		}
+		get
+		{
+			return timeLine;
+		}
+	}
 	[SerializeField]
 	private int timeLine;
 	
