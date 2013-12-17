@@ -35,11 +35,6 @@ public class Player : GameMonoBehaviour
 	public int addSpecialPoint;
 	
 	/// <summary>
-	/// バリアポイント最大時のバリアの大きさ.
-	/// </summary>
-	public float barrierSize;
-	
-	/// <summary>
 	/// 現在のSPポイント.
 	/// </summary>
 	public int CurrentSpecialPoint{ get{ return currentSpecialPoint; } }
@@ -122,6 +117,8 @@ public class Player : GameMonoBehaviour
 	{
 		if( IsInvincible )	return;
 		
+		gameObject.BroadcastMessage (GameDefine.MissEventMessage, SendMessageOptions.DontRequireReceiver);
+
 		GameManager.Miss();
 		
 		refContent.SetActive( false );
@@ -129,6 +126,7 @@ public class Player : GameMonoBehaviour
 		{
 			StartCoroutine( ResurrectionCoroutine() );
 		}
+
 	}
 	/// <summary>
 	/// 無敵中であるか？.
