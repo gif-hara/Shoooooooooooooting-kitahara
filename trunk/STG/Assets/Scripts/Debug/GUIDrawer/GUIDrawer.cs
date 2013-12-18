@@ -15,7 +15,11 @@ using System.Collections.Generic;
 public class GUIDrawer : MonoBehaviour
 {
 	private List<A_GUIElement> elementList;
-	
+
+	public bool IsDraw{ set{ isDraw = value; } get{ return isDraw; } }
+	[SerializeField]
+	private bool isDraw;
+
 	[SerializeField]
 	private Rect boxRect;
 	
@@ -31,6 +35,8 @@ public class GUIDrawer : MonoBehaviour
 	
 	void OnGUI()
 	{
+		if( !isDraw )	return;
+
 		GUI.Box( boxRect, "" );
 		GUILayout.BeginVertical();
 		elementList.ForEach( (obj) =>

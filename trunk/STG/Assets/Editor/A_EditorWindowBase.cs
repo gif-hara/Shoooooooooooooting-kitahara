@@ -129,6 +129,15 @@ public class A_EditorWindowBase : EditorWindow
 		return EditorGUILayout.IntField( label, value, options );
 	}
 
+	protected int IntField( string label, int value, int leftValue, int rightValue, params GUILayoutOption[] options )
+	{
+		var result = IntField( label, value, options );
+		result = result < leftValue ? leftValue : result;
+		result = result > rightValue ? rightValue : result;
+
+		return result;
+	}
+
 	protected float FloatField( string label, float value, params GUILayoutOption[] options )
 	{
 		return EditorGUILayout.FloatField( label, value, options );
@@ -137,6 +146,15 @@ public class A_EditorWindowBase : EditorWindow
 	protected float FloatField( float value, params GUILayoutOption[] options )
 	{
 		return EditorGUILayout.FloatField( value, options );
+	}
+
+	protected float FloatField( string label, float value, float leftValue, float rightValue, params GUILayoutOption[] options )
+	{
+		var result = FloatField( label, value, options );
+		result = result < leftValue ? leftValue : result;
+		result = result > rightValue ? rightValue : result;
+		
+		return result;
 	}
 	/// <summary>
 	/// 囲いレイアウト付きで描画を行う.

@@ -52,7 +52,10 @@ public class StageCreatorWindow : A_EditorWindowBase
 	/// メニューとタイムラインのボーダーラインの色.
 	/// </summary>
 	private static Color BoarderLineColor = new Color( 45.0f/255.0f, 45.0f/255.0f, 45.0f/255.0f,1.0f );
-	
+
+	/// <summary>
+	/// タイムラインの背景色
+	/// </summary>
 	private static Color TimeLineBackgroundColor = new Color( 30.0f/255.0f, 30.0f/255.0f, 30.0f/255.0f,1.0f );
 
 	/// <summary>
@@ -99,6 +102,26 @@ public class StageCreatorWindow : A_EditorWindowBase
 	}
 	private GameManager gameManager;
 
+	private GUIDrawer GUIDrawer
+	{
+		get
+		{
+			if( guiDrawer == null )
+			{
+				var obj = GameObject.Find( "GUIDrawer" );
+				if( obj == null )
+				{
+					return null;
+				}
+				
+				guiDrawer = obj.GetComponent<GUIDrawer>();
+			}
+			
+			return guiDrawer;
+		}
+	}
+	private GUIDrawer guiDrawer;
+
 	/// <summary>
 	/// ウィンドウの生成.
 	/// </summary>
@@ -106,6 +129,7 @@ public class StageCreatorWindow : A_EditorWindowBase
 	private static void CreateWindow()
 	{
 		instance = EditorWindow.GetWindow<StageCreatorWindow>();
+		instance.title = "StageCreate";
 	}
 	/// <summary>
 	/// GUIの描画.
@@ -234,7 +258,12 @@ public class StageCreatorWindow : A_EditorWindowBase
 			StageManager.timeLineManager.TimeLine = actionableObject.timeLine;
 			Selection.activeGameObject = actionableObject.gameObject;
 		}
-		if( GUI.Button( new Rect( LeftMenuWidthNum + 12 + actionableButtonWidth + 20, buttonY, 20, 20 ), "D" ) )
+		if( GUI.Button( new Rect( LeftMenuWidthNum + 12 + actionableButtonWidth + 20, buttonY, 20, 20 ), "C" ) )
+		{
+			var copy = Instantiate( actionableObject ) as GameObject;
+			copy.transform.parent = StageManager.transform;
+		}
+		if( GUI.Button( new Rect( LeftMenuWidthNum + 12 + actionableButtonWidth + 20 + 20, buttonY, 20, 20 ), "D" ) )
 		{
 			DestroyImmediate( actionableObject.gameObject );
 			return true;
@@ -251,9 +280,10 @@ public class StageCreatorWindow : A_EditorWindowBase
 		Enclose( "System", () =>
 		{
 			StageManager.timeLineManager.TimeLine = IntField( "Time Line", StageManager.timeLineManager.TimeLine, LeftMenuWidth );
-			zoom = EditorGUILayout.Slider( "Zoom", zoom, 1.0f, 100.0f, LeftMenuWidth );
+			zoom = FloatField( "Zoom", zoom, 1.0f, 100.0f, LeftMenuWidth );
 			GameManager.GameLevel = IntField( "Game Level", GameManager.GameLevel, LeftMenuWidth );
 			GameManager.playerId = IntField( "Player Id", GameManager.playerId, LeftMenuWidth );
+			GUIDrawer.IsDraw = EditorGUILayout.Toggle( "Debug Draw", GUIDrawer.IsDraw, LeftMenuWidth );
 		});
 	}
 	private void OnGUIActionablePrefabCreateButton()
