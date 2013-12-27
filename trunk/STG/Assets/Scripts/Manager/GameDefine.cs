@@ -23,6 +23,11 @@ public class GameDefine : A_Singleton<GameDefine>
 	/// </summary>
 	public static string DeadEventMessage = "OnDead";
 
+	/// <summary>
+	/// 敵ダメージ時のイベントメッセージ.
+	/// </summary>
+	public static string DamageEventMessage = "OnDamage";
+
 	public float ColliderLayer = 0.0f;
 	
 	public override void Awake()

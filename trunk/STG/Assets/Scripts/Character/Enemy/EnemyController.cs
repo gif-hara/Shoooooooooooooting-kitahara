@@ -59,6 +59,12 @@ public class EnemyController : EnemyControllerBase
 	/// </summary>
 	[SerializeField]
 	private GameObject deadEventObject;
+
+	/// <summary>
+	/// ダメージ時にイベントを発行するオブジェクト.
+	/// </summary>
+	[SerializeField]
+	private GameObject damageEventObject;
 	
 	/// <summary>
 	/// ショット生成者リスト.
@@ -139,6 +145,11 @@ public class EnemyController : EnemyControllerBase
 		if( hp <= 0 )
 		{
 			Destroy();
+		}
+
+		if( damageEventObject != null )
+		{
+			damageEventObject.BroadcastMessage( GameDefine.DamageEventMessage, damage, SendMessageOptions.DontRequireReceiver );
 		}
 	}
 	/// <summary>
