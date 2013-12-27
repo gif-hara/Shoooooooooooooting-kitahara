@@ -21,7 +21,7 @@ public class CollisionManager : GameMonoBehaviour
 	
 	private List<A_Collider> enemyColliderList = new List<A_Collider>();
 	
-	private List<A_Collider> enemyShotColliderList = new List<A_Collider>();
+	private List<EnemyShotCollider> enemyShotColliderList = new List<EnemyShotCollider>();
 	
 	private List<A_Collider> playerColliderList = new List<A_Collider>();
 	
@@ -141,6 +141,17 @@ public class CollisionManager : GameMonoBehaviour
 	{
 		barrierColliderList.Add( col );
 	}
+	/// <summary>
+	/// 敵弾を全て死亡させる.
+	/// </summary>
+	public void AllDestroyEnemyShot()
+	{
+		enemyShotColliderList.RemoveAll( e => e == null );
+		enemyShotColliderList.ForEach( e =>
+		{
+			e.refEnemyShot.Explosion();
+		});
+	}
 	public Vector2 VarianceEnemyShotColliderList( A_Collider enemyShot, Vector2 id )
 	{
 		var currentId = GetEnemyShotVarianceId( enemyShot.cachedTransform );
@@ -218,7 +229,7 @@ public class CollisionManager : GameMonoBehaviour
 	/// <param name='yList'>
 	/// Y list.
 	/// </param>
-	private void CollisionXAndY( List<A_Collider> xList, List<A_Collider> yList )
+	private void CollisionXAndY<X, Y>( List<X> xList, List<Y> yList ) where X : A_Collider where Y : A_Collider
 	{
 		xList.RemoveAll( (obj) => obj == null );
 		yList.RemoveAll( (obj) => obj == null );

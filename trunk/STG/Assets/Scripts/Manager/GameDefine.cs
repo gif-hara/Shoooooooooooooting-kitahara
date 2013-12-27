@@ -14,9 +14,14 @@ using System.Collections;
 public class GameDefine : A_Singleton<GameDefine>
 {
 	/// <summary>
-	/// ミス時のイベントメッセージ.
+	/// プレイヤーミス時のイベントメッセージ.
 	/// </summary>
 	public static string MissEventMessage = "OnMiss";
+
+	/// <summary>
+	/// 敵死亡時のイベントメッセージ.
+	/// </summary>
+	public static string DeadEventMessage = "OnDead";
 
 	public float ColliderLayer = 0.0f;
 	

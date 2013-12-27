@@ -119,6 +119,8 @@ public class DebugManager : A_GUIElement
 		{
 			refStopWatchGUI.Reset();
 		});
+
+		KeyPush( KeyCode.I, () => ReferenceManager.refCollisionManager.AllDestroyEnemyShot() );
 	}
 	
 	public override void Draw()

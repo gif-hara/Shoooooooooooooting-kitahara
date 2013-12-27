@@ -53,6 +53,12 @@ public class EnemyController : EnemyControllerBase
 	/// 死亡時に再生するサウンドラベル.
 	/// </summary>
 	public string destroySELabel;
+
+	/// <summary>
+	/// 死亡時にイベントを発行するオブジェクト.
+	/// </summary>
+	[SerializeField]
+	private GameObject deadEventObject;
 	
 	/// <summary>
 	/// ショット生成者リスト.
@@ -152,6 +158,9 @@ public class EnemyController : EnemyControllerBase
 			this.moveDataList.Add( moveDataList[i] );
 		}
 	}
+	/// <summary>
+	/// 退場処理
+	/// </summary>
 	public void FallOut()
 	{
 		refShotCreatorList.ForEach( (obj) =>
@@ -163,6 +172,17 @@ public class EnemyController : EnemyControllerBase
 		});
 		
 		invincibleTimer = 99999;
+	}
+	/// <summary>
+	/// 強制的に死亡させる.
+	/// </summary>
+	public void ForceDead()
+	{
+		isDead = true;
+		Destroy( gameObject );
+		
+		// 死亡イベントの発行.
+		deadEventObject.BroadcastMessage( GameDefine.DeadEventMessage, SendMessageOptions.DontRequireReceiver );
 	}
 	/// <summary>
 	/// 正規化したヒットポイントを返す.
@@ -185,11 +205,6 @@ public class EnemyController : EnemyControllerBase
 		isDead = true;
 		Destroy( gameObject );
 		
-		// エフェクトの生成.
-		var effect = InstantiateAsChild( ReferenceManager.refEffectLayer, prefabDestroyEffect );
-		effect.transform.position = transform.position;
-		ReferenceManager.refSoundManager.Play( destroySELabel );
-		
 		// スコアの加算.
 		GameManager.AddScoreRateGameLevel( (ulong)addScore );
 		
@@ -198,6 +213,9 @@ public class EnemyController : EnemyControllerBase
 		
 		// 敵死亡数の加算.
 		GameManager.DestroyEnemy( id );
+
+		// 死亡イベントの発行.
+		deadEventObject.BroadcastMessage( GameDefine.DeadEventMessage, SendMessageOptions.DontRequireReceiver );
 	}
 	/// <summary>
 	/// 移動コンポーネントアタッチ.

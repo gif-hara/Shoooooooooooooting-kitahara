@@ -14,9 +14,14 @@ using System.Collections;
 public class EnemyShot : A_Shot
 {
 	public GameObject prefabExplosion;
+
+	private bool isExplosion = false;
 	
 	public void Explosion()
 	{
+		if( isExplosion )	return;
+
+		isExplosion = true;
 		Destroy( gameObject );
 		var explosion = InstantiateAsChild( ReferenceManager.refEffectLayer, prefabExplosion );
 		explosion.transform.position = Trans.position;
