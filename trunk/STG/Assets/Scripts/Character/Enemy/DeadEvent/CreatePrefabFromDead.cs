@@ -17,7 +17,7 @@ using System.Collections.Generic;
 public class CreatePrefabFromDead : GameMonoBehaviour, I_DeadEvent
 {
 	[SerializeField]
-	private GameObject prefab;
+	public GameObject prefab;
 
 	/// <summary>
 	/// 死亡処理.

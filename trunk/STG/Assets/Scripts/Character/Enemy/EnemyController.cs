@@ -58,13 +58,13 @@ public class EnemyController : EnemyControllerBase
 	/// 死亡時にイベントを発行するオブジェクト.
 	/// </summary>
 	[SerializeField]
-	private GameObject deadEventObject;
+	public GameObject deadEventObject;
 
 	/// <summary>
 	/// ダメージ時にイベントを発行するオブジェクト.
 	/// </summary>
 	[SerializeField]
-	private GameObject damageEventObject;
+	public GameObject damageEventObject;
 	
 	/// <summary>
 	/// ショット生成者リスト.

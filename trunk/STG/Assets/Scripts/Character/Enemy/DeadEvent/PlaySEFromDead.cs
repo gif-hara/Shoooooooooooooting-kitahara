@@ -20,7 +20,7 @@ public class PlaySEFromDead : GameMonoBehaviour, I_DeadEvent
 	/// ラベル.
 	/// </summary>
 	[SerializeField]
-	private string label;
+	public string label;
 
 	/// <summary>
 	/// 死亡処理.

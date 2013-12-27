@@ -146,9 +146,15 @@ public class CollisionManager : GameMonoBehaviour
 	/// </summary>
 	public void AllDestroyEnemyShot()
 	{
+		StartCoroutine( AllDestroyEnemyShotCoroutine() );
+	}
+	private IEnumerator AllDestroyEnemyShotCoroutine()
+	{
+		yield return new WaitForEndOfFrame();
+
 		enemyShotColliderList.RemoveAll( e => e == null );
 		enemyShotColliderList.ForEach( e =>
-		{
+		                              {
 			e.refEnemyShot.Explosion();
 		});
 	}
