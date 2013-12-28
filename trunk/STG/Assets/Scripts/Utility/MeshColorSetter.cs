@@ -17,19 +17,15 @@ public class MeshColorSetter : MonoBehaviourExtension
 	public MeshFilter refMeshFilter;
 	
 	public Color color;
+
+	private MeshColorManager meshManager;
 	
 	// Use this for initialization
 	public override void Start()
 	{
 		base.Start();
-		
-		var mesh = refMeshFilter.mesh;
-		Color[] colors = new Color[mesh.colors.Length];
-		for( int i=0,imax=colors.Length; i<imax; i++ )
-		{
-			colors[i] = color;
-		}
-		
-		mesh.colors = colors;
+		meshManager = new MeshColorManager();
+		meshManager.Initialize( refMeshFilter );
+		meshManager.SetColor( color );
 	}
 }

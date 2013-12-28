@@ -32,14 +32,9 @@ public class DamageEventTextureFlash : GameMonoBehaviour, I_DamageEvent
 	private int duration = 0;
 	
 	/// <summary>
-	/// マテリアルリスト.
+	/// メッシュ管理者.
 	/// </summary>
-	private List<Mesh> meshList;
-	
-	/// <summary>
-	/// 現在のマテリアルの色保持.
-	/// </summary>
-	private Color currentColor = Color.white;
+	private MeshColorManager meshManager;
 	
 	/// <summary>
 	/// 通常の色.
@@ -70,7 +65,8 @@ public class DamageEventTextureFlash : GameMonoBehaviour, I_DamageEvent
 	public override void Start()
 	{
 		base.Start();
-		InitMeshList();
+		meshManager = new MeshColorManager();
+		meshManager.Initialize( refRendererList );
 	}
 	
 	// Update is called once per frame
@@ -83,11 +79,6 @@ public class DamageEventTextureFlash : GameMonoBehaviour, I_DamageEvent
 	
 	void OnDestroy()
 	{
-		if( meshList == null )	return;
-		for( int i=0,imax=meshList.Count; i<imax; i++ )
-		{
-			Destroy( meshList[i] );
-		}
 		for( int i=0,imax=refRendererList.Count; i<imax; i++ )
 		{
 			if( refRendererList[i] == null )	continue;
@@ -106,30 +97,10 @@ public class DamageEventTextureFlash : GameMonoBehaviour, I_DamageEvent
 		duration = AddDuration;
 	}
 	
-	private void InitMeshList()
-	{
-		meshList = new List<Mesh>();
-		refRendererList.ForEach( (obj) =>
-		                        {
-			meshList.Add( obj.GetComponent<MeshFilter>().mesh );
-		});
-	}
-	
 	private void UpdateColor()
 	{
 		var current = GetColor;
-		if( currentColor == current )	return;
-		
-		meshList.ForEach( (obj) =>
-		                 {
-			Color[] colors = new Color[obj.colors.Length];
-			for( int i=0,imax=colors.Length; i<imax; i++ )
-			{
-				colors[i] = current;
-			}
-			obj.colors = colors;
-		});
-		currentColor = current;
+		meshManager.SetColor( current );
 	}
 	
 	private Color GetColor
