@@ -23,10 +23,10 @@ public class TweenMeshColor : MonoBehaviour
 	private int duration;
 
 	[SerializeField]
-	private Color from;
+	private Color from = Color.white;
 
 	[SerializeField]
-	private Color to;
+	private Color to = Color.white;
 
 	private MeshColorManager meshManager;
 
