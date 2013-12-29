@@ -64,6 +64,9 @@ public class ObjectMoveChasePlayer : A_ObjectMove
 		
 		OverDistanceDestroy();
 	}
+	protected override void Finish ()
+	{
+	}
 	/// <summary>
 	/// プレイヤー座標との同期取り.
 	/// </summary>

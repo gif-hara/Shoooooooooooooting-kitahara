@@ -43,6 +43,10 @@ public class ObjectMoveRandomRect : A_ObjectMove
 		data.durationFrame--;
 		refTrans.position -= refLookAtObject.Trans.up * data.speed;
 	}
+
+	protected override void Finish ()
+	{
+	}
 	
 	private void SetTargetPosition()
 	{

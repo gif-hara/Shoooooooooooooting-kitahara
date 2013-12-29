@@ -27,15 +27,14 @@ public class ObjectMoveTween : A_ObjectMove
 	{
 		refTrans.position = Vector3.Lerp( initialPosition, data.targetPosition, data.curve0.Evaluate( Duration ) );
 		currentDuration++;
-		
-		if( currentDuration > data.durationFrame )
+	}
+	protected override void Finish ()
+	{
+		isComplete = true;
+		enabled = false;
+		if( data.isDestroy )
 		{
-			isComplete = true;
-			enabled = false;
-			if( data.isDestroy )
-			{
-				Destroy( refTrans.gameObject );
-			}
+			Destroy( refTrans.gameObject );
 		}
 	}
 }

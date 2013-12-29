@@ -46,6 +46,9 @@ public class ObjectMoveITweenPath : A_ObjectMove
 	{
 		currentDuration++;
 	}
+	protected override void Finish ()
+	{
+	}
 	private void OnComplete()
 	{
 		Destroy( refTrans.gameObject );

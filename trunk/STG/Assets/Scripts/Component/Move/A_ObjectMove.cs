@@ -164,6 +164,11 @@ public abstract class A_ObjectMove : MonoBehaviourExtension
 		}
 		
 		UpdateMove();
+
+		if( IsFinish )
+		{
+			Finish();
+		}
 	}
 	
 	public void InitData( Data data )
@@ -198,6 +203,16 @@ public abstract class A_ObjectMove : MonoBehaviourExtension
 			refTrans.SendMessage( data.initFuncName );
 		}
 	}
+
+	protected virtual bool IsFinish
+	{
+		get
+		{
+			return currentDuration > data.durationFrame;
+		}
+	}
 	
 	protected abstract void UpdateMove();
+
+	protected abstract void Finish();
 }
