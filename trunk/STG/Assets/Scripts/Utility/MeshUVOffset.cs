@@ -80,14 +80,6 @@ public class MeshUVOffset : MonoBehaviourExtension
 		float right = (intervalX * (offset % tileX)) + intervalX;
 		float bottom = 1.0f - (intervalY * (float)((offset / tileX) + 1));
 		
-//		Debug.Log( string.Format( "left = {1}{0}top = {2}{0}right = {3}{0}bottom = {4}{0}",
-//			System.Environment.NewLine,
-//			left,
-//			top,
-//			right,
-//			bottom
-//			));
-		
 		Vector2[] uvList = new Vector2[4];
 		uvList[0] = new Vector2( left, bottom );
 		uvList[1] = new Vector2( right, bottom );
