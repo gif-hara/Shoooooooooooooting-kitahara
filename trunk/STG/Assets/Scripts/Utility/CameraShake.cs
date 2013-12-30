@@ -34,4 +34,12 @@ public class CameraShake : GameMonoBehaviour
 		
 		delay--;
 	}
+
+	public static void Begin( GameObject go, int delay, int rate, int duration )
+	{
+		var instance = go.AddComponent<CameraShake>();
+		instance.delay = delay;
+		instance.rate = rate;
+		instance.duration = duration;
+	}
 }

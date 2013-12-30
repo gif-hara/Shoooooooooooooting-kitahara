@@ -38,6 +38,11 @@ public class GameDefine : A_Singleton<GameDefine>
 	/// </summary>
 	public static string ActiveMuzzleMessage = "OnActiveMuzzle";
 
+	/// <summary>
+	/// 銃口が非アクティブになった際のメッセージ.
+	/// </summary>
+	public static string DeactiveMuzzleMessage = "OnDeactiveMuzzle";
+
 	public float ColliderLayer = 0.0f;
 	
 	public override void Awake()

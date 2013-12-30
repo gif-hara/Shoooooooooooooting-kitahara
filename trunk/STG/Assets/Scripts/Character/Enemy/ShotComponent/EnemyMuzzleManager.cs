@@ -35,14 +35,14 @@ public class EnemyMuzzleManager : GameMonoBehaviour, I_EnemyShotCreatorEvent
 	private List<int> waitList;
 
 	/// <summary>
-	/// 今起動しているショット生成コンポーネントリスト.
+	/// 今起動しているEnemyShotCreatorの数.
 	/// </summary>
-	private List<EnemyShotCreator> currentShotCreatorList = null;
+	private int creatorComponentNum = 0;
 
 	/// <summary>
 	/// 弾を出し切ったEnemyShotCreatorの数.
 	/// </summary>
-	private int endCreateNum = 0;
+	private int endCreatorComponentNum = 0;
 
 	void Start()
 	{
@@ -58,8 +58,8 @@ public class EnemyMuzzleManager : GameMonoBehaviour, I_EnemyShotCreatorEvent
 	/// </summary>
 	public void OnFreezeEnemyShotCreator()
 	{
-		endCreateNum++;
-		if( endCreateNum < currentShotCreatorList.Count )	return;
+		endCreatorComponentNum++;
+		if( endCreatorComponentNum < creatorComponentNum )	return;
 
 		ChangeMuzzle();
 	}
@@ -69,8 +69,8 @@ public class EnemyMuzzleManager : GameMonoBehaviour, I_EnemyShotCreatorEvent
 	private void InitShotCreatorList()
 	{
 		StartMuzzle();
-		currentShotCreatorList = new List<EnemyShotCreator> (refMuzzleList [id].GetComponentsInChildren<EnemyShotCreator> ());
-		endCreateNum = 0;
+		creatorComponentNum = refMuzzleList[id].GetComponentsInChildren<EnemyShotCreator>().Length;
+		endCreatorComponentNum = 0;
 	}
 	private void ChangeMuzzle()
 	{
@@ -92,6 +92,7 @@ public class EnemyMuzzleManager : GameMonoBehaviour, I_EnemyShotCreatorEvent
 	/// </summary>
 	private void CompleteMuzzle()
 	{
+		refMuzzleList[id].BroadcastMessage( GameDefine.DeactiveMuzzleMessage, SendMessageOptions.DontRequireReceiver );
 		refMuzzleList[id].SetActive( false );
 	}
 }
