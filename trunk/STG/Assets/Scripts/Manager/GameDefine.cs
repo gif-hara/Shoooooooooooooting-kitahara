@@ -28,6 +28,16 @@ public class GameDefine : A_Singleton<GameDefine>
 	/// </summary>
 	public static string DamageEventMessage = "OnDamage";
 
+	/// <summary>
+	/// EnemyShotCreatorが全弾出し切った際のメッセージ.
+	/// </summary>
+	public static string EnemyShotCreatorFreezeMessage = "OnFreezeEnemyShotCreator";
+
+	/// <summary>
+	/// 銃口がアクティブになった際のメッセージ.
+	/// </summary>
+	public static string ActiveMuzzleMessage = "OnActiveMuzzle";
+
 	public float ColliderLayer = 0.0f;
 	
 	public override void Awake()

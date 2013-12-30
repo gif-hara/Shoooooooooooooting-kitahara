@@ -12,7 +12,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 
-public class EnemyShotCreator : GameMonoBehaviour
+public class EnemyShotCreator : GameMonoBehaviour, I_MuzzleEventActinable
 {
 	/// <summary>
 	/// ショットID.
@@ -38,7 +38,7 @@ public class EnemyShotCreator : GameMonoBehaviour
 	/// 発射範囲.
 	/// </summary>
 	public float range;
-	
+
 	/// <summary>
 	/// 発射ロックフラグ.
 	/// </summary>
@@ -67,6 +67,7 @@ public class EnemyShotCreator : GameMonoBehaviour
 	/// <summary>
 	/// 発射した総数.
 	/// </summary>
+	public int TotalShotCount{ get{ return totalShotCount; } }
 	private int totalShotCount = 0;
 	
 	private List<EnemyShotCreateComponentBase> componentFromSetList = new List<EnemyShotCreateComponentBase>();
@@ -117,6 +118,19 @@ public class EnemyShotCreator : GameMonoBehaviour
 	{
 		currentInterval = value;
 	}
+	/// <summary>
+	/// 銃口がアクティブになった際のイベント.
+	/// </summary>
+	public void OnActiveMuzzle()
+	{
+		ForceFire();
+	}
+	public void Freeze( int interval )
+	{
+		enabled = false;
+		this.interval = interval;
+		gameObject.SendMessageUpwards( GameDefine.EnemyShotCreatorFreezeMessage, SendMessageOptions.DontRequireReceiver );
+	}
 	
 	public int Sleep
 	{
@@ -131,13 +145,6 @@ public class EnemyShotCreator : GameMonoBehaviour
 		}
 	}
 	
-	public int TotalShotCount
-	{
-		get
-		{
-			return totalShotCount;
-		}
-	}
 	protected void CreateShot()
 	{
 		// ロックされていたら撃たない.

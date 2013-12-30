@@ -31,13 +31,17 @@ public class EnemyShotFreeze : EnemyShotCreateComponentSeparate
 	{
 		if( (owner.TotalShotCount + 1) % separate == 0 )
 		{
-			owner.enabled = false;
-			owner.interval = freezedInterval;
+			Freeze();
 		}
 	}
 	
 	protected override void TuningFromAdd ()
 	{
 		TuningFromSet();
+	}
+
+	private void Freeze()
+	{
+		owner.Freeze( freezedInterval );
 	}
 }
