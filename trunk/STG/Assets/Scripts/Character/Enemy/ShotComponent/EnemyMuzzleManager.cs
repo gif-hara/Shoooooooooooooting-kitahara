@@ -23,6 +23,12 @@ public class EnemyMuzzleManager : GameMonoBehaviour, I_EnemyShotCreatorEvent
 	private int id;
 
 	/// <summary>
+	/// 初期化遅延時間.
+	/// </summary>
+	[SerializeField]
+	private int delay;
+
+	/// <summary>
 	/// 銃口リスト.
 	/// </summary>
 	[SerializeField]
@@ -44,14 +50,24 @@ public class EnemyMuzzleManager : GameMonoBehaviour, I_EnemyShotCreatorEvent
 	/// </summary>
 	private int endCreatorComponentNum = 0;
 
-	void Start()
+	void Awake()
 	{
 		for( int i=0,imax=refMuzzleList.Count; i<imax; i++ )
 		{
-			refMuzzleList[i].SetActive( i == id );
+			refMuzzleList[i].SetActive( false );
 		}
-
-		InitShotCreatorList();
+	}
+	void Start()
+	{
+		FrameRateUtility.StartCoroutine( delay, () =>
+		{
+			for( int i=0,imax=refMuzzleList.Count; i<imax; i++ )
+			{
+				refMuzzleList[i].SetActive( i == id );
+			}
+			
+			InitShotCreatorList();
+		});
 	}
 	/// <summary>
 	/// 全弾出し切った際のメッセージ.
