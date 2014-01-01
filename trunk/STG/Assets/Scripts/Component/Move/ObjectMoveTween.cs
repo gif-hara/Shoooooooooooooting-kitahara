@@ -21,11 +21,11 @@ public class ObjectMoveTween : A_ObjectMove
 	protected override void InitMove()
 	{
 		base.InitMove();
-		initialPosition = refTrans.position;
+		initialPosition = refTrans.localPosition;
 	}
 	protected override void UpdateMove()
 	{
-		refTrans.position = Vector3.Lerp( initialPosition, data.targetPosition, data.curve0.Evaluate( Duration ) );
+		refTrans.localPosition = Vector3.Lerp( initialPosition, data.targetPosition, data.curve0.Evaluate( Duration ) );
 		currentDuration++;
 	}
 	protected override void Finish ()

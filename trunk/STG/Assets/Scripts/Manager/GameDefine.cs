@@ -43,6 +43,11 @@ public class GameDefine : A_Singleton<GameDefine>
 	/// </summary>
 	public static string DeactiveMuzzleMessage = "OnDeactiveMuzzle";
 
+	/// <summary>
+	/// 敵弾生成メッセージ.
+	/// </summary>
+	public static string EnemyShotCreateMessage = "OnEnemyShotCreate";
+
 	public float ColliderLayer = 0.0f;
 	
 	public override void Awake()

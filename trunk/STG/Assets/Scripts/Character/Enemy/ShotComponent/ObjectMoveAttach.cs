@@ -1,6 +1,6 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : ObjectMoveAttachOnActiveMuzzle.cs
+*     * FileName    : ObjectMoveAttach.cs
 *
 *     * Description : ObjectMove系コンポーネントをアタッチするコンポーネント.
 *
@@ -13,7 +13,7 @@ using System.Collections;
 /// <summary>
 /// ObjectMove系コンポーネントをアタッチするコンポーネント.
 /// </summary>
-public class ObjectMoveAttachOnActiveMuzzle : GameMonoBehaviour, I_MuzzleEventActinable
+public class ObjectMoveAttach : GameMonoBehaviour, I_MuzzleEventActinable
 {
 	[SerializeField]
 	private A_ObjectMove prefabObjectMove;
@@ -34,11 +34,22 @@ public class ObjectMoveAttachOnActiveMuzzle : GameMonoBehaviour, I_MuzzleEventAc
 		Attach();
 	}
 	/// <summary>
+	/// 敵弾生成メッセージ.
+	/// </summary>
+	public void OnEnemyShotCreate()
+	{
+		Attach();
+	}
+	/// <summary>
 	/// アタッチ処理.
 	/// </summary>
 	private void Attach()
 	{
 		currentObject = InstantiateAsChild( refTrans, prefabObjectMove.gameObject );
-		currentObject.GetComponent<A_ObjectMove>().refTrans = refTrans;
+		var list = currentObject.GetComponents<A_ObjectMove>();
+		System.Array.ForEach<A_ObjectMove>( list, a =>
+		{
+			a.refTrans = refTrans;
+		});
 	}
 }

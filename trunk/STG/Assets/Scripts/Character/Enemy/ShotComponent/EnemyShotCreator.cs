@@ -40,6 +40,11 @@ public class EnemyShotCreator : GameMonoBehaviour, I_MuzzleEventActinable
 	public float range;
 
 	/// <summary>
+	/// 一度の発射で何発出すか.
+	/// </summary>
+	public int multipleNum = 1;
+
+	/// <summary>
 	/// 発射ロックフラグ.
 	/// </summary>
 	public bool isLock = false;
@@ -112,7 +117,6 @@ public class EnemyShotCreator : GameMonoBehaviour, I_MuzzleEventActinable
 		isSleep = false;
 		sleepFrame = 0;
 		currentInterval = 0;
-//		UpdateCreateShot();
 	}
 	public void InitCurrentInterval( int value )
 	{
@@ -147,28 +151,40 @@ public class EnemyShotCreator : GameMonoBehaviour, I_MuzzleEventActinable
 	
 	protected void CreateShot()
 	{
-		// ロックされていたら撃たない.
-		// プレイヤーが上へ存在していたら撃たない.
-		if( isLock || isPlayerTop )
+		for( int n=0; n<multipleNum; n++ )
 		{
-			totalShotCount++;
-			return;
-		}
-		
-		if( number == 1 )
-		{
-			CreateShot( 0.0f );
-		}
-		else
-		{
-			float addRange = range / (number - 1);
-			for( int i=0; i<number; i++ )
+			componentFromSetList.ForEach( (obj) =>
 			{
-				CreateShot( (addRange * i) - (range / 2.0f) );
+				obj.Tuning();
+			});
+			componentFromAddList.ForEach( (obj) => 
+			{
+				obj.Tuning();
+			});
+
+			// ロックされていたら撃たない.
+			// プレイヤーが上へ存在していたら撃たない.
+			if( isLock || isPlayerTop )
+			{
+				totalShotCount++;
+				continue;
 			}
+			
+			if( number == 1 )
+			{
+				CreateShot( 0.0f );
+			}
+			else
+			{
+				float addRange = range / (number - 1);
+				for( int i=0; i<number; i++ )
+				{
+					CreateShot( (addRange * i) - (range / 2.0f) );
+				}
+			}
+			
+			totalShotCount++;
 		}
-		
-		totalShotCount++;
 	}
 	protected void CreateShot( float _fixedAngle )
 	{
@@ -183,14 +199,6 @@ public class EnemyShotCreator : GameMonoBehaviour, I_MuzzleEventActinable
 	{
 		if( currentInterval >= interval )
 		{
-			componentFromSetList.ForEach( (obj) =>
-			{
-				obj.Tuning();
-			});
-			componentFromAddList.ForEach( (obj) => 
-			{
-				obj.Tuning();
-			});
 			CreateShot();
 			currentInterval = 0;
 		}
