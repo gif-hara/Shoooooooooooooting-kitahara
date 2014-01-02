@@ -34,20 +34,15 @@ public class ScoreItemController : GameMonoBehaviour
 	private ObjectMoveTween refFallTween;
 
 	// Use this for initialization
-	void Start ()
+	public override void Start ()
 	{
 		refFirstTween.data.targetPosition += Trans.localPosition;
 		refFallTween.data.targetPosition += Trans.localPosition;
 	}
 	
-	// Update is called once per frame
-	void Update ()
-	{
-	
-	}
-
 	public void OnPlayerCollide()
 	{
-		GameManager.AddScore( (ulong)addScore );
+		ScoreManager.AddScore( (ulong)addScore );
+		ScoreManager.EarnedScoreItem( id );
 	}
 }

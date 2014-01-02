@@ -50,14 +50,14 @@ public class EnemyMuzzleManager : GameMonoBehaviour, I_EnemyShotCreatorEvent
 	/// </summary>
 	private int endCreatorComponentNum = 0;
 
-	void Awake()
+	public override void Awake()
 	{
 		for( int i=0,imax=refMuzzleList.Count; i<imax; i++ )
 		{
 			refMuzzleList[i].SetActive( false );
 		}
 	}
-	void Start()
+	public override void Start()
 	{
 		FrameRateUtility.StartCoroutine( delay, () =>
 		{

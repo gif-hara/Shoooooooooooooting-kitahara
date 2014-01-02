@@ -141,7 +141,7 @@ public class EnemyController : EnemyControllerBase
 		
 		hp -= damage;
 		hp = hp < 0 ? 0 : hp;
-		GameManager.AddScore( (ulong)GameManager.CollisionEnemyShot );
+		ScoreManager.AddScore( (ulong)GameManager.CollisionEnemyShot );
 		if( hp <= 0 )
 		{
 			Destroy();
@@ -217,7 +217,8 @@ public class EnemyController : EnemyControllerBase
 		Destroy( gameObject );
 		
 		// スコアの加算.
-		GameManager.AddScoreRateGameLevel( (ulong)addScore );
+		ScoreManager.AddScoreRateGameLevel( (ulong)addScore );
+		ScoreManager.DestroyEnemy( Trans.position );
 		
 		// ゲームレベル経験値の加算.
 		GameManager.AddGameLevelExperience( addGameLevelExperience );

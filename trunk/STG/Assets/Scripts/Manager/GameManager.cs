@@ -45,13 +45,7 @@ public class GameManager : GameMonoBehaviour
 	/// </value>
 	public float GameLevelExperience{ get{ return gameLevelExperience; } }
 	private float gameLevelExperience = 0;
-	
-	/// <summary>
-	/// スコア.
-	/// </summary>
-	public ulong Score{ get{ return score; } }
-	private ulong score = 0;
-	
+
 	/// <summary>
 	/// 残機数.
 	/// </summary>
@@ -120,28 +114,6 @@ public class GameManager : GameMonoBehaviour
 	{
 		collisionEnemyShot += deleteNum;
 		AddGameLevelExperience( deleteNum );
-	}
-	/// <summary>
-	/// スコアの加算.
-	/// </summary>
-	/// <param name='value'>
-	/// Value.
-	/// </param>
-	public void AddScore( ulong value )
-	{
-		score += value;
-	}
-	/// <summary>
-	/// ゲームレベルを倍率にしたスコアの加算処理.
-	/// </summary>
-	/// <param name='value'>
-	/// Value.
-	/// </param>
-	public void AddScoreRateGameLevel( ulong value )
-	{
-		ulong fixedGameLevel = gameLevel <= 1 ? 1 : (ulong)gameLevel;
-		value = (value + (ulong)collisionEnemyShot) * fixedGameLevel;
-		AddScore( value );
 	}
 	/// <summary>
 	/// ミス処理.

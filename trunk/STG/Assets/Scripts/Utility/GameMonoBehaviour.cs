@@ -33,6 +33,13 @@ public class GameMonoBehaviour : MonoBehaviourExtension
 			return ReferenceManager.refGameManager;
 		}
 	}
+	public static ScoreManager ScoreManager
+	{
+		get
+		{
+			return ReferenceManager.refScoreManager;
+		}
+	}
 	/// <summary>
 	/// ゲーム定義クラスを返す.
 	/// </summary>

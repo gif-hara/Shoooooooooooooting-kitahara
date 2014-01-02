@@ -23,6 +23,8 @@ public class Player : GameMonoBehaviour
 	/// レンダラーリスト.
 	/// </summary>
 	public List<Renderer> refRenderer;
+
+	public Rect limit;
 	
 	/// <summary>
 	/// SPポイント最大値.

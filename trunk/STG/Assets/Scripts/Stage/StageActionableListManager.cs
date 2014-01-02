@@ -60,13 +60,13 @@ public class StageActionableListManager
 	
 	public void AllSync()
 	{
-		return;
-		
-		Debug.Log( ActionableList.Count );
-		foreach( var a in ActionableList )
-		{
-			a.GetComponent<A_StageTimeLineActionable>().SyncData();
-		}
+//		return;
+//		
+//		Debug.Log( ActionableList.Count );
+//		foreach( var a in ActionableList )
+//		{
+//			a.GetComponent<A_StageTimeLineActionable>().SyncData();
+//		}
 	}
 	
 	public void Sort( System.Comparison<A_StageTimeLineActionable> comparison )

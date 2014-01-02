@@ -53,6 +53,11 @@ public class ReferenceManager : A_Singleton<ReferenceManager>
 	/// ゲーム管理者クラス参照.
 	/// </summary>
 	public GameManager refGameManager;
+
+	/// <summary>
+	/// スコア管理者クラス参照.
+	/// </summary>
+	public ScoreManager refScoreManager;
 	
 	/// <summary>
 	/// サウンド管理者クラス参照.

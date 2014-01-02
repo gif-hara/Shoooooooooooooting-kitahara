@@ -17,7 +17,7 @@ public class InputMove : MonoBehaviour
 	/// 移動させるオブジェクト.
 	/// </summary>
 	public Transform refTrans;
-	
+		
 	/// <summary>
 	/// 通常の移動速度.
 	/// </summary>
@@ -29,11 +29,14 @@ public class InputMove : MonoBehaviour
 	public float m_u_shiftSpeed = 0.5f;
 	
 	private float m_speed = 0.0f;
-	
+
+	private readonly Rect limit = new Rect( -295.0f, 275.0f, 295.0f, -260.0f );
+
 	// Update is called once per frame
 	void Update()
 	{		
 		refTrans.localPosition += getFinalVelocity();
+		FixedPosition();
 	}
 	
 	/// <summary>
@@ -78,6 +81,19 @@ public class InputMove : MonoBehaviour
 	private Vector3 getFinalVelocity()
 	{
 		return getInputVelocity() * getSpeed() * Time.deltaTime;
+	}
+	/// <summary>
+	/// 座標の修正.
+	/// </summary>
+	private void FixedPosition()
+	{
+		var pos = refTrans.localPosition;
+		pos.x = pos.x < limit.x ? limit.x : pos.x;
+		pos.x = pos.x > limit.width ? limit.width : pos.x;
+		pos.y = pos.y > limit.y ? limit.y : pos.y;
+		pos.y = pos.y < limit.height ? limit.height : pos.y;
+
+		refTrans.localPosition = pos;
 	}
 }
 /* End of file ==============================================================*/

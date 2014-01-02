@@ -42,7 +42,7 @@ public class UIScore : GameMonoBehaviour
 	public override void LateUpdate()
 	{
 		base.LateUpdate();
-		var message = StringAsset.Format( AssetKey, GameManager.Score );
+		var message = StringAsset.Format( AssetKey, ScoreManager.Score );
 		refTextMeshList.ForEach( (obj) =>
 		{
 			obj.text = message;
