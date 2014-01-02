@@ -40,6 +40,13 @@ public class GameMonoBehaviour : MonoBehaviourExtension
 			return ReferenceManager.refScoreManager;
 		}
 	}
+	public static SoundManager SoundManager
+	{
+		get
+		{
+			return ReferenceManager.refSoundManager;
+		}
+	}
 	/// <summary>
 	/// ゲーム定義クラスを返す.
 	/// </summary>

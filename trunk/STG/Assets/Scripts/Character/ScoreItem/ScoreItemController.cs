@@ -18,9 +18,6 @@ public class ScoreItemController : GameMonoBehaviour
 	[SerializeField]
 	private int id;
 
-	[SerializeField]
-	private int addScore;
-
 	/// <summary>
 	/// 最初のツイーン処理.
 	/// </summary>
@@ -42,7 +39,6 @@ public class ScoreItemController : GameMonoBehaviour
 	
 	public void OnPlayerCollide()
 	{
-		ScoreManager.AddScore( (ulong)addScore );
 		ScoreManager.EarnedScoreItem( id );
 	}
 }

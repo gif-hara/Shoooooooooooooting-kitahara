@@ -25,6 +25,12 @@ public class ScoreManager : GameMonoBehaviour
 	private List<GameObject> prefabScoreItemList;
 
 	/// <summary>
+	/// 加算されるスコアリスト.
+	/// </summary>
+	[SerializeField]
+	private List<int> addScoreList;
+
+	/// <summary>
 	/// スコア.
 	/// </summary>
 	public ulong Score{ get{ return score; } }
@@ -33,6 +39,7 @@ public class ScoreManager : GameMonoBehaviour
 	/// <summary>
 	/// 獲得したスコアアイテムの数リスト.
 	/// </summary>
+	public List<int> EarnedScoreItemList{ get{ return earnedScoreItemList; } }
 	private List<int> earnedScoreItemList = null;
 
 	/// <summary>
@@ -45,7 +52,7 @@ public class ScoreManager : GameMonoBehaviour
 		earnedScoreItemList = new List<int>();
 		prefabScoreItemList.ForEach( p =>
 		{
-			earnedScoreItemList.Add( 0 );
+			earnedScoreItemList.Add( 9999 );
 		});
 	}
 
@@ -78,7 +85,12 @@ public class ScoreManager : GameMonoBehaviour
 	/// <param name="id">Identifier.</param>
 	public void EarnedScoreItem( int id )
 	{
-		earnedScoreItemList[id]++;
+		EarnedScoreItem( id, 1 );
+	}
+	public void EarnedScoreItem( int id, int num )
+	{
+		earnedScoreItemList[id] += num;
+		AddScore( (ulong)addScoreList[id] * (ulong)num ); 
 	}
 	public void DestroyEnemy( Vector3 destroyPosition )
 	{
