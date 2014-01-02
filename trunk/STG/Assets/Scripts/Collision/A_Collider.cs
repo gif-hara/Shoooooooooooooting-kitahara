@@ -20,6 +20,7 @@ public abstract class A_Collider : GameMonoBehaviour
 		Enemy,
 		EnemyShot,
 		Barrier,
+		Item,
 	}
 	public float radius;
 	

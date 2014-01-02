@@ -28,6 +28,8 @@ public class CollisionManager : GameMonoBehaviour
 	private List<A_Collider> playerShotColliderList = new List<A_Collider>();
 	
 	private List<A_Collider> barrierColliderList = new List<A_Collider>();
+
+	private List<A_Collider> itemColliderList = new List<A_Collider>();
 	
 	private List<List<List<A_Collider>>> enemyShotVarianceList = null;
 	
@@ -63,6 +65,7 @@ public class CollisionManager : GameMonoBehaviour
 		CollisionEnemyAndPlayerShot();
 		CollisionEnemyShotAndPlayer();
 		CollisionEnemyShotAndBarrier();
+		CollisionPlayerAndItem();
 		ScriptProfiler.End( this, benchMarkId );
 	}
 	
@@ -140,6 +143,11 @@ public class CollisionManager : GameMonoBehaviour
 	public void AddBarrierCollider( BarrierCollider col )
 	{
 		barrierColliderList.Add( col );
+	}
+
+	public void AddItemCollider( A_Collider col )
+	{
+		itemColliderList.Add( col );
 	}
 	/// <summary>
 	/// 敵弾を全て死亡させる.
@@ -225,6 +233,13 @@ public class CollisionManager : GameMonoBehaviour
 		if( barrierColliderList.Count <= 0 )	return;
 		
 		CollisionXAndY( barrierColliderList, enemyShotColliderList );
+	}
+	/// <summary>
+	/// プレイヤーとアイテムの衝突処理.
+	/// </summary>
+	private void CollisionPlayerAndItem()
+	{
+		CollisionXAndY( playerColliderList, itemColliderList );
 	}
 	/// <summary>
 	/// XリストとYリストの衝突処理.
