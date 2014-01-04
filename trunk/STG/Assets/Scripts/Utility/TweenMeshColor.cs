@@ -20,6 +20,9 @@ public class TweenMeshColor : MonoBehaviour
 	private MeshFilter refMeshFIlter;
 
 	[SerializeField]
+	private int delay;
+
+	[SerializeField]
 	private int duration;
 
 	[SerializeField]
@@ -44,6 +47,11 @@ public class TweenMeshColor : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
+		if( delay > 0 )
+		{
+			delay--;
+			return;
+		}
 		if( currentDuration > duration )
 		{
 			enabled = false;
