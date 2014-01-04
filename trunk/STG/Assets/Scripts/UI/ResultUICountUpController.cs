@@ -8,6 +8,7 @@
 */
 /*===========================================================================*/
 using UnityEngine;
+using System.Collections.Generic;
 using System.Collections;
 
 /// <summary>
@@ -24,11 +25,23 @@ public class ResultUICountUpController : GameMonoBehaviour
 	[SerializeField]
 	private TextMesh refTextMesh;
 
+	[SerializeField]
+	private List<TweenMeshColor> refEndTweenList;
+
 	private int currentNum = 0;
 
 	public void OnStartCountUp()
 	{
 		StartCoroutine( CountUp() );
+	}
+
+	public void EndEffect()
+	{
+		refTextMesh.text = "";
+		refEndTweenList.ForEach( t =>
+		{
+			t.enabled = true;
+		});
 	}
 
 	private IEnumerator CountUp()
@@ -48,7 +61,7 @@ public class ResultUICountUpController : GameMonoBehaviour
 			}
 
 			SoundManager.Play( "ResultCountUp" );
-			refTextMesh.text = currentNum.ToString();
+			refTextMesh.text = StringAsset.Format( "ResultNumber", currentNum.ToString() );
 
 			yield return new WaitForEndOfFrame();
 		}

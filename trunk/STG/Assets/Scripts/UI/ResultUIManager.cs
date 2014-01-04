@@ -21,9 +21,23 @@ public class ResultUIManager : GameMonoBehaviour
 
 	private int currentCountUpNum = 0;
 
+	private bool endCountUp = false;
+
 	public override void Start ()
 	{
 		Next();
+	}
+
+	public override void Update ()
+	{
+		if( !endCountUp )	return;
+
+		if( !Input.GetKeyDown( KeyCode.Z ) )	return;
+
+		refCountUpObjectList.ForEach( c =>
+		                             {
+			c.GetComponent<ResultUICountUpController>().EndEffect();
+		});
 	}
 
 	public void Next()
@@ -46,6 +60,6 @@ public class ResultUIManager : GameMonoBehaviour
 
 	private void End()
 	{
-
+		endCountUp = true;
 	}
 }
