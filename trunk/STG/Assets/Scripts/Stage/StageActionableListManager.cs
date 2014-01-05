@@ -23,13 +23,19 @@ public class StageActionableListManager
 	public List<A_StageTimeLineActionable> ActionableList{ set{ actionableList = value; } get{ return actionableList; } }
 	[SerializeField]
 	private List<A_StageTimeLineActionable> actionableList;
-	
+
+	public List<A_StageTimeLineActionable> CurrentActionableList{ get{ return currentActionableList; } }
 	private List<A_StageTimeLineActionable> currentActionableList = new List<A_StageTimeLineActionable>();
 	
 	private Transform parent;
 	
 	private StageTimeLineManager timeLineManager;
-	
+
+	/// <summary>
+	/// Initialize the specified parent and timeLineManager.
+	/// </summary>
+	/// <param name="parent">Parent.</param>
+	/// <param name="timeLineManager">Time line manager.</param>
 	public void Initialize( Transform parent, StageTimeLineManager timeLineManager )
 	{
 		InitializeOnField( parent, timeLineManager );
@@ -37,12 +43,20 @@ public class StageActionableListManager
 		SetNextActionableList();
 	}
 	
+	/// <summary>
+	/// Initializes the on field.
+	/// </summary>
+	/// <param name="parent">Parent.</param>
+	/// <param name="timeLineManager">Time line manager.</param>
 	public void InitializeOnField( Transform parent, StageTimeLineManager timeLineManager )
 	{
 		this.parent = parent;
 		this.timeLineManager = timeLineManager;
 	}
 	
+	/// <summary>
+	/// Update this instance.
+	/// </summary>
 	public void Update()
 	{
 		if( currentActionableList.Count == 0 )	return;
@@ -58,6 +72,9 @@ public class StageActionableListManager
 		}
 	}
 	
+	/// <summary>
+	/// Alls the sync.
+	/// </summary>
 	public void AllSync()
 	{
 //		return;
@@ -69,6 +86,10 @@ public class StageActionableListManager
 //		}
 	}
 	
+	/// <summary>
+	/// Sort the specified comparison.
+	/// </summary>
+	/// <param name="comparison">Comparison.</param>
 	public void Sort( System.Comparison<A_StageTimeLineActionable> comparison )
 	{
 		actionableList.Sort( comparison );
@@ -88,6 +109,9 @@ public class StageActionableListManager
 		actionableList.Sort( (x, y) => x.timeLine - y.timeLine );
 	}
 	
+	/// <summary>
+	/// Sets the next actionable list.
+	/// </summary>
 	public void SetNextActionableList()
 	{
 		currentActionableList.Clear();

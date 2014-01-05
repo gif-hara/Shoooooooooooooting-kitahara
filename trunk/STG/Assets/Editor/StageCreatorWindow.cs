@@ -131,6 +131,15 @@ public class StageCreatorWindow : A_EditorWindowBase
 		instance = EditorWindow.GetWindow<StageCreatorWindow>();
 		instance.title = "StageCreate";
 	}
+
+	void Update()
+	{
+		if( Application.isPlaying )
+		{
+			Instance.Repaint();
+		}
+	}
+
 	/// <summary>
 	/// GUIの描画.
 	/// </summary>
@@ -150,11 +159,6 @@ public class StageCreatorWindow : A_EditorWindowBase
 		DrawActionableObject();
 		// 現在のタイムラインの描画.
 		DrawTimeLine( (int)pos.height / 2, StageManager.timeLineManager.TimeLine.ToString(), Color.red, FixedZoom );
-
-		if( Application.isPlaying )
-		{
-			Instance.Repaint();
-		}
 	}
 	private Rect UpdateWindowPosition()
 	{

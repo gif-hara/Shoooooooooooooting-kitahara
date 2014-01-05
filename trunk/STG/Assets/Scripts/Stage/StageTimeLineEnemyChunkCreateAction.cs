@@ -22,11 +22,13 @@ public class StageTimeLineEnemyChunkCreateAction : A_StageTimeLineActionable
 	/// <summary>
 	/// 生成間隔.
 	/// </summary>
+	[HideInInspector]
 	public int interval;
 	
 	/// <summary>
 	/// 名前の拡張.
 	/// </summary>
+	[HideInInspector]
 	public string extensionName;
 	
 	/// <summary>
@@ -57,6 +59,12 @@ public class StageTimeLineEnemyChunkCreateAction : A_StageTimeLineActionable
 	{
 		base.Update();
 		if( !isUpdate )	return;
+
+		if( actionableListManager.CurrentActionableList.Count == 0 )
+		{
+			Destroy( gameObject );
+			return;
+		}
 		
 		actionableListManager.Update();
 		timeLineManager.Update();

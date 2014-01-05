@@ -49,7 +49,7 @@ public class PlayerShotCollider : A_Collider
 	{
 		base.Update();
 		UpdatePositionZ();
-		if( Vector3.Distance( Vector3.zero, refParent.transform.position ) >= 600.0f )
+		if( Vector3.Distance( Vector3.zero, refParent.transform.position ) >= 400.0f )
 		{
 			Destroy( refParent );
 		}

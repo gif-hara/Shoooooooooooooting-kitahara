@@ -17,6 +17,7 @@ public abstract class A_StageTimeLineActionable : GameMonoBehaviour
 	/// <summary>
 	/// タイムライン.
 	/// </summary>
+	[HideInInspector]
 	public int timeLine;
 	
 	/// <summary>
