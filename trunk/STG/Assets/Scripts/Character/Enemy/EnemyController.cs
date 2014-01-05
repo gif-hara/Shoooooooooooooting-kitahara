@@ -183,6 +183,15 @@ public class EnemyController : EnemyControllerBase
 		});
 		
 		invincibleTimer = 99999;
+		Debug.Log( "?" );
+		var components = Trans.GetComponentsInChildren<A_ObjectMove>();
+		System.Array.ForEach<A_ObjectMove>( components, c =>
+		{
+			if( c.data.initFuncName != "FallOut" )
+			{
+				c.enabled = false;
+			}
+		});
 	}
 	/// <summary>
 	/// 強制的に死亡させる.

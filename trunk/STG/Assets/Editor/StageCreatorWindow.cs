@@ -247,7 +247,7 @@ public class StageCreatorWindow : A_EditorWindowBase
 			actionableObjectDictionary.Add( y, 1 );
 		}
 		
-		int actionableButtonWidth = label.Length * 8;
+		int actionableButtonWidth = label.Length * 9;
 		int buttonY = (-20 * actionableObjectDictionary[y]) + y;
 		if( GUI.Button( new Rect( LeftMenuWidthNum + 12, buttonY, actionableButtonWidth, 20 ), label ) )
 		{

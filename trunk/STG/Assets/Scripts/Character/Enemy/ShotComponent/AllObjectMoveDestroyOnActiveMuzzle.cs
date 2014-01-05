@@ -26,7 +26,10 @@ public class AllObjectMoveDestroyOnActiveMuzzle : GameMonoBehaviour, I_MuzzleEve
 		var components = refParent.GetComponentsInChildren<A_ObjectMove>();
 		System.Array.ForEach<A_ObjectMove>( components, (obj) =>
 		{
-			Destroy( obj.gameObject );
+			if( obj.data.initFuncName != "FallOut" )
+			{
+				Destroy( obj.gameObject );
+			}
 		});
 	}
 }
