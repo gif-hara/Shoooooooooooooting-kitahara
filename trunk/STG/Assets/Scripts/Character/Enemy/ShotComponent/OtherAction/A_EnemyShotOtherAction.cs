@@ -12,7 +12,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 
-public abstract class A_EnemyShotOtherAction : MonoBehaviourExtension
+public abstract class A_EnemyShotOtherAction : GameMonoBehaviour
 {
 	/// <summary>
 	/// その他処理.

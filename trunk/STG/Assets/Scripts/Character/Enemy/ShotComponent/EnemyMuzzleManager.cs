@@ -100,6 +100,8 @@ public class EnemyMuzzleManager : GameMonoBehaviour, I_EnemyShotCreatorEvent
 	}
 	private void StartMuzzle()
 	{
+		if( refMuzzleList[id] == null )	return;
+
 		refMuzzleList[id].SetActive( true );
 		refMuzzleList[id].BroadcastMessage( GameDefine.ActiveMuzzleMessage, SendMessageOptions.DontRequireReceiver );
 	}

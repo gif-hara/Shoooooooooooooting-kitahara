@@ -5,9 +5,8 @@ using UnityEditor;
 using System.Collections;
 
 [CustomEditor(typeof(iTweenPath))]
-public class iTweenPathEditor : Editor
+public class iTweenPathEditor : A_EditorMonoBehaviour<iTweenPath>
 {
-	iTweenPath _target;
 	GUIStyle style = new GUIStyle();
 	public static int count = 0;
 	
@@ -15,13 +14,12 @@ public class iTweenPathEditor : Editor
 		//i like bold handle labels since I'm getting old:
 		style.fontStyle = FontStyle.Bold;
 		style.normal.textColor = Color.white;
-		_target = (iTweenPath)target;
-		
+
 		//lock in a default path name:
-		if(!_target.initialized){
-			_target.initialized = true;
-			_target.pathName = "New Path " + ++count;
-			_target.initialName = _target.pathName;
+		if(!Target.initialized){
+			Target.initialized = true;
+			Target.pathName = "New Path " + ++count;
+			Target.initialName = Target.pathName;
 		}
 	}
 	
@@ -29,67 +27,78 @@ public class iTweenPathEditor : Editor
 		//path name:
 		EditorGUILayout.BeginHorizontal();
 		EditorGUILayout.PrefixLabel("Path Name");
-		_target.pathName = EditorGUILayout.TextField(_target.pathName);
+		Target.pathName = EditorGUILayout.TextField(Target.pathName);
 		EditorGUILayout.EndHorizontal();
 		
-		if(_target.pathName == ""){
-			_target.pathName = _target.initialName;
+		if(Target.pathName == ""){
+			Target.pathName = Target.initialName;
 		}
 		
 		//path color:
 		EditorGUILayout.BeginHorizontal();
 		EditorGUILayout.PrefixLabel("Path Color");
-		_target.pathColor = EditorGUILayout.ColorField(_target.pathColor);
+		Target.pathColor = EditorGUILayout.ColorField(Target.pathColor);
 		EditorGUILayout.EndHorizontal();
 		
 		//exploration segment count control:
 		EditorGUILayout.BeginHorizontal();
 		EditorGUILayout.PrefixLabel("Node Count");
-		_target.nodeCount =  Mathf.Clamp(EditorGUILayout.IntSlider(_target.nodeCount, 0, 10), 2,100);
+		Target.nodeCount =  Mathf.Clamp(EditorGUILayout.IntSlider(Target.nodeCount, 0, 10), 2,100);
 		EditorGUILayout.EndHorizontal();
 		
 		//add node?
-		if(_target.nodeCount > _target.nodes.Count){
-			for (int i = 0; i < _target.nodeCount - _target.nodes.Count; i++) {
-				_target.nodes.Add(Vector3.zero);	
+		if(Target.nodeCount > Target.nodes.Count){
+			for (int i = 0; i < Target.nodeCount - Target.nodes.Count; i++) {
+				Target.nodes.Add(Vector3.zero);	
 			}
 		}
 	
 		//remove node?
-		if(_target.nodeCount < _target.nodes.Count){
+		if(Target.nodeCount < Target.nodes.Count){
 			if(EditorUtility.DisplayDialog("Remove path node?","Shortening the node list will permantently destory parts of your path. This operation cannot be undone.", "OK", "Cancel")){
-				int removeCount = _target.nodes.Count - _target.nodeCount;
-				_target.nodes.RemoveRange(_target.nodes.Count-removeCount,removeCount);
+				int removeCount = Target.nodes.Count - Target.nodeCount;
+				Target.nodes.RemoveRange(Target.nodes.Count-removeCount,removeCount);
 			}else{
-				_target.nodeCount = _target.nodes.Count;	
+				Target.nodeCount = Target.nodes.Count;	
 			}
 		}
 				
 		//node display:
-		EditorGUI.indentLevel = 4;
-		for (int i = 0; i < _target.nodes.Count; i++) {
-			_target.nodes[i] = EditorGUILayout.Vector3Field("Node " + (i+1), _target.nodes[i]);
+		for (int i = 0; i < Target.nodes.Count; i++) {
+			Target.nodes[i] = EditorGUILayout.Vector3Field("Node " + (i+1), Target.nodes[i]);
+			Button( "Add", () =>
+			{
+				Target.nodes.Insert( i, Target.nodes[i] );
+				Target.nodeCount = Target.nodes.Count;
+			});
 		}
+
+		Line();
+		Button( "Sync Last Node", () =>
+		{
+			var initPos = Target.nodes[0];
+			Target.nodes[Target.nodes.Count-1] = initPos;
+		});
 		
 		//update and redraw:
 		if(GUI.changed){
-			EditorUtility.SetDirty(_target);			
+			EditorUtility.SetDirty(Target);			
 		}
 	}
 	
 	void OnSceneGUI(){
-		if(_target.enabled) { // dkoontz
-			if(_target.nodes.Count > 0){
+		if(Target.enabled) { // dkoontz
+			if(Target.nodes.Count > 0){
 				//allow path adjustment undo:
-				Undo.SetSnapshotTarget(_target,"Adjust iTween Path");
+				Undo.SetSnapshotTarget(Target,"Adjust iTween Path");
 				
 				//path begin and end labels:
-				Handles.Label(_target.nodes[0], "'" + _target.pathName + "' Begin", style);
-				Handles.Label(_target.nodes[_target.nodes.Count-1], "'" + _target.pathName + "' End", style);
+				Handles.Label(Target.nodes[0], "'" + Target.pathName + "' Begin", style);
+				Handles.Label(Target.nodes[Target.nodes.Count-1], "'" + Target.pathName + "' End", style);
 				
 				//node handle display:
-				for (int i = 0; i < _target.nodes.Count; i++) {
-					_target.nodes[i] = Handles.PositionHandle(_target.nodes[i], Quaternion.identity);
+				for (int i = 0; i < Target.nodes.Count; i++) {
+					Target.nodes[i] = Handles.PositionHandle(Target.nodes[i], Quaternion.identity);
 				}	
 			}
 		} // dkoontz

@@ -17,7 +17,7 @@ public class iTweenPath : MonoBehaviour
 		paths.Add(pathName.ToLower(), this);
 	}
 	
-	void OnDrawGizmosSelected(){
+	void OnDrawGizmos(){
 		if(enabled) { // dkoontz
 			if(nodes.Count > 0){
 				iTween.DrawPath(nodes.ToArray(), pathColor);
