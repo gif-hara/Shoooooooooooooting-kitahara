@@ -129,6 +129,14 @@ public class EnemyController : EnemyControllerBase
 		}
 	}
 	/// <summary>
+	/// ヒットポイントの初期化.
+	/// </summary>
+	/// <param name="hitPoint">Hit point.</param>
+	public void InitHitPoint( int hitPoint )
+	{
+		hp = hitPoint;
+	}
+	/// <summary>
 	/// ダメージ処理.
 	/// </summary>
 	/// <param name='damage'>

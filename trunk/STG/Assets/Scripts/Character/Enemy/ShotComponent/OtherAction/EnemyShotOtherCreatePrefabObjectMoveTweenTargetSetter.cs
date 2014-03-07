@@ -2,7 +2,7 @@
 /*
 *     * FileName    :EnemyShotOtherCreatePrefabObjectMoveTweenTargetSetter.cs
 *
-*     * Description : .
+*     * Description : 敵弾生成時に生成したプレハブにObjectTweenのtargetPositionを設定するコンポーネント.
 *
 *     * Author      : Hiroki_Kitahara.
 */
@@ -12,7 +12,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 /// <summary>
-/// .
+/// 敵弾生成時に生成したプレハブにObjectTweenのtargetPositionを設定するコンポーネント.
 /// </summary>
 public class EnemyShotOtherCreatePrefabObjectMoveTweenTargetSetter : MonoBehaviour
 {

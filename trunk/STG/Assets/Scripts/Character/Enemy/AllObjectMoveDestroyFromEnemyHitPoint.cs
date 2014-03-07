@@ -1,6 +1,6 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : AllObjectMoveDestroyOnActiveMuzzle.cs
+*     * FileName    :AllObjectMoveDestroyFromEnemyHitPoint.cs
 *
 *     * Description : .
 *
@@ -9,19 +9,17 @@
 /*===========================================================================*/
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 /// <summary>
 /// .
 /// </summary>
-public class AllObjectMoveDestroyOnActiveMuzzle : GameMonoBehaviour, I_MuzzleEventActinable
+public class AllObjectMoveDestroyFromEnemyHitPoint : EventActionableFromEnemyHitPoint
 {
 	[SerializeField]
 	private GameObject refParent;
 
-	/// <summary>
-	/// 銃口がアクティブになった際のイベント.
-	/// </summary>
-	public void OnActiveMuzzle()
+	public override void Action ()
 	{
 		ObjectMoveUtility.AllDetach( refParent );
 	}
