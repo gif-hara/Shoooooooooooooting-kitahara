@@ -28,7 +28,11 @@ public class EnemyShotOtherCreatePrefab : A_EnemyShotOtherAction
 	public override void OtherAction ()
 	{
 		var obj = Instantiate( prefab, transform.position, Quaternion.identity ) as GameObject;
-		target = target ?? gameObject;
+		if( target == null )
+		{
+			target = gameObject;
+		}
+
 		target.SendMessage( ExtensionMessage, obj, SendMessageOptions.DontRequireReceiver );
 	}
 }
