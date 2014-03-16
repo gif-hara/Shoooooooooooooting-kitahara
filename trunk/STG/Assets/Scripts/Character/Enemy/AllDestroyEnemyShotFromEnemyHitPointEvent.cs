@@ -1,6 +1,6 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    :ActiveSetterFromEnemyHitPoint.cs
+*     * FileName    :AllDestroyEnemyShotFromEnemyHitPointEvent.cs
 *
 *     * Description : .
 *
@@ -14,16 +14,10 @@ using System.Collections.Generic;
 /// <summary>
 /// .
 /// </summary>
-public class ActiveSetterFromEnemyHitPoint : EventActionableFromEnemyHitPoint
+public class AllDestroyEnemyShotFromEnemyHitPointEvent : EventActionableFromEnemyHitPoint
 {
-	[SerializeField]
-	private GameObject refActiveTarget;
-
-	[SerializeField]
-	private bool isActive = true;
-
 	public override void Action ()
 	{
-		refActiveTarget.SetActive ( isActive );
+		ReferenceManager.refCollisionManager.AllDestroyEnemyShot();
 	}
 }

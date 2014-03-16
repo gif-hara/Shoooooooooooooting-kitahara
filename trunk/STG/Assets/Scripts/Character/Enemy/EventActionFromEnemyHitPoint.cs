@@ -24,12 +24,12 @@ public class EventActionFromEnemyHitPoint : GameMonoBehaviour
 
 	private List<EventActionableFromEnemyHitPoint> refActionableList;
 
-	void Start()
+	public override void Start()
 	{
 		refActionableList = new List<EventActionableFromEnemyHitPoint>( GetComponents<EventActionableFromEnemyHitPoint>() );
 	}
 	
-	void Update ()
+	public override void Update ()
 	{
 		if( refEnemy.Hp <= changeHitPoint )
 		{

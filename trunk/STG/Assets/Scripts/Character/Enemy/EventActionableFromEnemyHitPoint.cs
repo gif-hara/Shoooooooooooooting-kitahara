@@ -14,7 +14,7 @@ using System.Collections.Generic;
 /// <summary>
 /// 敵のヒットポイントによるアクション抽象コンポーネント.
 /// </summary>
-public abstract class EventActionableFromEnemyHitPoint : MonoBehaviour
+public abstract class EventActionableFromEnemyHitPoint : GameMonoBehaviour
 {
 	public abstract void Action();
 }
