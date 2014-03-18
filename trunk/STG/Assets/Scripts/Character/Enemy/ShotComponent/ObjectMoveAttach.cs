@@ -21,6 +21,15 @@ public class ObjectMoveAttach : GameMonoBehaviour, I_MuzzleEventActinable
 	[SerializeField]
 	private Transform refTrans;
 
+	[SerializeField]
+	private GameObject refExtensionEventObject;
+
+	/// <summary>
+	/// 生成したオブジェクトに対して拡張処理を行うメッセージ.
+	/// 引数に<c>GameObject createdObject</c>が入る.
+	/// </summary>
+	private const string ExtensionMessage = "OnExtensionObjectMoveAttach";
+
 	/// <summary>
 	/// 生成したプレハブ保持.
 	/// </summary>
@@ -51,5 +60,10 @@ public class ObjectMoveAttach : GameMonoBehaviour, I_MuzzleEventActinable
 		{
 			a.refTrans = refTrans;
 		});
+
+		if( refExtensionEventObject != null )
+		{
+			refExtensionEventObject.SendMessage( ExtensionMessage, currentObject, SendMessageOptions.DontRequireReceiver );
+		}
 	}
 }
