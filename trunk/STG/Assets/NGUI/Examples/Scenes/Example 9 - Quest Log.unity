@@ -1681,12 +1681,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b90fc8427bee38c478f5b2f6f0ae9580, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 62}
-  scale: {x: 1, y: 1, z: 0}
-  scrollWheelFactor: 0
-  restrictWithinPanel: 0
-  dragEffect: 0
-  momentumAmount: 35
 --- !u!114 &120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1725,17 +1719,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d81807633ea807d4c8e3fff7e10c6000, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  restrictWithinPanel: 1
-  disableDragIfFits: 1
-  dragEffect: 2
-  scale: {x: 0, y: 1, z: 0}
-  scrollWheelFactor: 1
-  momentumAmount: 35
-  relativePositionOnReset: {x: 0, y: 0}
-  repositionClipping: 0
-  horizontalScrollBar: {fileID: 0}
-  verticalScrollBar: {fileID: 125}
-  showScrollBars: 1
 --- !u!114 &125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1747,12 +1730,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c8d596c16f05d949922ef16347e4cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mBG: {fileID: 127}
-  mFG: {fileID: 126}
-  mDir: 1
-  mInverted: 0
-  mScroll: 0
-  mSize: 1
 --- !u!114 &126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1800,8 +1777,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f02842fa4878db54f9587ff4de7d9f2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  draggablePanel: {fileID: 122}
-  panel: {fileID: 0}
 --- !u!114 &129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1827,8 +1802,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f02842fa4878db54f9587ff4de7d9f2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  draggablePanel: {fileID: 122}
-  panel: {fileID: 0}
 --- !u!114 &131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1840,8 +1813,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f02842fa4878db54f9587ff4de7d9f2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  draggablePanel: {fileID: 122}
-  panel: {fileID: 0}
 --- !u!114 &132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1853,8 +1824,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f02842fa4878db54f9587ff4de7d9f2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  draggablePanel: {fileID: 122}
-  panel: {fileID: 0}
 --- !u!114 &133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2091,16 +2060,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaee0fa3c7a782f43ac65b3fea68c1d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tweenTarget: {fileID: 19}
-  tweenGroup: 0
-  trigger: 0
-  playDirection: 0
-  resetOnPlay: 0
-  ifDisabledOnPlay: 1
-  disableWhenFinished: -1
-  includeChildren: 0
-  eventReceiver: {fileID: 0}
-  callWhenFinished: 
 --- !u!114 &146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2182,16 +2141,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaee0fa3c7a782f43ac65b3fea68c1d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tweenTarget: {fileID: 22}
-  tweenGroup: 0
-  trigger: 0
-  playDirection: 0
-  resetOnPlay: 0
-  ifDisabledOnPlay: 1
-  disableWhenFinished: -1
-  includeChildren: 0
-  eventReceiver: {fileID: 0}
-  callWhenFinished: 
 --- !u!114 &150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2273,16 +2222,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaee0fa3c7a782f43ac65b3fea68c1d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tweenTarget: {fileID: 23}
-  tweenGroup: 0
-  trigger: 0
-  playDirection: 0
-  resetOnPlay: 0
-  ifDisabledOnPlay: 1
-  disableWhenFinished: -1
-  includeChildren: 0
-  eventReceiver: {fileID: 0}
-  callWhenFinished: 
 --- !u!114 &154
 MonoBehaviour:
   m_ObjectHideFlags: 0

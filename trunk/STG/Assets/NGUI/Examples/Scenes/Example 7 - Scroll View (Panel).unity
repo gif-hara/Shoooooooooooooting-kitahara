@@ -3369,17 +3369,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d81807633ea807d4c8e3fff7e10c6000, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  restrictWithinPanel: 1
-  disableDragIfFits: 0
-  dragEffect: 2
-  scale: {x: 1, y: 0, z: 0}
-  scrollWheelFactor: -2
-  momentumAmount: 35
-  relativePositionOnReset: {x: 0, y: 0}
-  repositionClipping: 0
-  horizontalScrollBar: {fileID: 244}
-  verticalScrollBar: {fileID: 0}
-  showScrollBars: 1
 --- !u!114 &244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3391,12 +3380,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c8d596c16f05d949922ef16347e4cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mBG: {fileID: 246}
-  mFG: {fileID: 245}
-  mDir: 0
-  mInverted: 0
-  mScroll: 0
-  mSize: .362855673
 --- !u!114 &245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3444,8 +3427,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f02842fa4878db54f9587ff4de7d9f2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  draggablePanel: {fileID: 243}
-  panel: {fileID: 0}
 --- !u!114 &248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3606,8 +3587,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f02842fa4878db54f9587ff4de7d9f2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  draggablePanel: {fileID: 243}
-  panel: {fileID: 0}
 --- !u!114 &256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3732,8 +3711,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f02842fa4878db54f9587ff4de7d9f2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  draggablePanel: {fileID: 243}
-  panel: {fileID: 0}
 --- !u!114 &262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3858,8 +3835,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f02842fa4878db54f9587ff4de7d9f2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  draggablePanel: {fileID: 243}
-  panel: {fileID: 0}
 --- !u!114 &268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3984,8 +3959,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f02842fa4878db54f9587ff4de7d9f2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  draggablePanel: {fileID: 243}
-  panel: {fileID: 0}
 --- !u!114 &274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4110,8 +4083,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f02842fa4878db54f9587ff4de7d9f2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  draggablePanel: {fileID: 243}
-  panel: {fileID: 0}
 --- !u!114 &280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4236,8 +4207,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f02842fa4878db54f9587ff4de7d9f2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  draggablePanel: {fileID: 243}
-  panel: {fileID: 0}
 --- !u!114 &286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4362,8 +4331,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f02842fa4878db54f9587ff4de7d9f2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  draggablePanel: {fileID: 243}
-  panel: {fileID: 0}
 --- !u!114 &292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4488,8 +4455,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f02842fa4878db54f9587ff4de7d9f2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  draggablePanel: {fileID: 243}
-  panel: {fileID: 0}
 --- !u!114 &298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4614,8 +4579,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f02842fa4878db54f9587ff4de7d9f2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  draggablePanel: {fileID: 243}
-  panel: {fileID: 0}
 --- !u!114 &304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4740,8 +4703,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f02842fa4878db54f9587ff4de7d9f2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  draggablePanel: {fileID: 243}
-  panel: {fileID: 0}
 --- !u!114 &310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4866,8 +4827,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f02842fa4878db54f9587ff4de7d9f2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  draggablePanel: {fileID: 243}
-  panel: {fileID: 0}
 --- !u!114 &316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4992,8 +4951,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f02842fa4878db54f9587ff4de7d9f2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  draggablePanel: {fileID: 243}
-  panel: {fileID: 0}
 --- !u!114 &322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5005,8 +4962,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f02842fa4878db54f9587ff4de7d9f2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  draggablePanel: {fileID: 243}
-  panel: {fileID: 0}
 --- !u!114 &323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5085,16 +5040,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaee0fa3c7a782f43ac65b3fea68c1d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tweenTarget: {fileID: 0}
-  tweenGroup: 0
-  trigger: 0
-  playDirection: 0
-  resetOnPlay: 0
-  ifDisabledOnPlay: 0
-  disableWhenFinished: 0
-  includeChildren: 0
-  eventReceiver: {fileID: 0}
-  callWhenFinished: 
 --- !u!114 &328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5126,16 +5071,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaee0fa3c7a782f43ac65b3fea68c1d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tweenTarget: {fileID: 89}
-  tweenGroup: 0
-  trigger: 0
-  playDirection: 0
-  resetOnPlay: 0
-  ifDisabledOnPlay: 0
-  disableWhenFinished: 0
-  includeChildren: 0
-  eventReceiver: {fileID: 0}
-  callWhenFinished: 
 --- !u!114 &330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5236,13 +5171,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07c4de3b4b6fe9045b059ee627c100df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrangement: 0
-  maxPerLine: 0
-  cellWidth: 150
-  cellHeight: 200
-  repositionNow: 0
-  sorted: 0
-  hideInactive: 1
 --- !u!114 &336
 MonoBehaviour:
   m_ObjectHideFlags: 0
