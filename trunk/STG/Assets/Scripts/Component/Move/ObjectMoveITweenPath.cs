@@ -51,6 +51,9 @@ public class ObjectMoveITweenPath : A_ObjectMove
 	}
 	private void OnComplete()
 	{
-		Destroy( refTrans.gameObject );
+		if( data.isDestroy )
+		{
+			Destroy( refTrans.gameObject );
+		}
 	}
 }
