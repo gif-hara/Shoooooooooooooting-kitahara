@@ -189,6 +189,7 @@ GameObject:
   - 4: {fileID: 400022}
   - 114: {fileID: 11400022}
   - 114: {fileID: 11400020}
+  - 114: {fileID: 11400396}
   m_Layer: 8
   m_Name: Enemy23
   m_TagString: Untagged
@@ -972,6 +973,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &100102
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400102}
+  - 114: {fileID: 11400394}
+  m_Layer: 0
+  m_Name: FirstMoveEvent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &400000
 Transform:
   m_ObjectHideFlags: 1
@@ -1114,7 +1131,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100022}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.50604248, y: 205.565918, z: 0}
+  m_LocalPosition: {x: -547.384155, y: 175.462814, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400020}
@@ -1123,6 +1140,7 @@ Transform:
   - {fileID: 400006}
   - {fileID: 400040}
   - {fileID: 400064}
+  - {fileID: 400102}
   m_Father: {fileID: 0}
 --- !u!4 &400024
 Transform:
@@ -1245,6 +1263,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 400052}
   - {fileID: 400056}
   - {fileID: 400068}
   - {fileID: 400088}
@@ -1309,7 +1328,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 400058}
+  m_Father: {fileID: 400044}
 --- !u!4 &400054
 Transform:
   m_ObjectHideFlags: 1
@@ -1342,7 +1361,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 400052}
   - {fileID: 400034}
   - {fileID: 400050}
   - {fileID: 400074}
@@ -1583,6 +1601,17 @@ Transform:
   m_LocalScale: {x: -256, y: 128, z: 1}
   m_Children: []
   m_Father: {fileID: 400014}
+--- !u!4 &400102
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100102}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400022}
 --- !u!23 &2300000
 Renderer:
   m_ObjectHideFlags: 1
@@ -1921,7 +1950,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400022}
-  id: 21
+  id: 23
   hp: 65000
   addScore: 500
   addGameLevelExperience: 50
@@ -7026,6 +7055,71 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
+--- !u!114 &11400394
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4ed2c7fb88b14442a4b3055d87f3dec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  refTrans: {fileID: 400022}
+  data:
+    targetPosition: {x: 0, y: 0, z: 0}
+    curve0:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 2
+        outSlope: 2
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    curve1:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    speed: 0
+    delayFrame: 0
+    durationFrame: 60
+    isDestroy: 0
+    isOnOverDistance: 0
+    isSyncRotation: 0
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    moveType: 0
+    initFuncName: 
+    prefabiTweenPath: {fileID: 100000, guid: 3698eb7b84f841c46b7d54dc9087b168, type: 2}
+    offset: {x: 0, y: 0}
+    isReverse: 0
+--- !u!114 &11400396
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e140132d1325b8841bfb15b5d991bac6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  refEnemy: {fileID: 11400022}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

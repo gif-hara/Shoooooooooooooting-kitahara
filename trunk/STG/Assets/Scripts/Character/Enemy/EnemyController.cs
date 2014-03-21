@@ -191,7 +191,6 @@ public class EnemyController : EnemyControllerBase
 		});
 		
 		invincibleTimer = 99999;
-		Debug.Log( "?" );
 		var components = Trans.GetComponentsInChildren<A_ObjectMove>();
 		System.Array.ForEach<A_ObjectMove>( components, c =>
 		{

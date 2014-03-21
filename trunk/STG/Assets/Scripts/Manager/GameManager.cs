@@ -78,7 +78,7 @@ public class GameManager : GameMonoBehaviour
 		Application.targetFrameRate = 60;
 		CreatePlayer();
 		
-		for( int i=0; i<20; i++ )
+		for( int i=0; i<ReferenceManager.Instance.prefabEnemyList.Count; i++ )
 		{
 			destroyEnemyNumList.Add( 0 );
 		}
