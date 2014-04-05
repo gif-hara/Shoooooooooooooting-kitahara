@@ -1,6 +1,6 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : ScoreItemCollider.cs
+*     * FileName    : ItemCollider.cs
 *
 *     * Description : .
 *
@@ -13,7 +13,7 @@ using System.Collections;
 /// <summary>
 /// .
 /// </summary>
-public class ScoreItemCollider : A_Collider
+public class ItemCollider : A_Collider
 {
 	[SerializeField]
 	private ScoreItemController refController;
