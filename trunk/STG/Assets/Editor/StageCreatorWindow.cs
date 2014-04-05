@@ -17,7 +17,7 @@ using System.Collections.Generic;
 /// </summary>
 using System;
 
-
+[ExecuteInEditMode]
 public class StageCreatorWindow : A_EditorWindowBase
 {
 	/// <summary>
@@ -42,6 +42,11 @@ public class StageCreatorWindow : A_EditorWindowBase
 	/// アクショナブルオブジェクトボタン描画時の座標補正用のディクショナリ.
 	/// </summary>
 	private Dictionary<int, int> actionableObjectDictionary;
+
+	/// <summary>
+	/// アクショナブルプレハブリストの座標.
+	/// </summary>
+	private Vector2 actionablePrefabListPosition = Vector2.zero;
 
 	/// <summary>
 	/// 左側メニューの幅.
@@ -132,13 +137,13 @@ public class StageCreatorWindow : A_EditorWindowBase
 		instance.title = "StageCreate";
 	}
 
-	void Update()
-	{
-		if( Application.isPlaying )
-		{
-			Instance.Repaint();
-		}
-	}
+//	void Update()
+//	{
+//		if( Application.isPlaying )
+//		{
+//			Instance.Repaint();
+//		}
+//	}
 
 	/// <summary>
 	/// GUIの描画.
@@ -292,6 +297,7 @@ public class StageCreatorWindow : A_EditorWindowBase
 	}
 	private void OnGUIActionablePrefabCreateButton()
 	{
+		actionablePrefabListPosition = EditorGUILayout.BeginScrollView( actionablePrefabListPosition );
 		Enclose( "Actionable Prefab", () =>
 		{
 			for( int i=0,imax=StageManager.prefabActionableObjectList.Count; i<imax; i++ )
@@ -299,6 +305,7 @@ public class StageCreatorWindow : A_EditorWindowBase
 				DrawActionablePrefabCreateButton( StageManager.prefabActionableObjectList[i].gameObject, (a) => a.Initialize( StageManager.timeLineManager.TimeLine ) );
 			}
 		});
+		EditorGUILayout.EndScrollView();
 	}
 	/// <summary>
 	/// A_StageTimeLineActionableオブジェクトの生成ボタンの描画と初期化.
