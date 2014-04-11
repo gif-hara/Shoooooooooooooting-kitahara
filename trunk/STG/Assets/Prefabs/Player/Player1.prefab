@@ -250,8 +250,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100006}
-  m_LocalRotation: {x: 0, y: 0, z: .00872663688, w: -.999961913}
-  m_LocalPosition: {x: 16, y: -5, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -.00872653536, w: .999961913}
+  m_LocalPosition: {x: 32, y: -5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400010}
@@ -263,7 +263,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100008}
   m_LocalRotation: {x: 0, y: 0, z: .00872653536, w: .999961913}
-  m_LocalPosition: {x: -16, y: -5, z: 0}
+  m_LocalPosition: {x: -32, y: -5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400024}
@@ -408,7 +408,7 @@ MonoBehaviour:
   prefabShot: {fileID: 100000, guid: d08bf3f855f68fc4b8e8dddb4cb1d522, type: 2}
   refInstancePosition: {fileID: 400006}
   refShotAngle: {fileID: 400006}
-  speed: 50
+  speed: 64
   interval: 0
   maxFire: 7
 --- !u!114 &11400002
@@ -472,7 +472,7 @@ MonoBehaviour:
   prefabShot: {fileID: 100000, guid: d08bf3f855f68fc4b8e8dddb4cb1d522, type: 2}
   refInstancePosition: {fileID: 400008}
   refShotAngle: {fileID: 400008}
-  speed: 50
+  speed: 64
   interval: 0
   maxFire: 7
 --- !u!114 &11400010

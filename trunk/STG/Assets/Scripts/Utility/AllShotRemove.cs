@@ -27,6 +27,16 @@ public class AllShotRemove : A_DelayEvent
 	/// </returns>
 	public static int AllRemove()
 	{
+		return Remove( s => s.Explosion() );
+	}
+
+	public static int AllRemoveFromBomb()
+	{
+		return Remove( s => s.ExplosionFromRangeShotRemove() );
+	}
+
+	private static int Remove( System.Action<EnemyShot> func )
+	{
 		if( ReferenceManager.refEnemyShotLayer == null )	return 0;
 		
 		int result = 0;
@@ -34,7 +44,7 @@ public class AllShotRemove : A_DelayEvent
 		foreach( var shot in shotList )
 		{
 			result++;
-			shot.Explosion();
+			func( shot );
 		}
 		
 		return result;

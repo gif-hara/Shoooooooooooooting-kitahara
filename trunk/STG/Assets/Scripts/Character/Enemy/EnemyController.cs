@@ -149,7 +149,7 @@ public class EnemyController : EnemyControllerBase
 		
 		hp -= damage;
 		hp = hp < 0 ? 0 : hp;
-		ScoreManager.AddScore( (ulong)GameManager.CollisionEnemyShot );
+		ScoreManager.AddScore( 10 );
 		if( hp <= 0 )
 		{
 			Destroy();

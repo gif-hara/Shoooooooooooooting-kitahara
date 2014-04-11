@@ -15,6 +15,9 @@ public class EnemyShot : A_Shot
 {
 	public GameObject prefabExplosion;
 
+	[SerializeField]
+	private GameObject prefabStarItem;
+
 	private bool isExplosion = false;
 	
 	public void Explosion()
@@ -26,6 +29,21 @@ public class EnemyShot : A_Shot
 		var explosion = InstantiateAsChild( ReferenceManager.refEffectLayer, prefabExplosion );
 		explosion.transform.position = Trans.position;
 	}
+
+	public void ExplosionFromRangeShotRemove()
+	{
+		if( isExplosion )	return;
+
+		Explosion();
+
+		var pos = Trans.position;
+		FrameRateUtility.StartCoroutine( 20, () =>
+		{
+			var starItem = InstantiateAsChild( ReferenceManager.refEffectLayer, prefabStarItem );
+			starItem.transform.position = pos;
+		});
+	}
+
 	protected override Transform Parent
 	{
 		get

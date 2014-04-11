@@ -129,6 +129,7 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   radius: 50
   delayUpdate: 0
+  chasedRadius: 50
   refController: {fileID: 11400004}
 --- !u!114 &11400002
 MonoBehaviour:
@@ -194,9 +195,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
-  id: 0
   refFirstTween: {fileID: 11400006}
   refFallTween: {fileID: 11400002}
+  id: 0
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1

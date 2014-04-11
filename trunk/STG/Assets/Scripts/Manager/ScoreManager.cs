@@ -52,7 +52,7 @@ public class ScoreManager : GameMonoBehaviour
 		earnedScoreItemList = new List<int>();
 		prefabScoreItemList.ForEach( p =>
 		{
-			earnedScoreItemList.Add( 9999 );
+			earnedScoreItemList.Add( 0 );
 		});
 	}
 
@@ -91,6 +91,14 @@ public class ScoreManager : GameMonoBehaviour
 	{
 		earnedScoreItemList[id] += num;
 		AddScore( (ulong)addScoreList[id] * (ulong)num ); 
+	}
+	/// <summary>
+	/// スターアイテムの獲得.
+	/// </summary>
+	public void EarnedStarItem()
+	{
+		ulong value = 1 + (ulong)GameManager.CollisionEnemyShot / 10;
+		AddScore( value );
 	}
 	public void DestroyEnemy( Vector3 destroyPosition )
 	{

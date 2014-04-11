@@ -16,18 +16,23 @@ using System.Collections;
 public class ItemCollider : A_Collider
 {
 	[SerializeField]
-	private ScoreItemController refController;
+	private float chasedRadius;
+
+	[SerializeField]
+	private A_ItemController refController;
+
+	private System.Action collisionFunc;
 
 	public override void Awake()
 	{
 		base.Awake();
 		ReferenceManager.refCollisionManager.AddItemCollider( this );
+		collisionFunc = FallCollision;
 	}
 
 	public override void OnCollision (A_Collider target)
 	{
-		Destroy( refController.gameObject );
-		refController.OnPlayerCollide();
+		collisionFunc();
 	}
 
 	public override EType Type
@@ -36,5 +41,18 @@ public class ItemCollider : A_Collider
 		{
 			return EType.Item;
 		}
+	}
+
+	private void FallCollision()
+	{
+		refController.StartChasePlayer();
+		collisionFunc = ChaseCollision;
+		radius = chasedRadius;
+	}
+
+	private void ChaseCollision()
+	{
+		Destroy( refController.gameObject );
+		refController.OnPlayerCollide();
 	}
 }

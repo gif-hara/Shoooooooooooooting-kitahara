@@ -4158,10 +4158,10 @@ public class iTween : MonoBehaviour{
 	}
 	
 	void ApplyMoveToPathTargets(){
-		preUpdate = transform.position;
+		preUpdate = transform.localPosition;
 		float t = ease(0,1,percentage);
 		float lookAheadAmount;
-		
+
 		//clamp easing equation results as "back" will fail since overshoots aren't handled in the Catmull-Rom interpolation:
 		if(isLocal){
 			transform.localPosition=path.Interp(Mathf.Clamp(t,0,1));	

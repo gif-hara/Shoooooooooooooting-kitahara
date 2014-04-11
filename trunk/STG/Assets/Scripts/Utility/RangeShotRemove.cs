@@ -46,7 +46,7 @@ public class RangeShotRemove : A_DelayEvent
 			if( distance < radius )
 			{
 				result++;
-				shot.Explosion();
+				shot.ExplosionFromRangeShotRemove();
 			}
 		}
 		

@@ -28,7 +28,7 @@ public class CameraShake : GameMonoBehaviour
 	{
 		if( delay <= 0 )
 		{
-			TweenShake.Begin( ReferenceManager.refCameraParent, Vector3.zero, rate, duration );
+			TweenShake.Begin( ReferenceManager.refCameraParent, ReferenceManager.refCameraParent.transform.localPosition, rate, duration );
 			enabled = false;
 		}
 		
