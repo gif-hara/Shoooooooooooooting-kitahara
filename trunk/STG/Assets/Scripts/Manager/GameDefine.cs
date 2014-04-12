@@ -13,6 +13,16 @@ using System.Collections;
 
 public class GameDefine : A_Singleton<GameDefine>
 {
+	public enum LayerType : int
+	{
+		EnemyShot,
+		Enemy,
+		Player,
+		PlayerShot,
+		Effect,
+		UI,
+		Background,
+	}
 	/// <summary>
 	/// プレイヤーミス時のイベントメッセージ.
 	/// </summary>

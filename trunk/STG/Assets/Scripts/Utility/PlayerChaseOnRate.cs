@@ -19,7 +19,7 @@ public class PlayerChaseOnRate : GameMonoBehaviour
 	[SerializeField]
 	private Vector3 rate;
 
-	void LateUpdate ()
+	public override void LateUpdate ()
 	{
 		var pos = ReferenceManager.Instance.refPlayer.Trans.localPosition;
 		pos.x *= rate.x;

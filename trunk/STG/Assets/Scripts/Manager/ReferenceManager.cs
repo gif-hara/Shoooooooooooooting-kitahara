@@ -120,4 +120,20 @@ public class ReferenceManager : A_Singleton<ReferenceManager>
 		base.Awake();
 		Instance = this;
 	}
+
+	public GameObject GetLayerObject( GameDefine.LayerType type )
+	{
+		GameObject[] layer =
+		{
+			refEnemyShotLayer,
+			refEnemyLayer,
+			refPlayerLayer,
+			refPlayerShotLayer,
+			refEffectLayer,
+			refUILayer,
+			null,	// BackgroundLayerは今のところ必要ない？.
+		};
+
+		return layer[(int)type];
+	}
 }

@@ -94,9 +94,16 @@ public class GameMonoBehaviour : MonoBehaviourExtension
 //		obj.transform.parent = parent.transform;
 		GameObject obj = NGUITools.AddChild( parent, prefab );
 		obj.transform.localScale = prefab.transform.localScale;
+		obj.layer = prefab.layer;
 		
 		return obj;
 	}
+
+	public static GameObject InstantiateToLayer( GameDefine.LayerType layerType, GameObject prefab )
+	{
+		return InstantiateAsChild( ReferenceManager.GetLayerObject( layerType ), prefab );
+	}
+
 	/// <summary>
 	/// ローカルX座標プロパティ.
 	/// </summary>

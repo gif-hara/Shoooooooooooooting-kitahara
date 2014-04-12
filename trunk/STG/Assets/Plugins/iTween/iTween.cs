@@ -6740,7 +6740,7 @@ public class iTween : MonoBehaviour{
 			args["target"] = target;
 		}
 		tweens.Insert(0,args);
-		var instance = target.AddComponent("iTween") as iTween;
+//		var instance = target.AddComponent("iTween") as iTween;
 	}		
 	
 	//cast any accidentally supplied doubles and ints as floats as iTween only uses floats internally and unify parameter case:

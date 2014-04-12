@@ -35,7 +35,6 @@ public class PlayerChaseOnSpeed : GameMonoBehaviour
 		else
 		{
 			var velocity = (targetPos - Trans.position);
-			var velociityOnSpeed = (velocity / speed);
 			if( velocity.sqrMagnitude <= speed )
 			{
 				Trans.position = targetPos;
