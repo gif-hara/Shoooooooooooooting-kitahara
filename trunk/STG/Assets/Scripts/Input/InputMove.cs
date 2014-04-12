@@ -30,7 +30,7 @@ public class InputMove : MonoBehaviour
 	
 	private float m_speed = 0.0f;
 
-	private readonly Rect limit = new Rect( -350.0f, 350.0f, 350.0f, -320.0f );
+	private readonly Rect limit = new Rect( -350.0f, 280.0f, 350.0f, -255.0f );
 
 	// Update is called once per frame
 	void Update()
