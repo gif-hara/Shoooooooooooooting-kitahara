@@ -20,12 +20,6 @@ public abstract class A_Shot : GameMonoBehaviour
 		base.Update();
 		int benchMarkId = ScriptProfiler.Begin( this );
 		
-		// 画面外への移動による死亡処理.
-		if( cachedTransform.position.sqrMagnitude >= DestroyDistance  )
-		{
-			Destroy( gameObject );
-		}
-		
 		ScriptProfiler.End( this, benchMarkId );
 	}
 	public void Initialize( float speed, Transform position, Transform angle, float fixedAngle )
@@ -52,11 +46,11 @@ public abstract class A_Shot : GameMonoBehaviour
 	}
 	protected void Destroy()
 	{
-		float distance = 450.0f;
-		if( Vector3.Distance( Vector3.zero, Trans.position ) >= distance )
-		{
-			Destroy( gameObject );
-		}
+//		float distance = 450.0f;
+//		if( Vector3.Distance( Vector3.zero, Trans.position ) >= distance )
+//		{
+//			Destroy( gameObject );
+//		}
 		
 //		float distance = 450.0f;
 //		

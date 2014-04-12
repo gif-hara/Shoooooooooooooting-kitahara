@@ -54,18 +54,18 @@ public class StageManager : GameMonoBehaviour
 #endif
 	}
 	
-	void OnDrawGizmos()
-	{
-		Gizmos.color = Color.yellow;
-		float size = 100000.0f;
-		Gizmos.DrawWireCube( new Vector3( 0.0f, (size / 2.0f) + (StageY / 2.0f), 0.0f ), new Vector3( StageX, size, 0.0f ) );
-		
-		Gizmos.color = Color.green;
-		Gizmos.DrawLine( new Vector3( 0.0f, 1.0f, 0.0f ), new Vector3( 0,  2.0f, 0.0f ) );
-		
-//		Gizmos.color = new Color( 0.9f, 0.75f, 0.7f, 1.0f );
-//		Gizmos.DrawLine( new Vector3( -StageX / 2.0f, (StageY / 2.0f ) + timeLineManager.TimeLine, 0.0f ), new Vector3( 0.0f, (StageY / 2.0f ) + timeLineManager.TimeLine, 0.0f ) );
-	}
+//	void OnDrawGizmos()
+//	{
+//		Gizmos.color = Color.yellow;
+//		float size = 100000.0f;
+//		Gizmos.DrawWireCube( new Vector3( 0.0f, (size / 2.0f) + (StageY / 2.0f), 0.0f ), new Vector3( StageX, size, 0.0f ) );
+//		
+//		Gizmos.color = Color.green;
+//		Gizmos.DrawLine( new Vector3( 0.0f, 1.0f, 0.0f ), new Vector3( 0,  2.0f, 0.0f ) );
+//		
+////		Gizmos.color = new Color( 0.9f, 0.75f, 0.7f, 1.0f );
+////		Gizmos.DrawLine( new Vector3( -StageX / 2.0f, (StageY / 2.0f ) + timeLineManager.TimeLine, 0.0f ), new Vector3( 0.0f, (StageY / 2.0f ) + timeLineManager.TimeLine, 0.0f ) );
+//	}
 	
 	public void SetTimeLine( int _timeLine )
 	{

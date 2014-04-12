@@ -49,10 +49,6 @@ public class PlayerShotCollider : A_Collider
 	{
 		base.Update();
 		UpdatePositionZ();
-		if( Vector3.Distance( Vector3.zero, refParent.transform.position ) >= 400.0f )
-		{
-			Destroy( refParent );
-		}
 	}
 
 	public override void OnCollision (A_Collider target)

@@ -15446,7 +15446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63a5fbdc93350994f9a462a1eb2e06ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDraw: 0
+  isDraw: 1
   boxRect:
     serializedVersion: 2
     x: 0
@@ -17360,7 +17360,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
-  rate: {x: 9.99999975e-05, y: 0, z: -9.99999975e-05}
+  rate: {x: 9.99999975e-05, y: 0, z: 0}
 --- !u!1001 &1076055845
 Prefab:
   m_ObjectHideFlags: 0
@@ -18327,7 +18327,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
-  rate: {x: .200000003, y: .200000003, z: 0}
+  rate: {x: .200000003, y: 0, z: 0}
 --- !u!1 &1192096621
 GameObject:
   m_ObjectHideFlags: 0
@@ -24604,6 +24604,10 @@ Prefab:
     - target: {fileID: 400000, guid: 6089b662b186aa942ae88c26189ee950, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400012, guid: 6089b662b186aa942ae88c26189ee950, type: 2}
+      propertyPath: rate.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6089b662b186aa942ae88c26189ee950, type: 2}
