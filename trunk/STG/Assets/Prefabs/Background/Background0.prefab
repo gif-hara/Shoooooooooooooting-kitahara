@@ -75,7 +75,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400008}
   - 108: {fileID: 10800000}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: Directional light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,7 +91,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 400010}
   - 114: {fileID: 11400004}
-  - 154: {fileID: 15400000}
   m_Layer: 31
   m_Name: Terrain
   m_TagString: Untagged
@@ -190,8 +189,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100008}
-  m_LocalRotation: {x: .515196383, y: -.688282311, z: .0544780791, w: .507811368}
-  m_LocalPosition: {x: 834.902588, y: 200.739502, z: 879.000122}
+  m_LocalRotation: {x: .173518598, y: -.254608721, z: .0464941487, w: .950212598}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400000}
@@ -295,7 +294,7 @@ Light:
   serializedVersion: 3
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: .5
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -378,13 +377,13 @@ MonoBehaviour:
   m_TreeMaximumFullLODCount: 50
   m_DetailObjectDistance: 80
   m_DetailObjectDensity: 1
-  m_HeightmapPixelError: 5
+  m_HeightmapPixelError: 60
   m_SplatMapDistance: 2000
   m_HeightmapMaximumLOD: 0
   m_CastShadows: 1
-  m_LightmapIndex: -1
+  m_LightmapIndex: 0
   m_LightmapSize: 1024
-  m_DrawTreesAndFoliage: 1
+  m_DrawTreesAndFoliage: 0
   m_MaterialTemplate: {fileID: 0}
 --- !u!114 &11400006
 MonoBehaviour:
@@ -446,7 +445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
-  rate: {x: 9.99999975e-05, y: 0, z: -9.99999975e-05}
+  rate: {x: 9.99999975e-05, y: 0, z: 0}
 --- !u!124 &12400000
 Behaviour:
   m_ObjectHideFlags: 1
@@ -454,16 +453,6 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100006}
   m_Enabled: 1
---- !u!154 &15400000
-TerrainCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100010}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_TerrainData: {fileID: 15600000, guid: 0a2716676cec07d4c97d8929d04fa74d, type: 2}
-  m_CreateTreeColliders: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

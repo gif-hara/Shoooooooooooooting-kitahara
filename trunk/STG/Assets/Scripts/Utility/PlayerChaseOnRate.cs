@@ -21,6 +21,8 @@ public class PlayerChaseOnRate : GameMonoBehaviour
 
 	public override void LateUpdate ()
 	{
+		if( ReferenceManager == null )	return;
+
 		var pos = ReferenceManager.Instance.refPlayer.Trans.localPosition;
 		pos.x *= rate.x;
 		pos.z = pos.y * rate.z;;
