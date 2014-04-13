@@ -32,6 +32,6 @@ public class A_SpecialModeContent : GameMonoBehaviour
 	/// </param>
 	public bool CanExecute( Player player )
 	{
-		return player.CurrentSpecialPoint >= needPoint;
+		return PlayerStatusManager.SpecialPoint >= needPoint;
 	}
 }

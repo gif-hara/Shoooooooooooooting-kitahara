@@ -25,20 +25,9 @@ public class Player : GameMonoBehaviour
 	public List<Renderer> refRenderer;
 	
 	/// <summary>
-	/// SPポイント最大値.
-	/// </summary>
-	public int maxSpecialPoint;
-	
-	/// <summary>
 	/// SPポイント加算値.
 	/// </summary>
-	public int addSpecialPoint;
-	
-	/// <summary>
-	/// 現在のSPポイント.
-	/// </summary>
-	public int CurrentSpecialPoint{ get{ return currentSpecialPoint; } }
-	private int currentSpecialPoint = 0;
+	public float addSpecialPoint;
 	
 	/// <summary>
 	/// 無敵時間.
@@ -72,7 +61,7 @@ public class Player : GameMonoBehaviour
 	public override void Update()
 	{
 		base.Update();
-		UpdateBarrierPoint();
+		UpdateSpecialPoint();
 		UpdateRenderer();
 		invincibleTime--;
 		
@@ -90,7 +79,7 @@ public class Player : GameMonoBehaviour
 		if( !spContent.CanExecute( this ) )	return;
 		
 		isSpecialMode = true;
-		currentSpecialPoint -= spContent.NeedPoint;
+		PlayerStatusManager.UseSpecialMode( spContent.NeedPoint );
 		InstantiateAsChild( cachedTransform, inSpecialModeContentPrefab );
 	}
 	/// <summary>
@@ -119,10 +108,10 @@ public class Player : GameMonoBehaviour
 		
 		gameObject.BroadcastMessage (GameDefine.MissEventMessage, SendMessageOptions.DontRequireReceiver);
 
-		GameManager.Miss();
+		PlayerStatusManager.Miss();
 		
 		refContent.SetActive( false );
-		if( GameManager.Life > 0 )
+		if( PlayerStatusManager.Life > 0 )
 		{
 			StartCoroutine( ResurrectionCoroutine() );
 		}
@@ -158,29 +147,11 @@ public class Player : GameMonoBehaviour
 		Trans.position = initialPosition;
 	}
 	/// <summary>
-	/// バリアポイント更新処理.
+	/// SPポイント更新処理.
 	/// </summary>
-	private void UpdateBarrierPoint()
+	private void UpdateSpecialPoint()
 	{
-		currentSpecialPoint += addSpecialPoint;
-		currentSpecialPoint = currentSpecialPoint > maxSpecialPoint ? maxSpecialPoint : currentSpecialPoint;
-//		else
-//		{
-//			if( currentSpecialPoint <= 0 )
-//			{
-//				invincibleTime = 60;
-//				EndBarrier();
-//				return;
-//			}
-//			currentSpecialPoint--;
-//			currentSpecialPoint = currentSpecialPoint < 0 ? 0 : currentSpecialPoint;
-//		}
-		
-		// デバッグが有効なら常に最大値にする.
-		if( DebugManager.IsSpecialPointInfinity )
-		{
-			currentSpecialPoint = maxSpecialPoint;
-		}
+		PlayerStatusManager.AddSpecialPoint( addSpecialPoint );
 	}
 	/// <summary>
 	/// レンダラー更新処理.

@@ -33,11 +33,6 @@ public class GameManager : GameMonoBehaviour
 	public int gameLevel = 0;
 	
 	/// <summary>
-	/// プレイヤーID.
-	/// </summary>
-	public int playerId = 0;
-	
-	/// <summary>
 	/// ゲームレベル経験値.
 	/// </summary>
 	/// <value>
@@ -45,15 +40,6 @@ public class GameManager : GameMonoBehaviour
 	/// </value>
 	public float GameLevelExperience{ get{ return gameLevelExperience; } }
 	private float gameLevelExperience = 0;
-
-	/// <summary>
-	/// 残機数.
-	/// </summary>
-	/// <value>
-	/// The life.
-	/// </value>
-	public int Life{ get{ return life; } }
-	public int life = 3;
 	
 	/// <summary>
 	/// バリアに衝突した敵弾の数.
@@ -76,8 +62,7 @@ public class GameManager : GameMonoBehaviour
 	{
 		base.Awake();
 		Application.targetFrameRate = 60;
-		CreatePlayer();
-		
+
 		for( int i=0; i<ReferenceManager.Instance.prefabEnemyList.Count; i++ )
 		{
 			destroyEnemyNumList.Add( 0 );
@@ -114,16 +99,6 @@ public class GameManager : GameMonoBehaviour
 	{
 		collisionEnemyShot += deleteNum;
 		AddGameLevelExperience( deleteNum );
-	}
-	/// <summary>
-	/// ミス処理.
-	/// </summary>
-	public void Miss()
-	{
-		if( DebugManager.IsNotLifeDecrement )	return;
-		
-		life--;
-		life = life < 0 ? 0 : life;
 	}
 	/// <summary>
 	/// 敵死亡処理.
@@ -177,13 +152,6 @@ public class GameManager : GameMonoBehaviour
 		{
 			return gameLevelExperience >= GetNeedGameExperience( gameLevel + 1 );
 		}
-	}
-	/// <summary>
-	/// プレイヤーオブジェクトの作成.
-	/// </summary>
-	private void CreatePlayer()
-	{
-		InstantiateAsChild( ReferenceManager.refPlayerLayer, ReferenceManager.prefabPlayerList[playerId] );
 	}
 	/// <summary>
 	/// ゲームレベルを正規化した値を返す.

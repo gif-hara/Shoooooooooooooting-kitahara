@@ -33,6 +33,14 @@ public class GameMonoBehaviour : MonoBehaviourExtension
 			return ReferenceManager.refGameManager;
 		}
 	}
+
+	public static PlayerStatusManager PlayerStatusManager
+	{
+		get
+		{
+			return ReferenceManager.RefPlayerStatusManager;
+		}
+	}
 	public static ScoreManager ScoreManager
 	{
 		get

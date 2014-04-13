@@ -55,6 +55,13 @@ public class ReferenceManager : A_Singleton<ReferenceManager>
 	public GameManager refGameManager;
 
 	/// <summary>
+	/// プレイヤーステータス管理者クラス参照.
+	/// </summary>
+	public PlayerStatusManager RefPlayerStatusManager{ get{ return refPlayerStatusManager; } }
+	[SerializeField]
+	private PlayerStatusManager refPlayerStatusManager;
+
+	/// <summary>
 	/// スコア管理者クラス参照.
 	/// </summary>
 	public ScoreManager refScoreManager;

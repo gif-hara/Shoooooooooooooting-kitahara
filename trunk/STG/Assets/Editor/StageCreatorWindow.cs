@@ -107,6 +107,26 @@ public class StageCreatorWindow : A_EditorWindowBase
 	}
 	private GameManager gameManager;
 
+	public PlayerStatusManager PlayerStatusManager
+	{
+		get
+		{
+			if( playerStatusManager == null )
+			{
+				var obj = GameObject.Find( "PlayerStatusManager" );
+				if( obj == null )
+				{
+					return null;
+				}
+				
+				playerStatusManager = obj.GetComponent<PlayerStatusManager>();
+			}
+			
+			return playerStatusManager;
+		}
+	}
+	private PlayerStatusManager playerStatusManager;
+
 	private GUIDrawer GUIDrawer
 	{
 		get
@@ -291,7 +311,7 @@ public class StageCreatorWindow : A_EditorWindowBase
 			StageManager.timeLineManager.TimeLine = IntField( "Time Line", StageManager.timeLineManager.TimeLine, LeftMenuWidth );
 			zoom = FloatField( "Zoom", zoom, 1.0f, 100.0f, LeftMenuWidth );
 			GameManager.GameLevel = IntField( "Game Level", GameManager.GameLevel, LeftMenuWidth );
-			GameManager.playerId = IntField( "Player Id", GameManager.playerId, LeftMenuWidth );
+			PlayerStatusManager.PlayerId = IntField( "Player Id", PlayerStatusManager.PlayerId, LeftMenuWidth );
 			GUIDrawer.IsDraw = EditorGUILayout.Toggle( "Debug Draw", GUIDrawer.IsDraw, LeftMenuWidth );
 		});
 	}

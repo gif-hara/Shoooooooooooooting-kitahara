@@ -24,15 +24,14 @@ public class UIBarrier : GameMonoBehaviour
 	public override void Start()
 	{
 		base.Start();
-		var player = ReferenceManager.refPlayer;
-		refBar.Initialize( player.maxSpecialPoint, player.CurrentSpecialPoint );
+		refBar.Initialize( PlayerStatusManager.MaxSpecialPoint, PlayerStatusManager.SpecialPoint );
 	}
 
 	// Update is called once per frame
 	public override void LateUpdate()
 	{
 		base.LateUpdate();
-		refBar.Current += ((float)ReferenceManager.refPlayer.CurrentSpecialPoint - refBar.Current) / barSpeed;
+		refBar.Current += (PlayerStatusManager.SpecialPoint - refBar.Current) / barSpeed;
 	}
 
 }

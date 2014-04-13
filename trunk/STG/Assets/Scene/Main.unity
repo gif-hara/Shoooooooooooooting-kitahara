@@ -5316,6 +5316,7 @@ MonoBehaviour:
   refUILayer: {fileID: 1957406505}
   refPlayer: {fileID: 0}
   refGameManager: {fileID: 1859676952}
+  refPlayerStatusManager: {fileID: 674983957}
   refScoreManager: {fileID: 832699562}
   refSoundManager: {fileID: 1449514316}
   refCollisionManager: {fileID: 123265362}
@@ -8407,6 +8408,7 @@ Transform:
   - {fileID: 1859676951}
   - {fileID: 123265361}
   - {fileID: 82476340}
+  - {fileID: 674983956}
   - {fileID: 832699561}
   - {fileID: 970254406}
   - {fileID: 374913975}
@@ -10124,6 +10126,48 @@ MonoBehaviour:
     offset: {x: 0, y: 0}
     isReverse: 0
   isIconDraw: 0
+--- !u!1 &674983955
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 674983956}
+  - 114: {fileID: 674983957}
+  m_Layer: 0
+  m_Name: PlayerStatusManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &674983956
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 674983955}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 571275239}
+--- !u!114 &674983957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 674983955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddf1abc718a5af549b858d5deff3ff02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  playerId: 3
+  life: 3
+  specialPoint: 0
 --- !u!1 &700623733
 GameObject:
   m_ObjectHideFlags: 0
@@ -27109,8 +27153,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   gameLevel: 0
-  playerId: 1
-  life: 3
 --- !u!1 &1860165554
 GameObject:
   m_ObjectHideFlags: 0
