@@ -24,6 +24,6 @@ public class EnemyInvincibleTimeSetter : MonoBehaviour
 
 	void Start ()
 	{
-		refEnemy.invincibleTimer = invincibleTime;
+		refEnemy.AddInvincible( invincibleTime );
 	}
 }

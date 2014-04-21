@@ -21,19 +21,29 @@ public class EnemyCreatorEditor : A_StageTimeLineActionEditor<EnemyCreator>
 	/// 移動データタイプID.
 	/// </summary>
 	private int dataTypeId = 0;
+
+	private GameObject currentEnemyObject;
 		
 	void OnEnable()
 	{
-		Target.isIconDraw = true;
+		CreateCurrentEnemy();
+		EditorApplication.playmodeStateChanged += DestroyCurrentEnemy;
 	}
 	void OnDisable()
 	{
-		Target.isIconDraw = false;
+		DestroyImmediate( currentEnemyObject );
+		EditorApplication.playmodeStateChanged -= DestroyCurrentEnemy;
 	}
 	void OnSceneGUI()
 	{
-		Target.initialPosition = Handles.PositionHandle( Target.initialPosition, Quaternion.identity );
+		var initialPos = Handles.PositionHandle( Target.initialPosition, Quaternion.identity );
 		Handles.Label( Target.initialPosition, "InitialPosition" );
+
+		if( Target.initialPosition != initialPos )
+		{
+			Target.initialPosition = initialPos;
+			currentEnemyObject.transform.localPosition = initialPos;
+		}
 		
 		for( int i=0,imax=Target.dataList.Count; i<imax; i++ )
 		{
@@ -82,10 +92,12 @@ public class EnemyCreatorEditor : A_StageTimeLineActionEditor<EnemyCreator>
 			Button( "+", () =>
 			{
 				Target.enemyId++;
+				CreateCurrentEnemy();
 			}, Width( buttonSize ) );
 			Button( "-", () =>
 			{
 				Target.enemyId--;
+				CreateCurrentEnemy();
 			}, Width( buttonSize ));
 			
 			int max = StageCreator.EnemyPrefabList.Count - 1;
@@ -107,8 +119,40 @@ public class EnemyCreatorEditor : A_StageTimeLineActionEditor<EnemyCreator>
 			if( initialPosition != Target.initialPosition )
 			{
 				Target.initialPosition = initialPosition;
+				currentEnemyObject.transform.localPosition = initialPosition;
 				SceneView.RepaintAll();
 			}
+		});
+		Horizontal( () =>
+		{
+			Button( "Left", () =>
+			       {
+				SetInitialPositionOnBoundsFit( (initialPos) =>
+				                              {
+					Target.initialPosition = new Vector3( GameDefine.Screen.x + EnemyController.Bounds.x, initialPos.y, 0.0f );
+				});
+			});
+			Button( "Top", () =>
+			       {
+				SetInitialPositionOnBoundsFit( (initialPos) =>
+				                              {
+					Target.initialPosition = new Vector3( initialPos.x, GameDefine.Screen.y + EnemyController.Bounds.y, 0.0f );
+				});
+			});
+			Button( "Right", () =>
+			       {
+				SetInitialPositionOnBoundsFit( (initialPos) =>
+				                              {
+					Target.initialPosition = new Vector3( -GameDefine.Screen.x + EnemyController.Bounds.width, initialPos.y, 0.0f );
+				});
+			});
+			Button( "Bottom", () =>
+			       {
+				SetInitialPositionOnBoundsFit( (initialPos) =>
+				                              {
+					Target.initialPosition = new Vector3( initialPos.x, -GameDefine.Screen.y - EnemyController.Bounds.y, 0.0f );
+				});
+			});
 		});
 	}
 #endregion
@@ -343,6 +387,37 @@ public class EnemyCreatorEditor : A_StageTimeLineActionEditor<EnemyCreator>
 				DrawOnInspectorObjectMoveIsReverse( data );
 			});
 		});
+	}
+
+	private EnemyController EnemyController
+	{
+		get
+		{
+			var prefab = Resources.LoadAssetAtPath<GameObject>( string.Format( "Assets/Prefabs/Enemy/Enemy{0}.prefab", Target.enemyId ) );
+			return prefab.GetComponent<EnemyController>();
+		}
+	}
+
+	private void DestroyCurrentEnemy()
+	{
+		DestroyImmediate( currentEnemyObject );
+	}
+	/// <summary>
+	/// 選択中の敵プレハブのバウンズから初期座標を設定する.
+	/// </summary>
+	private void SetInitialPositionOnBoundsFit( System.Action<Vector3> initFunc )
+	{
+		var initialPos = Target.initialPosition;
+		initFunc( initialPos );
+		currentEnemyObject.transform.localPosition = Target.initialPosition;
+		SceneView.RepaintAll();
+	}
+
+	private void CreateCurrentEnemy()
+	{
+		DestroyCurrentEnemy();
+		currentEnemyObject = PrefabUtility.InstantiatePrefab( EnemyController.gameObject ) as GameObject;
+		currentEnemyObject.transform.localPosition = Target.initialPosition;
 	}
 #endregion //Draw OnInspector
 #region      Multi Setting Inspector

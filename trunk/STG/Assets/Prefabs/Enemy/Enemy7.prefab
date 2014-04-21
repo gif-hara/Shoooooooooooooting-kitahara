@@ -385,7 +385,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100008}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 192.757874, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400020}
@@ -734,6 +734,12 @@ MonoBehaviour:
   destroySELabel: Dead1
   deadEventObject: {fileID: 100034}
   damageEventObject: {fileID: 100010}
+  bounds:
+    serializedVersion: 2
+    x: -60
+    y: 80
+    width: 60
+    height: -40
   refShotCreatorList:
   - {fileID: 11400066}
 --- !u!114 &11400010

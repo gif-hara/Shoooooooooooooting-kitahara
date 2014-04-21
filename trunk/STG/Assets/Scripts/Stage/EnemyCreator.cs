@@ -30,21 +30,6 @@ public class EnemyCreator : A_StageTimeLineActionable
 	/// </summary>
 	public List<A_ObjectMove.Data> dataList;
 	
-	/// <summary>
-	/// UnityEditor用のアイコン表示フラグ.
-	/// </summary>
-	public bool isIconDraw;
-		
-	public override void OnDrawGizmos()
-	{
-		if( isIconDraw )
-		{
-			Gizmos.DrawIcon( initialPosition, string.Format( "Enemy{0}.tga", enemyId ), false );
-		}
-		
-		base.OnDrawGizmos();
-	}	
-	
 	public void Initialize( int enemyId, int timeLine )
 	{
 		base.Initialize( timeLine );

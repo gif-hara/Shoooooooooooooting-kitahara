@@ -22,7 +22,7 @@ public class EnemyShotOtherCreatePrefabObjectMoveTweenTargetRandomSetter : MonoB
 	[SerializeField]
 	private float offsetZ;
 
-	void OnDrawGizmos()
+	void OnDrawGizmosSelected()
 	{
 		Gizmos.DrawWireCube( transform.position, size );
 	}

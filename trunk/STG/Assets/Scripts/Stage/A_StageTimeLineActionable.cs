@@ -38,12 +38,12 @@ public abstract class A_StageTimeLineActionable : GameMonoBehaviour
 		if( !IsOutTime )	return;
 		
 		// TimeLineによる線描画.
-		Gizmos.color = Color.red;
-		Vector3 fromPos = Trans.position + Vector3.left * 400.0f;
-		Gizmos.DrawLine(
-			fromPos,
-			fromPos + Vector3.right * ( StageManager.StageX )
-			);
+//		Gizmos.color = Color.red;
+//		Vector3 fromPos = Trans.position + Vector3.left * 400.0f;
+//		Gizmos.DrawLine(
+//			fromPos,
+//			fromPos + Vector3.right * ( StageManager.StageX )
+//			);
 	}
 	/// <summary>
 	/// 初期化.

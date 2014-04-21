@@ -2677,7 +2677,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100072}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 180.042999, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400112}
@@ -4240,6 +4240,12 @@ MonoBehaviour:
   destroySELabel: Dead1
   deadEventObject: {fileID: 100236}
   damageEventObject: {fileID: 100234}
+  bounds:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
   refShotCreatorList:
   - {fileID: 11400030}
   - {fileID: 11400570}
@@ -5304,6 +5310,12 @@ MonoBehaviour:
   destroySELabel: Dead1
   deadEventObject: {fileID: 100228}
   damageEventObject: {fileID: 100226}
+  bounds:
+    serializedVersion: 2
+    x: -125
+    y: 80
+    width: 125
+    height: -80
   refShotCreatorList:
   - {fileID: 11400448}
   - {fileID: 0}
@@ -5870,6 +5882,12 @@ MonoBehaviour:
   destroySELabel: Dead1
   deadEventObject: {fileID: 100232}
   damageEventObject: {fileID: 100230}
+  bounds:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
   refShotCreatorList:
   - {fileID: 11400030}
   - {fileID: 11400570}
@@ -6038,6 +6056,12 @@ MonoBehaviour:
   destroySELabel: Dead1
   deadEventObject: {fileID: 100244}
   damageEventObject: {fileID: 100242}
+  bounds:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
   refShotCreatorList:
   - {fileID: 11400030}
   - {fileID: 11400570}
@@ -6140,6 +6164,12 @@ MonoBehaviour:
   destroySELabel: Dead1
   deadEventObject: {fileID: 100240}
   damageEventObject: {fileID: 100238}
+  bounds:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
   refShotCreatorList:
   - {fileID: 11400030}
   - {fileID: 11400570}

@@ -19,8 +19,6 @@ public class DestroyOnOffScreen : GameMonoBehaviour
 	[SerializeField]
 	private Rect bounds;
 
-	private readonly Rect range = new Rect( -400.0f, 400.0f, 400.0f, -400.0f );
-
 	void OnDrawGizmos()
 	{
 		var pos = new Rect(
@@ -38,6 +36,8 @@ public class DestroyOnOffScreen : GameMonoBehaviour
 		Gizmos.DrawLine( new Vector3( pos.width, pos.y, 0.0f ), new Vector3( pos.width, pos.height, 0.0f ) );
 		// 下.
 		Gizmos.DrawLine( new Vector3( pos.x, pos.height, 0.0f ), new Vector3( pos.width, pos.height, 0.0f ) );
+
+		var range = GameDefine.Screen;
 
 		// 左.
 		Gizmos.DrawLine( new Vector3( range.x, range.y, 0.0f ), new Vector3( range.x, range.height, 0.0f ) );
@@ -60,6 +60,7 @@ public class DestroyOnOffScreen : GameMonoBehaviour
 			Trans.localPosition.y + bounds.height
 			);
 
+		var range = GameDefine.Screen;
 		if( range.y < fixedBounds.height || range.height > fixedBounds.y ||
 		    range.x > fixedBounds.width || range.width < fixedBounds.x )
 		{

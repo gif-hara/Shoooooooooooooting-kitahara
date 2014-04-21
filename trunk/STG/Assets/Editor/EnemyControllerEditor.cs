@@ -32,13 +32,13 @@ public class EnemyControllerEditor : A_EditorMonoBehaviour<EnemyController>
 			var obj = new GameObject( "DeadEvent" );
 			obj.transform.parent = Target.transform;
 			obj.transform.localPosition = Vector3.zero;
-			Target.deadEventObject = obj;
+			Target.DeadEventObject = obj;
 
 			var createPrefab = obj.AddComponent<CreatePrefabFromDead>();
-			createPrefab.prefab = Target.prefabDestroyEffect;
+			createPrefab.prefab = Target.PrefabDestroyEffect;
 
 			var playse = obj.AddComponent<PlaySEFromDead>();
-			playse.label = Target.destroySELabel;
+			playse.label = Target.DestroySELabel;
 
 			EditorUtility.SetDirty( target );
 		});
@@ -47,7 +47,7 @@ public class EnemyControllerEditor : A_EditorMonoBehaviour<EnemyController>
 			var obj = new GameObject( "DamageEvent" );
 			obj.transform.parent = Target.transform;
 			obj.transform.localPosition = Vector3.zero;
-			Target.damageEventObject = obj;
+			Target.DamageEventObject = obj;
 
 			var flash = obj.AddComponent<DamageEventTextureFlash>();
 			flash.refEnemy = Target;

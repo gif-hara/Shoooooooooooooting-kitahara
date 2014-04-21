@@ -26,11 +26,6 @@ public class StageCreator : A_EditorMonoBehaviour<StageManager>
 	void OnEnable()
 	{
 		var enemyCreator = Target.GetComponentsInChildren<EnemyCreator>();
-		foreach( var e in enemyCreator )
-		{
-			e.isIconDraw = false;
-		}
-		
 		AllSyncChildren();
 		StringComparer comparer = new StringComparer();
 		Target.prefabActionableObjectList.Sort( (x, y) => comparer.Compare( x.gameObject.name, y.gameObject.name ) );

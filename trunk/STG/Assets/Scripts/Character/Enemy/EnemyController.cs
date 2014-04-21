@@ -21,51 +21,69 @@ public class EnemyController : EnemyControllerBase
 	/// The identifier.
 	/// </value>
 	public int Id{ get{ return id; } }
-	public int id;
+	[SerializeField]
+	private int id;
 	
 	/// <summary>
 	/// ヒットポイント.
 	/// </summary>
 	public float Hp{ get{ return hp; } }
-	public float hp;
+	[SerializeField]
+	private float hp;
 	
 	/// <summary>
 	/// スコアに加算する値.
 	/// </summary>
-	public int addScore;
+	[SerializeField]
+	private int addScore;
 	
 	/// <summary>
 	/// ゲームレベル経験値に加算する値.
 	/// </summary>
-	public int addGameLevelExperience;
+	[SerializeField]
+	private int addGameLevelExperience;
 	
 	/// <summary>
 	/// 無敵時間.
 	/// </summary>
-	public int invincibleTimer;
+	[SerializeField]
+	private int invincibleTimer;
 	
 	/// <summary>
 	/// 死亡時に生成するプレハブ.
 	/// </summary>
-	public GameObject prefabDestroyEffect;
+	public GameObject PrefabDestroyEffect{ set{ prefabDestroyEffect = value; } get{ return prefabDestroyEffect; } }
+	[SerializeField]
+	private GameObject prefabDestroyEffect;
 	
 	/// <summary>
 	/// 死亡時に再生するサウンドラベル.
 	/// </summary>
-	public string destroySELabel;
+	public string DestroySELabel{ set{ destroySELabel = value; } get{ return destroySELabel; } }
+	[SerializeField]
+	private string destroySELabel;
 
 	/// <summary>
 	/// 死亡時にイベントを発行するオブジェクト.
 	/// </summary>
+	public GameObject DeadEventObject{ set{ deadEventObject = value; } get{ return deadEventObject; } }
 	[SerializeField]
-	public GameObject deadEventObject;
+	private GameObject deadEventObject;
 
 	/// <summary>
 	/// ダメージ時にイベントを発行するオブジェクト.
 	/// </summary>
+	public GameObject DamageEventObject{ set{ damageEventObject = value; } get{ return damageEventObject; } }
 	[SerializeField]
-	public GameObject damageEventObject;
-	
+	private GameObject damageEventObject;
+
+	/// <summary>
+	/// 描画有効範囲.
+	/// </summary>
+	public Rect Bounds{ get{ return bounds; } }
+	[SerializeField]
+	private Rect bounds;
+
 	/// <summary>
 	/// ショット生成者リスト.
 	/// </summary>
@@ -102,7 +120,7 @@ public class EnemyController : EnemyControllerBase
 	/// 拡張更新関数.
 	/// </summary>
 	public event System.Action updateFunc = null;
-		
+
 	public override void Awake()
 	{
 		base.Awake();
@@ -127,6 +145,25 @@ public class EnemyController : EnemyControllerBase
 		{
 			updateFunc();
 		}
+	}
+
+	void OnDrawGizmosSelected()
+	{
+		var pos = new Rect(
+			transform.localPosition.x + bounds.x,
+			transform.localPosition.y + bounds.y,
+			transform.localPosition.x + bounds.width,
+			transform.localPosition.y + bounds.height
+			);
+		
+		// 左.
+		Gizmos.DrawLine( new Vector3( pos.x, pos.y, 0.0f ), new Vector3( pos.x, pos.height, 0.0f ) );
+		// 上.
+		Gizmos.DrawLine( new Vector3( pos.x, pos.y, 0.0f ), new Vector3( pos.width, pos.y, 0.0f ) );
+		// 右.
+		Gizmos.DrawLine( new Vector3( pos.width, pos.y, 0.0f ), new Vector3( pos.width, pos.height, 0.0f ) );
+		// 下.
+		Gizmos.DrawLine( new Vector3( pos.x, pos.height, 0.0f ), new Vector3( pos.width, pos.height, 0.0f ) );
 	}
 	/// <summary>
 	/// ヒットポイントの初期化.
@@ -159,6 +196,10 @@ public class EnemyController : EnemyControllerBase
 		{
 			damageEventObject.BroadcastMessage( GameDefine.DamageEventMessage, damage, SendMessageOptions.DontRequireReceiver );
 		}
+	}
+	public void AddInvincible( int value )
+	{
+		invincibleTimer += value;
 	}
 	/// <summary>
 	/// 移動コンポーネントリストの初期化.

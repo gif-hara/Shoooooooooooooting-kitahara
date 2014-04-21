@@ -23,6 +23,9 @@ public class GameDefine : A_Singleton<GameDefine>
 		UI,
 		Background,
 	}
+
+	public static readonly Rect Screen = new Rect( -400.0f, 300.0f, 400.0f, -300.0f );
+
 	/// <summary>
 	/// プレイヤーミス時のイベントメッセージ.
 	/// </summary>
