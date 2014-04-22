@@ -90,7 +90,7 @@ GameObject:
   - 4: {fileID: 400008}
   - 114: {fileID: 11400008}
   m_Layer: 0
-  m_Name: '[0~0] EnemyChunkCreate_Enemy17_0'
+  m_Name: '[0~0] EnemyChunkCreate_Enemy17_RightToLeft'
   m_TagString: Untagged
   m_Icon: {fileID: -1376725286, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -147,7 +147,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100010}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -400, y: 300, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400010}
@@ -230,8 +230,7 @@ MonoBehaviour:
     initFuncName: 
     prefabiTweenPath: {fileID: 100000, guid: 67cea695add4d4f06b60f665782dcd48, type: 2}
     offset: {x: -240, y: 0}
-    isReverse: 0
-  isIconDraw: 0
+    isReverse: 1
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -295,8 +294,7 @@ MonoBehaviour:
     initFuncName: 
     prefabiTweenPath: {fileID: 100000, guid: 67cea695add4d4f06b60f665782dcd48, type: 2}
     offset: {x: -160, y: 0}
-    isReverse: 0
-  isIconDraw: 0
+    isReverse: 1
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -360,8 +358,7 @@ MonoBehaviour:
     initFuncName: 
     prefabiTweenPath: {fileID: 100000, guid: 67cea695add4d4f06b60f665782dcd48, type: 2}
     offset: {x: -80, y: 0}
-    isReverse: 0
-  isIconDraw: 0
+    isReverse: 1
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -425,8 +422,7 @@ MonoBehaviour:
     initFuncName: 
     prefabiTweenPath: {fileID: 100000, guid: 67cea695add4d4f06b60f665782dcd48, type: 2}
     offset: {x: 0, y: 0}
-    isReverse: 0
-  isIconDraw: 0
+    isReverse: 1
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -448,7 +444,7 @@ MonoBehaviour:
     - {fileID: 11400002}
     - {fileID: 11400000}
   interval: 0
-  extensionName: Enemy17_0
+  extensionName: Enemy17_RightToLeft
   offset: {x: 0, y: 0}
 --- !u!114 &11400010
 MonoBehaviour:
@@ -513,8 +509,7 @@ MonoBehaviour:
     initFuncName: 
     prefabiTweenPath: {fileID: 100000, guid: 67cea695add4d4f06b60f665782dcd48, type: 2}
     offset: {x: 80, y: 0}
-    isReverse: 0
-  isIconDraw: 0
+    isReverse: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

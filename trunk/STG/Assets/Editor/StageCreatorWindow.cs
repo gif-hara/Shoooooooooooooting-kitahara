@@ -51,7 +51,7 @@ public class StageCreatorWindow : A_EditorWindowBase
 	/// <summary>
 	/// 左側メニューの幅.
 	/// </summary>
-	private const int LeftMenuWidthNum = 210;
+	private int leftMenuWidthNum = 350;
 
 	/// <summary>
 	/// メニューとタイムラインのボーダーラインの色.
@@ -206,8 +206,8 @@ public class StageCreatorWindow : A_EditorWindowBase
 		var pos = Instance.position;
 
 		// 背景の描画.
-		EditorGUI.DrawRect( new Rect( LeftMenuWidthNum + 10, 0, 2, pos.height ), BoarderLineColor );
-		EditorGUI.DrawRect( new Rect( LeftMenuWidthNum + 12, 0, 900, pos.height ), TimeLineBackgroundColor );
+		EditorGUI.DrawRect( new Rect( leftMenuWidthNum + 10, 0, 2, pos.height ), BoarderLineColor );
+		EditorGUI.DrawRect( new Rect( leftMenuWidthNum + 12, 0, 900, pos.height ), TimeLineBackgroundColor );
 
 		int currentTimeLine = 0;
 		int interval = ((int)zoom <= 1 ) ? 100 : 100 - ((int)(FixedZoom * 5.0f) * 5);
@@ -235,7 +235,7 @@ public class StageCreatorWindow : A_EditorWindowBase
 		if( y >= pos.height || y < 0 )	return;
 		
 		EditorGUI.LabelField( new Rect( pos.width - label.Length * 9, -16 + y, pos.width, 20 ), label );
-		EditorGUI.DrawRect( new Rect( LeftMenuWidthNum + 12, y, pos.width, 1 ), color );
+		EditorGUI.DrawRect( new Rect( leftMenuWidthNum + 12, y, pos.width, 1 ), color );
 	}
 
 	private void DrawActionableObject()
@@ -278,21 +278,21 @@ public class StageCreatorWindow : A_EditorWindowBase
 		
 		int actionableButtonWidth = label.Length * 9;
 		int buttonY = (-20 * actionableObjectDictionary[y]) + y;
-		if( GUI.Button( new Rect( LeftMenuWidthNum + 12, buttonY, actionableButtonWidth, 20 ), label ) )
+		if( GUI.Button( new Rect( leftMenuWidthNum + 12, buttonY, actionableButtonWidth, 20 ), label ) )
 		{
 			Selection.activeGameObject = actionableObject.gameObject;
 		}
-		if( GUI.Button( new Rect( LeftMenuWidthNum + 12 + actionableButtonWidth, buttonY, 20, 20 ), "T" ) )
+		if( GUI.Button( new Rect( leftMenuWidthNum + 12 + actionableButtonWidth, buttonY, 20, 20 ), "T" ) )
 		{
 			StageManager.timeLineManager.TimeLine = actionableObject.timeLine;
 			Selection.activeGameObject = actionableObject.gameObject;
 		}
-		if( GUI.Button( new Rect( LeftMenuWidthNum + 12 + actionableButtonWidth + 20, buttonY, 20, 20 ), "C" ) )
+		if( GUI.Button( new Rect( leftMenuWidthNum + 12 + actionableButtonWidth + 20, buttonY, 20, 20 ), "C" ) )
 		{
 			var copy = Instantiate( actionableObject ) as GameObject;
 			copy.transform.parent = StageManager.transform;
 		}
-		if( GUI.Button( new Rect( LeftMenuWidthNum + 12 + actionableButtonWidth + 20 + 20, buttonY, 20, 20 ), "D" ) )
+		if( GUI.Button( new Rect( leftMenuWidthNum + 12 + actionableButtonWidth + 20 + 20, buttonY, 20, 20 ), "D" ) )
 		{
 			DestroyImmediate( actionableObject.gameObject );
 			return true;
@@ -313,6 +313,7 @@ public class StageCreatorWindow : A_EditorWindowBase
 			GameManager.GameLevel = IntField( "Game Level", GameManager.GameLevel, LeftMenuWidth );
 			PlayerStatusManager.PlayerId = IntField( "Player Id", PlayerStatusManager.PlayerId, LeftMenuWidth );
 			GUIDrawer.IsDraw = EditorGUILayout.Toggle( "Debug Draw", GUIDrawer.IsDraw, LeftMenuWidth );
+			leftMenuWidthNum = Mathf.Clamp( IntField( "Left Menu Width", leftMenuWidthNum, LeftMenuWidth ), 180, 900 );
 		});
 	}
 	private void OnGUIActionablePrefabCreateButton()
@@ -374,7 +375,7 @@ public class StageCreatorWindow : A_EditorWindowBase
 	{
 		get
 		{
-			return Width( LeftMenuWidthNum );
+			return Width( leftMenuWidthNum );
 		}
 	}
 	private float FixedZoom

@@ -90,7 +90,7 @@ GameObject:
   - 4: {fileID: 400010}
   - 114: {fileID: 11400010}
   m_Layer: 0
-  m_Name: '[0~0] EnemyChunkCreate_Enemy17_2'
+  m_Name: '[0~0] EnemyChunkCreate_Enemy17_Right'
   m_TagString: Untagged
   m_Icon: {fileID: -1376725286, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -230,8 +230,7 @@ MonoBehaviour:
     initFuncName: 
     prefabiTweenPath: {fileID: 100000, guid: e5b711935ec564ca5985bac84dd8ae86, type: 2}
     offset: {x: 50, y: -100}
-    isReverse: 0
-  isIconDraw: 1
+    isReverse: 1
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -295,8 +294,7 @@ MonoBehaviour:
     initFuncName: 
     prefabiTweenPath: {fileID: 100000, guid: e5b711935ec564ca5985bac84dd8ae86, type: 2}
     offset: {x: 150, y: -100}
-    isReverse: 0
-  isIconDraw: 0
+    isReverse: 1
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -360,8 +358,7 @@ MonoBehaviour:
     initFuncName: 
     prefabiTweenPath: {fileID: 100000, guid: e5b711935ec564ca5985bac84dd8ae86, type: 2}
     offset: {x: 0, y: 0}
-    isReverse: 0
-  isIconDraw: 0
+    isReverse: 1
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -425,8 +422,7 @@ MonoBehaviour:
     initFuncName: 
     prefabiTweenPath: {fileID: 100000, guid: e5b711935ec564ca5985bac84dd8ae86, type: 2}
     offset: {x: 100, y: 0}
-    isReverse: 0
-  isIconDraw: 0
+    isReverse: 1
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -490,8 +486,7 @@ MonoBehaviour:
     initFuncName: 
     prefabiTweenPath: {fileID: 100000, guid: e5b711935ec564ca5985bac84dd8ae86, type: 2}
     offset: {x: 200, y: 0}
-    isReverse: 0
-  isIconDraw: 0
+    isReverse: 1
 --- !u!114 &11400010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -513,7 +508,7 @@ MonoBehaviour:
     - {fileID: 11400002}
     - {fileID: 11400000}
   interval: 0
-  extensionName: Enemy17_1
+  extensionName: Enemy17_Right
   offset: {x: 0, y: 0}
 --- !u!1001 &100100000
 Prefab:

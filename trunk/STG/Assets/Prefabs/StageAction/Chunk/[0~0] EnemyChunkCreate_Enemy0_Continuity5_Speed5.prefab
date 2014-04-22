@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 400000}
   - 114: {fileID: 11400000}
   m_Layer: 0
-  m_Name: '[0] Enemy1'
+  m_Name: '[0] Enemy0'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,7 +26,7 @@ GameObject:
   - 4: {fileID: 400002}
   - 114: {fileID: 11400002}
   m_Layer: 0
-  m_Name: '[0] Enemy1'
+  m_Name: '[0] Enemy0'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42,7 +42,7 @@ GameObject:
   - 4: {fileID: 400004}
   - 114: {fileID: 11400004}
   m_Layer: 0
-  m_Name: '[0] Enemy1'
+  m_Name: '[0] Enemy0'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58,7 +58,7 @@ GameObject:
   - 4: {fileID: 400006}
   - 114: {fileID: 11400006}
   m_Layer: 0
-  m_Name: '[0] Enemy1'
+  m_Name: '[0] Enemy0'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ GameObject:
   - 4: {fileID: 400008}
   - 114: {fileID: 11400008}
   m_Layer: 0
-  m_Name: '[0] Enemy1'
+  m_Name: '[0] Enemy0'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -90,7 +90,7 @@ GameObject:
   - 4: {fileID: 400010}
   - 114: {fileID: 11400010}
   m_Layer: 0
-  m_Name: '[0~0] EnemyChunkCreate_Enemy1_6'
+  m_Name: '[0~0] EnemyChunkCreate_Enemy0_Continuity5_Speed5'
   m_TagString: Untagged
   m_Icon: {fileID: -1376725286, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -180,7 +180,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400000}
   timeLine: 0
-  enemyId: 1
+  enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
   - targetPosition: {x: 0, y: 0, z: 0}
@@ -204,7 +204,7 @@ MonoBehaviour:
       m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
-    speed: 7.5
+    speed: 5
     delayFrame: 0
     durationFrame: 180
     isDestroy: 0
@@ -221,7 +221,6 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
-  isIconDraw: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -235,7 +234,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400002}
   timeLine: 0
-  enemyId: 1
+  enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
   - targetPosition: {x: 0, y: 0, z: 0}
@@ -259,7 +258,7 @@ MonoBehaviour:
       m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
-    speed: 7.5
+    speed: 5
     delayFrame: 0
     durationFrame: 180
     isDestroy: 0
@@ -276,7 +275,6 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
-  isIconDraw: 0
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -290,7 +288,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400004}
   timeLine: 0
-  enemyId: 1
+  enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
   - targetPosition: {x: 0, y: 0, z: 0}
@@ -314,7 +312,7 @@ MonoBehaviour:
       m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
-    speed: 7.5
+    speed: 5
     delayFrame: 0
     durationFrame: 180
     isDestroy: 0
@@ -331,7 +329,6 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
-  isIconDraw: 0
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -345,7 +342,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400006}
   timeLine: 0
-  enemyId: 1
+  enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
   - targetPosition: {x: 0, y: 0, z: 0}
@@ -369,7 +366,7 @@ MonoBehaviour:
       m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
-    speed: 7.5
+    speed: 5
     delayFrame: 0
     durationFrame: 180
     isDestroy: 0
@@ -386,7 +383,6 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
-  isIconDraw: 0
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -400,7 +396,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400008}
   timeLine: 0
-  enemyId: 1
+  enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
   - targetPosition: {x: 0, y: 0, z: 0}
@@ -424,7 +420,7 @@ MonoBehaviour:
       m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
-    speed: 7.5
+    speed: 5
     delayFrame: 0
     durationFrame: 180
     isDestroy: 0
@@ -441,7 +437,6 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
-  isIconDraw: 0
 --- !u!114 &11400010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -463,7 +458,7 @@ MonoBehaviour:
     - {fileID: 11400000}
     - {fileID: 11400008}
   interval: 20
-  extensionName: Enemy1_6
+  extensionName: Enemy0_Continuity5_Speed5
   offset: {x: 200, y: 0}
 --- !u!1001 &100100000
 Prefab:
