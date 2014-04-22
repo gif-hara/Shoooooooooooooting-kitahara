@@ -50,20 +50,6 @@ public class EnemyController : EnemyControllerBase
 	private int invincibleTimer;
 	
 	/// <summary>
-	/// 死亡時に生成するプレハブ.
-	/// </summary>
-	public GameObject PrefabDestroyEffect{ set{ prefabDestroyEffect = value; } get{ return prefabDestroyEffect; } }
-	[SerializeField]
-	private GameObject prefabDestroyEffect;
-	
-	/// <summary>
-	/// 死亡時に再生するサウンドラベル.
-	/// </summary>
-	public string DestroySELabel{ set{ destroySELabel = value; } get{ return destroySELabel; } }
-	[SerializeField]
-	private string destroySELabel;
-
-	/// <summary>
 	/// 死亡時にイベントを発行するオブジェクト.
 	/// </summary>
 	public GameObject DeadEventObject{ set{ deadEventObject = value; } get{ return deadEventObject; } }

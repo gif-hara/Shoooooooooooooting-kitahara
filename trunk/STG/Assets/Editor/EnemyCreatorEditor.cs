@@ -126,31 +126,39 @@ public class EnemyCreatorEditor : A_StageTimeLineActionEditor<EnemyCreator>
 		Horizontal( () =>
 		{
 			Button( "Left", () =>
-			       {
-				SetInitialPositionOnBoundsFit( (initialPos) =>
-				                              {
-					Target.initialPosition = new Vector3( GameDefine.Screen.x + EnemyController.Bounds.x, initialPos.y, 0.0f );
+			{
+				SetInitialPositionOnBoundsFit( () =>
+				{
+					var initPos = Target.initialPosition;
+					Target.initialPosition = new Vector3( GameDefine.Screen.x + EnemyController.Bounds.x, initPos.y, 0.0f );
+					currentEnemyObject.transform.localPosition = Target.initialPosition;
 				});
 			});
 			Button( "Top", () =>
-			       {
-				SetInitialPositionOnBoundsFit( (initialPos) =>
-				                              {
-					Target.initialPosition = new Vector3( initialPos.x, GameDefine.Screen.y + EnemyController.Bounds.y, 0.0f );
+			{
+				SetInitialPositionOnBoundsFit( () =>
+				{
+					var initPos = Target.initialPosition;
+					Target.initialPosition = new Vector3( initPos.x, GameDefine.Screen.y + EnemyController.Bounds.y, 0.0f );
+					currentEnemyObject.transform.localPosition = Target.initialPosition;
 				});
 			});
 			Button( "Right", () =>
-			       {
-				SetInitialPositionOnBoundsFit( (initialPos) =>
-				                              {
-					Target.initialPosition = new Vector3( -GameDefine.Screen.x + EnemyController.Bounds.width, initialPos.y, 0.0f );
+			{
+				SetInitialPositionOnBoundsFit( () =>
+				{
+					var initPos = Target.initialPosition;
+					Target.initialPosition = new Vector3( -GameDefine.Screen.x + EnemyController.Bounds.width, initPos.y, 0.0f );
+					currentEnemyObject.transform.localPosition = Target.initialPosition;
 				});
 			});
 			Button( "Bottom", () =>
-			       {
-				SetInitialPositionOnBoundsFit( (initialPos) =>
-				                              {
-					Target.initialPosition = new Vector3( initialPos.x, -GameDefine.Screen.y - EnemyController.Bounds.y, 0.0f );
+			{
+				SetInitialPositionOnBoundsFit( () =>
+				{
+					var initPos = Target.initialPosition;
+					Target.initialPosition = new Vector3( initPos.x, -GameDefine.Screen.y - EnemyController.Bounds.y, 0.0f );
+					currentEnemyObject.transform.localPosition = Target.initialPosition;
 				});
 			});
 		});
@@ -339,6 +347,41 @@ public class EnemyCreatorEditor : A_StageTimeLineActionEditor<EnemyCreator>
 				DrawOnInspectorObjectMoveDurationFrame( data );
 				DrawOnInspectorObjectMoveIsDestroy( data );
 				DrawOnInspectorObjectMoveInitFuncName( data );
+				Horizontal( () =>
+				{
+					Button( "Left", () =>
+					{
+						SetInitialPositionOnBoundsFit( () =>
+						{
+							var initPos = data.targetPosition;
+							data.targetPosition = new Vector3( GameDefine.Screen.x + EnemyController.Bounds.x, initPos.y, 0.0f );
+						});
+					});
+					Button( "Top", () =>
+					{
+						SetInitialPositionOnBoundsFit( () =>
+						{
+							var initPos = data.targetPosition;
+							data.targetPosition = new Vector3( initPos.x, GameDefine.Screen.y + EnemyController.Bounds.y, 0.0f );
+						});
+					});
+					Button( "Right", () =>
+					{
+						SetInitialPositionOnBoundsFit( () =>
+						{
+							var initPos = data.targetPosition;
+							data.targetPosition = new Vector3( -GameDefine.Screen.x + EnemyController.Bounds.width, initPos.y, 0.0f );
+						});
+					});
+					Button( "Bottom", () =>
+					{
+						SetInitialPositionOnBoundsFit( () =>
+						{
+							var initPos = data.targetPosition;
+							data.targetPosition = new Vector3( initPos.x, -GameDefine.Screen.y - EnemyController.Bounds.y, 0.0f );
+						});
+					});
+				});
 			});
 		});
 	}
@@ -405,11 +448,9 @@ public class EnemyCreatorEditor : A_StageTimeLineActionEditor<EnemyCreator>
 	/// <summary>
 	/// 選択中の敵プレハブのバウンズから初期座標を設定する.
 	/// </summary>
-	private void SetInitialPositionOnBoundsFit( System.Action<Vector3> initFunc )
+	private void SetInitialPositionOnBoundsFit( System.Action initFunc )
 	{
-		var initialPos = Target.initialPosition;
-		initFunc( initialPos );
-		currentEnemyObject.transform.localPosition = Target.initialPosition;
+		initFunc();
 		SceneView.RepaintAll();
 	}
 
