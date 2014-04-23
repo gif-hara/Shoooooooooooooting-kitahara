@@ -426,6 +426,7 @@ public class EnemyCreatorEditor : A_StageTimeLineActionEditor<EnemyCreator>
 				DrawOnInspectorObjectMoveCurve0( data );
 				DrawOnInspectorObjectMoveDelayFrame( data );
 				DrawOnInspectorObjectMoveDurationFrame( data );
+				DrawOnInspectorObjectMoveIsDestroy( data );
 				DrawOnInspectorObjectMoveOffset( data );
 				DrawOnInspectorObjectMoveIsReverse( data );
 			});

@@ -26,7 +26,7 @@ GameObject:
   - 4: {fileID: 400002}
   - 114: {fileID: 11400002}
   m_Layer: 0
-  m_Name: '[0~0] EnemyChunkCreate_Enemy30_RightToLeft_Continuity10'
+  m_Name: '[0~0] EnemyChunkCreate_Enemy30_iTween_LeftToBottom_Continuity10'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -194,10 +194,9 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -400, y: 300, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 400020}
   - {fileID: 400018}
   - {fileID: 400016}
   - {fileID: 400014}
@@ -207,6 +206,7 @@ Transform:
   - {fileID: 400006}
   - {fileID: 400004}
   - {fileID: 400000}
+  - {fileID: 400020}
   m_Father: {fileID: 0}
 --- !u!4 &400004
 Transform:
@@ -323,20 +323,20 @@ MonoBehaviour:
   enemyId: 30
   initialPosition: {x: 432, y: 278, z: 0}
   dataList:
-  - targetPosition: {x: -432, y: 278, z: 0}
+  - targetPosition: {x: 0, y: 0, z: 0}
     curve0:
       serializedVersion: 2
       m_Curve:
       - time: 0
         value: 0
-        inSlope: 1
+        inSlope: 0
         outSlope: 1
-        tangentMode: 10
+        tangentMode: 0
       - time: 1
         value: 1
         inSlope: 1
-        outSlope: 1
-        tangentMode: 10
+        outSlope: 0
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     curve1:
@@ -346,7 +346,7 @@ MonoBehaviour:
       m_PostInfinity: 2
     speed: 0
     delayFrame: 0
-    durationFrame: 90
+    durationFrame: 240
     isDestroy: 1
     isOnOverDistance: 0
     isSyncRotation: 0
@@ -356,9 +356,9 @@ MonoBehaviour:
       y: 0
       width: 0
       height: 0
-    moveType: 0
+    moveType: 3
     initFuncName: 
-    prefabiTweenPath: {fileID: 0}
+    prefabiTweenPath: {fileID: 100000, guid: 0fb0b8c0460eaad428896b7dce9970c1, type: 2}
     offset: {x: 0, y: 0}
     isReverse: 0
 --- !u!114 &11400002
@@ -376,7 +376,6 @@ MonoBehaviour:
   timeLine: 0
   actionableListManager:
     actionableList:
-    - {fileID: 11400020}
     - {fileID: 11400018}
     - {fileID: 11400016}
     - {fileID: 11400014}
@@ -386,8 +385,9 @@ MonoBehaviour:
     - {fileID: 11400006}
     - {fileID: 11400004}
     - {fileID: 11400000}
+    - {fileID: 11400020}
   interval: 5
-  extensionName: Enemy30_RightToLeft_Continuity10
+  extensionName: Enemy30_iTween_LeftToBottom_Continuity10
   offset: {x: 0, y: 0}
 --- !u!114 &11400004
 MonoBehaviour:
@@ -405,20 +405,20 @@ MonoBehaviour:
   enemyId: 30
   initialPosition: {x: 432, y: 278, z: 0}
   dataList:
-  - targetPosition: {x: -432, y: 278, z: 0}
+  - targetPosition: {x: 0, y: 0, z: 0}
     curve0:
       serializedVersion: 2
       m_Curve:
       - time: 0
         value: 0
-        inSlope: 1
+        inSlope: 0
         outSlope: 1
-        tangentMode: 10
+        tangentMode: 0
       - time: 1
         value: 1
         inSlope: 1
-        outSlope: 1
-        tangentMode: 10
+        outSlope: 0
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     curve1:
@@ -428,7 +428,7 @@ MonoBehaviour:
       m_PostInfinity: 2
     speed: 0
     delayFrame: 0
-    durationFrame: 90
+    durationFrame: 240
     isDestroy: 1
     isOnOverDistance: 0
     isSyncRotation: 0
@@ -438,9 +438,9 @@ MonoBehaviour:
       y: 0
       width: 0
       height: 0
-    moveType: 0
+    moveType: 3
     initFuncName: 
-    prefabiTweenPath: {fileID: 0}
+    prefabiTweenPath: {fileID: 100000, guid: 0fb0b8c0460eaad428896b7dce9970c1, type: 2}
     offset: {x: 0, y: 0}
     isReverse: 0
 --- !u!114 &11400006
@@ -459,20 +459,20 @@ MonoBehaviour:
   enemyId: 30
   initialPosition: {x: 432, y: 278, z: 0}
   dataList:
-  - targetPosition: {x: -432, y: 278, z: 0}
+  - targetPosition: {x: 0, y: 0, z: 0}
     curve0:
       serializedVersion: 2
       m_Curve:
       - time: 0
         value: 0
-        inSlope: 1
+        inSlope: 0
         outSlope: 1
-        tangentMode: 10
+        tangentMode: 0
       - time: 1
         value: 1
         inSlope: 1
-        outSlope: 1
-        tangentMode: 10
+        outSlope: 0
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     curve1:
@@ -482,7 +482,7 @@ MonoBehaviour:
       m_PostInfinity: 2
     speed: 0
     delayFrame: 0
-    durationFrame: 90
+    durationFrame: 240
     isDestroy: 1
     isOnOverDistance: 0
     isSyncRotation: 0
@@ -492,9 +492,9 @@ MonoBehaviour:
       y: 0
       width: 0
       height: 0
-    moveType: 0
+    moveType: 3
     initFuncName: 
-    prefabiTweenPath: {fileID: 0}
+    prefabiTweenPath: {fileID: 100000, guid: 0fb0b8c0460eaad428896b7dce9970c1, type: 2}
     offset: {x: 0, y: 0}
     isReverse: 0
 --- !u!114 &11400008
@@ -513,20 +513,20 @@ MonoBehaviour:
   enemyId: 30
   initialPosition: {x: 432, y: 278, z: 0}
   dataList:
-  - targetPosition: {x: -432, y: 278, z: 0}
+  - targetPosition: {x: 0, y: 0, z: 0}
     curve0:
       serializedVersion: 2
       m_Curve:
       - time: 0
         value: 0
-        inSlope: 1
+        inSlope: 0
         outSlope: 1
-        tangentMode: 10
+        tangentMode: 0
       - time: 1
         value: 1
         inSlope: 1
-        outSlope: 1
-        tangentMode: 10
+        outSlope: 0
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     curve1:
@@ -536,7 +536,7 @@ MonoBehaviour:
       m_PostInfinity: 2
     speed: 0
     delayFrame: 0
-    durationFrame: 90
+    durationFrame: 240
     isDestroy: 1
     isOnOverDistance: 0
     isSyncRotation: 0
@@ -546,9 +546,9 @@ MonoBehaviour:
       y: 0
       width: 0
       height: 0
-    moveType: 0
+    moveType: 3
     initFuncName: 
-    prefabiTweenPath: {fileID: 0}
+    prefabiTweenPath: {fileID: 100000, guid: 0fb0b8c0460eaad428896b7dce9970c1, type: 2}
     offset: {x: 0, y: 0}
     isReverse: 0
 --- !u!114 &11400010
@@ -567,20 +567,20 @@ MonoBehaviour:
   enemyId: 30
   initialPosition: {x: 432, y: 278, z: 0}
   dataList:
-  - targetPosition: {x: -432, y: 278, z: 0}
+  - targetPosition: {x: 0, y: 0, z: 0}
     curve0:
       serializedVersion: 2
       m_Curve:
       - time: 0
         value: 0
-        inSlope: 1
+        inSlope: 0
         outSlope: 1
-        tangentMode: 10
+        tangentMode: 0
       - time: 1
         value: 1
         inSlope: 1
-        outSlope: 1
-        tangentMode: 10
+        outSlope: 0
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     curve1:
@@ -590,7 +590,7 @@ MonoBehaviour:
       m_PostInfinity: 2
     speed: 0
     delayFrame: 0
-    durationFrame: 90
+    durationFrame: 240
     isDestroy: 1
     isOnOverDistance: 0
     isSyncRotation: 0
@@ -600,9 +600,9 @@ MonoBehaviour:
       y: 0
       width: 0
       height: 0
-    moveType: 0
+    moveType: 3
     initFuncName: 
-    prefabiTweenPath: {fileID: 0}
+    prefabiTweenPath: {fileID: 100000, guid: 0fb0b8c0460eaad428896b7dce9970c1, type: 2}
     offset: {x: 0, y: 0}
     isReverse: 0
 --- !u!114 &11400012
@@ -621,20 +621,20 @@ MonoBehaviour:
   enemyId: 30
   initialPosition: {x: 432, y: 278, z: 0}
   dataList:
-  - targetPosition: {x: -432, y: 278, z: 0}
+  - targetPosition: {x: 0, y: 0, z: 0}
     curve0:
       serializedVersion: 2
       m_Curve:
       - time: 0
         value: 0
-        inSlope: 1
+        inSlope: 0
         outSlope: 1
-        tangentMode: 10
+        tangentMode: 0
       - time: 1
         value: 1
         inSlope: 1
-        outSlope: 1
-        tangentMode: 10
+        outSlope: 0
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     curve1:
@@ -644,7 +644,7 @@ MonoBehaviour:
       m_PostInfinity: 2
     speed: 0
     delayFrame: 0
-    durationFrame: 90
+    durationFrame: 240
     isDestroy: 1
     isOnOverDistance: 0
     isSyncRotation: 0
@@ -654,9 +654,9 @@ MonoBehaviour:
       y: 0
       width: 0
       height: 0
-    moveType: 0
+    moveType: 3
     initFuncName: 
-    prefabiTweenPath: {fileID: 0}
+    prefabiTweenPath: {fileID: 100000, guid: 0fb0b8c0460eaad428896b7dce9970c1, type: 2}
     offset: {x: 0, y: 0}
     isReverse: 0
 --- !u!114 &11400014
@@ -675,20 +675,20 @@ MonoBehaviour:
   enemyId: 30
   initialPosition: {x: 432, y: 278, z: 0}
   dataList:
-  - targetPosition: {x: -432, y: 278, z: 0}
+  - targetPosition: {x: 0, y: 0, z: 0}
     curve0:
       serializedVersion: 2
       m_Curve:
       - time: 0
         value: 0
-        inSlope: 1
+        inSlope: 0
         outSlope: 1
-        tangentMode: 10
+        tangentMode: 0
       - time: 1
         value: 1
         inSlope: 1
-        outSlope: 1
-        tangentMode: 10
+        outSlope: 0
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     curve1:
@@ -698,7 +698,7 @@ MonoBehaviour:
       m_PostInfinity: 2
     speed: 0
     delayFrame: 0
-    durationFrame: 90
+    durationFrame: 240
     isDestroy: 1
     isOnOverDistance: 0
     isSyncRotation: 0
@@ -708,9 +708,9 @@ MonoBehaviour:
       y: 0
       width: 0
       height: 0
-    moveType: 0
+    moveType: 3
     initFuncName: 
-    prefabiTweenPath: {fileID: 0}
+    prefabiTweenPath: {fileID: 100000, guid: 0fb0b8c0460eaad428896b7dce9970c1, type: 2}
     offset: {x: 0, y: 0}
     isReverse: 0
 --- !u!114 &11400016
@@ -729,20 +729,20 @@ MonoBehaviour:
   enemyId: 30
   initialPosition: {x: 432, y: 278, z: 0}
   dataList:
-  - targetPosition: {x: -432, y: 278, z: 0}
+  - targetPosition: {x: 0, y: 0, z: 0}
     curve0:
       serializedVersion: 2
       m_Curve:
       - time: 0
         value: 0
-        inSlope: 1
+        inSlope: 0
         outSlope: 1
-        tangentMode: 10
+        tangentMode: 0
       - time: 1
         value: 1
         inSlope: 1
-        outSlope: 1
-        tangentMode: 10
+        outSlope: 0
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     curve1:
@@ -752,7 +752,7 @@ MonoBehaviour:
       m_PostInfinity: 2
     speed: 0
     delayFrame: 0
-    durationFrame: 90
+    durationFrame: 240
     isDestroy: 1
     isOnOverDistance: 0
     isSyncRotation: 0
@@ -762,9 +762,9 @@ MonoBehaviour:
       y: 0
       width: 0
       height: 0
-    moveType: 0
+    moveType: 3
     initFuncName: 
-    prefabiTweenPath: {fileID: 0}
+    prefabiTweenPath: {fileID: 100000, guid: 0fb0b8c0460eaad428896b7dce9970c1, type: 2}
     offset: {x: 0, y: 0}
     isReverse: 0
 --- !u!114 &11400018
@@ -783,20 +783,20 @@ MonoBehaviour:
   enemyId: 30
   initialPosition: {x: 432, y: 278, z: 0}
   dataList:
-  - targetPosition: {x: -432, y: 278, z: 0}
+  - targetPosition: {x: 0, y: 0, z: 0}
     curve0:
       serializedVersion: 2
       m_Curve:
       - time: 0
         value: 0
-        inSlope: 1
+        inSlope: 0
         outSlope: 1
-        tangentMode: 10
+        tangentMode: 0
       - time: 1
         value: 1
         inSlope: 1
-        outSlope: 1
-        tangentMode: 10
+        outSlope: 0
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     curve1:
@@ -806,7 +806,7 @@ MonoBehaviour:
       m_PostInfinity: 2
     speed: 0
     delayFrame: 0
-    durationFrame: 90
+    durationFrame: 240
     isDestroy: 1
     isOnOverDistance: 0
     isSyncRotation: 0
@@ -816,9 +816,9 @@ MonoBehaviour:
       y: 0
       width: 0
       height: 0
-    moveType: 0
+    moveType: 3
     initFuncName: 
-    prefabiTweenPath: {fileID: 0}
+    prefabiTweenPath: {fileID: 100000, guid: 0fb0b8c0460eaad428896b7dce9970c1, type: 2}
     offset: {x: 0, y: 0}
     isReverse: 0
 --- !u!114 &11400020
@@ -837,20 +837,20 @@ MonoBehaviour:
   enemyId: 30
   initialPosition: {x: 432, y: 278, z: 0}
   dataList:
-  - targetPosition: {x: -432, y: 278, z: 0}
+  - targetPosition: {x: 0, y: 0, z: 0}
     curve0:
       serializedVersion: 2
       m_Curve:
       - time: 0
         value: 0
-        inSlope: 1
+        inSlope: 0
         outSlope: 1
-        tangentMode: 10
+        tangentMode: 0
       - time: 1
         value: 1
         inSlope: 1
-        outSlope: 1
-        tangentMode: 10
+        outSlope: 0
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     curve1:
@@ -860,7 +860,7 @@ MonoBehaviour:
       m_PostInfinity: 2
     speed: 0
     delayFrame: 0
-    durationFrame: 90
+    durationFrame: 240
     isDestroy: 1
     isOnOverDistance: 0
     isSyncRotation: 0
@@ -870,9 +870,9 @@ MonoBehaviour:
       y: 0
       width: 0
       height: 0
-    moveType: 0
+    moveType: 3
     initFuncName: 
-    prefabiTweenPath: {fileID: 0}
+    prefabiTweenPath: {fileID: 100000, guid: 0fb0b8c0460eaad428896b7dce9970c1, type: 2}
     offset: {x: 0, y: 0}
     isReverse: 0
 --- !u!1001 &100100000
