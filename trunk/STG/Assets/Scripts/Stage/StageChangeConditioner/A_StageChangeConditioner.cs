@@ -16,6 +16,7 @@ public abstract class A_StageChangeConditioner : MonoBehaviour
 {
 	/// <summary>
 	/// 条件処理.
+	/// trueなら裏ルート.
 	/// </summary>
 	public abstract bool Condition();
 }

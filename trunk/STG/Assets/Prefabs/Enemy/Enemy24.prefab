@@ -392,6 +392,7 @@ GameObject:
   - 114: {fileID: 11400166}
   - 114: {fileID: 11400168}
   - 114: {fileID: 11400000}
+  - 114: {fileID: 11400180}
   m_Layer: 8
   m_Name: Enemy24
   m_TagString: Untagged
@@ -3320,8 +3321,6 @@ MonoBehaviour:
   addScore: 500
   addGameLevelExperience: 50
   invincibleTimer: 180
-  prefabDestroyEffect: {fileID: 100002, guid: 9c34980ebaf998b43a95929a879b6f1c, type: 2}
-  destroySELabel: Dead0
   deadEventObject: {fileID: 100012}
   damageEventObject: {fileID: 100064}
   bounds:
@@ -3436,6 +3435,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   refParent: {fileID: 100044}
+--- !u!114 &11400180
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e140132d1325b8841bfb15b5d991bac6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  refEnemy: {fileID: 11400166}
 --- !u!114 &11400200
 MonoBehaviour:
   m_ObjectHideFlags: 1
