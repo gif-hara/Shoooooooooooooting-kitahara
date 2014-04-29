@@ -460,6 +460,7 @@ public class EnemyCreatorEditor : A_StageTimeLineActionEditor<EnemyCreator>
 		DestroyCurrentEnemy();
 		currentEnemyObject = PrefabUtility.InstantiatePrefab( EnemyController.gameObject ) as GameObject;
 		currentEnemyObject.transform.localPosition = Target.initialPosition;
+		currentEnemyObject.hideFlags = HideFlags.HideInHierarchy;
 	}
 #endregion //Draw OnInspector
 #region      Multi Setting Inspector

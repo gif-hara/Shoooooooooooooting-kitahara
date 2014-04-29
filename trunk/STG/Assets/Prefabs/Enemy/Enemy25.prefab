@@ -1681,7 +1681,7 @@ MonoBehaviour:
   radius: 50
   delayUpdate: 0
   refEnemy: {fileID: 11400068}
-  damageRate: .400000006
+  damageRate: .25
   refEnemyControllerBaseList:
   - {fileID: 11400068}
 --- !u!114 &11400018
@@ -1898,7 +1898,7 @@ MonoBehaviour:
   radius: 20.5
   delayUpdate: 0
   refEnemy: {fileID: 11400068}
-  damageRate: .400000006
+  damageRate: .25
   refEnemyControllerBaseList:
   - {fileID: 11400068}
 --- !u!114 &11400034
@@ -1916,7 +1916,7 @@ MonoBehaviour:
   radius: 17.1000004
   delayUpdate: 0
   refEnemy: {fileID: 11400068}
-  damageRate: .400000006
+  damageRate: .25
   refEnemyControllerBaseList:
   - {fileID: 11400068}
 --- !u!114 &11400036
@@ -1949,7 +1949,7 @@ MonoBehaviour:
   radius: 17.1000004
   delayUpdate: 0
   refEnemy: {fileID: 11400068}
-  damageRate: .400000006
+  damageRate: .25
   refEnemyControllerBaseList:
   - {fileID: 11400068}
 --- !u!114 &11400040
@@ -2347,9 +2347,7 @@ MonoBehaviour:
   hp: 65000
   addScore: 500
   addGameLevelExperience: 50
-  invincibleTimer: 180
-  prefabDestroyEffect: {fileID: 100002, guid: 9c34980ebaf998b43a95929a879b6f1c, type: 2}
-  destroySELabel: Dead0
+  invincibleTimer: 360
   deadEventObject: {fileID: 100004}
   damageEventObject: {fileID: 100020}
   bounds:
@@ -2409,7 +2407,7 @@ MonoBehaviour:
   radius: 20.5
   delayUpdate: 0
   refEnemy: {fileID: 11400068}
-  damageRate: .400000006
+  damageRate: .25
   refEnemyControllerBaseList:
   - {fileID: 11400068}
 --- !u!114 &11400076
@@ -2949,7 +2947,7 @@ MonoBehaviour:
   radius: 32
   delayUpdate: 0
   refEnemy: {fileID: 11400068}
-  damageRate: .400000006
+  damageRate: .25
   refEnemyControllerBaseList:
   - {fileID: 11400068}
 --- !u!114 &11400116
@@ -3133,7 +3131,7 @@ MonoBehaviour:
   radius: 32
   delayUpdate: 0
   refEnemy: {fileID: 11400068}
-  damageRate: .400000006
+  damageRate: .25
   refEnemyControllerBaseList:
   - {fileID: 11400068}
 --- !u!114 &11400130
@@ -3544,7 +3542,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   refEnemy: {fileID: 11400068}
-  invincibleTime: 440
+  invincibleTime: 600
 --- !u!114 &11400174
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4113,7 +4111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   id: 0
-  delay: 60
+  delay: 180
   refMuzzleList:
   - {fileID: 100086}
   - {fileID: 100056}

@@ -126,6 +126,7 @@ public class EnemyController : EnemyControllerBase
 		UpdateCompleteMoveComponent();
 		
 		invincibleTimer--;
+		invincibleTimer = invincibleTimer < 0 ? 0 : invincibleTimer;
 		
 		if( updateFunc != null )
 		{
