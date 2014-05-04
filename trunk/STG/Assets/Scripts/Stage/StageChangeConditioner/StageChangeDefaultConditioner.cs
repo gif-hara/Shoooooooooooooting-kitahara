@@ -1,6 +1,6 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : Stage2MiddleChangeConditioner.cs
+*     * FileName    :StageChangeDefaultConditioner.cs
 *
 *     * Description : .
 *
@@ -9,14 +9,15 @@
 /*===========================================================================*/
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 /// <summary>
 /// .
 /// </summary>
-public class Stage2MiddleChangeConditioner : A_StageChangeConditioner
+public class StageChangeDefaultConditioner : A_StageChangeConditioner
 {
 	public override bool Condition ()
 	{
-		return true;
+		return false;
 	}
 }
