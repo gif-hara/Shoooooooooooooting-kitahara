@@ -19,12 +19,14 @@ public class DamageEventTextureFlash : GameMonoBehaviour, I_DamageEvent
 	/// <summary>
 	/// 敵クラス参照.
 	/// </summary>
-	public EnemyController refEnemy;
+	[SerializeField]
+	private EnemyController refEnemy;
 	
 	/// <summary>
 	/// レンダラ参照リスト.
 	/// </summary>
-	public List<Renderer> refRendererList;
+	[SerializeField]
+	private List<Renderer> refRendererList;
 	
 	/// <summary>
 	/// マテリアル色変え時間.
@@ -60,7 +62,20 @@ public class DamageEventTextureFlash : GameMonoBehaviour, I_DamageEvent
 	/// ダメージと判断するヒットポイント正規化値.
 	/// </summary>
 	private const float DamageColorNormalize = 0.1f;
-	
+
+	[ContextMenu( "All Select Renderer" )]
+	void AllSelect()
+	{
+		refRendererList.Clear();
+		refEnemy.Trans.AllVisit( (t) =>
+		{
+			if( t.renderer != null )
+			{
+				refRendererList.Add( t.renderer );
+			}
+		});
+	}
+
 	// Use this for initialization
 	public override void Start()
 	{

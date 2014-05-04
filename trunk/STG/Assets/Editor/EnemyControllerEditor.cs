@@ -27,15 +27,15 @@ public class EnemyControllerEditor : A_EditorMonoBehaviour<EnemyController>
 			Target.refShotCreatorList.Clear();
 			Target.refShotCreatorList.AddRange( Target.Trans.GetComponentsInChildren<EnemyShotCreator>() );
 		});
-		Button( "Create Damage Event", () =>
-		{
-			var obj = new GameObject( "DamageEvent" );
-			obj.transform.parent = Target.transform;
-			obj.transform.localPosition = Vector3.zero;
-			Target.DamageEventObject = obj;
-
-			var flash = obj.AddComponent<DamageEventTextureFlash>();
-			flash.refEnemy = Target;
-		});
+//		Button( "Create Damage Event", () =>
+//		{
+//			var obj = new GameObject( "DamageEvent" );
+//			obj.transform.parent = Target.transform;
+//			obj.transform.localPosition = Vector3.zero;
+//			Target.DamageEventObject = obj;
+//
+//			var flash = obj.AddComponent<DamageEventTextureFlash>();
+//			flash.refEnemy = Target;
+//		});
 	}
 }
