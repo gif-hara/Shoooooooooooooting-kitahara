@@ -61,6 +61,18 @@ public class GameDefine : A_Singleton<GameDefine>
 	/// </summary>
 	public static string EnemyShotCreateMessage = "OnEnemyShotCreate";
 
+	/// <summary>
+	/// 銃口が非アクティブになった時に敵が死亡するメッセージ.
+	/// 引数に<c>int destroyEnemyId</c>が入る.
+	/// </summary>
+	public const string EnemyDestroyOnDeactiveMuzzleMessage = "OnEnemyDestroyOnDeactiveMuzzleMessage";
+
+	/// <summary>
+	/// ヒットポイントイベント時に敵が死亡するメッセージ.
+	/// 引数に<c>int destroyEnemyId</c>が入る.
+	/// </summary>
+	public const string EnemyDestroyOnHitPointChangeEventMessage = "OnEnemyDestroyOnHitPointChangeEvent";
+
 	public float ColliderLayer = 0.0f;
 	
 	public override void Awake()

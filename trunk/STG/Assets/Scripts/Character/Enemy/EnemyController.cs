@@ -134,6 +134,13 @@ public class EnemyController : EnemyControllerBase
 		}
 	}
 
+	void OnEnemyDestroyOnDeactiveMuzzleMessage( int destroyEnemyId )
+	{
+		if( id != destroyEnemyId )	return;
+
+		ForceDead();
+	}
+
 	void OnDrawGizmosSelected()
 	{
 		var pos = new Rect(
