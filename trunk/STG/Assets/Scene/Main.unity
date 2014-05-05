@@ -1937,7 +1937,7 @@ GameObject:
   - 4: {fileID: 332960098}
   - 114: {fileID: 332960099}
   m_Layer: 0
-  m_Name: MoveEvent
+  m_Name: OnActiveMuzzleEvent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1952,8 +1952,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 793853407}
+  m_Children: []
   m_Father: {fileID: 428285264}
 --- !u!114 &332960099
 MonoBehaviour:
@@ -2449,6 +2448,7 @@ Transform:
   m_Children:
   - {fileID: 854890962}
   - {fileID: 332960098}
+  - {fileID: 1685307363}
   m_Father: {fileID: 1446969403}
 --- !u!1 &436780248
 GameObject:
@@ -3973,7 +3973,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 332960098}
+  m_Father: {fileID: 1926905903}
 --- !u!1 &822004927
 GameObject:
   m_ObjectHideFlags: 0
@@ -8794,6 +8794,48 @@ Camera:
   m_TargetTexture: {fileID: 0}
   m_HDR: 0
   m_OcclusionCulling: 1
+--- !u!1 &1685307362
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100004, guid: 3060146a7679ed54d9790a452500df8e, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1685307363}
+  - 114: {fileID: 1685307364}
+  m_Layer: 0
+  m_Name: OnDeactiveMuzzleEvent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1685307363
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400004, guid: 3060146a7679ed54d9790a452500df8e, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1685307362}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 428285264}
+--- !u!114 &1685307364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1685307362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f897e450f2b13b4eb2c024ad56c6bd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  delay: 0
+  refParent: {fileID: 793853407}
+  prefab: {fileID: 100002, guid: aa338b697736304418b15b45fc793113, type: 2}
 --- !u!1 &1693494951
 GameObject:
   m_ObjectHideFlags: 0
@@ -9450,6 +9492,7 @@ Transform:
   m_Children:
   - {fileID: 2119163303}
   - {fileID: 298066251}
+  - {fileID: 793853407}
   - {fileID: 954371925}
   - {fileID: 2014446219}
   - {fileID: 128381461}
