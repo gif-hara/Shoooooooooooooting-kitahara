@@ -11,6 +11,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 
 
 public class CollisionManager : GameMonoBehaviour
@@ -67,6 +68,12 @@ public class CollisionManager : GameMonoBehaviour
 		CollisionEnemyShotAndBarrier();
 		CollisionPlayerAndItem();
 		ScriptProfiler.End( this, benchMarkId );
+
+		if( Input.GetKeyDown( KeyCode.L ) )
+		{
+			Debug.Log( "enemyShotColliderList = " + enemyShotColliderList.Count );
+			Debug.Log( "itemColliderList = " + itemColliderList.Count );
+		}
 	}
 	
 #if OnDrawGizmos
@@ -195,32 +202,33 @@ public class CollisionManager : GameMonoBehaviour
 	/// </summary>
 	private void CollisionEnemyShotAndPlayer()
 	{
+		enemyShotColliderList.RemoveAll( e => e == null );
 		var id = GetEnemyShotVarianceId( ReferenceManager.refPlayer.cachedTransform );
-		var xList = PlayerColliderListNonInvincible;
-		List<A_Collider> yList = new List<A_Collider>();
-		
+		var playerList = PlayerColliderListNonInvincible;
+		List<A_Collider> enemyShotList = new List<A_Collider>();
+
 		for( int y = (int)id.y - 1; y<=(int)id.y + 1; y++ )
 		{
 			if( y < 0 || y >= enemyShotCollisionTileY )	continue;
 			for( int x = (int)id.x - 1; x<=(int)id.x + 1; x++ )
 			{
 				if( x < 0 || x >= enemyShotCollisionTileX )	continue;
-				yList.AddRange( enemyShotVarianceList[y][x] );
+				enemyShotList.AddRange( enemyShotVarianceList[y][x] );
 			}
 		}
 		
-		yList.RemoveAll( (obj) => obj == null );
+		enemyShotList.RemoveAll( (obj) => obj == null );
 		
-		for( int i=0,imax=xList.Count; i<imax; i++ )
+		for( int i=0,imax=playerList.Count; i<imax; i++ )
 		{
-			for( int j=0,jmax=yList.Count; j<jmax; j++ )
+			for( int j=0,jmax=enemyShotList.Count; j<jmax; j++ )
 			{
-				if( !xList[i].enabled || !yList[j].enabled )	continue;
+				if( !playerList[i].enabled || !enemyShotList[j].enabled )	continue;
 				
-				if( IsCollision( xList[i], yList[j] ) )
+				if( IsCollision( playerList[i], enemyShotList[j] ) )
 				{
-					xList[i].OnCollision( yList[j] );
-					yList[j].OnCollision( xList[i] );
+					playerList[i].OnCollision( enemyShotList[j] );
+					enemyShotList[j].OnCollision( playerList[i] );
 				}
 			}
 		}
@@ -297,14 +305,15 @@ public class CollisionManager : GameMonoBehaviour
 	private Vector2 GetEnemyShotVarianceId( Transform trans )
 	{
 		var pos = trans.position;
+		var screen = GameDefine.Screen;
 //		Debug.Log( "0pos = " + pos );
-		pos.x = pos.x > StageX ? StageX : pos.x;
-		pos.x = pos.x < -StageX ? -StageX : pos.x;
-		pos.y = pos.y > StageY ? StageY : pos.y;
-		pos.y = pos.y < -StageY ? -StageY : pos.y;
+		pos.x = pos.x > screen.width ? screen.width : pos.x;
+		pos.x = pos.x < screen.x ? screen.x : pos.x;
+		pos.y = pos.y > screen.y ? screen.y : pos.y;
+		pos.y = pos.y < screen.height ? screen.height : pos.y;
 //		Debug.Log( "1pos = " + pos );
-		pos.x += StageX;
-		pos.y -= StageY;
+		pos.x += screen.width;
+		pos.y -= screen.y;
 //		Debug.Log( "2pos = " + pos );
 		float varianceX = StageX / enemyShotCollisionTileX;
 		float varianceY = StageY / enemyShotCollisionTileY;
