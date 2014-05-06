@@ -50,7 +50,7 @@ public abstract class A_Collider : GameMonoBehaviour
 		cachedTransform.position = new Vector3( pos.x, pos.y, GameDefine.ColliderLayer );
 	}
 	
-	void OnDrawGizmos()
+	void OnDrawGizmosSelected()
 	{
 		Gizmos.color = GizmosColor;
 		Gizmos.DrawWireSphere( transform.position, radius );

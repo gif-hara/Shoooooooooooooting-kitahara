@@ -15,6 +15,7 @@ GameObject:
   - 114: {fileID: 11400008}
   - 114: {fileID: 11400052}
   - 114: {fileID: 11400050}
+  - 114: {fileID: 11400104}
   m_Layer: 0
   m_Name: Muzzle3
   m_TagString: Untagged
@@ -271,6 +272,7 @@ GameObject:
   - 114: {fileID: 11400086}
   - 114: {fileID: 11400084}
   - 114: {fileID: 11400082}
+  - 114: {fileID: 11400102}
   m_Layer: 0
   m_Name: Muzzle1
   m_TagString: Untagged
@@ -890,7 +892,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100048}
   m_LocalRotation: {x: .707106829, y: 0, z: 0, w: -.707106829}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -17.7977905, z: 2.12166105e-06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400080}
@@ -2626,6 +2628,52 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
   origin: 0
+--- !u!114 &11400102
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5037c4e16bae8a442acaa8c62a0a1e59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  setType: 0
+  enableTuning: 1
+  element:
+    min: 100
+    max: 0
+    current: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+--- !u!114 &11400104
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5037c4e16bae8a442acaa8c62a0a1e59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  setType: 0
+  enableTuning: 1
+  element:
+    min: 100
+    max: 0
+    current: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
 --- !u!114 &11400112
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3666,15 +3714,12 @@ MonoBehaviour:
     height: -65
   refShotCreatorList:
   - {fileID: 11400160}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400210}
+  - {fileID: 11400044}
+  - {fileID: 11400062}
+  - {fileID: 11400094}
+  - {fileID: 11400080}
+  - {fileID: 11400006}
 --- !u!114 &11400238
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6801,12 +6846,12 @@ ParticleSystem:
         m_PostInfinity: 2
       minMaxState: 0
     startSpeed:
-      scalar: 194.919998
+      scalar: 250
       maxCurve:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: .513030946
+          value: 1
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -6816,7 +6861,7 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: 1
+          value: .600000024
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -6970,8 +7015,8 @@ ParticleSystem:
     serializedVersion: 2
     enabled: 1
     type: 4
-    radius: 42.4000015
-    angle: 15.3303223
+    radius: 23.7999992
+    angle: 35.3199997
     length: 5
     boxX: 1
     boxY: 1
@@ -6983,7 +7028,7 @@ ParticleSystem:
     enabled: 1
     m_Type: 0
     rate:
-      scalar: 45
+      scalar: 90
       maxCurve:
         serializedVersion: 2
         m_Curve:

@@ -60,7 +60,7 @@ Transform:
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 30, y: 30, z: 1}
+  m_LocalScale: {x: 38, y: 38, z: 1}
   m_Children: []
   m_Father: {fileID: 400004}
 --- !u!4 &400004
@@ -160,7 +160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   refMeshFilter: {fileID: 3300000}
-  color: {r: .945098042, g: .619607866, b: 1, a: 1}
+  color: {r: 1, g: 0, b: 1, a: 1}
 --- !u!114 &11400010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -173,7 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
-  radius: 4.5
+  radius: 2
   delayUpdate: 0
   refEnemyShot: {fileID: 11400002}
 --- !u!114 &11400012
