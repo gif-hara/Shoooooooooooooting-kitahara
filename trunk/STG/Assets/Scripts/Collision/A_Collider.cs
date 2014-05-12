@@ -47,7 +47,7 @@ public abstract class A_Collider : GameMonoBehaviour
 	protected void UpdatePositionZ()
 	{
 		var pos = cachedTransform.position;
-		cachedTransform.position = new Vector3( pos.x, pos.y, GameDefine.ColliderLayer );
+		cachedTransform.position = new Vector3( pos.x, pos.y, 0.0f );
 	}
 	
 	void OnDrawGizmosSelected()

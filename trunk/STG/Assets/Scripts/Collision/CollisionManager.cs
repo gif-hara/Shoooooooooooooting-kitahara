@@ -7,7 +7,7 @@
 *     * Author      : Hiroki_Kitahara.
 */
 /*===========================================================================*/
-//#define OnDrawGizmos
+#define OnDrawGizmos
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -33,10 +33,6 @@ public class CollisionManager : GameMonoBehaviour
 	private List<A_Collider> itemColliderList = new List<A_Collider>();
 	
 	private List<List<List<A_Collider>>> enemyShotVarianceList = null;
-	
-	private const float StageX = 350.0f;
-	
-	private const float StageY = 350.0f;
 	
 	public override void Awake()
 	{
@@ -77,22 +73,22 @@ public class CollisionManager : GameMonoBehaviour
 	}
 	
 #if OnDrawGizmos
-	void OnDrawGizmos()
+	void OnDrawGizmosSelected()
 	{
 		// Xの敵弾分散線の描画.
-		float intervalX = (StageX / enemyShotCollisionTileX) * 2;
+		float intervalX = (GameDefine.Screen.width / enemyShotCollisionTileX) * 2;
 		for( int i=0; i<=enemyShotCollisionTileX; i++ )
 		{
-			float currentX = -StageX + (intervalX * i);
-			Gizmos.DrawLine( new Vector3( currentX, StageY, 0.0f ), new Vector3( currentX, -StageY, 0.0f ) );
+			float currentX = -GameDefine.Screen.width + (intervalX * i);
+			Gizmos.DrawLine( new Vector3( currentX, GameDefine.Screen.y, 0.0f ), new Vector3( currentX, GameDefine.Screen.height, 0.0f ) );
 		}
 		
 		// Yの敵弾分散線の描画.
-		float intervalY = (StageY / enemyShotCollisionTileY) * 2;
+		float intervalY = (GameDefine.Screen.y / enemyShotCollisionTileY) * 2;
 		for( int i=0; i<=enemyShotCollisionTileY; i++ )
 		{
-			float currentY = -StageX + (intervalY * i);
-			Gizmos.DrawLine( new Vector3( -StageX, currentY, 0.0f ), new Vector3( StageX, currentY, 0.0f ) );
+			float currentY = -GameDefine.Screen.y + (intervalY * i);
+			Gizmos.DrawLine( new Vector3( GameDefine.Screen.x, currentY, 0.0f ), new Vector3( GameDefine.Screen.width, currentY, 0.0f ) );
 		}
 	}
 #endif
@@ -315,8 +311,8 @@ public class CollisionManager : GameMonoBehaviour
 		pos.x += screen.width;
 		pos.y -= screen.y;
 //		Debug.Log( "2pos = " + pos );
-		float varianceX = StageX / enemyShotCollisionTileX;
-		float varianceY = StageY / enemyShotCollisionTileY;
+		float varianceX = GameDefine.Screen.width / enemyShotCollisionTileX;
+		float varianceY = GameDefine.Screen.y / enemyShotCollisionTileY;
 //		Debug.Log( "3pos = " + pos );
 		
 		int resultX = (int)(pos.x / varianceX) / 2;

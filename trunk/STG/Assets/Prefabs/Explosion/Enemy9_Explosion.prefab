@@ -449,6 +449,8 @@ GameObject:
   - 114: {fileID: 11400002}
   - 114: {fileID: 11400000}
   - 114: {fileID: 11400050}
+  - 114: {fileID: 11400052}
+  - 114: {fileID: 11400054}
   m_Layer: 8
   m_Name: Enemy9_Explosion
   m_TagString: Untagged
@@ -943,7 +945,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   refTarget: {fileID: 100054}
-  delay: 361
+  delay: 181
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -961,7 +963,7 @@ MonoBehaviour:
   - prefab: {fileID: 100002, guid: d13eff1974ce079489bf01a195b1e0d0, type: 2}
     parent: {fileID: 400054}
     detachParent: 1
-  delay: 360
+  delay: 180
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1002,7 +1004,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
-  delay: 132
+  delay: 60
   refTargetList:
   - {fileID: 2300004}
   isVisible: 0
@@ -1025,7 +1027,7 @@ MonoBehaviour:
   min: {x: -140, y: -140}
   max: {x: 140, y: 90}
   interval: 6
-  createNum: 0
+  createNum: 999999
 --- !u!114 &11400012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1043,7 +1045,7 @@ MonoBehaviour:
   - prefab: {fileID: 100002, guid: 4b67fad1fc8426f48882c95f8e4e7c27, type: 2}
     parent: {fileID: 400002}
     detachParent: 0
-  delay: 132
+  delay: 60
 --- !u!114 &11400014
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1057,7 +1059,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   label: Dead1
-  delay: 132
+  delay: 60
 --- !u!114 &11400016
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1121,7 +1123,7 @@ MonoBehaviour:
   refTarget: {fileID: 400054}
   isRandom: 0
   velocity: {x: 1, y: -.200000003, z: 0}
-  delay: 132
+  delay: 60
   duration: 30
   speed: 4
 --- !u!114 &11400024
@@ -1314,7 +1316,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   label: Dead3
-  delay: 360
+  delay: 180
+--- !u!114 &11400052
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b349565fa13cbca45b7fc754b689d7b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  delay: 180
+  rate: 10
+  duration: 180
+--- !u!114 &11400054
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32e927b1ceda44b42964d3dedf641609, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  delay: 0
+  from: {r: 1, g: 1, b: 1, a: 1}
+  to: {r: 1, g: 1, b: 1, a: 0}
+  duration: 30
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

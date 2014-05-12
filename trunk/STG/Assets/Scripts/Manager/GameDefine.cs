@@ -73,8 +73,6 @@ public class GameDefine : A_Singleton<GameDefine>
 	/// </summary>
 	public const string EnemyDestroyOnHitPointChangeEventMessage = "OnEnemyDestroyOnHitPointChangeEvent";
 
-	public float ColliderLayer = 0.0f;
-	
 	public override void Awake()
 	{
 		base.Awake();
