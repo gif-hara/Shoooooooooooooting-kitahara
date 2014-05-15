@@ -183,7 +183,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &100020
 GameObject:
   m_ObjectHideFlags: 0
@@ -231,7 +231,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &100026
 GameObject:
   m_ObjectHideFlags: 1
@@ -279,7 +279,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &100032
 GameObject:
   m_ObjectHideFlags: 1
@@ -307,6 +307,7 @@ GameObject:
   - 4: {fileID: 400034}
   - 114: {fileID: 11400066}
   - 114: {fileID: 11400070}
+  - 114: {fileID: 11400508}
   m_Layer: 8
   m_Name: Enemy11
   m_TagString: Untagged
@@ -348,7 +349,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &100040
 GameObject:
   m_ObjectHideFlags: 1
@@ -364,7 +365,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &100042
 GameObject:
   m_ObjectHideFlags: 1
@@ -3051,8 +3052,6 @@ MonoBehaviour:
   addScore: 5000
   addGameLevelExperience: 100
   invincibleTimer: 0
-  prefabDestroyEffect: {fileID: 100054, guid: caf9fd19b3dff5e4bb157adc69131842, type: 2}
-  destroySELabel: Dead1
   deadEventObject: {fileID: 100126}
   damageEventObject: {fileID: 100124}
   bounds:
@@ -3153,8 +3152,6 @@ MonoBehaviour:
   addScore: 100
   addGameLevelExperience: 10
   invincibleTimer: 10
-  prefabDestroyEffect: {fileID: 100002, guid: 4b67fad1fc8426f48882c95f8e4e7c27, type: 2}
-  destroySELabel: Dead1
   deadEventObject: {fileID: 100122}
   damageEventObject: {fileID: 100120}
   bounds:
@@ -3199,8 +3196,6 @@ MonoBehaviour:
   addScore: 100
   addGameLevelExperience: 10
   invincibleTimer: 10
-  prefabDestroyEffect: {fileID: 100002, guid: 4b67fad1fc8426f48882c95f8e4e7c27, type: 2}
-  destroySELabel: Dead1
   deadEventObject: {fileID: 100118}
   damageEventObject: {fileID: 100116}
   bounds:
@@ -8915,7 +8910,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
-  prefab: {fileID: 100054, guid: caf9fd19b3dff5e4bb157adc69131842, type: 2}
+  prefab: {fileID: 100126, guid: cab2a2432b95f07448c057498be2b1a0, type: 2}
+--- !u!114 &11400508
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 544b3ceeff4343a4b9952d6e05a42463, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  delay: 60
+  refTargetList:
+  - {fileID: 100040}
+  - {fileID: 100024}
+  - {fileID: 100018}
+  - {fileID: 100030}
+  - {fileID: 100038}
+  isEnable: 1
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1

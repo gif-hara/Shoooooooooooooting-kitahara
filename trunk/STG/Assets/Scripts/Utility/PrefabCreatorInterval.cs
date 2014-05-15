@@ -108,7 +108,7 @@ public class PrefabCreatorInterval : GameMonoBehaviour
 		currentInterval++;
 	}
 	
-	void OnDrawGizmos()
+	void OnDrawGizmosSelected()
 	{
 		if( !enabled )	return;
 		
