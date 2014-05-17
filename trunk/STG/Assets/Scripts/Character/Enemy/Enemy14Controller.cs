@@ -46,7 +46,6 @@ public class Enemy14Controller : GameMonoBehaviour
 	{
 		if( refController.Hp <= state0EndHitPoint )
 		{
-			
 			state0EndEventObject.SetActive( true );
 			stateFunc = State1;
 		}
