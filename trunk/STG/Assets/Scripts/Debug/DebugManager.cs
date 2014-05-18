@@ -24,6 +24,12 @@ public class DebugManager : A_GUIElement
 	/// ストップウォッチGUI参照.
 	/// </summary>
 	public StopWatchGUI refStopWatchGUI;
+
+	/// <summary>
+	/// プレイヤー管理者参照.
+	/// </summary>
+	[SerializeField]
+	private PlayerStatusManager refPlayerStatusManager;
 	
 	/// <summary>
 	/// プレイヤー攻撃力を異常値にするか？.
@@ -61,9 +67,9 @@ public class DebugManager : A_GUIElement
 	public static bool IsNotLifeDecrement{ get{ return isNotLifeDecrement; } }
 	private static bool isNotLifeDecrement = false;
 		
-	public override void Update()
+	public override void LateUpdate()
 	{
-		base.Update();
+		base.LateUpdate();
 		// !~ ゲームレベルデバッグ.
 		for( int i=0; i<10; i++ )
 		{
@@ -120,7 +126,14 @@ public class DebugManager : A_GUIElement
 			refStopWatchGUI.Reset();
 		});
 
+		// 敵弾削除.
 		KeyPush( KeyCode.I, () => ReferenceManager.refCollisionManager.AllDestroyEnemyShot() );
+
+		KeyPush( KeyCode.A, () => refPlayerStatusManager.DebugChange( 0 ) );
+		KeyPush( KeyCode.S, () => refPlayerStatusManager.DebugChange( 1 ) );
+		KeyPush( KeyCode.D, () => refPlayerStatusManager.DebugChange( 2 ) );
+		KeyPush( KeyCode.F, () => refPlayerStatusManager.DebugChange( 3 ) );
+		KeyPush( KeyCode.G, () => refPlayerStatusManager.DebugChange( 4 ) );
 	}
 	
 	public override void Draw()
@@ -139,6 +152,10 @@ public class DebugManager : A_GUIElement
 		builder.Append( StringAsset.Get( "Format_DebugStopWatchToggle" ) );
 		builder.AppendLine();
 		builder.Append( StringAsset.Get( "Format_DebugStopWatchReset" ) );
+		builder.AppendLine();
+		builder.Append( StringAsset.Get( "Format_DebugAllDestroyEnemyShot" ) );
+		builder.AppendLine();
+		builder.Append( StringAsset.Get( "Format_DebugPlayerCreate" ) );
 		Label( builder.ToString() );
 	}
 	

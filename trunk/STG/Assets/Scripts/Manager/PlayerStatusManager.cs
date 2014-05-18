@@ -81,8 +81,21 @@ public class PlayerStatusManager : GameMonoBehaviour
 		life = life < 0 ? 0 : life;
 	}
 
+	public void DebugChange( int id )
+	{
+		playerId = id;
+		CreatePlayer();
+	}
+
+	/// <summary>
+	/// プレイヤーの生成.
+	/// </summary>
 	private void CreatePlayer()
 	{
+		if( ReferenceManager.Instance.refPlayer != null )
+		{
+			Destroy( ReferenceManager.refPlayer.gameObject );
+		}
 		InstantiateAsChild( ReferenceManager.refPlayerLayer, ReferenceManager.prefabPlayerList[playerId] );
 	}
 }

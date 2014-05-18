@@ -47,6 +47,8 @@ public class PlayerCollider : A_Collider
 	{
 		get
 		{
+			if( refPlayer == null )	return true;
+
 			return refPlayer.IsInvincible;
 		}
 	}

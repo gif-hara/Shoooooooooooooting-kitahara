@@ -22,7 +22,7 @@ public class FrameRateSetter : GameMonoBehaviour
 	[SerializeField]
 	private int frameRate;
 
-	void Start ()
+	public override void Start ()
 	{
 		FrameRateUtility.StartCoroutine( this.delay, () => Application.targetFrameRate = this.frameRate );
 	}
