@@ -1,8 +1,8 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : ObjectMoveAttach.cs
+*     * FileName    : OnEnemyActionObjectMoveAttach.cs
 *
-*     * Description : ObjectMove系コンポーネントをアタッチするコンポーネント.
+*     * Description : 敵京イベントによるObjectMove系コンポーネントをアタッチするコンポーネント.
 *
 *     * Author      : Hiroki_Kitahara.
 */
@@ -13,7 +13,7 @@ using System.Collections;
 /// <summary>
 /// ObjectMove系コンポーネントをアタッチするコンポーネント.
 /// </summary>
-public class ObjectMoveAttach : GameMonoBehaviour, I_MuzzleEventActinable
+public class OnEnemyActionObjectMoveAttach : GameMonoBehaviour, I_MuzzleEventActinable
 {
 	[SerializeField]
 	private A_ObjectMove prefabObjectMove;
