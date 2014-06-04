@@ -1871,7 +1871,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400040}
   id: 35
-  hp: 1200
+  hp: 900
   addScore: 500
   addGameLevelExperience: 50
   invincibleTimer: 0
@@ -1879,10 +1879,10 @@ MonoBehaviour:
   damageEventObject: {fileID: 100002}
   bounds:
     serializedVersion: 2
-    x: -20
-    y: 24
-    width: 20
-    height: -24
+    x: -105
+    y: 70
+    width: 105
+    height: -70
   refShotCreatorList:
   - {fileID: 11400054}
   - {fileID: 0}
@@ -2094,7 +2094,7 @@ ParticleSystem:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100020}
   lengthInSec: 5
-  startDelay: 0
+  startDelay: .200000003
   speed: 1
   randomSeed: 0
   looping: 1

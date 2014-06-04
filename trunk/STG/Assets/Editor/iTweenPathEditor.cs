@@ -66,11 +66,18 @@ public class iTweenPathEditor : A_EditorMonoBehaviour<iTweenPath>
 		//node display:
 		for (int i = 0; i < Target.nodes.Count; i++) {
 			Target.nodes[i] = EditorGUILayout.Vector3Field("Node " + (i+1), Target.nodes[i]);
+			EditorGUILayout.BeginHorizontal();
 			Button( "Add", () =>
 			{
 				Target.nodes.Insert( i, Target.nodes[i] );
 				Target.nodeCount = Target.nodes.Count;
 			});
+			Button( "Delete", () =>
+			{
+				Target.nodes.Remove( Target.nodes[i] );
+				Target.nodeCount = Target.nodes.Count;
+			});
+			EditorGUILayout.EndHorizontal();
 		}
 
 		Line();

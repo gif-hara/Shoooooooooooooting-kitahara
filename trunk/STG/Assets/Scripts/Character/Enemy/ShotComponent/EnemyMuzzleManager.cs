@@ -63,6 +63,8 @@ public class EnemyMuzzleManager : GameMonoBehaviour, I_EnemyShotCreatorEvent
 		{
 			for( int i=0,imax=refMuzzleList.Count; i<imax; i++ )
 			{
+				if( refMuzzleList[i] == null )	continue;
+
 				refMuzzleList[i].SetActive( i == id );
 			}
 			
@@ -84,6 +86,8 @@ public class EnemyMuzzleManager : GameMonoBehaviour, I_EnemyShotCreatorEvent
 	/// </summary>
 	private void InitShotCreatorList()
 	{
+		if( refMuzzleList[id] == null )	return;
+
 		StartMuzzle();
 		creatorComponentNum = refMuzzleList[id].GetComponentsInChildren<EnemyShotCreator>().Length;
 		endCreatorComponentNum = 0;
