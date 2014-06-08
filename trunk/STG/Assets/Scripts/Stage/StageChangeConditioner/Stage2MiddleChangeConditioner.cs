@@ -15,8 +15,8 @@ using System.Collections;
 /// </summary>
 public class Stage2MiddleChangeConditioner : A_StageChangeConditioner
 {
-	public override bool Condition ()
+	public override bool Condition()
 	{
-		return true;
+		return !isBasicRoot;
 	}
 }

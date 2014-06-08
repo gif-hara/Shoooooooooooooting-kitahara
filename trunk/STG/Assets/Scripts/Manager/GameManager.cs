@@ -31,7 +31,10 @@ public class GameManager : GameMonoBehaviour
 		}
 	}
 	public int gameLevel = 0;
-	
+
+	[SerializeField]
+	private int frameRate = 60;
+
 	/// <summary>
 	/// ゲームレベル経験値.
 	/// </summary>
@@ -61,7 +64,7 @@ public class GameManager : GameMonoBehaviour
 	public override void Awake()
 	{
 		base.Awake();
-		Application.targetFrameRate = 60;
+		Application.targetFrameRate = frameRate;
 
 		for( int i=0; i<ReferenceManager.Instance.prefabEnemyList.Count; i++ )
 		{
@@ -75,6 +78,11 @@ public class GameManager : GameMonoBehaviour
 		base.Update();
 		gameLevel = gameLevel > GameLevelMax ? GameLevelMax : gameLevel;
 		gameLevel = gameLevel < 0 ? 0 : gameLevel;
+
+		if( Application.targetFrameRate != frameRate )
+		{
+			Application.targetFrameRate = frameRate;
+		}
 	}
 	/// <summary>
 	/// ゲームレベル経験値の加算処理.

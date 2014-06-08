@@ -16,6 +16,6 @@ public class Stage3FinalChangeConditioner : A_StageChangeConditioner
 {
 	public override bool Condition()
 	{
-		return false;
+		return !isBasicRoot;
 	}
 }

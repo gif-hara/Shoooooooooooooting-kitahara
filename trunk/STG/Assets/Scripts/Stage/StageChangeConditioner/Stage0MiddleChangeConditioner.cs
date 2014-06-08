@@ -16,6 +16,6 @@ public class Stage0MiddleChangeConditioner : A_StageChangeConditioner
 {
 	public override bool Condition()
 	{
-		return true;
+		return !isBasicRoot;
 	}
 }

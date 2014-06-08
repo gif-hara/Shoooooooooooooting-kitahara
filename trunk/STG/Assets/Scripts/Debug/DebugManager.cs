@@ -139,6 +139,8 @@ public class DebugManager : A_GUIElement
 	public override void Draw()
 	{
 		var builder = new StringBuilder();
+		builder.AppendFormat( StringAsset.Get( "Format_DebugGameLevel" ) );
+		builder.AppendLine();
 		builder.AppendFormat( StringAsset.Get( "Format_DebugIsInsanelyForce" ), isInsanelyForce.ToString() );
 		builder.AppendLine();
 		builder.AppendFormat( StringAsset.Get( "Format_DebugIsInvincible" ), isInvincible.ToString() );

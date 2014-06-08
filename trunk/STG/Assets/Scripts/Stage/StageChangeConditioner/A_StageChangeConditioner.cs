@@ -15,6 +15,12 @@ using System.Collections.Generic;
 public abstract class A_StageChangeConditioner : MonoBehaviour
 {
 	/// <summary>
+	/// 通常ルートか？.
+	/// </summary>
+	[SerializeField]
+	protected bool isBasicRoot;
+
+	/// <summary>
 	/// 条件処理.
 	/// trueなら裏ルート.
 	/// </summary>
