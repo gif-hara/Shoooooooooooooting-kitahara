@@ -54,6 +54,11 @@ public class StageCreatorWindow : A_EditorWindowBase
 	private int leftMenuWidthNum = 350;
 
 	/// <summary>
+	/// GameObjectを複数選択時のタイムラインを設定する値.
+	/// </summary>
+	private int setMultipleTimeLine = 0;
+
+	/// <summary>
 	/// メニューとタイムラインのボーダーラインの色.
 	/// </summary>
 	private static Color BoarderLineColor = new Color( 45.0f/255.0f, 45.0f/255.0f, 45.0f/255.0f,1.0f );
@@ -172,8 +177,6 @@ public class StageCreatorWindow : A_EditorWindowBase
 	{
 		if( !CanCreate )	return;
 
-		var pos = UpdateWindowPosition();
-
 		Vertical( () =>
 		{
 			OnGUISystem();
@@ -182,22 +185,9 @@ public class StageCreatorWindow : A_EditorWindowBase
 
 		DrawTimeLine();
 		DrawActionableObject();
-		// 現在のタイムラインの描画.
-		DrawTimeLine( (int)pos.height / 2, StageManager.timeLineManager.TimeLine.ToString(), Color.red, FixedZoom );
+		DrawCurrentTimeLine();
 	}
-	private Rect UpdateWindowPosition()
-	{
-		var pos = Instance.position;
-//		pos.width = 400.0f;
-//		instance.position = new Rect(
-//			pos.x,
-//			pos.y,
-//			400,
-//			pos.height
-//			);
 
-		return pos;
-	}
 	/// <summary>
 	/// タイムラインの描画
 	/// </summary>
@@ -304,6 +294,12 @@ public class StageCreatorWindow : A_EditorWindowBase
 
 		return false;
 	}
+
+	private void DrawCurrentTimeLine()
+	{
+		// 現在のタイムラインの描画.
+		DrawTimeLine( (int)Instance.position.height / 2, StageManager.timeLineManager.TimeLine.ToString(), Color.red, FixedZoom );
+	}
 	private void OnGUISystem()
 	{
 		Enclose( "System", () =>
@@ -314,6 +310,56 @@ public class StageCreatorWindow : A_EditorWindowBase
 			PlayerStatusManager.PlayerId = IntField( "Player Id", PlayerStatusManager.PlayerId, LeftMenuWidth );
 			GUIDrawer.IsDraw = EditorGUILayout.Toggle( "Debug Draw", GUIDrawer.IsDraw, LeftMenuWidth );
 			leftMenuWidthNum = Mathf.Clamp( IntField( "Left Menu Width", leftMenuWidthNum, LeftMenuWidth ), 180, 900 );
+			OnGUISetMultipleSelectTimeLine();
+		});
+	}
+	/// <summary>
+	/// GameObjectを複数選択時のタイムラインを設定するGUIを描画する.
+	/// </summary>
+	private void OnGUISetMultipleSelectTimeLine()
+	{
+		var selectionGameObjects = Selection.gameObjects;
+		if( selectionGameObjects.Length <= 1 )	return;
+
+		var timeLineObjects = new List<A_StageTimeLineActionable>();
+		for( int i=0,imax=selectionGameObjects.Length; i<imax; i++ )
+		{
+			timeLineObjects.AddRange( selectionGameObjects[i].GetComponents<A_StageTimeLineActionable>() );
+		}
+
+		if( timeLineObjects.Count <= 1 )	return;
+
+		Enclose( "Multiple Mode", () =>
+		{
+			setMultipleTimeLine = IntField( "TimeLine", setMultipleTimeLine, LeftMenuWidth );
+			Horizontal( () =>
+			{
+				var buttonWidth = Width( leftMenuWidthNum / 3 );
+				Button( "Set", () =>
+				{
+					for( int i=0,imax=timeLineObjects.Count; i<imax; i++ )
+					{
+						timeLineObjects[i].timeLine = setMultipleTimeLine;
+						timeLineObjects[i].SyncData();
+					}
+				}, buttonWidth );
+				Button( "Add", () =>
+				{
+					for( int i=0,imax=timeLineObjects.Count; i<imax; i++ )
+					{
+						timeLineObjects[i].timeLine += setMultipleTimeLine;
+						timeLineObjects[i].SyncData();
+					}
+				}, buttonWidth );
+				Button( "Sub", () =>
+				{
+					for( int i=0,imax=timeLineObjects.Count; i<imax; i++ )
+					{
+						timeLineObjects[i].timeLine -= setMultipleTimeLine;
+						timeLineObjects[i].SyncData();
+					}
+				}, buttonWidth );
+			}, LeftMenuWidth );
 		});
 	}
 	private void OnGUIActionablePrefabCreateButton()
