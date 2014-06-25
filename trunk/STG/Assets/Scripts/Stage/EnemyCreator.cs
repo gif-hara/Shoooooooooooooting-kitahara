@@ -50,13 +50,14 @@ public class EnemyCreator : A_StageTimeLineActionable
 	
 	public override void Action()
 	{
+		Destroy( gameObject );
+		if( !CanAction() )	return;
+
 		var obj = InstantiateAsChild( ReferenceManager.refEnemyLayer, ReferenceManager.prefabEnemyList[enemyId] );
 		obj.transform.position = initialPosition;
 		
 		var enemy = obj.GetComponent<EnemyController>();
 		enemy.InitMoveDataList( dataList );
-		
-		Destroy( gameObject );
 	}
 	
 	protected override string GameObjectName

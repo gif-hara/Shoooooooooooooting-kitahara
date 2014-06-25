@@ -58,6 +58,7 @@ public class EnemyCreatorEditor : A_StageTimeLineActionEditor<EnemyCreator>
 			Enclose( "Property", () =>
 			{
 				DrawTimeLine();
+				DrawActionConditioner();
 				DrawEnemyId();
 				DrawInitialPosition();
 			}, true );

@@ -19,6 +19,11 @@ public abstract class A_StageTimeLineActionable : GameMonoBehaviour
 	/// </summary>
 	[HideInInspector]
 	public int timeLine;
+
+	/// <summary>
+	/// アクション処理条件コンポーネント.
+	/// </summary>
+	public A_StageTimeLineActionConditioner refActionConditioner;
 	
 	/// <summary>
 	/// 自分自身の初期座標.
@@ -65,6 +70,16 @@ public abstract class A_StageTimeLineActionable : GameMonoBehaviour
 //		Trans.position = myInitialPosition + Vector3.up * (timeLine - CurrentStageManager.timeLineManager.TimeLine);
 		Trans.position = myInitialPosition + Vector3.up * timeLine;
 		//gameObject.SetActive( IsOutTime );
+	}
+	/// <summary>
+	/// アクション処理が可能か返す.
+	/// </summary>
+	/// <returns><c>true</c> if this instance can action; otherwise, <c>false</c>.</returns>
+	protected bool CanAction()
+	{
+		if( refActionConditioner == null )	return true;
+
+		return refActionConditioner.Condition();
 	}
 	
 	public bool IsOutTime

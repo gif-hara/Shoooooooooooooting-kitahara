@@ -37,6 +37,15 @@ public class A_StageTimeLineActionEditor<T> : A_EditorMonoBehaviour<T> where T :
 			
 		});
 	}
+
+	protected void DrawActionConditioner()
+	{
+		Horizontal( () =>
+		{
+			Target.refActionConditioner =
+				EditorGUILayout.ObjectField( "Action Conditioner", Target.refActionConditioner, typeof( A_StageTimeLineActionConditioner ), true ) as A_StageTimeLineActionConditioner;
+		});
+	}
 	/// <summary>
 	/// 複数選択時のターゲットオブジェクト描画.
 	/// </summary>
