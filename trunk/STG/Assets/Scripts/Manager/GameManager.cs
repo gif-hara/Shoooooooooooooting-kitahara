@@ -57,6 +57,12 @@ public class GameManager : GameMonoBehaviour
 	private List<int> destroyEnemyNumList = new List<int>();
 
 	/// <summary>
+	/// ボスタイプ.
+	/// </summary>
+	/// <value>The type of the boss.</value>
+	public GameDefine.BossType BossType{ get; private set; }
+
+	/// <summary>
 	/// ゲームレベル最大値.
 	/// </summary>
 	private const int GameLevelMax = 100;
@@ -124,6 +130,16 @@ public class GameManager : GameMonoBehaviour
 		}
 		
 		destroyEnemyNumList[enemyId]++;
+	}
+
+	public void SetBossType( GameDefine.BossType bossType )
+	{
+		this.BossType = bossType;
+	}
+
+	public void EndBoss()
+	{
+		this.BossType = GameDefine.BossType.None;
 	}
 	/// <summary>
 	/// ゲームレベル上昇処理.

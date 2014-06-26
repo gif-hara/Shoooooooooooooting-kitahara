@@ -67,4 +67,11 @@ public class EnemyCreator : A_StageTimeLineActionable
 			return string.Format( "[{0}] Enemy{1}", timeLine, enemyId );
 		}
 	}
+
+	[ContextMenu( "Auto Set Action Conditioner" )]
+	private void SetActionConditioner()
+	{
+		this.refActionConditioner = GetComponent<A_StageTimeLineActionConditioner>();
+	}
+
 }

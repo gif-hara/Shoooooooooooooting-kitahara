@@ -108,4 +108,5 @@ public abstract class A_StageTimeLineActionable : GameMonoBehaviour
 			return stageManager;
 		}
 	}
+
 }

@@ -72,6 +72,11 @@ public class StageTimeLineEnemyChunkCreateAction : A_StageTimeLineActionable
 	
 	public override void Action()
 	{
+		if( !this.CanAction() )
+		{
+			Destroy( gameObject );
+			return;
+		}
 		isUpdate = true;
 	}
 	

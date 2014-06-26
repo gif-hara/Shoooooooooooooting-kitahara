@@ -24,6 +24,16 @@ public class GameDefine : A_Singleton<GameDefine>
 		Background,
 	}
 
+	/// <summary>
+	/// ボスタイプ.
+	/// </summary>
+	public enum BossType : int
+	{
+		None,
+		MiddleBoss,
+		Boss,
+	}
+
 	public static readonly Rect Screen = new Rect( -400.0f, 300.0f, 400.0f, -300.0f );
 
 	/// <summary>
