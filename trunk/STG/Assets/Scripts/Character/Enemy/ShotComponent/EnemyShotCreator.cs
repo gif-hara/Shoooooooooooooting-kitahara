@@ -108,6 +108,12 @@ public class EnemyShotCreator : GameMonoBehaviour, I_MuzzleEventActinable
 			UpdateSleep();
 		}
 	}
+
+	void OnDestroy()
+	{
+		gameObject.SendMessageUpwards( GameDefine.EnemyShotCreatorFreezeMessage, SendMessageOptions.DontRequireReceiver );
+	}
+
 	/// <summary>
 	/// 強制的に弾を発射させる.
 	/// </summary>
