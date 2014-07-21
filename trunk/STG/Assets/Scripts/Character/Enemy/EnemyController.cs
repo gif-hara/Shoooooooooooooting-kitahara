@@ -309,6 +309,7 @@ public class EnemyController : EnemyControllerBase
 		{
 			Destroy( currentMoveComponent.gameObject );
 			AttachComponent();
+			Debug.Log( "ok" );
 		}
 	}
 }
