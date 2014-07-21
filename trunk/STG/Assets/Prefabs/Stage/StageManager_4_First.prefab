@@ -11488,6 +11488,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &101436
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 401436}
+  - 114: {fileID: 11401438}
+  - 114: {fileID: 11401436}
+  m_Layer: 0
+  m_Name: '[9000] StageChange'
+  m_TagString: Untagged
+  m_Icon: {fileID: -1003283189, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &400000
 Transform:
   m_ObjectHideFlags: 1
@@ -13824,6 +13841,7 @@ Transform:
   - {fileID: 401132}
   - {fileID: 401334}
   - {fileID: 400270}
+  - {fileID: 401436}
   m_Father: {fileID: 0}
 --- !u!4 &400360
 Transform:
@@ -20103,6 +20121,17 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 401122}
+--- !u!4 &401436
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 101436}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 9000, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400358}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -20116,6 +20145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400006}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 60, y: 330, z: 0}
   dataList:
@@ -20170,6 +20200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400008}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 120, y: 330, z: 0}
   dataList:
@@ -20224,6 +20255,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400010}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -20278,6 +20310,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400000}
   timeLine: 880
+  refActionConditioner: {fileID: 0}
   enemyId: 17
   initialPosition: {x: 445, y: 230, z: 0}
   dataList:
@@ -20370,6 +20403,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400002}
   timeLine: 960
+  refActionConditioner: {fileID: 0}
   enemyId: 17
   initialPosition: {x: 445, y: 130, z: 0}
   dataList:
@@ -20462,6 +20496,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400004}
   timeLine: 1000
+  refActionConditioner: {fileID: 0}
   enemyId: 17
   initialPosition: {x: 445, y: 80, z: 0}
   dataList:
@@ -20554,6 +20589,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400012}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 240, y: 330, z: 0}
   dataList:
@@ -20608,6 +20644,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400042}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 100, y: 400, z: 0}
   dataList:
@@ -20700,6 +20737,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400044}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -240, y: 330, z: 0}
   dataList:
@@ -20754,6 +20792,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400046}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -100, y: 400, z: 0}
   dataList:
@@ -20846,6 +20885,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400048}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -20900,6 +20940,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400050}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 120, y: 330, z: 0}
   dataList:
@@ -20954,6 +20995,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400052}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 50, y: 350, z: 0}
   dataList:
@@ -21046,6 +21088,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400054}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 120, y: 330, z: 0}
   dataList:
@@ -21100,6 +21143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400126}
   timeLine: 3290
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400828}
@@ -21123,6 +21167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400128}
   timeLine: 5700
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: -130, y: 380, z: 0}
   dataList:
@@ -21182,6 +21227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400014}
   timeLine: 820
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400034}
@@ -21207,6 +21253,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400016}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 350, z: 0}
   dataList:
@@ -21299,6 +21346,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400018}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 350, z: 0}
   dataList:
@@ -21391,6 +21439,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400020}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 400, z: 0}
   dataList:
@@ -21483,6 +21532,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400022}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -100, y: 400, z: 0}
   dataList:
@@ -21575,6 +21625,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400290}
   timeLine: 920
+  refActionConditioner: {fileID: 0}
   enemyId: 17
   initialPosition: {x: 445, y: 180, z: 0}
   dataList:
@@ -21667,6 +21718,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400024}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 100, y: 400, z: 0}
   dataList:
@@ -21759,6 +21811,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400026}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 450, z: 0}
   dataList:
@@ -21851,6 +21904,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400028}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 450, z: 0}
   dataList:
@@ -21943,6 +21997,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400030}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 450, z: 0}
   dataList:
@@ -22035,6 +22090,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400032}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 450, z: 0}
   dataList:
@@ -22127,6 +22183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400034}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 100, y: 400, z: 0}
   dataList:
@@ -22219,6 +22276,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400036}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -100, y: 400, z: 0}
   dataList:
@@ -22311,6 +22369,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400038}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 400, z: 0}
   dataList:
@@ -22403,6 +22462,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400040}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 350, z: 0}
   dataList:
@@ -22495,6 +22555,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400056}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 350, z: 0}
   dataList:
@@ -22587,6 +22648,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400058}
   timeLine: 3100
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11401340}
@@ -22612,6 +22674,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400060}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -22666,6 +22729,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400062}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -22720,6 +22784,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400064}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -22774,6 +22839,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400066}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -22828,6 +22894,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400068}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -22882,6 +22949,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400070}
   timeLine: 700
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400074}
@@ -22905,6 +22973,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400072}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -22959,6 +23028,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400074}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -23013,6 +23083,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400076}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -23067,6 +23138,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400078}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -23121,6 +23193,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400080}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -23175,6 +23248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400082}
   timeLine: 700
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400086}
@@ -23198,6 +23272,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400084}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -23252,6 +23327,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400086}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -23306,6 +23382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400088}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -23360,6 +23437,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400090}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -23414,6 +23492,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400092}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -23468,6 +23547,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400130}
   timeLine: 3420
+  refActionConditioner: {fileID: 0}
   enemyId: 31
   initialPosition: {x: 49.8122101, y: 346, z: 0}
   dataList:
@@ -23522,6 +23602,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400132}
   timeLine: 7410
+  refActionConditioner: {fileID: 0}
   enemyId: 35
   initialPosition: {x: 180, y: 370, z: 0}
   dataList:
@@ -23614,6 +23695,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400134}
   timeLine: 4180
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400642}
@@ -23637,6 +23719,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400136}
   timeLine: 8580
+  refActionConditioner: {fileID: 0}
   enemyId: 35
   initialPosition: {x: -505, y: 260, z: 0}
   dataList:
@@ -23691,6 +23774,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400138}
   timeLine: 5270
+  refActionConditioner: {fileID: 0}
   enemyId: 35
   initialPosition: {x: 272.227783, y: -459.880005, z: 0}
   dataList:
@@ -23745,6 +23829,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400140}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -100, y: 400, z: 0}
   dataList:
@@ -23837,6 +23922,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400142}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 120, y: 330, z: 0}
   dataList:
@@ -23891,6 +23977,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400144}
   timeLine: 3900
+  refActionConditioner: {fileID: 0}
   enemyId: 35
   initialPosition: {x: 200, y: 370, z: 0}
   dataList:
@@ -23983,6 +24070,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400094}
   timeLine: 650
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400098}
@@ -24006,6 +24094,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400096}
   timeLine: 650
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400120}
@@ -24029,6 +24118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400098}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -24083,6 +24173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400100}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -24137,6 +24228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400102}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -24191,6 +24283,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400104}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -24245,6 +24338,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400106}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -24299,6 +24393,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400108}
   timeLine: 680
+  refActionConditioner: {fileID: 0}
   enemyId: 31
   initialPosition: {x: 47.3583984, y: 346, z: 0}
   dataList:
@@ -24353,6 +24448,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400110}
   timeLine: 8240
+  refActionConditioner: {fileID: 0}
   enemyId: 31
   initialPosition: {x: 14.5888672, y: 346, z: 0}
   dataList:
@@ -24407,6 +24503,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400112}
   timeLine: 600
+  refActionConditioner: {fileID: 0}
   enemyId: 31
   initialPosition: {x: -171.75769, y: 346, z: 0}
   dataList:
@@ -24461,6 +24558,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400114}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -24515,6 +24613,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400116}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -24569,6 +24668,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400118}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -24623,6 +24723,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400120}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -24677,6 +24778,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400122}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -24731,6 +24833,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400124}
   timeLine: 550
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400144}
@@ -24754,6 +24857,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400280}
   timeLine: 500
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400150}
@@ -24777,6 +24881,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400282}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -24831,6 +24936,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400284}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -24885,6 +24991,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400286}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -24939,6 +25046,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400288}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -24993,6 +25101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400292}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -25047,6 +25156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400294}
   timeLine: 550
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400162}
@@ -25070,6 +25180,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400296}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -25124,6 +25235,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400298}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -25178,6 +25290,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400300}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -25232,6 +25345,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400302}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -25286,6 +25400,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400304}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -25340,6 +25455,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400306}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -25394,6 +25510,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400308}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -25448,6 +25565,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400310}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -25502,6 +25620,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400312}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -25556,6 +25675,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400314}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -25610,6 +25730,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400316}
   timeLine: 500
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400180}
@@ -25633,6 +25754,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400318}
   timeLine: 460
+  refActionConditioner: {fileID: 0}
   enemyId: 7
   initialPosition: {x: 460, y: 380, z: 0}
   dataList:
@@ -25725,6 +25847,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400322}
   timeLine: 420
+  refActionConditioner: {fileID: 0}
   enemyId: 7
   initialPosition: {x: 460, y: 380, z: 0}
   dataList:
@@ -25817,6 +25940,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400324}
   timeLine: 380
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: -250, y: 380, z: 0}
   dataList:
@@ -25871,6 +25995,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400326}
   timeLine: 8670
+  refActionConditioner: {fileID: 0}
   enemyId: 35
   initialPosition: {x: 505, y: -260, z: 0}
   dataList:
@@ -25925,6 +26050,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400328}
   timeLine: 360
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400194}
@@ -25950,6 +26076,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400330}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 350, z: 0}
   dataList:
@@ -26042,6 +26169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400332}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 350, z: 0}
   dataList:
@@ -26134,6 +26262,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400334}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 400, z: 0}
   dataList:
@@ -26226,6 +26355,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400146}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 100, y: 400, z: 0}
   dataList:
@@ -26318,6 +26448,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400148}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -26372,6 +26503,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400150}
   timeLine: 3350
+  refActionConditioner: {fileID: 0}
   enemyId: 31
   initialPosition: {x: 92.1823578, y: 346, z: 0}
   dataList:
@@ -26426,6 +26558,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400152}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -100, y: 400, z: 0}
   dataList:
@@ -26518,6 +26651,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400154}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -120, y: 330, z: 0}
   dataList:
@@ -26572,6 +26706,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400156}
   timeLine: 7800
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: 260, y: 380, z: 0}
   dataList:
@@ -26631,6 +26766,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400158}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -60, y: 330, z: 0}
   dataList:
@@ -26685,6 +26821,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400160}
   timeLine: 3900
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11401020}
@@ -26710,6 +26847,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400162}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -50, y: 350, z: 0}
   dataList:
@@ -26802,6 +26940,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400164}
   timeLine: 1280
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400656}
@@ -26829,6 +26968,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400166}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -240, y: 330, z: 0}
   dataList:
@@ -26883,6 +27023,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400168}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 60, y: 330, z: 0}
   dataList:
@@ -26937,6 +27078,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400170}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -26991,6 +27133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400172}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -27045,6 +27188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400174}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -27099,6 +27243,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400176}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 400, z: 0}
   dataList:
@@ -27191,6 +27336,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400178}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -27245,6 +27391,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400180}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -50, y: 450, z: 0}
   dataList:
@@ -27337,6 +27484,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400182}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 240, y: 330, z: 0}
   dataList:
@@ -27391,6 +27539,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400184}
   timeLine: 6090
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11401246}
@@ -27418,6 +27567,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400186}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -100, y: 400, z: 0}
   dataList:
@@ -27510,6 +27660,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400188}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -27564,6 +27715,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400190}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -27618,6 +27770,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400192}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -27672,6 +27825,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400194}
   timeLine: 5820
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400882}
@@ -27699,6 +27853,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400196}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -120, y: 330, z: 0}
   dataList:
@@ -27753,6 +27908,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400198}
   timeLine: 2440
+  refActionConditioner: {fileID: 0}
   enemyId: 35
   initialPosition: {x: 505, y: -370, z: 0}
   dataList:
@@ -27807,6 +27963,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400200}
   timeLine: 1820
+  refActionConditioner: {fileID: 0}
   enemyId: 3
   initialPosition: {x: -480, y: 380, z: 0}
   dataList:
@@ -27899,6 +28056,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400202}
   timeLine: 8730
+  refActionConditioner: {fileID: 0}
   enemyId: 35
   initialPosition: {x: 505, y: -260, z: 0}
   dataList:
@@ -27953,6 +28111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400204}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 180, y: 330, z: 0}
   dataList:
@@ -28007,6 +28166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400206}
   timeLine: 1820
+  refActionConditioner: {fileID: 0}
   delayDuration: 80
   exceptionDuration: 400
   needDestroyEnemyId: 3
@@ -28024,6 +28184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400208}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -28078,6 +28239,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400210}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -240, y: 330, z: 0}
   dataList:
@@ -28132,6 +28294,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400212}
   timeLine: 1640
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11401100}
@@ -28159,6 +28322,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400214}
   timeLine: 4760
+  refActionConditioner: {fileID: 0}
   enemyId: 7
   initialPosition: {x: 0, y: 380, z: 0}
   dataList:
@@ -28251,6 +28415,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400216}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -28305,6 +28470,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400218}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -240, y: 330, z: 0}
   dataList:
@@ -28359,6 +28525,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400220}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 60, y: 330, z: 0}
   dataList:
@@ -28413,6 +28580,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400222}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 400, z: 0}
   dataList:
@@ -28505,6 +28673,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400224}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -100, y: 400, z: 0}
   dataList:
@@ -28597,6 +28766,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400226}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 240, y: 330, z: 0}
   dataList:
@@ -28651,6 +28821,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400228}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 240, y: 330, z: 0}
   dataList:
@@ -28705,6 +28876,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400230}
   timeLine: 8490
+  refActionConditioner: {fileID: 0}
   enemyId: 35
   initialPosition: {x: -505, y: 260, z: 0}
   dataList:
@@ -28759,6 +28931,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400232}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 50, y: 450, z: 0}
   dataList:
@@ -28851,6 +29024,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400234}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -28905,6 +29079,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400236}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -28959,6 +29134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400238}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 450, z: 0}
   dataList:
@@ -29051,6 +29227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400240}
   timeLine: 1275
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11401186}
@@ -29076,6 +29253,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400242}
   timeLine: 3200
+  refActionConditioner: {fileID: 0}
   enemyId: 35
   initialPosition: {x: 505, y: 100, z: 0}
   dataList:
@@ -29140,6 +29318,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400244}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -60, y: 330, z: 0}
   dataList:
@@ -29194,6 +29373,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400246}
   timeLine: 1280
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400358}
@@ -29221,6 +29401,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400248}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 100, y: 400, z: 0}
   dataList:
@@ -29313,6 +29494,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400250}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -29367,6 +29549,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400252}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 350, z: 0}
   dataList:
@@ -29459,6 +29642,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400254}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 180, y: 330, z: 0}
   dataList:
@@ -29513,6 +29697,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400256}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 100, y: 400, z: 0}
   dataList:
@@ -29605,6 +29790,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400258}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 450, z: 0}
   dataList:
@@ -29697,6 +29883,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400260}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -29751,6 +29938,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400262}
   timeLine: 3180
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11401244}
@@ -29776,6 +29964,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400264}
   timeLine: 1890
+  refActionConditioner: {fileID: 0}
   enemyId: 3
   initialPosition: {x: -480, y: 380, z: 0}
   dataList:
@@ -29868,6 +30057,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400266}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 60, y: 330, z: 0}
   dataList:
@@ -29922,6 +30112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400268}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -180, y: 330, z: 0}
   dataList:
@@ -29976,6 +30167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400270}
   timeLine: 8850
+  refActionConditioner: {fileID: 0}
   enemyId: 35
   initialPosition: {x: 505, y: -260, z: 0}
   dataList:
@@ -30030,6 +30222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400272}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 50, y: 350, z: 0}
   dataList:
@@ -30122,6 +30315,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400274}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -30176,6 +30370,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400276}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 450, z: 0}
   dataList:
@@ -30268,6 +30463,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400278}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -100, y: 400, z: 0}
   dataList:
@@ -30360,6 +30556,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400320}
   timeLine: 3640
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11401384}
@@ -30387,6 +30584,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400336}
   timeLine: 2800
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11401146}
@@ -30410,6 +30608,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400338}
   timeLine: 2260
+  refActionConditioner: {fileID: 0}
   enemyId: 35
   initialPosition: {x: 385.356384, y: -408.411896, z: 0}
   dataList:
@@ -30464,6 +30663,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400340}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 350, z: 0}
   dataList:
@@ -30556,6 +30756,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400354}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -100, y: 400, z: 0}
   dataList:
@@ -30648,6 +30849,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400342}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -30702,6 +30904,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400344}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -180, y: 330, z: 0}
   dataList:
@@ -30756,6 +30959,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400346}
   timeLine: 6960
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: 0, y: 380, z: 0}
   dataList:
@@ -30815,6 +31019,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400348}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 60, y: 330, z: 0}
   dataList:
@@ -30869,6 +31074,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400350}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 400, z: 0}
   dataList:
@@ -30961,6 +31167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400352}
   timeLine: 7020
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: -130, y: 380, z: 0}
   dataList:
@@ -31020,6 +31227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400356}
   timeLine: 8760
+  refActionConditioner: {fileID: 0}
   enemyId: 35
   initialPosition: {x: 505, y: -260, z: 0}
   dataList:
@@ -31074,6 +31282,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400448}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 240, y: 330, z: 0}
   dataList:
@@ -31147,79 +31356,216 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e84067bd8ea8df544b0bc7aa834f92b8, type: 2}
   - {fileID: 11400002, guid: 7227ccfd7b43e50448e2f2241f9ef628, type: 2}
   timeLineManager:
-    timeLine: 0
+    timeLine: 8851
   actionableListManager:
     actionableList:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: 11400446}
+    - {fileID: 11400416}
+    - {fileID: 11400414}
+    - {fileID: 11400384}
+    - {fileID: 11400382}
+    - {fileID: 11401406}
     - {fileID: 11400734}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: 11400192}
+    - {fileID: 11400188}
+    - {fileID: 11400186}
+    - {fileID: 11400184}
+    - {fileID: 11400182}
+    - {fileID: 11400148}
+    - {fileID: 11400160}
+    - {fileID: 11400146}
+    - {fileID: 11400134}
+    - {fileID: 11400606}
+    - {fileID: 11400116}
+    - {fileID: 11400118}
+    - {fileID: 11400130}
+    - {fileID: 11400088}
+    - {fileID: 11400076}
+    - {fileID: 11400504}
+    - {fileID: 11400032}
+    - {fileID: 11400006}
+    - {fileID: 11400042}
+    - {fileID: 11400008}
+    - {fileID: 11400010}
+    - {fileID: 11400732}
+    - {fileID: 11400546}
+    - {fileID: 11400806}
+    - {fileID: 11401158}
+    - {fileID: 11400942}
+    - {fileID: 11400294}
+    - {fileID: 11400300}
+    - {fileID: 11400218}
+    - {fileID: 11401196}
+    - {fileID: 11401012}
+    - {fileID: 11401398}
+    - {fileID: 11400612}
+    - {fileID: 11400628}
+    - {fileID: 11400266}
+    - {fileID: 11400254}
+    - {fileID: 11400260}
+    - {fileID: 11400688}
+    - {fileID: 11400318}
+    - {fileID: 11400498}
+    - {fileID: 11400754}
+    - {fileID: 11401306}
+    - {fileID: 11400584}
+    - {fileID: 11401366}
+    - {fileID: 11401216}
+    - {fileID: 11401242}
+    - {fileID: 11400338}
+    - {fileID: 11400992}
+    - {fileID: 11400876}
+    - {fileID: 11400780}
+    - {fileID: 11400252}
+    - {fileID: 11400548}
+    - {fileID: 11401122}
+    - {fileID: 11401064}
+    - {fileID: 11400760}
+    - {fileID: 11400462}
+    - {fileID: 11400336}
+    - {fileID: 11401138}
+    - {fileID: 11400940}
+    - {fileID: 11400726}
+    - {fileID: 11400572}
+    - {fileID: 11401326}
+    - {fileID: 11401046}
+    - {fileID: 11401308}
+    - {fileID: 11400064}
+    - {fileID: 11400790}
+    - {fileID: 11400636}
+    - {fileID: 11400316}
+    - {fileID: 11400296}
+    - {fileID: 11400800}
+    - {fileID: 11400028}
+    - {fileID: 11401220}
+    - {fileID: 11400204}
+    - {fileID: 11400100}
+    - {fileID: 11401256}
+    - {fileID: 11400742}
+    - {fileID: 11400494}
+    - {fileID: 11401260}
+    - {fileID: 11401272}
+    - {fileID: 11400334}
+    - {fileID: 11401252}
+    - {fileID: 11400720}
+    - {fileID: 11400948}
+    - {fileID: 11400214}
+    - {fileID: 11400114}
+    - {fileID: 11400610}
+    - {fileID: 11400810}
+    - {fileID: 11400830}
+    - {fileID: 11401382}
+    - {fileID: 11400582}
+    - {fileID: 11400666}
+    - {fileID: 11401182}
+    - {fileID: 11401320}
+    - {fileID: 11400104}
+    - {fileID: 11401288}
+    - {fileID: 11401136}
+    - {fileID: 11401070}
+    - {fileID: 11400496}
+    - {fileID: 11400524}
+    - {fileID: 11401124}
+    - {fileID: 11400448}
+    - {fileID: 11401094}
+    - {fileID: 11400268}
+    - {fileID: 11400662}
+    - {fileID: 11400518}
+    - {fileID: 11400954}
+    - {fileID: 11400792}
+    - {fileID: 11400888}
+    - {fileID: 11401378}
+    - {fileID: 11401414}
+    - {fileID: 11400840}
+    - {fileID: 11401102}
+    - {fileID: 11401120}
+    - {fileID: 11400108}
+    - {fileID: 11400854}
+    - {fileID: 11401294}
+    - {fileID: 11400784}
+    - {fileID: 11400560}
+    - {fileID: 11400936}
+    - {fileID: 11401420}
+    - {fileID: 11400626}
+    - {fileID: 11400030}
+    - {fileID: 11401172}
+    - {fileID: 11401322}
+    - {fileID: 11401410}
+    - {fileID: 11400248}
+    - {fileID: 11400594}
+    - {fileID: 11400944}
+    - {fileID: 11400588}
+    - {fileID: 11401128}
+    - {fileID: 11400984}
+    - {fileID: 11401204}
+    - {fileID: 11400238}
+    - {fileID: 11401400}
+    - {fileID: 11400746}
+    - {fileID: 11401036}
+    - {fileID: 11400562}
+    - {fileID: 11400982}
+    - {fileID: 11401202}
+    - {fileID: 11400764}
+    - {fileID: 11400966}
+    - {fileID: 11400842}
+    - {fileID: 11400804}
+    - {fileID: 11400952}
+    - {fileID: 11400798}
+    - {fileID: 11401044}
+    - {fileID: 11401150}
+    - {fileID: 11400536}
+    - {fileID: 11401314}
+    - {fileID: 11400846}
+    - {fileID: 11401348}
+    - {fileID: 11401274}
+    - {fileID: 11400348}
+    - {fileID: 11400354}
+    - {fileID: 11400890}
+    - {fileID: 11400698}
+    - {fileID: 11400986}
+    - {fileID: 11401184}
+    - {fileID: 11401360}
+    - {fileID: 11401350}
+    - {fileID: 11401390}
+    - {fileID: 11400910}
+    - {fileID: 11400826}
+    - {fileID: 11400102}
+    - {fileID: 11400592}
+    - {fileID: 11400926}
+    - {fileID: 11401232}
+    - {fileID: 11401324}
+    - {fileID: 11400962}
+    - {fileID: 11400896}
+    - {fileID: 11401090}
+    - {fileID: 11400210}
+    - {fileID: 11400728}
+    - {fileID: 11401248}
+    - {fileID: 11401130}
+    - {fileID: 11400696}
+    - {fileID: 11401280}
+    - {fileID: 11401008}
+    - {fileID: 11401032}
+    - {fileID: 11400608}
+    - {fileID: 11400718}
+    - {fileID: 11400132}
+    - {fileID: 11400866}
+    - {fileID: 11400906}
+    - {fileID: 11401210}
+    - {fileID: 11401108}
+    - {fileID: 11400716}
+    - {fileID: 11401270}
+    - {fileID: 11400284}
+    - {fileID: 11400878}
+    - {fileID: 11401364}
+    - {fileID: 11400106}
+    - {fileID: 11400190}
+    - {fileID: 11401114}
+    - {fileID: 11400256}
+    - {fileID: 11400356}
+    - {fileID: 11401132}
+    - {fileID: 11401334}
+    - {fileID: 11400324}
+    - {fileID: 11401438}
 --- !u!114 &11400362
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -31233,6 +31579,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400360}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 100, y: 400, z: 0}
   dataList:
@@ -31325,6 +31672,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400362}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 450, z: 0}
   dataList:
@@ -31417,6 +31765,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400364}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 450, z: 0}
   dataList:
@@ -31509,6 +31858,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400366}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 450, z: 0}
   dataList:
@@ -31601,6 +31951,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400368}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 450, z: 0}
   dataList:
@@ -31693,6 +32044,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400370}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 100, y: 400, z: 0}
   dataList:
@@ -31785,6 +32137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400372}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -100, y: 400, z: 0}
   dataList:
@@ -31877,6 +32230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400374}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 400, z: 0}
   dataList:
@@ -31969,6 +32323,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400376}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 350, z: 0}
   dataList:
@@ -32061,6 +32416,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400378}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 350, z: 0}
   dataList:
@@ -32153,6 +32509,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400380}
   timeLine: 300
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400380}
@@ -32178,6 +32535,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400382}
   timeLine: 240
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400386}
@@ -32203,6 +32561,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400384}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 350, z: 0}
   dataList:
@@ -32295,6 +32654,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400386}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 350, z: 0}
   dataList:
@@ -32387,6 +32747,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400388}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 400, z: 0}
   dataList:
@@ -32479,6 +32840,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400390}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -100, y: 400, z: 0}
   dataList:
@@ -32571,6 +32933,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400392}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 100, y: 400, z: 0}
   dataList:
@@ -32663,6 +33026,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400394}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 450, z: 0}
   dataList:
@@ -32755,6 +33119,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400396}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 450, z: 0}
   dataList:
@@ -32847,6 +33212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400398}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 450, z: 0}
   dataList:
@@ -32939,6 +33305,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400400}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 450, z: 0}
   dataList:
@@ -33031,6 +33398,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400402}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 100, y: 400, z: 0}
   dataList:
@@ -33123,6 +33491,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400404}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -100, y: 400, z: 0}
   dataList:
@@ -33215,6 +33584,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400406}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 400, z: 0}
   dataList:
@@ -33307,6 +33677,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400408}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 350, z: 0}
   dataList:
@@ -33399,6 +33770,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400410}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 350, z: 0}
   dataList:
@@ -33491,6 +33863,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400412}
   timeLine: 180
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400412}
@@ -33516,6 +33889,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400414}
   timeLine: 120
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400418}
@@ -33541,6 +33915,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400416}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 350, z: 0}
   dataList:
@@ -33633,6 +34008,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400418}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 350, z: 0}
   dataList:
@@ -33725,6 +34101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400420}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 400, z: 0}
   dataList:
@@ -33817,6 +34194,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400422}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -100, y: 400, z: 0}
   dataList:
@@ -33909,6 +34287,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400424}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 100, y: 400, z: 0}
   dataList:
@@ -34001,6 +34380,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400426}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 450, z: 0}
   dataList:
@@ -34093,6 +34473,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400428}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 450, z: 0}
   dataList:
@@ -34185,6 +34566,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400430}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 450, z: 0}
   dataList:
@@ -34277,6 +34659,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400432}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 450, z: 0}
   dataList:
@@ -34369,6 +34752,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400434}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 100, y: 400, z: 0}
   dataList:
@@ -34461,6 +34845,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400436}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -100, y: 400, z: 0}
   dataList:
@@ -34553,6 +34938,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400438}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 400, z: 0}
   dataList:
@@ -34645,6 +35031,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400440}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 350, z: 0}
   dataList:
@@ -34737,6 +35124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400442}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 350, z: 0}
   dataList:
@@ -34829,6 +35217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400444}
   timeLine: 60
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400444}
@@ -34854,6 +35243,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400446}
   timeLine: 4580
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: -220, y: 380, z: 0}
   dataList:
@@ -34908,6 +35298,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400450}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 60, y: 330, z: 0}
   dataList:
@@ -34962,6 +35353,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400452}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -50, y: 450, z: 0}
   dataList:
@@ -35054,6 +35446,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400454}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -240, y: 330, z: 0}
   dataList:
@@ -35108,6 +35501,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400456}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 450, z: 0}
   dataList:
@@ -35200,6 +35594,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400458}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 180, y: 330, z: 0}
   dataList:
@@ -35254,6 +35649,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400460}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 180, y: 330, z: 0}
   dataList:
@@ -35308,6 +35704,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400462}
   timeLine: 2750
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11401080}
@@ -35333,6 +35730,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400464}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 450, z: 0}
   dataList:
@@ -35425,6 +35823,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400466}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -180, y: 330, z: 0}
   dataList:
@@ -35479,6 +35878,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400468}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 120, y: 330, z: 0}
   dataList:
@@ -35533,6 +35933,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400470}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -240, y: 330, z: 0}
   dataList:
@@ -35587,6 +35988,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400472}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 180, y: 330, z: 0}
   dataList:
@@ -35641,6 +36043,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400474}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 60, y: 330, z: 0}
   dataList:
@@ -35695,6 +36098,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400476}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -35749,6 +36153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400478}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -100, y: 400, z: 0}
   dataList:
@@ -35841,6 +36246,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400480}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 450, z: 0}
   dataList:
@@ -35933,6 +36339,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400482}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 400, z: 0}
   dataList:
@@ -36025,6 +36432,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400484}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -180, y: 330, z: 0}
   dataList:
@@ -36079,6 +36487,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400486}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 450, z: 0}
   dataList:
@@ -36171,6 +36580,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400488}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -36225,6 +36635,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400490}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -36279,6 +36690,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400492}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -100, y: 400, z: 0}
   dataList:
@@ -36371,6 +36783,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400494}
   timeLine: 3540
+  refActionConditioner: {fileID: 0}
   enemyId: 16
   initialPosition: {x: 0, y: 595, z: 0}
   dataList:
@@ -36430,6 +36843,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400496}
   timeLine: 4400
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: 260, y: 380, z: 0}
   dataList:
@@ -36484,6 +36898,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400498}
   timeLine: 1910
+  refActionConditioner: {fileID: 0}
   delayDuration: 241
   exceptionDuration: 300
   needDestroyEnemyId: 35
@@ -36501,6 +36916,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400500}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 240, y: 330, z: 0}
   dataList:
@@ -36555,6 +36971,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400502}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -36609,6 +37026,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400504}
   timeLine: 770
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400530}
@@ -36634,6 +37052,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400506}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 60, y: 330, z: 0}
   dataList:
@@ -36688,6 +37107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400508}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -36742,6 +37162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400510}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 240, y: 330, z: 0}
   dataList:
@@ -36796,6 +37217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400512}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 350, z: 0}
   dataList:
@@ -36888,6 +37310,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400514}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -36942,6 +37365,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400516}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -120, y: 330, z: 0}
   dataList:
@@ -36996,6 +37420,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400518}
   timeLine: 4880
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400062}
@@ -37021,6 +37446,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400520}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -37075,6 +37501,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400522}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -37129,6 +37556,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400524}
   timeLine: 4460
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: 100, y: 380, z: 0}
   dataList:
@@ -37183,6 +37611,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400526}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -37237,6 +37666,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400528}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 60, y: 330, z: 0}
   dataList:
@@ -37291,6 +37721,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400530}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 350, z: 0}
   dataList:
@@ -37383,6 +37814,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400532}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -37437,6 +37869,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400534}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 240, y: 330, z: 0}
   dataList:
@@ -37491,6 +37924,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400536}
   timeLine: 6720
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: 0, y: 380, z: 0}
   dataList:
@@ -37550,6 +37984,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400538}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 400, z: 0}
   dataList:
@@ -37642,6 +38077,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400540}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 60, y: 330, z: 0}
   dataList:
@@ -37696,6 +38132,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400542}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 450, z: 0}
   dataList:
@@ -37788,6 +38225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400544}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -60, y: 330, z: 0}
   dataList:
@@ -37842,6 +38280,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400546}
   timeLine: 1120
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: 90, y: 380, z: 0}
   dataList:
@@ -37896,6 +38335,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400548}
   timeLine: 2520
+  refActionConditioner: {fileID: 0}
   enemyId: 35
   initialPosition: {x: 505, y: -370, z: 0}
   dataList:
@@ -38026,6 +38466,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400550}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 450, z: 0}
   dataList:
@@ -38118,6 +38559,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400552}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 50, y: 350, z: 0}
   dataList:
@@ -38210,6 +38652,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400554}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -240, y: 330, z: 0}
   dataList:
@@ -38264,6 +38707,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400556}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -38318,6 +38762,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400558}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -38372,6 +38817,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400560}
   timeLine: 5400
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11401074}
@@ -38395,6 +38841,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400562}
   timeLine: 6240
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: 0, y: 380, z: 0}
   dataList:
@@ -38454,6 +38901,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400564}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -38508,6 +38956,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400566}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -38562,6 +39011,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400568}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -38616,6 +39066,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400570}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -100, y: 400, z: 0}
   dataList:
@@ -38708,6 +39159,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400572}
   timeLine: 3000
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: -160, y: 380, z: 0}
   dataList:
@@ -38762,6 +39214,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400574}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -38816,6 +39269,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400576}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 450, z: 0}
   dataList:
@@ -38908,6 +39362,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400578}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 120, y: 330, z: 0}
   dataList:
@@ -38962,6 +39417,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400580}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -39016,6 +39472,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400582}
   timeLine: 4080
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11401042}
@@ -39039,6 +39496,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400584}
   timeLine: 2030
+  refActionConditioner: {fileID: 0}
   enemyId: 35
   initialPosition: {x: 465.165955, y: -412.306213, z: 0}
   dataList:
@@ -39093,6 +39551,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400586}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 240, y: 330, z: 0}
   dataList:
@@ -39147,6 +39606,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400588}
   timeLine: 5940
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: 130, y: 380, z: 0}
   dataList:
@@ -39206,6 +39666,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400590}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -100, y: 400, z: 0}
   dataList:
@@ -39298,6 +39759,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400592}
   timeLine: 7410
+  refActionConditioner: {fileID: 0}
   enemyId: 35
   initialPosition: {x: -180, y: 370, z: 0}
   dataList:
@@ -39390,6 +39852,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400594}
   timeLine: 5880
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: 260, y: 380, z: 0}
   dataList:
@@ -39449,6 +39912,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400596}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 180, y: 330, z: 0}
   dataList:
@@ -39503,6 +39967,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400598}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 180, y: 330, z: 0}
   dataList:
@@ -39557,6 +40022,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400600}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -39611,6 +40077,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400602}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -240, y: 330, z: 0}
   dataList:
@@ -39665,6 +40132,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400604}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -39719,6 +40187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400606}
   timeLine: 640
+  refActionConditioner: {fileID: 0}
   enemyId: 31
   initialPosition: {x: -56.1130981, y: 346, z: 0}
   dataList:
@@ -39773,6 +40242,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400608}
   timeLine: 8150
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11401194}
@@ -39798,6 +40268,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400610}
   timeLine: 3900
+  refActionConditioner: {fileID: 0}
   enemyId: 35
   initialPosition: {x: 260, y: 370, z: 0}
   dataList:
@@ -39890,6 +40361,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400612}
   timeLine: 1600
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11401084}
@@ -39915,6 +40387,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400614}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -60, y: 330, z: 0}
   dataList:
@@ -39969,6 +40442,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400616}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 180, y: 330, z: 0}
   dataList:
@@ -40023,6 +40497,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400618}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 350, z: 0}
   dataList:
@@ -40115,6 +40590,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400620}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -240, y: 330, z: 0}
   dataList:
@@ -40169,6 +40645,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400622}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -40223,6 +40700,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400624}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -40277,6 +40755,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400626}
   timeLine: 5640
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: -260, y: 380, z: 0}
   dataList:
@@ -40336,6 +40815,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400628}
   timeLine: 1640
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400220}
@@ -40363,6 +40843,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400630}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 450, z: 0}
   dataList:
@@ -40455,6 +40936,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400632}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 350, z: 0}
   dataList:
@@ -40547,6 +41029,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400634}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 120, y: 330, z: 0}
   dataList:
@@ -40601,6 +41084,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400636}
   timeLine: 3150
+  refActionConditioner: {fileID: 0}
   enemyId: 35
   initialPosition: {x: 505, y: 170, z: 0}
   dataList:
@@ -40665,6 +41149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400638}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -40719,6 +41204,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400640}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 350, z: 0}
   dataList:
@@ -40811,6 +41297,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400642}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -40865,6 +41352,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400644}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 50, y: 450, z: 0}
   dataList:
@@ -40957,6 +41445,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400646}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -41011,6 +41500,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400648}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -120, y: 330, z: 0}
   dataList:
@@ -41065,6 +41555,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400650}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -41119,6 +41610,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400652}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -41173,6 +41665,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400654}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 350, z: 0}
   dataList:
@@ -41265,6 +41758,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400656}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -240, y: 330, z: 0}
   dataList:
@@ -41319,6 +41813,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400658}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -50, y: 450, z: 0}
   dataList:
@@ -41411,6 +41906,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400660}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 180, y: 330, z: 0}
   dataList:
@@ -41465,6 +41961,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400662}
   timeLine: 4800
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11401258}
@@ -41490,6 +41987,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400664}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -41544,6 +42042,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400666}
   timeLine: 4130
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400624}
@@ -41567,6 +42066,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400668}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 120, y: 330, z: 0}
   dataList:
@@ -41621,6 +42121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400670}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 350, z: 0}
   dataList:
@@ -41713,6 +42214,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400672}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -100, y: 400, z: 0}
   dataList:
@@ -41805,6 +42307,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400674}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -41859,6 +42362,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400676}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -41913,6 +42417,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400678}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -41967,6 +42472,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400680}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 350, z: 0}
   dataList:
@@ -42059,6 +42565,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400682}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 180, y: 330, z: 0}
   dataList:
@@ -42113,6 +42620,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400684}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -60, y: 330, z: 0}
   dataList:
@@ -42167,6 +42675,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400686}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -60, y: 330, z: 0}
   dataList:
@@ -42221,6 +42730,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400688}
   timeLine: 1850
+  refActionConditioner: {fileID: 0}
   enemyId: 3
   initialPosition: {x: -480, y: 380, z: 0}
   dataList:
@@ -42313,6 +42823,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400690}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 100, y: 400, z: 0}
   dataList:
@@ -42405,6 +42916,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400692}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -240, y: 330, z: 0}
   dataList:
@@ -42459,6 +42971,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400694}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 350, z: 0}
   dataList:
@@ -42551,6 +43064,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400696}
   timeLine: 7980
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400738}
@@ -42576,6 +43090,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400698}
   timeLine: 7080
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: -260, y: 380, z: 0}
   dataList:
@@ -42635,6 +43150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400700}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 240, y: 330, z: 0}
   dataList:
@@ -42689,6 +43205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400702}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -120, y: 330, z: 0}
   dataList:
@@ -42743,6 +43260,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400704}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 400, z: 0}
   dataList:
@@ -42835,6 +43353,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400706}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 180, y: 330, z: 0}
   dataList:
@@ -42889,6 +43408,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400708}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -42943,6 +43463,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400710}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -180, y: 330, z: 0}
   dataList:
@@ -42997,6 +43518,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400712}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -100, y: 400, z: 0}
   dataList:
@@ -43089,6 +43611,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400714}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -43143,6 +43666,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400716}
   timeLine: 8430
+  refActionConditioner: {fileID: 0}
   enemyId: 35
   initialPosition: {x: -505, y: 260, z: 0}
   dataList:
@@ -43197,6 +43721,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400718}
   timeLine: 8200
+  refActionConditioner: {fileID: 0}
   enemyId: 31
   initialPosition: {x: 158.349518, y: 346, z: 0}
   dataList:
@@ -43251,6 +43776,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400720}
   timeLine: 3800
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400886}
@@ -43276,6 +43802,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400722}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -180, y: 330, z: 0}
   dataList:
@@ -43330,6 +43857,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400724}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 350, z: 0}
   dataList:
@@ -43422,6 +43950,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400726}
   timeLine: 2950
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400242}
@@ -43445,6 +43974,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400728}
   timeLine: 7840
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11401372}
@@ -43470,6 +44000,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400730}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 120, y: 330, z: 0}
   dataList:
@@ -43524,6 +44055,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400732}
   timeLine: 1120
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: 220, y: 380, z: 0}
   dataList:
@@ -43578,6 +44110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400734}
   timeLine: 340
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: -150, y: 380, z: 0}
   dataList:
@@ -43632,6 +44165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400736}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 100, y: 400, z: 0}
   dataList:
@@ -43724,6 +44258,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400738}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 350, z: 0}
   dataList:
@@ -43816,6 +44351,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400740}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -43870,6 +44406,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400742}
   timeLine: 3490
+  refActionConditioner: {fileID: 0}
   enemyId: 31
   initialPosition: {x: 226.354416, y: 346, z: 0}
   dataList:
@@ -43924,6 +44461,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400744}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 450, z: 0}
   dataList:
@@ -44016,6 +44554,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400746}
   timeLine: 6180
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11401356}
@@ -44043,6 +44582,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400748}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -50, y: 450, z: 0}
   dataList:
@@ -44135,6 +44675,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400750}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 240, y: 330, z: 0}
   dataList:
@@ -44189,6 +44730,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400752}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 450, z: 0}
   dataList:
@@ -44281,6 +44823,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400754}
   timeLine: 1910
+  refActionConditioner: {fileID: 0}
   enemyId: 35
   initialPosition: {x: 488.95285, y: -436.093079, z: 0}
   dataList:
@@ -44335,6 +44878,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400756}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -44389,6 +44933,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400758}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -44443,6 +44988,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400760}
   timeLine: 2740
+  refActionConditioner: {fileID: 0}
   enemyId: 35
   initialPosition: {x: -505, y: -370, z: 0}
   dataList:
@@ -44573,6 +45119,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400762}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -44627,6 +45174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400764}
   timeLine: 6360
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: 260, y: 380, z: 0}
   dataList:
@@ -44686,6 +45234,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400766}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 240, y: 330, z: 0}
   dataList:
@@ -44740,6 +45289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400768}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -120, y: 330, z: 0}
   dataList:
@@ -44794,6 +45344,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400770}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -44848,6 +45399,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400772}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -60, y: 330, z: 0}
   dataList:
@@ -44902,6 +45454,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400774}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -44956,6 +45509,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400776}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -45010,6 +45564,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400778}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -100, y: 400, z: 0}
   dataList:
@@ -45102,6 +45657,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400780}
   timeLine: 2400
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11401178}
@@ -45127,6 +45683,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400782}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 350, z: 0}
   dataList:
@@ -45219,6 +45776,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400784}
   timeLine: 5400
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400676}
@@ -45242,6 +45800,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400786}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 100, y: 400, z: 0}
   dataList:
@@ -45334,6 +45893,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400788}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -120, y: 330, z: 0}
   dataList:
@@ -45388,6 +45948,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400790}
   timeLine: 3120
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: -200, y: 380, z: 0}
   dataList:
@@ -45442,6 +46003,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400792}
   timeLine: 5050
+  refActionConditioner: {fileID: 0}
   enemyId: 35
   initialPosition: {x: 272.227783, y: -459.880005, z: 0}
   dataList:
@@ -45496,6 +46058,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400794}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -180, y: 330, z: 0}
   dataList:
@@ -45550,6 +46113,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400796}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -60, y: 330, z: 0}
   dataList:
@@ -45604,6 +46168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400798}
   timeLine: 6540
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: -130, y: 380, z: 0}
   dataList:
@@ -45663,6 +46228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400800}
   timeLine: 3240
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400558}
@@ -45686,6 +46252,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400802}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -45740,6 +46307,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400804}
   timeLine: 6450
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11401328}
@@ -45767,6 +46335,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400806}
   timeLine: 1200
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: -40, y: 380, z: 0}
   dataList:
@@ -45821,6 +46390,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400808}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 400, z: 0}
   dataList:
@@ -45913,6 +46483,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400810}
   timeLine: 4000
+  refActionConditioner: {fileID: 0}
   enemyId: 35
   initialPosition: {x: -213.138611, y: -427.97998, z: 0}
   dataList:
@@ -46043,6 +46614,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400812}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -50, y: 450, z: 0}
   dataList:
@@ -46135,6 +46707,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400814}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -46189,6 +46762,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400816}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -50, y: 350, z: 0}
   dataList:
@@ -46281,6 +46855,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400818}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -50, y: 350, z: 0}
   dataList:
@@ -46373,6 +46948,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400820}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -46427,6 +47003,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400822}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 100, y: 400, z: 0}
   dataList:
@@ -46519,6 +47096,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400824}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -46573,6 +47151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400826}
   timeLine: 7380
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: 130, y: 380, z: 0}
   dataList:
@@ -46632,6 +47211,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400828}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -46686,6 +47266,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400830}
   timeLine: 4060
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400816}
@@ -46711,6 +47292,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400832}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -60, y: 330, z: 0}
   dataList:
@@ -46765,6 +47347,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400834}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 20
   initialPosition: {x: 0, y: 200, z: 0}
   dataList:
@@ -46819,6 +47402,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400836}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 400, z: 0}
   dataList:
@@ -46911,6 +47495,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400838}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 350, z: 0}
   dataList:
@@ -47003,6 +47588,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400840}
   timeLine: 5170
+  refActionConditioner: {fileID: 0}
   enemyId: 35
   initialPosition: {x: 272.227783, y: -459.880005, z: 0}
   dataList:
@@ -47057,6 +47643,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400842}
   timeLine: 6420
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: 130, y: 380, z: 0}
   dataList:
@@ -47116,6 +47703,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400844}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -100, y: 400, z: 0}
   dataList:
@@ -47208,6 +47796,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400846}
   timeLine: 6810
+  refActionConditioner: {fileID: 0}
   enemyId: 35
   initialPosition: {x: 0, y: 370, z: 0}
   dataList:
@@ -47300,6 +47889,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400848}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -100, y: 400, z: 0}
   dataList:
@@ -47392,6 +47982,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400850}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -100, y: 400, z: 0}
   dataList:
@@ -47484,6 +48075,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400852}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -47538,6 +48130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400854}
   timeLine: 5290
+  refActionConditioner: {fileID: 0}
   enemyId: 35
   initialPosition: {x: 272.227783, y: -459.880005, z: 0}
   dataList:
@@ -47592,6 +48185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400856}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 100, y: 400, z: 0}
   dataList:
@@ -47684,6 +48278,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400858}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 100, y: 400, z: 0}
   dataList:
@@ -47776,6 +48371,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400860}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -47830,6 +48426,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400862}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 120, y: 330, z: 0}
   dataList:
@@ -47884,6 +48481,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400864}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -120, y: 330, z: 0}
   dataList:
@@ -47938,6 +48536,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400866}
   timeLine: 8280
+  refActionConditioner: {fileID: 0}
   enemyId: 31
   initialPosition: {x: -155.095825, y: 346, z: 0}
   dataList:
@@ -47992,6 +48591,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400868}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -120, y: 330, z: 0}
   dataList:
@@ -48046,6 +48646,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400870}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 60, y: 330, z: 0}
   dataList:
@@ -48100,6 +48701,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400872}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -100, y: 400, z: 0}
   dataList:
@@ -48192,6 +48794,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400874}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -120, y: 330, z: 0}
   dataList:
@@ -48246,6 +48849,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400876}
   timeLine: 2380
+  refActionConditioner: {fileID: 0}
   enemyId: 35
   initialPosition: {x: 385.356384, y: -408.411896, z: 0}
   dataList:
@@ -48300,6 +48904,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400878}
   timeLine: 8520
+  refActionConditioner: {fileID: 0}
   enemyId: 35
   initialPosition: {x: -505, y: 260, z: 0}
   dataList:
@@ -48354,6 +48959,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400880}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 100, y: 400, z: 0}
   dataList:
@@ -48446,6 +49052,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400882}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 240, y: 330, z: 0}
   dataList:
@@ -48500,6 +49107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400884}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 350, z: 0}
   dataList:
@@ -48592,6 +49200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400886}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -50, y: 350, z: 0}
   dataList:
@@ -48684,6 +49293,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400888}
   timeLine: 5090
+  refActionConditioner: {fileID: 0}
   enemyId: 35
   initialPosition: {x: 272.227783, y: -459.880005, z: 0}
   dataList:
@@ -48738,6 +49348,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400890}
   timeLine: 7050
+  refActionConditioner: {fileID: 0}
   enemyId: 35
   initialPosition: {x: -180, y: 370, z: 0}
   dataList:
@@ -48830,6 +49441,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400892}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -120, y: 330, z: 0}
   dataList:
@@ -48884,6 +49496,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400894}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -48938,6 +49551,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400896}
   timeLine: 7680
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: 0, y: 380, z: 0}
   dataList:
@@ -48997,6 +49611,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400898}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 400, z: 0}
   dataList:
@@ -49089,6 +49704,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400900}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -49143,6 +49759,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400902}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 120, y: 330, z: 0}
   dataList:
@@ -49197,6 +49814,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400904}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -120, y: 330, z: 0}
   dataList:
@@ -49251,6 +49869,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400906}
   timeLine: 8320
+  refActionConditioner: {fileID: 0}
   enemyId: 31
   initialPosition: {x: 172.46637, y: 346, z: 0}
   dataList:
@@ -49305,6 +49924,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400908}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -49359,6 +49979,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400910}
   timeLine: 7350
+  refActionConditioner: {fileID: 0}
   enemyId: 35
   initialPosition: {x: 0, y: 370, z: 0}
   dataList:
@@ -49451,6 +50072,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400912}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -100, y: 400, z: 0}
   dataList:
@@ -49543,6 +50165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400914}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 100, y: 400, z: 0}
   dataList:
@@ -49635,6 +50258,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400916}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -49689,6 +50313,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400918}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 450, z: 0}
   dataList:
@@ -49781,6 +50406,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400920}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 120, y: 330, z: 0}
   dataList:
@@ -49835,6 +50461,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400922}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -49889,6 +50516,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400924}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 450, z: 0}
   dataList:
@@ -49981,6 +50609,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400926}
   timeLine: 7440
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: 0, y: 380, z: 0}
   dataList:
@@ -50040,6 +50669,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400928}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 50, y: 350, z: 0}
   dataList:
@@ -50132,6 +50762,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400930}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 100, y: 400, z: 0}
   dataList:
@@ -50224,6 +50855,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400932}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -50278,6 +50910,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400934}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -60, y: 330, z: 0}
   dataList:
@@ -50332,6 +50965,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400936}
   timeLine: 5500
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400476}
@@ -50355,6 +50989,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400938}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 50, y: 450, z: 0}
   dataList:
@@ -50447,6 +51082,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400940}
   timeLine: 2900
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11401214}
@@ -50470,6 +51106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400942}
   timeLine: 1260
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400818}
@@ -50495,6 +51132,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400944}
   timeLine: 5910
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400470}
@@ -50522,6 +51160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400946}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -50576,6 +51215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400948}
   timeLine: 3820
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11401078}
@@ -50603,6 +51243,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400950}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 120, y: 330, z: 0}
   dataList:
@@ -50657,6 +51298,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400952}
   timeLine: 6480
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: 0, y: 380, z: 0}
   dataList:
@@ -50716,6 +51358,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400954}
   timeLine: 4990
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400632}
@@ -50741,6 +51384,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400956}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 240, y: 330, z: 0}
   dataList:
@@ -50795,6 +51439,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400958}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -50849,6 +51494,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400960}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -50903,6 +51549,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400962}
   timeLine: 7620
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: -130, y: 380, z: 0}
   dataList:
@@ -50962,6 +51609,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400964}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 60, y: 330, z: 0}
   dataList:
@@ -51016,6 +51664,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400966}
   timeLine: 6360
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400586}
@@ -51043,6 +51692,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400968}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 400, z: 0}
   dataList:
@@ -51135,6 +51785,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400970}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -180, y: 330, z: 0}
   dataList:
@@ -51189,6 +51840,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400972}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 100, y: 400, z: 0}
   dataList:
@@ -51281,6 +51933,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400974}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -51335,6 +51988,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400976}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 60, y: 330, z: 0}
   dataList:
@@ -51389,6 +52043,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400978}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 350, z: 0}
   dataList:
@@ -51481,6 +52136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400980}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -180, y: 330, z: 0}
   dataList:
@@ -51535,6 +52191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400982}
   timeLine: 6270
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400016}
@@ -51562,6 +52219,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400984}
   timeLine: 6000
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: 0, y: 380, z: 0}
   dataList:
@@ -51621,6 +52279,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400986}
   timeLine: 7110
+  refActionConditioner: {fileID: 0}
   enemyId: 35
   initialPosition: {x: 180, y: 370, z: 0}
   dataList:
@@ -51713,6 +52372,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400988}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -51767,6 +52427,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400990}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 240, y: 330, z: 0}
   dataList:
@@ -51821,6 +52482,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400992}
   timeLine: 2320
+  refActionConditioner: {fileID: 0}
   enemyId: 35
   initialPosition: {x: 385.356384, y: -408.411896, z: 0}
   dataList:
@@ -51875,6 +52537,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400994}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 450, z: 0}
   dataList:
@@ -51967,6 +52630,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400996}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 100, y: 400, z: 0}
   dataList:
@@ -52059,6 +52723,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400998}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -120, y: 330, z: 0}
   dataList:
@@ -52113,6 +52778,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401000}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 400, z: 0}
   dataList:
@@ -52205,6 +52871,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401002}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -60, y: 330, z: 0}
   dataList:
@@ -52259,6 +52926,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401004}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -52313,6 +52981,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401006}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -52367,6 +53036,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401008}
   timeLine: 8120
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400834}
@@ -52386,6 +53056,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401010}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -52440,6 +53111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401012}
   timeLine: 1460
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400750}
@@ -52467,6 +53139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401014}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 400, z: 0}
   dataList:
@@ -52559,6 +53232,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401016}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 60, y: 330, z: 0}
   dataList:
@@ -52613,6 +53287,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401018}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -120, y: 330, z: 0}
   dataList:
@@ -52667,6 +53342,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401020}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -50, y: 350, z: 0}
   dataList:
@@ -52759,6 +53435,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401022}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 50, y: 350, z: 0}
   dataList:
@@ -52851,6 +53528,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401024}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 120, y: 330, z: 0}
   dataList:
@@ -52905,6 +53583,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401026}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -60, y: 330, z: 0}
   dataList:
@@ -52959,6 +53638,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401028}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -60, y: 330, z: 0}
   dataList:
@@ -53013,6 +53693,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401030}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -240, y: 330, z: 0}
   dataList:
@@ -53067,6 +53748,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401032}
   timeLine: 8120
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11401230}
@@ -53086,6 +53768,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401034}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 60, y: 330, z: 0}
   dataList:
@@ -53140,6 +53823,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401036}
   timeLine: 6180
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: -130, y: 380, z: 0}
   dataList:
@@ -53199,6 +53883,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401038}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 100, y: 400, z: 0}
   dataList:
@@ -53291,6 +53976,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401040}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -120, y: 330, z: 0}
   dataList:
@@ -53345,6 +54031,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401042}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -53399,6 +54086,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401044}
   timeLine: 6600
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: -260, y: 380, z: 0}
   dataList:
@@ -53458,6 +54146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401046}
   timeLine: 3000
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11401140}
@@ -53481,6 +54170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401048}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -53535,6 +54225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401050}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 100, y: 400, z: 0}
   dataList:
@@ -53627,6 +54318,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401052}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -60, y: 330, z: 0}
   dataList:
@@ -53681,6 +54373,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401054}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -53735,6 +54428,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401056}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -53789,6 +54483,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401058}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -180, y: 330, z: 0}
   dataList:
@@ -53843,6 +54538,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401060}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 50, y: 450, z: 0}
   dataList:
@@ -53935,6 +54631,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401062}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -120, y: 330, z: 0}
   dataList:
@@ -53989,6 +54686,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401064}
   timeLine: 2720
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400978}
@@ -54014,6 +54712,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401066}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 450, z: 0}
   dataList:
@@ -54106,6 +54805,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401068}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -54160,6 +54860,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401070}
   timeLine: 4320
+  refActionConditioner: {fileID: 0}
   enemyId: 35
   initialPosition: {x: 231.771729, y: -427.97998, z: 0}
   dataList:
@@ -54290,6 +54991,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401072}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -120, y: 330, z: 0}
   dataList:
@@ -54344,6 +55046,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401074}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -54398,6 +55101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401076}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -54452,6 +55156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401078}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -240, y: 330, z: 0}
   dataList:
@@ -54506,6 +55211,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401080}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 350, z: 0}
   dataList:
@@ -54598,6 +55304,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401082}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -180, y: 330, z: 0}
   dataList:
@@ -54652,6 +55359,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401084}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -50, y: 350, z: 0}
   dataList:
@@ -54744,6 +55452,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401086}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 350, z: 0}
   dataList:
@@ -54836,6 +55545,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401088}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -60, y: 330, z: 0}
   dataList:
@@ -54890,6 +55600,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401090}
   timeLine: 7740
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: 130, y: 380, z: 0}
   dataList:
@@ -54949,6 +55660,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401092}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -55003,6 +55715,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401094}
   timeLine: 4700
+  refActionConditioner: {fileID: 0}
   enemyId: 7
   initialPosition: {x: 0, y: 380, z: 0}
   dataList:
@@ -55095,6 +55808,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401096}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -55149,6 +55863,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401098}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 100, y: 400, z: 0}
   dataList:
@@ -55241,6 +55956,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401100}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 240, y: 330, z: 0}
   dataList:
@@ -55295,6 +56011,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401102}
   timeLine: 5210
+  refActionConditioner: {fileID: 0}
   enemyId: 35
   initialPosition: {x: 272.227783, y: -459.880005, z: 0}
   dataList:
@@ -55349,6 +56066,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401104}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 450, z: 0}
   dataList:
@@ -55441,6 +56159,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401106}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 450, z: 0}
   dataList:
@@ -55533,6 +56252,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401108}
   timeLine: 8400
+  refActionConditioner: {fileID: 0}
   enemyId: 35
   initialPosition: {x: -505, y: 260, z: 0}
   dataList:
@@ -55587,6 +56307,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401110}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 450, z: 0}
   dataList:
@@ -55679,6 +56400,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401112}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -55733,6 +56455,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401114}
   timeLine: 8700
+  refActionConditioner: {fileID: 0}
   enemyId: 35
   initialPosition: {x: 505, y: -260, z: 0}
   dataList:
@@ -55787,6 +56510,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401116}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 450, z: 0}
   dataList:
@@ -55879,6 +56603,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401118}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 450, z: 0}
   dataList:
@@ -55971,6 +56696,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401120}
   timeLine: 5230
+  refActionConditioner: {fileID: 0}
   enemyId: 35
   initialPosition: {x: 272.227783, y: -459.880005, z: 0}
   dataList:
@@ -56025,6 +56751,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401122}
   timeLine: 2560
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400640}
@@ -56050,6 +56777,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401124}
   timeLine: 4520
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: -20, y: 380, z: 0}
   dataList:
@@ -56104,6 +56832,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401126}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -56158,6 +56887,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401128}
   timeLine: 6000
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11401302}
@@ -56185,6 +56915,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401130}
   timeLine: 7900
+  refActionConditioner: {fileID: 0}
   enemyId: 16
   initialPosition: {x: 0, y: 595, z: 0}
   dataList:
@@ -56244,6 +56975,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401132}
   timeLine: 8790
+  refActionConditioner: {fileID: 0}
   enemyId: 35
   initialPosition: {x: 505, y: -260, z: 0}
   dataList:
@@ -56298,6 +57030,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401134}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 50, y: 350, z: 0}
   dataList:
@@ -56390,6 +57123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401136}
   timeLine: 4230
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11401004}
@@ -56413,6 +57147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401138}
   timeLine: 2850
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400638}
@@ -56436,6 +57171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401140}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -56490,6 +57226,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401142}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 400, z: 0}
   dataList:
@@ -56582,6 +57319,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401144}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 450, z: 0}
   dataList:
@@ -56674,6 +57412,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401146}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -56728,6 +57467,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401148}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 450, z: 0}
   dataList:
@@ -56820,6 +57560,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401150}
   timeLine: 6660
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: -130, y: 380, z: 0}
   dataList:
@@ -56879,6 +57620,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401152}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 400, z: 0}
   dataList:
@@ -56971,6 +57713,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401154}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -240, y: 330, z: 0}
   dataList:
@@ -57025,6 +57768,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401156}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 180, y: 330, z: 0}
   dataList:
@@ -57079,6 +57823,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401158}
   timeLine: 1200
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: 90, y: 380, z: 0}
   dataList:
@@ -57133,6 +57878,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401160}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 180, y: 330, z: 0}
   dataList:
@@ -57187,6 +57933,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401162}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -120, y: 330, z: 0}
   dataList:
@@ -57241,6 +57988,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401164}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 120, y: 330, z: 0}
   dataList:
@@ -57295,6 +58043,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401166}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -57349,6 +58098,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401168}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -57403,6 +58153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401170}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 60, y: 330, z: 0}
   dataList:
@@ -57457,6 +58208,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401172}
   timeLine: 5730
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400620}
@@ -57484,6 +58236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401174}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -60, y: 330, z: 0}
   dataList:
@@ -57538,6 +58291,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401176}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 50, y: 450, z: 0}
   dataList:
@@ -57630,6 +58384,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401178}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 350, z: 0}
   dataList:
@@ -57722,6 +58477,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401180}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -100, y: 400, z: 0}
   dataList:
@@ -57814,6 +58570,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401182}
   timeLine: 4130
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400646}
@@ -57837,6 +58594,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401184}
   timeLine: 7140
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: -130, y: 380, z: 0}
   dataList:
@@ -57896,6 +58654,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401186}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -50, y: 350, z: 0}
   dataList:
@@ -57988,6 +58747,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401188}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -50, y: 450, z: 0}
   dataList:
@@ -58080,6 +58840,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401190}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 400, z: 0}
   dataList:
@@ -58172,6 +58933,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401192}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -60, y: 330, z: 0}
   dataList:
@@ -58226,6 +58988,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401194}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 350, z: 0}
   dataList:
@@ -58318,6 +59081,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401196}
   timeLine: 1460
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11401154}
@@ -58345,6 +59109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401198}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -100, y: 400, z: 0}
   dataList:
@@ -58437,6 +59202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401200}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -60, y: 330, z: 0}
   dataList:
@@ -58491,6 +59257,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401202}
   timeLine: 6300
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: 130, y: 380, z: 0}
   dataList:
@@ -58550,6 +59317,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401204}
   timeLine: 6060
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: -130, y: 380, z: 0}
   dataList:
@@ -58609,6 +59377,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401206}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 180, y: 330, z: 0}
   dataList:
@@ -58663,6 +59432,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401208}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -58717,6 +59487,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401210}
   timeLine: 8360
+  refActionConditioner: {fileID: 0}
   enemyId: 31
   initialPosition: {x: 285.589508, y: 346, z: 0}
   dataList:
@@ -58771,6 +59542,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401212}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 60, y: 330, z: 0}
   dataList:
@@ -58825,6 +59597,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401214}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -58879,6 +59652,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401216}
   timeLine: 2150
+  refActionConditioner: {fileID: 0}
   enemyId: 35
   initialPosition: {x: 465.165955, y: -414.949158, z: 0}
   dataList:
@@ -58933,6 +59707,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401218}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 450, z: 0}
   dataList:
@@ -59025,6 +59800,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401220}
   timeLine: 3350
+  refActionConditioner: {fileID: 0}
   enemyId: 31
   initialPosition: {x: -56.1130981, y: 346, z: 0}
   dataList:
@@ -59079,6 +59855,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401222}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 180, y: 330, z: 0}
   dataList:
@@ -59133,6 +59910,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401224}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -59187,6 +59965,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401226}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 400, z: 0}
   dataList:
@@ -59279,6 +60058,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401228}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -59333,6 +60113,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401230}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 20
   initialPosition: {x: 0, y: 200, z: 0}
   dataList:
@@ -59387,6 +60168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401232}
   timeLine: 7500
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: -130, y: 380, z: 0}
   dataList:
@@ -59446,6 +60228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401234}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 350, z: 0}
   dataList:
@@ -59538,6 +60321,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401236}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 50, y: 450, z: 0}
   dataList:
@@ -59630,6 +60414,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401238}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 60, y: 330, z: 0}
   dataList:
@@ -59684,6 +60469,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401240}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 400, z: 0}
   dataList:
@@ -59776,6 +60562,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401242}
   timeLine: 2200
+  refActionConditioner: {fileID: 0}
   enemyId: 35
   initialPosition: {x: 272.227783, y: -459.880005, z: 0}
   dataList:
@@ -59830,6 +60617,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401244}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 350, z: 0}
   dataList:
@@ -59922,6 +60710,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401246}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -240, y: 330, z: 0}
   dataList:
@@ -59976,6 +60765,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401248}
   timeLine: 7900
+  refActionConditioner: {fileID: 0}
   delayDuration: 100
   exceptionDuration: 1800
   needDestroyEnemyId: 16
@@ -59993,6 +60783,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401250}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -60047,6 +60838,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401252}
   timeLine: 3730
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400500}
@@ -60074,6 +60866,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401254}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 180, y: 330, z: 0}
   dataList:
@@ -60128,6 +60921,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401256}
   timeLine: 3420
+  refActionConditioner: {fileID: 0}
   enemyId: 31
   initialPosition: {x: 148.675858, y: 346, z: 0}
   dataList:
@@ -60182,6 +60976,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401258}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 350, z: 0}
   dataList:
@@ -60274,6 +61069,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401260}
   timeLine: 3540
+  refActionConditioner: {fileID: 0}
   delayDuration: 0
   exceptionDuration: 1800
   needDestroyEnemyId: 16
@@ -60291,6 +61087,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401262}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -60345,6 +61142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401264}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 100, y: 400, z: 0}
   dataList:
@@ -60437,6 +61235,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401266}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -60491,6 +61290,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401268}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -60, y: 330, z: 0}
   dataList:
@@ -60545,6 +61345,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401270}
   timeLine: 8460
+  refActionConditioner: {fileID: 0}
   enemyId: 35
   initialPosition: {x: -505, y: 260, z: 0}
   dataList:
@@ -60599,6 +61400,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401272}
   timeLine: 3550
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400766}
@@ -60626,6 +61428,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401274}
   timeLine: 6900
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: 130, y: 380, z: 0}
   dataList:
@@ -60685,6 +61488,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401276}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 180, y: 330, z: 0}
   dataList:
@@ -60739,6 +61543,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401278}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 450, z: 0}
   dataList:
@@ -60831,6 +61636,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401280}
   timeLine: 7980
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11401234}
@@ -60856,6 +61662,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401282}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 50, y: 350, z: 0}
   dataList:
@@ -60948,6 +61755,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401284}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -180, y: 330, z: 0}
   dataList:
@@ -61002,6 +61810,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401286}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -61056,6 +61865,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401288}
   timeLine: 4230
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400020}
@@ -61079,6 +61889,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401290}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -50, y: 450, z: 0}
   dataList:
@@ -61171,6 +61982,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401292}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 350, z: 0}
   dataList:
@@ -61263,6 +62075,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401294}
   timeLine: 5330
+  refActionConditioner: {fileID: 0}
   enemyId: 35
   initialPosition: {x: 272.227783, y: -459.880005, z: 0}
   dataList:
@@ -61317,6 +62130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401296}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 400, z: 0}
   dataList:
@@ -61409,6 +62223,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401298}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -61463,6 +62278,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401300}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 180, y: 330, z: 0}
   dataList:
@@ -61517,6 +62333,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401302}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 240, y: 330, z: 0}
   dataList:
@@ -61571,6 +62388,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401304}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -61625,6 +62443,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401306}
   timeLine: 1970
+  refActionConditioner: {fileID: 0}
   enemyId: 35
   initialPosition: {x: 486.309875, y: -436.093079, z: 0}
   dataList:
@@ -61679,6 +62498,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401308}
   timeLine: 3060
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: 0, y: 380, z: 0}
   dataList:
@@ -61733,6 +62553,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401310}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -180, y: 330, z: 0}
   dataList:
@@ -61787,6 +62608,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401312}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -61841,6 +62663,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401314}
   timeLine: 6780
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: 130, y: 380, z: 0}
   dataList:
@@ -61900,6 +62723,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401316}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -120, y: 330, z: 0}
   dataList:
@@ -61954,6 +62778,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401318}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -180, y: 330, z: 0}
   dataList:
@@ -62008,6 +62833,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401320}
   timeLine: 4180
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11401208}
@@ -62031,6 +62857,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401322}
   timeLine: 5760
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: 0, y: 380, z: 0}
   dataList:
@@ -62090,6 +62917,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401324}
   timeLine: 7560
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: -260, y: 380, z: 0}
   dataList:
@@ -62149,6 +62977,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401326}
   timeLine: 3000
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400884}
@@ -62174,6 +63003,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401328}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -240, y: 330, z: 0}
   dataList:
@@ -62228,6 +63058,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401330}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 350, z: 0}
   dataList:
@@ -62320,6 +63151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401332}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 50, y: 450, z: 0}
   dataList:
@@ -62412,6 +63244,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401334}
   timeLine: 8820
+  refActionConditioner: {fileID: 0}
   enemyId: 35
   initialPosition: {x: 505, y: -260, z: 0}
   dataList:
@@ -62466,6 +63299,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401336}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -62520,6 +63354,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401338}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -180, y: 330, z: 0}
   dataList:
@@ -62574,6 +63409,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401340}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 350, z: 0}
   dataList:
@@ -62666,6 +63502,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401342}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -180, y: 330, z: 0}
   dataList:
@@ -62720,6 +63557,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401344}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -180, y: 330, z: 0}
   dataList:
@@ -62774,6 +63612,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401346}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 240, y: 330, z: 0}
   dataList:
@@ -62828,6 +63667,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401348}
   timeLine: 6840
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: 260, y: 380, z: 0}
   dataList:
@@ -62887,6 +63727,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401350}
   timeLine: 7260
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: 130, y: 380, z: 0}
   dataList:
@@ -62946,6 +63787,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401352}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 450, z: 0}
   dataList:
@@ -63038,6 +63880,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401354}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -63092,6 +63935,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401356}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 240, y: 330, z: 0}
   dataList:
@@ -63146,6 +63990,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401358}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 100, y: 400, z: 0}
   dataList:
@@ -63238,6 +64083,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401360}
   timeLine: 7200
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: 0, y: 380, z: 0}
   dataList:
@@ -63297,6 +64143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401362}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 400, z: 0}
   dataList:
@@ -63389,6 +64236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401364}
   timeLine: 8550
+  refActionConditioner: {fileID: 0}
   enemyId: 35
   initialPosition: {x: -505, y: 260, z: 0}
   dataList:
@@ -63443,6 +64291,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401366}
   timeLine: 2090
+  refActionConditioner: {fileID: 0}
   enemyId: 35
   initialPosition: {x: 446.665039, y: -409.663177, z: 0}
   dataList:
@@ -63497,6 +64346,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401368}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -63551,6 +64401,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401370}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -63605,6 +64456,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401372}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 350, z: 0}
   dataList:
@@ -63697,6 +64549,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401374}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 180, y: 330, z: 0}
   dataList:
@@ -63751,6 +64604,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401376}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -63805,6 +64659,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401378}
   timeLine: 5110
+  refActionConditioner: {fileID: 0}
   enemyId: 35
   initialPosition: {x: 272.227783, y: -459.880005, z: 0}
   dataList:
@@ -63859,6 +64714,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401380}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -63913,6 +64769,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401382}
   timeLine: 4080
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400490}
@@ -63936,6 +64793,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401384}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -240, y: 330, z: 0}
   dataList:
@@ -63990,6 +64848,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401386}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 60, y: 330, z: 0}
   dataList:
@@ -64044,6 +64903,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401388}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -180, y: 330, z: 0}
   dataList:
@@ -64098,6 +64958,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401390}
   timeLine: 7320
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: 260, y: 380, z: 0}
   dataList:
@@ -64157,6 +65018,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401392}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -100, y: 400, z: 0}
   dataList:
@@ -64249,6 +65111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401394}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -64303,6 +65166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401396}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 120, y: 330, z: 0}
   dataList:
@@ -64357,6 +65221,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401398}
   timeLine: 1600
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400216}
@@ -64382,6 +65247,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401400}
   timeLine: 6120
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: -260, y: 380, z: 0}
   dataList:
@@ -64441,6 +65307,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401402}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -64495,6 +65362,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401404}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 400, z: 0}
   dataList:
@@ -64587,6 +65455,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401406}
   timeLine: 300
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: -50, y: 380, z: 0}
   dataList:
@@ -64641,6 +65510,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401408}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 120, y: 330, z: 0}
   dataList:
@@ -64695,6 +65565,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401410}
   timeLine: 5820
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: 130, y: 380, z: 0}
   dataList:
@@ -64754,6 +65625,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401412}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -240, y: 330, z: 0}
   dataList:
@@ -64808,6 +65680,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401414}
   timeLine: 5150
+  refActionConditioner: {fileID: 0}
   enemyId: 35
   initialPosition: {x: 272.227783, y: -459.880005, z: 0}
   dataList:
@@ -64862,6 +65735,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401416}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 400, z: 0}
   dataList:
@@ -64954,6 +65828,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401418}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 120, y: 330, z: 0}
   dataList:
@@ -65008,6 +65883,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401420}
   timeLine: 5500
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11401056}
@@ -65031,6 +65907,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401422}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -65085,6 +65962,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401424}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 120, y: 330, z: 0}
   dataList:
@@ -65139,6 +66017,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401426}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 100, y: 400, z: 0}
   dataList:
@@ -65231,6 +66110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401428}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -65285,6 +66165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401430}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -240, y: 330, z: 0}
   dataList:
@@ -65339,6 +66220,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401432}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -180, y: 330, z: 0}
   dataList:
@@ -65393,6 +66275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 401434}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 450, z: 0}
   dataList:
@@ -65472,6 +66355,35 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+--- !u!114 &11401436
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 101436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dfbc122f699a394c8ac163996591eca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isBasicRoot: 1
+--- !u!114 &11401438
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 101436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28f087531f692844b93c66e75af4fc7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 401436}
+  timeLine: 9000
+  refActionConditioner: {fileID: 0}
+  prefabNextStage: {fileID: 100184, guid: bc48aa2876a52314fa9521309bb43330, type: 2}
+  prefabExtensionStage: {fileID: 0}
+  refConditioner: {fileID: 11401436}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
