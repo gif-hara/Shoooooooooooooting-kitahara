@@ -219,7 +219,7 @@ MonoBehaviour:
   speed: 0
   interval: 20
   number: 1
-  range: 30
+  range: 50
   multipleNum: 1
   isLock: 0
   isPlayerTop: 0
@@ -258,8 +258,6 @@ MonoBehaviour:
   addScore: 100
   addGameLevelExperience: 2
   invincibleTimer: 10
-  prefabDestroyEffect: {fileID: 100002, guid: 9c34980ebaf998b43a95929a879b6f1c, type: 2}
-  destroySELabel: Dead0
   deadEventObject: {fileID: 100010}
   damageEventObject: {fileID: 0}
   bounds:
@@ -298,7 +296,7 @@ MonoBehaviour:
   enableTuning: 1
   element:
     min: 4
-    max: 7
+    max: 6.5
     current: 0
     curve:
       serializedVersion: 2
@@ -369,7 +367,7 @@ MonoBehaviour:
   enableTuning: 1
   element:
     min: 80
-    max: 10
+    max: 15
     current: 0
     curve:
       serializedVersion: 2
