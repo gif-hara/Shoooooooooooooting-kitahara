@@ -56,6 +56,5 @@ public class BackgroundCamera : MonoBehaviour
 
 	public void OnComplete()
 	{
-		Debug.Log( "Complete" );
 	}
 }

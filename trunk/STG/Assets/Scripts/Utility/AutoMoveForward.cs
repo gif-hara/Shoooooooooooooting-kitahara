@@ -15,12 +15,30 @@ using System.Collections.Generic;
 public class AutoMoveForward : GameMonoBehaviour
 {
 	public float speed;
+
+	[SerializeField]
+	private Transform refTarget;
+
+	[SerializeField]
+	private Transform refForward;
+
+	public override void Start()
+	{
+		if( this.refTarget == null )
+		{
+			this.refTarget = transform;
+		}
+		if( this.refForward == null )
+		{
+			this.refForward = transform;
+		}
+	}
 		
 	// Update is called once per frame
 	public override void Update()
 	{
 		base.Update();
-		cachedTransform.localPosition += cachedTransform.up * speed;
+		this.refTarget.localPosition += refForward.up * speed;
 	}
 	
 //	void OnDrawGizmos()
