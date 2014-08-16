@@ -31,8 +31,6 @@ namespace MyProject
 		[SerializeField]
 		private AnimationCurve curve;
 
-		private float currentVelocity = 0.0f;
-
 		private Quaternion targetAngle;
 
 		private float initialAngle = 0.0f;

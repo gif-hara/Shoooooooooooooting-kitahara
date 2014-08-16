@@ -22,7 +22,7 @@ public class BossFlagSetter : GameMonoBehaviour
 	private GameDefine.BossType bossType;
 
 	// Use this for initialization
-	void Start ()
+	public override void Start ()
 	{
 		GameManager.SetBossType( bossType );
 	}

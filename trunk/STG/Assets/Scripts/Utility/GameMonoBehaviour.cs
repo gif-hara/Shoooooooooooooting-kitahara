@@ -106,12 +106,7 @@ public class GameMonoBehaviour : MonoBehaviourExtension
 		
 		return obj;
 	}
-
-	public static GameObject InstantiateToLayer( GameDefine.LayerType layerType, GameObject prefab )
-	{
-		return InstantiateAsChild( ReferenceManager.GetLayerObject( layerType ), prefab );
-	}
-
+	
 	/// <summary>
 	/// ローカルX座標プロパティ.
 	/// </summary>

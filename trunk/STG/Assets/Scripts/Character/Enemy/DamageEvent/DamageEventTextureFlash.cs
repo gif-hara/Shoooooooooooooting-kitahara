@@ -47,12 +47,7 @@ public class DamageEventTextureFlash : GameMonoBehaviour, I_DamageEvent
 	/// ダメージの色.
 	/// </summary>
 	private readonly Color DamageColor = new Color( 238.0f / 255.0f, 230.0f / 255.0f, 124.0f / 255.0f );
-	
-	/// <summary>
-	/// 瀕死の色.
-	/// </summary>
-	private readonly Color DyingColor = Color.red;
-	
+
 	/// <summary>
 	/// durationに加算する値.
 	/// </summary>
