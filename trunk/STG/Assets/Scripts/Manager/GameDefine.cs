@@ -83,6 +83,11 @@ public class GameDefine : A_Singleton<GameDefine>
 	/// </summary>
 	public const string EnemyDestroyOnHitPointChangeEventMessage = "OnEnemyDestroyOnHitPointChangeEvent";
 
+	/// <summary>
+	/// ヒットポイントイベント時にゲームオブジェクトが死亡するメッセージ.
+	/// </summary>
+	public const string GameObjectDestroyOnHitPointChangeEventMessage = "OnGameObjectDestroyOnHitPointChangeEvent";
+
 	public override void Awake()
 	{
 		base.Awake();

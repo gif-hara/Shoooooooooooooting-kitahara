@@ -15,6 +15,14 @@ using System.Collections.Generic;
 public class ReferenceManager : A_Singleton<ReferenceManager>
 {
 	/// <summary>
+	/// メインオブジェクトの親オブジェクト.
+	/// </summary>
+	/// <value>The main object holder.</value>
+	public GameObject MainObjectHolder{ get{ return refMainObjectHolder; } }
+	[SerializeField]
+	private GameObject refMainObjectHolder;
+
+	/// <summary>
 	/// エフェクトレイヤー参照.
 	/// </summary>
 	public GameObject refEffectLayer;

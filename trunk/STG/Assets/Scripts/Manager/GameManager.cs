@@ -98,12 +98,16 @@ public class GameManager : GameMonoBehaviour
 	/// </param>
 	public void AddGameLevelExperience( float value )
 	{
+		if( this.BossType != GameDefine.BossType.None )	return;
+
 		gameLevelExperience += value;
 		GameLevelUp();
 	}
 	
 	public void AddGameLevel( int value )
 	{
+		if( this.BossType != GameDefine.BossType.None )	return;
+
 		gameLevel += value;
 	}
 	/// <summary>
