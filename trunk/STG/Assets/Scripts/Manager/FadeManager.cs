@@ -24,7 +24,7 @@ public class FadeManager : GameMonoBehaviour
 	
 	private Color fromColor = Color.white;
 	
-	private Color toColor = Color.white;
+	private Color toColor = Color.clear;
 	
 	public override void Start()
 	{
@@ -46,13 +46,24 @@ public class FadeManager : GameMonoBehaviour
 		this.toColor = _to;
 		this.target = target;
 		this.duration = 0;
+		enabled = true;
 	}
 	
 	private void UpdateDuration()
 	{
-		if( duration >= target )	return;
+		if( duration >= target )
+		{
+			SetColor( toColor );
+			enabled = false;
+			return;
+		}
 		
-		refMaterial.SetColor( "_Color", Color.Lerp( fromColor, toColor, (float)duration / target ) );
+		SetColor( Color.Lerp( fromColor, toColor, (float)duration / target ) );
 		duration++;
+	}
+
+	private void SetColor( Color c )
+	{
+		refMaterial.SetColor( "_Color", c );
 	}
 }

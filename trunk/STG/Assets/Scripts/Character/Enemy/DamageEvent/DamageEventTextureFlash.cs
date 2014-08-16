@@ -85,7 +85,7 @@ public class DamageEventTextureFlash : GameMonoBehaviour, I_DamageEvent
 	}
 	
 	// Update is called once per frame
-	public override void LateUpdate()
+	public override void Update()
 	{
 		base.LateUpdate();
 		UpdateColor();
@@ -126,12 +126,8 @@ public class DamageEventTextureFlash : GameMonoBehaviour, I_DamageEvent
 			{
 				return NormalColor;
 			}
-			else if( refEnemy.CurrentHitPointNormalize >= DamageColorNormalize )
-			{
-				return DamageColor;
-			}
-			
-			return DyingColor;
+
+			return DamageColor;
 		}
 	}
 }
