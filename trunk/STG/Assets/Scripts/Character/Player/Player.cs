@@ -98,6 +98,7 @@ public class Player : GameMonoBehaviour
 	public void SetInvincible( int value )
 	{
 		invincibleTime = value;
+		ReferenceManager.Instance.GetLayerObject( GameDefine.LayerType.Enemy ).BroadcastMessage( GameDefine.SetPlayerInvincibleMessage, value, SendMessageOptions.DontRequireReceiver );
 	}
 	/// <summary>
 	/// ミス処理.
@@ -176,7 +177,7 @@ public class Player : GameMonoBehaviour
 	/// </returns>
 	private IEnumerator ResurrectionCoroutine()
 	{
-		invincibleTime = 240;
+		SetInvincible( 240 );
 		
 		int t = 60;
 		while( t > 0 )

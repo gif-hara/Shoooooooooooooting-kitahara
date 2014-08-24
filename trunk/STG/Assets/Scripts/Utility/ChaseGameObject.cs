@@ -32,4 +32,9 @@ public class ChaseGameObject : GameMonoBehaviour
 		
 		Trans.position = Vector3.Lerp( Trans.position, refChaseObject.position, speed );
 	}
+
+	public void ChangeChaseObject( Transform changeObject )
+	{
+		this.refChaseObject = changeObject;
+	}
 }

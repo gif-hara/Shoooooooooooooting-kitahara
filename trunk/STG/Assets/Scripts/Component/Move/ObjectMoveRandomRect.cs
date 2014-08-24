@@ -17,6 +17,10 @@ public class ObjectMoveRandomRect : A_ObjectMove
 	private LookAtObject refLookAtObject;
 	
 	private Transform target;
+
+	private int exceptionTimer = 0;
+
+	private const int ExceptionTime = 120;
 	
 	protected override void InitMove()
 	{
@@ -30,7 +34,8 @@ public class ObjectMoveRandomRect : A_ObjectMove
 	
 	protected override void UpdateMove()
 	{
-		if( Vector3.Distance( refLookAtObject.Trans.position, target.position ) <= 10.0f )
+		if( Vector3.Distance( refLookAtObject.Trans.position, target.position ) <= 10.0f
+		   || this.exceptionTimer > ExceptionTime )
 		{
 			SetTargetPosition();
 		}
@@ -42,6 +47,7 @@ public class ObjectMoveRandomRect : A_ObjectMove
 		
 		data.durationFrame--;
 		refTrans.position -= refLookAtObject.Trans.up * data.speed;
+		this.exceptionTimer++;
 	}
 
 	protected override void Finish ()
@@ -54,5 +60,6 @@ public class ObjectMoveRandomRect : A_ObjectMove
 		float y = Random.Range( data.rect.y, data.rect.height );
 		
 		target.position = new Vector3( x, y, 0.0f );
+		this.exceptionTimer = 0;
 	}
 }

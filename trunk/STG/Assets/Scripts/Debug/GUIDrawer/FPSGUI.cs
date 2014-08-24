@@ -43,6 +43,6 @@ public class FPSGUI : A_GUIElement
 	
 	public override void Draw ()
 	{
-		Label( string.Format( "{0}fps", frameRateStr ) );
+		Label( string.Format( "{1}fps{0}targetFrameRate = {2}", System.Environment.NewLine, frameRateStr, Application.targetFrameRate ) );
 	}
 }

@@ -37,6 +37,12 @@ public class GameDefine : A_Singleton<GameDefine>
 	public static readonly Rect Screen = new Rect( -400.0f, 300.0f, 400.0f, -300.0f );
 
 	/// <summary>
+	/// プレイヤーの無敵時間を設定した際のメッセージ.
+	/// 引数に<c>int invincibleTime</c>が入る.
+	/// </summary>
+	public static string SetPlayerInvincibleMessage = "OnSetPlayerInvincible";
+
+	/// <summary>
 	/// プレイヤーミス時のイベントメッセージ.
 	/// </summary>
 	public static string MissEventMessage = "OnMiss";

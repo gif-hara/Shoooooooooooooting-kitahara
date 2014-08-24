@@ -16,16 +16,16 @@ public class AutoRotation : MonoBehaviour
 	public float speed;
 	
 	public Vector3 axis;
-	
-	// Use this for initialization
-	void Start()
-	{
-	}
 
+	[SerializeField]
+	private float addSpeed;
+	
 	// Update is called once per frame
 	void Update()
 	{
 		transform.localRotation *= Quaternion.AngleAxis( speed, axis );
+
+		speed += addSpeed;
 	}
 
 }

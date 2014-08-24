@@ -24,6 +24,7 @@ public class MeshColorManager
 	/// <summary>
 	/// 現在の色.
 	/// </summary>
+	public Color CurrentColor{ get{ return this.currentColor; } }
 	private Color currentColor = Color.white;
 
 	/// <summary>

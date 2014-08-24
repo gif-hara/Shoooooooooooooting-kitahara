@@ -82,7 +82,7 @@ public class DamageEventTextureFlash : GameMonoBehaviour, I_DamageEvent
 	// Update is called once per frame
 	public override void Update()
 	{
-		base.LateUpdate();
+		base.Update();
 		UpdateColor();
 		duration--;
 	}
