@@ -26,7 +26,7 @@ GameObject:
   - 4: {fileID: 400000}
   - 33: {fileID: 3300000}
   - 23: {fileID: 2300000}
-  - 114: {fileID: 11400004}
+  - 114: {fileID: 11400006}
   m_Layer: 12
   m_Name: Texture
   m_TagString: Untagged
@@ -42,10 +42,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400004}
+  - 114: {fileID: 11400004}
   - 114: {fileID: 11400002}
-  - 114: {fileID: 11400008}
   m_Layer: 0
-  m_Name: EnemyShot4
+  m_Name: EnemyShot13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59,7 +59,7 @@ Transform:
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 30, y: 30, z: 1}
+  m_LocalScale: {x: 36, y: 36, z: 1}
   m_Children: []
   m_Father: {fileID: 400004}
 --- !u!4 &400002
@@ -98,7 +98,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: c04e0f95dad094b95bca3d074a9d1fb6, type: 2}
+  - {fileID: 2100000, guid: cf94daf69a0dbf146a508ac0f06d6a3a, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -128,40 +128,8 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   radius: 2
   delayUpdate: 0
-  refEnemyShot: {fileID: 11400002}
+  refEnemyShot: {fileID: 11400004}
 --- !u!114 &11400002
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e19ab192afb6f5642a2ee3c2ad720861, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cachedTransform: {fileID: 0}
-  prefabExplosion: {fileID: 100002, guid: 01128dc588fe58c46a0a3de362043c1d, type: 2}
-  prefabStarItem: {fileID: 100004, guid: a8f06ee2a43ebdc49b7ed6a9384c7c89, type: 2}
---- !u!114 &11400004
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ba852dac5d554cb784de3a4b480fa37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cachedTransform: {fileID: 0}
-  refDestroyObject: {fileID: 0}
-  refMesh: {fileID: 3300000}
-  tileX: 2
-  tileY: 1
-  interval: 3
-  loop: 1
---- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -175,10 +143,42 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   bounds:
     serializedVersion: 2
-    x: -15
-    y: 15
-    width: 15
-    height: -15
+    x: -10
+    y: 18
+    width: 10
+    height: -18
+--- !u!114 &11400004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19ab192afb6f5642a2ee3c2ad720861, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  prefabExplosion: {fileID: 100002, guid: 01128dc588fe58c46a0a3de362043c1d, type: 2}
+  prefabStarItem: {fileID: 100004, guid: a8f06ee2a43ebdc49b7ed6a9384c7c89, type: 2}
+--- !u!114 &11400006
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ba852dac5d554cb784de3a4b480fa37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  refDestroyObject: {fileID: 0}
+  refMesh: {fileID: 3300000}
+  tileX: 4
+  tileY: 1
+  interval: 4
+  loop: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
