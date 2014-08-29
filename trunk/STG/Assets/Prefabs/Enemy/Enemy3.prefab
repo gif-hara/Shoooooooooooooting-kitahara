@@ -9,11 +9,14 @@ GameObject:
   m_Component:
   - 4: {fileID: 400000}
   - 114: {fileID: 11400020}
-  - 114: {fileID: 11400022}
   - 114: {fileID: 11400024}
   - 114: {fileID: 11400026}
   - 114: {fileID: 11400038}
   - 114: {fileID: 11400044}
+  - 114: {fileID: 11400062}
+  - 114: {fileID: 11400032}
+  - 114: {fileID: 11400022}
+  - 114: {fileID: 11400006}
   m_Layer: 0
   m_Name: Muzzle2
   m_TagString: Untagged
@@ -82,11 +85,14 @@ GameObject:
   m_Component:
   - 4: {fileID: 400008}
   - 114: {fileID: 11400016}
-  - 114: {fileID: 11400002}
   - 114: {fileID: 11400000}
   - 114: {fileID: 11400010}
   - 114: {fileID: 11400040}
   - 114: {fileID: 11400046}
+  - 114: {fileID: 11400060}
+  - 114: {fileID: 11400056}
+  - 114: {fileID: 11400018}
+  - 114: {fileID: 11400002}
   m_Layer: 0
   m_Name: Muzzle1
   m_TagString: Untagged
@@ -104,13 +110,12 @@ GameObject:
   - 4: {fileID: 400010}
   - 114: {fileID: 11400014}
   - 114: {fileID: 11400012}
-  - 114: {fileID: 11400018}
   - 114: {fileID: 11400028}
-  - 114: {fileID: 11400030}
   - 114: {fileID: 11400034}
-  - 114: {fileID: 11400032}
   - 114: {fileID: 11400042}
   - 114: {fileID: 11400048}
+  - 114: {fileID: 11400058}
+  - 114: {fileID: 11400030}
   m_Layer: 0
   m_Name: Muzzle0
   m_TagString: Untagged
@@ -331,7 +336,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100016}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 205.33197, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400014}
@@ -445,7 +450,7 @@ MonoBehaviour:
   enableTuning: 1
   element:
     min: 2
-    max: 4
+    max: 3
     current: 4
     curve:
       serializedVersion: 2
@@ -470,16 +475,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 100008}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df8f76eece275b24babeb9cb2161aaa3, type: 3}
+  m_Script: {fileID: 11500000, guid: c0f7a33b00ab7d540ac671b9289ecf0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   setType: 0
   enableTuning: 1
   element:
-    min: 30
-    max: 90
-    current: 90
+    min: 0
+    max: 25
+    current: 0
     curve:
       serializedVersion: 2
       m_Curve:
@@ -495,7 +500,6 @@ MonoBehaviour:
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
-  origin: 180
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -514,6 +518,39 @@ MonoBehaviour:
   damageRate: 1
   refEnemyControllerBaseList:
   - {fileID: 11400008}
+--- !u!114 &11400006
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0f7a33b00ab7d540ac671b9289ecf0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  setType: 0
+  enableTuning: 1
+  element:
+    min: 0
+    max: 25
+    current: 0
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 10
+      - time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -531,8 +568,6 @@ MonoBehaviour:
   addScore: 1000
   addGameLevelExperience: 15
   invincibleTimer: 20
-  prefabDestroyEffect: {fileID: 100002, guid: c302937e36dc5234e9ccbcfa5472cb72, type: 2}
-  destroySELabel: Dead1
   deadEventObject: {fileID: 100024}
   damageEventObject: {fileID: 100022}
   bounds:
@@ -557,7 +592,7 @@ MonoBehaviour:
   setType: 0
   enableTuning: 1
   element:
-    min: 100
+    min: 5
     max: 5
     current: 5
     curve:
@@ -635,7 +670,7 @@ MonoBehaviour:
   shotId: 0
   speed: 4
   interval: 5
-  number: 1
+  number: 2
   range: 0
   multipleNum: 1
   isLock: 0
@@ -645,41 +680,41 @@ MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100010}
+  m_GameObject: {fileID: 100008}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a0fc5a6a9d7f9e448504b7aabe33a93, type: 3}
+  m_Script: {fileID: 11500000, guid: 21f9daa6998d02a4b9fb6d992804094b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
-  setType: 1
+  setType: 0
   enableTuning: 1
   element:
-    min: 30
-    max: -30
-    current: -10.0000153
+    min: 4
+    max: 6
+    current: 0
     curve:
       serializedVersion: 2
       m_Curve:
       - time: 0
         value: 0
-        inSlope: 2.00000072
-        outSlope: 2.00000072
-        tangentMode: 1
-      - time: .49999997
-        value: 1.00000024
-        inSlope: 2.00000072
-        outSlope: -1.99603093
-        tangentMode: 21
-      - time: 1.00054693
-        value: .000893047079
-        inSlope: -1.99603093
-        outSlope: -1.28750771e-05
-        tangentMode: 21
+        inSlope: 1.33333337
+        outSlope: 1.33333337
+        tangentMode: 10
+      - time: .75
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      - time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
-  separate: 12
-  currentSeparate: 4
+  separate: 5
+  currentSeparate: 0
 --- !u!114 &11400020
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -695,7 +730,7 @@ MonoBehaviour:
   shotId: 0
   speed: 4
   interval: 5
-  number: 1
+  number: 2
   range: 0
   multipleNum: 1
   isLock: 0
@@ -708,32 +743,38 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df8f76eece275b24babeb9cb2161aaa3, type: 3}
+  m_Script: {fileID: 11500000, guid: 21f9daa6998d02a4b9fb6d992804094b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   setType: 0
   enableTuning: 1
   element:
-    min: 30
-    max: 90
-    current: 90
+    min: 4
+    max: 6
+    current: 0
     curve:
       serializedVersion: 2
       m_Curve:
       - time: 0
         value: 0
-        inSlope: 1
-        outSlope: 1
+        inSlope: 1.33333337
+        outSlope: 1.33333337
         tangentMode: 10
+      - time: .75
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
       - time: 1
         value: 1
-        inSlope: 1
-        outSlope: 1
+        inSlope: 0
+        outSlope: 0
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
-  origin: 180
+  separate: 5
+  currentSeparate: 0
 --- !u!114 &11400024
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -750,7 +791,7 @@ MonoBehaviour:
   enableTuning: 1
   element:
     min: 2
-    max: 4
+    max: 3
     current: 4
     curve:
       serializedVersion: 2
@@ -782,7 +823,7 @@ MonoBehaviour:
   setType: 0
   enableTuning: 1
   element:
-    min: 100
+    min: 5
     max: 5
     current: 5
     curve:
@@ -815,8 +856,8 @@ MonoBehaviour:
   setType: 0
   enableTuning: 1
   element:
-    min: 22
-    max: 4
+    min: 5
+    max: 5
     current: 2
     curve:
       serializedVersion: 2
@@ -841,64 +882,67 @@ MonoBehaviour:
   m_GameObject: {fileID: 100010}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d55bcc93048a6184fb9a1d1756ef8db2, type: 3}
+  m_Script: {fileID: 11500000, guid: 24bb43378ebfffd43a4e423dfd91df23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
-  targetList: []
+  setType: 0
+  enableTuning: 1
   element:
-    min: 4
-    max: 12
-    current: 12
+    min: 60
+    max: 15
+    current: 0
     curve:
       serializedVersion: 2
       m_Curve:
       - time: 0
         value: 0
         inSlope: 1
-        outSlope: 1.4707495
-        tangentMode: 21
-      - time: .340021074
-        value: .500085831
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 31
-      - time: .700109065
-        value: 1.00005412
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 31
+        outSlope: 1
+        tangentMode: 10
       - time: 1
         value: 1
-        inSlope: -.000180468996
-        outSlope: -.000180468996
+        inSlope: 1
+        outSlope: 1
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+  separate: 5
+  currentSeparate: 0
 --- !u!114 &11400032
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100010}
+  m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27d8e41b75a98e24a8801c533cbf25bc, type: 3}
+  m_Script: {fileID: 11500000, guid: 24bb43378ebfffd43a4e423dfd91df23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   setType: 0
-  enableTuning: 0
+  enableTuning: 1
   element:
-    min: 0
-    max: 0
+    min: 60
+    max: 15
     current: 0
     curve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 10
+      - time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
-  separate: 1
+  separate: 5
   currentSeparate: 0
 --- !u!114 &11400034
 MonoBehaviour:
@@ -966,7 +1010,7 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   element:
     min: 120
-    max: 13
+    max: 20
     current: 0
     curve:
       serializedVersion: 2
@@ -997,7 +1041,7 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   element:
     min: 120
-    max: 13
+    max: 20
     current: 0
     curve:
       serializedVersion: 2
@@ -1027,8 +1071,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   element:
-    min: 90
-    max: 10
+    min: 120
+    max: 20
     current: 0
     curve:
       serializedVersion: 2
@@ -1161,6 +1205,105 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   prefab: {fileID: 100002, guid: c302937e36dc5234e9ccbcfa5472cb72, type: 2}
+--- !u!114 &11400056
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24bb43378ebfffd43a4e423dfd91df23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  setType: 0
+  enableTuning: 1
+  element:
+    min: 60
+    max: 15
+    current: 0
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 10
+      - time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+  separate: 5
+  currentSeparate: 0
+--- !u!114 &11400058
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21f9daa6998d02a4b9fb6d992804094b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  setType: 0
+  enableTuning: 1
+  element:
+    min: 0
+    max: 3
+    current: 0
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 1.26582289
+        outSlope: 1.26582289
+        tangentMode: 10
+      - time: .789999962
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      - time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+  separate: 5
+  currentSeparate: 0
+--- !u!114 &11400060
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fae1cc5a76168b3449dcbd07241eb72a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  refTarget: {fileID: 400010}
+--- !u!114 &11400062
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fae1cc5a76168b3449dcbd07241eb72a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  refTarget: {fileID: 400010}
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1
