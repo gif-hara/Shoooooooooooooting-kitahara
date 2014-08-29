@@ -30,12 +30,19 @@ public class ObjectMoveChasePlayer : A_ObjectMove
 
 		var newObj = new GameObject( "[ObjectMoveChasePlayer]RotationObject" );
 		rotationObject = newObj.transform;
+		SyncPlayerPosition();
+		rotationObject.LookAt( refPlayer, Vector3.forward );
+		rotationObject.rotation *= Quaternion.AngleAxis( -90.0f, Vector3.right );
 	}
 	
 	public override void LateUpdate()
 	{
 		base.LateUpdate();
-		if( data.delayFrame > 0 )	return;
+		if (data.delayFrame > 0)
+		{
+			UpdateRotaionObjectTransformFromWait();
+			return;
+		}
 		
 		if( data.isSyncRotation )
 		{
@@ -114,5 +121,15 @@ public class ObjectMoveChasePlayer : A_ObjectMove
 		velocity.Normalize();
 		refTrans.position += velocity * data.curve0.Evaluate( Duration ) * data.speed;
 		currentDuration++;
+	}
+
+	/// <summary>
+	/// 待機時の回転オブジェクトの姿勢更新処理.
+	/// </summary>
+	private void UpdateRotaionObjectTransformFromWait()
+	{
+		SyncPlayerPosition ();
+		rotationObject.LookAt( refPlayer, Vector3.forward );
+		rotationObject.rotation *= Quaternion.AngleAxis( -90.0f, Vector3.right );
 	}
 }
