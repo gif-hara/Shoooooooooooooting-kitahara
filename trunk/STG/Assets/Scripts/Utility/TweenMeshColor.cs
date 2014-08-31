@@ -35,6 +35,12 @@ public class TweenMeshColor : MonoBehaviour
 
 	private int currentDuration;
 
+	[ContextMenu( "Attach MeshFilter" )]
+	void AttachMeshFilter()
+	{
+		this.refMeshFIlter = gameObject.GetComponent<MeshFilter>();
+	}
+
 	// Use this for initialization
 	void Start ()
 	{
