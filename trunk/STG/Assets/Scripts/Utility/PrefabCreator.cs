@@ -71,15 +71,27 @@ public class PrefabCreator : GameMonoBehaviour
 	{
 		elementList.ForEach( (obj) => 
 		{
-			Transform p = InstantiateAsChild( obj.parent, obj.prefab ).transform;
-			p.gameObject.layer = obj.prefab.layer;
-			
-			p.localRotation = Quaternion.identity;
-			p.localPosition = Vector3.zero;
-			if( obj.detachParent )
-			{
-				p.parent = null;
-			}
+			CreatePrefab( obj );
 		});
+	}
+
+	private void CreatePrefab( Element element )
+	{
+		var obj = element.parent == null
+			? (Instantiate( element.prefab, element.prefab.transform.position, element.prefab.transform.rotation ) as GameObject).transform
+			: InstantiateAsChild( element.parent, element.prefab ).transform;
+
+		obj.gameObject.layer = element.prefab.layer;
+
+		if( element.parent != null )
+		{
+			obj.localRotation = Quaternion.identity;
+			obj.localPosition = Vector3.zero;
+		}
+
+		if( element.detachParent )
+		{
+			obj.parent = null;
+		}
 	}
 }
