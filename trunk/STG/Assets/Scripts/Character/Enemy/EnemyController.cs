@@ -107,6 +107,22 @@ public class EnemyController : EnemyControllerBase
 	/// </summary>
 	public event System.Action updateFunc = null;
 
+	[ContextMenu( "Add Texture Event" )]
+	void AddTextureEvent()
+	{
+		if( gameObject.GetComponentInChildren<TextureFlashFromEnemyHitPoint>() != null )
+		{
+			Debug.Log( "TextureEvent is already exists." );
+			return;
+		}
+
+		GameObject eventObject = new GameObject( "TextureEvent" );
+		eventObject.transform.parent = transform;
+		var textureFlashEvent = eventObject.AddComponent<TextureFlashFromEnemyHitPoint>();
+		textureFlashEvent.SelectEnemy( this );
+		textureFlashEvent.AllSelect();
+	}
+
 	public override void Awake()
 	{
 		base.Awake();

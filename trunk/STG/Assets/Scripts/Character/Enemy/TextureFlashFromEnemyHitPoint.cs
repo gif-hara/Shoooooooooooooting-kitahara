@@ -39,17 +39,24 @@ public class TextureFlashFromEnemyHitPoint : GameMonoBehaviour
 	/// </summary>
 	private readonly Color DyingColor = Color.red;
 
+	private const int FlashInterval = 30;
+
 	[ContextMenu( "All Select Renderer" )]
-	void AllSelect()
+	public void AllSelect()
 	{
-		refRendererList.Clear();
+		refRendererList = new List<Renderer>();
 		refEnemy.Trans.AllVisit( (t) =>
-		                        {
+		{
 			if( t.renderer != null )
 			{
 				refRendererList.Add( t.renderer );
 			}
 		});
+	}
+
+	public void SelectEnemy( EnemyController enemy )
+	{
+		this.refEnemy = enemy;
 	}
 
 	public override void Start ()
@@ -61,11 +68,11 @@ public class TextureFlashFromEnemyHitPoint : GameMonoBehaviour
 	{
 		if( !IsUpdate )	return;
 
-		if( timer % 60 < 2 )
+		if( timer % FlashInterval < 2 )
 		{
 			this.meshColorManager.SetColor( DyingColor );
 		}
-		else if( timer % 60 == 2 )
+		else if( timer % FlashInterval == 2 )
 		{
 			this.meshColorManager.SetColor( NormalColor );
 		}
