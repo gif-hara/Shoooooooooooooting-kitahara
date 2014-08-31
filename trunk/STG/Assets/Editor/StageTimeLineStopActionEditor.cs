@@ -12,7 +12,7 @@ using UnityEditor;
 using System.Collections;
 using System.Collections.Generic;
 
-//[CustomEditor( typeof( StageTimeLineStopAction ) )]
+[CustomEditor( typeof( StageTimeLineStopAction ) )]
 public class StageTimeLineStopActionEditor : A_StageTimeLineActionEditor<StageTimeLineStopAction>
 {
 	public override void OnInspectorGUI()

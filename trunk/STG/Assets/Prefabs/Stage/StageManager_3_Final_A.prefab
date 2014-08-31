@@ -26,7 +26,7 @@ GameObject:
   - 4: {fileID: 400002}
   - 114: {fileID: 11400002}
   m_Layer: 0
-  m_Name: StageManager_3_Final
+  m_Name: StageManager_3_Final_A
   m_TagString: Stage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,6 +76,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400002}
+  m_RootOrder: 0
 --- !u!4 &400002
 Transform:
   m_ObjectHideFlags: 1
@@ -90,6 +91,7 @@ Transform:
   - {fileID: 400006}
   - {fileID: 400004}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
 --- !u!4 &400004
 Transform:
   m_ObjectHideFlags: 1
@@ -101,6 +103,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400002}
+  m_RootOrder: 2
 --- !u!4 &400006
 Transform:
   m_ObjectHideFlags: 1
@@ -112,6 +115,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400002}
+  m_RootOrder: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -125,6 +129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400000}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 25
   initialPosition: {x: -87.7754059, y: 417.873657, z: 0}
   dataList:
@@ -232,6 +237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c83d69a130d0af64dad36c9d180c8dbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isBasicRoot: 0
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -245,6 +251,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400004}
   timeLine: 1000
+  refActionConditioner: {fileID: 0}
   prefabNextStage: {fileID: 100358, guid: 4137132c3b2164591982f973a8a06c98, type: 2}
   prefabExtensionStage: {fileID: 0}
   refConditioner: {fileID: 11400004}
@@ -261,6 +268,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400006}
   timeLine: 500
+  refActionConditioner: {fileID: 0}
   delayDuration: 0
   exceptionDuration: 999999999
   needDestroyEnemyId: 25

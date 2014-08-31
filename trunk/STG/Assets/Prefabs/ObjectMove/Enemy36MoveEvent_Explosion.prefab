@@ -9,7 +9,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 400000}
   - 114: {fileID: 11400002}
-  - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: Enemy36MoveEvent_Explosion
   m_TagString: Untagged
@@ -28,58 +27,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5356b717e1a9f7148b55944595a24437, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cachedTransform: {fileID: 0}
-  refTrans: {fileID: 0}
-  data:
-    targetPosition: {x: 0, y: 0, z: 0}
-    curve0:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 0
-        inSlope: 1
-        outSlope: 1
-        tangentMode: 10
-      - time: 1
-        value: 1
-        inSlope: 1
-        outSlope: 1
-        tangentMode: 10
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    curve1:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    speed: .5
-    delayFrame: 0
-    durationFrame: 9999999
-    isDestroy: 0
-    isOnOverDistance: 0
-    isSyncRotation: 0
-    rect:
-      serializedVersion: 2
-      x: -50
-      y: 200
-      width: 50
-      height: 190
-    moveType: 0
-    initFuncName: 
-    prefabiTweenPath: {fileID: 0}
-    offset: {x: 0, y: 0}
-    isReverse: 0
+  m_RootOrder: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -94,7 +42,7 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   refTrans: {fileID: 0}
   data:
-    targetPosition: {x: 0, y: 400, z: 0}
+    targetPosition: {x: 0, y: 480, z: 0}
     curve0:
       serializedVersion: 2
       m_Curve:
