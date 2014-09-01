@@ -47,9 +47,9 @@ public class TextureFlashFromEnemyHitPoint : GameMonoBehaviour
 		refRendererList = new List<Renderer>();
 		refEnemy.Trans.AllVisit( (t) =>
 		{
-			if( t.renderer != null )
+			if( t.GetComponent<MeshRenderer>() != null )
 			{
-				refRendererList.Add( t.renderer );
+				refRendererList.Add( t.GetComponent<MeshRenderer>() );
 			}
 		});
 	}
