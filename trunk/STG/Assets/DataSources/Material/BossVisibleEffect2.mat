@@ -48,21 +48,29 @@ Material:
         second: 1
       data:
         first:
+          name: _InvFade
+        second: 1
+      data:
+        first:
           name: _Shininess
         second: .100000016
       data:
         first:
           name: _Focus
         second: -100
-      data:
-        first:
-          name: _InvFade
-        second: 1
     m_Colors:
       data:
         first:
           name: _Color
         second: {r: 1, g: 1, b: 1, a: 0}
+      data:
+        first:
+          name: _ColorAlpha
+        second: {r: 0, g: 0, b: 0, a: 0}
+      data:
+        first:
+          name: _TintColor
+        second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
           name: _SpecColor
@@ -79,11 +87,3 @@ Material:
         first:
           name: _Specular
         second: {r: 0, g: 0, b: 0, a: 0}
-      data:
-        first:
-          name: _ColorAlpha
-        second: {r: 0, g: 0, b: 0, a: 0}
-      data:
-        first:
-          name: _TintColor
-        second: {r: 1, g: 1, b: 1, a: 1}
