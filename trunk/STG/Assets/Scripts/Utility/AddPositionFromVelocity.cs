@@ -27,7 +27,13 @@ public class AddPositionFromVelocity : MonoBehaviour
 	public float speed;
 	
 	private int maxDuration;
-	
+
+	[ContextMenu( "Normalize" )]
+	void Normalize()
+	{
+		this.velocity = this.velocity.normalized;
+	}
+
 	// Use this for initialization
 	void Start()
 	{
