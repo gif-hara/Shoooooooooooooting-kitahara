@@ -16,13 +16,26 @@ using System.Collections;
 /// </summary>
 public class ScoreManager : GameMonoBehaviour
 {
-	public int scoreItemCreateInterval;
+	[System.Serializable]
+	public class StarItemCreateCondition
+	{
+		public GameObject Prefab{ get{ return prefab; } }
+		[SerializeField]
+		private GameObject prefab;
 
+		public int Min{ get{ return min; } }
+		[SerializeField]
+		private int min;
+
+		public int Max{ get{ return max; } }
+		[SerializeField]
+		private int max;
+	}
 	/// <summary>
-	/// 加算されるスコアリスト.
+	/// 星アイテムプレハブリスト.
 	/// </summary>
 	[SerializeField]
-	private List<int> addScoreList;
+	private List<StarItemCreateCondition> starItemConditionList;
 
 	/// <summary>
 	/// スコア.
@@ -35,10 +48,6 @@ public class ScoreManager : GameMonoBehaviour
 	/// </summary>
 	public List<int> EarnedScoreItemList{ get{ return earnedScoreItemList; } }
 	private List<int> earnedScoreItemList = null;
-
-	public override void Awake ()
-	{
-	}
 
 	/// <summary>
 	/// スコアの加算.
@@ -66,9 +75,33 @@ public class ScoreManager : GameMonoBehaviour
 	/// <summary>
 	/// スターアイテムの獲得.
 	/// </summary>
-	public void EarnedStarItem()
+	public void EarnedStarItem( StarItemController starItem )
 	{
-		ulong value = 1 + (ulong)GameManager.CollisionEnemyShot / 10;
+		ulong value = (ulong)GameManager.GameLevel * (ulong)starItem.AddScoreRate;
 		AddScore( value );
+	}
+
+	public void CreateStarItem( Vector3 position )
+	{
+		var starItem = InstantiateAsChild( ReferenceManager.refEffectLayer, PrefabStarItem );
+		starItem.transform.position = position;
+	}
+
+	private GameObject PrefabStarItem
+	{
+		get
+		{
+			int gameLevel = GameManager.GameLevel;
+			for( int i=0,imax=this.starItemConditionList.Count; i<imax; i++ )
+			{
+				var s = this.starItemConditionList[i];
+				if( gameLevel >= s.Min && gameLevel < s.Max )
+				{
+					return s.Prefab;
+				}
+			}
+
+			return null;
+		}
 	}
 }

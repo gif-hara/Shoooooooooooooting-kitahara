@@ -14,10 +14,7 @@ using System.Collections;
 public class EnemyShot : A_Shot
 {
 	public GameObject prefabExplosion;
-
-	[SerializeField]
-	private GameObject prefabStarItem;
-
+	
 	private bool isExplosion = false;
 	
 	public void Explosion()
@@ -39,8 +36,7 @@ public class EnemyShot : A_Shot
 		var pos = Trans.position;
 		FrameRateUtility.StartCoroutine( 20, () =>
 		{
-			var starItem = InstantiateAsChild( ReferenceManager.refEffectLayer, prefabStarItem );
-			starItem.transform.position = pos;
+			ScoreManager.CreateStarItem( pos );
 		});
 	}
 

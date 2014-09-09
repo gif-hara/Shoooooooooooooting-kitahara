@@ -16,6 +16,10 @@ using System.Collections.Generic;
 /// </summary>
 public class StarItemController : A_ItemController
 {
+	public int AddScoreRate{ get{ return addScoreRate; } }
+	[SerializeField]
+	private int addScoreRate;
+
 	[SerializeField]
 	private PlayerChaseOnSpeed refChasePlayer;
 
@@ -29,6 +33,7 @@ public class StarItemController : A_ItemController
 	}
 	public override void OnPlayerCollide()
 	{
-		ScoreManager.EarnedStarItem();
+		ScoreManager.EarnedStarItem( this );
+		ReferenceManager.Instance.refSoundManager.Play( "StarGet" );
 	}
 }
