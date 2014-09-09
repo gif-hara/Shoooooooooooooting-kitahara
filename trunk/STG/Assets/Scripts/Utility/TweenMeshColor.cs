@@ -66,4 +66,9 @@ public class TweenMeshColor : MonoBehaviour
 		meshManager.SetColor( Color.Lerp( from, to, (float)currentDuration / (float)duration ) );
 		currentDuration++;
 	}
+
+	public void SetDelay( int value )
+	{
+		this.delay = value;
+	}
 }
