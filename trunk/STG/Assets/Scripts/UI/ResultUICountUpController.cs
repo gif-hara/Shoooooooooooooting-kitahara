@@ -12,7 +12,7 @@ using System.Collections.Generic;
 using System.Collections;
 
 /// <summary>
-/// .
+/// 廃止予定.
 /// </summary>
 public class ResultUICountUpController : GameMonoBehaviour
 {
@@ -49,16 +49,16 @@ public class ResultUICountUpController : GameMonoBehaviour
 		int itemNum = ScoreManager.EarnedScoreItemList[id];
 		while( currentNum != itemNum )
 		{
-			if( Input.GetKey( KeyCode.Z ) )
-			{
-				ScoreManager.EarnedScoreItem( id, itemNum - currentNum );
-				currentNum = itemNum;
-			}
-			else
-			{
-				currentNum++;
-				ScoreManager.EarnedScoreItem( id );
-			}
+//			if( Input.GetKey( KeyCode.Z ) )
+//			{
+//				ScoreManager.EarnedScoreItem( id, itemNum - currentNum );
+//				currentNum = itemNum;
+//			}
+//			else
+//			{
+//				currentNum++;
+//				ScoreManager.EarnedScoreItem( id );
+//			}
 
 			SoundManager.Play( "ResultCountUp" );
 			refTextMesh.text = StringAsset.Format( "ResultNumber", currentNum.ToString() );

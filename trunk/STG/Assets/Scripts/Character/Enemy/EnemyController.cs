@@ -292,8 +292,7 @@ public class EnemyController : EnemyControllerBase
 		
 		// スコアの加算.
 		ScoreManager.AddScoreRateGameLevel( (ulong)addScore );
-		ScoreManager.DestroyEnemy( Trans.position );
-		
+
 		// ゲームレベル経験値の加算.
 		GameManager.AddGameLevelExperience( addGameLevelExperience );
 		

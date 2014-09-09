@@ -19,12 +19,6 @@ public class ScoreManager : GameMonoBehaviour
 	public int scoreItemCreateInterval;
 
 	/// <summary>
-	/// スコアアイテムプレハブリスト.
-	/// </summary>
-	[SerializeField]
-	private List<GameObject> prefabScoreItemList;
-
-	/// <summary>
 	/// 加算されるスコアリスト.
 	/// </summary>
 	[SerializeField]
@@ -42,18 +36,8 @@ public class ScoreManager : GameMonoBehaviour
 	public List<int> EarnedScoreItemList{ get{ return earnedScoreItemList; } }
 	private List<int> earnedScoreItemList = null;
 
-	/// <summary>
-	/// 倒した敵の数.
-	/// </summary>
-	private int destroyEnemyNum = 0;
-
 	public override void Awake ()
 	{
-		earnedScoreItemList = new List<int>();
-		prefabScoreItemList.ForEach( p =>
-		{
-			earnedScoreItemList.Add( 0 );
-		});
 	}
 
 	/// <summary>
@@ -80,42 +64,11 @@ public class ScoreManager : GameMonoBehaviour
 		AddScore( value );
 	}
 	/// <summary>
-	/// スコアアイテムの獲得.
-	/// </summary>
-	/// <param name="id">Identifier.</param>
-	public void EarnedScoreItem( int id )
-	{
-		EarnedScoreItem( id, 1 );
-	}
-	public void EarnedScoreItem( int id, int num )
-	{
-		earnedScoreItemList[id] += num;
-		AddScore( (ulong)addScoreList[id] * (ulong)num ); 
-	}
-	/// <summary>
 	/// スターアイテムの獲得.
 	/// </summary>
 	public void EarnedStarItem()
 	{
 		ulong value = 1 + (ulong)GameManager.CollisionEnemyShot / 10;
 		AddScore( value );
-	}
-	public void DestroyEnemy( Vector3 destroyPosition )
-	{
-		destroyEnemyNum++;
-		if( destroyEnemyNum % scoreItemCreateInterval == 0 )
-		{
-			var item = InstantiateAsChild( ReferenceManager.Instance.refEffectLayer, CreatableScoreItem );
-			item.transform.localPosition = destroyPosition;
-		}
-	}
-
-	private GameObject CreatableScoreItem
-	{
-		get
-		{
-			int id = (GameManager.GameLevel / 20);
-			return prefabScoreItemList[id];
-		}
 	}
 }
