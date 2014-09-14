@@ -1,12 +1,10 @@
-﻿//================================================
-/*!
-    @file   TweenMeshColor.cs
-
-    @brief  .
-
-    @author CyberConnect2 Co.,Ltd.  Hiroki_Kitahara.
+﻿/*===========================================================================*/
+/*
+*     * FileName    : TweenTextMeshColor.cs
+*
+*     * Author      : Hiroki_Kitahara.
 */
-//================================================
+/*===========================================================================*/
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -14,45 +12,40 @@ using System.Collections.Generic;
 /// <summary>
 /// .
 /// </summary>
-public class TweenMeshColor : MonoBehaviour
+public class TweenTextMeshColor : MonoBehaviour
 {
 	[SerializeField]
-	private MeshFilter refMeshFIlter;
-
+	private TextMesh refTextMesh;
+	
 	[SerializeField]
 	private int delay;
-
+	
 	[SerializeField]
 	private int duration;
-
+	
 	[SerializeField]
 	private Color from = Color.white;
-
+	
 	[SerializeField]
 	private Color to = Color.white;
 
 	[SerializeField]
 	private GameObject refCompleteEventReceiver;
-	
+
 	[SerializeField]
 	private string completeFunctionName;
-
-	private MeshColorManager meshManager;
-
+	
 	private int currentDuration;
-
-	[ContextMenu( "Attach MeshFilter" )]
+	
+	[ContextMenu( "Attach TextMesh" )]
 	void AttachMeshFilter()
 	{
-		this.refMeshFIlter = gameObject.GetComponent<MeshFilter>();
+		this.refTextMesh = gameObject.GetComponent<TextMesh>();
 	}
-
+	
 	// Use this for initialization
 	void Start ()
 	{
-		meshManager = new MeshColorManager();
-		meshManager.Initialize( refMeshFIlter );
-		meshManager.SetColor( from );
 		currentDuration = 0;
 	}
 	
@@ -71,18 +64,17 @@ public class TweenMeshColor : MonoBehaviour
 			{
 				refCompleteEventReceiver.SendMessage( completeFunctionName );
 			}
-
 			return;
 		}
-		meshManager.SetColor( Color.Lerp( from, to, (float)currentDuration / (float)duration ) );
+		refTextMesh.color = Color.Lerp( from, to, (float)currentDuration / (float)duration );
 		currentDuration++;
 	}
-
+	
 	public void SetDelay( int value )
 	{
 		this.delay = value;
 	}
-
+	
 	public void Begin()
 	{
 		enabled = true;

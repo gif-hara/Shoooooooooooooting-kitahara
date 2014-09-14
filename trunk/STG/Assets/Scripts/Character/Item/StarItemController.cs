@@ -16,6 +16,10 @@ using System.Collections.Generic;
 /// </summary>
 public class StarItemController : A_ItemController
 {
+	public int Id{ get{ return Id; } }
+	[SerializeField]
+	private int id;
+
 	public int AddScoreRate{ get{ return addScoreRate; } }
 	[SerializeField]
 	private int addScoreRate;

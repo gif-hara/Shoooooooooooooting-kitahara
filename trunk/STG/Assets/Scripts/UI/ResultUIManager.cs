@@ -16,9 +16,18 @@ using System.Collections;
 /// </summary>
 public class ResultUIManager : GameMonoBehaviour
 {
-	[SerializeField]
-	private List<GameObject> refCountUpObjectList;
+	public class EffectData
+	{
+		public int effectId;
 
+		public int receivedCount;
+
+		public EffectData( int effectId )
+		{
+			this.effectId = effectId;
+			this.receivedCount = 0;
+		}
+	}
 	[SerializeField]
 	private TweenMeshColor prefabBackgroundStartEffect;
 
@@ -34,30 +43,35 @@ public class ResultUIManager : GameMonoBehaviour
 	[SerializeField]
 	private int interval;
 
-	private List<GameObject> createdBackgroundStartEffect = new List<GameObject>();
+	[SerializeField]
+	private int startEffectEndDelay;
 
-	private int currentCountUpNum = 0;
+	[SerializeField]
+	private List<GameObject> refEffectObjects;
+
+	private int effectObjectExecuteId = 0;
+
+	private int effectSequenceId = 0;
+
+	private int receivedEffectTask = 0;
+
+	private List<GameObject> createdBackgroundStartEffect = new List<GameObject>();
 
 	private bool endCountUp = false;
 
+	private const string ExecuteMessage = "OnEffectExecute";
+
+	public const string CompleteMessage = "OnCompleteEffectModule";
+
 	public override void Start ()
 	{
-//		Next();
-
 	}
 
 	public override void Update ()
 	{
 		if( Input.GetKeyDown( KeyCode.J ) )
 		{
-			for( int i=0; i<createNum; i++ )
-			{
-				var obj = InstantiateAsChild( Trans, prefabBackgroundStartEffect.gameObject ).GetComponent<TweenMeshColor>();
-				obj.SetDelay( interval * i );
-				obj.transform.localPosition = new Vector2( Random.Range( rect.x, rect.width ), Random.Range( rect.y, rect.height ) );
-				this.createdBackgroundStartEffect.Add( obj.gameObject );
-			}
-			
+			StartResult();
 		}
 		if( Input.GetKeyDown( KeyCode.K ) )
 		{
@@ -72,34 +86,64 @@ public class ResultUIManager : GameMonoBehaviour
 		}
 		if( !endCountUp )	return;
 
-		if( !Input.GetKeyDown( KeyCode.Z ) )	return;
-
-		refCountUpObjectList.ForEach( c =>
-		                             {
-			c.GetComponent<ResultUICountUpController>().EndEffect();
-		});
 	}
 
-	public void Next()
+	void OnCompleteEffectModule()
 	{
-		if( refCountUpObjectList.Count == currentCountUpNum )
+		this.receivedEffectTask--;
+		Debug.Log( "OnCompleteEffectModule this.receivedEffectTask = " + this.receivedEffectTask );
+
+		if( this.receivedEffectTask == 0 )
 		{
-			End();
-		}
-		else
-		{
-			NextCountUp();
+			EnumerateResultUI();
 		}
 	}
 
-	private void NextCountUp()
+	private void StartResult()
 	{
-		refCountUpObjectList[currentCountUpNum].SetActive( true );
-		currentCountUpNum++;
+		for( int i=0; i<createNum; i++ )
+		{
+			var obj = InstantiateAsChild( Trans, prefabBackgroundStartEffect.gameObject ).GetComponent<TweenMeshColor>();
+			obj.SetDelay( interval * i );
+			obj.transform.localPosition = new Vector2( Random.Range( rect.x, rect.width ), Random.Range( rect.y, rect.height ) );
+			this.createdBackgroundStartEffect.Add( obj.gameObject );
+		}
+
+		FrameRateUtility.StartCoroutine( startEffectEndDelay, EnumerateResultUI );
 	}
 
-	private void End()
+	private void EnumerateResultUI()
 	{
-		endCountUp = true;
+		var effectObject = this.refEffectObjects[this.effectObjectExecuteId];
+		Debug.Log( effectObject.name );
+		var effectData = new EffectData( this.effectSequenceId );
+		effectObject.BroadcastMessage( ExecuteMessage, effectData, SendMessageOptions.RequireReceiver );
+		this.receivedEffectTask += effectData.receivedCount;
+		this.effectSequenceId++;
+		Debug.Log( "this.receivedEffectTask = " + this.receivedEffectTask );
+
+		if( this.receivedEffectTask == 0 )
+		{
+			effectObjectExecuteId++;
+
+			if( this.refEffectObjects.Count == effectObjectExecuteId )
+			{
+				// 終わり処理.
+				Debug.Log( "END" );
+			}
+			else
+			{
+				effectSequenceId = 0;
+				EnumerateResultUI();
+			}
+		}
 	}
+
+	private IEnumerator NextResultUI()
+	{
+		yield return new WaitForSeconds( 1.0f );
+
+		EnumerateResultUI();
+	}
+
 }

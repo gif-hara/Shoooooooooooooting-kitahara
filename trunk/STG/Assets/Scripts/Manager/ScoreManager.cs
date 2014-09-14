@@ -44,11 +44,23 @@ public class ScoreManager : GameMonoBehaviour
 	private ulong score = 0;
 
 	/// <summary>
-	/// 獲得したスコアアイテムの数リスト.
+	/// 獲得した星アイテムの数リスト.
 	/// </summary>
-	public List<int> EarnedScoreItemList{ get{ return earnedScoreItemList; } }
-	private List<int> earnedScoreItemList = null;
+	public List<int> EarnedStarItemList{ get{ return earnedStarItemList; } }
+	private List<int> earnedStarItemList = null;
 
+	public override void Start ()
+	{
+		base.Start ();
+
+		int capacity = 3;
+		this.earnedStarItemList = new List<int>( capacity );
+		for( int i=0; i<capacity; i++ )
+		{
+			this.earnedStarItemList.Add( 0 );
+			this.earnedStarItemList[i] = 100;
+		}
+	}
 	/// <summary>
 	/// スコアの加算.
 	/// </summary>
@@ -77,6 +89,7 @@ public class ScoreManager : GameMonoBehaviour
 	/// </summary>
 	public void EarnedStarItem( StarItemController starItem )
 	{
+		this.earnedStarItemList[starItem.Id]++;
 		ulong value = (ulong)GameManager.GameLevel * (ulong)starItem.AddScoreRate;
 		AddScore( value );
 	}
