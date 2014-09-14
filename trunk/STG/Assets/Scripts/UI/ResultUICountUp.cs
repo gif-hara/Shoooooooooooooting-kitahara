@@ -53,6 +53,7 @@ public class ResultUICountUp : ResultUIEffectExecuter
 		if( currentCount >= targetCount )
 		{
 			isUpdate = false;
+			this.currentCount = 0;
 			refResultManager.SendMessage( ResultUIManager.CompleteMessage );
 			return;
 		}

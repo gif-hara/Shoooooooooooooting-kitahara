@@ -63,10 +63,6 @@ public class ResultUIManager : GameMonoBehaviour
 
 	public const string CompleteMessage = "OnCompleteEffectModule";
 
-	public override void Start ()
-	{
-	}
-
 	public override void Update ()
 	{
 		if( Input.GetKeyDown( KeyCode.J ) )
@@ -75,14 +71,6 @@ public class ResultUIManager : GameMonoBehaviour
 		}
 		if( Input.GetKeyDown( KeyCode.K ) )
 		{
-			this.createdBackgroundStartEffect.RemoveAll( g => g == null );
-			for( int i=0, imax=this.createdBackgroundStartEffect.Count; i<imax; i++ )
-			{
-				var obj = InstantiateAsChild( Trans, prefabBackgroundEndEffect.gameObject ).GetComponent<TweenMeshColor>();
-				obj.SetDelay( interval * (imax - i) );
-				obj.transform.localPosition = this.createdBackgroundStartEffect[i].transform.localPosition;
-			}
-			this.createdBackgroundStartEffect.ForEach( g => Destroy( g ) );
 		}
 		if( !endCountUp )	return;
 
@@ -101,6 +89,10 @@ public class ResultUIManager : GameMonoBehaviour
 
 	private void StartResult()
 	{
+		this.receivedEffectTask = 0;
+		this.effectObjectExecuteId = 0;
+		this.effectSequenceId = 0;
+
 		for( int i=0; i<createNum; i++ )
 		{
 			var obj = InstantiateAsChild( Trans, prefabBackgroundStartEffect.gameObject ).GetComponent<TweenMeshColor>();
@@ -128,8 +120,7 @@ public class ResultUIManager : GameMonoBehaviour
 
 			if( this.refEffectObjects.Count == effectObjectExecuteId )
 			{
-				// 終わり処理.
-				Debug.Log( "END" );
+				EndResult();
 			}
 			else
 			{
@@ -139,11 +130,15 @@ public class ResultUIManager : GameMonoBehaviour
 		}
 	}
 
-	private IEnumerator NextResultUI()
+	private void EndResult()
 	{
-		yield return new WaitForSeconds( 1.0f );
-
-		EnumerateResultUI();
+		this.createdBackgroundStartEffect.RemoveAll( g => g == null );
+		for( int i=0, imax=this.createdBackgroundStartEffect.Count; i<imax; i++ )
+		{
+			var obj = InstantiateAsChild( Trans, prefabBackgroundEndEffect.gameObject ).GetComponent<TweenMeshColor>();
+			obj.SetDelay( interval * (imax - i) );
+			obj.transform.localPosition = this.createdBackgroundStartEffect[i].transform.localPosition;
+		}
+		this.createdBackgroundStartEffect.ForEach( g => Destroy( g ) );
 	}
-
 }

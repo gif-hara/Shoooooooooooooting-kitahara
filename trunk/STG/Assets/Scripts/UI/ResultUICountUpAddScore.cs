@@ -19,6 +19,7 @@ public class ResultUICountUpAddScore : ResultUICountUp
 		if( currentCount >= targetCount )
 		{
 			isUpdate = false;
+			this.currentCount = 0;
 			refResultManager.SendMessage( ResultUIManager.CompleteMessage );
 			return;
 		}
