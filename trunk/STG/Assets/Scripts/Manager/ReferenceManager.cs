@@ -114,6 +114,14 @@ public class ReferenceManager : A_Singleton<ReferenceManager>
 	/// 敵ヒットポイントバープレハブ.
 	/// </summary>
 	public GameObject prefabEnemyHitPointBar;
+
+	/// <summary>
+	/// 影管理者クラス.
+	/// </summary>
+	/// <value>The shadow manager.</value>
+	public ShadowManager ShadowManager{ get{ return this.refShadowManager; } }
+	[SerializeField]
+	private ShadowManager refShadowManager;
 	
 	/// <summary>
 	/// 敵プレハブリスト.
