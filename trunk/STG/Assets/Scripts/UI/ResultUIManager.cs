@@ -57,8 +57,6 @@ public class ResultUIManager : GameMonoBehaviour
 
 	private List<GameObject> createdBackgroundStartEffect = new List<GameObject>();
 
-	private bool endCountUp = false;
-
 	private const string ExecuteMessage = "OnEffectExecute";
 
 	public const string CompleteMessage = "OnCompleteEffectModule";
@@ -72,8 +70,6 @@ public class ResultUIManager : GameMonoBehaviour
 		if( Input.GetKeyDown( KeyCode.K ) )
 		{
 		}
-		if( !endCountUp )	return;
-
 	}
 
 	void OnCompleteEffectModule()

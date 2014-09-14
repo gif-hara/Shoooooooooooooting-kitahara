@@ -1201,47 +1201,6 @@ Transform:
   - {fileID: 1322213618}
   m_Father: {fileID: 1957406506}
   m_RootOrder: 1
---- !u!1 &237404067
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100002, guid: 6089b662b186aa942ae88c26189ee950, type: 2}
-  m_PrefabInternal: {fileID: 403323427}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 237404068}
-  - 114: {fileID: 237404069}
-  m_Layer: 31
-  m_Name: FrameRateFixed
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &237404068
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400002, guid: 6089b662b186aa942ae88c26189ee950, type: 2}
-  m_PrefabInternal: {fileID: 403323427}
-  m_GameObject: {fileID: 237404067}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1031865742}
-  m_RootOrder: 3
---- !u!114 &237404069
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 6089b662b186aa942ae88c26189ee950,
-    type: 2}
-  m_PrefabInternal: {fileID: 403323427}
-  m_GameObject: {fileID: 237404067}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3532d4cad3142846a32c75a290418e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fixedFrameRate: 60
 --- !u!1 &261302514
 GameObject:
   m_ObjectHideFlags: 0
@@ -2095,7 +2054,7 @@ MonoBehaviour:
       tangentMode: 10
     m_PreInfinity: 2
     m_PostInfinity: 2
-  duration: 24000
+  duration: 20000
 --- !u!1 &386563964
 GameObject:
   m_ObjectHideFlags: 0
@@ -2399,7 +2358,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &402655869
 Transform:
   m_ObjectHideFlags: 0
@@ -4107,6 +4066,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 834668470}
   - 114: {fileID: 834668472}
+  - 154: {fileID: 834668471}
   m_Layer: 31
   m_Name: Terrain
   m_TagString: Untagged
@@ -4125,7 +4085,18 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1031865742}
-  m_RootOrder: 4
+  m_RootOrder: 3
+--- !u!154 &834668471
+TerrainCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 15400000, guid: 6089b662b186aa942ae88c26189ee950,
+    type: 2}
+  m_PrefabInternal: {fileID: 403323427}
+  m_GameObject: {fileID: 834668469}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_TerrainData: {fileID: 15600000, guid: 7bebee52a4738b146b66b2f7950b0e65, type: 2}
+  m_CreateTreeColliders: 1
 --- !u!114 &834668472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4467,7 +4438,6 @@ Transform:
   - {fileID: 386073376}
   - {fileID: 822004928}
   - {fileID: 1361860374}
-  - {fileID: 237404068}
   - {fileID: 834668470}
   - {fileID: 2002962990}
   m_Father: {fileID: 1655857006}
@@ -4543,7 +4513,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400006, guid: 6089b662b186aa942ae88c26189ee950, type: 2}
   m_PrefabInternal: {fileID: 403323427}
   m_GameObject: {fileID: 1072314948}
-  m_LocalRotation: {x: .258819044, y: 0, z: 0, w: .965925813}
+  m_LocalRotation: {x: .608761489, y: 0, z: 0, w: .793353379}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -7977,7 +7947,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1031865742}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!114 &2002962991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7993,14 +7963,14 @@ MonoBehaviour:
   pathName: New Path 1
   pathColor: {r: 0, g: 1, b: 1, a: 1}
   nodes:
-  - {x: -1.43920803, y: .565082312, z: -.762539387}
-  - {x: 1.65764248, y: .28442046, z: 1.70347321}
-  - {x: .161376119, y: .28442046, z: 2.82248592}
+  - {x: -1.43920803, y: 1.06988788, z: -.762539387}
+  - {x: 1.65764248, y: .718593359, z: 1.70347321}
+  - {x: .161376119, y: .779905796, z: 2.82248592}
   - {x: -1.40486062, y: .557539701, z: 1.85126472}
-  - {x: 1.25617063, y: .319730014, z: -.438347399}
+  - {x: 1.25617063, y: .724011898, z: -.438347399}
   - {x: .47132051, y: .219886303, z: -2.80040026}
   - {x: -1.30595696, y: .482645035, z: -2.46396947}
-  - {x: -1.43920803, y: .565082312, z: -.762539387}
+  - {x: -1.43920803, y: 1.06988788, z: -.762539387}
   nodeCount: 8
   initialized: 1
   initialName: New Path 1

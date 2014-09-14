@@ -32,7 +32,7 @@ public class ResultUICountUp : ResultUIEffectExecuter
 
 	protected bool isUpdate = false;
 
-	void Update()
+	public override void Update()
 	{
 		if( !isUpdate )
 		{
