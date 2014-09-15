@@ -94,6 +94,21 @@ public class GameDefine : A_Singleton<GameDefine>
 	/// </summary>
 	public const string GameObjectDestroyOnHitPointChangeEventMessage = "OnGameObjectDestroyOnHitPointChangeEvent";
 
+	/// <summary>
+	/// リザルト開始時のメッセージ
+	/// </summary>
+	public const string StartResultMessage = "OnStartResult";
+
+	/// <summary>
+	/// リザルト終了時のメッセージ.
+	/// </summary>
+	public const string EndResultMessage = "OnEndResult";
+
+	/// <summary>
+	/// ステージ開始時のメッセージ.
+	/// </summary>
+	public const string StartStageMessage = "OnStartStage";
+
 	public override void Awake()
 	{
 		base.Awake();

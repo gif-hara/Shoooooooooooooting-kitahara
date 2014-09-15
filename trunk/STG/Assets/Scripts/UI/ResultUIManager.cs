@@ -61,15 +61,14 @@ public class ResultUIManager : GameMonoBehaviour
 
 	public const string CompleteMessage = "OnCompleteEffectModule";
 
-	public override void Update ()
+	void OnStartResult()
 	{
-		if( Input.GetKeyDown( KeyCode.J ) )
-		{
-			StartResult();
-		}
-		if( Input.GetKeyDown( KeyCode.K ) )
-		{
-		}
+		StartEffect();
+	}
+
+	void OnStartStage()
+	{
+		EndEffect();
 	}
 
 	void OnCompleteEffectModule()
@@ -83,7 +82,7 @@ public class ResultUIManager : GameMonoBehaviour
 		}
 	}
 
-	private void StartResult()
+	private void StartEffect()
 	{
 		this.receivedEffectTask = 0;
 		this.effectObjectExecuteId = 0;
@@ -98,6 +97,18 @@ public class ResultUIManager : GameMonoBehaviour
 		}
 
 		FrameRateUtility.StartCoroutine( startEffectEndDelay, EnumerateResultUI );
+	}
+
+	private void EndEffect()
+	{
+		this.createdBackgroundStartEffect.RemoveAll( g => g == null );
+		for( int i=0, imax=this.createdBackgroundStartEffect.Count; i<imax; i++ )
+		{
+			var obj = InstantiateAsChild( Trans, prefabBackgroundEndEffect.gameObject ).GetComponent<TweenMeshColor>();
+			obj.SetDelay( interval * (imax - i) );
+			obj.transform.localPosition = this.createdBackgroundStartEffect[i].transform.localPosition;
+		}
+		this.createdBackgroundStartEffect.ForEach( g => Destroy( g ) );
 	}
 
 	private void EnumerateResultUI()
@@ -128,13 +139,7 @@ public class ResultUIManager : GameMonoBehaviour
 
 	private void EndResult()
 	{
-		this.createdBackgroundStartEffect.RemoveAll( g => g == null );
-		for( int i=0, imax=this.createdBackgroundStartEffect.Count; i<imax; i++ )
-		{
-			var obj = InstantiateAsChild( Trans, prefabBackgroundEndEffect.gameObject ).GetComponent<TweenMeshColor>();
-			obj.SetDelay( interval * (imax - i) );
-			obj.transform.localPosition = this.createdBackgroundStartEffect[i].transform.localPosition;
-		}
-		this.createdBackgroundStartEffect.ForEach( g => Destroy( g ) );
+		ReferenceManager.refScoreManager.InitStarItem();
+		ReferenceManager.refStageManager.BroadcastMessage( GameDefine.EndResultMessage );
 	}
 }

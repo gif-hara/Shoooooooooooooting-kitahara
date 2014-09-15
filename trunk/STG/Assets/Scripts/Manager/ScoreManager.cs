@@ -58,7 +58,6 @@ public class ScoreManager : GameMonoBehaviour
 		for( int i=0; i<capacity; i++ )
 		{
 			this.earnedStarItemList.Add( 0 );
-			this.earnedStarItemList[i] = 100;
 		}
 	}
 	/// <summary>
@@ -83,6 +82,13 @@ public class ScoreManager : GameMonoBehaviour
 		ulong fixedGameLevel = gameLevel <= 1 ? 1 : (ulong)gameLevel;
 		value = value * fixedGameLevel;
 		AddScore( value );
+	}
+	public void InitStarItem()
+	{
+		for( int i=0,imax=this.earnedStarItemList.Count; i<imax; i++ )
+		{
+			this.earnedStarItemList[i] = 0;
+		}
 	}
 	/// <summary>
 	/// スターアイテムの獲得.
