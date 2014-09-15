@@ -123,6 +123,31 @@ public class EnemyController : EnemyControllerBase
 		textureFlashEvent.AllSelect();
 	}
 
+	[ContextMenu( "Add Shadow" )]
+	void AddShadow()
+	{
+		//var rendererList = new List<Renderer>();
+		Trans.AllVisit( (t) =>
+		{
+			if( t.GetComponent<MeshRenderer>() != null )
+			{
+				if( t.gameObject.GetComponent<ShadowCreator>() == null )
+				{
+					var shadowCreater = t.gameObject.AddComponent<ShadowCreator>();
+					var originalMaterial = t.renderer.sharedMaterial;
+					var shadowMaterial = Resources.LoadAssetAtPath<Material>( "Assets/DataSources/Material/" + originalMaterial.name + "Shadow.mat" );
+					shadowCreater.SetShadowMaterial( shadowMaterial );
+					Debug.Log( "Create Shadow " + originalMaterial.name );
+					
+				}
+				else
+				{
+					Debug.LogWarning( "Shadow is Already exists." );
+				}
+			}
+		});
+	}
+
 	public override void Awake()
 	{
 		base.Awake();

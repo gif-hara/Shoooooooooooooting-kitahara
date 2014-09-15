@@ -43,6 +43,7 @@ GameObject:
   - 4: {fileID: 400032}
   - 33: {fileID: 3300002}
   - 23: {fileID: 2300002}
+  - 114: {fileID: 11400122}
   m_Layer: 11
   m_Name: Texture1
   m_TagString: Untagged
@@ -60,6 +61,7 @@ GameObject:
   - 4: {fileID: 400034}
   - 33: {fileID: 3300004}
   - 23: {fileID: 2300004}
+  - 114: {fileID: 11400120}
   m_Layer: 11
   m_Name: Texture0
   m_TagString: Untagged
@@ -393,6 +395,7 @@ GameObject:
   - 4: {fileID: 400042}
   - 33: {fileID: 3300000}
   - 23: {fileID: 2300000}
+  - 114: {fileID: 11400124}
   m_Layer: 11
   m_Name: Texture2
   m_TagString: Untagged
@@ -2694,6 +2697,45 @@ MonoBehaviour:
   - {fileID: 2300004}
   - {fileID: 2300002}
   - {fileID: 2300000}
+--- !u!114 &11400120
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc16bdeb8f028d74793ed2e7c6b8786a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  refShadowMaterial: {fileID: 2100000, guid: 37b0c221f9f289a4bb4601fda3964cab, type: 2}
+--- !u!114 &11400122
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc16bdeb8f028d74793ed2e7c6b8786a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  refShadowMaterial: {fileID: 2100000, guid: d5a8ea9c3b054a447b6ddfe064abeab3, type: 2}
+--- !u!114 &11400124
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc16bdeb8f028d74793ed2e7c6b8786a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  refShadowMaterial: {fileID: 2100000, guid: 805da8e632e226f47815c29536858034, type: 2}
 --- !u!114 &11400160
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 400000}
   - 33: {fileID: 3300000}
   - 23: {fileID: 2300000}
+  - 114: {fileID: 11400396}
   m_Layer: 11
   m_Name: Texture
   m_TagString: Untagged
@@ -1068,6 +1069,7 @@ GameObject:
   - 4: {fileID: 400186}
   - 33: {fileID: 3300002}
   - 23: {fileID: 2300002}
+  - 114: {fileID: 11400406}
   m_Layer: 11
   m_Name: Texture_0
   m_TagString: Untagged
@@ -1560,6 +1562,7 @@ GameObject:
   - 4: {fileID: 400144}
   - 33: {fileID: 3300004}
   - 23: {fileID: 2300004}
+  - 114: {fileID: 11400404}
   m_Layer: 11
   m_Name: Texture_2_Left
   m_TagString: Untagged
@@ -1577,6 +1580,7 @@ GameObject:
   - 4: {fileID: 400180}
   - 33: {fileID: 3300006}
   - 23: {fileID: 2300006}
+  - 114: {fileID: 11400402}
   m_Layer: 11
   m_Name: Texture_1_Left
   m_TagString: Untagged
@@ -1625,6 +1629,7 @@ GameObject:
   - 4: {fileID: 400182}
   - 33: {fileID: 3300008}
   - 23: {fileID: 2300008}
+  - 114: {fileID: 11400400}
   m_Layer: 11
   m_Name: Texture_2_Right
   m_TagString: Untagged
@@ -1642,6 +1647,7 @@ GameObject:
   - 4: {fileID: 400184}
   - 33: {fileID: 3300010}
   - 23: {fileID: 2300010}
+  - 114: {fileID: 11400398}
   m_Layer: 11
   m_Name: Texture_1_Right
   m_TagString: Untagged
@@ -8937,6 +8943,84 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
+--- !u!114 &11400396
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc16bdeb8f028d74793ed2e7c6b8786a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  refShadowMaterial: {fileID: 2100000, guid: 65d3071579606d14a80034e1973a6ec0, type: 2}
+--- !u!114 &11400398
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc16bdeb8f028d74793ed2e7c6b8786a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  refShadowMaterial: {fileID: 2100000, guid: 312e3b8484679f7499427e677d7c6444, type: 2}
+--- !u!114 &11400400
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc16bdeb8f028d74793ed2e7c6b8786a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  refShadowMaterial: {fileID: 2100000, guid: 14177356ab8d1fa4da475ab242096a93, type: 2}
+--- !u!114 &11400402
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc16bdeb8f028d74793ed2e7c6b8786a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  refShadowMaterial: {fileID: 2100000, guid: 312e3b8484679f7499427e677d7c6444, type: 2}
+--- !u!114 &11400404
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc16bdeb8f028d74793ed2e7c6b8786a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  refShadowMaterial: {fileID: 2100000, guid: 14177356ab8d1fa4da475ab242096a93, type: 2}
+--- !u!114 &11400406
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc16bdeb8f028d74793ed2e7c6b8786a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  refShadowMaterial: {fileID: 2100000, guid: 4dc1ed888afc04742bad062e2a00825c, type: 2}
 --- !u!114 &11400562
 MonoBehaviour:
   m_ObjectHideFlags: 1

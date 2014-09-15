@@ -34,4 +34,9 @@ public class ShadowCreator : GameMonoBehaviour
 			shadowManager = ReferenceManager.ShadowManager;
 		}
 	}
+
+	public void SetShadowMaterial( Material shadowMaterial )
+	{
+		refShadowMaterial = shadowMaterial;
+	}
 }

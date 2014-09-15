@@ -60,6 +60,7 @@ GameObject:
   - 4: {fileID: 400006}
   - 33: {fileID: 3300000}
   - 23: {fileID: 2300000}
+  - 114: {fileID: 11400000}
   m_Layer: 11
   m_Name: Texture
   m_TagString: Untagged
@@ -204,6 +205,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100006}
   m_Mesh: {fileID: 4300000, guid: 1c28b765b865feb469b53d7fa4778b81, type: 2}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc16bdeb8f028d74793ed2e7c6b8786a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  refShadowMaterial: {fileID: 2100000, guid: 3d57a1191d39be5439f41013518ef126, type: 2}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -299,7 +313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d72098796e865534b8b4ddd8be694487, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cachedTransform: {fileID: 0}
+  cachedTransform: {fileID: 400002}
   id: 6
   hp: 10
   addScore: 500

@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 400000}
   - 33: {fileID: 3300000}
   - 23: {fileID: 2300000}
+  - 114: {fileID: 11400026}
   m_Layer: 11
   m_Name: Texture
   m_TagString: Untagged
@@ -219,6 +220,7 @@ GameObject:
   - 4: {fileID: 400026}
   - 33: {fileID: 3300002}
   - 23: {fileID: 2300002}
+  - 114: {fileID: 11400024}
   m_Layer: 11
   m_Name: Texture
   m_TagString: Untagged
@@ -269,6 +271,7 @@ GameObject:
   - 4: {fileID: 400032}
   - 33: {fileID: 3300004}
   - 23: {fileID: 2300004}
+  - 114: {fileID: 11400040}
   m_Layer: 11
   m_Name: Texture
   m_TagString: Untagged
@@ -892,6 +895,32 @@ MonoBehaviour:
   - {fileID: 2300002}
   - {fileID: 2300000}
   - {fileID: 2300004}
+--- !u!114 &11400024
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc16bdeb8f028d74793ed2e7c6b8786a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  refShadowMaterial: {fileID: 2100000, guid: 23bb32bf576d20f4bab9488b2b1cdf3b, type: 2}
+--- !u!114 &11400026
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc16bdeb8f028d74793ed2e7c6b8786a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  refShadowMaterial: {fileID: 2100000, guid: 02e8195fb26e1f54c84d5c29981220f3, type: 2}
 --- !u!114 &11400028
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -972,6 +1001,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   refDestroyObject: {fileID: 100028}
   refTarget: {fileID: 100008}
+--- !u!114 &11400040
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc16bdeb8f028d74793ed2e7c6b8786a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  refShadowMaterial: {fileID: 2100000, guid: cfded779ee901df4484ffe62eae76c58, type: 2}
 --- !u!114 &11400058
 MonoBehaviour:
   m_ObjectHideFlags: 1

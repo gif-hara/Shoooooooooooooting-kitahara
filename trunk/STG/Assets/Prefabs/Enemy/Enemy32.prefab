@@ -306,6 +306,7 @@ GameObject:
   - 4: {fileID: 400012}
   - 33: {fileID: 3300004}
   - 23: {fileID: 2300004}
+  - 114: {fileID: 11400194}
   m_Layer: 17
   m_Name: Texture_0
   m_TagString: Untagged
@@ -3874,6 +3875,19 @@ MonoBehaviour:
   multipleNum: 1
   isLock: 0
   isPlayerTop: 0
+--- !u!114 &11400194
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc16bdeb8f028d74793ed2e7c6b8786a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  refShadowMaterial: {fileID: 2100000, guid: 4dc1ed888afc04742bad062e2a00825c, type: 2}
 --- !u!114 &11400200
 MonoBehaviour:
   m_ObjectHideFlags: 1
