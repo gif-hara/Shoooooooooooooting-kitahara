@@ -25,6 +25,7 @@ GameObject:
   - 4: {fileID: 400002}
   - 33: {fileID: 3300000}
   - 23: {fileID: 2300020}
+  - 114: {fileID: 11400022}
   m_Layer: 11
   m_Name: Texture
   m_TagString: Untagged
@@ -42,6 +43,7 @@ GameObject:
   - 4: {fileID: 400004}
   - 33: {fileID: 3300002}
   - 23: {fileID: 2300006}
+  - 114: {fileID: 11400024}
   m_Layer: 11
   m_Name: Texture
   m_TagString: Untagged
@@ -59,6 +61,7 @@ GameObject:
   - 4: {fileID: 400006}
   - 33: {fileID: 3300004}
   - 23: {fileID: 2300012}
+  - 114: {fileID: 11400026}
   m_Layer: 11
   m_Name: Texture
   m_TagString: Untagged
@@ -76,6 +79,7 @@ GameObject:
   - 4: {fileID: 400008}
   - 33: {fileID: 3300006}
   - 23: {fileID: 2300010}
+  - 114: {fileID: 11400018}
   m_Layer: 11
   m_Name: RightTexture
   m_TagString: Untagged
@@ -93,6 +97,7 @@ GameObject:
   - 4: {fileID: 400010}
   - 33: {fileID: 3300008}
   - 23: {fileID: 2300008}
+  - 114: {fileID: 11400020}
   m_Layer: 11
   m_Name: LeftTexture
   m_TagString: Untagged
@@ -110,6 +115,7 @@ GameObject:
   - 4: {fileID: 400012}
   - 33: {fileID: 3300010}
   - 23: {fileID: 2300014}
+  - 114: {fileID: 11400012}
   m_Layer: 11
   m_Name: RightTexture
   m_TagString: Untagged
@@ -127,6 +133,7 @@ GameObject:
   - 4: {fileID: 400014}
   - 33: {fileID: 3300012}
   - 23: {fileID: 2300004}
+  - 114: {fileID: 11400014}
   m_Layer: 11
   m_Name: LeftTexture
   m_TagString: Untagged
@@ -144,6 +151,7 @@ GameObject:
   - 4: {fileID: 400016}
   - 33: {fileID: 3300014}
   - 23: {fileID: 2300016}
+  - 114: {fileID: 11400008}
   m_Layer: 11
   m_Name: Texture
   m_TagString: Untagged
@@ -161,6 +169,7 @@ GameObject:
   - 4: {fileID: 400018}
   - 33: {fileID: 3300016}
   - 23: {fileID: 2300018}
+  - 114: {fileID: 11400010}
   m_Layer: 11
   m_Name: Texture
   m_TagString: Untagged
@@ -178,6 +187,7 @@ GameObject:
   - 4: {fileID: 400020}
   - 33: {fileID: 3300018}
   - 23: {fileID: 2300000}
+  - 114: {fileID: 11400028}
   m_Layer: 11
   m_Name: RightTexture
   m_TagString: Untagged
@@ -195,6 +205,7 @@ GameObject:
   - 4: {fileID: 400022}
   - 33: {fileID: 3300020}
   - 23: {fileID: 2300002}
+  - 114: {fileID: 11400030}
   m_Layer: 11
   m_Name: LeftTexture
   m_TagString: Untagged
@@ -212,6 +223,7 @@ GameObject:
   - 4: {fileID: 400024}
   - 33: {fileID: 3300022}
   - 23: {fileID: 2300022}
+  - 114: {fileID: 11400016}
   m_Layer: 11
   m_Name: Texture
   m_TagString: Untagged
@@ -1104,6 +1116,174 @@ MonoBehaviour:
   refTargetList:
   - {fileID: 100040}
   isEnable: 1
+--- !u!114 &11400008
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc16bdeb8f028d74793ed2e7c6b8786a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  refShadowMaterial: {fileID: 2100000, guid: 755769dbf8aafad4bb353edfc5dd7b40, type: 2}
+  offset: {x: -4, y: -100}
+--- !u!114 &11400010
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc16bdeb8f028d74793ed2e7c6b8786a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  refShadowMaterial: {fileID: 2100000, guid: 755769dbf8aafad4bb353edfc5dd7b40, type: 2}
+  offset: {x: 4, y: -100}
+--- !u!114 &11400012
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc16bdeb8f028d74793ed2e7c6b8786a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  refShadowMaterial: {fileID: 2100000, guid: 058e68b6a93f2ef409038ec8418b8d1b, type: 2}
+  offset: {x: -40, y: -10}
+--- !u!114 &11400014
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc16bdeb8f028d74793ed2e7c6b8786a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  refShadowMaterial: {fileID: 2100000, guid: 058e68b6a93f2ef409038ec8418b8d1b, type: 2}
+  offset: {x: 40, y: -10}
+--- !u!114 &11400016
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc16bdeb8f028d74793ed2e7c6b8786a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  refShadowMaterial: {fileID: 2100000, guid: c50237c7673992241aa870f4e2af4d78, type: 2}
+  offset: {x: 0, y: 0}
+--- !u!114 &11400018
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc16bdeb8f028d74793ed2e7c6b8786a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  refShadowMaterial: {fileID: 2100000, guid: b0f4f3c46bbfbdf46a14b39640808b20, type: 2}
+  offset: {x: -37, y: 0}
+--- !u!114 &11400020
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc16bdeb8f028d74793ed2e7c6b8786a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  refShadowMaterial: {fileID: 2100000, guid: b0f4f3c46bbfbdf46a14b39640808b20, type: 2}
+  offset: {x: 37, y: 0}
+--- !u!114 &11400022
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc16bdeb8f028d74793ed2e7c6b8786a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  refShadowMaterial: {fileID: 2100000, guid: 72aeb4dc2dd397e4b981d180b75a099e, type: 2}
+  offset: {x: 0, y: 0}
+--- !u!114 &11400024
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc16bdeb8f028d74793ed2e7c6b8786a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  refShadowMaterial: {fileID: 2100000, guid: ce3d8261cb1151f4898c7490ae011faa, type: 2}
+  offset: {x: -24, y: 0}
+--- !u!114 &11400026
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc16bdeb8f028d74793ed2e7c6b8786a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  refShadowMaterial: {fileID: 2100000, guid: ce3d8261cb1151f4898c7490ae011faa, type: 2}
+  offset: {x: 24, y: 0}
+--- !u!114 &11400028
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc16bdeb8f028d74793ed2e7c6b8786a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  refShadowMaterial: {fileID: 2100000, guid: 288868fa77dd68e4fbf565289213b2a8, type: 2}
+  offset: {x: -22, y: -60}
+--- !u!114 &11400030
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc16bdeb8f028d74793ed2e7c6b8786a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  refShadowMaterial: {fileID: 2100000, guid: 288868fa77dd68e4fbf565289213b2a8, type: 2}
+  offset: {x: 22, y: -60}
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1

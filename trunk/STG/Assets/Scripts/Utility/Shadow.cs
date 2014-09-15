@@ -51,7 +51,7 @@ public class Shadow : GameMonoBehaviour
 
 	public void Initialize( Transform chaseObject, Vector2 offset, Material material )
 	{
-		gameObject.name = chaseObject.name + " -> Shadow";
+		gameObject.name = material.name + " -> Shadow";
 		this.chaseObject = chaseObject;
 		this.chaseObjectRenderer = chaseObject.GetComponent<MeshRenderer>();
 		this.offset = offset;
