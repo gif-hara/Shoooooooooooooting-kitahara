@@ -14,7 +14,15 @@ using System.Collections.Generic;
 /// </summary>
 public class Shadow : GameMonoBehaviour
 {
+	[SerializeField]
+	private Renderer refRenderer;
+
 	private Transform chaseObject = null;
+
+	private Renderer chaseObjectRenderer = null;
+
+	[SerializeField]
+	private Vector3 offset;
 
 	private Vector3 initScale;
 
@@ -35,14 +43,18 @@ public class Shadow : GameMonoBehaviour
 
 		base.LateUpdate ();
 
+		this.refRenderer.enabled = chaseObjectRenderer.enabled;
 		SyncPosition();
 		SyncScale();
 		SyncRotation();
 	}
 
-	public void Initialize( Transform chaseObject, Material material )
+	public void Initialize( Transform chaseObject, Vector2 offset, Material material )
 	{
+		gameObject.name = chaseObject.name + " -> Shadow";
 		this.chaseObject = chaseObject;
+		this.chaseObjectRenderer = chaseObject.GetComponent<MeshRenderer>();
+		this.offset = offset;
 		this.initScale = chaseObject.localScale;
 		Trans.localScale = this.initScale;
 		renderer.sharedMaterial = material;
@@ -53,7 +65,7 @@ public class Shadow : GameMonoBehaviour
 
 	private void SyncPosition()
 	{
-		Trans.localPosition = this.chaseObject.position + shadowManager.Offset;
+		Trans.localPosition = this.chaseObject.position + this.offset + shadowManager.Offset;
 	}
 
 	private void SyncScale()

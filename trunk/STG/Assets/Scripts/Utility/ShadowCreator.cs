@@ -17,6 +17,9 @@ public class ShadowCreator : GameMonoBehaviour
 	[SerializeField]
 	private Material refShadowMaterial;
 
+	[SerializeField]
+	private Vector2 offset;
+
 	private static ShadowManager shadowManager = null;
 
 	public override void Start ()
@@ -24,7 +27,7 @@ public class ShadowCreator : GameMonoBehaviour
 		base.Start ();
 		InitShadowManager();
 		var shadow = InstantiateAsChild( ReferenceManager.Instance.refEffectLayer, shadowManager.PrefabShadow.gameObject ).GetComponent<Shadow>();
-		shadow.Initialize( Trans, refShadowMaterial );
+		shadow.Initialize( Trans, offset, refShadowMaterial );
 	}
 
 	private void InitShadowManager()

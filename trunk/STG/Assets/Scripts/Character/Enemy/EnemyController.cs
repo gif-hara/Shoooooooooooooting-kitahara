@@ -138,7 +138,6 @@ public class EnemyController : EnemyControllerBase
 					var shadowMaterial = Resources.LoadAssetAtPath<Material>( "Assets/DataSources/Material/" + originalMaterial.name + "Shadow.mat" );
 					shadowCreater.SetShadowMaterial( shadowMaterial );
 					Debug.Log( "Create Shadow " + originalMaterial.name );
-					
 				}
 				else
 				{
