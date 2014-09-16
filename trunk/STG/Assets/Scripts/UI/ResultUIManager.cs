@@ -61,6 +61,14 @@ public class ResultUIManager : GameMonoBehaviour
 
 	public const string CompleteMessage = "OnCompleteEffectModule";
 
+//	public override void Update ()
+//	{
+//		base.Update ();
+//		if( Input.GetKeyDown( KeyCode.J ) )
+//		{
+//			StartEffect();
+//		}
+//	}
 	void OnStartResult()
 	{
 		StartEffect();

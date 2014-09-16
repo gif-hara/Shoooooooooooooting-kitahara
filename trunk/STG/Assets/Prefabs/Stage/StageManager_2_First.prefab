@@ -176,6 +176,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
+--- !u!1 &100022
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400022}
+  - 114: {fileID: 11400022}
+  m_Layer: 0
+  m_Name: '[0] StartStage'
+  m_TagString: Untagged
+  m_Icon: {fileID: -1203168336, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &100024
 GameObject:
   m_ObjectHideFlags: 1
@@ -2876,6 +2892,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400014}
+  m_RootOrder: 6
 --- !u!4 &400002
 Transform:
   m_ObjectHideFlags: 1
@@ -2887,6 +2904,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400014}
+  m_RootOrder: 5
 --- !u!4 &400004
 Transform:
   m_ObjectHideFlags: 1
@@ -2898,6 +2916,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400014}
+  m_RootOrder: 4
 --- !u!4 &400006
 Transform:
   m_ObjectHideFlags: 1
@@ -2909,6 +2928,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400014}
+  m_RootOrder: 3
 --- !u!4 &400008
 Transform:
   m_ObjectHideFlags: 1
@@ -2920,6 +2940,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400014}
+  m_RootOrder: 2
 --- !u!4 &400010
 Transform:
   m_ObjectHideFlags: 1
@@ -2931,6 +2952,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400014}
+  m_RootOrder: 1
 --- !u!4 &400012
 Transform:
   m_ObjectHideFlags: 1
@@ -2942,6 +2964,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400014}
+  m_RootOrder: 0
 --- !u!4 &400014
 Transform:
   m_ObjectHideFlags: 1
@@ -2960,6 +2983,7 @@ Transform:
   - {fileID: 400002}
   - {fileID: 400000}
   m_Father: {fileID: 400162}
+  m_RootOrder: 0
 --- !u!4 &400016
 Transform:
   m_ObjectHideFlags: 1
@@ -2971,6 +2995,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400288}
+  m_RootOrder: 6
 --- !u!4 &400018
 Transform:
   m_ObjectHideFlags: 1
@@ -2982,6 +3007,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400068}
+  m_RootOrder: 3
 --- !u!4 &400020
 Transform:
   m_ObjectHideFlags: 1
@@ -2993,6 +3019,19 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400168}
+  m_RootOrder: 3
+--- !u!4 &400022
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100022}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400162}
+  m_RootOrder: 46
 --- !u!4 &400024
 Transform:
   m_ObjectHideFlags: 1
@@ -3004,6 +3043,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400294}
+  m_RootOrder: 0
 --- !u!4 &400026
 Transform:
   m_ObjectHideFlags: 1
@@ -3015,6 +3055,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400292}
+  m_RootOrder: 4
 --- !u!4 &400028
 Transform:
   m_ObjectHideFlags: 1
@@ -3026,6 +3067,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400310}
+  m_RootOrder: 1
 --- !u!4 &400030
 Transform:
   m_ObjectHideFlags: 1
@@ -3037,6 +3079,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400294}
+  m_RootOrder: 3
 --- !u!4 &400032
 Transform:
   m_ObjectHideFlags: 1
@@ -3048,6 +3091,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400350}
+  m_RootOrder: 4
 --- !u!4 &400034
 Transform:
   m_ObjectHideFlags: 1
@@ -3059,6 +3103,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400068}
+  m_RootOrder: 0
 --- !u!4 &400036
 Transform:
   m_ObjectHideFlags: 1
@@ -3070,6 +3115,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400310}
+  m_RootOrder: 6
 --- !u!4 &400038
 Transform:
   m_ObjectHideFlags: 1
@@ -3081,6 +3127,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400350}
+  m_RootOrder: 2
 --- !u!4 &400040
 Transform:
   m_ObjectHideFlags: 1
@@ -3092,6 +3139,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400162}
+  m_RootOrder: 30
 --- !u!4 &400042
 Transform:
   m_ObjectHideFlags: 1
@@ -3103,6 +3151,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400190}
+  m_RootOrder: 4
 --- !u!4 &400044
 Transform:
   m_ObjectHideFlags: 1
@@ -3114,6 +3163,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400218}
+  m_RootOrder: 8
 --- !u!4 &400046
 Transform:
   m_ObjectHideFlags: 1
@@ -3125,6 +3175,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400288}
+  m_RootOrder: 2
 --- !u!4 &400048
 Transform:
   m_ObjectHideFlags: 1
@@ -3136,6 +3187,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400218}
+  m_RootOrder: 2
 --- !u!4 &400050
 Transform:
   m_ObjectHideFlags: 1
@@ -3154,6 +3206,7 @@ Transform:
   - {fileID: 400278}
   - {fileID: 400206}
   m_Father: {fileID: 400162}
+  m_RootOrder: 20
 --- !u!4 &400052
 Transform:
   m_ObjectHideFlags: 1
@@ -3165,6 +3218,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400326}
+  m_RootOrder: 2
 --- !u!4 &400054
 Transform:
   m_ObjectHideFlags: 1
@@ -3176,6 +3230,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400190}
+  m_RootOrder: 1
 --- !u!4 &400056
 Transform:
   m_ObjectHideFlags: 1
@@ -3187,6 +3242,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400050}
+  m_RootOrder: 0
 --- !u!4 &400058
 Transform:
   m_ObjectHideFlags: 1
@@ -3198,6 +3254,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400216}
+  m_RootOrder: 8
 --- !u!4 &400060
 Transform:
   m_ObjectHideFlags: 1
@@ -3209,6 +3266,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400310}
+  m_RootOrder: 0
 --- !u!4 &400062
 Transform:
   m_ObjectHideFlags: 1
@@ -3220,6 +3278,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400162}
+  m_RootOrder: 28
 --- !u!4 &400064
 Transform:
   m_ObjectHideFlags: 1
@@ -3231,6 +3290,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400162}
+  m_RootOrder: 29
 --- !u!4 &400066
 Transform:
   m_ObjectHideFlags: 1
@@ -3242,6 +3302,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400162}
+  m_RootOrder: 22
 --- !u!4 &400068
 Transform:
   m_ObjectHideFlags: 1
@@ -3260,6 +3321,7 @@ Transform:
   - {fileID: 400212}
   - {fileID: 400210}
   m_Father: {fileID: 400162}
+  m_RootOrder: 41
 --- !u!4 &400070
 Transform:
   m_ObjectHideFlags: 1
@@ -3271,6 +3333,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400224}
+  m_RootOrder: 3
 --- !u!4 &400072
 Transform:
   m_ObjectHideFlags: 1
@@ -3282,6 +3345,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400224}
+  m_RootOrder: 4
 --- !u!4 &400074
 Transform:
   m_ObjectHideFlags: 1
@@ -3293,6 +3357,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400224}
+  m_RootOrder: 0
 --- !u!4 &400076
 Transform:
   m_ObjectHideFlags: 1
@@ -3304,6 +3369,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400350}
+  m_RootOrder: 3
 --- !u!4 &400078
 Transform:
   m_ObjectHideFlags: 1
@@ -3315,6 +3381,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400190}
+  m_RootOrder: 8
 --- !u!4 &400080
 Transform:
   m_ObjectHideFlags: 1
@@ -3326,6 +3393,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400146}
+  m_RootOrder: 0
 --- !u!4 &400082
 Transform:
   m_ObjectHideFlags: 1
@@ -3337,6 +3405,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400068}
+  m_RootOrder: 4
 --- !u!4 &400084
 Transform:
   m_ObjectHideFlags: 1
@@ -3348,6 +3417,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400180}
+  m_RootOrder: 0
 --- !u!4 &400086
 Transform:
   m_ObjectHideFlags: 1
@@ -3359,6 +3429,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400180}
+  m_RootOrder: 4
 --- !u!4 &400088
 Transform:
   m_ObjectHideFlags: 1
@@ -3377,6 +3448,7 @@ Transform:
   - {fileID: 400208}
   - {fileID: 400354}
   m_Father: {fileID: 400162}
+  m_RootOrder: 7
 --- !u!4 &400090
 Transform:
   m_ObjectHideFlags: 1
@@ -3388,6 +3460,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400168}
+  m_RootOrder: 2
 --- !u!4 &400092
 Transform:
   m_ObjectHideFlags: 1
@@ -3399,6 +3472,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400162}
+  m_RootOrder: 23
 --- !u!4 &400094
 Transform:
   m_ObjectHideFlags: 1
@@ -3410,6 +3484,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400294}
+  m_RootOrder: 4
 --- !u!4 &400096
 Transform:
   m_ObjectHideFlags: 1
@@ -3421,6 +3496,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400330}
+  m_RootOrder: 8
 --- !u!4 &400098
 Transform:
   m_ObjectHideFlags: 1
@@ -3432,6 +3508,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400162}
+  m_RootOrder: 33
 --- !u!4 &400100
 Transform:
   m_ObjectHideFlags: 1
@@ -3443,6 +3520,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400294}
+  m_RootOrder: 1
 --- !u!4 &400102
 Transform:
   m_ObjectHideFlags: 1
@@ -3454,6 +3532,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400310}
+  m_RootOrder: 3
 --- !u!4 &400104
 Transform:
   m_ObjectHideFlags: 1
@@ -3465,6 +3544,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400050}
+  m_RootOrder: 1
 --- !u!4 &400106
 Transform:
   m_ObjectHideFlags: 1
@@ -3476,6 +3556,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400288}
+  m_RootOrder: 3
 --- !u!4 &400108
 Transform:
   m_ObjectHideFlags: 1
@@ -3487,6 +3568,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400216}
+  m_RootOrder: 0
 --- !u!4 &400110
 Transform:
   m_ObjectHideFlags: 1
@@ -3498,6 +3580,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400186}
+  m_RootOrder: 1
 --- !u!4 &400112
 Transform:
   m_ObjectHideFlags: 1
@@ -3509,6 +3592,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400146}
+  m_RootOrder: 4
 --- !u!4 &400114
 Transform:
   m_ObjectHideFlags: 1
@@ -3520,6 +3604,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400310}
+  m_RootOrder: 7
 --- !u!4 &400116
 Transform:
   m_ObjectHideFlags: 1
@@ -3531,6 +3616,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400350}
+  m_RootOrder: 0
 --- !u!4 &400118
 Transform:
   m_ObjectHideFlags: 1
@@ -3542,6 +3628,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400190}
+  m_RootOrder: 0
 --- !u!4 &400120
 Transform:
   m_ObjectHideFlags: 1
@@ -3553,6 +3640,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400180}
+  m_RootOrder: 2
 --- !u!4 &400122
 Transform:
   m_ObjectHideFlags: 1
@@ -3564,6 +3652,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400330}
+  m_RootOrder: 0
 --- !u!4 &400124
 Transform:
   m_ObjectHideFlags: 1
@@ -3575,6 +3664,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400350}
+  m_RootOrder: 6
 --- !u!4 &400126
 Transform:
   m_ObjectHideFlags: 1
@@ -3586,6 +3676,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400330}
+  m_RootOrder: 1
 --- !u!4 &400128
 Transform:
   m_ObjectHideFlags: 1
@@ -3597,6 +3688,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400050}
+  m_RootOrder: 2
 --- !u!4 &400130
 Transform:
   m_ObjectHideFlags: 1
@@ -3608,6 +3700,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400330}
+  m_RootOrder: 2
 --- !u!4 &400132
 Transform:
   m_ObjectHideFlags: 1
@@ -3619,6 +3712,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400216}
+  m_RootOrder: 5
 --- !u!4 &400134
 Transform:
   m_ObjectHideFlags: 1
@@ -3630,6 +3724,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400288}
+  m_RootOrder: 5
 --- !u!4 &400136
 Transform:
   m_ObjectHideFlags: 1
@@ -3641,6 +3736,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400162}
+  m_RootOrder: 34
 --- !u!4 &400138
 Transform:
   m_ObjectHideFlags: 1
@@ -3652,6 +3748,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400162}
+  m_RootOrder: 27
 --- !u!4 &400140
 Transform:
   m_ObjectHideFlags: 1
@@ -3663,6 +3760,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400186}
+  m_RootOrder: 2
 --- !u!4 &400142
 Transform:
   m_ObjectHideFlags: 1
@@ -3674,6 +3772,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400350}
+  m_RootOrder: 5
 --- !u!4 &400144
 Transform:
   m_ObjectHideFlags: 1
@@ -3685,6 +3784,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400326}
+  m_RootOrder: 0
 --- !u!4 &400146
 Transform:
   m_ObjectHideFlags: 1
@@ -3701,6 +3801,7 @@ Transform:
   - {fileID: 400166}
   - {fileID: 400112}
   m_Father: {fileID: 400162}
+  m_RootOrder: 14
 --- !u!4 &400148
 Transform:
   m_ObjectHideFlags: 1
@@ -3712,6 +3813,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400146}
+  m_RootOrder: 2
 --- !u!4 &400150
 Transform:
   m_ObjectHideFlags: 1
@@ -3723,6 +3825,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400190}
+  m_RootOrder: 2
 --- !u!4 &400152
 Transform:
   m_ObjectHideFlags: 1
@@ -3734,6 +3837,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400292}
+  m_RootOrder: 1
 --- !u!4 &400154
 Transform:
   m_ObjectHideFlags: 1
@@ -3745,6 +3849,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400292}
+  m_RootOrder: 3
 --- !u!4 &400156
 Transform:
   m_ObjectHideFlags: 1
@@ -3756,6 +3861,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400218}
+  m_RootOrder: 6
 --- !u!4 &400158
 Transform:
   m_ObjectHideFlags: 1
@@ -3767,6 +3873,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400162}
+  m_RootOrder: 37
 --- !u!4 &400160
 Transform:
   m_ObjectHideFlags: 1
@@ -3778,6 +3885,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400202}
+  m_RootOrder: 1
 --- !u!4 &400162
 Transform:
   m_ObjectHideFlags: 1
@@ -3834,7 +3942,9 @@ Transform:
   - {fileID: 400196}
   - {fileID: 400346}
   - {fileID: 400358}
+  - {fileID: 400022}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
 --- !u!4 &400164
 Transform:
   m_ObjectHideFlags: 1
@@ -3846,6 +3956,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400288}
+  m_RootOrder: 1
 --- !u!4 &400166
 Transform:
   m_ObjectHideFlags: 1
@@ -3857,6 +3968,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400146}
+  m_RootOrder: 3
 --- !u!4 &400168
 Transform:
   m_ObjectHideFlags: 1
@@ -3873,6 +3985,7 @@ Transform:
   - {fileID: 400020}
   - {fileID: 400320}
   m_Father: {fileID: 400162}
+  m_RootOrder: 12
 --- !u!4 &400170
 Transform:
   m_ObjectHideFlags: 1
@@ -3884,6 +3997,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400162}
+  m_RootOrder: 10
 --- !u!4 &400172
 Transform:
   m_ObjectHideFlags: 1
@@ -3895,6 +4009,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400330}
+  m_RootOrder: 4
 --- !u!4 &400174
 Transform:
   m_ObjectHideFlags: 1
@@ -3906,6 +4021,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400186}
+  m_RootOrder: 0
 --- !u!4 &400176
 Transform:
   m_ObjectHideFlags: 1
@@ -3917,6 +4033,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400350}
+  m_RootOrder: 1
 --- !u!4 &400178
 Transform:
   m_ObjectHideFlags: 1
@@ -3928,6 +4045,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400180}
+  m_RootOrder: 3
 --- !u!4 &400180
 Transform:
   m_ObjectHideFlags: 1
@@ -3944,6 +4062,7 @@ Transform:
   - {fileID: 400178}
   - {fileID: 400086}
   m_Father: {fileID: 400162}
+  m_RootOrder: 4
 --- !u!4 &400182
 Transform:
   m_ObjectHideFlags: 1
@@ -3955,6 +4074,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400218}
+  m_RootOrder: 4
 --- !u!4 &400184
 Transform:
   m_ObjectHideFlags: 1
@@ -3966,6 +4086,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400162}
+  m_RootOrder: 35
 --- !u!4 &400186
 Transform:
   m_ObjectHideFlags: 1
@@ -3982,6 +4103,7 @@ Transform:
   - {fileID: 400232}
   - {fileID: 400304}
   m_Father: {fileID: 400162}
+  m_RootOrder: 17
 --- !u!4 &400188
 Transform:
   m_ObjectHideFlags: 1
@@ -3993,6 +4115,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400162}
+  m_RootOrder: 25
 --- !u!4 &400190
 Transform:
   m_ObjectHideFlags: 1
@@ -4013,6 +4136,7 @@ Transform:
   - {fileID: 400290}
   - {fileID: 400078}
   m_Father: {fileID: 400162}
+  m_RootOrder: 3
 --- !u!4 &400192
 Transform:
   m_ObjectHideFlags: 1
@@ -4024,6 +4148,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400330}
+  m_RootOrder: 3
 --- !u!4 &400194
 Transform:
   m_ObjectHideFlags: 1
@@ -4035,6 +4160,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400202}
+  m_RootOrder: 2
 --- !u!4 &400196
 Transform:
   m_ObjectHideFlags: 1
@@ -4046,6 +4172,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400162}
+  m_RootOrder: 43
 --- !u!4 &400198
 Transform:
   m_ObjectHideFlags: 1
@@ -4057,6 +4184,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400168}
+  m_RootOrder: 0
 --- !u!4 &400200
 Transform:
   m_ObjectHideFlags: 1
@@ -4068,6 +4196,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400190}
+  m_RootOrder: 6
 --- !u!4 &400202
 Transform:
   m_ObjectHideFlags: 1
@@ -4084,6 +4213,7 @@ Transform:
   - {fileID: 400270}
   - {fileID: 400254}
   m_Father: {fileID: 400162}
+  m_RootOrder: 15
 --- !u!4 &400204
 Transform:
   m_ObjectHideFlags: 1
@@ -4095,6 +4225,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400224}
+  m_RootOrder: 2
 --- !u!4 &400206
 Transform:
   m_ObjectHideFlags: 1
@@ -4106,6 +4237,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400050}
+  m_RootOrder: 6
 --- !u!4 &400208
 Transform:
   m_ObjectHideFlags: 1
@@ -4117,6 +4249,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400088}
+  m_RootOrder: 5
 --- !u!4 &400210
 Transform:
   m_ObjectHideFlags: 1
@@ -4128,6 +4261,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400068}
+  m_RootOrder: 6
 --- !u!4 &400212
 Transform:
   m_ObjectHideFlags: 1
@@ -4139,6 +4273,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400068}
+  m_RootOrder: 5
 --- !u!4 &400214
 Transform:
   m_ObjectHideFlags: 1
@@ -4150,6 +4285,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400218}
+  m_RootOrder: 1
 --- !u!4 &400216
 Transform:
   m_ObjectHideFlags: 1
@@ -4170,6 +4306,7 @@ Transform:
   - {fileID: 400306}
   - {fileID: 400058}
   m_Father: {fileID: 400162}
+  m_RootOrder: 9
 --- !u!4 &400218
 Transform:
   m_ObjectHideFlags: 1
@@ -4190,6 +4327,7 @@ Transform:
   - {fileID: 400222}
   - {fileID: 400044}
   m_Father: {fileID: 400162}
+  m_RootOrder: 8
 --- !u!4 &400220
 Transform:
   m_ObjectHideFlags: 1
@@ -4201,6 +4339,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400310}
+  m_RootOrder: 2
 --- !u!4 &400222
 Transform:
   m_ObjectHideFlags: 1
@@ -4212,6 +4351,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400218}
+  m_RootOrder: 7
 --- !u!4 &400224
 Transform:
   m_ObjectHideFlags: 1
@@ -4228,6 +4368,7 @@ Transform:
   - {fileID: 400070}
   - {fileID: 400072}
   m_Father: {fileID: 400162}
+  m_RootOrder: 16
 --- !u!4 &400226
 Transform:
   m_ObjectHideFlags: 1
@@ -4239,6 +4380,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400218}
+  m_RootOrder: 5
 --- !u!4 &400228
 Transform:
   m_ObjectHideFlags: 1
@@ -4250,6 +4392,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400190}
+  m_RootOrder: 3
 --- !u!4 &400230
 Transform:
   m_ObjectHideFlags: 1
@@ -4261,6 +4404,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400216}
+  m_RootOrder: 1
 --- !u!4 &400232
 Transform:
   m_ObjectHideFlags: 1
@@ -4272,6 +4416,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400186}
+  m_RootOrder: 3
 --- !u!4 &400234
 Transform:
   m_ObjectHideFlags: 1
@@ -4283,6 +4428,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400288}
+  m_RootOrder: 0
 --- !u!4 &400236
 Transform:
   m_ObjectHideFlags: 1
@@ -4294,6 +4440,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400288}
+  m_RootOrder: 4
 --- !u!4 &400238
 Transform:
   m_ObjectHideFlags: 1
@@ -4305,6 +4452,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400162}
+  m_RootOrder: 21
 --- !u!4 &400240
 Transform:
   m_ObjectHideFlags: 1
@@ -4316,6 +4464,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400310}
+  m_RootOrder: 8
 --- !u!4 &400242
 Transform:
   m_ObjectHideFlags: 1
@@ -4327,6 +4476,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400162}
+  m_RootOrder: 24
 --- !u!4 &400244
 Transform:
   m_ObjectHideFlags: 1
@@ -4338,6 +4488,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400326}
+  m_RootOrder: 4
 --- !u!4 &400246
 Transform:
   m_ObjectHideFlags: 1
@@ -4349,6 +4500,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400088}
+  m_RootOrder: 3
 --- !u!4 &400248
 Transform:
   m_ObjectHideFlags: 1
@@ -4360,6 +4512,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400162}
+  m_RootOrder: 32
 --- !u!4 &400250
 Transform:
   m_ObjectHideFlags: 1
@@ -4371,6 +4524,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400088}
+  m_RootOrder: 1
 --- !u!4 &400252
 Transform:
   m_ObjectHideFlags: 1
@@ -4382,6 +4536,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400180}
+  m_RootOrder: 1
 --- !u!4 &400254
 Transform:
   m_ObjectHideFlags: 1
@@ -4393,6 +4548,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400202}
+  m_RootOrder: 4
 --- !u!4 &400256
 Transform:
   m_ObjectHideFlags: 1
@@ -4404,6 +4560,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400216}
+  m_RootOrder: 4
 --- !u!4 &400258
 Transform:
   m_ObjectHideFlags: 1
@@ -4415,6 +4572,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400310}
+  m_RootOrder: 5
 --- !u!4 &400260
 Transform:
   m_ObjectHideFlags: 1
@@ -4426,6 +4584,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400088}
+  m_RootOrder: 0
 --- !u!4 &400262
 Transform:
   m_ObjectHideFlags: 1
@@ -4437,6 +4596,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400088}
+  m_RootOrder: 4
 --- !u!4 &400264
 Transform:
   m_ObjectHideFlags: 1
@@ -4448,6 +4608,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400162}
+  m_RootOrder: 40
 --- !u!4 &400266
 Transform:
   m_ObjectHideFlags: 1
@@ -4459,6 +4620,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400330}
+  m_RootOrder: 5
 --- !u!4 &400268
 Transform:
   m_ObjectHideFlags: 1
@@ -4470,6 +4632,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400050}
+  m_RootOrder: 4
 --- !u!4 &400270
 Transform:
   m_ObjectHideFlags: 1
@@ -4481,6 +4644,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400202}
+  m_RootOrder: 3
 --- !u!4 &400272
 Transform:
   m_ObjectHideFlags: 1
@@ -4492,6 +4656,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400162}
+  m_RootOrder: 26
 --- !u!4 &400274
 Transform:
   m_ObjectHideFlags: 1
@@ -4503,6 +4668,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400202}
+  m_RootOrder: 0
 --- !u!4 &400276
 Transform:
   m_ObjectHideFlags: 1
@@ -4514,6 +4680,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400218}
+  m_RootOrder: 0
 --- !u!4 &400278
 Transform:
   m_ObjectHideFlags: 1
@@ -4525,6 +4692,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400050}
+  m_RootOrder: 5
 --- !u!4 &400280
 Transform:
   m_ObjectHideFlags: 1
@@ -4536,6 +4704,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400216}
+  m_RootOrder: 3
 --- !u!4 &400282
 Transform:
   m_ObjectHideFlags: 1
@@ -4547,6 +4716,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400216}
+  m_RootOrder: 2
 --- !u!4 &400284
 Transform:
   m_ObjectHideFlags: 1
@@ -4558,6 +4728,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400146}
+  m_RootOrder: 1
 --- !u!4 &400286
 Transform:
   m_ObjectHideFlags: 1
@@ -4569,6 +4740,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400326}
+  m_RootOrder: 1
 --- !u!4 &400288
 Transform:
   m_ObjectHideFlags: 1
@@ -4587,6 +4759,7 @@ Transform:
   - {fileID: 400134}
   - {fileID: 400016}
   m_Father: {fileID: 400162}
+  m_RootOrder: 19
 --- !u!4 &400290
 Transform:
   m_ObjectHideFlags: 1
@@ -4598,6 +4771,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400190}
+  m_RootOrder: 7
 --- !u!4 &400292
 Transform:
   m_ObjectHideFlags: 1
@@ -4614,6 +4788,7 @@ Transform:
   - {fileID: 400154}
   - {fileID: 400026}
   m_Father: {fileID: 400162}
+  m_RootOrder: 11
 --- !u!4 &400294
 Transform:
   m_ObjectHideFlags: 1
@@ -4630,6 +4805,7 @@ Transform:
   - {fileID: 400030}
   - {fileID: 400094}
   m_Father: {fileID: 400162}
+  m_RootOrder: 13
 --- !u!4 &400296
 Transform:
   m_ObjectHideFlags: 1
@@ -4641,6 +4817,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400294}
+  m_RootOrder: 2
 --- !u!4 &400298
 Transform:
   m_ObjectHideFlags: 1
@@ -4652,6 +4829,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400162}
+  m_RootOrder: 42
 --- !u!4 &400300
 Transform:
   m_ObjectHideFlags: 1
@@ -4663,6 +4841,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400310}
+  m_RootOrder: 4
 --- !u!4 &400302
 Transform:
   m_ObjectHideFlags: 1
@@ -4674,6 +4853,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400068}
+  m_RootOrder: 1
 --- !u!4 &400304
 Transform:
   m_ObjectHideFlags: 1
@@ -4685,6 +4865,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400186}
+  m_RootOrder: 4
 --- !u!4 &400306
 Transform:
   m_ObjectHideFlags: 1
@@ -4696,6 +4877,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400216}
+  m_RootOrder: 7
 --- !u!4 &400308
 Transform:
   m_ObjectHideFlags: 1
@@ -4707,6 +4889,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400050}
+  m_RootOrder: 3
 --- !u!4 &400310
 Transform:
   m_ObjectHideFlags: 1
@@ -4727,6 +4910,7 @@ Transform:
   - {fileID: 400114}
   - {fileID: 400240}
   m_Father: {fileID: 400162}
+  m_RootOrder: 2
 --- !u!4 &400312
 Transform:
   m_ObjectHideFlags: 1
@@ -4738,6 +4922,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400190}
+  m_RootOrder: 5
 --- !u!4 &400314
 Transform:
   m_ObjectHideFlags: 1
@@ -4749,6 +4934,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400068}
+  m_RootOrder: 2
 --- !u!4 &400316
 Transform:
   m_ObjectHideFlags: 1
@@ -4760,6 +4946,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400326}
+  m_RootOrder: 3
 --- !u!4 &400318
 Transform:
   m_ObjectHideFlags: 1
@@ -4771,6 +4958,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400168}
+  m_RootOrder: 1
 --- !u!4 &400320
 Transform:
   m_ObjectHideFlags: 1
@@ -4782,6 +4970,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400168}
+  m_RootOrder: 4
 --- !u!4 &400322
 Transform:
   m_ObjectHideFlags: 1
@@ -4793,6 +4982,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400218}
+  m_RootOrder: 3
 --- !u!4 &400324
 Transform:
   m_ObjectHideFlags: 1
@@ -4804,6 +4994,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400162}
+  m_RootOrder: 39
 --- !u!4 &400326
 Transform:
   m_ObjectHideFlags: 1
@@ -4820,6 +5011,7 @@ Transform:
   - {fileID: 400316}
   - {fileID: 400244}
   m_Father: {fileID: 400162}
+  m_RootOrder: 5
 --- !u!4 &400328
 Transform:
   m_ObjectHideFlags: 1
@@ -4831,6 +5023,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400216}
+  m_RootOrder: 6
 --- !u!4 &400330
 Transform:
   m_ObjectHideFlags: 1
@@ -4851,6 +5044,7 @@ Transform:
   - {fileID: 400348}
   - {fileID: 400096}
   m_Father: {fileID: 400162}
+  m_RootOrder: 6
 --- !u!4 &400332
 Transform:
   m_ObjectHideFlags: 1
@@ -4862,6 +5056,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400224}
+  m_RootOrder: 1
 --- !u!4 &400334
 Transform:
   m_ObjectHideFlags: 1
@@ -4873,6 +5068,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400162}
+  m_RootOrder: 36
 --- !u!4 &400336
 Transform:
   m_ObjectHideFlags: 1
@@ -4884,6 +5080,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400088}
+  m_RootOrder: 2
 --- !u!4 &400338
 Transform:
   m_ObjectHideFlags: 1
@@ -4895,6 +5092,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400162}
+  m_RootOrder: 38
 --- !u!4 &400340
 Transform:
   m_ObjectHideFlags: 1
@@ -4906,6 +5104,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400162}
+  m_RootOrder: 31
 --- !u!4 &400342
 Transform:
   m_ObjectHideFlags: 1
@@ -4917,6 +5116,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400292}
+  m_RootOrder: 2
 --- !u!4 &400344
 Transform:
   m_ObjectHideFlags: 1
@@ -4928,6 +5128,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400162}
+  m_RootOrder: 1
 --- !u!4 &400346
 Transform:
   m_ObjectHideFlags: 1
@@ -4939,6 +5140,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400162}
+  m_RootOrder: 44
 --- !u!4 &400348
 Transform:
   m_ObjectHideFlags: 1
@@ -4950,6 +5152,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400330}
+  m_RootOrder: 7
 --- !u!4 &400350
 Transform:
   m_ObjectHideFlags: 1
@@ -4968,6 +5171,7 @@ Transform:
   - {fileID: 400142}
   - {fileID: 400124}
   m_Father: {fileID: 400162}
+  m_RootOrder: 18
 --- !u!4 &400352
 Transform:
   m_ObjectHideFlags: 1
@@ -4979,6 +5183,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400330}
+  m_RootOrder: 6
 --- !u!4 &400354
 Transform:
   m_ObjectHideFlags: 1
@@ -4990,6 +5195,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400088}
+  m_RootOrder: 6
 --- !u!4 &400356
 Transform:
   m_ObjectHideFlags: 1
@@ -5001,6 +5207,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400292}
+  m_RootOrder: 0
 --- !u!4 &400358
 Transform:
   m_ObjectHideFlags: 1
@@ -5012,6 +5219,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400162}
+  m_RootOrder: 45
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5025,6 +5233,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400000}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 450, z: 0}
   dataList:
@@ -5117,6 +5326,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400002}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 450, z: 0}
   dataList:
@@ -5209,6 +5419,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400004}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 100, y: 400, z: 0}
   dataList:
@@ -5301,6 +5512,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400006}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -100, y: 400, z: 0}
   dataList:
@@ -5393,6 +5605,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400008}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 400, z: 0}
   dataList:
@@ -5485,6 +5698,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400010}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 350, z: 0}
   dataList:
@@ -5577,6 +5791,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400012}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 350, z: 0}
   dataList:
@@ -5669,6 +5884,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400014}
   timeLine: 2850
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400012}
@@ -5694,6 +5910,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400016}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 450, z: 0}
   dataList:
@@ -5786,6 +6003,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400018}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -100, y: 400, z: 0}
   dataList:
@@ -5878,6 +6096,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400020}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -5919,6 +6138,20 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+--- !u!114 &11400022
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d09102892b0ec684c9bec995cef6b101, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 400022}
+  timeLine: 0
+  refActionConditioner: {fileID: 0}
 --- !u!114 &11400024
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5932,6 +6165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400024}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -5986,6 +6220,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 17
   initialPosition: {x: 37.4414062, y: 360, z: 0}
   dataList:
@@ -6050,6 +6285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400028}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -180, y: 330, z: 0}
   dataList:
@@ -6104,6 +6340,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400030}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -6158,6 +6395,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400032}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 100, y: 400, z: 0}
   dataList:
@@ -6250,6 +6488,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400034}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 350, z: 0}
   dataList:
@@ -6342,6 +6581,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400036}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 120, y: 330, z: 0}
   dataList:
@@ -6396,6 +6636,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400038}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 400, z: 0}
   dataList:
@@ -6488,6 +6729,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400040}
   timeLine: 320
+  refActionConditioner: {fileID: 0}
   enemyId: 17
   initialPosition: {x: 37.4414062, y: 358, z: 0}
   dataList:
@@ -6552,6 +6794,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400042}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -6606,6 +6849,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400044}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -240, y: 330, z: 0}
   dataList:
@@ -6660,6 +6904,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400046}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 400, z: 0}
   dataList:
@@ -6752,6 +6997,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400048}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 120, y: 330, z: 0}
   dataList:
@@ -6806,6 +7052,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400050}
   timeLine: 1400
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400056}
@@ -6831,6 +7078,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 17
   initialPosition: {x: -300, y: 400, z: 0}
   dataList:
@@ -6895,6 +7143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400054}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 180, y: 330, z: 0}
   dataList:
@@ -6949,6 +7198,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400056}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 350, z: 0}
   dataList:
@@ -7041,6 +7291,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400058}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 240, y: 330, z: 0}
   dataList:
@@ -7095,6 +7346,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400060}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -240, y: 330, z: 0}
   dataList:
@@ -7149,6 +7401,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400062}
   timeLine: 280
+  refActionConditioner: {fileID: 0}
   enemyId: 7
   initialPosition: {x: 37.4414062, y: 360, z: 0}
   dataList:
@@ -7241,6 +7494,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400064}
   timeLine: 300
+  refActionConditioner: {fileID: 0}
   enemyId: 17
   initialPosition: {x: 37.4414062, y: 358, z: 0}
   dataList:
@@ -7305,6 +7559,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400068}
   timeLine: 2260
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400034}
@@ -7330,6 +7585,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400066}
   timeLine: 350
+  refActionConditioner: {fileID: 0}
   delayDuration: 810
   exceptionDuration: 1000
   needDestroyEnemyId: 16
@@ -7347,6 +7603,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400070}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -7401,6 +7658,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400072}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -7455,6 +7713,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400074}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -7509,6 +7768,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400076}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -100, y: 400, z: 0}
   dataList:
@@ -7601,6 +7861,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400078}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -240, y: 330, z: 0}
   dataList:
@@ -7655,6 +7916,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400080}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -7709,6 +7971,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400082}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 100, y: 400, z: 0}
   dataList:
@@ -7801,6 +8064,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 17
   initialPosition: {x: -300, y: 400, z: 0}
   dataList:
@@ -7865,6 +8129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 17
   initialPosition: {x: -300, y: 400, z: 0}
   dataList:
@@ -7929,6 +8194,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400088}
   timeLine: 2200
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400260}
@@ -7954,6 +8220,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400090}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -8008,6 +8275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400094}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -8062,6 +8330,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400092}
   timeLine: 350
+  refActionConditioner: {fileID: 0}
   enemyId: 16
   initialPosition: {x: 480.185638, y: 432.861664, z: 0}
   dataList:
@@ -8192,6 +8461,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400096}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 240, y: 330, z: 0}
   dataList:
@@ -8246,6 +8516,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400098}
   timeLine: 1290
+  refActionConditioner: {fileID: 0}
   enemyId: 17
   initialPosition: {x: 400, y: 120, z: 0}
   dataList:
@@ -8338,6 +8609,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400100}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -8392,6 +8664,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400102}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -60, y: 330, z: 0}
   dataList:
@@ -8446,6 +8719,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400104}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 350, z: 0}
   dataList:
@@ -8538,6 +8812,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400106}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -100, y: 400, z: 0}
   dataList:
@@ -8630,6 +8905,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400108}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -240, y: 330, z: 0}
   dataList:
@@ -8684,6 +8960,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400110}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -8738,6 +9015,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400112}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -8792,6 +9070,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400114}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 180, y: 330, z: 0}
   dataList:
@@ -8846,6 +9125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400116}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 350, z: 0}
   dataList:
@@ -8938,6 +9218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400118}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 240, y: 330, z: 0}
   dataList:
@@ -8992,6 +9273,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 17
   initialPosition: {x: -300, y: 400, z: 0}
   dataList:
@@ -9056,6 +9338,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400122}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -240, y: 330, z: 0}
   dataList:
@@ -9110,6 +9393,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400124}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 450, z: 0}
   dataList:
@@ -9202,6 +9486,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400126}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -180, y: 330, z: 0}
   dataList:
@@ -9256,6 +9541,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400128}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 400, z: 0}
   dataList:
@@ -9348,6 +9634,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400130}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -120, y: 330, z: 0}
   dataList:
@@ -9402,6 +9689,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400132}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 60, y: 330, z: 0}
   dataList:
@@ -9456,6 +9744,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400134}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 450, z: 0}
   dataList:
@@ -9548,6 +9837,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400136}
   timeLine: 1230
+  refActionConditioner: {fileID: 0}
   enemyId: 17
   initialPosition: {x: -400, y: 217, z: 0}
   dataList:
@@ -9640,6 +9930,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400138}
   timeLine: 240
+  refActionConditioner: {fileID: 0}
   enemyId: 7
   initialPosition: {x: -120, y: 360, z: 0}
   dataList:
@@ -9732,6 +10023,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400140}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -9786,6 +10078,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400142}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 450, z: 0}
   dataList:
@@ -9878,6 +10171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 17
   initialPosition: {x: -300, y: 400, z: 0}
   dataList:
@@ -9942,6 +10236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400146}
   timeLine: 380
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400080}
@@ -9965,6 +10260,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400148}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -10019,6 +10315,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400150}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 120, y: 330, z: 0}
   dataList:
@@ -10073,6 +10370,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 17
   initialPosition: {x: 37.4414062, y: 360, z: 0}
   dataList:
@@ -10137,6 +10435,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 17
   initialPosition: {x: 37.4414062, y: 360, z: 0}
   dataList:
@@ -10201,6 +10500,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400156}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -120, y: 330, z: 0}
   dataList:
@@ -10255,6 +10555,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400158}
   timeLine: 1740
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: -120, y: 342.269897, z: 0}
   dataList:
@@ -10309,6 +10610,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400160}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -10363,6 +10665,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400164}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 350, z: 0}
   dataList:
@@ -10559,6 +10862,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400166}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -10613,6 +10917,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400168}
   timeLine: 100
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400198}
@@ -10636,6 +10941,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400170}
   timeLine: 1900
+  refActionConditioner: {fileID: 0}
   enemyId: 7
   initialPosition: {x: -120, y: 360, z: 0}
   dataList:
@@ -10690,6 +10996,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400172}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -10744,6 +11051,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400174}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -10798,6 +11106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400176}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 350, z: 0}
   dataList:
@@ -10890,6 +11199,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 17
   initialPosition: {x: -300, y: 400, z: 0}
   dataList:
@@ -10954,6 +11264,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400180}
   timeLine: 2600
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400084}
@@ -10977,6 +11288,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400182}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -11031,6 +11343,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400184}
   timeLine: 1260
+  refActionConditioner: {fileID: 0}
   enemyId: 17
   initialPosition: {x: -400, y: 120, z: 0}
   dataList:
@@ -11123,6 +11436,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400186}
   timeLine: 1070
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400174}
@@ -11146,6 +11460,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400188}
   timeLine: 240
+  refActionConditioner: {fileID: 0}
   delayDuration: 50
   exceptionDuration: 200
   needDestroyEnemyId: 7
@@ -11163,6 +11478,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400190}
   timeLine: 2710
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400118}
@@ -11190,6 +11506,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400192}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -60, y: 330, z: 0}
   dataList:
@@ -11244,6 +11561,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400194}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -11298,6 +11616,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400196}
   timeLine: 2310
+  refActionConditioner: {fileID: 0}
   enemyId: 17
   initialPosition: {x: -60, y: 360, z: 0}
   dataList:
@@ -11357,6 +11676,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400198}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -11411,6 +11731,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400200}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -120, y: 330, z: 0}
   dataList:
@@ -11465,6 +11786,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400202}
   timeLine: 380
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400274}
@@ -11488,6 +11810,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400204}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -11542,6 +11865,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400206}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 450, z: 0}
   dataList:
@@ -11634,6 +11958,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400208}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 450, z: 0}
   dataList:
@@ -11726,6 +12051,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400210}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 450, z: 0}
   dataList:
@@ -11818,6 +12144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400212}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 450, z: 0}
   dataList:
@@ -11910,6 +12237,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400214}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 180, y: 330, z: 0}
   dataList:
@@ -11964,6 +12292,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400216}
   timeLine: 1960
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400108}
@@ -11991,6 +12320,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400218}
   timeLine: 2050
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400276}
@@ -12018,6 +12348,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400220}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -120, y: 330, z: 0}
   dataList:
@@ -12072,6 +12403,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400222}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -180, y: 330, z: 0}
   dataList:
@@ -12126,6 +12458,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400224}
   timeLine: 1070
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400074}
@@ -12149,6 +12482,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400226}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -60, y: 330, z: 0}
   dataList:
@@ -12203,6 +12537,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400228}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 60, y: 330, z: 0}
   dataList:
@@ -12257,6 +12592,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400230}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -180, y: 330, z: 0}
   dataList:
@@ -12311,6 +12647,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400232}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -12365,6 +12702,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400234}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 350, z: 0}
   dataList:
@@ -12457,6 +12795,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400236}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 100, y: 400, z: 0}
   dataList:
@@ -12549,6 +12888,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400238}
   timeLine: 300
+  refActionConditioner: {fileID: 0}
   delayDuration: 45
   exceptionDuration: 320
   needDestroyEnemyId: 17
@@ -12566,6 +12906,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400240}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 240, y: 330, z: 0}
   dataList:
@@ -12620,6 +12961,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400242}
   timeLine: 90
+  refActionConditioner: {fileID: 0}
   delayDuration: 0
   exceptionDuration: 1200
   needDestroyEnemyId: 16
@@ -12637,6 +12979,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 17
   initialPosition: {x: -300, y: 400, z: 0}
   dataList:
@@ -12701,6 +13044,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400246}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -100, y: 400, z: 0}
   dataList:
@@ -12793,6 +13137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400248}
   timeLine: 1200
+  refActionConditioner: {fileID: 0}
   enemyId: 17
   initialPosition: {x: 400, y: 217, z: 0}
   dataList:
@@ -12885,6 +13230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400250}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 350, z: 0}
   dataList:
@@ -12977,6 +13323,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 17
   initialPosition: {x: -300, y: 400, z: 0}
   dataList:
@@ -13041,6 +13388,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400254}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -13095,6 +13443,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400256}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -13149,6 +13498,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400258}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 60, y: 330, z: 0}
   dataList:
@@ -13203,6 +13553,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400260}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 350, z: 0}
   dataList:
@@ -13295,6 +13646,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400262}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 100, y: 400, z: 0}
   dataList:
@@ -13387,6 +13739,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400264}
   timeLine: 2130
+  refActionConditioner: {fileID: 0}
   enemyId: 5
   initialPosition: {x: 406.885345, y: 138.51413, z: 0}
   dataList:
@@ -13479,6 +13832,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400266}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 60, y: 330, z: 0}
   dataList:
@@ -13533,6 +13887,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400268}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 100, y: 400, z: 0}
   dataList:
@@ -13625,6 +13980,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400270}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -13679,6 +14035,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400272}
   timeLine: 200
+  refActionConditioner: {fileID: 0}
   enemyId: 12
   initialPosition: {x: -120, y: 360, z: 0}
   dataList:
@@ -13771,6 +14128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400274}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -13825,6 +14183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400276}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 240, y: 330, z: 0}
   dataList:
@@ -13879,6 +14238,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400278}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -50, y: 450, z: 0}
   dataList:
@@ -13971,6 +14331,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400280}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -60, y: 330, z: 0}
   dataList:
@@ -14025,6 +14386,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400282}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -120, y: 330, z: 0}
   dataList:
@@ -14079,6 +14441,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400284}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -14133,6 +14496,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 17
   initialPosition: {x: -300, y: 400, z: 0}
   dataList:
@@ -14197,6 +14561,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400288}
   timeLine: 1580
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400234}
@@ -14222,6 +14587,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400290}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -180, y: 330, z: 0}
   dataList:
@@ -14276,6 +14642,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400292}
   timeLine: 1420
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400356}
@@ -14299,6 +14666,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400294}
   timeLine: 100
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400024}
@@ -14322,6 +14690,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400296}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -14376,6 +14745,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400298}
   timeLine: 2310
+  refActionConditioner: {fileID: 0}
   enemyId: 17
   initialPosition: {x: 60, y: 360, z: 0}
   dataList:
@@ -14435,6 +14805,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400300}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -14489,6 +14860,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400302}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 350, z: 0}
   dataList:
@@ -14581,6 +14953,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400304}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -14635,6 +15008,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400306}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 180, y: 330, z: 0}
   dataList:
@@ -14689,6 +15063,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400308}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: -100, y: 400, z: 0}
   dataList:
@@ -14781,6 +15156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400310}
   timeLine: 2764
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400060}
@@ -14808,6 +15184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400312}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: -60, y: 330, z: 0}
   dataList:
@@ -14862,6 +15239,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400314}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 400, z: 0}
   dataList:
@@ -14954,6 +15332,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 17
   initialPosition: {x: -300, y: 400, z: 0}
   dataList:
@@ -15018,6 +15397,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400318}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -15072,6 +15452,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400320}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -15126,6 +15507,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400322}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 60, y: 330, z: 0}
   dataList:
@@ -15180,6 +15562,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400324}
   timeLine: 1900
+  refActionConditioner: {fileID: 0}
   enemyId: 7
   initialPosition: {x: 120, y: 360, z: 0}
   dataList:
@@ -15234,6 +15617,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400326}
   timeLine: 2500
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400144}
@@ -15257,6 +15641,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400328}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 120, y: 330, z: 0}
   dataList:
@@ -15311,6 +15696,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400330}
   timeLine: 2400
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400122}
@@ -15338,6 +15724,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400332}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 1
   initialPosition: {x: 0, y: 330, z: 0}
   dataList:
@@ -15392,6 +15779,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400334}
   timeLine: 1660
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: 0, y: 342.269897, z: 0}
   dataList:
@@ -15446,6 +15834,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400336}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 0, y: 400, z: 0}
   dataList:
@@ -15538,6 +15927,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400338}
   timeLine: 1820
+  refActionConditioner: {fileID: 0}
   enemyId: 2
   initialPosition: {x: 120, y: 342.269897, z: 0}
   dataList:
@@ -15592,6 +15982,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400340}
   timeLine: 340
+  refActionConditioner: {fileID: 0}
   enemyId: 17
   initialPosition: {x: 37.4414062, y: 358, z: 0}
   dataList:
@@ -15656,6 +16047,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 17
   initialPosition: {x: 37.4414062, y: 360, z: 0}
   dataList:
@@ -15720,6 +16112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400344}
   timeLine: 40
+  refActionConditioner: {fileID: 0}
   enemyId: 16
   initialPosition: {x: 480.185638, y: 432.861664, z: 0}
   dataList:
@@ -15850,6 +16243,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400346}
   timeLine: 2500
+  refActionConditioner: {fileID: 0}
   delayDuration: 200
   exceptionDuration: 220
   needDestroyEnemyId: 17
@@ -15867,6 +16261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400348}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 180, y: 330, z: 0}
   dataList:
@@ -15921,6 +16316,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400350}
   timeLine: 1740
+  refActionConditioner: {fileID: 0}
   actionableListManager:
     actionableList:
     - {fileID: 11400116}
@@ -15946,6 +16342,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400352}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 120, y: 330, z: 0}
   dataList:
@@ -16000,6 +16397,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400354}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 0
   initialPosition: {x: 50, y: 450, z: 0}
   dataList:
@@ -16092,6 +16490,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   timeLine: 0
+  refActionConditioner: {fileID: 0}
   enemyId: 17
   initialPosition: {x: 37.4414062, y: 360, z: 0}
   dataList:
@@ -16168,6 +16567,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400358}
   timeLine: 2900
+  refActionConditioner: {fileID: 0}
   prefabNextStage: {fileID: 100144, guid: d4237e78fe8ad426aaab8394d2b1d95e, type: 2}
   prefabExtensionStage: {fileID: 100144, guid: 14d4eb4cea3d2b94085833a48c12cf39, type: 2}
   refConditioner: {fileID: 11400358}

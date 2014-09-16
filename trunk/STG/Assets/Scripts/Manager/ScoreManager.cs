@@ -58,6 +58,7 @@ public class ScoreManager : GameMonoBehaviour
 		for( int i=0; i<capacity; i++ )
 		{
 			this.earnedStarItemList.Add( 0 );
+//			this.earnedStarItemList[i] = 100;
 		}
 	}
 	/// <summary>

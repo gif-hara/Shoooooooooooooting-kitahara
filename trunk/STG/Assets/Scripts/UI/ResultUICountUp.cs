@@ -48,7 +48,7 @@ public class ResultUICountUp : ResultUIEffectExecuter
 		targetCount = ReferenceManager.ScoreManager.EarnedStarItemList[starId];
 	}
 
-	protected virtual void CountUp()
+	protected void CountUp()
 	{
 		if( currentCount >= targetCount )
 		{
@@ -57,8 +57,21 @@ public class ResultUICountUp : ResultUIEffectExecuter
 			refResultManager.SendMessage( ResultUIManager.CompleteMessage );
 			return;
 		}
-
-		currentCount++;
+		if( Input.GetKeyDown( KeyCode.Z ) )
+		{
+			var sub = targetCount - currentCount;
+			currentCount = targetCount;
+			CountUpped( sub * rate );
+		}
+		else
+		{
+			currentCount++;
+			CountUpped( rate );
+		}
 		refTextMesh.text = (currentCount * rate).ToString();
+	}
+
+	protected virtual void CountUpped( int addedValue )
+	{
 	}
 }

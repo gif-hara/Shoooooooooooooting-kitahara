@@ -14,18 +14,9 @@ using System.Collections.Generic;
 /// </summary>
 public class ResultUICountUpAddScore : ResultUICountUp
 {
-	protected override void CountUp ()
+	protected override void CountUpped (int addedValue)
 	{
-		if( currentCount >= targetCount )
-		{
-			isUpdate = false;
-			this.currentCount = 0;
-			refResultManager.SendMessage( ResultUIManager.CompleteMessage );
-			return;
-		}
-		
-		currentCount++;
-		refTextMesh.text = (currentCount * rate).ToString();
-		ReferenceManager.ScoreManager.AddScore( (ulong)rate );
+		base.CountUpped (addedValue);
+		ReferenceManager.ScoreManager.AddScore( (ulong)addedValue );
 	}
 }
