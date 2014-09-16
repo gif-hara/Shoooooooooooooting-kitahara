@@ -52,6 +52,8 @@ public class InputShot : A_InputAction
 	/// 今発射している数.
 	/// </summary>
 	private int currentFireNum;
+
+	private bool isFire = true;
 	
 	// Use this for initialization
 	public override void Start()
@@ -64,6 +66,8 @@ public class InputShot : A_InputAction
 	public override void Update()
 	{
 		base.Update();
+
+		if( !isFire )	return;
 		
 		if( currentFireNum >= maxFire )	return;
 		
@@ -87,5 +91,15 @@ public class InputShot : A_InputAction
 	public void Cool()
 	{
 		currentFireNum--;
+	}
+
+	void OnStartResult()
+	{
+		isFire = false;
+	}
+
+	void OnStartStage()
+	{
+		isFire = true;
 	}
 }

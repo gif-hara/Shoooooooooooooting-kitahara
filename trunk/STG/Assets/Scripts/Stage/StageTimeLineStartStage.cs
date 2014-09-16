@@ -16,7 +16,8 @@ public class StageTimeLineStartStage : A_StageTimeLineActionable
 {
 	public override void Action ()
 	{
-		ReferenceManager.Instance.refUILayer.BroadcastMessage( GameDefine.StartStageMessage );
+		ReferenceManager.refUILayer.BroadcastMessage( GameDefine.StartStageMessage );
+		ReferenceManager.refPlayerLayer.BroadcastMessage( GameDefine.StartStageMessage );
 	}
 	protected override string GameObjectName
 	{
