@@ -398,11 +398,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 100010}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7513112ca054d498aa33ca543b67cc23, type: 3}
+  m_Script: {fileID: 11500000, guid: ff1022b90beaa2041a7905894823b5fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
-  label: Dead0
+  labels:
+  - Dead0
+  - Dead4
 --- !u!114 &11400016
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -460,6 +462,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   refShadowMaterial: {fileID: 2100000, guid: 877b35030a9b8844cb86616f5e51fcf4, type: 2}
+  offset: {x: 0, y: 0}
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1
