@@ -37,7 +37,13 @@ public class StageTimeLineEnemyChunkCreateAction : A_StageTimeLineActionable
 	public Vector2 offset;
 	
 	private bool isUpdate = false;
-	
+
+	[ContextMenu( "Auto Set Action Conditioner" )]
+	private void SetActionConditioner()
+	{
+		this.refActionConditioner = GetComponent<A_StageTimeLineActionConditioner>();
+	}
+
 	// Use this for initialization
 	public override void Start()
 	{
