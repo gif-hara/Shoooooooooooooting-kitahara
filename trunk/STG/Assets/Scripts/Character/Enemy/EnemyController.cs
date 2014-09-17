@@ -157,6 +157,7 @@ public class EnemyController : EnemyControllerBase
 	{
 		base.Start();
 		AttachComponent();
+		JoinStage();
 	}
 
 	// Update is called once per frame
@@ -172,6 +173,11 @@ public class EnemyController : EnemyControllerBase
 		{
 			updateFunc();
 		}
+	}
+
+	void OnDestroy()
+	{
+		DefectionStage();
 	}
 
 	void OnEnemyDestroyOnDeactiveMuzzleMessage( int destroyEnemyId )
@@ -336,6 +342,30 @@ public class EnemyController : EnemyControllerBase
 		
 		currentMoveComponent = ObjectMoveUtility.CreateObjectMove( Trans, moveDataList[moveComponentCount++] );
 		currentMoveComponent.refTrans = Trans;
+	}
+	/// <summary>
+	/// ステージ管理者に自分自身を参加させる.
+	/// </summary>
+	private void JoinStage()
+	{
+		var stageManager = ReferenceManager.Instance.refStageManager;
+		if( stageManager == null )
+		{
+			return;
+		}
+
+		stageManager.AddExistEnemyId( id );
+	}
+
+	private void DefectionStage()
+	{
+		var stageManager = ReferenceManager.Instance.refStageManager;
+		if( stageManager == null )
+		{
+			return;
+		}
+		
+		stageManager.RemoveExistEnemyId( id );
 	}
 	/// <summary>
 	/// 移動コンポーネントの完了処理.

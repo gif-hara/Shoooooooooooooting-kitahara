@@ -25,10 +25,8 @@ public class StageManager : GameMonoBehaviour
 	public StageTimeLineManager timeLineManager;
 	
 	public StageActionableListManager actionableListManager;
-	
-	public const float StageX = 800.0f;
-	
-	public const float StageY = 600.0f;
+
+	private List<int> existEnemyIdList = new List<int>();
 	
 	public override void Awake()
 	{
@@ -81,5 +79,19 @@ public class StageManager : GameMonoBehaviour
 	{
 		enabled = false;
 	}
-	
+
+	public void AddExistEnemyId( int enemyId )
+	{
+		this.existEnemyIdList.Add( enemyId );
+	}
+
+	public void RemoveExistEnemyId( int enemyId )
+	{
+		this.existEnemyIdList.Remove( enemyId );
+	}
+
+	public int ExistEnemyNumber( int enemyId )
+	{
+		return this.existEnemyIdList.FindAll( m => m == enemyId ).Count;
+	}
 }
