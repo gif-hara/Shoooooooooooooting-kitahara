@@ -654,6 +654,7 @@ GameObject:
   - 4: {fileID: 400090}
   - 114: {fileID: 11400222}
   - 114: {fileID: 11400220}
+  - 114: {fileID: 11400196}
   m_Layer: 8
   m_Name: Enemy32
   m_TagString: Untagged
@@ -3888,6 +3889,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   refShadowMaterial: {fileID: 2100000, guid: 4dc1ed888afc04742bad062e2a00825c, type: 2}
+  offset: {x: 0, y: 0}
+--- !u!114 &11400196
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51633c75a2ce84d7fbd745d645ce806e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  bossType: 2
 --- !u!114 &11400200
 MonoBehaviour:
   m_ObjectHideFlags: 1

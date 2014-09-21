@@ -1775,6 +1775,7 @@ GameObject:
   - 4: {fileID: 400212}
   - 114: {fileID: 11400724}
   - 114: {fileID: 11400722}
+  - 114: {fileID: 11400408}
   m_Layer: 8
   m_Name: Enemy21
   m_TagString: Untagged
@@ -8956,6 +8957,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   refShadowMaterial: {fileID: 2100000, guid: 65d3071579606d14a80034e1973a6ec0, type: 2}
+  offset: {x: 0, y: 0}
 --- !u!114 &11400398
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8969,6 +8971,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   refShadowMaterial: {fileID: 2100000, guid: 312e3b8484679f7499427e677d7c6444, type: 2}
+  offset: {x: 0, y: 0}
 --- !u!114 &11400400
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8982,6 +8985,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   refShadowMaterial: {fileID: 2100000, guid: 14177356ab8d1fa4da475ab242096a93, type: 2}
+  offset: {x: 0, y: 0}
 --- !u!114 &11400402
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8995,6 +8999,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   refShadowMaterial: {fileID: 2100000, guid: 312e3b8484679f7499427e677d7c6444, type: 2}
+  offset: {x: 0, y: 0}
 --- !u!114 &11400404
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9008,6 +9013,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   refShadowMaterial: {fileID: 2100000, guid: 14177356ab8d1fa4da475ab242096a93, type: 2}
+  offset: {x: 0, y: 0}
 --- !u!114 &11400406
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9021,6 +9027,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   refShadowMaterial: {fileID: 2100000, guid: 4dc1ed888afc04742bad062e2a00825c, type: 2}
+  offset: {x: 0, y: 0}
+--- !u!114 &11400408
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51633c75a2ce84d7fbd745d645ce806e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  bossType: 2
 --- !u!114 &11400562
 MonoBehaviour:
   m_ObjectHideFlags: 1

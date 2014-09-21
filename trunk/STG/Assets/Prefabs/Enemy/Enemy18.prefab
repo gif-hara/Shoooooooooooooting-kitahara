@@ -289,6 +289,7 @@ GameObject:
   - 4: {fileID: 400034}
   - 114: {fileID: 11400070}
   - 114: {fileID: 11400026}
+  - 114: {fileID: 11400258}
   m_Layer: 8
   m_Name: Enemy18
   m_TagString: Untagged
@@ -6081,6 +6082,19 @@ MonoBehaviour:
   multipleNum: 1
   isLock: 0
   isPlayerTop: 0
+--- !u!114 &11400258
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51633c75a2ce84d7fbd745d645ce806e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  bossType: 1
 --- !u!114 &11400266
 MonoBehaviour:
   m_ObjectHideFlags: 1
