@@ -12,7 +12,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 
-public abstract class A_StageChangeConditioner : MonoBehaviour
+public abstract class A_StageChangeConditioner : GameMonoBehaviour
 {
 	/// <summary>
 	/// 通常ルートか？.

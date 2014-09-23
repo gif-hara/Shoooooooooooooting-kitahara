@@ -14,8 +14,14 @@ using System.Collections.Generic;
 
 public class Stage0MiddleChangeConditioner : A_StageChangeConditioner
 {
+	[SerializeField]
+	private int extensionNeedEnemyId;
+
+	[SerializeField]
+	private int extensionDestroyNum;
+
 	public override bool Condition()
 	{
-		return !isBasicRoot;
+		return GameManager.DestroyEnemyNumList[extensionNeedEnemyId] >= extensionDestroyNum;
 	}
 }
