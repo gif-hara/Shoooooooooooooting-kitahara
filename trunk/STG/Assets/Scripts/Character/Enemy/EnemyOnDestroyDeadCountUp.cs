@@ -22,6 +22,5 @@ public class EnemyOnDestroyDeadCountUp : GameMonoBehaviour
 	void OnDestroy()
 	{
 		GameManager.DestroyEnemy( refEnemy.Id );
-		Debug.Log( "EnemyOnDestroyDeadCountUp.OnDestroy()" );
 	}
 }
