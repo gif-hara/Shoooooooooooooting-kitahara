@@ -158,6 +158,11 @@ public class GameManager : GameMonoBehaviour
 		this.BossType = GameDefine.BossType.None;
 	}
 
+	public void ReverseStageClear( int stageId )
+	{
+		this.ReverseStageFlagList[stageId] = true;
+	}
+
 	/// <summary>
 	/// デバッグで裏ステージクリアフラグを立てる.
 	/// </summary>

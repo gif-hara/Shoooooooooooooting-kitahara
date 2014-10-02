@@ -1906,6 +1906,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &100238
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400236}
+  - 114: {fileID: 11400278}
+  m_Layer: 0
+  m_Name: '[0] ReverseStageClear'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &100244
 GameObject:
   m_ObjectHideFlags: 0
@@ -2055,6 +2071,7 @@ Transform:
   - {fileID: 400150}
   - {fileID: 400114}
   - {fileID: 400110}
+  - {fileID: 400236}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &400008
@@ -3462,6 +3479,18 @@ Transform:
   - {fileID: 400212}
   m_Father: {fileID: 400006}
   m_RootOrder: 63
+--- !u!4 &400236
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100238}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -400, y: 300, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400006}
+  m_RootOrder: 70
 --- !u!4 &400244
 Transform:
   m_ObjectHideFlags: 1
@@ -4278,6 +4307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23a125e540ee88d42999da980b71dd52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
   isBasicRoot: 0
 --- !u!114 &11400032
 MonoBehaviour:
@@ -13186,6 +13216,21 @@ MonoBehaviour:
   interval: 15
   extensionName: Enemy0_Chunk7
   offset: {x: -150, y: 0}
+--- !u!114 &11400278
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46f3d2f00ac13a64f946d36ac936a1dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 400236}
+  timeLine: 0
+  refActionConditioner: {fileID: 0}
+  stageId: 0
 --- !u!114 &11400318
 MonoBehaviour:
   m_ObjectHideFlags: 1
