@@ -122,12 +122,18 @@ public class DebugManager : A_GUIElement
 		
 		// ストップウォッチリセット.
 		KeyPush( KeyCode.U, () =>
-		{
+		        {
 			refStopWatchGUI.Reset();
 		});
 
 		// 敵弾削除.
 		KeyPush( KeyCode.I, () => ReferenceManager.refCollisionManager.AllDestroyEnemyShot() );
+
+		// 裏ステージ全クリア.
+		KeyPush( KeyCode.O, () =>
+		        {
+			GameManager.DebugReverseStageClear();
+		});
 
 		KeyPush( KeyCode.A, () => refPlayerStatusManager.DebugChange( 0 ) );
 		KeyPush( KeyCode.S, () => refPlayerStatusManager.DebugChange( 1 ) );
@@ -156,6 +162,8 @@ public class DebugManager : A_GUIElement
 		builder.Append( StringAsset.Get( "Format_DebugStopWatchReset" ) );
 		builder.AppendLine();
 		builder.Append( StringAsset.Get( "Format_DebugAllDestroyEnemyShot" ) );
+		builder.AppendLine();
+		builder.Append( StringAsset.Get( "Format_DebugReverseStageClear" ) );
 		builder.AppendLine();
 		builder.Append( StringAsset.Get( "Format_DebugPlayerCreate" ) );
 		Label( builder.ToString() );

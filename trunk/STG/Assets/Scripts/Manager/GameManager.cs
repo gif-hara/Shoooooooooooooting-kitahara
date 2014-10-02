@@ -63,6 +63,12 @@ public class GameManager : GameMonoBehaviour
 	public GameDefine.BossType BossType{ get; private set; }
 
 	/// <summary>
+	/// 裏ステージ突入フラグ.
+	/// </summary>
+	/// <value>The reverse stage flag list.</value>
+	public List<bool> ReverseStageFlagList{ get; private set; }
+
+	/// <summary>
 	/// ゲームレベル最大値.
 	/// </summary>
 	private const int GameLevelMax = 100;
@@ -75,6 +81,12 @@ public class GameManager : GameMonoBehaviour
 		for( int i=0; i<ReferenceManager.Instance.prefabEnemyList.Count; i++ )
 		{
 			destroyEnemyNumList.Add( 0 );
+		}
+
+		this.ReverseStageFlagList = new List<bool>( 3 );
+		for( int i=0; i<3; i++ )
+		{
+			this.ReverseStageFlagList.Add( false );
 		}
 	}
 	
@@ -145,6 +157,18 @@ public class GameManager : GameMonoBehaviour
 	{
 		this.BossType = GameDefine.BossType.None;
 	}
+
+	/// <summary>
+	/// デバッグで裏ステージクリアフラグを立てる.
+	/// </summary>
+	public void DebugReverseStageClear()
+	{
+		for( int i=0; i<this.ReverseStageFlagList.Count; i++ )
+		{
+			this.ReverseStageFlagList[i] = true;
+		}
+	}
+
 	/// <summary>
 	/// ゲームレベル上昇処理.
 	/// </summary>
