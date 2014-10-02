@@ -64,6 +64,7 @@ Transform:
   - {fileID: 400002}
   - {fileID: 400006}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
 --- !u!4 &400002
 Transform:
   m_ObjectHideFlags: 1
@@ -75,6 +76,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400000}
+  m_RootOrder: 0
 --- !u!4 &400006
 Transform:
   m_ObjectHideFlags: 1
@@ -86,6 +88,7 @@ Transform:
   m_LocalScale: {x: 32, y: 32, z: 1}
   m_Children: []
   m_Father: {fileID: 400000}
+  m_RootOrder: 1
 --- !u!23 &2300002
 Renderer:
   m_ObjectHideFlags: 1
@@ -104,9 +107,8 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
   m_SortingLayerID: 0
+  m_SortingOrder: 0
 --- !u!33 &3300002
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -126,9 +128,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
-  radius: 3
+  radius: 2
   delayUpdate: 0
   refEnemyShot: {fileID: 11400002}
+  grazeRadius: 30
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -142,7 +145,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   prefabExplosion: {fileID: 100002, guid: 01128dc588fe58c46a0a3de362043c1d, type: 2}
-  prefabStarItem: {fileID: 100004, guid: a8f06ee2a43ebdc49b7ed6a9384c7c89, type: 2}
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1

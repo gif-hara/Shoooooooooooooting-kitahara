@@ -25,8 +25,10 @@ public class PlayerCollider : A_Collider
 	}
 	public override void OnCollision (A_Collider target)
 	{
-		if( target.Type == EType.Item )	return;
-
+	}
+	public override void Hit (A_Collider target)
+	{
+		base.Hit (target);
 		refPlayer.Miss();
 	}
 	

@@ -25,6 +25,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400002}
   - 114: {fileID: 11400002}
+  - 114: {fileID: 11400004}
   m_Layer: 10
   m_Name: Collider
   m_TagString: Untagged
@@ -62,6 +63,7 @@ Transform:
   - {fileID: 400002}
   - {fileID: 400006}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
 --- !u!4 &400002
 Transform:
   m_ObjectHideFlags: 1
@@ -73,6 +75,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400000}
+  m_RootOrder: 0
 --- !u!4 &400006
 Transform:
   m_ObjectHideFlags: 1
@@ -84,6 +87,7 @@ Transform:
   m_LocalScale: {x: 64, y: 128, z: 1}
   m_Children: []
   m_Father: {fileID: 400000}
+  m_RootOrder: 1
 --- !u!23 &2300002
 Renderer:
   m_ObjectHideFlags: 1
@@ -102,9 +106,8 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
   m_SortingLayerID: 0
+  m_SortingOrder: 0
 --- !u!33 &3300002
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -148,6 +151,19 @@ MonoBehaviour:
   power: 10
   prefabExplosion: {fileID: 100000, guid: 118dcc29342e2c14a9b8ba86e00e11b7, type: 2}
   isCollisionDead: 1
+--- !u!114 &11400004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a95b00ee9547da4abede90aa443766e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  addSpecialPoint: .0399999991
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -28,11 +28,18 @@ public class EnemyCollider : A_Collider
 	
 	public override void OnCollision (A_Collider target)
 	{
+		if( target.Type == A_Collider.EType.Player )
+		{
+			target.Hit( this );
+		}
+
 		if( target.Type == A_Collider.EType.PlayerShot )
 		{
 			var playerShot = target as PlayerShotCollider;
 			if( playerShot.IsEnemyCollision )	return;
 		}
+
+
 		
 		float damage = GetDamage( target );
 		refEnemyControllerBaseList.ForEach( (obj) =>

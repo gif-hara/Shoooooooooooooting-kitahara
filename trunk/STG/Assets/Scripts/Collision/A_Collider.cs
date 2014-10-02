@@ -39,7 +39,12 @@ public abstract class A_Collider : GameMonoBehaviour
 			delayUpdate--;
 		}
 	}
-	
+
+	public virtual void Hit( A_Collider target )
+	{
+
+	}
+
 	public abstract void OnCollision( A_Collider target );
 	
 	public abstract EType Type{ get; }
@@ -56,7 +61,7 @@ public abstract class A_Collider : GameMonoBehaviour
 		Gizmos.DrawWireSphere( transform.position, radius );
 	}
 	
-	private Color GizmosColor
+	protected Color GizmosColor
 	{
 		get
 		{

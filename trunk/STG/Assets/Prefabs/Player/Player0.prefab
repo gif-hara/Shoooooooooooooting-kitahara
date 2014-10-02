@@ -747,7 +747,7 @@ MonoBehaviour:
   refContent: {fileID: 100024}
   refRenderer:
   - {fileID: 2300000}
-  addSpecialPoint: .100000001
+  addSpecialPoint: 0
 --- !u!114 &11400014
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -960,6 +960,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   refShadowMaterial: {fileID: 2100000, guid: ad3a714a0da9131419f5e4cbf769c1f1, type: 2}
+  offset: {x: 0, y: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

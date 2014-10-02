@@ -38,6 +38,11 @@ public class PlayerShotCollider : A_Collider
 	/// 敵と衝突したか.
 	/// </summary>
 	private bool isEnemyCollision = false;
+
+	/// <summary>
+	/// 衝突した際のイベント.
+	/// </summary>
+	private const string CollisionMessage = "OnEnemyCollision";
 	
 	public override void Awake()
 	{
@@ -57,6 +62,7 @@ public class PlayerShotCollider : A_Collider
 		
 		Instantiate( prefabExplosion, refParent.transform.position, prefabExplosion.transform.rotation );
 		Destroy( refParent );
+		SendMessage( CollisionMessage, SendMessageOptions.DontRequireReceiver );
 		isEnemyCollision = true;
 	}
 	public override EType Type
