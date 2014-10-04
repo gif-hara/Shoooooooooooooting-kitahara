@@ -109,6 +109,21 @@ public class GameDefine : A_Singleton<GameDefine>
 	/// </summary>
 	public const string StartStageMessage = "OnStartStage";
 
+	/// <summary>
+	/// ボスバトル開始時のメッセージ.
+	/// </summary>
+	public const string StartBossBattleMessage = "OnStartBossBattle";
+
+	/// <summary>
+	/// ボスバトル終了時のメッセージ.
+	/// </summary>
+	public const string EndBossBattleMessage = "OnEndBossBattle";
+
+	/// <summary>
+	/// スコア変更時のメッセージ.
+	/// </summary>
+	public const string ModifiedScoreMessage = "OnModifiedScore";
+
 	public override void Awake()
 	{
 		base.Awake();

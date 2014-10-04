@@ -151,11 +151,13 @@ public class GameManager : GameMonoBehaviour
 	public void SetBossType( GameDefine.BossType bossType )
 	{
 		this.BossType = bossType;
+		ReferenceManager.Instance.refUILayer.BroadcastMessage( GameDefine.StartBossBattleMessage, SendMessageOptions.DontRequireReceiver );
 	}
 
 	public void EndBoss()
 	{
 		this.BossType = GameDefine.BossType.None;
+		ReferenceManager.Instance.refUILayer.BroadcastMessage( GameDefine.EndBossBattleMessage, SendMessageOptions.DontRequireReceiver );
 	}
 
 	public void ReverseStageClear( int stageId )

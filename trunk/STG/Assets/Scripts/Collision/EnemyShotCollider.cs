@@ -29,7 +29,7 @@ public class EnemyShotCollider : A_Collider
 
 	private float cachedRadius;
 
-	private const float AddSpecialPoint = 1.1f;
+	private const float AddSpecialPoint = 0.8f;
 
 	private const float AddGameLevelExperience = 2.5f;
 

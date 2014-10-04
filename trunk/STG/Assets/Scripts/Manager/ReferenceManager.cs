@@ -100,11 +100,6 @@ public class ReferenceManager : A_Singleton<ReferenceManager>
 	public UIBar refBarrierBar;
 	
 	/// <summary>
-	/// スコア管理者参照.
-	/// </summary>
-	public UIScore refScore;
-	
-	/// <summary>
 	/// カメラの親オブジェクト参照.
 	/// シェイク可能なカメラが入っている.
 	/// </summary>

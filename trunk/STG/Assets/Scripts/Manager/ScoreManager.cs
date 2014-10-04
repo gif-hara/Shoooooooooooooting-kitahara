@@ -44,6 +44,13 @@ public class ScoreManager : GameMonoBehaviour
 	private ulong score = 0;
 
 	/// <summary>
+	/// ハイスコア.
+	/// </summary>
+	/// <value>The high score.</value>
+	public ulong HighScore{ get{ return highScore; } }
+	private ulong highScore = 10000;
+
+	/// <summary>
 	/// 獲得した星アイテムの数リスト.
 	/// </summary>
 	public List<int> EarnedStarItemList{ get{ return earnedStarItemList; } }
@@ -70,6 +77,8 @@ public class ScoreManager : GameMonoBehaviour
 	public void AddScore( ulong value )
 	{
 		score += value;
+		highScore = highScore < score ? score : highScore;
+		ReferenceManager.Instance.refUILayer.BroadcastMessage( GameDefine.ModifiedScoreMessage, SendMessageOptions.DontRequireReceiver );
 	}
 	/// <summary>
 	/// ゲームレベルを倍率にしたスコアの加算処理.

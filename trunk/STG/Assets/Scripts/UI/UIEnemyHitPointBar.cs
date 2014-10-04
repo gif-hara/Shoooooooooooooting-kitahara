@@ -35,12 +35,11 @@ public class UIEnemyHitPointBar : GameMonoBehaviour
 	private bool isSyncHp = false;
 	
 	private const int StartEffectTime = 60;
-	
+
 	// Use this for initialization
 	public override void Start()
 	{
 		base.Start();
-		ReferenceManager.refScore.SetPosition( UIScore.Visibility.Hidden );
 	}
 
 	// Update is called once per frame
@@ -73,8 +72,6 @@ public class UIEnemyHitPointBar : GameMonoBehaviour
 	/// </summary>
 	public void EndEffect()
 	{
-		ReferenceManager.refScore.SetPosition( UIScore.Visibility.Visible );
-		
 		TweenPosition.Begin( refTweenPosition.gameObject, refTweenPosition.duration, refTweenPosition.from );
 		refTweenPosition.callWhenFinished = "Destroy";
 	}

@@ -1,8 +1,6 @@
-/*===========================================================================*/
+﻿/*===========================================================================*/
 /*
-*     * FileName    : UIScore.cs
-*
-*     * Description : .
+*     * FileName    : UIHighScore.cs
 *
 *     * Author      : Hiroki_Kitahara.
 */
@@ -11,14 +9,16 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-
-public class UIScore : UIScoreBase
+/// <summary>
+/// .
+/// </summary>
+public class UIHighScore : UIScoreBase
 {
 	protected override string AssetKey
 	{
 		get
 		{
-			return "ScoreUIFormat";
+			return "HighScoreUIFormat";
 		}
 	}
 
@@ -26,7 +26,7 @@ public class UIScore : UIScoreBase
 	{
 		get
 		{
-			return ReferenceManager.ScoreManager.Score;
+			return ReferenceManager.ScoreManager.HighScore;
 		}
 	}
 }
