@@ -54,6 +54,8 @@ public class MeshUVOffset : MonoBehaviourExtension
 			if( !loop && offset >= (tileX * tileY) )
 			{
 				Destroy( refDestroyObject );
+				refMesh.gameObject.SetActive( false );
+				enabled = false;
 			}
 			UpdateUv();
 			timer = 0;
