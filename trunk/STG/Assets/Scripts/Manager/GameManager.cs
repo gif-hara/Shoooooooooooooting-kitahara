@@ -163,6 +163,14 @@ public class GameManager : GameMonoBehaviour
 		this.ReverseStageFlagList[stageId] = true;
 	}
 
+	public void Miss()
+	{
+		if( this.BossType != GameDefine.BossType.None )	return;
+
+		GameLevel -= Mathf.Min( 20, (GameLevel / 5) );
+		gameLevelExperience = 0.0f;
+	}
+
 	/// <summary>
 	/// デバッグで裏ステージクリアフラグを立てる.
 	/// </summary>

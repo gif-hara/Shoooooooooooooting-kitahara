@@ -31,6 +31,8 @@ public class EnemyShotCollider : A_Collider
 
 	private const float AddSpecialPoint = 1.1f;
 
+	private const float AddGameLevelExperience = 2.5f;
+
 	void OnDrawGizmos()
 	{
 		Gizmos.color = GizmosColor;
@@ -52,33 +54,45 @@ public class EnemyShotCollider : A_Collider
 	}
 	public override void OnCollision (A_Collider target)
 	{
-
-		if( target.Type == A_Collider.EType.Barrier )
-		{
-			ReferenceManager.GameManager.AddGameLevelExperienceFromEnemyShot();
-			refEnemyShot.Explosion();
-		}
-
-		if( target.Type == EType.Player )
-		{
-			if( collisionType == CollisionType.Graze )
-			{
-				this.radius = this.cachedRadius;
-				collisionType = CollisionType.Miss;
-				ReferenceManager.Instance.RefPlayerStatusManager.AddSpecialPoint( AddSpecialPoint );
-			}
-			else
-			{
-				target.Hit( this );
-				refEnemyShot.Explosion();
-			}
-		}
+		OnCollisionBarrier( target );
+		OnCollisionPlayer( target );
 	}
 	public override EType Type
 	{
 		get
 		{
 			return EType.EnemyShot;
+		}
+	}
+
+	private void OnCollisionBarrier( A_Collider target )
+	{
+		if( target.Type != A_Collider.EType.Barrier )
+		{
+			return;
+		}
+		
+		ReferenceManager.GameManager.AddGameLevelExperienceFromEnemyShot();
+		refEnemyShot.Explosion();
+	}
+	private void OnCollisionPlayer( A_Collider target )
+	{
+		if( target.Type != EType.Player )
+		{
+			return;
+		}
+
+		if( collisionType == CollisionType.Graze )
+		{
+			this.radius = this.cachedRadius;
+			collisionType = CollisionType.Miss;
+			ReferenceManager.Instance.RefPlayerStatusManager.AddSpecialPoint( AddSpecialPoint );
+			ReferenceManager.Instance.refGameManager.AddGameLevelExperience( AddGameLevelExperience );
+		}
+		else
+		{
+			target.Hit( this );
+			refEnemyShot.Explosion();
 		}
 	}
 }

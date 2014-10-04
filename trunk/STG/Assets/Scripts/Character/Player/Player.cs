@@ -37,6 +37,7 @@ public class Player : GameMonoBehaviour
 	/// <summary>
 	/// SPモードフラグ.
 	/// </summary>
+	public bool IsSpecialMode{ get{ return isSpecialMode; } }
 	private bool isSpecialMode = false;
 	
 	/// <summary>
@@ -110,6 +111,7 @@ public class Player : GameMonoBehaviour
 		gameObject.BroadcastMessage (GameDefine.MissEventMessage, SendMessageOptions.DontRequireReceiver);
 
 		PlayerStatusManager.Miss();
+		GameManager.Miss();
 		
 		refContent.SetActive( false );
 		if( PlayerStatusManager.Life > 0 )

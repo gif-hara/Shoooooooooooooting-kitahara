@@ -107,6 +107,11 @@ public class EnemyController : EnemyControllerBase
 	/// </summary>
 	public event System.Action updateFunc = null;
 
+	/// <summary>
+	/// 死亡時に加算されるSP.
+	/// </summary>
+	private const float AddSpecialPoint = 1.0f;
+
 	[ContextMenu( "Add Texture Event" )]
 	void AddTextureEvent()
 	{
@@ -331,6 +336,11 @@ public class EnemyController : EnemyControllerBase
 
 		// 死亡イベントの発行.
 		deadEventObject.BroadcastMessage( GameDefine.DeadEventMessage, SendMessageOptions.DontRequireReceiver );
+
+		if( !ReferenceManager.Instance.refPlayer.IsSpecialMode )
+		{
+			ReferenceManager.Instance.RefPlayerStatusManager.AddSpecialPoint( AddSpecialPoint );
+		}
 	}
 	/// <summary>
 	/// 移動コンポーネントアタッチ.

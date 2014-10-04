@@ -22,6 +22,8 @@ public class OnEnemyCollisionAddSpecialPoint : GameMonoBehaviour
 
 	void OnEnemyCollision()
 	{
+		if( ReferenceManager.Instance.refPlayer.IsSpecialMode )	return;
+
 		ReferenceManager.Instance.RefPlayerStatusManager.AddSpecialPoint( addSpecialPoint );
 	}
 }
