@@ -27,11 +27,9 @@ public class Player : GameMonoBehaviour
 	/// レンダラーリスト.
 	/// </summary>
 	public List<Renderer> refRenderer;
-	
-	/// <summary>
-	/// SPポイント加算値.
-	/// </summary>
-	public float addSpecialPoint;
+
+	[SerializeField]
+	private GameObject prefabParticleGraze;
 	
 	/// <summary>
 	/// 無敵時間.
@@ -66,7 +64,6 @@ public class Player : GameMonoBehaviour
 	public override void Update()
 	{
 		base.Update();
-		UpdateSpecialPoint();
 		UpdateRenderer();
 		invincibleTime--;
 		
@@ -124,6 +121,12 @@ public class Player : GameMonoBehaviour
 		}
 
 	}
+
+	public void Graze( Transform grazeObject )
+	{
+		var particleGraze = InstantiateAsChild( Trans, prefabParticleGraze );
+		particleGraze.transform.position = Vector3.Lerp( grazeObject.position, Trans.position, 0.5f );
+	}
 	/// <summary>
 	/// 無敵中であるか？.
 	/// </summary>
@@ -152,13 +155,6 @@ public class Player : GameMonoBehaviour
 	private void Relocation()
 	{
 		Trans.position = initialPosition;
-	}
-	/// <summary>
-	/// SPポイント更新処理.
-	/// </summary>
-	private void UpdateSpecialPoint()
-	{
-		PlayerStatusManager.AddSpecialPoint( addSpecialPoint );
 	}
 	/// <summary>
 	/// レンダラー更新処理.

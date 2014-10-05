@@ -29,10 +29,6 @@ public class EnemyShotCollider : A_Collider
 
 	private float cachedRadius;
 
-	private const float AddSpecialPoint = 0.8f;
-
-	private const float AddGameLevelExperience = 2.5f;
-
 	void OnDrawGizmos()
 	{
 		Gizmos.color = GizmosColor;
@@ -86,11 +82,7 @@ public class EnemyShotCollider : A_Collider
 		{
 			this.radius = this.cachedRadius;
 			collisionType = CollisionType.Miss;
-			if( ReferenceManager.Instance.refGameManager.BossType != GameDefine.BossType.Boss )
-			{
-				ReferenceManager.Instance.RefPlayerStatusManager.AddSpecialPoint( AddSpecialPoint );
-				ReferenceManager.Instance.refGameManager.AddGameLevelExperience( AddGameLevelExperience );
-			}
+			ReferenceManager.RefPlayerStatusManager.Graze( Trans );
 		}
 		else
 		{

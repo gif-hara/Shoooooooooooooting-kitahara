@@ -41,7 +41,7 @@ public class PlayerStatusManager : GameMonoBehaviour
 	public float SpecialPoint{ get{ return specialPoint; } }
 	[SerializeField]
 	private float specialPoint;
-
+	
 	/// <summary>
 	/// エクステンドするために必要なスコアリスト.
 	/// </summary>
@@ -69,6 +69,16 @@ public class PlayerStatusManager : GameMonoBehaviour
 	/// SPポイント最大値.
 	/// </summary>
 	public const float MaxSpecialPoint = 100.0f;
+
+	/// <summary>
+	/// グレイズ時に加算されるSP.
+	/// </summary>
+	private const float AddSpecialPointGraze = 0.8f;
+
+	/// <summary>
+	/// グレイズ時に加算される経験値.
+	/// </summary>
+	private const float AddGameLevelExperienceGraze = 2.5f;
 
 	public override void Awake ()
 	{
@@ -123,6 +133,17 @@ public class PlayerStatusManager : GameMonoBehaviour
 		life++;
 		ReferenceManager.Instance.refSoundManager.Play( "Extend" );
 		ReferenceManager.Instance.refUILayer.BroadcastMessage( GameDefine.ExtendMessage );
+	}
+
+	public void Graze( Transform grazeObject )
+	{
+		if( ReferenceManager.Instance.refGameManager.BossType != GameDefine.BossType.Boss )
+		{
+			AddSpecialPoint( AddSpecialPointGraze );
+			GameManager.AddGameLevelExperience( AddGameLevelExperienceGraze );
+		}
+
+		ReferenceManager.Instance.Player.Graze( grazeObject );
 	}
 
 	public void DebugChange( int id )
