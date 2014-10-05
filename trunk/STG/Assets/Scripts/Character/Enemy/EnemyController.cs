@@ -110,7 +110,7 @@ public class EnemyController : EnemyControllerBase
 	/// <summary>
 	/// 死亡時に加算されるSP.
 	/// </summary>
-	private const float AddSpecialPoint = 1.0f;
+	private const float AddSpecialPoint = 0.8f;
 
 	[ContextMenu( "Add Texture Event" )]
 	void AddTextureEvent()
