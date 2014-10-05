@@ -86,8 +86,11 @@ public class EnemyShotCollider : A_Collider
 		{
 			this.radius = this.cachedRadius;
 			collisionType = CollisionType.Miss;
-			ReferenceManager.Instance.RefPlayerStatusManager.AddSpecialPoint( AddSpecialPoint );
-			ReferenceManager.Instance.refGameManager.AddGameLevelExperience( AddGameLevelExperience );
+			if( ReferenceManager.Instance.refGameManager.BossType != GameDefine.BossType.Boss )
+			{
+				ReferenceManager.Instance.RefPlayerStatusManager.AddSpecialPoint( AddSpecialPoint );
+				ReferenceManager.Instance.refGameManager.AddGameLevelExperience( AddGameLevelExperience );
+			}
 		}
 		else
 		{
