@@ -17111,7 +17111,6 @@ MonoBehaviour:
   refPlayerLayer: {fileID: 1522776629}
   refPlayerShotLayer: {fileID: 1968817575}
   refUILayer: {fileID: 1957406505}
-  refPlayer: {fileID: 0}
   refGameManager: {fileID: 1859676952}
   refPlayerStatusManager: {fileID: 674983957}
   refScoreManager: {fileID: 832699562}
@@ -17191,12 +17190,6 @@ MonoBehaviour:
   - {fileID: 100002, guid: 272db73048f749e4f9b875cca01bc78a, type: 2}
   - {fileID: 100002, guid: 22e71fb9623d39747a0feadeeee5d343, type: 2}
   - {fileID: 100002, guid: 2806ec8333fd67447965699b9eec6d3a, type: 2}
-  prefabPlayerList:
-  - {fileID: 100002, guid: 0df227c9caa12144aa69b95348366dbb, type: 2}
-  - {fileID: 100002, guid: e241a67a001f35d4699caf45f226af27, type: 2}
-  - {fileID: 100002, guid: ba78d4a89cd0dc04d975d3f00a0e6a6a, type: 2}
-  - {fileID: 100002, guid: fca758a3f6c6bd141b9517b00f96d1d8, type: 2}
-  - {fileID: 100002, guid: c280c2720f1944f41910b5460571a252, type: 2}
 --- !u!1 &375518590
 GameObject:
   m_ObjectHideFlags: 0
@@ -29945,6 +29938,12 @@ MonoBehaviour:
   playerId: 0
   life: 3
   specialPoint: 0
+  prefabPlayerList:
+  - {fileID: 100002, guid: 0df227c9caa12144aa69b95348366dbb, type: 2}
+  - {fileID: 100002, guid: e241a67a001f35d4699caf45f226af27, type: 2}
+  - {fileID: 100002, guid: ba78d4a89cd0dc04d975d3f00a0e6a6a, type: 2}
+  - {fileID: 100002, guid: fca758a3f6c6bd141b9517b00f96d1d8, type: 2}
+  - {fileID: 100002, guid: c280c2720f1944f41910b5460571a252, type: 2}
 --- !u!1 &676334035
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,6 +14,10 @@ using System.Collections.Generic;
 
 public class Player : GameMonoBehaviour
 {
+	public int Id{ get{ return id; } }
+	[SerializeField]
+	private int id;
+
 	/// <summary>
 	/// コンテンツオブジェクト参照.
 	/// </summary>
@@ -49,7 +53,7 @@ public class Player : GameMonoBehaviour
 	public override void Awake()
 	{
 		base.Awake();
-		ReferenceManager.refPlayer = this;
+		ReferenceManager.Player = this;
 	}
 	
 	public override void Start()

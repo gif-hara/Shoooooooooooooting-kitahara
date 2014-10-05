@@ -23,7 +23,7 @@ public class PlayerChaseOnRate : GameMonoBehaviour
 	{
 		if( ReferenceManager == null )	return;
 
-		var pos = ReferenceManager.Instance.refPlayer.Trans.localPosition;
+		var pos = ReferenceManager.Player.Trans.localPosition;
 		pos.x *= rate.x;
 		pos.z = pos.y * rate.z;;
 		pos.y *= rate.y;

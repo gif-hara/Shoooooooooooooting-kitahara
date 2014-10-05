@@ -25,7 +25,7 @@ public class PlayerChaseOnSpeed : GameMonoBehaviour
 	{
 		base.LateUpdate();
 		
-		var playerPos = ReferenceManager.refPlayer.Trans.position;
+		var playerPos = ReferenceManager.Player.Trans.position;
 		var targetPos = playerPos + fixedPosition;
 		
 		if( speed <= 1.0f )

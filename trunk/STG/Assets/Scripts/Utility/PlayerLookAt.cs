@@ -21,7 +21,7 @@ public class PlayerLookAt : GameMonoBehaviour
 	public override void Start()
 	{
 		base.Start();
-		refLookAtObject = LookAtObject.Begin( Trans, ReferenceManager.refPlayer.transform, lookSpeed );
+		refLookAtObject = LookAtObject.Begin( Trans, ReferenceManager.Player.transform, lookSpeed );
 	}
 
 	// Update is called once per frame

@@ -337,7 +337,7 @@ public class EnemyController : EnemyControllerBase
 		// 死亡イベントの発行.
 		deadEventObject.BroadcastMessage( GameDefine.DeadEventMessage, SendMessageOptions.DontRequireReceiver );
 
-		if( !ReferenceManager.Instance.refPlayer.IsSpecialMode )
+		if( !ReferenceManager.Instance.Player.IsSpecialMode )
 		{
 			ReferenceManager.Instance.RefPlayerStatusManager.AddSpecialPoint( AddSpecialPoint );
 		}

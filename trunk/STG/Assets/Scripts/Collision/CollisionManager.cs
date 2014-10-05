@@ -199,7 +199,7 @@ public class CollisionManager : GameMonoBehaviour
 	private void CollisionEnemyShotAndPlayer()
 	{
 		enemyShotColliderList.RemoveAll( e => e == null );
-		var id = GetEnemyShotVarianceId( ReferenceManager.refPlayer.cachedTransform );
+		var id = GetEnemyShotVarianceId( ReferenceManager.Player.cachedTransform );
 		var playerList = PlayerColliderListNonInvincible;
 		List<A_Collider> enemyShotList = new List<A_Collider>();
 

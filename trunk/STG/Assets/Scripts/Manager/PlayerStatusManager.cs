@@ -43,6 +43,12 @@ public class PlayerStatusManager : GameMonoBehaviour
 	private float specialPoint;
 
 	/// <summary>
+	/// プレイヤープレハブリスト.
+	/// </summary>
+	[SerializeField]
+	private List<GameObject> prefabPlayerList;
+
+	/// <summary>
 	/// SPポイント最大値.
 	/// </summary>
 	public const float MaxSpecialPoint = 100.0f;
@@ -92,10 +98,10 @@ public class PlayerStatusManager : GameMonoBehaviour
 	/// </summary>
 	private void CreatePlayer()
 	{
-		if( ReferenceManager.Instance.refPlayer != null )
+		if( ReferenceManager.Player != null )
 		{
-			Destroy( ReferenceManager.refPlayer.gameObject );
+			Destroy( ReferenceManager.Player.gameObject );
 		}
-		InstantiateAsChild( ReferenceManager.refPlayerLayer, ReferenceManager.prefabPlayerList[playerId] );
+		InstantiateAsChild( ReferenceManager.refPlayerLayer, prefabPlayerList[playerId] );
 	}
 }

@@ -58,7 +58,7 @@ public class Barrier : A_SpecialModeContent
 	public override void Awake()
 	{
 		base.Awake();
-		player = ReferenceManager.refPlayer;
+		player = ReferenceManager.Player;
 		player.SetInvincible( duration + 60 );
 	}
 

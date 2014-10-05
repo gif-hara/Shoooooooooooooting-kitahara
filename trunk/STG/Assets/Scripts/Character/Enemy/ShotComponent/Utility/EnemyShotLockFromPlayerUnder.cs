@@ -27,7 +27,7 @@ public class EnemyShotLockFromPlayerUnder : EnemyShotCreateComponent
 	protected override void TuningFromSet()
 	{
 		var parentY = refParent.position.y + fixedY;
-		owner.isPlayerTop = parentY > ReferenceManager.refPlayer.cachedTransform.position.y;
+		owner.isPlayerTop = parentY > ReferenceManager.Player.cachedTransform.position.y;
 	}
 	
 	protected override void TuningFromAdd()

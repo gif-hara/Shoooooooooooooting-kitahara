@@ -124,6 +124,11 @@ public class GameDefine : A_Singleton<GameDefine>
 	/// </summary>
 	public const string ModifiedScoreMessage = "OnModifiedScore";
 
+	/// <summary>
+	/// プレイヤーが生成された時のメッセージ.
+	/// </summary>
+	public const string SpawnPlayerMessage = "OnSpawnPlayer";
+
 	public override void Awake()
 	{
 		base.Awake();

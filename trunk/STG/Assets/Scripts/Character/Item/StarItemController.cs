@@ -32,7 +32,7 @@ public class StarItemController : A_ItemController
 		refFirstTween.enabled = false;
 		refFallTween.enabled = false;
 		refChasePlayer.enabled = true;
-		Trans.LookAt( ReferenceManager.Instance.refPlayer.Trans );
+		Trans.LookAt( ReferenceManager.Player.Trans );
 		Trans.localRotation = Quaternion.Euler( Vector3.forward * Trans.localRotation.z );
 	}
 	public override void OnPlayerCollide()

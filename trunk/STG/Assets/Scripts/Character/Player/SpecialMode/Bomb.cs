@@ -41,7 +41,7 @@ public class Bomb : A_SpecialModeContent
 	{
 		base.Awake();
 		GameManager.AddGameLevel( addGameLevel );
-		player = ReferenceManager.refPlayer;
+		player = ReferenceManager.Player;
 		player.SetInvincible( duration + 60 );
 	}
 	

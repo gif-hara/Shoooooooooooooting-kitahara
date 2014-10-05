@@ -26,7 +26,7 @@ public class ObjectMoveChasePlayer : A_ObjectMove
 	public override void Start()
 	{
 		base.Start();
-		refPlayer = ReferenceManager.Instance.refPlayer.Trans;
+		refPlayer = ReferenceManager.Player.Trans;
 
 		var newObj = new GameObject( "[ObjectMoveChasePlayer]RotationObject" );
 		rotationObject = newObj.transform;

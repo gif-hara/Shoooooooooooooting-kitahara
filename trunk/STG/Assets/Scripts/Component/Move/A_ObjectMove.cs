@@ -14,7 +14,7 @@ using System.Collections.Generic;
 using System.Runtime.Serialization;
 
 
-public abstract class A_ObjectMove : MonoBehaviourExtension
+public abstract class A_ObjectMove : GameMonoBehaviour
 {
 	/// <summary>
 	/// コンポーネントに必要なデータの抽象クラス.

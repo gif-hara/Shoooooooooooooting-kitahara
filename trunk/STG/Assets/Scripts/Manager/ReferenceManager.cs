@@ -55,7 +55,19 @@ public class ReferenceManager : A_Singleton<ReferenceManager>
 	/// <summary>
 	/// プレイヤー参照.
 	/// </summary>
-	public Player refPlayer;
+	public Player Player
+	{
+		set
+		{
+			refPlayer = value;
+			refUILayer.BroadcastMessage( GameDefine.SpawnPlayerMessage, refPlayer.Id, SendMessageOptions.DontRequireReceiver );
+		}
+		get
+		{
+			return refPlayer;
+		}
+	}
+	private Player refPlayer;
 	
 	/// <summary>
 	/// ゲーム管理者クラス参照.
@@ -127,12 +139,7 @@ public class ReferenceManager : A_Singleton<ReferenceManager>
 	/// 敵弾プレハブリスト.
 	/// </summary>
 	public List<GameObject> prefabEnemyShotList;
-	
-	/// <summary>
-	/// プレイヤープレハブリスト.
-	/// </summary>
-	public List<GameObject> prefabPlayerList;
-	
+
 	public override void Awake()
 	{
 		base.Awake();

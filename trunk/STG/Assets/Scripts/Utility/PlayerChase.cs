@@ -20,7 +20,7 @@ public class PlayerChase : GameMonoBehaviour
 	{
 		base.LateUpdate();
 		
-		var playerPos = ReferenceManager.refPlayer.cachedTransform.position;
+		var playerPos = ReferenceManager.Player.cachedTransform.position;
 		cachedTransform.position = playerPos + fixedPosition;
 	}
 }
