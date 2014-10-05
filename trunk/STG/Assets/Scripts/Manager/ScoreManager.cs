@@ -78,7 +78,8 @@ public class ScoreManager : GameMonoBehaviour
 	{
 		score += value;
 		highScore = highScore < score ? score : highScore;
-		ReferenceManager.Instance.refUILayer.BroadcastMessage( GameDefine.ModifiedScoreMessage, SendMessageOptions.DontRequireReceiver );
+		ReferenceManager.refUILayer.BroadcastMessage( GameDefine.ModifiedScoreMessage, SendMessageOptions.DontRequireReceiver );
+		ReferenceManager.RefPlayerStatusManager.Extend( score );
 	}
 	/// <summary>
 	/// ゲームレベルを倍率にしたスコアの加算処理.

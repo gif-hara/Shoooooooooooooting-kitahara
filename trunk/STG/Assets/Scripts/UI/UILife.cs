@@ -22,8 +22,11 @@ public class UILife : GameMonoBehaviour
 
 	private List<GameObject> currentLifeList = new List<GameObject>();
 
+	private int playerId;
+
 	void OnSpawnPlayer( int id )
 	{
+		playerId = id;
 		currentLifeList.ForEach( g =>
 		{
 			Destroy( g );
@@ -48,6 +51,11 @@ public class UILife : GameMonoBehaviour
 		int index = currentLifeList.Count - 1;
 		Destroy( currentLifeList[index] );
 		currentLifeList.RemoveAt( index );
+	}
+
+	void OnExtend()
+	{
+		CreateLife( playerId );
 	}
 
 	private void CreateLife( int id )

@@ -43,10 +43,27 @@ public class PlayerStatusManager : GameMonoBehaviour
 	private float specialPoint;
 
 	/// <summary>
+	/// エクステンドするために必要なスコアリスト.
+	/// </summary>
+	[SerializeField]
+	private List<string> extendScoreStringList;
+
+	/// <summary>
+	/// エクステンドするために必要なスコアリスト.
+	/// ulongをシリアライズ出来ないので文字列からパース.
+	/// </summary>
+	private List<ulong> extendScoreList;
+
+	/// <summary>
 	/// プレイヤープレハブリスト.
 	/// </summary>
 	[SerializeField]
 	private List<GameObject> prefabPlayerList;
+
+	/// <summary>
+	/// エクステンド回数.
+	/// </summary>
+	private int extendCount = 0;
 
 	/// <summary>
 	/// SPポイント最大値.
@@ -55,6 +72,7 @@ public class PlayerStatusManager : GameMonoBehaviour
 
 	public override void Awake ()
 	{
+		InitializeExtendScoreList();
 		CreatePlayer();
 	}
 
@@ -89,10 +107,37 @@ public class PlayerStatusManager : GameMonoBehaviour
 		ReferenceManager.Instance.refUILayer.BroadcastMessage( GameDefine.MissEventMessage, SendMessageOptions.DontRequireReceiver );
 	}
 
+	public void Extend( ulong score )
+	{
+		if( extendCount >= extendScoreList.Count )
+		{
+			return;
+		}
+
+		if( score < extendScoreList[extendCount] )
+		{
+			return;
+		}
+
+		extendCount++;
+		life++;
+		ReferenceManager.Instance.refSoundManager.Play( "Extend" );
+		ReferenceManager.Instance.refUILayer.BroadcastMessage( GameDefine.ExtendMessage );
+	}
+
 	public void DebugChange( int id )
 	{
 		playerId = id;
 		CreatePlayer();
+	}
+
+	private void InitializeExtendScoreList()
+	{
+		extendScoreList = new List<ulong>( extendScoreStringList.Count );
+		extendScoreStringList.ForEach( s =>
+		{
+			extendScoreList.Add( ulong.Parse( s ) );
+		});
 	}
 
 	/// <summary>

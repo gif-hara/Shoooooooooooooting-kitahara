@@ -134,6 +134,11 @@ public class GameDefine : A_Singleton<GameDefine>
 	/// </summary>
 	public const string SpawnPlayerMessage = "OnSpawnPlayer";
 
+	/// <summary>
+	/// エクステンドした際のメッセージ.
+	/// </summary>
+	public const string ExtendMessage = "OnExtend";
+
 	public override void Awake()
 	{
 		base.Awake();

@@ -29985,6 +29985,10 @@ MonoBehaviour:
   playerId: 0
   life: 3
   specialPoint: 0
+  extendScoreStringList:
+  - 100
+  - 1000
+  - 10000
   prefabPlayerList:
   - {fileID: 100002, guid: 0df227c9caa12144aa69b95348366dbb, type: 2}
   - {fileID: 100002, guid: e241a67a001f35d4699caf45f226af27, type: 2}
@@ -62691,6 +62695,9 @@ MonoBehaviour:
   - clip: {fileID: 8300000, guid: 120013341fe463149aa3d4dd8bc538ac, type: 3}
     maxPlayNum: 1
     volume: 1
+  - clip: {fileID: 8300000, guid: 1522cb3a291992b4d876e7761ccf92eb, type: 3}
+    maxPlayNum: 1
+    volume: 1
 --- !u!81 &1449514318
 AudioListener:
   m_ObjectHideFlags: 0
@@ -86319,7 +86326,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   prefabShadow: {fileID: 11400000, guid: f566d22999b4d184cb3a38c1da0b9b6c, type: 2}
-  offset: {x: 70, y: -130, z: 0}
+  offset: {x: 0, y: -130, z: 0}
   scale: {x: .5, y: .400000006, z: 1}
 --- !u!1 &2050603418
 GameObject:
