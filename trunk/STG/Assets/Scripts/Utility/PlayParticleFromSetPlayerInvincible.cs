@@ -17,6 +17,9 @@ public class PlayParticleFromSetPlayerInvincible : MonoBehaviour
 	[SerializeField]
 	private List<ParticleSystem> refParticle;
 
+	[SerializeField]
+	private int subtract = 0;
+
 	private int invincibleCount = 0;
 
 	void OnSetPlayerInvincible( int invincibleTime )
@@ -29,7 +32,7 @@ public class PlayParticleFromSetPlayerInvincible : MonoBehaviour
 			p.Play( true );
 		});
 
-		FrameRateUtility.StartCoroutine( invincibleTime, EndLoop );
+		FrameRateUtility.StartCoroutine( invincibleTime + subtract, EndLoop );
 	}
 
 	private void EndLoop()

@@ -41,12 +41,13 @@ public class EnemyShotCollider : A_Collider
 		base.Start();
 		this.cachedRadius = this.radius;
 		this.radius = grazeRadius;
-		varianceId = ReferenceManager.refCollisionManager.AddEnemyShotCollider( this );
+		ReferenceManager.Instance.refCollisionManager.AddEnemyShotCollider( this );
+		//varianceId = ReferenceManager.refCollisionManager.AddEnemyShotCollider( this );
 	}
 	public override void Update()
 	{
 		base.Update();
-		varianceId = ReferenceManager.refCollisionManager.VarianceEnemyShotColliderList( this, varianceId );
+		//varianceId = ReferenceManager.refCollisionManager.VarianceEnemyShotColliderList( this, varianceId );
 	}
 	public override void OnCollision (A_Collider target)
 	{

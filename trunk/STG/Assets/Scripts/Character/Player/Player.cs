@@ -22,11 +22,6 @@ public class Player : GameMonoBehaviour
 	/// コンテンツオブジェクト参照.
 	/// </summary>
 	public GameObject refContent;
-	
-	/// <summary>
-	/// レンダラーリスト.
-	/// </summary>
-	public List<Renderer> refRenderer;
 
 	[SerializeField]
 	private GameObject prefabParticleGraze;
@@ -64,7 +59,6 @@ public class Player : GameMonoBehaviour
 	public override void Update()
 	{
 		base.Update();
-		UpdateRenderer();
 		invincibleTime--;
 		
 		UpdateDebug();
@@ -100,6 +94,7 @@ public class Player : GameMonoBehaviour
 	public void SetInvincible( int value )
 	{
 		invincibleTime = value;
+		ReferenceManager.Instance.GetLayerObject( GameDefine.LayerType.Player ).BroadcastMessage( GameDefine.SetPlayerInvincibleMessage, value, SendMessageOptions.DontRequireReceiver );
 		ReferenceManager.Instance.GetLayerObject( GameDefine.LayerType.Enemy ).BroadcastMessage( GameDefine.SetPlayerInvincibleMessage, value, SendMessageOptions.DontRequireReceiver );
 	}
 	/// <summary>
@@ -157,21 +152,6 @@ public class Player : GameMonoBehaviour
 		Trans.position = initialPosition;
 	}
 	/// <summary>
-	/// レンダラー更新処理.
-	/// </summary>
-	private void UpdateRenderer()
-	{
-		if( invincibleTime <= 0 && refRenderer[0].enabled )
-		{
-			return;
-		}
-		
-		refRenderer.ForEach( (obj) =>
-		{
-			obj.enabled = !obj.enabled;
-		});
-	}
-	/// <summary>
 	/// 復活コルーチン処理.
 	/// </summary>
 	/// <returns>
@@ -179,8 +159,6 @@ public class Player : GameMonoBehaviour
 	/// </returns>
 	private IEnumerator ResurrectionCoroutine()
 	{
-		SetInvincible( 240 );
-		
 		int t = 60;
 		while( t > 0 )
 		{
@@ -191,6 +169,7 @@ public class Player : GameMonoBehaviour
 		ReferenceManager.refUILayer.BroadcastMessage( GameDefine.ResurrectionMessage );
 		Relocation();
 		refContent.SetActive( true );
+		SetInvincible( 180 );
 	}
 	/// <summary>
 	/// デバッグ更新処理.
@@ -200,7 +179,12 @@ public class Player : GameMonoBehaviour
 		// 無敵デバッグがtrueなら無敵.
 		if( DebugManager.IsInvincible )
 		{
-			invincibleTime = 1;
+			SetInvincible( 1 );
+		}
+
+		if( DebugManager.IsSpecialPointInfinity )
+		{
+			ReferenceManager.RefPlayerStatusManager.AddSpecialPoint( PlayerStatusManager.MaxSpecialPoint );
 		}
 	}
 }
