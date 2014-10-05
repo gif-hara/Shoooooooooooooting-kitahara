@@ -60,6 +60,15 @@ public class PlayerStatusManager : GameMonoBehaviour
 	[SerializeField]
 	private List<GameObject> prefabPlayerList;
 
+	[SerializeField]
+	private float addSpecialPointGrazeMin;
+	
+	[SerializeField]
+	private float addSpecialPointGrazeMax;
+
+	[SerializeField]
+	private AnimationCurve addSpecialPointGrazeCurve;
+
 	/// <summary>
 	/// エクステンド回数.
 	/// </summary>
@@ -69,11 +78,6 @@ public class PlayerStatusManager : GameMonoBehaviour
 	/// SPポイント最大値.
 	/// </summary>
 	public const float MaxSpecialPoint = 100.0f;
-
-	/// <summary>
-	/// グレイズ時に加算されるSP.
-	/// </summary>
-	private const float AddSpecialPointGraze = 0.8f;
 
 	/// <summary>
 	/// グレイズ時に加算される経験値.
@@ -171,5 +175,13 @@ public class PlayerStatusManager : GameMonoBehaviour
 			Destroy( ReferenceManager.Player.gameObject );
 		}
 		InstantiateAsChild( ReferenceManager.refPlayerLayer, prefabPlayerList[playerId] );
+	}
+
+	private float AddSpecialPointGraze
+	{
+		get
+		{
+			return Mathf.Lerp( addSpecialPointGrazeMin, addSpecialPointGrazeMax, addSpecialPointGrazeCurve.Evaluate( GameManager.GameLevelNormalize ) );
+		}
 	}
 }

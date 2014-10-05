@@ -30,7 +30,7 @@ public class A_SpecialModeContent : GameMonoBehaviour
 	/// <param name='player'>
 	/// If set to <c>true</c> player.
 	/// </param>
-	public bool CanExecute( Player player )
+	public bool CanExecute()
 	{
 		return PlayerStatusManager.SpecialPoint >= needPoint;
 	}

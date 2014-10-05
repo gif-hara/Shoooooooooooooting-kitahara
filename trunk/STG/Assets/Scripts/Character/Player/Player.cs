@@ -72,7 +72,7 @@ public class Player : GameMonoBehaviour
 		
 		var spContent = inSpecialModeContentPrefab.GetComponent<A_SpecialModeContent>();
 		
-		if( !spContent.CanExecute( this ) )	return;
+		if( !spContent.CanExecute() )	return;
 		
 		isSpecialMode = true;
 		PlayerStatusManager.UseSpecialMode( spContent.NeedPoint );
