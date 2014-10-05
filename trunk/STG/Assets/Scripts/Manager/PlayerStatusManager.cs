@@ -85,6 +85,8 @@ public class PlayerStatusManager : GameMonoBehaviour
 		
 		life--;
 		life = life < 0 ? 0 : life;
+
+		ReferenceManager.Instance.refUILayer.BroadcastMessage( GameDefine.MissEventMessage, SendMessageOptions.DontRequireReceiver );
 	}
 
 	public void DebugChange( int id )

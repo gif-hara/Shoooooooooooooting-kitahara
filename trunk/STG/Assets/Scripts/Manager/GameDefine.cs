@@ -40,42 +40,47 @@ public class GameDefine : A_Singleton<GameDefine>
 	/// プレイヤーの無敵時間を設定した際のメッセージ.
 	/// 引数に<c>int invincibleTime</c>が入る.
 	/// </summary>
-	public static string SetPlayerInvincibleMessage = "OnSetPlayerInvincible";
+	public const string SetPlayerInvincibleMessage = "OnSetPlayerInvincible";
 
 	/// <summary>
 	/// プレイヤーミス時のイベントメッセージ.
 	/// </summary>
-	public static string MissEventMessage = "OnMiss";
+	public const string MissEventMessage = "OnMiss";
+
+	/// <summary>
+	/// プレイヤー復活時のメッセージ.
+	/// </summary>
+	public const string ResurrectionMessage = "OnResurrection";
 
 	/// <summary>
 	/// 敵死亡時のイベントメッセージ.
 	/// </summary>
-	public static string DeadEventMessage = "OnDead";
+	public const string DeadEventMessage = "OnDead";
 
 	/// <summary>
 	/// 敵ダメージ時のイベントメッセージ.
 	/// </summary>
-	public static string DamageEventMessage = "OnDamage";
+	public const string DamageEventMessage = "OnDamage";
 
 	/// <summary>
 	/// EnemyShotCreatorが全弾出し切った際のメッセージ.
 	/// </summary>
-	public static string EnemyShotCreatorFreezeMessage = "OnFreezeEnemyShotCreator";
+	public const string EnemyShotCreatorFreezeMessage = "OnFreezeEnemyShotCreator";
 
 	/// <summary>
 	/// 銃口がアクティブになった際のメッセージ.
 	/// </summary>
-	public static string ActiveMuzzleMessage = "OnActiveMuzzle";
+	public const string ActiveMuzzleMessage = "OnActiveMuzzle";
 
 	/// <summary>
 	/// 銃口が非アクティブになった際のメッセージ.
 	/// </summary>
-	public static string DeactiveMuzzleMessage = "OnDeactiveMuzzle";
+	public const string DeactiveMuzzleMessage = "OnDeactiveMuzzle";
 
 	/// <summary>
 	/// 敵弾生成メッセージ.
 	/// </summary>
-	public static string EnemyShotCreateMessage = "OnEnemyShotCreate";
+	public const string EnemyShotCreateMessage = "OnEnemyShotCreate";
 
 	/// <summary>
 	/// 銃口が非アクティブになった時に敵が死亡するメッセージ.

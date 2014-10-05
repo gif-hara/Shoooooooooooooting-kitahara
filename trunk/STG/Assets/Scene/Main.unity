@@ -2834,6 +2834,53 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+--- !u!1 &71652536
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 71652537}
+  - 114: {fileID: 71652538}
+  m_Layer: 0
+  m_Name: Life
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &71652537
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 71652536}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -284, y: -258, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1499841364}
+  m_RootOrder: 1
+--- !u!114 &71652538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 71652536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74dabee2c96ee4848beff11a42b2d031, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  prefabLifeList:
+  - {fileID: 100002, guid: 6004ff1b92a8de646adf37aeb5592878, type: 2}
+  - {fileID: 100002, guid: 6004ff1b92a8de646adf37aeb5592878, type: 2}
+  - {fileID: 100002, guid: 6004ff1b92a8de646adf37aeb5592878, type: 2}
+  - {fileID: 100002, guid: b01007ad188457f4c90b01fc5fd950fb, type: 2}
+  - {fileID: 100002, guid: b01007ad188457f4c90b01fc5fd950fb, type: 2}
+  interval: {x: 32, y: 0}
 --- !u!1 &72027894
 GameObject:
   m_ObjectHideFlags: 0
@@ -64083,6 +64130,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2063649272}
+  - {fileID: 71652537}
   m_Father: {fileID: 1957406506}
   m_RootOrder: 2
 --- !u!1 &1500096878

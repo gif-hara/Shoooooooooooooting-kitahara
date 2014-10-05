@@ -112,7 +112,7 @@ public class Player : GameMonoBehaviour
 	{
 		if( IsInvincible )	return;
 		
-		gameObject.BroadcastMessage (GameDefine.MissEventMessage, SendMessageOptions.DontRequireReceiver);
+		gameObject.BroadcastMessage(GameDefine.MissEventMessage, SendMessageOptions.DontRequireReceiver);
 
 		PlayerStatusManager.Miss();
 		GameManager.Miss();
@@ -191,7 +191,8 @@ public class Player : GameMonoBehaviour
 			yield return new WaitForEndOfFrame();
 			t--;
 		}
-		
+
+		ReferenceManager.refUILayer.BroadcastMessage( GameDefine.ResurrectionMessage );
 		Relocation();
 		refContent.SetActive( true );
 	}
