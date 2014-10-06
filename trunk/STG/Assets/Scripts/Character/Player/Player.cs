@@ -25,6 +25,10 @@ public class Player : GameMonoBehaviour
 
 	[SerializeField]
 	private GameObject prefabParticleGraze;
+
+	public A_SpecialModeContent PrefabSpecialModeContent{ get{ return prefabSpecialModeContent; } }
+	[SerializeField]
+	private A_SpecialModeContent prefabSpecialModeContent;
 	
 	/// <summary>
 	/// 無敵時間.
@@ -66,17 +70,15 @@ public class Player : GameMonoBehaviour
 	/// <summary>
 	/// SPモードの開始処理.
 	/// </summary>
-	public void StartSpecialMode( GameObject inSpecialModeContentPrefab )
+	public void StartSpecialMode()
 	{
 		if( isSpecialMode )	return;
 		
-		var spContent = inSpecialModeContentPrefab.GetComponent<A_SpecialModeContent>();
-		
-		if( !spContent.CanExecute() )	return;
+		if( !prefabSpecialModeContent.CanExecute() )	return;
 		
 		isSpecialMode = true;
-		PlayerStatusManager.UseSpecialMode( spContent.NeedPoint );
-		InstantiateAsChild( cachedTransform, inSpecialModeContentPrefab );
+		PlayerStatusManager.UseSpecialMode( prefabSpecialModeContent.NeedPoint );
+		InstantiateAsChild( cachedTransform, prefabSpecialModeContent.gameObject );
 	}
 	/// <summary>
 	/// SPモードの終了処理.
@@ -103,6 +105,13 @@ public class Player : GameMonoBehaviour
 	public void Miss()
 	{
 		if( IsInvincible )	return;
+
+		// オートボム.
+		if( ReferenceManager.RefPlayerStatusManager.IsMaxSpecialPoint )
+		{
+			AutoSpecialMode();
+			return;
+		}
 		
 		gameObject.BroadcastMessage(GameDefine.MissEventMessage, SendMessageOptions.DontRequireReceiver);
 
@@ -143,6 +152,16 @@ public class Player : GameMonoBehaviour
 			
 			return false;
 		}
+	}
+	private void AutoSpecialMode()
+	{
+		if( isSpecialMode )	return;
+		
+		if( !prefabSpecialModeContent.CanExecute() )	return;
+		
+		isSpecialMode = true;
+		PlayerStatusManager.UseSpecialMode( prefabSpecialModeContent.NeedPoint * 2 );
+		InstantiateAsChild( cachedTransform, prefabSpecialModeContent.gameObject );
 	}
 	/// <summary>
 	/// 座標を初期値に戻す.

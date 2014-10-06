@@ -16,10 +16,6 @@ public class InputSpecialMode : A_InputAction
 {
 	[SerializeField]
 	private Player refPlayer;
-
-	public A_SpecialModeContent SpecialModeContent{ get{ return prefabInSpecialModeContent.GetComponent<A_SpecialModeContent>(); } }
-	[SerializeField]
-	private GameObject prefabInSpecialModeContent;
 	
 	// Use this for initialization
 	public override void Start()
@@ -39,7 +35,7 @@ public class InputSpecialMode : A_InputAction
 	{
 		if( Input.GetKeyDown( KeyCode.X ) )
 		{
-			refPlayer.StartSpecialMode( prefabInSpecialModeContent );
+			refPlayer.StartSpecialMode();
 		}
 	}
 }

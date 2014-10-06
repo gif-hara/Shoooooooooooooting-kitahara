@@ -144,6 +144,11 @@ public class GameDefine : A_Singleton<GameDefine>
 	/// </summary>
 	public const string ModifiedNeedSpecialGaugeMessage = "OnModifiedNeedSpecialGauge";
 
+	/// <summary>
+	/// SPが変更された際のメッセージ.
+	/// </summary>
+	public const string ModifiedSpecialPointMessage = "OnModifiedSpecialPoint";
+
 	public override void Awake()
 	{
 		base.Awake();

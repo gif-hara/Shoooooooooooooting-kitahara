@@ -101,11 +101,14 @@ public class PlayerStatusManager : GameMonoBehaviour
 
 		specialPoint += value;
 		specialPoint = specialPoint > MaxSpecialPoint ? MaxSpecialPoint : specialPoint;
+
+		ReferenceManager.Instance.Player.BroadcastMessage( GameDefine.ModifiedSpecialPointMessage, specialPoint, SendMessageOptions.DontRequireReceiver );
 	}
 
 	public void UseSpecialMode( float needPoint )
 	{
 		specialPoint -= needPoint;
+		ReferenceManager.Instance.Player.BroadcastMessage( GameDefine.ModifiedSpecialPointMessage, specialPoint, SendMessageOptions.DontRequireReceiver );
 	}
 
 	/// <summary>
@@ -148,6 +151,14 @@ public class PlayerStatusManager : GameMonoBehaviour
 		}
 
 		ReferenceManager.Instance.Player.Graze( grazeObject );
+	}
+
+	public bool IsMaxSpecialPoint
+	{
+		get
+		{
+			return specialPoint >= MaxSpecialPoint;
+		}
 	}
 
 	public void DebugChange( int id )

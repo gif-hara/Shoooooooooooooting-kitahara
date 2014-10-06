@@ -641,8 +641,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   refPlayer: {fileID: 11400012}
-  prefabInSpecialModeContent: {fileID: 100006, guid: de730bf9b124a9144a09a7fd6fa53c23,
-    type: 2}
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -719,6 +717,8 @@ MonoBehaviour:
   id: 0
   refContent: {fileID: 100024}
   prefabParticleGraze: {fileID: 100000, guid: ee306e195d11ea345810367dc26a6df5, type: 2}
+  prefabSpecialModeContent: {fileID: 11400000, guid: de730bf9b124a9144a09a7fd6fa53c23,
+    type: 2}
 --- !u!114 &11400014
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -948,6 +948,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
+  refPlayer: {fileID: 11400012}
   refInputSpecialMode: {fileID: 11400002}
 --- !u!1001 &100100000
 Prefab:
