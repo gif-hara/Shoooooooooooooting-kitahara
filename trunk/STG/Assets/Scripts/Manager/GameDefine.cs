@@ -139,6 +139,11 @@ public class GameDefine : A_Singleton<GameDefine>
 	/// </summary>
 	public const string ExtendMessage = "OnExtend";
 
+	/// <summary>
+	/// SPモードに必要なゲージ量が変更された際のメッセージ.
+	/// </summary>
+	public const string ModifiedNeedSpecialGaugeMessage = "OnModifiedNeedSpecialGauge";
+
 	public override void Awake()
 	{
 		base.Awake();

@@ -16,7 +16,8 @@ public class InputSpecialMode : A_InputAction
 {
 	[SerializeField]
 	private Player refPlayer;
-	
+
+	public A_SpecialModeContent SpecialModeContent{ get{ return prefabInSpecialModeContent.GetComponent<A_SpecialModeContent>(); } }
 	[SerializeField]
 	private GameObject prefabInSpecialModeContent;
 	
