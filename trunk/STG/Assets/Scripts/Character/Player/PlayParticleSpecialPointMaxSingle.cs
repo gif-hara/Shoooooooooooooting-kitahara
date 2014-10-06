@@ -1,6 +1,6 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : PlayParticleSpecialGaugeMax.cs
+*     * FileName    : PlayParticleNeedSpecialPointMaxSingle.cs
 *
 *     * Author      : Hiroki_Kitahara.
 */
@@ -12,22 +12,26 @@ using System.Collections.Generic;
 /// <summary>
 /// .
 /// </summary>
-public class PlayParticleSpecialGaugeMax : GameMonoBehaviour
+public class PlayParticleSpecialPointMaxSingle : GameMonoBehaviour
 {
 	[SerializeField]
 	private List<ParticleSystem> refParticleList;
 
+	private bool isPlay = false;
+	
 	void OnModifiedSpecialPoint( float value )
 	{
-		bool flag = value >= PlayerStatusManager.MaxSpecialPoint;
-		refParticleList.ForEach( p =>
+		if( isPlay && !ReferenceManager.Instance.RefPlayerStatusManager.IsMaxSpecialPoint )
 		{
-			if( flag && !p.isPlaying )
+			isPlay = false;
+		}
+		else if( !isPlay && ReferenceManager.Instance.RefPlayerStatusManager.IsMaxSpecialPoint )
+		{
+			refParticleList.ForEach( p =>
 			{
 				p.Play( true );
-			}
-			p.loop = flag;
-		});
+			});
+			isPlay = true;
+		}
 	}
-
 }

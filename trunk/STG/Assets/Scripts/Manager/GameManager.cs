@@ -205,7 +205,7 @@ public class GameManager : GameMonoBehaviour
 	/// </param>
 	private int GetNeedGameExperience( int level )
 	{
-		return (level * 10) + (level * 2);
+		return (level * 5) + (level * 2);
 	}
 	/// <summary>
 	/// レベルアップ可能であるか？.
