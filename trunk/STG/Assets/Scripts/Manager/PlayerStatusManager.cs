@@ -75,6 +75,12 @@ public class PlayerStatusManager : GameMonoBehaviour
 	private int extendCount = 0;
 
 	/// <summary>
+	/// ミス回数.
+	/// </summary>
+	public int MissCount{ get{ return missCount; } }
+	private int missCount = 0;
+
+	/// <summary>
 	/// SPポイント最大値.
 	/// </summary>
 	public const float MaxSpecialPoint = 100.0f;
@@ -120,6 +126,7 @@ public class PlayerStatusManager : GameMonoBehaviour
 		
 		life--;
 		life = life < 0 ? 0 : life;
+		missCount++;
 
 		ReferenceManager.Instance.refUILayer.BroadcastMessage( GameDefine.MissEventMessage, SendMessageOptions.DontRequireReceiver );
 	}

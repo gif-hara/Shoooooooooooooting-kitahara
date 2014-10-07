@@ -233,4 +233,12 @@ public class GameManager : GameMonoBehaviour
 			return (float)gameLevel / (float)GameLevelMax;
 		}
 	}
+
+	public bool IsAllReverseStageClear
+	{
+		get
+		{
+			return GameManager.ReverseStageFlagList.FindIndex( m => m == false ) == -1;
+		}
+	}
 }
