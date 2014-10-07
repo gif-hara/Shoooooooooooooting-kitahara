@@ -21,9 +21,7 @@ public class GameManager : GameMonoBehaviour
 	{
 		set
 		{
-			gameLevel = value;
-			gameLevel = gameLevel <= 0 ? 0 : gameLevel;
-			gameLevel = gameLevel >= 100 ? 100 : gameLevel;
+			gameLevel = Mathf.Clamp( value, GameLevelMinDifficulty, GameLevelMaxDifficulty );
 		}
 		get
 		{
@@ -31,6 +29,9 @@ public class GameManager : GameMonoBehaviour
 		}
 	}
 	public int gameLevel = 0;
+
+	[SerializeField]
+	private GameDefine.DifficultyType difficultyType;
 
 	[SerializeField]
 	private int frameRate = 60;
@@ -120,7 +121,7 @@ public class GameManager : GameMonoBehaviour
 	{
 		if( this.BossType != GameDefine.BossType.None )	return;
 
-		gameLevel += value;
+		GameLevel += value;
 	}
 	/// <summary>
 	/// 敵弾がバリアと衝突した際のゲームレベル経験値上昇処理.
@@ -191,7 +192,7 @@ public class GameManager : GameMonoBehaviour
 	{
 		if( !IsGameLevelUp )	return;
 		
-		gameLevel++;
+		GameLevel++;
 		gameLevelExperience = 0;
 	}
 	/// <summary>
@@ -218,6 +219,22 @@ public class GameManager : GameMonoBehaviour
 		get
 		{
 			return gameLevelExperience >= GetNeedGameExperience( gameLevel + 1 );
+		}
+	}
+	private int GameLevelMinDifficulty
+	{
+		get
+		{
+			int[] min = { 0, 0, 60, 100 };
+			return min[(int)difficultyType];
+		}
+	}
+	private int GameLevelMaxDifficulty
+	{
+		get
+		{
+			int[] max = { 30, 60, 100, 100 };
+			return max[(int)difficultyType];
 		}
 	}
 	/// <summary>

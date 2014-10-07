@@ -13,6 +13,14 @@ using System.Collections;
 
 public class GameDefine : A_Singleton<GameDefine>
 {
+	public enum DifficultyType : int
+	{
+		Easy,
+		Normal,
+		Hard,
+		Hell,
+	}
+
 	public enum LayerType : int
 	{
 		EnemyShot,
