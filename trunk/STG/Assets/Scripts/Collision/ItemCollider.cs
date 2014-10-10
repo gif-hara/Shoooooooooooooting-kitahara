@@ -45,6 +45,11 @@ public class ItemCollider : A_Collider
 
 	private void FallCollision()
 	{
+		if( refController.IsFirstMove )
+		{
+			return;
+		}
+
 		refController.StartChasePlayer();
 		collisionFunc = ChaseCollision;
 		radius = chasedRadius;

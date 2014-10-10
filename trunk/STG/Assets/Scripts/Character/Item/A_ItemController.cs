@@ -38,6 +38,14 @@ public abstract class A_ItemController : GameMonoBehaviour
 		refFallTween.data.targetPosition += Trans.localPosition + Vector3.right * Random.Range( -random, random );
 	}
 
+	public bool IsFirstMove
+	{
+		get
+		{
+			return !refFirstTween.IsComplete;
+		}
+	}
+
 	public abstract void StartChasePlayer();
 
 	public abstract void OnPlayerCollide();
