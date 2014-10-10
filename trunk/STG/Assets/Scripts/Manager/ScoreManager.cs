@@ -91,7 +91,7 @@ public class ScoreManager : GameMonoBehaviour
 	{
 		int gameLevel = GameManager.GameLevel;
 		ulong fixedGameLevel = gameLevel <= 1 ? 1 : (ulong)gameLevel;
-		value = value * fixedGameLevel;
+		value = (value + (ulong)GameManager.GrazeCount) * fixedGameLevel;
 		AddScore( value );
 	}
 	public void InitStarItem()

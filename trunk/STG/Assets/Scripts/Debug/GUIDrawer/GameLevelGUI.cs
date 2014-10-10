@@ -27,8 +27,12 @@ public class GameLevelGUI : A_GUIElement
 			Label( "Game Level Experience = " + ReferenceManager.GameManager.GameLevelExperience );
 		});
 		Horizontal( () =>
-		{
+		           {
 			Label( "Collision EnemyShot = " + ReferenceManager.GameManager.CollisionEnemyShot );
+		});
+		Horizontal( () =>
+		           {
+			Label( "Graze Count = " + ReferenceManager.GameManager.GrazeCount );
 		});
 		GameManager.gameLevel = (int)gameLevel;
 	}

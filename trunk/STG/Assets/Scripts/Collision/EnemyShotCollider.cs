@@ -88,6 +88,7 @@ public class EnemyShotCollider : A_Collider
 			if( GameManager.BossType != GameDefine.BossType.Boss )
 			{
 				ReferenceManager.refScoreManager.CreateStarItem( Trans.position );
+				GameManager.AddGrazeCount();
 			}
 		}
 		else

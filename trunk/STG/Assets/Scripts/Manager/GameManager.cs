@@ -50,6 +50,14 @@ public class GameManager : GameMonoBehaviour
 	/// </summary>
 	public int CollisionEnemyShot{ get{ return collisionEnemyShot; } }
 	private int collisionEnemyShot = 0;
+
+	/// <summary>
+	/// グレイズした回数.
+	/// ボス戦はカウントされない.
+	/// </summary>
+	/// <value>The graze count.</value>
+	public int GrazeCount{ get{ return grazeCount; } }
+	private int grazeCount = 0;
 	
 	/// <summary>
 	/// 敵を倒した数.
@@ -78,6 +86,7 @@ public class GameManager : GameMonoBehaviour
 	{
 		base.Awake();
 		Application.targetFrameRate = frameRate;
+		GameLevel = GameLevel;
 
 		for( int i=0; i<ReferenceManager.Instance.prefabEnemyList.Count; i++ )
 		{
@@ -95,7 +104,10 @@ public class GameManager : GameMonoBehaviour
 	public override void Update()
 	{
 		base.Update();
+
+#if DEBUG
 		GameLevel = GameLevel;
+#endif
 
 		if( Application.targetFrameRate != frameRate )
 		{
@@ -129,6 +141,10 @@ public class GameManager : GameMonoBehaviour
 	{
 		collisionEnemyShot += deleteNum;
 		AddGameLevelExperience( deleteNum );
+	}
+	public void AddGrazeCount()
+	{
+		grazeCount++;
 	}
 	/// <summary>
 	/// 敵死亡処理.
