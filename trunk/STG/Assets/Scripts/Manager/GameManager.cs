@@ -95,8 +95,7 @@ public class GameManager : GameMonoBehaviour
 	public override void Update()
 	{
 		base.Update();
-		gameLevel = gameLevel > GameLevelMax ? GameLevelMax : gameLevel;
-		gameLevel = gameLevel < 0 ? 0 : gameLevel;
+		GameLevel = GameLevel;
 
 		if( Application.targetFrameRate != frameRate )
 		{
