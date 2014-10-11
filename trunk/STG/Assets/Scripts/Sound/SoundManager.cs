@@ -81,24 +81,44 @@ public class SoundManager : GameMonoBehaviour
 	public GameObject prefabSoundEntity;
 	
 	public float masterVolume;
+
+	public float BGMVolume;
 	
 	public List<ClipData> refClipList;
 	
+	[SerializeField]
+	private AudioSource refBGMEntity;
+
 	private Dictionary<string, ClipDictionaryData> clipDictionary = new Dictionary<string, ClipDictionaryData>();
 	
 	private List<SoundEntityData> entityDataList = new List<SoundEntityData>();
-	
+
 	// Use this for initialization
 	public override void Awake()
 	{
 		base.Awake();
 		InitClipDictionary();
 		InitEntityList();
+		refBGMEntity.volume = BGMVolume * masterVolume;
 	}
 
 	public void Play( string label )
 	{
 		entityDataList[clipDictionary[label].Index].GetEntity().Play();
+	}
+
+	public void PlayBGM( string label )
+	{
+		refBGMEntity.volume = BGMVolume * masterVolume;
+		refBGMEntity.clip = clipDictionary[label].ClipData.clip;
+		refBGMEntity.Play();
+	}
+
+	public void FadeBGM( float volumeFrom, float volumeTo, int duration )
+	{
+		volumeFrom *= BGMVolume * masterVolume;
+		volumeTo *= BGMVolume * masterVolume;
+		StartCoroutine( FadeBGMCoroutine( volumeFrom, volumeTo, duration ) );
 	}
 	
 	private void InitClipDictionary()
@@ -116,5 +136,19 @@ public class SoundManager : GameMonoBehaviour
 		{
 			entityDataList.Add( new SoundEntityData( this, refClipList[i] ) );
 		}
+	}
+
+	private IEnumerator FadeBGMCoroutine( float volumeFrom, float volumeTo, int duration )
+	{
+		int currentDuration = 0;
+		while( currentDuration <= duration )
+		{
+			refBGMEntity.volume = Mathf.Lerp( volumeFrom, volumeTo, currentDuration / (float)duration );
+			currentDuration++;
+
+			yield return new WaitForEndOfFrame();
+		}
+
+		refBGMEntity.volume = volumeTo;
 	}
 }

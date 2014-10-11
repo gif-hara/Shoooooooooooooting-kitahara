@@ -17,6 +17,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
+--- !u!1 &100002
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400008}
+  - 114: {fileID: 11400020}
+  m_Layer: 0
+  m_Name: '[3160] FadeBGM'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &100004
 GameObject:
   m_ObjectHideFlags: 1
@@ -1629,8 +1645,21 @@ Transform:
   - {fileID: 400100}
   - {fileID: 400076}
   - {fileID: 400000}
+  - {fileID: 400008}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!4 &400008
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -400, y: 3460, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400006}
+  m_RootOrder: 73
 --- !u!4 &400010
 Transform:
   m_ObjectHideFlags: 1
@@ -2867,6 +2896,12 @@ MonoBehaviour:
   actionableListManager:
     actionableList:
     - {fileID: 11400318}
+    - {fileID: 11400078}
+    - {fileID: 11400184}
+    - {fileID: 11400254}
+    - {fileID: 11400164}
+    - {fileID: 11400026}
+    - {fileID: 11400096}
     - {fileID: 11400244}
     - {fileID: 11400134}
     - {fileID: 11400112}
@@ -2886,27 +2921,26 @@ MonoBehaviour:
     - {fileID: 11400132}
     - {fileID: 11400082}
     - {fileID: 11400004}
-    - {fileID: 11400238}
     - {fileID: 11400104}
-    - {fileID: 11400290}
+    - {fileID: 11400238}
     - {fileID: 11400108}
+    - {fileID: 11400290}
     - {fileID: 11400306}
     - {fileID: 11400292}
     - {fileID: 11400124}
     - {fileID: 11400206}
     - {fileID: 11400024}
-    - {fileID: 0}
+    - {fileID: 11400054}
     - {fileID: 11400302}
     - {fileID: 11400276}
-    - {fileID: 11400054}
-    - {fileID: 11400198}
     - {fileID: 11400072}
-    - {fileID: 11400298}
+    - {fileID: 11400198}
     - {fileID: 11400092}
+    - {fileID: 11400298}
     - {fileID: 11400224}
     - {fileID: 11400102}
-    - {fileID: 11400272}
     - {fileID: 11400118}
+    - {fileID: 11400272}
     - {fileID: 11400120}
     - {fileID: 11400122}
     - {fileID: 11400050}
@@ -2914,26 +2948,26 @@ MonoBehaviour:
     - {fileID: 11400264}
     - {fileID: 11400214}
     - {fileID: 11400022}
-    - {fileID: 11400176}
     - {fileID: 11400240}
-    - {fileID: 11400174}
+    - {fileID: 11400176}
     - {fileID: 11400172}
+    - {fileID: 11400174}
     - {fileID: 11400168}
     - {fileID: 11400210}
-    - {fileID: 11400166}
     - {fileID: 11400232}
+    - {fileID: 11400166}
     - {fileID: 11400162}
     - {fileID: 11400160}
     - {fileID: 11400158}
     - {fileID: 11400218}
-    - {fileID: 11400156}
     - {fileID: 11400154}
+    - {fileID: 11400156}
     - {fileID: 11400220}
     - {fileID: 11400152}
-    - {fileID: 0}
     - {fileID: 11400222}
     - {fileID: 11400076}
     - {fileID: 11400100}
+    - {fileID: 11400020}
     - {fileID: 11400008}
 --- !u!114 &11400008
 MonoBehaviour:
@@ -3177,6 +3211,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   existAction: 0
+--- !u!114 &11400020
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be7044256668e45499bbdba0931f34a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 400008}
+  timeLine: 3160
+  refActionConditioner: {fileID: 0}
+  from: 1
+  to: 0
+  duration: 360
 --- !u!114 &11400022
 MonoBehaviour:
   m_ObjectHideFlags: 1

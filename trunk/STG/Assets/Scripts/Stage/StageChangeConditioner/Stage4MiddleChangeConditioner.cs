@@ -21,6 +21,5 @@ public class Stage4MiddleChangeConditioner : A_StageChangeConditioner
 				GameManager.GameLevel >= 95
 				&& ReferenceManager.Instance.RefPlayerStatusManager.MissCount <= 1
 				&& ReferenceManager.Instance.refGameManager.IsAllReverseStageClear;
-		return !isBasicRoot;
 	}
 }

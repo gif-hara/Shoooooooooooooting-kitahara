@@ -105,10 +105,6 @@ public class GameManager : GameMonoBehaviour
 	{
 		base.Update();
 
-#if DEBUG
-		GameLevel = GameLevel;
-#endif
-
 		if( Application.targetFrameRate != frameRate )
 		{
 			Application.targetFrameRate = frameRate;
