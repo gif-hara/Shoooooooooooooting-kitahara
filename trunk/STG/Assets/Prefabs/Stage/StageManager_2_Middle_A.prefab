@@ -6051,6 +6051,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
+--- !u!1 &100750
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400750}
+  - 114: {fileID: 11400852}
+  m_Layer: 0
+  m_Name: '[5120] FadeBGM'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &400000
 Transform:
   m_ObjectHideFlags: 1
@@ -7044,6 +7060,7 @@ Transform:
   - {fileID: 400384}
   - {fileID: 400354}
   - {fileID: 400352}
+  - {fileID: 400750}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &400146
@@ -10925,6 +10942,18 @@ Transform:
   - {fileID: 400738}
   m_Father: {fileID: 400144}
   m_RootOrder: 27
+--- !u!4 &400750
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100750}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 5120, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400144}
+  m_RootOrder: 86
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -35279,6 +35308,23 @@ MonoBehaviour:
   interval: 10
   extensionName: Enemy0_3
   offset: {x: 200, y: 0}
+--- !u!114 &11400852
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be7044256668e45499bbdba0931f34a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 400750}
+  timeLine: 5120
+  refActionConditioner: {fileID: 0}
+  from: 1
+  to: 0
+  duration: 300
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -59,7 +59,7 @@ GameObject:
   - 4: {fileID: 400006}
   - 114: {fileID: 11400008}
   m_Layer: 0
-  m_Name: '[1] TimeLineStop'
+  m_Name: '[0] TimeLineStop'
   m_TagString: Untagged
   m_Icon: {fileID: -1203168336, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -97,6 +97,38 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
+--- !u!1 &100012
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400012}
+  - 114: {fileID: 11400014}
+  m_Layer: 0
+  m_Name: '[0] PlayBGM'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100014
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400014}
+  - 114: {fileID: 11400016}
+  m_Layer: 0
+  m_Name: '[1] FadeBGM'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &400000
 Transform:
   m_ObjectHideFlags: 1
@@ -124,6 +156,8 @@ Transform:
   - {fileID: 400004}
   - {fileID: 400008}
   - {fileID: 400010}
+  - {fileID: 400012}
+  - {fileID: 400014}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &400004
@@ -145,7 +179,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100006}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -400, y: 301, z: 0}
+  m_LocalPosition: {x: -400, y: 300, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400002}
@@ -174,6 +208,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 400002}
   m_RootOrder: 4
+--- !u!4 &400012
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100012}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -400, y: 300, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400002}
+  m_RootOrder: 5
+--- !u!4 &400014
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100014}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -400, y: 301, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400002}
+  m_RootOrder: 6
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -283,7 +341,14 @@ MonoBehaviour:
   timeLineManager:
     timeLine: 0
   actionableListManager:
-    actionableList: []
+    actionableList:
+    - {fileID: 11400014}
+    - {fileID: 11400000}
+    - {fileID: 11400008}
+    - {fileID: 11400016}
+    - {fileID: 11400010}
+    - {fileID: 11400012}
+    - {fileID: 11400006}
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -326,7 +391,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400006}
-  timeLine: 1
+  timeLine: 0
   refActionConditioner: {fileID: 0}
   delayDuration: 0
   exceptionDuration: 999999999
@@ -360,6 +425,38 @@ MonoBehaviour:
   cachedTransform: {fileID: 400010}
   timeLine: 501
   refActionConditioner: {fileID: 0}
+--- !u!114 &11400014
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de53545cf1cddd54d9cb95157af964d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 400012}
+  timeLine: 0
+  refActionConditioner: {fileID: 0}
+  label: Boss0
+--- !u!114 &11400016
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be7044256668e45499bbdba0931f34a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 400014}
+  timeLine: 1
+  refActionConditioner: {fileID: 0}
+  from: 1
+  to: 0
+  duration: 10
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -8096,6 +8096,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
+--- !u!1 &101008
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 401008}
+  - 114: {fileID: 11401072}
+  m_Layer: 0
+  m_Name: '[0] PlayBGM'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &400000
 Transform:
   m_ObjectHideFlags: 1
@@ -10485,6 +10501,7 @@ Transform:
   - {fileID: 400912}
   - {fileID: 400910}
   - {fileID: 400064}
+  - {fileID: 401008}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &400360
@@ -14647,6 +14664,18 @@ Transform:
   - {fileID: 400992}
   m_Father: {fileID: 400358}
   m_RootOrder: 15
+--- !u!4 &401008
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 101008}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400358}
+  m_RootOrder: 88
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -47075,6 +47104,21 @@ MonoBehaviour:
   interval: 0
   extensionName: Enemy0_0
   offset: {x: 150, y: 0}
+--- !u!114 &11401072
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 101008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de53545cf1cddd54d9cb95157af964d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 401008}
+  timeLine: 0
+  refActionConditioner: {fileID: 0}
+  label: Stage3
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
