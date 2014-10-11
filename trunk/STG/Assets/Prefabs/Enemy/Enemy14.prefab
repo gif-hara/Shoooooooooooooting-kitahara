@@ -396,6 +396,7 @@ GameObject:
   - 114: {fileID: 11400130}
   - 114: {fileID: 11400328}
   - 114: {fileID: 11400504}
+  - 114: {fileID: 11400506}
   m_Layer: 8
   m_Name: Enemy14
   m_TagString: Untagged
@@ -9752,6 +9753,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   bossType: 2
+--- !u!114 &11400506
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fafde7e7b5f40b4388b976f884aeffb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  createType: 1
+  elementList:
+  - prefab: {fileID: 100028, guid: 04985e28a2030ea4d8b66fa39060369c, type: 2}
+    parent: {fileID: 400042}
+    detachParent: 1
+  delay: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
