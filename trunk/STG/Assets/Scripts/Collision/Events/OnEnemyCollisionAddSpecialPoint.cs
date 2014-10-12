@@ -14,16 +14,26 @@ using System.Collections.Generic;
 /// </summary>
 public class OnEnemyCollisionAddSpecialPoint : GameMonoBehaviour
 {
-	/// <summary>
-	/// 敵と衝突した際に加算されるSP.
-	/// </summary>
 	[SerializeField]
-	private float addSpecialPoint;
+	private float addSpecialPointMin;
+
+	[SerializeField]
+	private float addSpecialPointMax;
+	
+	[SerializeField]
+	private int duration;
+
+	public override void Update ()
+	{
+		base.Update ();
+		duration--;
+	}
 
 	void OnEnemyCollision()
 	{
 		if( ReferenceManager.Instance.Player.IsSpecialMode )	return;
 
-		ReferenceManager.Instance.RefPlayerStatusManager.AddSpecialPoint( addSpecialPoint );
+		var addPoint = duration > 0 ? addSpecialPointMax : addSpecialPointMin;
+		ReferenceManager.Instance.RefPlayerStatusManager.AddSpecialPoint( addPoint );
 	}
 }

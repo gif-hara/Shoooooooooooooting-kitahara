@@ -83,10 +83,10 @@ public class EnemyShotCollider : A_Collider
 		{
 			this.radius = this.cachedRadius;
 			collisionType = CollisionType.Miss;
-			ReferenceManager.RefPlayerStatusManager.Graze( Trans );
 
 			if( GameManager.BossType != GameDefine.BossType.Boss )
 			{
+				ReferenceManager.RefPlayerStatusManager.Graze( Trans );
 				ReferenceManager.refScoreManager.CreateStarItem( Trans.position );
 				GameManager.AddGrazeCount();
 			}

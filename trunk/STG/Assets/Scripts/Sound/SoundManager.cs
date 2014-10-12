@@ -83,6 +83,8 @@ public class SoundManager : GameMonoBehaviour
 	public float masterVolume;
 
 	public float BGMVolume;
+
+	public float SEVolume;
 	
 	public List<ClipData> refClipList;
 	

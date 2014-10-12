@@ -30,6 +30,7 @@ public class GameManager : GameMonoBehaviour
 	}
 	public int gameLevel = 0;
 
+	public GameDefine.DifficultyType DifficultyType{ get{ return difficultyType; } }
 	[SerializeField]
 	private GameDefine.DifficultyType difficultyType;
 

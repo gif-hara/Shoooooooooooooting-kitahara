@@ -23,6 +23,11 @@ public class Stage2MiddleChangeConditioner : A_StageChangeConditioner
 	
 	public override bool Condition()
 	{
+		if( GameManager.DifficultyType == GameDefine.DifficultyType.Easy )
+		{
+			return false;
+		}
+
 		return GameManager.DestroyEnemyNumList[extensionNeedEnemyId] >= extensionDestroyNum;
 	}
 }
