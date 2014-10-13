@@ -22,7 +22,7 @@ public class StageTimeLineFadeAction : A_StageTimeLineActionable
 	
 	public override void Action()
 	{
-		ReferenceManager.refFadeManager.Begin( fromColor, toColor, duration );
+		FadeManager.Instance.Begin( fromColor, toColor, duration );
 		Destroy( gameObject );
 	}
 	

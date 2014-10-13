@@ -34,6 +34,6 @@ public class TweenFade : A_DelayEvent
 
 	protected override void OnDelayEvent()
 	{
-		ReferenceManager.refFadeManager.Begin( from, to, duration );
+		FadeManager.Instance.Begin( from, to, duration );
 	}
 }

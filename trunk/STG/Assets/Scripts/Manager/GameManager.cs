@@ -88,6 +88,7 @@ public class GameManager : GameMonoBehaviour
 		base.Awake();
 		Application.targetFrameRate = frameRate;
 		GameLevel = GameLevel;
+		difficultyType = GameStatusInterfacer.Difficulty;
 
 		for( int i=0; i<ReferenceManager.Instance.prefabEnemyList.Count; i++ )
 		{

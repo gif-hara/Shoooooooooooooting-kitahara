@@ -119,6 +119,52 @@ MonoBehaviour:
   starId: 0
   rate: 100
   refResultManager: {fileID: 1347492914}
+--- !u!1 &27513319
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 27513320}
+  - 114: {fileID: 27513321}
+  m_Layer: 0
+  m_Name: StageStarter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &27513320
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 27513319}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 571275239}
+  m_RootOrder: 11
+--- !u!114 &27513321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 27513319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75720a17fddfa8b49abb467ebe172e8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  prefabStageList:
+  - {fileID: 11400006, guid: da7adc623f6539341ab12f5609b9ce38, type: 2}
+  - {fileID: 11400036, guid: 56adb3ac1d635644ba458fe3d237f62d, type: 2}
+  - {fileID: 11400164, guid: 56a60e5be59fc4d6ba00d5017427b3c7, type: 2}
+  - {fileID: 11400360, guid: 1a611a0d02c33d849b4101e47039671a, type: 2}
+  - {fileID: 11400360, guid: 4137132c3b2164591982f973a8a06c98, type: 2}
 --- !u!1 &58430345
 GameObject:
   m_ObjectHideFlags: 0
@@ -1907,7 +1953,6 @@ MonoBehaviour:
   refScoreManager: {fileID: 832699562}
   refSoundManager: {fileID: 1449514316}
   refCollisionManager: {fileID: 123265362}
-  refFadeManager: {fileID: 1083008307}
   refStageManager: {fileID: 0}
   refBarrierBar: {fileID: 1720070683}
   refCameraParent: {fileID: 1409095643}
@@ -3026,6 +3071,7 @@ Transform:
   - {fileID: 374913975}
   - {fileID: 1449514315}
   - {fileID: 2049934678}
+  - {fileID: 27513320}
   m_Father: {fileID: 0}
   m_RootOrder: 2
 --- !u!1 &571524249
@@ -4655,6 +4701,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1083008306}
   - 114: {fileID: 1083008307}
+  - 114: {fileID: 1083008308}
   m_Layer: 16
   m_Name: FadeManager
   m_TagString: Untagged
@@ -4688,6 +4735,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   refRenderer: {fileID: 397175354}
+--- !u!114 &1083008308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1083008305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32e927b1ceda44b42964d3dedf641609, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  delay: 0
+  from: {r: 1, g: 1, b: 1, a: 1}
+  to: {r: 1, g: 1, b: 1, a: 0}
+  duration: 60
 --- !u!1 &1089740805
 GameObject:
   m_ObjectHideFlags: 0

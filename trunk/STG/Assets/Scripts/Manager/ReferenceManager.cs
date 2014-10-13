@@ -95,12 +95,7 @@ public class ReferenceManager : A_Singleton<ReferenceManager>
 	/// 当たり判定管理者クラス参照.
 	/// </summary>
 	public CollisionManager refCollisionManager;
-	
-	/// <summary>
-	/// フェード管理者クラス参照.
-	/// </summary>
-	public FadeManager refFadeManager;
-	
+
 	/// <summary>
 	/// ステージ管理者クラス参照.
 	/// </summary>

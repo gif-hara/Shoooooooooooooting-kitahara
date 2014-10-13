@@ -12,7 +12,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 
-public class FadeManager : GameMonoBehaviour
+public class FadeManager : A_Singleton<FadeManager>
 {
 	public Renderer refRenderer;
 	
@@ -25,16 +25,19 @@ public class FadeManager : GameMonoBehaviour
 	private Color fromColor = Color.white;
 	
 	private Color toColor = Color.clear;
-	
+
+	public override void Awake()
+	{
+		Instance = this;
+	}
+
 	public override void Start()
 	{
-		base.Start();
 		refMaterial = refRenderer.material;
 	}
 	
 	public override void Update()
 	{
-		base.Update();
 		int id = ScriptProfiler.Begin( this );
 		UpdateDuration();
 		ScriptProfiler.End( this, id );
