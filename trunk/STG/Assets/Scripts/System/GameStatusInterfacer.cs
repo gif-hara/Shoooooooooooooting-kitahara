@@ -17,4 +17,6 @@ public static class GameStatusInterfacer
 	public static GameDefine.DifficultyType Difficulty{ set; get; }
 
 	public static int StageId{ set; get; }
+
+	public static int PlayerId{ set; get; }
 }
