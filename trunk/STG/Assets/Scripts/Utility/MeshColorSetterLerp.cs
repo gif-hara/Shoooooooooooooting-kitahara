@@ -32,6 +32,9 @@ public class MeshColorSetterLerp : MonoBehaviourExtension
 
 	[SerializeField]
 	private MeshFilter refMeshFilter;
+
+	[SerializeField]
+	private bool loop = true;
 	
 	[SerializeField]
 	private List<LerpData> lerpDataList;
@@ -66,6 +69,11 @@ public class MeshColorSetterLerp : MonoBehaviourExtension
 			id++;
 			this.fromColor = meshManager.CurrentColor;
 			currentDuation = 0;
+
+			if( id >= lerpDataList.Count && !loop )
+			{
+				enabled = false;
+			}
 		}
 	}
 }
