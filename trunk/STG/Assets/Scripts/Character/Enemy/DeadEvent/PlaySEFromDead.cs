@@ -27,6 +27,6 @@ public class PlaySEFromDead : GameMonoBehaviour, I_DeadEvent
 	/// </summary>
 	public void OnDead()
 	{
-		ReferenceManager.Instance.refSoundManager.Play( label );
+		SoundManager.Instance.Play( label );
 	}
 }

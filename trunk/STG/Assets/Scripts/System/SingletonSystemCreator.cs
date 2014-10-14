@@ -1,6 +1,6 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : StageTimeLinePlayBGM.cs
+*     * FileName    : SingletonSystemCreator.cs
 *
 *     * Author      : Hiroki_Kitahara.
 */
@@ -12,19 +12,14 @@ using System.Collections.Generic;
 /// <summary>
 /// .
 /// </summary>
-public class StageTimeLinePlayBGM : A_StageTimeLineActionable
+public class SingletonSystemCreator : MonoBehaviour
 {
-	public string label;
+	[SerializeField]
+	private GameObject prefabDontDestroyObject;
 
-	public override void Action ()
+	void Awake()
 	{
-		SoundManager.Instance.PlayBGM( label );
-	}
-	protected override string GameObjectName
-	{
-		get
-		{
-			return string.Format( "[{0}] PlayBGM", timeLine );
-		}
+		var obj = Instantiate( prefabDontDestroyObject );
+		DontDestroyOnLoad( obj );
 	}
 }

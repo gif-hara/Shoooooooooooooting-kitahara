@@ -27,6 +27,6 @@ public class DestroyPlaySE : GameMonoBehaviour
 	{
 		if( isApplicationQuit )	return;
 		
-		ReferenceManager.refSoundManager.Play( label );
+		SoundManager.Instance.Play( label );
 	}
 }

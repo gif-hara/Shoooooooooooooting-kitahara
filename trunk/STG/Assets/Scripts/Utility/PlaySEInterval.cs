@@ -47,7 +47,7 @@ public class PlaySEInterval : GameMonoBehaviour
 		base.Update();
 		if( interval <= 0 )
 		{
-			ReferenceManager.refSoundManager.Play( label );
+			SoundManager.Instance.Play( label );
 			interval = maxInterval;
 			currentPlayNum++;
 			

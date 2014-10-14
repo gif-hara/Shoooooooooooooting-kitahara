@@ -777,7 +777,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400030}
   - 114: {fileID: 11400098}
-  - 114: {fileID: 11400030}
+  - 114: {fileID: 11400280}
   m_Layer: 0
   m_Name: '[3940] StageChange'
   m_TagString: Untagged
@@ -4325,19 +4325,6 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
---- !u!114 &11400030
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100096}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23a125e540ee88d42999da980b71dd52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cachedTransform: {fileID: 0}
-  isBasicRoot: 0
 --- !u!114 &11400032
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6988,7 +6975,7 @@ MonoBehaviour:
   refActionConditioner: {fileID: 0}
   prefabNextStage: {fileID: 100004, guid: 1f02406fc0de1cc43aea555d8d0e0c7b, type: 2}
   prefabExtensionStage: {fileID: 0}
-  refConditioner: {fileID: 11400030}
+  refConditioner: {fileID: 11400280}
 --- !u!114 &11400100
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13277,6 +13264,19 @@ MonoBehaviour:
   timeLine: 0
   refActionConditioner: {fileID: 0}
   stageId: 0
+--- !u!114 &11400280
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c83d69a130d0af64dad36c9d180c8dbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  isBasicRoot: 0
 --- !u!114 &11400318
 MonoBehaviour:
   m_ObjectHideFlags: 1

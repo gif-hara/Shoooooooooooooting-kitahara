@@ -12,7 +12,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 
-public class SoundManager : GameMonoBehaviour
+public class SoundManager : A_Singleton<SoundManager>
 {
 	[System.Serializable]
 	public class ClipData
@@ -98,6 +98,7 @@ public class SoundManager : GameMonoBehaviour
 	// Use this for initialization
 	public override void Awake()
 	{
+		Instance = this;
 		base.Awake();
 		InitClipDictionary();
 		InitEntityList();

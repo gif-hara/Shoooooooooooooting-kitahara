@@ -22,7 +22,7 @@ public class StageTimeLineFadeBGM : A_StageTimeLineActionable
 
 	public override void Action ()
 	{
-		ReferenceManager.Instance.refSoundManager.FadeBGM( from, to, duration );
+		SoundManager.Instance.FadeBGM( from, to, duration );
 	}
 	protected override string GameObjectName
 	{

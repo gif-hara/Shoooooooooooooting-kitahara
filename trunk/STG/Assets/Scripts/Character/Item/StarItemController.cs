@@ -38,6 +38,6 @@ public class StarItemController : A_ItemController
 	public override void OnPlayerCollide()
 	{
 		ScoreManager.EarnedStarItem( this );
-		ReferenceManager.Instance.refSoundManager.Play( "StarGet" );
+		SoundManager.Instance.Play( "StarGet" );
 	}
 }

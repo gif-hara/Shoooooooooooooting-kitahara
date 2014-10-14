@@ -24,7 +24,7 @@ public class PlaySE : GameMonoBehaviour
 		base.Update();
 		if( delay <= 0 )
 		{
-			ReferenceManager.refSoundManager.Play( label );
+			SoundManager.Instance.Play( label );
 			enabled = false;
 		}
 		

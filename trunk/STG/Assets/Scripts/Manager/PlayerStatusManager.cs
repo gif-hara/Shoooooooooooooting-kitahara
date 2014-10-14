@@ -145,7 +145,7 @@ public class PlayerStatusManager : GameMonoBehaviour
 
 		extendCount++;
 		life++;
-		ReferenceManager.Instance.refSoundManager.Play( "Extend" );
+		SoundManager.Instance.Play( "Extend" );
 		ReferenceManager.Instance.refUILayer.BroadcastMessage( GameDefine.ExtendMessage );
 	}
 

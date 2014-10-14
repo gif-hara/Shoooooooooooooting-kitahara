@@ -27,7 +27,7 @@ public class PlaySENeedSpecialPointEarn : GameMonoBehaviour
 		}
 		else if( !isPlay && value >= ReferenceManager.Instance.Player.PrefabSpecialModeContent.NeedPoint )
 		{
-			ReferenceManager.Instance.refSoundManager.Play( label );
+			SoundManager.Instance.Play( label );
 			isPlay = true;
 		}
 	}

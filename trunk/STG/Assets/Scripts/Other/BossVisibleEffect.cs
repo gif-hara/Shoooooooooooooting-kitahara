@@ -152,7 +152,7 @@ public class BossVisibleEffect : GameMonoBehaviour
 		
 		if( totalTimer % ( maxTimer / maxPlaySENum ) == 0 )
 		{
-			ReferenceManager.refSoundManager.Play( "Warning" );
+			SoundManager.Instance.Play( "Warning" );
 			playSENum++;
 		}
 	}

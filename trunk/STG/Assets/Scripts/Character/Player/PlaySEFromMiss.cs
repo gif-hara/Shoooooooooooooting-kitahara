@@ -20,6 +20,6 @@ public class PlaySEFromMiss : MonoBehaviour, I_MissEvent
 
 	public void OnMiss()
 	{
-		ReferenceManager.Instance.refSoundManager.Play( label );
+		SoundManager.Instance.Play( label );
 	}
 }

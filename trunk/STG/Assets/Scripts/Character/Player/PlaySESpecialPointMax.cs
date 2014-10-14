@@ -27,7 +27,7 @@ public class PlaySESpecialPointMax : GameMonoBehaviour
 		}
 		else if( !isPlay && ReferenceManager.Instance.RefPlayerStatusManager.IsMaxSpecialPoint )
 		{
-			ReferenceManager.Instance.refSoundManager.Play( label );
+			SoundManager.Instance.Play( label );
 			isPlay = true;
 		}
 	}

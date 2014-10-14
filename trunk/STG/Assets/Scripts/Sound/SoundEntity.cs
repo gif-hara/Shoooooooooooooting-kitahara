@@ -29,7 +29,7 @@ public class SoundEntity : MonoBehaviour
 	{
 		refAudioSource = GetComponent<AudioSource>();
 		refAudioSource.clip = data.clip;
-		var soundManager = ReferenceManager.Instance.refSoundManager;
+		var soundManager = SoundManager.Instance;
 		refAudioSource.volume = data.volume * soundManager.masterVolume * soundManager.SEVolume;
 	}
 	

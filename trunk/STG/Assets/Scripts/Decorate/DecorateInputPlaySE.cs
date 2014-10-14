@@ -17,6 +17,6 @@ public class DecorateInputPlaySE : A_Decorate<A_InputAction>
 	
 	public override void Decorate ()
 	{
-		ReferenceManager.Instance.refSoundManager.Play( label );
+		SoundManager.Instance.Play( label );
 	}
 }

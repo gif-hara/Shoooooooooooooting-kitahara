@@ -52,7 +52,7 @@ public class GameMonoBehaviour : MonoBehaviourExtension
 	{
 		get
 		{
-			return ReferenceManager.refSoundManager;
+			return SoundManager.Instance;
 		}
 	}
 	/// <summary>

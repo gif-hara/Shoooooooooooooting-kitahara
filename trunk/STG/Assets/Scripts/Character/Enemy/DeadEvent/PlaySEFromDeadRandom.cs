@@ -28,6 +28,6 @@ public class PlaySEFromDeadRandom : GameMonoBehaviour, I_DeadEvent
 	public void OnDead()
 	{
 		var label = labels[Random.Range( 0, labels.Count )];
-		ReferenceManager.Instance.refSoundManager.Play( label );
+		SoundManager.Instance.Play( label );
 	}
 }

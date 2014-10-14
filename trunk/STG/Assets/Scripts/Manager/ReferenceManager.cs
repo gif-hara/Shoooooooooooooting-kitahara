@@ -85,12 +85,7 @@ public class ReferenceManager : A_Singleton<ReferenceManager>
 	/// スコア管理者クラス参照.
 	/// </summary>
 	public ScoreManager refScoreManager;
-	
-	/// <summary>
-	/// サウンド管理者クラス参照.
-	/// </summary>
-	public SoundManager refSoundManager;
-	
+
 	/// <summary>
 	/// 当たり判定管理者クラス参照.
 	/// </summary>

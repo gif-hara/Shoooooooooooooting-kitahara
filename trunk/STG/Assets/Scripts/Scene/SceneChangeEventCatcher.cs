@@ -1,6 +1,6 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : StageTimeLinePlayBGM.cs
+*     * FileName    : SceneChangeEventCatcher.cs
 *
 *     * Author      : Hiroki_Kitahara.
 */
@@ -12,19 +12,14 @@ using System.Collections.Generic;
 /// <summary>
 /// .
 /// </summary>
-public class StageTimeLinePlayBGM : A_StageTimeLineActionable
+public class SceneChangeEventCatcher : MonoBehaviour
 {
-	public string label;
+	[SerializeField]
+	private int delay;
 
-	public override void Action ()
+	void OnStartSceneEffect ( SceneManager.EventCatchData data )
 	{
-		SoundManager.Instance.PlayBGM( label );
-	}
-	protected override string GameObjectName
-	{
-		get
-		{
-			return string.Format( "[{0}] PlayBGM", timeLine );
-		}
+		data.Catch();
+		FrameRateUtility.StartCoroutine( delay, () =>{ data.Release(); } );
 	}
 }
