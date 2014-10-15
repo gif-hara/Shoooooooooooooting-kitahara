@@ -14,6 +14,22 @@ using System.Collections.Generic;
 /// </summary>
 public class TitleCommandManager : MonoBehaviour
 {
+	public class DecideEventData
+	{
+		public bool IsLockInput{ private set; get; }
+
+		public void LockInput()
+		{
+			IsLockInput = true;
+		}
+	}
+
+	[SerializeField]
+	private int cursorId;
+
+	[SerializeField]
+	private GameObject refCancelEventObject;
+
 	[SerializeField]
 	private Color defaultColor;
 
@@ -23,7 +39,10 @@ public class TitleCommandManager : MonoBehaviour
 	[SerializeField]
 	private List<TextMesh> refCommandTextList;
 
-	private int cursorId = 0;
+	[SerializeField]
+	private List<GameObject> refDecideEventList;
+	
+	public const string DecideEventMessage = "OnDecideEvent";
 
 	void Start ()
 	{
@@ -49,8 +68,12 @@ public class TitleCommandManager : MonoBehaviour
 		}
 		if( Input.GetKeyDown( KeyCode.Z ) )
 		{
-			SoundManager.Instance.Play( "CursorDecide" );
-			SceneManager.Instance.Change( SceneManager.EffectType.Default, "Main" );
+			DecideEventData data = new DecideEventData();
+			refDecideEventList[cursorId].BroadcastMessage( DecideEventMessage, data );
+		}
+		if( Input.GetKeyDown( KeyCode.X ) )
+		{
+			refCancelEventObject.BroadcastMessage( DecideEventMessage );
 		}
 	}
 

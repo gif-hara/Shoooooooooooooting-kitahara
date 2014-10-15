@@ -56,14 +56,14 @@ public class SceneManager : A_Singleton<SceneManager>
 		base.Awake ();
 	}
 
-	public void Change( EffectType type, string sceneName )
+	public void Change( EffectType startEffectType, EffectType endEffectType, string sceneName )
 	{
-		StartCoroutine( ChangeCoroutine( type, sceneName ) );
+		StartCoroutine( ChangeCoroutine( startEffectType, endEffectType, sceneName ) );
 	}
 
-	private IEnumerator ChangeCoroutine( EffectType type, string sceneName )
+	private IEnumerator ChangeCoroutine( EffectType startEffectType, EffectType endEffectType, string sceneName )
 	{
-		var obj = Instantiate( prefabStartChangeEffectList[(int)type] ) as GameObject;
+		var obj = Instantiate( prefabStartChangeEffectList[(int)startEffectType] ) as GameObject;
 		obj.transform.parent = Trans;
 		EventCatchData data = new EventCatchData();
 		obj.BroadcastMessage( StartEffectMessage, data );
@@ -77,7 +77,7 @@ public class SceneManager : A_Singleton<SceneManager>
 
 		Destroy( obj );
 
-		obj = Instantiate( prefabEndChangeEffectList[(int)type] ) as GameObject;
+		obj = Instantiate( prefabEndChangeEffectList[(int)endEffectType] ) as GameObject;
 		obj.transform.parent = Trans;
 		data = new EventCatchData();
 		obj.BroadcastMessage( StartEffectMessage, data );
