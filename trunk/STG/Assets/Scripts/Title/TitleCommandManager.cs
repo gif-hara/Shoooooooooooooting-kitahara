@@ -18,6 +18,11 @@ public class TitleCommandManager : MonoBehaviour
 	{
 		public bool IsLockInput{ private set; get; }
 
+		public DecideEventData()
+		{
+			IsLockInput = false;
+		}
+
 		public void LockInput()
 		{
 			IsLockInput = true;
@@ -70,6 +75,7 @@ public class TitleCommandManager : MonoBehaviour
 		{
 			DecideEventData data = new DecideEventData();
 			refDecideEventList[cursorId].BroadcastMessage( DecideEventMessage, data );
+			enabled = !data.IsLockInput;
 		}
 		if( Input.GetKeyDown( KeyCode.X ) )
 		{
