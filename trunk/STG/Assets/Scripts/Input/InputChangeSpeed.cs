@@ -1,6 +1,6 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : InputSpeedChange.cs
+*     * FileName    : InputChangeSpeed.cs
 *
 *     * Author      : Hiroki_Kitahara.
 */
@@ -12,7 +12,7 @@ using System.Collections.Generic;
 /// <summary>
 /// .
 /// </summary>
-public class InputSpeedChange : MonoBehaviour
+public class InputChangeSpeed : MonoBehaviour
 {
 	[SerializeField]
 	private ObjectMoveAcceptComponent refObjectMove;
