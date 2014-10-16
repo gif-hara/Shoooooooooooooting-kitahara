@@ -140,6 +140,7 @@ public class DebugManager : A_GUIElement
 		KeyPush( KeyCode.D, () => refPlayerStatusManager.DebugChange( 2 ) );
 		KeyPush( KeyCode.F, () => refPlayerStatusManager.DebugChange( 3 ) );
 		KeyPush( KeyCode.G, () => refPlayerStatusManager.DebugChange( 4 ) );
+		KeyPush( KeyCode.H, () => refPlayerStatusManager.DebugChange( 5 ) );
 	}
 	
 	public override void Draw()
