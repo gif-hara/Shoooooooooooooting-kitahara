@@ -28,4 +28,9 @@ public class SyncRotation : MonoBehaviour
 	{
 		this.cachedTransform.rotation = refTarget.rotation;
 	}
+
+	public void ChangeTarget( Transform target )
+	{
+		refTarget = target;
+	}
 }
