@@ -21,7 +21,7 @@ public class InputSpecialMode : A_InputAction
 	public override void Start()
 	{
 		base.Start();
-		decorateManager = new DecorateManager<A_InputAction>( this );
+		decorateManager = new DecorateManager( Trans );
 	}
 
 	// Update is called once per frame

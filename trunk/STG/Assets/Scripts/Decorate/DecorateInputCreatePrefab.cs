@@ -14,7 +14,7 @@ using System.Collections.Generic;
 /// <summary>
 /// 入力処理によってプレハブを生成するコンポーネント.
 /// </summary>
-public class DecorateInputCreatePrefab : A_Decorate<A_InputAction>
+public class DecorateInputCreatePrefab : A_Decorate
 {
 	[SerializeField]
 	private GameObject refParent;

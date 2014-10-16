@@ -11,14 +11,7 @@ using UnityEngine;
 using System.Collections;
 
 
-public abstract class A_Decorate<T> : MonoBehaviour where T : MonoBehaviour
+public abstract class A_Decorate : MonoBehaviour
 {
-	protected T owner;
-	
-	public void Initialize( T owner )
-	{
-		this.owner = owner;
-	}
-	
 	public abstract void Decorate();
 }

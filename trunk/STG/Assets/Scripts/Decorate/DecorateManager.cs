@@ -12,18 +12,17 @@ using System.Collections;
 using System.Collections.Generic;
 
 
-public class DecorateManager<T> where T : MonoBehaviour
+public class DecorateManager
 {
-	private List<A_Decorate<T>> decorateList;
+	private List<A_Decorate> decorateList;
 	
-	public DecorateManager( T owner )
+	public DecorateManager( Transform owner )
 	{
-		decorateList = new List<A_Decorate<T>>();
+		decorateList = new List<A_Decorate>();
 		
-		var trans = owner.transform;
-		for( int i=0,imax=trans.childCount; i<imax; i++ )
+		for( int i=0,imax=owner.childCount; i<imax; i++ )
 		{
-			var element = trans.GetChild( i ).GetComponent<A_Decorate<T>>();
+			var element = owner.GetChild( i ).GetComponent<A_Decorate>();
 			if( element != null )
 			{
 				decorateList.Add( element );

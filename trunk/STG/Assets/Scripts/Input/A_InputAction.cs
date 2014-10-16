@@ -14,5 +14,5 @@ using System.Collections.Generic;
 
 public abstract class A_InputAction : GameMonoBehaviour
 {
-	protected DecorateManager<A_InputAction> decorateManager;
+	protected DecorateManager decorateManager;
 }

@@ -13,17 +13,17 @@ using System.Collections;
 
 public class PlayerShot : A_Shot
 {
-	private InputShot refInputShot;
+	private PlayerShotFire refPlayerShotFire;
 	
-	public void Initialize( InputShot inputShot, float speed, Transform position, Transform angle )
+	public void Initialize( PlayerShotFire playerShotFire, float speed, Transform position, Transform angle )
 	{
 		base.Initialize( speed, position, angle, 0.0f );
-		this.refInputShot = inputShot;
+		this.refPlayerShotFire = playerShotFire;
 	}
 	
 	void OnDestroy()
 	{
-		refInputShot.Cool();
+		refPlayerShotFire.Cool();
 	}
 	
 	protected override Transform Parent {

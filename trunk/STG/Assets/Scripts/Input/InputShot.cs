@@ -8,11 +8,14 @@
 */
 /*===========================================================================*/
 using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 
 
 public class InputShot : A_InputAction
 {
+	[SerializeField]
+	private List<PlayerShotFire> refPlayerShotFireList;
+
 	/// <summary>
 	/// ショットプレハブ.
 	/// </summary>
@@ -55,35 +58,14 @@ public class InputShot : A_InputAction
 
 	private bool isFire = true;
 	
-	// Use this for initialization
-	public override void Start()
-	{
-		base.Start();
-		decorateManager = new DecorateManager<A_InputAction>( this );
-	}
-
 	// Update is called once per frame
 	public override void Update()
 	{
 		base.Update();
-
-		if( !isFire )	return;
-		
-		if( currentFireNum >= maxFire )	return;
-		
-		int benchMarkId = ScriptProfiler.Begin( this );
-		
-		if( Input.GetKey( KeyCode.Z ) && timer >= interval )
+		if( Input.GetKey( KeyCode.Z ) )
 		{
-			decorateManager.Decorate();
-			timer = 0;
-			GameObject shot = InstantiateAsChild( ReferenceManager.refPlayerShotLayer, prefabShot );
-			shot.AddComponent<PlayerShot>().Initialize( this, speed, refInstancePosition, refShotAngle );
-			currentFireNum++;
+			refPlayerShotFireList.ForEach( p => p.Fire() );
 		}
-		timer++;
-		
-		ScriptProfiler.End( this, benchMarkId );
 	}
 	/// <summary>
 	/// 発射数の減算.

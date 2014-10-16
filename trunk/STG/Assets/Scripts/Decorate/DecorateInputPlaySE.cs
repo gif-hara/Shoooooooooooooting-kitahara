@@ -11,7 +11,7 @@ using UnityEngine;
 using System.Collections;
 
 
-public class DecorateInputPlaySE : A_Decorate<A_InputAction>
+public class DecorateInputPlaySE : A_Decorate
 {
 	public string label;
 	
