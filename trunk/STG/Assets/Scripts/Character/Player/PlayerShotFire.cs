@@ -65,14 +65,16 @@ public class PlayerShotFire : GameMonoBehaviour
 	private bool isFire = true;
 	
 	// Use this for initialization
-	void Start()
+	public override void Start()
 	{
+		base.Start();
 		decorateManager = new DecorateManager( Trans );
 	}
 	
 	// Update is called once per frame
-	void Update()
+	public override void Update()
 	{
+		base.Update();
 		timer++;
 	}
 

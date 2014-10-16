@@ -51,7 +51,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &100006
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
@@ -67,7 +67,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &100008
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
@@ -189,6 +189,7 @@ GameObject:
   - 114: {fileID: 11400006}
   - 114: {fileID: 11400002}
   - 114: {fileID: 11400000}
+  - 114: {fileID: 11400050}
   m_Layer: 0
   m_Name: Input
   m_TagString: Untagged
@@ -339,6 +340,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &100042
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400042}
+  - 114: {fileID: 11400008}
+  m_Layer: 0
+  m_Name: MoveEvent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &400000
 Transform:
   m_ObjectHideFlags: 1
@@ -362,8 +379,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400024}
-  - {fileID: 400006}
-  - {fileID: 400008}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &400004
@@ -390,8 +405,8 @@ Transform:
   m_Children:
   - {fileID: 400036}
   - {fileID: 400010}
-  m_Father: {fileID: 400002}
-  m_RootOrder: 1
+  m_Father: {fileID: 400024}
+  m_RootOrder: 8
 --- !u!4 &400008
 Transform:
   m_ObjectHideFlags: 1
@@ -403,8 +418,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400034}
-  m_Father: {fileID: 400002}
-  m_RootOrder: 2
+  m_Father: {fileID: 400024}
+  m_RootOrder: 9
 --- !u!4 &400010
 Transform:
   m_ObjectHideFlags: 1
@@ -510,6 +525,9 @@ Transform:
   - {fileID: 400020}
   - {fileID: 400026}
   - {fileID: 400000}
+  - {fileID: 400006}
+  - {fileID: 400008}
+  - {fileID: 400042}
   m_Father: {fileID: 400002}
   m_RootOrder: 0
 --- !u!4 &400026
@@ -611,6 +629,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 400024}
   m_RootOrder: 3
+--- !u!4 &400042
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100042}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400024}
+  m_RootOrder: 10
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -622,16 +652,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c9700296bb9df41870993094a701c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cachedTransform: {fileID: 0}
   refPlayerShotFireList:
   - {fileID: 11400046}
   - {fileID: 11400048}
-  prefabShot: {fileID: 100000, guid: d08bf3f855f68fc4b8e8dddb4cb1d522, type: 2}
-  refInstancePosition: {fileID: 400006}
-  refShotAngle: {fileID: 400006}
-  speed: 64
-  interval: 0
-  maxFire: 7
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -673,9 +696,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca1c5adbe07d06946a36b2fb8a713926, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  refObjectMove: {fileID: 11400008}
   refTrans: {fileID: 400002}
-  m_u_normalSpeed: 360
-  m_u_shiftSpeed: 220
+  m_u_normalSpeed: 6
+  m_u_shiftSpeed: 4
+--- !u!114 &11400008
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dd7e5dffc16c364f8e44f45616271f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  refTrans: {fileID: 400002}
+  speed: 6
 --- !u!114 &11400010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -972,6 +1009,20 @@ MonoBehaviour:
   speed: 64
   interval: 0
   maxFire: 7
+--- !u!114 &11400050
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b41d996d3ed76e64085cbe1244273b6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  refObjectMove: {fileID: 11400008}
+  normalSpeed: 6
+  shiftSpeed: 4
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

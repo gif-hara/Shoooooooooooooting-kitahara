@@ -13,6 +13,9 @@ using System.Collections;
 
 public class InputMove : MonoBehaviour
 {
+	[SerializeField]
+	private ObjectMoveAcceptComponent refObjectMove;
+
 	/// <summary>
 	/// 移動させるオブジェクト.
 	/// </summary>
@@ -34,11 +37,30 @@ public class InputMove : MonoBehaviour
 
 	// Update is called once per frame
 	void Update()
-	{		
-		refTrans.localPosition += getFinalVelocity();
-		FixedPosition();
+	{
+		InputArrow();
 	}
-	
+
+	private void InputArrow()
+	{
+		if( Input.GetButton( "Up" ) || Input.GetKey( KeyCode.UpArrow ) )
+		{
+			refObjectMove.Up();
+		}
+		else if( Input.GetButton( "Down" ) || Input.GetKey( KeyCode.DownArrow ) )
+		{
+			refObjectMove.Down();
+		}
+		if( Input.GetButton( "Left" ) || Input.GetKey( KeyCode.LeftArrow ) )
+		{
+			refObjectMove.Left();
+		}
+		else if( Input.GetButton( "Right" ) || Input.GetKey( KeyCode.RightArrow ) )
+		{
+			refObjectMove.Right();
+		}
+	}
+
 	/// <summary>
 	/// キー入力による移動量を返す.
 	/// </summary>
@@ -80,7 +102,7 @@ public class InputMove : MonoBehaviour
 	
 	private Vector3 getFinalVelocity()
 	{
-		return getInputVelocity() * getSpeed() * Time.deltaTime;
+		return getInputVelocity() * getSpeed();
 	}
 	/// <summary>
 	/// 座標の修正.

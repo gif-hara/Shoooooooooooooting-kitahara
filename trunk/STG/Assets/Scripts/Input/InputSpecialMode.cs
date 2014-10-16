@@ -12,22 +12,14 @@ using System.Collections;
 using System.Collections.Generic;
 
 
-public class InputSpecialMode : A_InputAction
+public class InputSpecialMode : MonoBehaviour
 {
 	[SerializeField]
 	private Player refPlayer;
 	
-	// Use this for initialization
-	public override void Start()
-	{
-		base.Start();
-		decorateManager = new DecorateManager( Trans );
-	}
-
 	// Update is called once per frame
-	public override void Update()
+	void Update()
 	{
-		base.Update();
 		UpdateIsValid();
 	}
 	
