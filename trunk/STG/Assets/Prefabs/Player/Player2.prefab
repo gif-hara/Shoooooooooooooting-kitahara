@@ -189,6 +189,7 @@ GameObject:
   - 114: {fileID: 11400006}
   - 114: {fileID: 11400002}
   - 114: {fileID: 11400000}
+  - 114: {fileID: 11400048}
   m_Layer: 0
   m_Name: Input
   m_TagString: Untagged
@@ -318,6 +319,22 @@ GameObject:
   - 4: {fileID: 400038}
   m_Layer: 0
   m_Name: Muzzle1Effect
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100040
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400040}
+  - 114: {fileID: 11400046}
+  m_Layer: 0
+  m_Name: MoveEvent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -493,6 +510,7 @@ Transform:
   - {fileID: 400008}
   - {fileID: 400030}
   - {fileID: 400000}
+  - {fileID: 400040}
   m_Father: {fileID: 400002}
   m_RootOrder: 0
 --- !u!4 &400026
@@ -582,6 +600,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 400024}
   m_RootOrder: 4
+--- !u!4 &400040
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100040}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400024}
+  m_RootOrder: 10
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -593,16 +623,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c9700296bb9df41870993094a701c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cachedTransform: {fileID: 0}
   refPlayerShotFireList:
   - {fileID: 11400044}
   - {fileID: 11400008}
-  prefabShot: {fileID: 100000, guid: d08bf3f855f68fc4b8e8dddb4cb1d522, type: 2}
-  refInstancePosition: {fileID: 400008}
-  refShotAngle: {fileID: 400008}
-  speed: 64
-  interval: 0
-  maxFire: 7
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -614,7 +637,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 531e29c3da80d1540a83d93e81acd4cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cachedTransform: {fileID: 0}
   refPlayer: {fileID: 11400012}
 --- !u!114 &11400004
 MonoBehaviour:
@@ -644,6 +666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca1c5adbe07d06946a36b2fb8a713926, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  refObjectMove: {fileID: 11400046}
   refTrans: {fileID: 400002}
   m_u_normalSpeed: 420
   m_u_shiftSpeed: 260
@@ -928,6 +951,33 @@ MonoBehaviour:
   speed: 64
   interval: 0
   maxFire: 7
+--- !u!114 &11400046
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dd7e5dffc16c364f8e44f45616271f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  refTrans: {fileID: 400002}
+  speed: 0
+--- !u!114 &11400048
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b41d996d3ed76e64085cbe1244273b6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  refObjectMove: {fileID: 11400046}
+  normalSpeed: 6.5
+  shiftSpeed: 4
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
