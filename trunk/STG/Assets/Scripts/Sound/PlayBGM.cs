@@ -1,6 +1,6 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : SingletonSystemCreator.cs
+*     * FileName    : PlayBGM.cs
 *
 *     * Author      : Hiroki_Kitahara.
 */
@@ -12,19 +12,13 @@ using System.Collections.Generic;
 /// <summary>
 /// .
 /// </summary>
-public class SingletonSystemCreator : MonoBehaviour
+public class PlayBGM : MonoBehaviour
 {
 	[SerializeField]
-	private GameObject prefabDontDestroyObject;
+	private string label;
 
-	private static bool isCreate = false;
-
-	void Awake()
+	void Start ()
 	{
-		if( isCreate )	return;
-
-		isCreate = true;
-		var obj = Instantiate( prefabDontDestroyObject );
-		DontDestroyOnLoad( obj );
+		SoundManager.Instance.PlayBGM( label );
 	}
 }

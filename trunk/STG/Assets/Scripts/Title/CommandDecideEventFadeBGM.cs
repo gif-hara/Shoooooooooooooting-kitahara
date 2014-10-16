@@ -1,6 +1,6 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : SingletonSystemCreator.cs
+*     * FileName    : CommandDecideEventFadeBGM.cs
 *
 *     * Author      : Hiroki_Kitahara.
 */
@@ -12,19 +12,19 @@ using System.Collections.Generic;
 /// <summary>
 /// .
 /// </summary>
-public class SingletonSystemCreator : MonoBehaviour
+public class CommandDecideEventFadeBGM : MonoBehaviour
 {
 	[SerializeField]
-	private GameObject prefabDontDestroyObject;
-
-	private static bool isCreate = false;
-
-	void Awake()
+	private float volumeFrom;
+	
+	[SerializeField]
+	private float volumeTo;
+	
+	[SerializeField]
+	private int duration;
+	
+	void OnDecideEvent()
 	{
-		if( isCreate )	return;
-
-		isCreate = true;
-		var obj = Instantiate( prefabDontDestroyObject );
-		DontDestroyOnLoad( obj );
+		SoundManager.Instance.FadeBGM( volumeFrom, volumeTo, duration );
 	}
 }

@@ -2397,6 +2397,7 @@ GameObject:
   - 114: {fileID: 875354351}
   - 114: {fileID: 875354350}
   - 114: {fileID: 875354349}
+  - 114: {fileID: 875354352}
   m_Layer: 0
   m_Name: Event
   m_TagString: Untagged
@@ -2454,6 +2455,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   label: CursorDecide
+--- !u!114 &875354352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 875354347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f85762de28bfaec478edb1e5d0db3612, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeFrom: 1
+  volumeTo: 0
+  duration: 30
 --- !u!1 &887481281
 GameObject:
   m_ObjectHideFlags: 0
@@ -3727,6 +3742,7 @@ GameObject:
   - 114: {fileID: 1535802237}
   - 114: {fileID: 1535802236}
   - 114: {fileID: 1535802235}
+  - 114: {fileID: 1535802238}
   m_Layer: 0
   m_Name: Event
   m_TagString: Untagged
@@ -3784,6 +3800,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   label: CursorDecide
+--- !u!114 &1535802238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1535802233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f85762de28bfaec478edb1e5d0db3612, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeFrom: 1
+  volumeTo: 0
+  duration: 30
 --- !u!1 &1550256522
 GameObject:
   m_ObjectHideFlags: 0
@@ -4466,8 +4496,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 1698859734}
   - 114: {fileID: 1698859735}
+  - 114: {fileID: 1698859736}
   m_Layer: 0
-  m_Name: FirstFadeEvent
+  m_Name: StartEvent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4501,6 +4532,18 @@ MonoBehaviour:
   from: {r: 0, g: 0, b: 0, a: 1}
   to: {r: 0, g: 0, b: 0, a: 0}
   duration: 60
+--- !u!114 &1698859736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1698859733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51ce92bc0c3514b46a5d34517af1bc29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  label: Title
 --- !u!1 &1721418602
 GameObject:
   m_ObjectHideFlags: 0
@@ -4512,6 +4555,7 @@ GameObject:
   - 114: {fileID: 1721418606}
   - 114: {fileID: 1721418605}
   - 114: {fileID: 1721418604}
+  - 114: {fileID: 1721418607}
   m_Layer: 0
   m_Name: Event
   m_TagString: Untagged
@@ -4569,6 +4613,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   label: CursorDecide
+--- !u!114 &1721418607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1721418602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f85762de28bfaec478edb1e5d0db3612, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeFrom: 1
+  volumeTo: 0
+  duration: 30
 --- !u!1 &1736498736
 GameObject:
   m_ObjectHideFlags: 0
@@ -5329,6 +5387,7 @@ GameObject:
   - 114: {fileID: 2077896536}
   - 114: {fileID: 2077896535}
   - 114: {fileID: 2077896534}
+  - 114: {fileID: 2077896537}
   m_Layer: 0
   m_Name: Event
   m_TagString: Untagged
@@ -5386,6 +5445,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   label: CursorDecide
+--- !u!114 &2077896537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2077896532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f85762de28bfaec478edb1e5d0db3612, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeFrom: 1
+  volumeTo: 0
+  duration: 30
 --- !u!1 &2122912383
 GameObject:
   m_ObjectHideFlags: 0
