@@ -57,7 +57,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400006}
-  - 114: {fileID: 11400000}
+  - 114: {fileID: 11400044}
   m_Layer: 0
   m_Name: Muzzle0
   m_TagString: Untagged
@@ -188,6 +188,7 @@ GameObject:
   - 4: {fileID: 400022}
   - 114: {fileID: 11400006}
   - 114: {fileID: 11400002}
+  - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: Input
   m_TagString: Untagged
@@ -586,16 +587,19 @@ MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100006}
+  m_GameObject: {fileID: 100022}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4c9700296bb9df41870993094a701c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
+  refPlayerShotFireList:
+  - {fileID: 11400044}
+  - {fileID: 11400008}
   prefabShot: {fileID: 100000, guid: d08bf3f855f68fc4b8e8dddb4cb1d522, type: 2}
-  refInstancePosition: {fileID: 400006}
-  refShotAngle: {fileID: 400006}
+  refInstancePosition: {fileID: 400008}
+  refShotAngle: {fileID: 400008}
   speed: 64
   interval: 0
   maxFire: 7
@@ -651,7 +655,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 100008}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4c9700296bb9df41870993094a701c1, type: 3}
+  m_Script: {fileID: 11500000, guid: b43f22b7de46c92438dab10f4153472b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
@@ -906,6 +910,24 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   refPlayer: {fileID: 11400012}
   refInputSpecialMode: {fileID: 11400002}
+--- !u!114 &11400044
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b43f22b7de46c92438dab10f4153472b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  prefabShot: {fileID: 100000, guid: d08bf3f855f68fc4b8e8dddb4cb1d522, type: 2}
+  refInstancePosition: {fileID: 400006}
+  refShotAngle: {fileID: 400006}
+  speed: 64
+  interval: 0
+  maxFire: 7
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
