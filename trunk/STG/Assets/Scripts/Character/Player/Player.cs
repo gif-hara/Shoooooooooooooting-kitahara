@@ -56,13 +56,6 @@ public class Player : GameMonoBehaviour
 			ReferenceManager.Player = this;
 		}
 	}
-	
-//	public override void Start()
-//	{
-//		base.Start();
-//		Relocation();
-//	}
-
 	// Update is called once per frame
 	public override void Update()
 	{
@@ -70,6 +63,11 @@ public class Player : GameMonoBehaviour
 		invincibleTime--;
 		
 		UpdateDebug();
+	}
+
+	void OnGameMode()
+	{
+		Relocation();
 	}
 	/// <summary>
 	/// SPモードの開始処理.

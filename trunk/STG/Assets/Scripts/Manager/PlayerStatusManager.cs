@@ -41,7 +41,10 @@ public class PlayerStatusManager : GameMonoBehaviour
 	public float SpecialPoint{ get{ return specialPoint; } }
 	[SerializeField]
 	private float specialPoint;
-	
+
+	[SerializeField]
+	private PlayerCreator refPlayerCreator;
+
 	/// <summary>
 	/// エクステンドするために必要なスコアリスト.
 	/// </summary>
@@ -53,13 +56,7 @@ public class PlayerStatusManager : GameMonoBehaviour
 	/// ulongをシリアライズ出来ないので文字列からパース.
 	/// </summary>
 	private List<ulong> extendScoreList;
-
-	/// <summary>
-	/// プレイヤープレハブリスト.
-	/// </summary>
-	[SerializeField]
-	private List<GameObject> prefabPlayerList;
-
+	
 	[SerializeField]
 	private float addSpecialPointGrazeMin;
 	
@@ -92,6 +89,8 @@ public class PlayerStatusManager : GameMonoBehaviour
 
 	public override void Awake ()
 	{
+		PlayerId = GameStatusInterfacer.PlayerId;
+
 		InitializeExtendScoreList();
 		CreatePlayer();
 	}
@@ -192,7 +191,8 @@ public class PlayerStatusManager : GameMonoBehaviour
 		{
 			Destroy( ReferenceManager.Player.gameObject );
 		}
-		InstantiateAsChild( ReferenceManager.refPlayerLayer, prefabPlayerList[playerId] );
+
+		refPlayerCreator.OnCreate( PlayerId );
 	}
 
 	private float AddSpecialPointGraze

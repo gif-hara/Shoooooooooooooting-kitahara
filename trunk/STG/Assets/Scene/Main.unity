@@ -3397,6 +3397,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 674983956}
   - 114: {fileID: 674983957}
+  - 114: {fileID: 674983958}
   m_Layer: 0
   m_Name: PlayerStatusManager
   m_TagString: Untagged
@@ -3431,17 +3432,11 @@ MonoBehaviour:
   playerId: 0
   life: 3
   specialPoint: 0
+  refPlayerCreator: {fileID: 674983958}
   extendScoreStringList:
   - 5000000
   - 50000000
   - 100000000
-  prefabPlayerList:
-  - {fileID: 100002, guid: 0df227c9caa12144aa69b95348366dbb, type: 2}
-  - {fileID: 100002, guid: e241a67a001f35d4699caf45f226af27, type: 2}
-  - {fileID: 100002, guid: ba78d4a89cd0dc04d975d3f00a0e6a6a, type: 2}
-  - {fileID: 100002, guid: fca758a3f6c6bd141b9517b00f96d1d8, type: 2}
-  - {fileID: 100002, guid: c280c2720f1944f41910b5460571a252, type: 2}
-  - {fileID: 100026, guid: 46b0a900dca72174ea1ee9cb400a8ab3, type: 2}
   addSpecialPointGrazeMin: .800000012
   addSpecialPointGrazeMax: .200000003
   addSpecialPointGrazeCurve:
@@ -3459,6 +3454,25 @@ MonoBehaviour:
       tangentMode: 10
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!114 &674983958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 674983955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cddc77d747af4b42bc24cd5cd5c619e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  createdMessage: OnGameMode
+  prefabPlayerList:
+  - {fileID: 11400012, guid: 0df227c9caa12144aa69b95348366dbb, type: 2}
+  - {fileID: 11400012, guid: e241a67a001f35d4699caf45f226af27, type: 2}
+  - {fileID: 11400012, guid: ba78d4a89cd0dc04d975d3f00a0e6a6a, type: 2}
+  - {fileID: 11400012, guid: fca758a3f6c6bd141b9517b00f96d1d8, type: 2}
+  - {fileID: 11400012, guid: c280c2720f1944f41910b5460571a252, type: 2}
+  - {fileID: 11400018, guid: 46b0a900dca72174ea1ee9cb400a8ab3, type: 2}
 --- !u!1 &739179614
 GameObject:
   m_ObjectHideFlags: 0
