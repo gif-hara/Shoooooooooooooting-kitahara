@@ -22,6 +22,8 @@ public class SetParentInLayer : GameMonoBehaviour
 
 	public override void Start ()
 	{
+		if( ReferenceManager == null )	return;
+
 		refTarget.parent = ReferenceManager.GetLayerObject( layerType ).transform;
 	}
 }

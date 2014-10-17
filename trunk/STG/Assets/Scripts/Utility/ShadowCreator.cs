@@ -24,6 +24,8 @@ public class ShadowCreator : GameMonoBehaviour
 
 	public override void Start ()
 	{
+		if( ReferenceManager == null )	return;
+
 		base.Start ();
 		InitShadowManager();
 		var shadow = InstantiateAsChild( ReferenceManager.Instance.refEffectLayer, shadowManager.PrefabShadow.gameObject ).GetComponent<Shadow>();

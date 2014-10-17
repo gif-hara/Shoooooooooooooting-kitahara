@@ -399,6 +399,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &100050
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400050}
+  - 114: {fileID: 11400050}
+  m_Layer: 0
+  m_Name: PlayerSelectModeEvent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &100058
 GameObject:
   m_ObjectHideFlags: 1
@@ -593,6 +609,7 @@ Transform:
   - {fileID: 400010}
   - {fileID: 400028}
   - {fileID: 400060}
+  - {fileID: 400050}
   m_Father: {fileID: 400026}
   m_RootOrder: 0
 --- !u!4 &400026
@@ -740,6 +757,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 400058}
   m_RootOrder: 5
+--- !u!4 &400050
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100050}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400024}
+  m_RootOrder: 8
 --- !u!4 &400058
 Transform:
   m_ObjectHideFlags: 1
@@ -1154,6 +1183,21 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   refChaseObject: {fileID: 400036}
   speed: .200000003
+--- !u!114 &11400050
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100050}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5a1a7025477b574b83f5a7a0ff3ec21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0
+  refShotFireList:
+  - {fileID: 11400024}
+  - {fileID: 11400022}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

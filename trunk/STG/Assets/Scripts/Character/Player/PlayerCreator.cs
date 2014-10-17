@@ -22,7 +22,7 @@ public class PlayerCreator : MonoBehaviour
 
 	private GameObject currentPlayer;
 
-	void OnCreate( int id )
+	public void OnCreate( int id )
 	{
 		Destroy( currentPlayer );
 

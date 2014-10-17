@@ -24,7 +24,10 @@ public abstract class A_Shot : GameMonoBehaviour
 	}
 	public void Initialize( float speed, Transform position, Transform angle, float fixedAngle )
 	{
-		transform.parent = Parent;
+		if( ReferenceManager != null )
+		{
+			transform.parent = Parent;
+		}
 		PositionX = position.position.x;
 		PositionY = position.position.y;
 		LocalPositionZ = 0.0f;

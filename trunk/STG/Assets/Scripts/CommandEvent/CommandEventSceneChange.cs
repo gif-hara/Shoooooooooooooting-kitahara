@@ -1,6 +1,6 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : CommandDecideEventSceneChange.cs
+*     * FileName    : CommandEventSceneChange.cs
 *
 *     * Author      : Hiroki_Kitahara.
 */
@@ -12,7 +12,7 @@ using System.Collections.Generic;
 /// <summary>
 /// .
 /// </summary>
-public class CommandDecideEventSceneChange : MonoBehaviour
+public class CommandEventSceneChange : MonoBehaviour
 {
 	[SerializeField]
 	private SceneManager.EffectType startEffectType;

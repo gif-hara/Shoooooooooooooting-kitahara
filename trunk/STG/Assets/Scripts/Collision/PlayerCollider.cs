@@ -20,7 +20,12 @@ public class PlayerCollider : A_Collider
 	public override void Awake()
 	{
 		base.Awake();
-		ReferenceManager.refCollisionManager.AddPlayerCollider( this );
+
+		if( ReferenceManager != null )
+		{
+			ReferenceManager.refCollisionManager.AddPlayerCollider( this );
+		}
+
 		InstantiateAsChild( transform, prefabCollisionEffect );
 	}
 	public override void OnCollision (A_Collider target)

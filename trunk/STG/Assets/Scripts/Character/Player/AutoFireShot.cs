@@ -1,6 +1,6 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : CommandDecideEventGameObjectEnableSetter.cs
+*     * FileName    : AutoFireShot.cs
 *
 *     * Author      : Hiroki_Kitahara.
 */
@@ -12,16 +12,30 @@ using System.Collections.Generic;
 /// <summary>
 /// .
 /// </summary>
-public class CommandDecideEventGameObjectEnableSetter : MonoBehaviour
+public class AutoFireShot : MonoBehaviour
 {
 	[SerializeField]
-	private GameObject refTarget;
+	private int delay;
 
 	[SerializeField]
-	private bool isActive;
+	private List<PlayerShotFire> refShotFireList;
 
-	void OnCommandEvent()
+	void Update()
 	{
-		refTarget.SetActive( isActive );
+		if( delay > 0 )
+		{
+			delay--;
+			return;
+		}
+
+		refShotFireList.ForEach( s =>
+		{
+			s.Fire();
+		});
+	}
+
+	void OnPlayerSelectMode()
+	{
+		enabled = true;
 	}
 }

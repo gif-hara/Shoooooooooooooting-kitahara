@@ -1,6 +1,6 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : CommandDecideEventFadeBGM.cs
+*     * FileName    : CommandEventFadeBGM.cs
 *
 *     * Author      : Hiroki_Kitahara.
 */
@@ -12,7 +12,7 @@ using System.Collections.Generic;
 /// <summary>
 /// .
 /// </summary>
-public class CommandDecideEventFadeBGM : MonoBehaviour
+public class CommandEventFadeBGM : MonoBehaviour
 {
 	[SerializeField]
 	private float volumeFrom;

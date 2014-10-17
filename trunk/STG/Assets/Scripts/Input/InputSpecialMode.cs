@@ -22,7 +22,12 @@ public class InputSpecialMode : MonoBehaviour
 	{
 		UpdateIsValid();
 	}
-	
+
+	void OnPlayerSelectMode()
+	{
+		enabled = false;
+	}
+
 	private void UpdateIsValid()
 	{
 		if( Input.GetKeyDown( KeyCode.X ) )

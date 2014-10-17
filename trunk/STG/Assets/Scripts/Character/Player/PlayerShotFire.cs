@@ -86,7 +86,7 @@ public class PlayerShotFire : GameMonoBehaviour
 
 		decorateManager.Decorate();
 		timer = 0;
-		GameObject shot = this.InstantiateAsChild( ReferenceManager.refPlayerShotLayer, prefabShot );
+		GameObject shot = Instantiate( prefabShot ) as GameObject;
 		shot.AddComponent<PlayerShot>().Initialize( this, speed, refInstancePosition, refShotAngle );
 		currentFireNum++;
 	}

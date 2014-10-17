@@ -47,6 +47,9 @@ public class PlayerShotCollider : A_Collider
 	public override void Awake()
 	{
 		base.Awake();
+
+		if( ReferenceManager == null )	return;
+
 		ReferenceManager.refCollisionManager.AddPlayerShotCollider( this );
 	}
 	

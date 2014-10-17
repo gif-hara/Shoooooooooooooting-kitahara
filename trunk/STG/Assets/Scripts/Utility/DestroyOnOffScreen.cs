@@ -54,10 +54,10 @@ public class DestroyOnOffScreen : GameMonoBehaviour
 		base.Update();
 
 		var fixedBounds = new Rect(
-			Trans.localPosition.x + bounds.x,
-			Trans.localPosition.y + bounds.y,
-			Trans.localPosition.x + bounds.width,
-			Trans.localPosition.y + bounds.height
+			Trans.position.x + bounds.x,
+			Trans.position.y + bounds.y,
+			Trans.position.x + bounds.width,
+			Trans.position.y + bounds.height
 			);
 
 		var range = GameDefine.Screen;

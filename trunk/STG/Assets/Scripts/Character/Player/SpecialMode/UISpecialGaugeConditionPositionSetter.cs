@@ -12,6 +12,8 @@ public class UISpecialGaugeConditionPositionSetter : GameMonoBehaviour
 	// Use this for initialization
 	public override void Start ()
 	{
+		if( ReferenceManager == null )	return;
+
 		ReferenceManager.Instance.refUILayer.BroadcastMessage ( GameDefine.ModifiedNeedSpecialGaugeMessage, refPlayer.PrefabSpecialModeContent.NeedPoint );
 	}
 }

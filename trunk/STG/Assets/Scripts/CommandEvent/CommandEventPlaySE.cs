@@ -1,6 +1,6 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : CommandDecideEventPlayerIdSetter.cs
+*     * FileName    : CommandEventPlaySE.cs
 *
 *     * Author      : Hiroki_Kitahara.
 */
@@ -12,13 +12,13 @@ using System.Collections.Generic;
 /// <summary>
 /// .
 /// </summary>
-public class CommandDecideEventPlayerIdSetter : MonoBehaviour
+public class CommandEventPlaySE : MonoBehaviour
 {
 	[SerializeField]
-	private int playerId;
+	private string label;
 
 	void OnCommandEvent()
 	{
-		GameStatusInterfacer.PlayerId = playerId;
+		SoundManager.Instance.Play( label );
 	}
 }

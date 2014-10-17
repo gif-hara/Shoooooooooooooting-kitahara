@@ -1,6 +1,6 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : CommandDecideEventPlaySE.cs
+*     * FileName    : CommandEventPlaySECondition.cs
 *
 *     * Author      : Hiroki_Kitahara.
 */
@@ -12,7 +12,7 @@ using System.Collections.Generic;
 /// <summary>
 /// .
 /// </summary>
-public class CommandDecideEventPlaySECondition : MonoBehaviour
+public class CommandEventPlaySECondition : MonoBehaviour
 {
 	[SerializeField]
 	private string successLabel;

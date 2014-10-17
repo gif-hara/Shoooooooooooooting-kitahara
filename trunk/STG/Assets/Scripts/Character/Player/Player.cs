@@ -50,14 +50,18 @@ public class Player : GameMonoBehaviour
 	public override void Awake()
 	{
 		base.Awake();
-		ReferenceManager.Player = this;
+
+		if( ReferenceManager != null )
+		{
+			ReferenceManager.Player = this;
+		}
 	}
 	
-	public override void Start()
-	{
-		base.Start();
-		Relocation();
-	}
+//	public override void Start()
+//	{
+//		base.Start();
+//		Relocation();
+//	}
 
 	// Update is called once per frame
 	public override void Update()

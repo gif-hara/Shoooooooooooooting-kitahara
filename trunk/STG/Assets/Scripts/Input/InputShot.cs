@@ -23,4 +23,9 @@ public class InputShot : MonoBehaviour
 
 		refPlayerShotFireList.ForEach( p => p.Fire() );
 	}
+
+	void OnPlayerSelectMode()
+	{
+		enabled = false;
+	}
 }

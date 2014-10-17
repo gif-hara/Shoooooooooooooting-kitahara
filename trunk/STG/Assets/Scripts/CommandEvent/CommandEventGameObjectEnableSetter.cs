@@ -1,6 +1,6 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : CommandDecideEventDifficultySetter.cs
+*     * FileName    : CommandEventGameObjectEnableSetter.cs
 *
 *     * Author      : Hiroki_Kitahara.
 */
@@ -12,13 +12,16 @@ using System.Collections.Generic;
 /// <summary>
 /// .
 /// </summary>
-public class CommandDecideEventDifficultySetter : MonoBehaviour
+public class CommandEventGameObjectEnableSetter : MonoBehaviour
 {
 	[SerializeField]
-	private GameDefine.DifficultyType type;
+	private GameObject refTarget;
+
+	[SerializeField]
+	private bool isActive;
 
 	void OnCommandEvent()
 	{
-		GameStatusInterfacer.Difficulty = type;
+		refTarget.SetActive( isActive );
 	}
 }

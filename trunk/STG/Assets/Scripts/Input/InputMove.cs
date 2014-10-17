@@ -22,6 +22,11 @@ public class InputMove : MonoBehaviour
 		InputArrow();
 	}
 
+	void OnPlayerSelectMode()
+	{
+		enabled = false;
+	}
+
 	private void InputArrow()
 	{
 		if( Input.GetButton( "Up" ) || Input.GetKey( KeyCode.UpArrow ) )

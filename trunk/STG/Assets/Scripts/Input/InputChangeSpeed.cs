@@ -28,6 +28,11 @@ public class InputChangeSpeed : MonoBehaviour
 		InputShift();
 	}
 
+	void OnPlayerSelectMode()
+	{
+		enabled = false;
+	}
+
 	private void InputShift()
 	{
 		if( Input.GetKey( KeyCode.LeftShift ) )

@@ -1,6 +1,6 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : CommandDecideEventPlaySE.cs
+*     * FileName    : CommandEventPlayerCreator.cs
 *
 *     * Author      : Hiroki_Kitahara.
 */
@@ -12,13 +12,16 @@ using System.Collections.Generic;
 /// <summary>
 /// .
 /// </summary>
-public class CommandDecideEventPlaySE : MonoBehaviour
+public class CommandEventPlayerCreator : MonoBehaviour
 {
 	[SerializeField]
-	private string label;
+	private PlayerCreator refPlayerCreator;
+
+	[SerializeField]
+	private int playerId;
 
 	void OnCommandEvent()
 	{
-		SoundManager.Instance.Play( label );
+		refPlayerCreator.OnCreate( playerId );
 	}
 }
