@@ -425,6 +425,31 @@ MonoBehaviour:
   refCancelEventObject: {fileID: 1770624025}
   defaultColor: {r: 1, g: 1, b: 1, a: 1}
   selectColor: {r: 1, g: 0, b: 0, a: 1}
+  refInputEventList:
+  - refCommandTextMesh: {fileID: 1864733940}
+    refSelectEvent: {fileID: 0}
+    refDecideEvent: {fileID: 1879173302}
+  - refCommandTextMesh: {fileID: 478132986}
+    refSelectEvent: {fileID: 0}
+    refDecideEvent: {fileID: 907938070}
+  - refCommandTextMesh: {fileID: 1919019066}
+    refSelectEvent: {fileID: 0}
+    refDecideEvent: {fileID: 160302201}
+  - refCommandTextMesh: {fileID: 354422793}
+    refSelectEvent: {fileID: 0}
+    refDecideEvent: {fileID: 1104876671}
+  - refCommandTextMesh: {fileID: 226491958}
+    refSelectEvent: {fileID: 0}
+    refDecideEvent: {fileID: 1310252771}
+  - refCommandTextMesh: {fileID: 20414796}
+    refSelectEvent: {fileID: 0}
+    refDecideEvent: {fileID: 1228682365}
+  - refCommandTextMesh: {fileID: 1575438373}
+    refSelectEvent: {fileID: 0}
+    refDecideEvent: {fileID: 680905900}
+  - refCommandTextMesh: {fileID: 1296138054}
+    refSelectEvent: {fileID: 0}
+    refDecideEvent: {fileID: 820532181}
   refCommandTextList:
   - {fileID: 1864733940}
   - {fileID: 478132986}
@@ -454,7 +479,7 @@ GameObject:
   - 114: {fileID: 160302204}
   - 114: {fileID: 160302203}
   m_Layer: 0
-  m_Name: Event
+  m_Name: DecideEvent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1117,6 +1142,19 @@ MonoBehaviour:
   refCancelEventObject: {fileID: 640266715}
   defaultColor: {r: 1, g: 1, b: 1, a: 1}
   selectColor: {r: 1, g: 0, b: 0, a: 1}
+  refInputEventList:
+  - refCommandTextMesh: {fileID: 825997836}
+    refSelectEvent: {fileID: 0}
+    refDecideEvent: {fileID: 1535802233}
+  - refCommandTextMesh: {fileID: 1340611075}
+    refSelectEvent: {fileID: 0}
+    refDecideEvent: {fileID: 2077896532}
+  - refCommandTextMesh: {fileID: 253060435}
+    refSelectEvent: {fileID: 0}
+    refDecideEvent: {fileID: 875354347}
+  - refCommandTextMesh: {fileID: 819994232}
+    refSelectEvent: {fileID: 0}
+    refDecideEvent: {fileID: 1721418602}
   refCommandTextList:
   - {fileID: 825997836}
   - {fileID: 1340611075}
@@ -1844,7 +1882,7 @@ GameObject:
   - 4: {fileID: 680905901}
   - 114: {fileID: 680905902}
   m_Layer: 0
-  m_Name: Event
+  m_Name: DecideEvent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2157,7 +2195,7 @@ GameObject:
   - 4: {fileID: 820532182}
   - 114: {fileID: 820532183}
   m_Layer: 0
-  m_Name: Event
+  m_Name: DecideEvent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2399,7 +2437,7 @@ GameObject:
   - 114: {fileID: 875354349}
   - 114: {fileID: 875354352}
   m_Layer: 0
-  m_Name: Event
+  m_Name: DecideEvent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2430,7 +2468,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startEffectType: 0
   endEffectType: 0
-  sceneName: Main
+  sceneName: PlayerSelect
 --- !u!114 &875354350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2594,7 +2632,7 @@ GameObject:
   - 114: {fileID: 907938072}
   - 114: {fileID: 907938073}
   m_Layer: 0
-  m_Name: Event
+  m_Name: DecideEvent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2719,7 +2757,7 @@ GameObject:
   - 4: {fileID: 1104876672}
   - 114: {fileID: 1104876673}
   m_Layer: 0
-  m_Name: Event
+  m_Name: DecideEvent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3084,7 +3122,7 @@ GameObject:
   - 4: {fileID: 1228682366}
   - 114: {fileID: 1228682367}
   m_Layer: 0
-  m_Name: Event
+  m_Name: DecideEvent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3352,7 +3390,7 @@ GameObject:
   - 4: {fileID: 1310252772}
   - 114: {fileID: 1310252773}
   m_Layer: 0
-  m_Name: Event
+  m_Name: DecideEvent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3744,7 +3782,7 @@ GameObject:
   - 114: {fileID: 1535802235}
   - 114: {fileID: 1535802238}
   m_Layer: 0
-  m_Name: Event
+  m_Name: DecideEvent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3775,7 +3813,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startEffectType: 0
   endEffectType: 0
-  sceneName: Main
+  sceneName: PlayerSelect
 --- !u!114 &1535802236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4557,7 +4595,7 @@ GameObject:
   - 114: {fileID: 1721418604}
   - 114: {fileID: 1721418607}
   m_Layer: 0
-  m_Name: Event
+  m_Name: DecideEvent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4588,7 +4626,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startEffectType: 0
   endEffectType: 0
-  sceneName: Main
+  sceneName: PlayerSelect
 --- !u!114 &1721418605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5030,7 +5068,7 @@ GameObject:
   - 114: {fileID: 1879173306}
   - 114: {fileID: 1879173305}
   m_Layer: 0
-  m_Name: Event
+  m_Name: DecideEvent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5389,7 +5427,7 @@ GameObject:
   - 114: {fileID: 2077896534}
   - 114: {fileID: 2077896537}
   m_Layer: 0
-  m_Name: Event
+  m_Name: DecideEvent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5420,7 +5458,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startEffectType: 0
   endEffectType: 0
-  sceneName: Main
+  sceneName: PlayerSelect
 --- !u!114 &2077896535
 MonoBehaviour:
   m_ObjectHideFlags: 0

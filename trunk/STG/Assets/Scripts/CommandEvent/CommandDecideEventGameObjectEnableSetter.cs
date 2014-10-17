@@ -1,6 +1,6 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : CommandDecideEventPlaySE.cs
+*     * FileName    : CommandDecideEventGameObjectEnableSetter.cs
 *
 *     * Author      : Hiroki_Kitahara.
 */
@@ -12,13 +12,16 @@ using System.Collections.Generic;
 /// <summary>
 /// .
 /// </summary>
-public class CommandDecideEventPlaySE : MonoBehaviour
+public class CommandDecideEventGameObjectEnableSetter : MonoBehaviour
 {
 	[SerializeField]
-	private string label;
+	private GameObject refTarget;
 
-	void OnDecideEvent()
+	[SerializeField]
+	private bool isActive;
+
+	void OnCommandEvent()
 	{
-		SoundManager.Instance.Play( label );
+		refTarget.SetActive( isActive );
 	}
 }

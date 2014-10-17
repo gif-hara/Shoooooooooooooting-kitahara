@@ -1,6 +1,6 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : CommandDecideEventFadeBGM.cs
+*     * FileName    : CommandDecideEventPlayerIdSetter.cs
 *
 *     * Author      : Hiroki_Kitahara.
 */
@@ -12,19 +12,13 @@ using System.Collections.Generic;
 /// <summary>
 /// .
 /// </summary>
-public class CommandDecideEventFadeBGM : MonoBehaviour
+public class CommandDecideEventPlayerIdSetter : MonoBehaviour
 {
 	[SerializeField]
-	private float volumeFrom;
-	
-	[SerializeField]
-	private float volumeTo;
-	
-	[SerializeField]
-	private int duration;
-	
-	void OnDecideEvent()
+	private int playerId;
+
+	void OnCommandEvent()
 	{
-		SoundManager.Instance.FadeBGM( volumeFrom, volumeTo, duration );
+		GameStatusInterfacer.PlayerId = playerId;
 	}
 }

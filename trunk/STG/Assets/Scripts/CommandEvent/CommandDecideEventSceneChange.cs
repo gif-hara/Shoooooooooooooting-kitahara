@@ -23,7 +23,7 @@ public class CommandDecideEventSceneChange : MonoBehaviour
 	[SerializeField]
 	private string sceneName;
 
-	void OnDecideEvent( TitleCommandManager.DecideEventData data )
+	void OnCommandEvent( CommandManager.CommandEventData data )
 	{
 		data.LockInput();
 		SceneManager.Instance.Change( startEffectType, endEffectType, sceneName );

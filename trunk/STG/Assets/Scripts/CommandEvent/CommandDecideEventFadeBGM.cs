@@ -1,6 +1,6 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : CommandDecideEventDifficultySetter.cs
+*     * FileName    : CommandDecideEventFadeBGM.cs
 *
 *     * Author      : Hiroki_Kitahara.
 */
@@ -12,13 +12,19 @@ using System.Collections.Generic;
 /// <summary>
 /// .
 /// </summary>
-public class CommandDecideEventDifficultySetter : MonoBehaviour
+public class CommandDecideEventFadeBGM : MonoBehaviour
 {
 	[SerializeField]
-	private GameDefine.DifficultyType type;
-
-	void OnDecideEvent()
+	private float volumeFrom;
+	
+	[SerializeField]
+	private float volumeTo;
+	
+	[SerializeField]
+	private int duration;
+	
+	void OnCommandEvent()
 	{
-		GameStatusInterfacer.Difficulty = type;
+		SoundManager.Instance.FadeBGM( volumeFrom, volumeTo, duration );
 	}
 }

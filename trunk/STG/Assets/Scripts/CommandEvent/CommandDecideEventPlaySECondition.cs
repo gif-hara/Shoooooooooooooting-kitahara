@@ -23,7 +23,7 @@ public class CommandDecideEventPlaySECondition : MonoBehaviour
 	[SerializeField]
 	private GameObject refConditionObject;
 		
-	void OnDecideEvent()
+	void OnCommandEvent()
 	{
 		var holder = new ConditionHolder();
 		refConditionObject.SendMessage( ConditionHolder.ConditionMessage, holder );
