@@ -95,6 +95,8 @@ public class SoundManager : A_Singleton<SoundManager>
 	
 	private List<SoundEntityData> entityDataList = new List<SoundEntityData>();
 
+	private bool isPause = false;
+
 	// Use this for initialization
 	public override void Awake()
 	{
@@ -103,6 +105,20 @@ public class SoundManager : A_Singleton<SoundManager>
 		InitClipDictionary();
 		InitEntityList();
 		refBGMEntity.volume = BGMVolume * masterVolume;
+	}
+
+	public override void Update()
+	{
+		if( PauseManager.Instance.IsPause && !isPause )
+		{
+			isPause = true;
+			refBGMEntity.Pause();
+		}
+		else if( !PauseManager.Instance.IsPause && isPause )
+		{
+			isPause = false;
+			refBGMEntity.Play();
+		}
 	}
 
 	public void Play( string label )
@@ -147,8 +163,11 @@ public class SoundManager : A_Singleton<SoundManager>
 		while( currentDuration <= duration )
 		{
 			refBGMEntity.volume = Mathf.Lerp( volumeFrom, volumeTo, currentDuration / (float)duration );
-			currentDuration++;
 
+			if( !PauseManager.Instance.IsPause )
+			{
+				currentDuration++;
+			}
 			yield return new WaitForEndOfFrame();
 		}
 
