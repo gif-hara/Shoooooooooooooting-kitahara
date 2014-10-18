@@ -37,4 +37,10 @@ public class ReplayModeChangeSyncRotation : GameMonoBehaviour
 			refSyncRotation.ChangeTarget( refInputChangeSyncRotation.NormalSyncRotationObject );
 		}
 	}
+
+	void OnPlayerSelectMode()
+	{
+		enabled = false;
+	}
+
 }

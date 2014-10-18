@@ -33,4 +33,9 @@ public class ReplayModeFireShot : GameMonoBehaviour
 			});
 		}
 	}
+
+	void OnPlayerSelectMode()
+	{
+		enabled = false;
+	}
 }

@@ -1458,13 +1458,6 @@ MonoBehaviour:
     duration: 1
     curve:
       serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 0
-      m_PostInfinity: 0
-  - color: {r: 0, g: 0, b: 0, a: 1}
-    duration: 480
-    curve:
-      serializedVersion: 2
       m_Curve:
       - time: 0
         value: 0
@@ -1475,6 +1468,28 @@ MonoBehaviour:
         value: 1
         inSlope: 1
         outSlope: 1
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+  - color: {r: 0, g: 0, b: 0, a: 1}
+    duration: 480
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .599999964
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 2.49999976
+        outSlope: 2.49999976
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -1710,13 +1725,6 @@ MonoBehaviour:
     duration: 1
     curve:
       serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 0
-      m_PostInfinity: 0
-  - color: {r: 0, g: 0, b: 0, a: 1}
-    duration: 480
-    curve:
-      serializedVersion: 2
       m_Curve:
       - time: 0
         value: 0
@@ -1727,6 +1735,28 @@ MonoBehaviour:
         value: 1
         inSlope: 1
         outSlope: 1
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+  - color: {r: 0, g: 0, b: 0, a: 1}
+    duration: 480
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .599999964
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 2.49999976
+        outSlope: 2.49999976
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -2167,6 +2197,7 @@ GameObject:
   - 4: {fileID: 820532182}
   - 114: {fileID: 820532183}
   - 114: {fileID: 820532184}
+  - 114: {fileID: 820532185}
   m_Layer: 0
   m_Name: DecideEvent
   m_TagString: Untagged
@@ -2209,6 +2240,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59eafb32b3f7ab94c9ed53811a8af2fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delay: 60
+--- !u!114 &820532185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 820532181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 556793d40e3d4e64da298b05f52ca2c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  from: {r: 0, g: 0, b: 0, a: 0}
+  to: {r: 0, g: 0, b: 0, a: 1}
+  duration: 60
 --- !u!1 &825997834
 GameObject:
   m_ObjectHideFlags: 0
@@ -2541,13 +2587,6 @@ MonoBehaviour:
     duration: 1
     curve:
       serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 0
-      m_PostInfinity: 0
-  - color: {r: 0, g: 0, b: 0, a: 1}
-    duration: 480
-    curve:
-      serializedVersion: 2
       m_Curve:
       - time: 0
         value: 0
@@ -2558,6 +2597,28 @@ MonoBehaviour:
         value: 1
         inSlope: 1
         outSlope: 1
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+  - color: {r: 0, g: 0, b: 0, a: 1}
+    duration: 480
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .599999964
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 2.49999976
+        outSlope: 2.49999976
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -2932,13 +2993,6 @@ MonoBehaviour:
     duration: 1
     curve:
       serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 0
-      m_PostInfinity: 0
-  - color: {r: 0, g: 0, b: 0, a: 1}
-    duration: 480
-    curve:
-      serializedVersion: 2
       m_Curve:
       - time: 0
         value: 0
@@ -2949,6 +3003,28 @@ MonoBehaviour:
         value: 1
         inSlope: 1
         outSlope: 1
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+  - color: {r: 0, g: 0, b: 0, a: 1}
+    duration: 480
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .599999964
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 2.49999976
+        outSlope: 2.49999976
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -4137,13 +4213,6 @@ MonoBehaviour:
     duration: 1
     curve:
       serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 0
-      m_PostInfinity: 0
-  - color: {r: 0, g: 0, b: 0, a: 1}
-    duration: 480
-    curve:
-      serializedVersion: 2
       m_Curve:
       - time: 0
         value: 0
@@ -4154,6 +4223,28 @@ MonoBehaviour:
         value: 1
         inSlope: 1
         outSlope: 1
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+  - color: {r: 0, g: 0, b: 0, a: 1}
+    duration: 480
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .599999964
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 2.49999976
+        outSlope: 2.49999976
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2

@@ -37,4 +37,9 @@ public class ReplayModeChangeSpeed : GameMonoBehaviour
 			refObjectMove.ChangeSpeed( refInputChangeSpeed.NormalSpeed );
 		}
 	}
+
+	void OnPlayerSelectMode()
+	{
+		enabled = false;
+	}
 }

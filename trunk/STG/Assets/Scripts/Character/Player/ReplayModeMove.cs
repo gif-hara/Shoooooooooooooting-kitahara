@@ -42,4 +42,10 @@ public class ReplayModeMove : GameMonoBehaviour
 			refObjectMove.Right();
 		}
 	}
+
+	void OnPlayerSelectMode()
+	{
+		enabled = false;
+	}
+
 }

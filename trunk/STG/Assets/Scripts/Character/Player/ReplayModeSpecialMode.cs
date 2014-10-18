@@ -30,4 +30,10 @@ public class ReplayModeSpecialMode : GameMonoBehaviour
 			refPlayer.StartSpecialMode();
 		}
 	}
+
+	void OnPlayerSelectMode()
+	{
+		enabled = false;
+	}
+
 }

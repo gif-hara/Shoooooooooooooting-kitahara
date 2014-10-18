@@ -45,4 +45,10 @@ public class InputRecorder : GameMonoBehaviour
 			ReferenceManager.ReplayDataRecorder.AddShiftKeyList();
 		}
 	}
+
+	void OnPlayerSelectMode()
+	{
+		enabled = false;
+	}
+
 }

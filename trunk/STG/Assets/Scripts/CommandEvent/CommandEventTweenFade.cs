@@ -1,6 +1,6 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : CommandEventQuitApplication.cs
+*     * FileName    : CommandEventTweenFade.cs
 *
 *     * Author      : Hiroki_Kitahara.
 */
@@ -12,17 +12,19 @@ using System.Collections.Generic;
 /// <summary>
 /// .
 /// </summary>
-public class CommandEventQuitApplication : MonoBehaviour
+public class CommandEventTweenFade : MonoBehaviour
 {
 	[SerializeField]
-	private int delay;
+	private Color from;
 
-	void OnCommandEvent( CommandManager.CommandEventData data )
+	[SerializeField]
+	private Color to;
+
+	[SerializeField]
+	private int duration;
+
+	void OnCommandEvent()
 	{
-		data.LockInput();
-		FrameRateUtility.StartCoroutine( delay, () =>
-		{
-			Application.Quit();
-		});
+		FadeManager.Instance.Begin( from, to, duration );
 	}
 }

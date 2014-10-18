@@ -37,4 +37,9 @@ public class ReplayModeChangeChaseGameObject : GameMonoBehaviour
 			refChaseGameObject.ChangeChaseObject( refInputChangeChaseGameObject.NormalChaseObject );
 		}
 	}
+
+	void OnPlayerSelectMode()
+	{
+		enabled = false;
+	}
 }
