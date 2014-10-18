@@ -99,6 +99,9 @@ public class EnemyShotCreator : GameMonoBehaviour, I_MuzzleEventActinable
 	public override void LateUpdate()
 	{
 		base.LateUpdate();
+
+		if( PauseManager.Instance.IsPause )	return;
+
 		if( !isSleep )
 		{
 			UpdateCreateShot();

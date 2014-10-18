@@ -100,6 +100,9 @@ public class BossVisibleEffect : GameMonoBehaviour
 	public override void Update()
 	{
 		base.Update();
+
+		if( PauseManager.Instance.IsPause )	return;
+		
 		UpdateFade();
 		UpdateLineEffect();
 		UpdatePlaySE();

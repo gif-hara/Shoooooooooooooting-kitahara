@@ -32,6 +32,9 @@ public class EnemyLookAt : GameMonoBehaviour
 	public override void Update()
 	{
 		base.Update();
+
+		if( PauseManager.Instance.IsPause )	return;
+		
 		SetLookAtObject();
 		
 		if( refLookAtObject != null )

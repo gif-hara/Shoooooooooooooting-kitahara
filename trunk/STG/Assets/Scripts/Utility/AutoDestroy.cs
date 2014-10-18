@@ -17,15 +17,12 @@ public class AutoDestroy : MonoBehaviour
 	public GameObject refTarget;
 	
 	public int delay;
-	
-	// Use this for initialization
-	void Start()
-	{
-	}
-	
+
 	// Update is called once per frame
 	void Update()
 	{
+		if( PauseManager.Instance.IsPause )	return;
+		
 		if( delay <= 0 )
 		{
 			Destroy( refTarget );

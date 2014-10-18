@@ -38,9 +38,9 @@ public class FadeManager : A_Singleton<FadeManager>
 	
 	public override void Update()
 	{
-		int id = ScriptProfiler.Begin( this );
+		if( PauseManager.Instance.IsPause )	return;
+		
 		UpdateDuration();
-		ScriptProfiler.End( this, id );
 	}
 	
 	public void Begin( Color _from, Color _to, int target )

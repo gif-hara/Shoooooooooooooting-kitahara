@@ -26,6 +26,8 @@ public class CameraShake : GameMonoBehaviour
 	// Update is called once per frame
 	public override void Update()
 	{
+		if( PauseManager.Instance.IsPause )	return;
+		
 		if( delay <= 0 )
 		{
 			TweenShake.Begin( ReferenceManager.refCameraParent, Vector3.zero, rate, duration );

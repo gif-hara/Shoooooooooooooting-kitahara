@@ -24,6 +24,8 @@ public class PlayerChaseOnSpeed : GameMonoBehaviour
 	public override void LateUpdate()
 	{
 		base.LateUpdate();
+
+		if( PauseManager.Instance.IsPause )	return;
 		
 		var playerPos = ReferenceManager.Player.Trans.position;
 		var targetPos = playerPos + fixedPosition;

@@ -23,6 +23,8 @@ public abstract class A_DelayEvent : GameMonoBehaviour
 	// Update is called once per frame
 	public override void Update()
 	{
+		if( PauseManager.Instance.IsPause )	return;
+		
 		if( delay <= 0 )
 		{
 			OnDelayEvent();

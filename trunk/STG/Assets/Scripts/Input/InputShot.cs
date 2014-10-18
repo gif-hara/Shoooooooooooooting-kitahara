@@ -19,6 +19,8 @@ public class InputShot : GameMonoBehaviour
 	// Update is called once per frame
 	public override void Update()
 	{
+		if( PauseManager.Instance.IsPause )	return;
+		
 		if( !Input.GetKey( KeyCode.Z ) )	return;
 
 		refPlayerShotFireList.ForEach( p => p.Fire() );

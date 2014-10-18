@@ -44,6 +44,8 @@ public class TweenRotationFrame : MonoBehaviour
 	
 	void Update ()
 	{
+		if( PauseManager.Instance.IsPause )	return;
+
 		refTarget.localRotation = Quaternion.Lerp( this.fromQuaternion, this.toQuaternion, curve.Evaluate( (float)currentDuration / duration ) );
 		currentDuration++;
 

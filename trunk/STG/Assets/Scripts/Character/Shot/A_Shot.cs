@@ -15,13 +15,6 @@ public abstract class A_Shot : GameMonoBehaviour
 {
 	private const float DestroyDistance = 450.0f * 450.0f;
 	
-	public override void Update()
-	{
-		base.Update();
-		int benchMarkId = ScriptProfiler.Begin( this );
-		
-		ScriptProfiler.End( this, benchMarkId );
-	}
 	public void Initialize( float speed, Transform position, Transform angle, float fixedAngle )
 	{
 		if( ReferenceManager != null )

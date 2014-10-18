@@ -20,6 +20,8 @@ public class InputSpecialMode : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
+		if( PauseManager.Instance.IsPause )	return;
+		
 		UpdateIsValid();
 	}
 

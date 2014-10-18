@@ -23,6 +23,8 @@ public class AutoRotation : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
+		if( PauseManager.Instance.IsPause )	return;
+
 		transform.localRotation *= Quaternion.AngleAxis( speed, axis );
 
 		speed += addSpeed;

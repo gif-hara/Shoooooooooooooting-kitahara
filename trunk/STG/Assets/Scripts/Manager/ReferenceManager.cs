@@ -131,7 +131,7 @@ public class ReferenceManager : A_Singleton<ReferenceManager>
 	public FrameCountRecorder FrameCountRecorder{ get{ return this.refFrameCountRecorder; } }
 	[SerializeField]
 	private FrameCountRecorder refFrameCountRecorder;
-	
+
 	/// <summary>
 	/// 敵プレハブリスト.
 	/// </summary>

@@ -29,6 +29,9 @@ public class AutoMove : MonoBehaviourExtension
 	public override void Update()
 	{
 		base.Update();
+
+		if( PauseManager.Instance.IsPause )	return;
+
 		cachedTransform.localPosition += cachedVelocity;
 	}
 	

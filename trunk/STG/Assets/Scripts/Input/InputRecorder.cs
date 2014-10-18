@@ -16,6 +16,8 @@ public class InputRecorder : GameMonoBehaviour
 {
 	public override void Update ()
 	{
+		if( PauseManager.Instance.IsPause )	return;
+		
 		if( Input.GetKey( KeyCode.UpArrow ) )
 		{
 			ReferenceManager.ReplayDataRecorder.AddUpKeyList();

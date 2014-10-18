@@ -57,6 +57,9 @@ public class CollisionManager : GameMonoBehaviour
 	public override void Update()
 	{
 		base.Update();
+
+		if( PauseManager.Instance.IsPause )	return;
+		
 		int benchMarkId = ScriptProfiler.Begin( this );
 		CollisionEnemyAndPlayer();
 		CollisionEnemyAndPlayerShot();
@@ -64,12 +67,6 @@ public class CollisionManager : GameMonoBehaviour
 		CollisionEnemyShotAndBarrier();
 		CollisionPlayerAndItem();
 		ScriptProfiler.End( this, benchMarkId );
-
-		if( Input.GetKeyDown( KeyCode.L ) )
-		{
-			Debug.Log( "enemyShotColliderList = " + enemyShotColliderList.Count );
-			Debug.Log( "itemColliderList = " + itemColliderList.Count );
-		}
 	}
 	
 #if OnDrawGizmos

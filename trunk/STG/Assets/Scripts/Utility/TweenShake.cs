@@ -34,6 +34,8 @@ public class TweenShake : MonoBehaviour
 	// Update is called once per frame
 	void LateUpdate()
 	{
+		if( PauseManager.Instance.IsPause )	return;
+		
 		UpdateShake();
 	}
 	

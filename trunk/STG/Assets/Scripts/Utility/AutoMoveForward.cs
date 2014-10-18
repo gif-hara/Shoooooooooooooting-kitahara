@@ -38,6 +38,9 @@ public class AutoMoveForward : GameMonoBehaviour
 	public override void Update()
 	{
 		base.Update();
+
+		if( PauseManager.Instance.IsPause )	return;
+		
 		this.refTarget.localPosition += refForward.up * speed;
 	}
 	

@@ -169,6 +169,9 @@ public class EnemyController : EnemyControllerBase
 	public override void Update()
 	{
 		base.Update();
+
+		if( PauseManager.Instance.IsPause )	return;
+		
 		UpdateCompleteMoveComponent();
 		
 		invincibleTimer--;

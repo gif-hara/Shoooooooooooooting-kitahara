@@ -59,6 +59,8 @@ public class TweenMeshColor : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
+		if( PauseManager.Instance.IsPause )	return;
+		
 		if( delay > 0 )
 		{
 			delay--;

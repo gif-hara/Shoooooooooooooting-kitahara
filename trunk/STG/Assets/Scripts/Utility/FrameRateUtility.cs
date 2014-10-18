@@ -34,6 +34,10 @@ public class FrameRateUtility : A_Singleton<FrameRateUtility>
 		for( int i=0; i<frame; i++ )
 		{
 			yield return new WaitForEndOfFrame();
+			if( PauseManager.Instance.IsPause )
+			{
+				i--;
+			}
 		}
 		
 		func();

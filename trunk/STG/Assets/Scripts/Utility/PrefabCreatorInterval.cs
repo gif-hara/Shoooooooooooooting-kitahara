@@ -66,22 +66,15 @@ public class PrefabCreatorInterval : GameMonoBehaviour
 		{
 			refParent = transform;
 		}
-		
-//		for( int i=0; i<interval; i++ )
-//		{
-//			Vector3 pos = new Vector3( Random.Range( min.x, max.x ), Random.Range( min.y, max.y ), 0.0f );
-//			var obj = InstantiateAsChild( Trans, prefabList[Random.Range( 0, prefabList.Count)] ).transform;
-//			obj.localPosition = pos;
-//			obj.parent = refParent;
-//			currentInterval = 0;
-//			enabled = false;
-//		}
 	}
 
 	// Update is called once per frame
 	public override void Update()
 	{
 		base.Update();
+
+		if( PauseManager.Instance.IsPause )	return;
+		
 		if( currentInterval >= interval )
 		{
 			Vector3 pos = new Vector3( Random.Range( min.x, max.x ), Random.Range( min.y, max.y ), 0.0f );

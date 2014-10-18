@@ -151,6 +151,9 @@ public abstract class A_ObjectMove : GameMonoBehaviour
 	public override void Update()
 	{
 		base.Update();
+
+		if( PauseManager.Instance.IsPause )	return;
+
 		if( data.delayFrame > 0 )
 		{
 			data.delayFrame--;

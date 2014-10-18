@@ -60,6 +60,9 @@ public class Player : GameMonoBehaviour
 	public override void Update()
 	{
 		base.Update();
+
+		if( PauseManager.Instance.IsPause )	return;
+
 		invincibleTime--;
 		
 		UpdateDebug();
@@ -127,7 +130,7 @@ public class Player : GameMonoBehaviour
 		refContent.SetActive( false );
 		if( PlayerStatusManager.Life > 0 )
 		{
-			StartCoroutine( ResurrectionCoroutine() );
+			FrameRateUtility.StartCoroutine( 60, ResurrectionCoroutine );
 		}
 
 	}
@@ -182,15 +185,8 @@ public class Player : GameMonoBehaviour
 	/// <returns>
 	/// The coroutine.
 	/// </returns>
-	private IEnumerator ResurrectionCoroutine()
+	private void ResurrectionCoroutine()
 	{
-		int t = 60;
-		while( t > 0 )
-		{
-			yield return new WaitForEndOfFrame();
-			t--;
-		}
-
 		ReferenceManager.refUILayer.BroadcastMessage( GameDefine.ResurrectionMessage );
 		Relocation();
 		refContent.SetActive( true );

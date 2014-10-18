@@ -22,6 +22,9 @@ public class PlaySE : GameMonoBehaviour
 	public override void Update()
 	{
 		base.Update();
+
+		if( PauseManager.Instance.IsPause )	return;
+		
 		if( delay <= 0 )
 		{
 			SoundManager.Instance.Play( label );

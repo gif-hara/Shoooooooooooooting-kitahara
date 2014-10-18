@@ -49,6 +49,8 @@ public class Bomb : A_SpecialModeContent
 	public override void Update()
 	{
 		base.Update();
+
+		if( PauseManager.Instance.IsPause )	return;
 		
 		if( currentDuration >= duration )
 		{

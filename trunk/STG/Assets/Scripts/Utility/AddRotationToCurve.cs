@@ -43,6 +43,9 @@ public class AddRotationToCurve : GameMonoBehaviour
 	public override void Update ()
 	{
 		base.Update ();
+
+		if( PauseManager.Instance.IsPause )	return;
+		
 		this.Trans.localRotation = Quaternion.Lerp( initialRotation, toRotation, curve.Evaluate( (float)this.currentDuration / this.duration ) );
 		currentDuration++;
 		currentDuration = currentDuration > duration ? duration : currentDuration;

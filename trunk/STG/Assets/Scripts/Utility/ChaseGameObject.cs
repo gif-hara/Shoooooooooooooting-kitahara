@@ -28,6 +28,9 @@ public class ChaseGameObject : GameMonoBehaviour
 	public override void LateUpdate()
 	{
 		base.LateUpdate();
+
+		if( PauseManager.Instance.IsPause )	return;
+		
 		if( refChaseObject == null )	return;
 		
 		Trans.position = Vector3.Lerp( Trans.position, refChaseObject.position, speed );

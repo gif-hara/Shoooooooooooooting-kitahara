@@ -6560,6 +6560,9 @@ public class iTween : MonoBehaviour{
 	
 	//non-physics
 	void Update(){
+
+		if( PauseManager.Instance.IsPause )	return;
+		
 		if(isRunning && !physics){
 			if(!reverse){
 				if(percentage<1f){

@@ -57,6 +57,9 @@ public class PrefabCreator : GameMonoBehaviour
 	public override void Update()
 	{
 		base.Update();
+
+		if( PauseManager.Instance.IsPause )	return;
+		
 		if( createType != CreateType.Update )	return;
 		
 		if( delay <= 0 )

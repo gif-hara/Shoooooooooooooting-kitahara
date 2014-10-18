@@ -94,7 +94,12 @@ public class UIEnemyHitPointBar : GameMonoBehaviour
 		while( t >= 0 )
 		{
 			refBar.Current = Mathf.Lerp( 0, refEnemy.Hp, (float)(StartEffectTime - t) / StartEffectTime );
-			t--;
+
+			if( !PauseManager.Instance.IsPause )
+			{
+				t--;
+			}
+
 			yield return new WaitForEndOfFrame();
 		}
 		

@@ -114,6 +114,8 @@ public abstract class UITweener : IgnoreTimeScale
 
 	void Update ()
 	{
+		if( PauseManager.Instance.IsPause )	return;
+		
 		float delta = UpdateRealTimeDelta();
 
 		// Advance the sampling factor

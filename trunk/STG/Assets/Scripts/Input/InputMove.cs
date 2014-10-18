@@ -19,6 +19,8 @@ public class InputMove : GameMonoBehaviour
 	// Update is called once per frame
 	public override void Update()
 	{
+		if( PauseManager.Instance.IsPause )	return;
+		
 		InputArrow();
 	}
 

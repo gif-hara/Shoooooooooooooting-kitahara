@@ -17,6 +17,8 @@ public class BombAllShotRemove : GameMonoBehaviour
 	// Update is called once per frame
 	public override void Update()
 	{
+		if( PauseManager.Instance.IsPause )	return;
+		
 		GameManager.AddGameLevelExperienceFromEnemyShot( AllShotRemove.AllRemoveFromBomb() );
 	}
 }

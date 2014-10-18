@@ -45,6 +45,9 @@ public class PlaySEInterval : GameMonoBehaviour
 	public override void Update()
 	{
 		base.Update();
+
+		if( PauseManager.Instance.IsPause )	return;
+		
 		if( interval <= 0 )
 		{
 			SoundManager.Instance.Play( label );

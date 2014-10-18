@@ -47,7 +47,10 @@ public class MeshUVOffsetTile : MonoBehaviourExtension
 	// Update is called once per frame
 	public override void Update ()
 	{
-		
+		base.Update();
+
+		if( PauseManager.Instance.IsPause )	return;
+
 		if( timer >= interval )
 		{
 			offset++;

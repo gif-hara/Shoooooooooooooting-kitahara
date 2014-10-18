@@ -27,6 +27,8 @@ public class InputChangeChaseGameObject : MonoBehaviour
 
 	void Update ()
 	{
+		if( PauseManager.Instance.IsPause )	return;
+		
 		InputShift();
 	}
 

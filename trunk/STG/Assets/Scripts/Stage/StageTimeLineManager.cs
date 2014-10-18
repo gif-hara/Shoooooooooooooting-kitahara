@@ -37,6 +37,8 @@ public class StageTimeLineManager
 	/// </summary>
 	public void Update()
 	{
+		if( PauseManager.Instance.IsPause )	return;
+		
 		timeLine++;
 	}
 }

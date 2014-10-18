@@ -35,6 +35,8 @@ public class TextureOffsetAnimation : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
+		if( PauseManager.Instance.IsPause )	return;
+		
 		UpdateOffset();
 		UpdateScale();
 		currentInterval++;

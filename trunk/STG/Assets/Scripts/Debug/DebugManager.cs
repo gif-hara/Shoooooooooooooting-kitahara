@@ -140,7 +140,13 @@ public class DebugManager : A_GUIElement
 		        {
 			ReferenceManager.Instance.ReplayDataRecorder.Save( 0 );
 		});
-
+		
+		// ポーズトグル.
+		KeyPush( KeyCode.L, () =>
+		        {
+			PauseManager.Instance.Toggle();
+		});
+		
 		KeyPush( KeyCode.A, () => refPlayerStatusManager.DebugChange( 0 ) );
 		KeyPush( KeyCode.S, () => refPlayerStatusManager.DebugChange( 1 ) );
 		KeyPush( KeyCode.D, () => refPlayerStatusManager.DebugChange( 2 ) );

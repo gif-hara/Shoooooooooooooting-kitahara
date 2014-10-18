@@ -31,15 +31,12 @@ public class PositionSetter : MonoBehaviour
 	/// </summary>
 	[SerializeField]
 	private int delay;
-	
-	// Use this for initialization
-	void Start()
-	{
-	}
-	
+
 	// Update is called once per frame
 	void Update()
 	{
+		if( PauseManager.Instance.IsPause )	return;
+		
 		if( delay <= 0 )
 		{
 			refTarget.localPosition = position;
