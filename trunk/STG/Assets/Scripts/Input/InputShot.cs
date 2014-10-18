@@ -11,13 +11,13 @@ using UnityEngine;
 using System.Collections.Generic;
 
 
-public class InputShot : MonoBehaviour
+public class InputShot : GameMonoBehaviour
 {
 	[SerializeField]
 	private List<PlayerShotFire> refPlayerShotFireList;
 
 	// Update is called once per frame
-	void Update()
+	public override void Update()
 	{
 		if( !Input.GetKey( KeyCode.Z ) )	return;
 
@@ -28,4 +28,10 @@ public class InputShot : MonoBehaviour
 	{
 		enabled = false;
 	}
+
+	void OnReplayMode()
+	{
+		enabled = false;
+	}
+
 }

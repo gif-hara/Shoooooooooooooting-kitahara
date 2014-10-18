@@ -28,5 +28,11 @@ public class PlayerCreator : MonoBehaviour
 
 		currentPlayer =  this.InstantiateAsChild( transform, prefabPlayerList[id].gameObject );
 		currentPlayer.BroadcastMessage( createdMessage, SendMessageOptions.DontRequireReceiver );
+		Debug.Log( createdMessage );
+	}
+
+	public void ChangeCreatedMessage( string value )
+	{
+		createdMessage = value;
 	}
 }

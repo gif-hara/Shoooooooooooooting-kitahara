@@ -119,6 +119,18 @@ public class ReferenceManager : A_Singleton<ReferenceManager>
 	public ShadowManager ShadowManager{ get{ return this.refShadowManager; } }
 	[SerializeField]
 	private ShadowManager refShadowManager;
+
+	public ReplayDataRecorder ReplayDataRecorder{ get{ return this.refReplayDataRecorder; } }
+	[SerializeField]
+	private ReplayDataRecorder refReplayDataRecorder;
+
+	public ReplayDataLoader ReplayDataLoader{ get{ return this.refReplayDataLoader; } }
+	[SerializeField]
+	private ReplayDataLoader refReplayDataLoader;
+
+	public FrameCountRecorder FrameCountRecorder{ get{ return this.refFrameCountRecorder; } }
+	[SerializeField]
+	private FrameCountRecorder refFrameCountRecorder;
 	
 	/// <summary>
 	/// 敵プレハブリスト.

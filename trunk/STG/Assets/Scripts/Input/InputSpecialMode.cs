@@ -28,6 +28,11 @@ public class InputSpecialMode : MonoBehaviour
 		enabled = false;
 	}
 
+	void OnReplayMode()
+	{
+		enabled = false;
+	}
+
 	private void UpdateIsValid()
 	{
 		if( Input.GetKeyDown( KeyCode.X ) )

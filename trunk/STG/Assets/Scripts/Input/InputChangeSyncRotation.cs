@@ -16,16 +16,23 @@ public class InputChangeSyncRotation : MonoBehaviour
 {
 	[SerializeField]
 	private SyncRotation refSyncRotation;
-	
+
+	public Transform NormalSyncRotationObject{ get{ return refNormalSyncRotationObject; } }
 	[SerializeField]
 	private Transform refNormalSyncRotationObject;
 	
+	public Transform ShiftSyncRotationObject{ get{ return refShiftSyncRotationObject; } }
 	[SerializeField]
 	private Transform refShiftSyncRotationObject;
 	
 	void Update ()
 	{
 		InputShift();
+	}
+
+	void OnReplayMode()
+	{
+		enabled = false;
 	}
 	
 	private void InputShift()

@@ -1,6 +1,6 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : GameStatusLoader.cs
+*     * FileName    : CommandEventQuitApplication.cs
 *
 *     * Author      : Hiroki_Kitahara.
 */
@@ -12,12 +12,11 @@ using System.Collections.Generic;
 /// <summary>
 /// .
 /// </summary>
-public class GameStatusLoader : MonoBehaviour
+public class CommandEventQuitApplication : MonoBehaviour
 {
-	void Start ()
+	void OnCommandEvent( CommandManager.CommandEventData data )
 	{
-	}	
-	void Update ()
-	{
+		data.LockInput();
+		Application.Quit();
 	}
 }

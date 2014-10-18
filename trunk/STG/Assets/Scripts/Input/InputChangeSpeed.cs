@@ -17,9 +17,11 @@ public class InputChangeSpeed : MonoBehaviour
 	[SerializeField]
 	private ObjectMoveAcceptComponent refObjectMove;
 
+	public float NormalSpeed{ get{ return this.normalSpeed; } }
 	[SerializeField]
 	private float normalSpeed;
 
+	public float ShiftSpeed{ get{ return this.shiftSpeed; } }
 	[SerializeField]
 	private float shiftSpeed;
 
@@ -29,6 +31,11 @@ public class InputChangeSpeed : MonoBehaviour
 	}
 
 	void OnPlayerSelectMode()
+	{
+		enabled = false;
+	}
+
+	void OnReplayMode()
 	{
 		enabled = false;
 	}

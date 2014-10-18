@@ -26,6 +26,7 @@ GameObject:
   - 4: {fileID: 400002}
   - 114: {fileID: 11400012}
   - 114: {fileID: 11400018}
+  - 114: {fileID: 11400060}
   m_Layer: 8
   m_Name: Player4
   m_TagString: Untagged
@@ -195,6 +196,7 @@ GameObject:
   - 114: {fileID: 11400034}
   - 114: {fileID: 11400032}
   - 114: {fileID: 11400030}
+  - 114: {fileID: 11400058}
   m_Layer: 0
   m_Name: Input
   m_TagString: Untagged
@@ -501,6 +503,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400062}
   - 114: {fileID: 11400054}
+  - 114: {fileID: 11400056}
   m_Layer: 0
   m_Name: PlayerSelectModeEvent
   m_TagString: Untagged
@@ -934,6 +937,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c9700296bb9df41870993094a701c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
   refPlayerShotFireList:
   - {fileID: 11400022}
   - {fileID: 11400008}
@@ -977,6 +981,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca1c5adbe07d06946a36b2fb8a713926, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
   refObjectMove: {fileID: 11400028}
 --- !u!114 &11400008
 MonoBehaviour:
@@ -1329,6 +1334,45 @@ MonoBehaviour:
   refShotFireList:
   - {fileID: 11400022}
   - {fileID: 11400008}
+--- !u!114 &11400056
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7627afe06f9028849b3889f275fdf762, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  refTarget: {fileID: 100004}
+  isActive: 0
+--- !u!114 &11400058
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfe6be2c3761e6e40ac8998463e02bfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+--- !u!114 &11400060
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 198c29c189dd22b469f80046bb88a362, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  refTarget: {fileID: 400002}
+  layerType: 2
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

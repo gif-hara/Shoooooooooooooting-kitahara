@@ -1,6 +1,6 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : GameStatusLoader.cs
+*     * FileName    : GameStatusRandomSeedSetter.cs
 *
 *     * Author      : Hiroki_Kitahara.
 */
@@ -12,12 +12,11 @@ using System.Collections.Generic;
 /// <summary>
 /// .
 /// </summary>
-public class GameStatusLoader : MonoBehaviour
+public class GameStatusRandomSeedSetter : MonoBehaviour
 {
 	void Start ()
 	{
-	}	
-	void Update ()
-	{
+		GameStatusInterfacer.RandomSeed = Random.seed;
+		Debug.Log( "GameStatusInterfacer.RandomSeed = " + GameStatusInterfacer.RandomSeed );
 	}
 }

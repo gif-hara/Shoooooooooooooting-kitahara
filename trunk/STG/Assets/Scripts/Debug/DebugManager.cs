@@ -135,6 +135,12 @@ public class DebugManager : A_GUIElement
 			GameManager.DebugReverseStageClear();
 		});
 
+		// リプレイデータの保存.
+		KeyPush( KeyCode.P, () =>
+		        {
+			ReferenceManager.Instance.ReplayDataRecorder.Save( 0 );
+		});
+
 		KeyPush( KeyCode.A, () => refPlayerStatusManager.DebugChange( 0 ) );
 		KeyPush( KeyCode.S, () => refPlayerStatusManager.DebugChange( 1 ) );
 		KeyPush( KeyCode.D, () => refPlayerStatusManager.DebugChange( 2 ) );

@@ -2166,6 +2166,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 820532182}
   - 114: {fileID: 820532183}
+  - 114: {fileID: 820532184}
   m_Layer: 0
   m_Name: DecideEvent
   m_TagString: Untagged
@@ -2197,6 +2198,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   label: CursorDecide
+--- !u!114 &820532184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 820532181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59eafb32b3f7ab94c9ed53811a8af2fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &825997834
 GameObject:
   m_ObjectHideFlags: 0

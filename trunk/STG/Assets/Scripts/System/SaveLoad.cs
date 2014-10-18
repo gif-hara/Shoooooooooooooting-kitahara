@@ -7,6 +7,7 @@
 /*===========================================================================*/
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
@@ -29,27 +30,30 @@ public class SaveLoad
 	#region セーブデータ構造
 	
 	[System.Serializable ()]
-	public class Setting {
-		//ここにはゲーム設定を書き込む 
-		
-		public float volumeSE 		= 1f; // ボリューム設定 0～1 
-		public float volumeVoice 	= 1f; // ボリューム設定 0～1 
-		public float volumeBGM	 	= 1f; // ボリューム設定 0～1 
-		
-		public int[] score;
-		
+	public class ReplayDataList
+	{
+		public ReplayData this[int i]{ get{ return list[i]; } }
+		private List<ReplayData> list;
+
+		public const int Capacity = 30;
+
+		public ReplayDataList()
+		{
+			list = new List<ReplayData>( Capacity );
+			for( int i=0; i<list.Count; i++ )
+			{
+				list.Add( new ReplayData( 0 ) );
+			}
+		}
+
+		public void Set( int id, ReplayData data )
+		{
+			list[id] = data;
+		}
 	}
-	public Setting setting;
+	public ReplayDataList replayDataList;
 	
-	[System.Serializable ()]
-	public class Config {
-		//ここにはキーコンフィグ設定を書き込む  
-		
-		
-		
-	}
-	public Config config;
-	
+
 	#endregion
 	
 	
@@ -61,7 +65,7 @@ public class SaveLoad
 	static protected SaveLoad data;
 	
 	/// <summary>
-	/// このプロパティイを通してセーブデータにアクセスします 
+	/// このプロパティを通してセーブデータにアクセスします 
 	/// </summary>
 	public static SaveLoad Data {
 		get {
@@ -115,9 +119,8 @@ public class SaveLoad
 	/// </summary>
 	public static void CrateSaveFile() {
 		data = new SaveLoad();
-		data.setting = new SaveLoad.Setting();
-		data.config = new SaveLoad.Config();
-		
+		data.replayDataList = new ReplayDataList();
+
 		SaveLoad.Save();
 	}
 	

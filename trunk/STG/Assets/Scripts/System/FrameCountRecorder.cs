@@ -1,6 +1,6 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : GameStatusLoader.cs
+*     * FileName    : FrameCountRecorder.cs
 *
 *     * Author      : Hiroki_Kitahara.
 */
@@ -12,12 +12,21 @@ using System.Collections.Generic;
 /// <summary>
 /// .
 /// </summary>
-public class GameStatusLoader : MonoBehaviour
+public class FrameCountRecorder : MonoBehaviour
 {
+	private int sceneStartFrame;
+
 	void Start ()
 	{
-	}	
-	void Update ()
+		sceneStartFrame = Time.frameCount;
+	}
+
+	public int CurrentFrameCount
 	{
+		get
+		{
+			//Debug.Log( "Time.frameCount = " + Time.frameCount + " sceneStartFrame = " + sceneStartFrame );
+			return Time.frameCount - sceneStartFrame;
+		}
 	}
 }

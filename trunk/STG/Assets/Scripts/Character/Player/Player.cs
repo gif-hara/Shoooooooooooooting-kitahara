@@ -69,6 +69,10 @@ public class Player : GameMonoBehaviour
 	{
 		Relocation();
 	}
+	void OnReplayMode()
+	{
+		Relocation();
+	}
 	/// <summary>
 	/// SPモードの開始処理.
 	/// </summary>

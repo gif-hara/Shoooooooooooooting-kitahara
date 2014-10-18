@@ -1,6 +1,6 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : GameStatusLoader.cs
+*     * FileName    : PlayerSelectModeGameObjectEnableSetter.cs
 *
 *     * Author      : Hiroki_Kitahara.
 */
@@ -12,12 +12,16 @@ using System.Collections.Generic;
 /// <summary>
 /// .
 /// </summary>
-public class GameStatusLoader : MonoBehaviour
+public class PlayerSelectModeGameObjectEnableSetter : MonoBehaviour
 {
-	void Start ()
+	[SerializeField]
+	private GameObject refTarget;
+
+	[SerializeField]
+	private bool isActive;
+
+	void OnPlayerSelectMode()
 	{
-	}	
-	void Update ()
-	{
+		refTarget.SetActive( isActive );
 	}
 }

@@ -11,18 +11,23 @@
 using UnityEngine;
 using System.Collections;
 
-public class InputMove : MonoBehaviour
+public class InputMove : GameMonoBehaviour
 {
 	[SerializeField]
 	private ObjectMoveAcceptComponent refObjectMove;
 	
 	// Update is called once per frame
-	void Update()
+	public override void Update()
 	{
 		InputArrow();
 	}
 
 	void OnPlayerSelectMode()
+	{
+		enabled = false;
+	}
+
+	void OnReplayMode()
 	{
 		enabled = false;
 	}

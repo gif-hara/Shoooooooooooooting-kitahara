@@ -21,6 +21,12 @@ public class GameDefine : A_Singleton<GameDefine>
 		Hell,
 	}
 
+	public enum GameModeType : int
+	{
+		PlayerInput,
+		Replay,
+	}
+
 	public enum LayerType : int
 	{
 		EnemyShot,

@@ -17,15 +17,22 @@ public class InputChangeChaseGameObject : MonoBehaviour
 	[SerializeField]
 	private ChaseGameObject refChaseGameObject;
 
+	public Transform NormalChaseObject{ get{ return refNormalChaseObject; } }
 	[SerializeField]
 	private Transform refNormalChaseObject;
 
+	public Transform ShiftChaseObject{ get{ return refShiftChaseObject; } }
 	[SerializeField]
 	private Transform refShiftChaseObject;
 
 	void Update ()
 	{
 		InputShift();
+	}
+
+	void OnReplayMode()
+	{
+		enabled = false;
 	}
 
 	private void InputShift()

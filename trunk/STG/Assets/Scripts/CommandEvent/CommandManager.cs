@@ -111,13 +111,19 @@ public class CommandManager : MonoBehaviour
 		}
 		if( Input.GetKeyDown( KeyCode.X ) )
 		{
-			refCancelEventObject.BroadcastMessage( InputEvent.CommandEventMessage );
+			var data = new CommandEventData();
+			refCancelEventObject.BroadcastMessage( InputEvent.CommandEventMessage, data );
+			LockInput( data );
 		}
 	}
 
 	private void ExecuteEvent( System.Func<CommandEventData> executeFunc )
 	{
-		var data = executeFunc();
+		LockInput( executeFunc() );
+	}
+
+	private void LockInput( CommandEventData data )
+	{
 		enabled = !data.IsLockInput;
 	}
 
