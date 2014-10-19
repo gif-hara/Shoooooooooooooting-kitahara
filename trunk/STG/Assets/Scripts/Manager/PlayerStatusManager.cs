@@ -91,6 +91,8 @@ public class PlayerStatusManager : GameMonoBehaviour
 	{
 		PlayerId = GameStatusInterfacer.PlayerId;
 
+		InitializeGameStatus();
+
 		InitializeExtendScoreList();
 		CreatePlayer();
 	}
@@ -159,6 +161,15 @@ public class PlayerStatusManager : GameMonoBehaviour
 		ReferenceManager.Instance.Player.Graze( grazeObject );
 	}
 
+	public void RegistGameStatus()
+	{
+		GameStatusInterfacer.Life = this.life;
+		GameStatusInterfacer.SpecialPoint = this.specialPoint;
+		GameStatusInterfacer.MissCount = this.missCount;
+		GameStatusInterfacer.ExtendCount = this.extendCount;
+		AddSpecialPoint( 0 );
+	}
+
 	public bool IsMaxSpecialPoint
 	{
 		get
@@ -193,6 +204,14 @@ public class PlayerStatusManager : GameMonoBehaviour
 		}
 
 		refPlayerCreator.OnCreate( PlayerId );
+	}
+
+	private void InitializeGameStatus()
+	{
+		this.life = GameStatusInterfacer.Life;
+		this.specialPoint = GameStatusInterfacer.SpecialPoint;
+		this.missCount = GameStatusInterfacer.MissCount;
+		this.extendCount = GameStatusInterfacer.ExtendCount;
 	}
 
 	private float AddSpecialPointGraze

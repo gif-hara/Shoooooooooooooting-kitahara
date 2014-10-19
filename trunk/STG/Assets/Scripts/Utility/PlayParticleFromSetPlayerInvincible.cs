@@ -42,7 +42,10 @@ public class PlayParticleFromSetPlayerInvincible : MonoBehaviour
 		{
 			refParticle.ForEach( p =>
 			{
-				p.loop = false;
+				if( p != null )
+				{
+					p.loop = false;
+				}
 			});
 		}
 	}

@@ -18,6 +18,9 @@ public class StageTimeLineStartStage : A_StageTimeLineActionable
 	{
 		ReferenceManager.refUILayer.BroadcastMessage( GameDefine.StartStageMessage );
 		ReferenceManager.refPlayerLayer.BroadcastMessage( GameDefine.StartStageMessage );
+		ReferenceManager.Instance.RefPlayerStatusManager.RegistGameStatus();
+		ReferenceManager.Instance.refGameManager.RegistGameStatus();
+		ReferenceManager.Instance.refScoreManager.RegistGameStatus();
 	}
 	protected override string GameObjectName
 	{

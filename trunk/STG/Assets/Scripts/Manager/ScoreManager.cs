@@ -56,6 +56,11 @@ public class ScoreManager : GameMonoBehaviour
 	public List<int> EarnedStarItemList{ get{ return earnedStarItemList; } }
 	private List<int> earnedStarItemList = null;
 
+	public override void Awake ()
+	{
+		base.Awake ();
+		InitializeGameStatus();
+	}
 	public override void Start ()
 	{
 		base.Start ();
@@ -65,7 +70,6 @@ public class ScoreManager : GameMonoBehaviour
 		for( int i=0; i<capacity; i++ )
 		{
 			this.earnedStarItemList.Add( 0 );
-//			this.earnedStarItemList[i] = 100;
 		}
 	}
 	/// <summary>
@@ -115,6 +119,18 @@ public class ScoreManager : GameMonoBehaviour
 	{
 		var starItem = InstantiateAsChild( ReferenceManager.refEffectLayer, PrefabStarItem );
 		starItem.transform.position = position;
+	}
+
+	public void RegistGameStatus()
+	{
+		GameStatusInterfacer.Score = this.score;
+		GameStatusInterfacer.HighScore = this.highScore;
+	}
+
+	private void InitializeGameStatus()
+	{
+		this.score = GameStatusInterfacer.Score;
+		this.highScore = GameStatusInterfacer.HighScore;
 	}
 
 	private GameObject PrefabStarItem

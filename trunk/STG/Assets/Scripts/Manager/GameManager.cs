@@ -45,12 +45,6 @@ public class GameManager : GameMonoBehaviour
 	/// </value>
 	public float GameLevelExperience{ get{ return gameLevelExperience; } }
 	private float gameLevelExperience = 0;
-	
-	/// <summary>
-	/// バリアに衝突した敵弾の数.
-	/// </summary>
-	public int CollisionEnemyShot{ get{ return collisionEnemyShot; } }
-	private int collisionEnemyShot = 0;
 
 	/// <summary>
 	/// グレイズした回数.
@@ -87,18 +81,12 @@ public class GameManager : GameMonoBehaviour
 	{
 		base.Awake();
 		Application.targetFrameRate = frameRate;
-		difficultyType = GameStatusInterfacer.Difficulty;
-		GameLevel = GameLevel;
+
+		InitializeGameStatus();
 
 		for( int i=0; i<ReferenceManager.Instance.prefabEnemyList.Count; i++ )
 		{
 			destroyEnemyNumList.Add( 0 );
-		}
-
-		this.ReverseStageFlagList = new List<bool>( 3 );
-		for( int i=0; i<3; i++ )
-		{
-			this.ReverseStageFlagList.Add( false );
 		}
 	}
 	
@@ -137,7 +125,6 @@ public class GameManager : GameMonoBehaviour
 	/// </summary>
 	public void AddGameLevelExperienceFromEnemyShot( int deleteNum = 1 )
 	{
-		collisionEnemyShot += deleteNum;
 		AddGameLevelExperience( deleteNum );
 	}
 	public void AddGrazeCount()
@@ -187,6 +174,18 @@ public class GameManager : GameMonoBehaviour
 		gameLevelExperience = 0.0f;
 	}
 
+	public void RegistGameStatus()
+	{
+		GameStatusInterfacer.GameLevelExperience = this.gameLevelExperience;
+		GameStatusInterfacer.GameLevel = this.GameLevel;
+		GameStatusInterfacer.GrazeCount = this.grazeCount;
+		GameStatusInterfacer.ReverseStageFlagList = new List<bool>( 3 );
+		for( int i=0; i<3; i++ )
+		{
+			GameStatusInterfacer.ReverseStageFlagList.Add( this.ReverseStageFlagList[i] );
+		}
+	}
+
 	/// <summary>
 	/// デバッグで裏ステージクリアフラグを立てる.
 	/// </summary>
@@ -220,6 +219,29 @@ public class GameManager : GameMonoBehaviour
 	private int GetNeedGameExperience( int level )
 	{
 		return (level * 5) + (level * 2);
+	}
+
+	private void InitializeGameStatus()
+	{
+		this.difficultyType = GameStatusInterfacer.Difficulty;
+		this.gameLevelExperience = GameStatusInterfacer.GameLevelExperience;
+		this.GameLevel = GameStatusInterfacer.GameLevel;
+		this.grazeCount = GameStatusInterfacer.GrazeCount;
+
+		this.ReverseStageFlagList = new List<bool>( 3 );
+		for( int i=0; i<3; i++ )
+		{
+			this.ReverseStageFlagList.Add( false );
+		}
+
+		if( GameStatusInterfacer.ReverseStageFlagList != null )
+		{
+			var list = GameStatusInterfacer.ReverseStageFlagList;
+			for( int i=0; i<list.Count; i++ )
+			{
+				this.ReverseStageFlagList[i] = list[i];
+			}
+		}
 	}
 	/// <summary>
 	/// レベルアップ可能であるか？.
