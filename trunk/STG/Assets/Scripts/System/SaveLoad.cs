@@ -52,7 +52,48 @@ public class SaveLoad
 		}
 	}
 	public ReplayDataList replayDataList;
-	
+
+	[System.Serializable]
+	public class Option
+	{
+		public float SEVolume{ get{ return seVolume; } }
+		private float seVolume;
+		
+		public float BGMVolume{ get{ return bgmVolume; } }
+		private float bgmVolume;
+		
+		public int Life{ get{ return life; } }
+		private int life;
+		
+		public Option()
+		{
+			seVolume = OptionData.DefaultSEVolume;
+			bgmVolume = OptionData.DefaultBGMVolume;
+			life = OptionData.DefaultLife;
+		}
+		
+		public Option( Option other )
+		{
+			seVolume = other.seVolume;
+			bgmVolume = other.bgmVolume;
+			life = other.life;
+		}
+
+		public void AddSEVolume( float value )
+		{
+			seVolume = Mathf.Clamp( seVolume + value, 0.0f, 1.0f );
+		}
+		public void AddBGMVolume( float value )
+		{
+			bgmVolume = Mathf.Clamp( bgmVolume + value, 0.0f, 1.0f );
+		}
+		public void AddLifeVolume( int value )
+		{
+			life = Mathf.Clamp( life + value, 1, 6 );
+		}
+	}
+	public Option option;
+
 
 	#endregion
 	
@@ -120,7 +161,7 @@ public class SaveLoad
 	public static void CrateSaveFile() {
 		data = new SaveLoad();
 		data.replayDataList = new ReplayDataList();
-
+		data.option = new Option();
 		SaveLoad.Save();
 	}
 	

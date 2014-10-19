@@ -39,6 +39,12 @@ public class CommandManager : MonoBehaviour
 		private GameObject refSelectEvent;
 
 		[SerializeField]
+		private GameObject refLeftEvent;
+
+		[SerializeField]
+		private GameObject refRightEvent;
+
+		[SerializeField]
 		private GameObject refDecideEvent;
 
 		public const string CommandEventMessage = "OnCommandEvent";
@@ -51,7 +57,15 @@ public class CommandManager : MonoBehaviour
 		{
 			return Execute( refSelectEvent );
 		}
-		
+		public CommandEventData LeftEventExecute()
+		{
+			return Execute( refLeftEvent );
+		}
+		public CommandEventData RightEventExecute()
+		{
+			return Execute( refRightEvent );
+		}
+
 		public CommandEventData DecideEventExecute()
 		{
 			return Execute( refDecideEvent );
@@ -111,6 +125,14 @@ public class CommandManager : MonoBehaviour
 		{
 			AddCursorId( 1 );
 			SoundManager.Instance.Play( "CursorSelect" );
+		}
+		if( Input.GetKeyDown( KeyCode.LeftArrow ) )
+		{
+			ExecuteEvent( refInputEventList[cursorId].LeftEventExecute );
+		}
+		if( Input.GetKeyDown( KeyCode.RightArrow ) )
+		{
+			ExecuteEvent( refInputEventList[cursorId].RightEventExecute );
 		}
 		if( Input.GetKeyDown( KeyCode.Z ) )
 		{

@@ -82,9 +82,9 @@ public class SoundManager : A_Singleton<SoundManager>
 	
 	public float masterVolume;
 
-	public float BGMVolume;
+	public float BGMVolume{ get{ return SaveLoad.Data.option.BGMVolume; } }
 
-	public float SEVolume;
+	public float SEVolume{ get{ return SaveLoad.Data.option.SEVolume; } }
 	
 	public List<ClipData> refClipList;
 	
@@ -138,6 +138,23 @@ public class SoundManager : A_Singleton<SoundManager>
 		volumeFrom *= BGMVolume * masterVolume;
 		volumeTo *= BGMVolume * masterVolume;
 		StartCoroutine( FadeBGMCoroutine( volumeFrom, volumeTo, duration ) );
+	}
+
+	public void SetBGMVolume( float value )
+	{
+		refBGMEntity.volume = value * masterVolume;
+	}
+
+	public void SetSEVolume( float value )
+	{
+		Trans.AllVisit( t =>
+		{
+			var audioSource = t.GetComponent<AudioSource>();
+			if( audioSource != null && audioSource != refBGMEntity )
+			{
+				audioSource.volume = value * masterVolume;
+			}
+		});
 	}
 	
 	private void InitClipDictionary()

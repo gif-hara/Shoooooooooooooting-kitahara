@@ -428,27 +428,43 @@ MonoBehaviour:
   refInputEventList:
   - refCommandTextMesh: {fileID: 1864733940}
     refSelectEvent: {fileID: 0}
+    refLeftEvent: {fileID: 0}
+    refRightEvent: {fileID: 0}
     refDecideEvent: {fileID: 1879173302}
   - refCommandTextMesh: {fileID: 478132986}
     refSelectEvent: {fileID: 0}
+    refLeftEvent: {fileID: 0}
+    refRightEvent: {fileID: 0}
     refDecideEvent: {fileID: 907938070}
   - refCommandTextMesh: {fileID: 1919019066}
     refSelectEvent: {fileID: 0}
+    refLeftEvent: {fileID: 0}
+    refRightEvent: {fileID: 0}
     refDecideEvent: {fileID: 160302201}
   - refCommandTextMesh: {fileID: 354422793}
     refSelectEvent: {fileID: 0}
+    refLeftEvent: {fileID: 0}
+    refRightEvent: {fileID: 0}
     refDecideEvent: {fileID: 1104876671}
   - refCommandTextMesh: {fileID: 226491958}
     refSelectEvent: {fileID: 0}
+    refLeftEvent: {fileID: 0}
+    refRightEvent: {fileID: 0}
     refDecideEvent: {fileID: 1310252771}
   - refCommandTextMesh: {fileID: 20414796}
     refSelectEvent: {fileID: 0}
+    refLeftEvent: {fileID: 0}
+    refRightEvent: {fileID: 0}
     refDecideEvent: {fileID: 1228682365}
   - refCommandTextMesh: {fileID: 1575438373}
     refSelectEvent: {fileID: 0}
+    refLeftEvent: {fileID: 0}
+    refRightEvent: {fileID: 0}
     refDecideEvent: {fileID: 680905900}
   - refCommandTextMesh: {fileID: 1296138054}
     refSelectEvent: {fileID: 0}
+    refLeftEvent: {fileID: 0}
+    refRightEvent: {fileID: 0}
     refDecideEvent: {fileID: 820532181}
 --- !u!1 &160302201
 GameObject:
@@ -1127,15 +1143,23 @@ MonoBehaviour:
   refInputEventList:
   - refCommandTextMesh: {fileID: 825997836}
     refSelectEvent: {fileID: 0}
+    refLeftEvent: {fileID: 0}
+    refRightEvent: {fileID: 0}
     refDecideEvent: {fileID: 1535802233}
   - refCommandTextMesh: {fileID: 1340611075}
     refSelectEvent: {fileID: 0}
+    refLeftEvent: {fileID: 0}
+    refRightEvent: {fileID: 0}
     refDecideEvent: {fileID: 2077896532}
   - refCommandTextMesh: {fileID: 253060435}
     refSelectEvent: {fileID: 0}
+    refLeftEvent: {fileID: 0}
+    refRightEvent: {fileID: 0}
     refDecideEvent: {fileID: 875354347}
   - refCommandTextMesh: {fileID: 819994232}
     refSelectEvent: {fileID: 0}
+    refLeftEvent: {fileID: 0}
+    refRightEvent: {fileID: 0}
     refDecideEvent: {fileID: 1721418602}
 --- !u!1 &478132984
 GameObject:
@@ -1883,6 +1907,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 680905901}
   - 114: {fileID: 680905902}
+  - 114: {fileID: 680905903}
   m_Layer: 0
   m_Name: DecideEvent
   m_TagString: Untagged
@@ -1914,6 +1939,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   label: CursorDecide
+--- !u!114 &680905903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 680905900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cde6159592628ed4b99dafeed22b38f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startEffectType: 0
+  endEffectType: 0
+  sceneName: Option
 --- !u!1 &728638250
 GameObject:
   m_ObjectHideFlags: 0
@@ -4613,6 +4652,7 @@ GameObject:
   - 4: {fileID: 1698859734}
   - 114: {fileID: 1698859735}
   - 114: {fileID: 1698859736}
+  - 114: {fileID: 1698859737}
   m_Layer: 0
   m_Name: StartEvent
   m_TagString: Untagged
@@ -4662,6 +4702,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   label: Title
+--- !u!114 &1698859737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1698859733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6753eb711a0dc643a4ff1a1c75a2f7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1721418602
 GameObject:
   m_ObjectHideFlags: 0
