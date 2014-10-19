@@ -40,7 +40,7 @@ public class SaveLoad
 		public ReplayDataList()
 		{
 			list = new List<ReplayData>( Capacity );
-			for( int i=0; i<list.Count; i++ )
+			for( int i=0; i<Capacity; i++ )
 			{
 				list.Add( new ReplayData( 0 ) );
 			}

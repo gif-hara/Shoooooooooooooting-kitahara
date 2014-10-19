@@ -16,6 +16,7 @@ public class ReplayDataLoader : GameMonoBehaviour
 {
 	public class FrameLoad
 	{
+		public int Frame{ get{ return frame; } }
 		private int frame;
 
 		private int readIndex;
@@ -77,6 +78,7 @@ public class ReplayDataLoader : GameMonoBehaviour
 		fireKeyFrameLoader.Read( replayData.FireKeyList );
 		specialKeyFrameLoader.Read( replayData.SpecialKeyList );
 		shiftKeyFrameLoader.Read( replayData.ShiftKeyList );
+
 	}
 
 	public override void LateUpdate()

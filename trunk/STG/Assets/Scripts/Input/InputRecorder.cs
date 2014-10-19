@@ -16,6 +16,7 @@ public class InputRecorder : GameMonoBehaviour
 {
 	public override void Update ()
 	{
+		if( GameStatusInterfacer.GameMode == GameDefine.GameModeType.Replay )	return;
 		if( PauseManager.Instance.IsPause )	return;
 		
 		if( Input.GetKey( KeyCode.UpArrow ) )

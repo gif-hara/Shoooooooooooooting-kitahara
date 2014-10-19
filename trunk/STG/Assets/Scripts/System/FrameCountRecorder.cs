@@ -14,11 +14,21 @@ using System.Collections.Generic;
 /// </summary>
 public class FrameCountRecorder : MonoBehaviour
 {
-	private int sceneStartFrame;
+	private int startSceneFrame;
+
+	private int pauseFrame;
 
 	void Start ()
 	{
-		sceneStartFrame = Time.frameCount;
+		startSceneFrame = Time.frameCount;
+	}
+
+	void Update()
+	{
+		if( PauseManager.Instance.IsPause )
+		{
+			pauseFrame++;
+		}
 	}
 
 	public int CurrentFrameCount
@@ -26,7 +36,7 @@ public class FrameCountRecorder : MonoBehaviour
 		get
 		{
 			//Debug.Log( "Time.frameCount = " + Time.frameCount + " sceneStartFrame = " + sceneStartFrame );
-			return Time.frameCount - sceneStartFrame;
+			return Time.frameCount - startSceneFrame - pauseFrame;
 		}
 	}
 }
