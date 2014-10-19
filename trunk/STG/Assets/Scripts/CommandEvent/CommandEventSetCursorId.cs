@@ -1,6 +1,6 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : SceneChangeEventCatcher.cs
+*     * FileName    : CommandEventSetCursorId.cs
 *
 *     * Author      : Hiroki_Kitahara.
 */
@@ -12,14 +12,16 @@ using System.Collections.Generic;
 /// <summary>
 /// .
 /// </summary>
-public class SceneChangeEventCatcher : MonoBehaviour
+public class CommandEventSetCursorId : MonoBehaviour
 {
 	[SerializeField]
-	private int delay;
+	private CommandManager refCommandManager;
 
-	void OnStartSceneEffect ( SceneManager.EventCatchData data )
+	[SerializeField]
+	private int value;
+
+	void OnCommandEvent()
 	{
-		data.Catch();
-		FrameRateUtility.StartCoroutineIgnorePause( delay, () =>{ data.Release(); } );
+		refCommandManager.SetCursorId( value );
 	}
 }

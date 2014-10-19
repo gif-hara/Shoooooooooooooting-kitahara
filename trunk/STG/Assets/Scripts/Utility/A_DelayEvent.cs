@@ -19,11 +19,14 @@ public abstract class A_DelayEvent : GameMonoBehaviour
 	/// </summary>
 	[SerializeField]
 	private int delay;
+
+	[SerializeField]
+	protected bool ignorePause;
 	
 	// Update is called once per frame
 	public override void Update()
 	{
-		if( PauseManager.Instance.IsPause )	return;
+		if( !ignorePause && PauseManager.Instance.IsPause )	return;
 		
 		if( delay <= 0 )
 		{

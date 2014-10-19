@@ -26,6 +26,8 @@ public class FadeManager : A_Singleton<FadeManager>
 	
 	private Color toColor = Color.clear;
 
+	private bool ignorePause = false;
+
 	public override void Awake()
 	{
 		Instance = this;
@@ -38,17 +40,19 @@ public class FadeManager : A_Singleton<FadeManager>
 	
 	public override void Update()
 	{
-		if( PauseManager.Instance.IsPause )	return;
+		if( !ignorePause && PauseManager.Instance.IsPause )	return;
 		
 		UpdateDuration();
 	}
 	
-	public void Begin( Color _from, Color _to, int target )
+	public void Begin( Color _from, Color _to, int target, bool ignorePause = false, string layerMaskName = "EffectLv4" )
 	{
 		this.fromColor = _from;
 		this.toColor = _to;
 		this.target = target;
 		this.duration = 0;
+		this.ignorePause = ignorePause;
+		this.refRenderer.gameObject.layer = LayerMask.NameToLayer( layerMaskName );
 		enabled = true;
 	}
 	

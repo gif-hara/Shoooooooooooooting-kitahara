@@ -15,6 +15,9 @@ using System.Collections.Generic;
 public class GameStatusInterfacerDebug : MonoBehaviour
 {
 	[SerializeField]
+	private bool apply;
+
+	[SerializeField]
 	private GameDefine.DifficultyType difficulty;
 
 	[SerializeField]
@@ -31,6 +34,8 @@ public class GameStatusInterfacerDebug : MonoBehaviour
 
 	void Awake()
 	{
+		if( !apply )	return;
+
 		GameStatusInterfacer.Difficulty = difficulty;
 		GameStatusInterfacer.StageId = stageId;
 		GameStatusInterfacer.PlayerId = playerId;

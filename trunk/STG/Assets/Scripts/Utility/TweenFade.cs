@@ -32,8 +32,11 @@ public class TweenFade : A_DelayEvent
 	[SerializeField]
 	private int duration;
 
+	[SerializeField]
+	private string layerMaskName = "EffectLv4";
+
 	protected override void OnDelayEvent()
 	{
-		FadeManager.Instance.Begin( from, to, duration );
+		FadeManager.Instance.Begin( from, to, duration, ignorePause, layerMaskName );
 	}
 }

@@ -669,7 +669,7 @@ GameObject:
   - 4: {fileID: 483486076}
   - 20: {fileID: 483486077}
   m_Layer: 8
-  m_Name: 6_EffectLv1Camera
+  m_Name: 6_EffectCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -711,7 +711,7 @@ Camera:
   m_Depth: 6
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 131072
+    m_Bits: 393216
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -1326,6 +1326,7 @@ MonoBehaviour:
   ySpeed: 0
   refContent: {fileID: 1036171700}
   size: {x: 600, y: 600}
+  isPauseActive: 0
 --- !u!23 &1036171703
 Renderer:
   m_ObjectHideFlags: 0
@@ -2093,6 +2094,7 @@ MonoBehaviour:
   ySpeed: 0
   refContent: {fileID: 1485690482}
   size: {x: 280, y: 160}
+  isPauseActive: 0
 --- !u!1 &1503804960
 GameObject:
   m_ObjectHideFlags: 0
@@ -2362,6 +2364,7 @@ MonoBehaviour:
   ySpeed: 0
   refContent: {fileID: 1583126635}
   size: {x: 600, y: 600}
+  isPauseActive: 0
 --- !u!1 &1589371798
 GameObject:
   m_ObjectHideFlags: 0

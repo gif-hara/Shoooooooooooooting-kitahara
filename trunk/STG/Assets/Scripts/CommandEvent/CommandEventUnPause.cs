@@ -1,6 +1,6 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : SceneChangeEventCatcher.cs
+*     * FileName    : CommandEventUnPause.cs
 *
 *     * Author      : Hiroki_Kitahara.
 */
@@ -12,14 +12,14 @@ using System.Collections.Generic;
 /// <summary>
 /// .
 /// </summary>
-public class SceneChangeEventCatcher : MonoBehaviour
+public class CommandEventUnPause : MonoBehaviour
 {
 	[SerializeField]
-	private int delay;
+	private GameObject refBroadcastObject;
 
-	void OnStartSceneEffect ( SceneManager.EventCatchData data )
+	void OnCommandEvent()
 	{
-		data.Catch();
-		FrameRateUtility.StartCoroutineIgnorePause( delay, () =>{ data.Release(); } );
+		PauseManager.Instance.UnPause();
+		refBroadcastObject.BroadcastMessage( InputTogglePause.UnPauseMessage );
 	}
 }

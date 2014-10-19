@@ -1,6 +1,6 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : SceneChangeEventCatcher.cs
+*     * FileName    : CommandEventSetText.cs
 *
 *     * Author      : Hiroki_Kitahara.
 */
@@ -12,14 +12,19 @@ using System.Collections.Generic;
 /// <summary>
 /// .
 /// </summary>
-public class SceneChangeEventCatcher : MonoBehaviour
+public class CommandEventSetText : MonoBehaviour
 {
 	[SerializeField]
-	private int delay;
+	private List<TextMesh> refTextMeshList;
 
-	void OnStartSceneEffect ( SceneManager.EventCatchData data )
+	[SerializeField]
+	private string text;
+
+	void OnCommandEvent()
 	{
-		data.Catch();
-		FrameRateUtility.StartCoroutineIgnorePause( delay, () =>{ data.Release(); } );
+		refTextMeshList.ForEach( t =>
+		{
+			t.text = text;
+		});
 	}
 }

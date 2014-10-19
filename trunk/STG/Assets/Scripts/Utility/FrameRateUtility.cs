@@ -23,18 +23,22 @@ public class FrameRateUtility : A_Singleton<FrameRateUtility>
 	{
 		FrameRateUtility.Instance._StartCoroutine( frame, func );
 	}
-	
-	private void _StartCoroutine( int frame, System.Action func )
+	public static void StartCoroutineIgnorePause( int frame, System.Action func )
 	{
-		StartCoroutine( __StartCoroutine( frame, func ) );
+		FrameRateUtility.Instance._StartCoroutine( frame, func, true );
+	}
+
+	private void _StartCoroutine( int frame, System.Action func, bool isPauseActive = false )
+	{
+		StartCoroutine( __StartCoroutine( frame, func, isPauseActive ) );
 	}
 	
-	private IEnumerator __StartCoroutine( int frame, System.Action func )
+	private IEnumerator __StartCoroutine( int frame, System.Action func, bool isPauseActive = false )
 	{
 		for( int i=0; i<frame; i++ )
 		{
 			yield return new WaitForEndOfFrame();
-			if( PauseManager.Instance.IsPause )
+			if( !isPauseActive && PauseManager.Instance.IsPause )
 			{
 				i--;
 			}

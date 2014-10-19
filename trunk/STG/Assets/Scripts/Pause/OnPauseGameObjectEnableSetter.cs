@@ -1,6 +1,6 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : GameStatusRandomSeedSetter.cs
+*     * FileName    : OnPauseGameObjectEnableSetter.cs
 *
 *     * Author      : Hiroki_Kitahara.
 */
@@ -12,11 +12,21 @@ using System.Collections.Generic;
 /// <summary>
 /// .
 /// </summary>
-public class GameStatusRandomSeedSetter : MonoBehaviour
+public class OnPauseGameObjectEnableSetter : MonoBehaviour
 {
-	void Start ()
+	[SerializeField]
+	private GameObject refTarget;
+
+	[SerializeField]
+	private bool isPauseActive;
+
+	void OnPause()
 	{
-		GameStatusInterfacer.RandomSeed = Random.seed;
-		Debug.Log( "GameStatusInterfacer.RandomSeed = " + GameStatusInterfacer.RandomSeed );
+		refTarget.SetActive( isPauseActive );
+	}
+
+	void OnUnPause()
+	{
+		refTarget.SetActive( !isPauseActive );
 	}
 }

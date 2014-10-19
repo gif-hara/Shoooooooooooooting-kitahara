@@ -93,6 +93,13 @@ public class CommandManager : MonoBehaviour
 		UpdateCursorId();
 	}
 
+	public void SetCursorId( int value )
+	{
+		cursorId = value;
+		ExecuteEvent( refInputEventList[cursorId].SelectEventExecute );
+		SetTextMeshColor();
+	}
+
 	private void UpdateCursorId()
 	{
 		if( Input.GetKeyDown( KeyCode.UpArrow ) )

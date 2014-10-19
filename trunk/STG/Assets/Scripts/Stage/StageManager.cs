@@ -26,6 +26,10 @@ public class StageManager : GameMonoBehaviour
 	
 	public StageActionableListManager actionableListManager;
 
+	public int StageId{ get{ return stageId; } }
+	[SerializeField]
+	private int stageId;
+
 	private List<int> existEnemyIdList = new List<int>();
 	
 	public override void Awake()

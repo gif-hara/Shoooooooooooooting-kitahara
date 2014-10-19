@@ -17,6 +17,7 @@ public class SceneManager : A_Singleton<SceneManager>
 	public enum EffectType : int
 	{
 		Default,
+		Fast,
 	}
 
 	public class EventCatchData
@@ -74,6 +75,7 @@ public class SceneManager : A_Singleton<SceneManager>
 		}
 
 		Application.LoadLevel( sceneName );
+		PauseManager.Instance.UnPause();
 
 		Destroy( obj );
 

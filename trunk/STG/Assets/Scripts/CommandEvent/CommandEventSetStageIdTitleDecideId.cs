@@ -1,6 +1,6 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : SceneChangeEventCatcher.cs
+*     * FileName    : CommandEventSetStageIdTitleDecideId.cs
 *
 *     * Author      : Hiroki_Kitahara.
 */
@@ -12,14 +12,10 @@ using System.Collections.Generic;
 /// <summary>
 /// .
 /// </summary>
-public class SceneChangeEventCatcher : MonoBehaviour
+public class CommandEventSetStageIdTitleDecideId : MonoBehaviour
 {
-	[SerializeField]
-	private int delay;
-
-	void OnStartSceneEffect ( SceneManager.EventCatchData data )
+	void OnCommandEvent()
 	{
-		data.Catch();
-		FrameRateUtility.StartCoroutineIgnorePause( delay, () =>{ data.Release(); } );
+		GameStatusInterfacer.StageId = GameStatusInterfacer.TitleDecideStageId;
 	}
 }

@@ -21,6 +21,9 @@ public class TextureOffsetAnimation : MonoBehaviour
 	public Transform refContent;
 	
 	public Vector2 size;
+
+	[SerializeField]
+	private bool isPauseActive;
 	
 	private Material myMaterial = null;
 	
@@ -35,7 +38,7 @@ public class TextureOffsetAnimation : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		if( PauseManager.Instance.IsPause )	return;
+		if( !isPauseActive && PauseManager.Instance.IsPause )	return;
 		
 		UpdateOffset();
 		UpdateScale();
