@@ -165,6 +165,11 @@ public class GameManager : GameMonoBehaviour
 	{
 		this.ReverseStageFlagList[stageId] = true;
 	}
+	
+	public void ReverseStageFailure( int stageId )
+	{
+		this.ReverseStageFlagList[stageId] = false;
+	}
 
 	public void Miss()
 	{

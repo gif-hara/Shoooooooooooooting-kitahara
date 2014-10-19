@@ -13,7 +13,7 @@ using System.Collections;
 /// <summary>
 /// .
 /// </summary>
-public class Stage4MiddleChangeConditioner : A_StageChangeConditioner
+public class Stage4FinalChangeConditioner : A_StageChangeConditioner
 {
 	public override bool Condition()
 	{

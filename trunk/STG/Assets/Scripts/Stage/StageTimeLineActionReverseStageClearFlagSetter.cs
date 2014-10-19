@@ -17,9 +17,19 @@ public class StageTimeLineActionReverseStageClearFlagSetter : A_StageTimeLineAct
 	[SerializeField]
 	private int stageId;
 
+	[SerializeField]
+	private bool isClear;
+
 	public override void Action()
 	{
-		ReferenceManager.Instance.refGameManager.ReverseStageClear( stageId );
+		if( isClear )
+		{
+			ReferenceManager.Instance.refGameManager.ReverseStageClear( stageId );
+		}
+		else
+		{
+			ReferenceManager.Instance.refGameManager.ReverseStageFailure( stageId );
+		}
 		Destroy( gameObject );
 	}
 	
