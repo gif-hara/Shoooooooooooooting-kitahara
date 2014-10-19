@@ -29,4 +29,13 @@ public class InputTogglePause : MonoBehaviour
 			gameObject.BroadcastMessage( message );
 		}
 	}
+
+	void OnEnableInputPause()
+	{
+		enabled = true;
+	}
+	void OnDisableInputPause()
+	{
+		enabled = false;
+	}
 }

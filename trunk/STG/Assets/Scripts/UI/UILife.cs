@@ -27,16 +27,7 @@ public class UILife : GameMonoBehaviour
 	void OnSpawnPlayer( int id )
 	{
 		playerId = id;
-		currentLifeList.ForEach( g =>
-		{
-			Destroy( g );
-		});
-		currentLifeList.Clear();
-
-		for( int i=0; i<ReferenceManager.RefPlayerStatusManager.Life - 1; i++ )
-		{
-			CreateLife( id );
-		}
+		Initialize();
 	}
 
 	void OnResurrection()
@@ -56,6 +47,25 @@ public class UILife : GameMonoBehaviour
 	void OnExtend()
 	{
 		CreateLife( playerId );
+	}
+
+	void OnContinue()
+	{
+		Initialize();
+	}
+
+	void Initialize()
+	{
+		currentLifeList.ForEach( g =>
+		{
+			Destroy( g );
+		});
+		currentLifeList.Clear();
+		
+		for( int i=0; i<ReferenceManager.RefPlayerStatusManager.Life - 1; i++ )
+		{
+			CreateLife( playerId );
+		}
 	}
 
 	private void CreateLife( int id )

@@ -170,6 +170,12 @@ public class PlayerStatusManager : GameMonoBehaviour
 		AddSpecialPoint( 0 );
 	}
 
+	public void Continue()
+	{
+		this.life = SaveLoad.Data.option.Life;
+		this.extendCount = 0;
+	}
+
 	public bool IsMaxSpecialPoint
 	{
 		get

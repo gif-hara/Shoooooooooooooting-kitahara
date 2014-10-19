@@ -162,7 +162,27 @@ public class GameDefine : A_Singleton<GameDefine>
 	/// SPが変更された際のメッセージ.
 	/// </summary>
 	public const string ModifiedSpecialPointMessage = "OnModifiedSpecialPoint";
+	
+	/// <summary>
+	/// ポーズ入力処理を受け付けるするメッセージ.
+	/// </summary>
+	public const string EnableInputPauseMessage = "OnEnableInputPause";
 
+	/// <summary>
+	/// ポーズ入力処理を禁止するメッセージ.
+	/// </summary>
+	public const string DisableInputPauseMessage = "OnDisableInputPause";
+	
+	/// <summary>
+	/// コンティニュー開始時のメッセージ.
+	/// </summary>
+	public const string StartContinueMessage = "OnStartContinue";
+
+	/// <summary>
+	/// コンティニューした際のメッセージ.
+	/// </summary>
+	public const string ContinueMessage = "OnContinue";
+	
 	public override void Awake()
 	{
 		base.Awake();

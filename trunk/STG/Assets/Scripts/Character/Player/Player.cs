@@ -76,6 +76,11 @@ public class Player : GameMonoBehaviour
 	{
 		Relocation();
 	}
+
+	void OnContinue()
+	{
+		Resurrection();
+	}
 	/// <summary>
 	/// SPモードの開始処理.
 	/// </summary>
@@ -130,9 +135,13 @@ public class Player : GameMonoBehaviour
 		refContent.SetActive( false );
 		if( PlayerStatusManager.Life > 0 )
 		{
-			FrameRateUtility.StartCoroutine( 60, ResurrectionCoroutine );
+			FrameRateUtility.StartCoroutine( 60, Resurrection );
 		}
-
+		else
+		{
+			ReferenceManager.Instance.refUILayer.BroadcastMessage( GameDefine.DisableInputPauseMessage );
+			FrameRateUtility.StartCoroutine( 60, StartContinueCoroutine );
+		}
 	}
 
 	public void Graze( Transform grazeObject )
@@ -185,12 +194,16 @@ public class Player : GameMonoBehaviour
 	/// <returns>
 	/// The coroutine.
 	/// </returns>
-	private void ResurrectionCoroutine()
+	private void Resurrection()
 	{
 		ReferenceManager.refUILayer.BroadcastMessage( GameDefine.ResurrectionMessage );
 		Relocation();
 		refContent.SetActive( true );
 		SetInvincible( 180 );
+	}
+	private void StartContinueCoroutine()
+	{
+		ReferenceManager.refUILayer.BroadcastMessage( GameDefine.StartContinueMessage );
 	}
 	/// <summary>
 	/// デバッグ更新処理.

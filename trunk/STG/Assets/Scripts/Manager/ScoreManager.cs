@@ -127,6 +127,12 @@ public class ScoreManager : GameMonoBehaviour
 		GameStatusInterfacer.HighScore = this.highScore;
 	}
 
+	public void Continue()
+	{
+		score = 0;
+		AddScore( 0 );
+	}
+
 	private void InitializeGameStatus()
 	{
 		this.score = GameStatusInterfacer.Score;
