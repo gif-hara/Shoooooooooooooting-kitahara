@@ -26,7 +26,7 @@ public class ReplayDataRecorder : MonoBehaviour
 			enabled = false;
 			return;
 		}
-		replayData = new ReplayData( Random.seed, GameStatusInterfacer.PlayerId, GameStatusInterfacer.StageId );
+		replayData = new ReplayData( Random.seed, GameStatusInterfacer.PlayerId, GameStatusInterfacer.StageId, GameStatusInterfacer.Difficulty );
 	}
 
 	public void AddUpKeyList()
