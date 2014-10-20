@@ -23,6 +23,6 @@ public class SEVolumeTextSetter : MonoBehaviour
 	}
 	void OnModifiedSEVolume()
 	{
-		refTextMesh.text = OptionData.Option.SEVolume.ToString( "0.0" );
+		refTextMesh.text = OptionData.Settings.SEVolume.ToString( "0.0" );
 	}
 }

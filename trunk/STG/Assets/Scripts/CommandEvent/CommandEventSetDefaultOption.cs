@@ -23,7 +23,7 @@ public class CommandEventSetDefaultOption : MonoBehaviour
 		modifiedEventObject.BroadcastMessage( "OnModifiedSEVolume" );
 		modifiedEventObject.BroadcastMessage( "OnModifiedBGMVolume" );
 		modifiedEventObject.BroadcastMessage( "OnModifiedLife" );
-		SoundManager.Instance.SetBGMVolume( OptionData.Option.BGMVolume );
-		SoundManager.Instance.SetSEVolume( OptionData.Option.SEVolume );
+		SoundManager.Instance.SetBGMVolume( OptionData.Settings.BGMVolume );
+		SoundManager.Instance.SetSEVolume( OptionData.Settings.SEVolume );
 	}
 }

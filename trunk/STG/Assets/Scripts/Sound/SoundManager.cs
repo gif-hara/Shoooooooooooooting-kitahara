@@ -82,9 +82,9 @@ public class SoundManager : A_Singleton<SoundManager>
 	
 	public float masterVolume;
 
-	public float BGMVolume{ get{ return SaveLoad.Data.option.BGMVolume; } }
+	public float BGMVolume{ get{ return SaveData.Settings.Instance.BGMVolume; } }
 
-	public float SEVolume{ get{ return SaveLoad.Data.option.SEVolume; } }
+	public float SEVolume{ get{ return SaveData.Settings.Instance.SEVolume; } }
 	
 	public List<ClipData> refClipList;
 	

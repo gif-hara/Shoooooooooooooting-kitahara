@@ -27,6 +27,21 @@ public class GameDefine : A_Singleton<GameDefine>
 		Replay,
 	}
 
+	public enum StageType : int
+	{
+		Stage1,
+		Stage2,
+		Stage3,
+		Stage4,
+		Stage5,
+		NormalClear,
+		ReverseClear,
+		Extra,
+		ExtraClear,
+		BossRush,
+		BossRushClear,
+	}
+
 	public enum LayerType : int
 	{
 		EnemyShot,
@@ -187,5 +202,25 @@ public class GameDefine : A_Singleton<GameDefine>
 	{
 		base.Awake();
 		Instance = this;
+	}
+
+	public static string StageTypeString( StageType stageType )
+	{
+		string[] result =
+		{
+			"Stage1",
+			"Stage2",
+			"Stage3",
+			"Stage4",
+			"Stage5",
+			"Clear",
+			"True Clear",
+			"Extra",
+			"EX Clear",
+			"Boss Rush",
+			"BR Clear",
+		};
+
+		return result[(int)stageType];
 	}
 }

@@ -23,6 +23,6 @@ public class BGMVolumeTextSetter : MonoBehaviour
 	}
 	void OnModifiedBGMVolume()
 	{
-		refTextMesh.text = OptionData.Option.BGMVolume.ToString( "0.0" );
+		refTextMesh.text = OptionData.Settings.BGMVolume.ToString( "0.0" );
 	}
 }

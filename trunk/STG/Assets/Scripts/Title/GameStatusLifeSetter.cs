@@ -1,4 +1,4 @@
-﻿/*===========================================================================*/
+/*===========================================================================*/
 /*
 *     * FileName    : GameStatusLifeSetter.cs
 *
@@ -16,6 +16,6 @@ public class GameStatusLifeSetter : MonoBehaviour
 {
 	void Start ()
 	{
-		GameStatusInterfacer.Life = SaveLoad.Data.option.Life;
+		GameStatusInterfacer.Life = SaveData.Settings.Instance.Life;
 	}
 }

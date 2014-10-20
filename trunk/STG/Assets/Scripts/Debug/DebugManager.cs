@@ -138,7 +138,7 @@ public class DebugManager : A_GUIElement
 		// リプレイデータの保存.
 		KeyPush( KeyCode.P, () =>
 		        {
-			ReferenceManager.Instance.ReplayDataRecorder.Save( 0 );
+			ReplayDataRecorder.Save( 0 );
 		});
 		
 		// ポーズトグル.

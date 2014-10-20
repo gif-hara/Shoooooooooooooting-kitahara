@@ -22,8 +22,8 @@ public class CommandEventAddBGMVolume : MonoBehaviour
 
 	void OnCommandEvent()
 	{
-		OptionData.Option.AddBGMVolume( value );
+		OptionData.Settings.AddBGMVolume( value );
 		modifiedEventObject.BroadcastMessage( "OnModifiedBGMVolume" );
-		SoundManager.Instance.SetBGMVolume( OptionData.Option.BGMVolume );
+		SoundManager.Instance.SetBGMVolume( OptionData.Settings.BGMVolume );
 	}
 }
