@@ -12803,6 +12803,7 @@ GameObject:
   - 4: {fileID: 1886888867}
   - 114: {fileID: 1886888870}
   - 114: {fileID: 1886888868}
+  - 114: {fileID: 1886888869}
   m_Layer: 0
   m_Name: DecideEvent
   m_TagString: Untagged
@@ -12836,6 +12837,20 @@ MonoBehaviour:
   startEffectType: 0
   endEffectType: 0
   sceneName: SaveReplay
+--- !u!114 &1886888869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1886888866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f85762de28bfaec478edb1e5d0db3612, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeFrom: 1
+  volumeTo: 0
+  duration: 1
 --- !u!114 &1886888870
 MonoBehaviour:
   m_ObjectHideFlags: 0

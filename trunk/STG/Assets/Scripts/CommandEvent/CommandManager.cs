@@ -164,6 +164,8 @@ public class CommandManager : MonoBehaviour
 
 	private void AddCursorId( int value )
 	{
+		if( refInputEventList.Count <= 0 )	return;
+		
 		cursorId += value;
 		var max = refInputEventList.Count;
 		if( cursorId < 0 )
