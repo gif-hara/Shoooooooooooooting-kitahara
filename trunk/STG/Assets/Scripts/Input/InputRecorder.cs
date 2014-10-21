@@ -39,7 +39,7 @@ public class InputRecorder : GameMonoBehaviour
 		{
 			ReferenceManager.ReplayDataRecorder.AddFireKeyList();
 		}
-		if( MyInput.BombKeyDown )
+		if( MyInput.BombKey )
 		{
 			ReferenceManager.ReplayDataRecorder.AddSpecialKeyList();
 		}

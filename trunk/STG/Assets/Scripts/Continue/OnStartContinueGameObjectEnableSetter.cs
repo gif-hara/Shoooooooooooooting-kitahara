@@ -22,6 +22,8 @@ public class OnStartContinueGameObjectEnableSetter : MonoBehaviour
 
 	void OnStartContinue()
 	{
+		if (GameStatusInterfacer.GameMode == GameDefine.GameModeType.Replay) return;
+
 		refTarget.SetActive( isActive );
 	}
 }

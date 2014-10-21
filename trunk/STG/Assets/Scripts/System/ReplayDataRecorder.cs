@@ -19,14 +19,17 @@ public class ReplayDataRecorder : MonoBehaviour
 
 	private static ReplayData replayData;
 
-	void Start()
+	void Awake()
 	{
 		if( GameStatusInterfacer.GameMode == GameDefine.GameModeType.Replay )
 		{
 			enabled = false;
 			return;
 		}
-		replayData = new ReplayData( Random.seed, GameStatusInterfacer.PlayerId, GameStatusInterfacer.StageId, GameStatusInterfacer.Difficulty );
+		var now = System.DateTime.Now;
+		var seed = (now.Millisecond * now.Second * now.Minute) % 19911016;
+		Random.seed = seed;
+		replayData = new ReplayData( seed, GameStatusInterfacer.PlayerId, GameStatusInterfacer.StageId, GameStatusInterfacer.Difficulty );
 	}
 
 	public void AddUpKeyList()

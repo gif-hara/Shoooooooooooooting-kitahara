@@ -191,6 +191,15 @@ public class GameManager : GameMonoBehaviour
 		}
 	}
 
+	public void Continue()
+	{
+		if (GameStatusInterfacer.GameMode == GameDefine.GameModeType.Replay)
+		{
+			SceneManager.Instance.Change( SceneManager.EffectType.Fast, SceneManager.EffectType.Default, "LoadReplay" );
+			SoundManager.Instance.FadeBGM( 1, 0, 1 );
+		}
+	}
+
 	/// <summary>
 	/// デバッグで裏ステージクリアフラグを立てる.
 	/// </summary>

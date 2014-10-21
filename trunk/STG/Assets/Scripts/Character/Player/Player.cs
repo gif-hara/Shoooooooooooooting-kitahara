@@ -203,6 +203,7 @@ public class Player : GameMonoBehaviour
 	}
 	private void StartContinueCoroutine()
 	{
+		ReferenceManager.Instance.refGameManager.Continue();
 		ReferenceManager.refUILayer.BroadcastMessage( GameDefine.StartContinueMessage );
 	}
 	/// <summary>
