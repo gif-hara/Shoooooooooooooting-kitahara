@@ -29,7 +29,13 @@ public class ReplayDataRecorder : MonoBehaviour
 		var now = System.DateTime.Now;
 		var seed = (now.Millisecond * now.Second * now.Minute) % 19911016;
 		Random.seed = seed;
-		replayData = new ReplayData( seed, GameStatusInterfacer.PlayerId, GameStatusInterfacer.StageId, GameStatusInterfacer.Difficulty );
+		replayData = new ReplayData(
+			seed,
+			GameStatusInterfacer.PlayerId,
+			GameStatusInterfacer.StageId,
+			GameStatusInterfacer.Difficulty,
+			GameStatusInterfacer.PlayStyle
+			);
 	}
 
 	public void AddUpKeyList()

@@ -46,6 +46,8 @@ public class ReplayData
 
 	public GameDefine.StageType StageType{ private set; get; }
 
+	public GameDefine.PlayStyleType PlayStyle{ private set; get; }
+
 	public bool IsValid{ private set; get; }
 
 	public int Version{ private set; get; }
@@ -59,11 +61,12 @@ public class ReplayData
 		this.IsValid = false;
 	}
 
-	public ReplayData( int seed, int playerId, int stageId, GameDefine.DifficultyType difficulty )
+	public ReplayData( int seed, int playerId, int stageId, GameDefine.DifficultyType difficulty, GameDefine.PlayStyleType playStyle )
 	{
 		this.PlayerId = playerId;
 		this.StageId = stageId;
 		this.Difficulty = difficulty;
+		this.PlayStyle = playStyle;
 		this.Seed = seed;
 		this.IsValid = true;
 

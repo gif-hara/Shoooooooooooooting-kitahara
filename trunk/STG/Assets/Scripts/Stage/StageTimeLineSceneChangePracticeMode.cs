@@ -14,12 +14,13 @@ using System.Collections.Generic;
 /// </summary>
 public class StageTimeLineSceneChangePracticeMode : A_StageTimeLineActionable
 {
-	[SerializeField]
-	private string sceneName;
-
 	public override void Action ()
 	{
 		if( GameStatusInterfacer.PlayStyle != GameDefine.PlayStyleType.Practice )	return;
+
+		var sceneName = GameStatusInterfacer.GameMode == GameDefine.GameModeType.PlayerInput
+			? "SaveReplay"
+			: "LoadReplay";
 
 		SceneManager.Instance.Change( SceneManager.EffectType.Fast, SceneManager.EffectType.Default, sceneName );
 	}

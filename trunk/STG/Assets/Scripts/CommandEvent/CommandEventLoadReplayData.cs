@@ -16,6 +16,7 @@ public class CommandEventLoadReplayData : MonoBehaviour
 	{
 		var data = SaveLoad.LoadReplayData (id);
 		GameStatusInterfacer.Difficulty = data.Difficulty;
+		GameStatusInterfacer.PlayStyle = data.PlayStyle;
 		GameStatusInterfacer.PlayerId = data.PlayerId;
 		GameStatusInterfacer.ReplayId = id;
 		GameStatusInterfacer.StageId = data.StageId;
