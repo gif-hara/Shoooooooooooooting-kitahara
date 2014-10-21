@@ -44,12 +44,18 @@ namespace SaveData
 		
 		public int Life{ get{ return life; } }
 		private int life;
+
+		public const float DefaultSEVolume = 1.0f;
 		
+		public const float DefaultBGMVolume = 1.0f;
+		
+		public const int DefaultLife = 3;
+
 		public Settings()
 		{
-			seVolume = OptionData.DefaultSEVolume;
-			bgmVolume = OptionData.DefaultBGMVolume;
-			life = OptionData.DefaultLife;
+			seVolume = DefaultSEVolume;
+			bgmVolume = DefaultBGMVolume;
+			life = DefaultLife;
 		}
 		
 		public Settings( Settings other )

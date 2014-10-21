@@ -27,6 +27,12 @@ public class GameDefine : A_Singleton<GameDefine>
 		Replay,
 	}
 
+	public enum PlayStyleType : int
+	{
+		NewGame,
+		Practice,
+	}
+
 	public enum StageType : int
 	{
 		Stage1,

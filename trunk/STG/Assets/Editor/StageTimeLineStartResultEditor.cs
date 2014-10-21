@@ -18,6 +18,8 @@ public class StageTimeLineStartResultEditor : A_StageTimeLineActionEditor<StageT
 {
 	public override void OnInspectorGUI()
 	{
+		base.OnInspectorGUI ();
+
 		Enclose( "Property", () =>
 		{
 			DrawTimeLine();

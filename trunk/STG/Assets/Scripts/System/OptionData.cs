@@ -28,12 +28,6 @@ public static class OptionData
 	}
 	private static SaveData.Settings settings;
 
-	public const float DefaultSEVolume = 1.0f;
-
-	public const float DefaultBGMVolume = 1.0f;
-
-	public const int DefaultLife = 3;
-
 	public static void Default()
 	{
 		settings = new SaveData.Settings();

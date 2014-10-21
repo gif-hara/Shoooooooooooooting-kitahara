@@ -28,6 +28,8 @@ public class SaveLoad
 
 	public const string SettingsFilePath = "Save/Settings.dat";
 
+	public const string ProgressesFilePath = "Save/Progresses.dat";
+
 	public const string ReplayDataFilePathFormat = "Save/Replay{0}.dat";
 	
 	
@@ -72,6 +74,11 @@ public class SaveLoad
 	public static SaveData.Settings LoadSettings()
 	{
 		return Load<SaveData.Settings>( SettingsFilePath );
+	}
+
+	public static SaveData.Progresses LoadProgresses()
+	{
+		return Load<SaveData.Progresses>( ProgressesFilePath );
 	}
 
 	public static ReplayData LoadReplayData( int id )
@@ -148,7 +155,12 @@ public class SaveLoad
 	{
 		Save( SettingsFilePath, SaveData.Settings.Instance );
 	}
-
+	
+	public static void SaveProgresses()
+	{
+		Save( ProgressesFilePath, SaveData.Progresses.Instance );
+	}
+	
 	public static void SaveReplayData( int id, ReplayData data )
 	{
 		Save( string.Format( ReplayDataFilePathFormat, id.ToString( "00" ) ), data );
@@ -161,7 +173,7 @@ public class SaveLoad
 	/// ファイルパス
 	public static void Save (string path)
 	{
-		Debug.Log("Save");
+		Debug.Log("Save Path : " + path);
 		if(!File.Exists(path)){
 			System.IO.Directory.CreateDirectory("Save");
 		}
