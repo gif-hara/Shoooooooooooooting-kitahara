@@ -1,26 +1,24 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : CommandEventSetTitleDecideStageId.cs
+*     * FileName    : CommandEventSetPlayStyle.cs
 *
 *     * Author      : Hiroki_Kitahara.
 */
 /*===========================================================================*/
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
-public class CommandEventSetTitleDecideStageId : MonoBehaviour 
+/// <summary>
+/// .
+/// </summary>
+public class CommandEventSetPlayStyle : MonoBehaviour
 {
 	[SerializeField]
-	private int id;
+	private GameDefine.PlayStyleType playStyle;
 
 	void OnCommandEvent()
 	{
-		GameStatusInterfacer.StageId = id;
-		GameStatusInterfacer.TitleDecideStageId = id;
-	}
-
-	void OnCreatedPracticeStageElement( int id )
-	{
-		this.id = id;
+		GameStatusInterfacer.PlayStyle = playStyle;
 	}
 }

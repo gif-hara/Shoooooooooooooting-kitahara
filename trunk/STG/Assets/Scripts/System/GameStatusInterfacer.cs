@@ -52,6 +52,13 @@ public static class GameStatusInterfacer
 	private static GameDefine.GameModeType gameMode = GameDefine.GameModeType.PlayerInput;
 
 	/// <summary>
+	/// プレイスタイル.
+	/// </summary>
+	/// <value>The play style.</value>
+	public static GameDefine.PlayStyleType PlayStyle{ set{ playStyle = value; } get{ return playStyle; } }
+	private static GameDefine.PlayStyleType playStyle = GameDefine.PlayStyleType.NewGame;
+
+	/// <summary>
 	/// リトライ時に復帰するスコア.
 	/// </summary>
 	/// <value>The score.</value>

@@ -141,10 +141,10 @@ public class DebugManager : A_GUIElement
 			ReplayDataRecorder.Save( 0 );
 		});
 		
-		// ポーズトグル.
+		// 全ステージクリア.
 		KeyPush( KeyCode.L, () =>
 		        {
-			PauseManager.Instance.Toggle();
+			SaveData.Progresses.Instance.DebugAllClear();
 		});
 		
 		KeyPush( KeyCode.A, () => refPlayerStatusManager.DebugChange( 0 ) );

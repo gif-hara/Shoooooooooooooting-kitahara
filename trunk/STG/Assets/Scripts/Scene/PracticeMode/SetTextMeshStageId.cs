@@ -1,26 +1,22 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : CommandEventSetTitleDecideStageId.cs
+*     * FileName    : SetTextMeshStageId.cs
 *
 *     * Author      : Hiroki_Kitahara.
 */
 /*===========================================================================*/
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
-public class CommandEventSetTitleDecideStageId : MonoBehaviour 
+/// <summary>
+/// .
+/// </summary>
+public class SetTextMeshStageId : MonoBehaviour
 {
-	[SerializeField]
-	private int id;
-
-	void OnCommandEvent()
-	{
-		GameStatusInterfacer.StageId = id;
-		GameStatusInterfacer.TitleDecideStageId = id;
-	}
-
 	void OnCreatedPracticeStageElement( int id )
 	{
-		this.id = id;
+		var textMesh = GetComponent<TextMesh>();
+		textMesh.text = string.Format( textMesh.text, (id + 1).ToString( "00" ) );
 	}
 }

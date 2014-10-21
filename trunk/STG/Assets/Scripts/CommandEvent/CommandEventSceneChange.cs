@@ -23,9 +23,22 @@ public class CommandEventSceneChange : MonoBehaviour
 	[SerializeField]
 	private string sceneName;
 
+	[SerializeField]
+	private GameObject refConditionObject;
+
 	void OnCommandEvent( CommandManager.CommandEventData data )
 	{
-		data.LockInput();
-		SceneManager.Instance.Change( startEffectType, endEffectType, sceneName );
+		var holder = new ConditionHolder();
+		holder.IsSuccess = true;
+		if( refConditionObject != null )
+		{
+			refConditionObject.SendMessage( ConditionHolder.ConditionMessage, holder );
+		}
+
+		if( holder.IsSuccess )
+		{
+			data.LockInput();
+			SceneManager.Instance.Change( startEffectType, endEffectType, sceneName );
+		}
 	}
 }
