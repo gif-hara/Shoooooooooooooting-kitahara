@@ -10,7 +10,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 /// <summary>
-/// .
+/// リトライ時に使われている.
 /// </summary>
 public class CommandEventSetStageIdTitleDecideId : MonoBehaviour
 {

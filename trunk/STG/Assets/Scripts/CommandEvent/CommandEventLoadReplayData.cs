@@ -1,6 +1,6 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : CommandEventPlaySE.cs
+*     * FileName    : CommandEventLoadReplayData.cs
 *
 *     * Author      : Hiroki_Kitahara.
 */
