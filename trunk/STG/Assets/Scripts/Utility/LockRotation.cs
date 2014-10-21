@@ -20,7 +20,7 @@ public class LockRotation : MonoBehaviour
 	{
 	}
 
-	void Update()
+	void LateUpdate()
 	{
 		transform.rotation = Quaternion.Euler( origin );
 	}

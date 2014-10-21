@@ -43,7 +43,7 @@ public class iTweenPathEditor : A_EditorMonoBehaviour<iTweenPath>
 		//exploration segment count control:
 		EditorGUILayout.BeginHorizontal();
 		EditorGUILayout.PrefixLabel("Node Count");
-		Target.nodeCount =  Mathf.Clamp(EditorGUILayout.IntSlider(Target.nodeCount, 0, 10), 2,100);
+		Target.nodeCount =  Mathf.Clamp(EditorGUILayout.IntSlider(Target.nodeCount, 0, 1000), 2,100);
 		EditorGUILayout.EndHorizontal();
 		
 		//add node?
