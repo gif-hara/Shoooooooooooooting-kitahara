@@ -82,6 +82,7 @@ public class CommandManager : MonoBehaviour
 		}
 	}
 
+	public int CursorId{ get{ return this.cursorId; } }
 	[SerializeField]
 	private int cursorId;
 
@@ -105,6 +106,11 @@ public class CommandManager : MonoBehaviour
 	void Update ()
 	{
 		UpdateCursorId();
+	}
+
+	public void AddInputEvent( InputEvent inputEvent )
+	{
+		this.refInputEventList.Add( inputEvent );
 	}
 
 	public void SetCursorId( int value )
@@ -158,6 +164,8 @@ public class CommandManager : MonoBehaviour
 
 	private void AddCursorId( int value )
 	{
+		if( refInputEventList.Count <= 0 )	return;
+		
 		cursorId += value;
 		var max = refInputEventList.Count;
 		if( cursorId < 0 )

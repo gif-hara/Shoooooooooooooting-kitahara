@@ -1,6 +1,6 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : BGMVolumeTextSetter.cs
+*     * FileName    : CommandEventSaveReplayData.cs
 *
 *     * Author      : Hiroki_Kitahara.
 */
@@ -12,17 +12,15 @@ using System.Collections.Generic;
 /// <summary>
 /// .
 /// </summary>
-public class BGMVolumeTextSetter : MonoBehaviour
+public class CommandEventSaveReplayData : MonoBehaviour
 {
-	[SerializeField]
-	private TextMesh refTextMesh;
-
-	void Start()
+	private int id;
+	void OnCreatedReplayListElement( int id )
 	{
-		OnModifiedBGMVolume();
+		this.id = id;
 	}
-	void OnModifiedBGMVolume()
+	void OnCommandEvent()
 	{
-		refTextMesh.text = OptionData.Settings.BGMVolume.ToString( "0.0" );
+		ReplayDataRecorder.Save( id );
 	}
 }

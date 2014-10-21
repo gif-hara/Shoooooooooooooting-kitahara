@@ -22,8 +22,8 @@ public class CommandEventAddSEVolume : MonoBehaviour
 
 	void OnCommandEvent()
 	{
-		OptionData.Option.AddSEVolume( value );
+		OptionData.Settings.AddSEVolume( value );
 		modifiedEventObject.BroadcastMessage( "OnModifiedSEVolume" );
-		SoundManager.Instance.SetSEVolume( OptionData.Option.SEVolume );
+		SoundManager.Instance.SetSEVolume( OptionData.Settings.SEVolume );
 	}
 }

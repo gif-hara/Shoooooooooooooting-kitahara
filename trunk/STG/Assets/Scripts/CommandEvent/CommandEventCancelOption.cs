@@ -1,4 +1,4 @@
-﻿/*===========================================================================*/
+/*===========================================================================*/
 /*
 *     * FileName    : CommandEventCancelOption.cs
 *
@@ -16,7 +16,7 @@ public class CommandEventCancelOption : MonoBehaviour
 {
 	void OnCommandEvent()
 	{
-		SoundManager.Instance.SetSEVolume( SaveLoad.Data.option.SEVolume );
-		SoundManager.Instance.SetBGMVolume( SaveLoad.Data.option.BGMVolume );
+		SoundManager.Instance.SetSEVolume( SaveData.Settings.Instance.SEVolume );
+		SoundManager.Instance.SetBGMVolume( SaveData.Settings.Instance.BGMVolume );
 	}
 }

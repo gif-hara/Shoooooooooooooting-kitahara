@@ -1,6 +1,6 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : BGMVolumeTextSetter.cs
+*     * FileName    : CommandEventHolder.cs
 *
 *     * Author      : Hiroki_Kitahara.
 */
@@ -12,17 +12,9 @@ using System.Collections.Generic;
 /// <summary>
 /// .
 /// </summary>
-public class BGMVolumeTextSetter : MonoBehaviour
+public class CommandEventHolder : MonoBehaviour
 {
+	public CommandManager.InputEvent InputEvent{ get{ return refData; } }
 	[SerializeField]
-	private TextMesh refTextMesh;
-
-	void Start()
-	{
-		OnModifiedBGMVolume();
-	}
-	void OnModifiedBGMVolume()
-	{
-		refTextMesh.text = OptionData.Settings.BGMVolume.ToString( "0.0" );
-	}
+	private CommandManager.InputEvent refData;
 }

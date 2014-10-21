@@ -10057,7 +10057,7 @@ MonoBehaviour:
   stageId: 0
   playerId: 1
   replayId: 0
-  gameMode: 1
+  gameMode: 0
 --- !u!1 &1499841363
 GameObject:
   m_ObjectHideFlags: 0
@@ -12802,8 +12802,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 1886888867}
   - 114: {fileID: 1886888870}
-  - 114: {fileID: 1886888869}
   - 114: {fileID: 1886888868}
+  - 114: {fileID: 1886888869}
   m_Layer: 0
   m_Name: DecideEvent
   m_TagString: Untagged
@@ -12831,11 +12831,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1886888866}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b5417287f32215428cdba4a1903dff1, type: 3}
+  m_Script: {fileID: 11500000, guid: cde6159592628ed4b99dafeed22b38f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  refTarget: {fileID: 0}
-  isActive: 1
+  startEffectType: 0
+  endEffectType: 0
+  sceneName: SaveReplay
 --- !u!114 &1886888869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12844,11 +12845,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1886888866}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b5417287f32215428cdba4a1903dff1, type: 3}
+  m_Script: {fileID: 11500000, guid: f85762de28bfaec478edb1e5d0db3612, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  refTarget: {fileID: 242302324}
-  isActive: 0
+  volumeFrom: 1
+  volumeTo: 0
+  duration: 1
 --- !u!114 &1886888870
 MonoBehaviour:
   m_ObjectHideFlags: 0

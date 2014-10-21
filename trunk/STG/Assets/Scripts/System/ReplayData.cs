@@ -35,12 +35,39 @@ public class ReplayData
 
 	public List<int> ShiftKeyList{ get{ return InputShiftKeyList; } }
 	private List<int> InputShiftKeyList = new List<int>();
-
+	
 	public int Seed{ private set; get; }
 
-	public ReplayData( int seed )
+	public int PlayerId{ private set; get; }
+
+	public int StageId{ private set; get; }
+
+	public GameDefine.DifficultyType Difficulty{ private set; get; }
+
+	public GameDefine.StageType StageType{ private set; get; }
+
+	public bool IsValid{ private set; get; }
+
+	public int Version{ private set; get; }
+
+	public long TimeStamp{ private set; get; }
+
+	public const int Capacity = 30;
+
+	public ReplayData()
 	{
+		this.IsValid = false;
+	}
+
+	public ReplayData( int seed, int playerId, int stageId, GameDefine.DifficultyType difficulty )
+	{
+		this.PlayerId = playerId;
+		this.StageId = stageId;
+		this.Difficulty = difficulty;
 		this.Seed = seed;
+		this.IsValid = true;
+
+		this.Version = 100;
 	}
 
 	public void AddUpKeyList( int frameCount )
@@ -70,6 +97,12 @@ public class ReplayData
 	public void AddShiftKeyList( int frameCount )
 	{
 		InputShiftKeyList.Add( frameCount );
+	}
+
+	public void End( GameDefine.StageType stageType )
+	{
+		this.StageType = stageType;
+		this.TimeStamp = System.DateTime.Now.Ticks;
 	}
 
 	public override string ToString ()

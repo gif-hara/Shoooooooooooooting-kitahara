@@ -22,7 +22,7 @@ public class CommandEventAddLifeVolume : MonoBehaviour
 
 	void OnCommandEvent()
 	{
-		OptionData.Option.AddLifeVolume( value );
+		OptionData.Settings.AddLifeVolume( value );
 		modifiedEventObject.BroadcastMessage( "OnModifiedLife" );
 	}
 }

@@ -1,4 +1,4 @@
-﻿/*===========================================================================*/
+/*===========================================================================*/
 /*
 *     * FileName    : OptionData.cs
 *
@@ -14,19 +14,19 @@ using System.Collections.Generic;
 /// </summary>
 public static class OptionData
 {
-	public static SaveLoad.Option Option
+	public static SaveData.Settings Settings
 	{
 		get
 		{
-			if( option == null )
+			if( settings == null )
 			{
-				option = new SaveLoad.Option( SaveLoad.Data.option );
+				settings = new SaveData.Settings( SaveData.Settings.Instance );
 			}
 
-			return option;
+			return settings;
 		}
 	}
-	private static SaveLoad.Option option;
+	private static SaveData.Settings settings;
 
 	public const float DefaultSEVolume = 1.0f;
 
@@ -36,11 +36,11 @@ public static class OptionData
 
 	public static void Default()
 	{
-		option = new SaveLoad.Option();
+		settings = new SaveData.Settings();
 	}
 
 	public static void Remove()
 	{
-		option = null;
+		settings = null;
 	}
 }

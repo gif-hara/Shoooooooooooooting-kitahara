@@ -1,4 +1,4 @@
-﻿/*===========================================================================*/
+/*===========================================================================*/
 /*
 *     * FileName    : CommandEventSaveOption.cs
 *
@@ -16,7 +16,7 @@ public class CommandEventSaveOption : MonoBehaviour
 {
 	void OnCommandEvent()
 	{
-		SaveLoad.Data.option = OptionData.Option;
-		SaveLoad.Save();
+		SaveData.Settings.Instance.Apply( OptionData.Settings );
+		SaveLoad.SaveSettings();
 	}
 }

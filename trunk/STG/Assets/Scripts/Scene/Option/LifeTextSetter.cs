@@ -23,6 +23,6 @@ public class LifeTextSetter : MonoBehaviour
 	}
 	void OnModifiedLife()
 	{
-		refTextMesh.text = OptionData.Option.Life.ToString();
+		refTextMesh.text = OptionData.Settings.Life.ToString();
 	}
 }

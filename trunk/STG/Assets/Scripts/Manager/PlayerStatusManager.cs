@@ -1,4 +1,4 @@
-﻿/*===========================================================================*/
+/*===========================================================================*/
 /*
 *     * FileName    :PlayerStatusManager.cs
 *
@@ -172,7 +172,7 @@ public class PlayerStatusManager : GameMonoBehaviour
 
 	public void Continue()
 	{
-		this.life = SaveLoad.Data.option.Life;
+		this.life = SaveData.Settings.Instance.Life;
 		this.extendCount = 0;
 	}
 

@@ -17,7 +17,7 @@ public class ReplayDataRecorder : MonoBehaviour
 	[SerializeField]
 	private FrameCountRecorder refFrameCountRecorder;
 
-	private ReplayData replayData;
+	private static ReplayData replayData;
 
 	void Start()
 	{
@@ -26,7 +26,7 @@ public class ReplayDataRecorder : MonoBehaviour
 			enabled = false;
 			return;
 		}
-		replayData = new ReplayData( Random.seed );
+		replayData = new ReplayData( Random.seed, GameStatusInterfacer.PlayerId, GameStatusInterfacer.StageId, GameStatusInterfacer.Difficulty );
 	}
 
 	public void AddUpKeyList()
@@ -58,10 +58,9 @@ public class ReplayDataRecorder : MonoBehaviour
 		replayData.AddShiftKeyList( refFrameCountRecorder.CurrentFrameCount );
 	}
 
-	public void Save( int id )
+	public static void Save( int id )
 	{
-		var saveData = SaveLoad.Data;
-		saveData.replayDataList.Set( id, replayData );
-		SaveLoad.Save();
+		replayData.End( GameDefine.StageType.Stage1 );
+		SaveLoad.SaveReplayData( id, replayData );
 	}
 }

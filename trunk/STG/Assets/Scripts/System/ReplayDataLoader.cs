@@ -69,7 +69,7 @@ public class ReplayDataLoader : GameMonoBehaviour
 			return;
 		}
 
-		replayData = SaveLoad.Data.replayDataList[GameStatusInterfacer.ReplayId];
+		replayData = SaveLoad.LoadReplayData( GameStatusInterfacer.ReplayId );
 		Random.seed = replayData.Seed;
 		upKeyFrameLoader.Read( replayData.UpKeyList );
 		downKeyFrameLoader.Read( replayData.DownKeyList );
