@@ -122,29 +122,29 @@ public class CommandManager : MonoBehaviour
 
 	private void UpdateCursorId()
 	{
-		if( Input.GetKeyDown( KeyCode.UpArrow ) )
+		if( MyInput.UpKeyDown )
 		{
 			AddCursorId( -1 );
 			SoundManager.Instance.Play( "CursorSelect" );
 		}
-		if( Input.GetKeyDown( KeyCode.DownArrow ) )
+		if( MyInput.DownKeyDown )
 		{
 			AddCursorId( 1 );
 			SoundManager.Instance.Play( "CursorSelect" );
 		}
-		if( Input.GetKeyDown( KeyCode.LeftArrow ) )
+		if( MyInput.LeftKeyDown )
 		{
 			ExecuteEvent( refInputEventList[cursorId].LeftEventExecute );
 		}
-		if( Input.GetKeyDown( KeyCode.RightArrow ) )
+		if( MyInput.RightKeyDown )
 		{
 			ExecuteEvent( refInputEventList[cursorId].RightEventExecute );
 		}
-		if( Input.GetKeyDown( KeyCode.Z ) )
+		if( MyInput.FireKeyDown )
 		{
 			ExecuteEvent( refInputEventList[cursorId].DecideEventExecute );
 		}
-		if( Input.GetKeyDown( KeyCode.X ) )
+		if( MyInput.BombKeyDown )
 		{
 			var data = new CommandEventData();
 			refCancelEventObject.BroadcastMessage( InputEvent.CommandEventMessage, data );

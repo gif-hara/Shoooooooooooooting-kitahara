@@ -20,7 +20,7 @@ public class InputTogglePause : MonoBehaviour
 
 	void Update ()
 	{
-		if( Input.GetKeyDown( KeyCode.Escape ) )
+		if( MyInput.PauseKeyDown )
 		{
 			PauseManager.Instance.Toggle();
 			string message = PauseManager.Instance.IsPause

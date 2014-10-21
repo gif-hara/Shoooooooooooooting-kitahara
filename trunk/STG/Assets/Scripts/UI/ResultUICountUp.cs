@@ -57,7 +57,7 @@ public class ResultUICountUp : ResultUIEffectExecuter
 			refResultManager.SendMessage( ResultUIManager.CompleteMessage );
 			return;
 		}
-		if( Input.GetKeyDown( KeyCode.Z ) )
+		if( IsSkip )
 		{
 			var sub = targetCount - currentCount;
 			currentCount = targetCount;
@@ -73,5 +73,23 @@ public class ResultUICountUp : ResultUIEffectExecuter
 
 	protected virtual void CountUpped( int addedValue )
 	{
+	}
+
+	private bool IsSkip
+	{
+		get
+		{
+			if( GameStatusInterfacer.GameMode == GameDefine.GameModeType.PlayerInput )
+			{
+				return MyInput.FireKeyDown;
+			}
+			else if( GameStatusInterfacer.GameMode == GameDefine.GameModeType.Replay )
+			{
+				return ReferenceManager.ReplayDataLoader.CanInputFireKey( ReferenceManager.FrameCountRecorder.CurrentFrameCount );
+			}
+			
+			Debug.LogError( "GameMode Exception Error." );
+			return false;
+		}
 	}
 }

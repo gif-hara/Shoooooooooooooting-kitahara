@@ -39,7 +39,7 @@ public class InputChangeChaseGameObject : MonoBehaviour
 
 	private void InputShift()
 	{
-		if( Input.GetKey( KeyCode.LeftShift ) )
+		if( MyInput.ShiftKey )
 		{
 			refChaseGameObject.refChaseObject = refShiftChaseObject;
 		}

@@ -21,7 +21,7 @@ public class InputShot : GameMonoBehaviour
 	{
 		if( PauseManager.Instance.IsPause )	return;
 		
-		if( !Input.GetKey( KeyCode.Z ) )	return;
+		if( !MyInput.FireKey )	return;
 
 		refPlayerShotFireList.ForEach( p => p.Fire() );
 	}

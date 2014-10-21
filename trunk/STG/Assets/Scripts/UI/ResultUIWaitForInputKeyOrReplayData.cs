@@ -1,6 +1,6 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : ResultUIWaitForInputKey.cs
+*     * FileName    : ResultUIWaitForInputKeyOrReplayData.cs
 *
 *     * Author      : Hiroki_Kitahara.
 */
@@ -12,7 +12,7 @@ using System.Collections.Generic;
 /// <summary>
 /// .
 /// </summary>
-public class ResultUIWaitForInputKey : ResultUIEffectExecuter
+public class ResultUIWaitForInputKeyOrReplayData : ResultUIEffectExecuter
 {
 	[SerializeField]
 	private GameObject refResultManager;
@@ -28,7 +28,7 @@ public class ResultUIWaitForInputKey : ResultUIEffectExecuter
 			return;
 		}
 
-		if( Input.GetKeyDown( KeyCode.Z ) )
+		if( EndWait )
 		{
 			refResultManager.SendMessage( ResultUIManager.CompleteMessage );
 			isUpdate = false;
@@ -38,5 +38,23 @@ public class ResultUIWaitForInputKey : ResultUIEffectExecuter
 	protected override void Action ()
 	{
 		isUpdate = true;
+	}
+
+	private bool EndWait
+	{
+		get
+		{
+			if( GameStatusInterfacer.GameMode == GameDefine.GameModeType.PlayerInput )
+			{
+				return MyInput.FireKeyDown;
+			}
+			else if( GameStatusInterfacer.GameMode == GameDefine.GameModeType.Replay )
+			{
+				return ReferenceManager.ReplayDataLoader.CanInputFireKey( ReferenceManager.FrameCountRecorder.CurrentFrameCount );
+			}
+
+			Debug.LogError( "GameMode Exception Error." );
+			return false;
+		}
 	}
 }

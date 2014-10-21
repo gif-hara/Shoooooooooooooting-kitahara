@@ -44,7 +44,7 @@ public class InputChangeSpeed : MonoBehaviour
 
 	private void InputShift()
 	{
-		if( Input.GetKey( KeyCode.LeftShift ) )
+		if( MyInput.ShiftKey )
 		{
 			refObjectMove.ChangeSpeed( shiftSpeed );
 		}

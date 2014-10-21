@@ -36,19 +36,19 @@ public class InputMove : GameMonoBehaviour
 
 	private void InputArrow()
 	{
-		if( Input.GetButton( "Up" ) || Input.GetKey( KeyCode.UpArrow ) )
+		if( MyInput.UpKey )
 		{
 			refObjectMove.Up();
 		}
-		else if( Input.GetButton( "Down" ) || Input.GetKey( KeyCode.DownArrow ) )
+		else if( MyInput.DownKey )
 		{
 			refObjectMove.Down();
 		}
-		if( Input.GetButton( "Left" ) || Input.GetKey( KeyCode.LeftArrow ) )
+		if( MyInput.LeftKey )
 		{
 			refObjectMove.Left();
 		}
-		else if( Input.GetButton( "Right" ) || Input.GetKey( KeyCode.RightArrow ) )
+		else if( MyInput.RightKey )
 		{
 			refObjectMove.Right();
 		}

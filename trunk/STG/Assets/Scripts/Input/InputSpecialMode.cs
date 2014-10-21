@@ -37,7 +37,7 @@ public class InputSpecialMode : MonoBehaviour
 
 	private void UpdateIsValid()
 	{
-		if( Input.GetKeyDown( KeyCode.X ) )
+		if( MyInput.BombKeyDown )
 		{
 			refPlayer.StartSpecialMode();
 		}

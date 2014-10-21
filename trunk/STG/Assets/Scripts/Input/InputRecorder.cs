@@ -19,31 +19,31 @@ public class InputRecorder : GameMonoBehaviour
 		if( GameStatusInterfacer.GameMode == GameDefine.GameModeType.Replay )	return;
 		if( PauseManager.Instance.IsPause )	return;
 		
-		if( Input.GetKey( KeyCode.UpArrow ) )
+		if( MyInput.UpKey )
 		{
 			ReferenceManager.ReplayDataRecorder.AddUpKeyList();
 		}
-		else if( Input.GetKey( KeyCode.DownArrow ) )
+		else if( MyInput.DownKey )
 		{
 			ReferenceManager.ReplayDataRecorder.AddDownKeyList();
 		}
-		if( Input.GetKey( KeyCode.LeftArrow ) )
+		if( MyInput.LeftKey )
 		{
 			ReferenceManager.ReplayDataRecorder.AddLeftKeyList();
 		}
-		else if( Input.GetKey( KeyCode.RightArrow ) )
+		else if( MyInput.RightKey )
 		{
 			ReferenceManager.ReplayDataRecorder.AddRightKeyList();
 		}
-		if( Input.GetKey( KeyCode.Z ) )
+		if( MyInput.FireKey )
 		{
 			ReferenceManager.ReplayDataRecorder.AddFireKeyList();
 		}
-		if( Input.GetKeyDown( KeyCode.X ) )
+		if( MyInput.BombKeyDown )
 		{
 			ReferenceManager.ReplayDataRecorder.AddSpecialKeyList();
 		}
-		if( Input.GetKey( KeyCode.LeftShift ) )
+		if( MyInput.ShiftKey )
 		{
 			ReferenceManager.ReplayDataRecorder.AddShiftKeyList();
 		}

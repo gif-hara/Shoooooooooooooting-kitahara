@@ -39,7 +39,7 @@ public class InputChangeSyncRotation : MonoBehaviour
 	
 	private void InputShift()
 	{
-		if( Input.GetKey( KeyCode.LeftShift ) )
+		if( MyInput.ShiftKey )
 		{
 			refSyncRotation.ChangeTarget( refShiftSyncRotationObject );
 		}
