@@ -14,6 +14,7 @@ using System.Collections.Generic;
 /// <summary>
 /// .
 /// </summary>
+[ExecuteInEditMode()]
 public class BackgroundCamera : MonoBehaviour
 {
 	[SerializeField]
@@ -24,6 +25,15 @@ public class BackgroundCamera : MonoBehaviour
 
 	[SerializeField]
 	private int duration;
+
+	[SerializeField]
+	private iTween.LoopType loopType = iTween.LoopType.loop;
+
+	[SerializeField]
+	private iTweenPath path;
+
+	[SerializeField][Range( 0, 1 )]
+	private float debugRange;
 
 	private Vector3 oldPosition;
 
@@ -38,7 +48,7 @@ public class BackgroundCamera : MonoBehaviour
 			"oncompletetarget", gameObject,
 			"oncomplete", "OnComplete",
 			"easetype", iTween.EaseType.animationCurve,
-			"looptype", iTween.LoopType.loop
+			"looptype", loopType
 			)
 		              );
 		gameObject.GetComponent<iTween>().curve = curve;
@@ -48,6 +58,13 @@ public class BackgroundCamera : MonoBehaviour
 	
 	void LateUpdate ()
 	{
+		if( !Application.isPlaying && path != null )
+		{
+			var pos = iTween.Interp( path.nodes.ToArray(), debugRange );
+			var next = iTween.Interp( path.nodes.ToArray(), debugRange + 0.01f );
+			transform.localRotation = Quaternion.LookRotation( next - pos );
+			transform.localPosition = pos;
+		}
 		if( transform.localPosition == oldPosition )	return;
 
 		transform.localRotation = Quaternion.LookRotation( transform.localPosition - oldPosition );

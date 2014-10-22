@@ -6694,7 +6694,7 @@ public class iTween : MonoBehaviour{
 	}
 	
 	//andeeee from the Unity forum's steller Catmull-Rom class ( http://forum.unity3d.com/viewtopic.php?p=218400#218400 ):
-	private static Vector3 Interp(Vector3[] pts, float t){
+	public static Vector3 Interp(Vector3[] pts, float t){
 		int numSections = pts.Length - 3;
 		int currPt = Mathf.Min(Mathf.FloorToInt(t * (float) numSections), numSections - 1);
 		float u = t * (float) numSections - (float) currPt;
