@@ -23,6 +23,9 @@ public class AddRotationToCurve : GameMonoBehaviour
 	[SerializeField]
 	private AnimationCurve curve;
 
+	[SerializeField]
+	private bool isLoop;
+
 	private Quaternion initialRotation;
 
 	private Quaternion toRotation;
@@ -48,6 +51,17 @@ public class AddRotationToCurve : GameMonoBehaviour
 		
 		this.Trans.localRotation = Quaternion.Lerp( initialRotation, toRotation, curve.Evaluate( (float)this.currentDuration / this.duration ) );
 		currentDuration++;
-		currentDuration = currentDuration > duration ? duration : currentDuration;
+
+		if ( !isLoop )
+		{
+			currentDuration = currentDuration > duration ? duration : currentDuration;
+		}
+		else
+		{
+			if( currentDuration > duration )
+			{
+				currentDuration = 0;
+			}
+		}
 	}
 }
