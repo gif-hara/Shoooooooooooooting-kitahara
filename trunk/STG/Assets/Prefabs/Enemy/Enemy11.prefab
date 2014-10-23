@@ -714,8 +714,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400076}
+  - 114: {fileID: 11400520}
   m_Layer: 0
-  m_Name: BarrageList
+  m_Name: MuzzleList
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -735,7 +736,6 @@ GameObject:
   - 114: {fileID: 11400180}
   - 114: {fileID: 11400178}
   - 114: {fileID: 11400160}
-  - 114: {fileID: 11400486}
   m_Layer: 0
   m_Name: Muzzle_Left0
   m_TagString: Untagged
@@ -1123,7 +1123,6 @@ GameObject:
   - 114: {fileID: 11400320}
   - 114: {fileID: 11400434}
   - 114: {fileID: 11400466}
-  - 114: {fileID: 11400488}
   m_Layer: 0
   m_Name: CenterMuzzle0
   m_TagString: Untagged
@@ -2232,7 +2231,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 60
   currentSeparate: 0
-  awakeFreeze: 1
+  awakeFreeze: 0
   freezedInterval: 120
 --- !u!114 &11400004
 MonoBehaviour:
@@ -2659,7 +2658,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 60
   currentSeparate: 0
-  awakeFreeze: 1
+  awakeFreeze: 0
   freezedInterval: 120
 --- !u!114 &11400032
 MonoBehaviour:
@@ -2700,7 +2699,7 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   shotId: 1
   speed: 8
-  interval: 60
+  interval: 0
   number: 3
   range: 7
   multipleNum: 1
@@ -3031,7 +3030,7 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   shotId: 0
   speed: 8
-  interval: 60
+  interval: 0
   number: 3
   range: 7
   multipleNum: 1
@@ -3242,7 +3241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   id: -1
-  hp: 2200
+  hp: 1800
   addScore: 100
   addGameLevelExperience: 10
   invincibleTimer: 10
@@ -3286,7 +3285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   id: -1
-  hp: 2200
+  hp: 1800
   addScore: 100
   addGameLevelExperience: 10
   invincibleTimer: 10
@@ -3488,7 +3487,7 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   shotId: 1
   speed: 8
-  interval: 60
+  interval: 0
   number: 3
   range: 7
   multipleNum: 1
@@ -3707,7 +3706,7 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   shotId: 0
   speed: 8
-  interval: 60
+  interval: 0
   number: 3
   range: 7
   multipleNum: 1
@@ -3796,7 +3795,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 60
   currentSeparate: 0
-  awakeFreeze: 1
+  awakeFreeze: 0
   freezedInterval: 120
 --- !u!114 &11400124
 MonoBehaviour:
@@ -3961,7 +3960,7 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   shotId: 0
   speed: 8
-  interval: 60
+  interval: 0
   number: 3
   range: 7
   multipleNum: 1
@@ -4127,7 +4126,7 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   shotId: 0
   speed: 8
-  interval: 60
+  interval: 0
   number: 3
   range: 7
   multipleNum: 1
@@ -4413,7 +4412,7 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   shotId: 1
   speed: 8
-  interval: 60
+  interval: 0
   number: 3
   range: 7
   multipleNum: 1
@@ -5814,7 +5813,7 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   shotId: 1
   speed: 8
-  interval: 60
+  interval: 0
   number: 3
   range: 7
   multipleNum: 1
@@ -6074,7 +6073,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 60
   currentSeparate: 0
-  awakeFreeze: 1
+  awakeFreeze: 0
   freezedInterval: 120
 --- !u!114 &11400286
 MonoBehaviour:
@@ -6215,7 +6214,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 60
   currentSeparate: 0
-  awakeFreeze: 1
+  awakeFreeze: 0
   freezedInterval: 120
 --- !u!114 &11400296
 MonoBehaviour:
@@ -6352,7 +6351,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 60
   currentSeparate: 0
-  awakeFreeze: 1
+  awakeFreeze: 0
   freezedInterval: 120
 --- !u!114 &11400306
 MonoBehaviour:
@@ -6493,7 +6492,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 60
   currentSeparate: 0
-  awakeFreeze: 1
+  awakeFreeze: 0
   freezedInterval: 120
 --- !u!114 &11400316
 MonoBehaviour:
@@ -7868,7 +7867,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 60
   currentSeparate: 0
-  awakeFreeze: 1
+  awakeFreeze: 0
   freezedInterval: 120
 --- !u!114 &11400418
 MonoBehaviour:
@@ -8326,7 +8325,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 40
   currentSeparate: 0
-  awakeFreeze: 1
+  awakeFreeze: 0
   freezedInterval: 150
 --- !u!114 &11400454
 MonoBehaviour:
@@ -8353,7 +8352,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 40
   currentSeparate: 0
-  awakeFreeze: 1
+  awakeFreeze: 0
   freezedInterval: 150
 --- !u!114 &11400456
 MonoBehaviour:
@@ -8380,7 +8379,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 40
   currentSeparate: 0
-  awakeFreeze: 1
+  awakeFreeze: 0
   freezedInterval: 150
 --- !u!114 &11400458
 MonoBehaviour:
@@ -8407,7 +8406,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 40
   currentSeparate: 0
-  awakeFreeze: 1
+  awakeFreeze: 0
   freezedInterval: 120
 --- !u!114 &11400460
 MonoBehaviour:
@@ -8434,7 +8433,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 40
   currentSeparate: 0
-  awakeFreeze: 1
+  awakeFreeze: 0
   freezedInterval: 120
 --- !u!114 &11400462
 MonoBehaviour:
@@ -8461,7 +8460,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 40
   currentSeparate: 0
-  awakeFreeze: 1
+  awakeFreeze: 0
   freezedInterval: 120
 --- !u!114 &11400464
 MonoBehaviour:
@@ -8488,7 +8487,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 40
   currentSeparate: 0
-  awakeFreeze: 1
+  awakeFreeze: 0
   freezedInterval: 120
 --- !u!114 &11400466
 MonoBehaviour:
@@ -8515,7 +8514,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 40
   currentSeparate: 0
-  awakeFreeze: 1
+  awakeFreeze: 0
   freezedInterval: 120
 --- !u!114 &11400468
 MonoBehaviour:
@@ -8542,7 +8541,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 40
   currentSeparate: 0
-  awakeFreeze: 1
+  awakeFreeze: 0
   freezedInterval: 150
 --- !u!114 &11400470
 MonoBehaviour:
@@ -8808,83 +8807,6 @@ MonoBehaviour:
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
---- !u!114 &11400486
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70fa5b7aaa0e46e448e7ddccef816514, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cachedTransform: {fileID: 0}
-  setType: 0
-  enableTuning: 1
-  element:
-    min: 0
-    max: 0
-    current: 0
-    curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-  separate: 100
-  currentSeparate: 0
-  refCreator:
-  - {fileID: 11400382}
-  - {fileID: 11400312}
-  - {fileID: 11400028}
-  - {fileID: 11400302}
-  - {fileID: 11400004}
-  - {fileID: 11400286}
-  - {fileID: 11400094}
-  - {fileID: 11400296}
-  - {fileID: 11400418}
-  - {fileID: 11400384}
-  - {fileID: 11400368}
-  - {fileID: 11400398}
-  - {fileID: 11400400}
-  - {fileID: 11400366}
-  - {fileID: 11400410}
-  - {fileID: 11400356}
-  - {fileID: 11400422}
---- !u!114 &11400488
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100114}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70fa5b7aaa0e46e448e7ddccef816514, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cachedTransform: {fileID: 0}
-  setType: 0
-  enableTuning: 1
-  element:
-    min: 0
-    max: 0
-    current: 0
-    curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-  separate: 40
-  currentSeparate: 0
-  refCreator:
-  - {fileID: 11400266}
-  - {fileID: 11400100}
-  - {fileID: 11400056}
-  - {fileID: 11400148}
-  - {fileID: 11400134}
-  - {fileID: 11400168}
-  - {fileID: 11400034}
-  - {fileID: 11400116}
 --- !u!114 &11400490
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9018,6 +8940,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   delay: 60
+  ignorePause: 0
   refTargetList:
   - {fileID: 100040}
   - {fileID: 100024}
@@ -9097,6 +9020,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   bossType: 1
+--- !u!114 &11400520
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2514b3dd0cd993c41a34067253c4eeac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  id: 0
+  delay: 60
+  refMuzzleList:
+  - {fileID: 100080}
+  - {fileID: 100012}
+  waitList: 3c0000003c000000
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1

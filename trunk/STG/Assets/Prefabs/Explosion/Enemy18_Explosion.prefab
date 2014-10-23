@@ -14,7 +14,6 @@ GameObject:
   - 114: {fileID: 11400012}
   - 114: {fileID: 11400010}
   - 114: {fileID: 11400008}
-  - 114: {fileID: 11400006}
   - 114: {fileID: 11400004}
   - 114: {fileID: 11400000}
   m_Layer: 0
@@ -1641,9 +1640,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   delay: 0
+  ignorePause: 0
   from: {r: 1, g: 1, b: 1, a: 1}
   to: {r: 1, g: 1, b: 1, a: 0}
   duration: 30
+  layerMaskName: EffectLv4
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1660,6 +1661,8 @@ MonoBehaviour:
   duration: 180
   from: {r: 1, g: 1, b: 1, a: 1}
   to: {r: 1, g: 0, b: 0, a: 1}
+  refCompleteEventReceiver: {fileID: 0}
+  completeFunctionName: 
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1677,22 +1680,6 @@ MonoBehaviour:
   delay: 0
   duration: 200
   speed: 1
---- !u!114 &11400006
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32e927b1ceda44b42964d3dedf641609, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cachedTransform: {fileID: 0}
-  delay: 200
-  from: {r: 1, g: 1, b: 1, a: 1}
-  to: {r: 1, g: 1, b: 1, a: 0}
-  duration: 180
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1806,6 +1793,8 @@ MonoBehaviour:
   duration: 180
   from: {r: 1, g: 1, b: 1, a: 1}
   to: {r: 1, g: 0, b: 0, a: 1}
+  refCompleteEventReceiver: {fileID: 0}
+  completeFunctionName: 
 --- !u!114 &11400022
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1822,6 +1811,8 @@ MonoBehaviour:
   duration: 180
   from: {r: 1, g: 1, b: 1, a: 1}
   to: {r: 1, g: 0, b: 0, a: 1}
+  refCompleteEventReceiver: {fileID: 0}
+  completeFunctionName: 
 --- !u!114 &11400024
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1838,6 +1829,8 @@ MonoBehaviour:
   duration: 180
   from: {r: 1, g: 1, b: 1, a: 1}
   to: {r: 1, g: 0, b: 0, a: 1}
+  refCompleteEventReceiver: {fileID: 0}
+  completeFunctionName: 
 --- !u!114 &11400026
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1854,6 +1847,8 @@ MonoBehaviour:
   duration: 180
   from: {r: 1, g: 1, b: 1, a: 1}
   to: {r: 1, g: 0, b: 0, a: 1}
+  refCompleteEventReceiver: {fileID: 0}
+  completeFunctionName: 
 --- !u!114 &11400028
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1870,6 +1865,8 @@ MonoBehaviour:
   duration: 180
   from: {r: 1, g: 1, b: 1, a: 1}
   to: {r: 1, g: 0, b: 0, a: 1}
+  refCompleteEventReceiver: {fileID: 0}
+  completeFunctionName: 
 --- !u!114 &11400030
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1886,6 +1883,8 @@ MonoBehaviour:
   duration: 180
   from: {r: 1, g: 1, b: 1, a: 1}
   to: {r: 1, g: 0, b: 0, a: 1}
+  refCompleteEventReceiver: {fileID: 0}
+  completeFunctionName: 
 --- !u!114 &11400032
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1902,6 +1901,8 @@ MonoBehaviour:
   duration: 180
   from: {r: 1, g: 1, b: 1, a: 1}
   to: {r: 1, g: 0, b: 0, a: 1}
+  refCompleteEventReceiver: {fileID: 0}
+  completeFunctionName: 
 --- !u!114 &11400034
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1918,6 +1919,8 @@ MonoBehaviour:
   duration: 180
   from: {r: 1, g: 1, b: 1, a: 1}
   to: {r: 1, g: 0, b: 0, a: 1}
+  refCompleteEventReceiver: {fileID: 0}
+  completeFunctionName: 
 --- !u!114 &11400036
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1934,6 +1937,8 @@ MonoBehaviour:
   duration: 180
   from: {r: 1, g: 1, b: 1, a: 1}
   to: {r: 1, g: 0, b: 0, a: 1}
+  refCompleteEventReceiver: {fileID: 0}
+  completeFunctionName: 
 --- !u!114 &11400038
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1950,6 +1955,8 @@ MonoBehaviour:
   duration: 180
   from: {r: 1, g: 1, b: 1, a: 1}
   to: {r: 1, g: 0, b: 0, a: 1}
+  refCompleteEventReceiver: {fileID: 0}
+  completeFunctionName: 
 --- !u!114 &11400040
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1966,6 +1973,8 @@ MonoBehaviour:
   duration: 180
   from: {r: 1, g: 1, b: 1, a: 1}
   to: {r: 1, g: 0, b: 0, a: 1}
+  refCompleteEventReceiver: {fileID: 0}
+  completeFunctionName: 
 --- !u!114 &11400042
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1982,6 +1991,8 @@ MonoBehaviour:
   duration: 180
   from: {r: 1, g: 1, b: 1, a: 1}
   to: {r: 1, g: 0, b: 0, a: 1}
+  refCompleteEventReceiver: {fileID: 0}
+  completeFunctionName: 
 --- !u!114 &11400044
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1998,6 +2009,8 @@ MonoBehaviour:
   duration: 180
   from: {r: 1, g: 1, b: 1, a: 1}
   to: {r: 1, g: 0, b: 0, a: 1}
+  refCompleteEventReceiver: {fileID: 0}
+  completeFunctionName: 
 --- !u!114 &11400046
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2014,6 +2027,8 @@ MonoBehaviour:
   duration: 180
   from: {r: 1, g: 1, b: 1, a: 1}
   to: {r: 1, g: 0, b: 0, a: 1}
+  refCompleteEventReceiver: {fileID: 0}
+  completeFunctionName: 
 --- !u!114 &11400048
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2030,6 +2045,8 @@ MonoBehaviour:
   duration: 180
   from: {r: 1, g: 1, b: 1, a: 1}
   to: {r: 1, g: 0, b: 0, a: 1}
+  refCompleteEventReceiver: {fileID: 0}
+  completeFunctionName: 
 --- !u!114 &11400050
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2046,6 +2063,8 @@ MonoBehaviour:
   duration: 180
   from: {r: 1, g: 1, b: 1, a: 1}
   to: {r: 1, g: 0, b: 0, a: 1}
+  refCompleteEventReceiver: {fileID: 0}
+  completeFunctionName: 
 --- !u!114 &11400052
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2062,6 +2081,8 @@ MonoBehaviour:
   duration: 180
   from: {r: 1, g: 1, b: 1, a: 1}
   to: {r: 1, g: 0, b: 0, a: 1}
+  refCompleteEventReceiver: {fileID: 0}
+  completeFunctionName: 
 --- !u!114 &11400054
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2078,6 +2099,8 @@ MonoBehaviour:
   duration: 180
   from: {r: 1, g: 1, b: 1, a: 1}
   to: {r: 1, g: 0, b: 0, a: 1}
+  refCompleteEventReceiver: {fileID: 0}
+  completeFunctionName: 
 --- !u!114 &11400056
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2094,6 +2117,8 @@ MonoBehaviour:
   duration: 180
   from: {r: 1, g: 1, b: 1, a: 1}
   to: {r: 1, g: 0, b: 0, a: 1}
+  refCompleteEventReceiver: {fileID: 0}
+  completeFunctionName: 
 --- !u!114 &11400058
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2110,6 +2135,8 @@ MonoBehaviour:
   duration: 180
   from: {r: 1, g: 1, b: 1, a: 1}
   to: {r: 1, g: 0, b: 0, a: 1}
+  refCompleteEventReceiver: {fileID: 0}
+  completeFunctionName: 
 --- !u!114 &11400198
 MonoBehaviour:
   m_ObjectHideFlags: 1

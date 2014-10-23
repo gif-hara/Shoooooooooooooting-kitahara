@@ -58,6 +58,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400006}
   - 114: {fileID: 11400006}
+  - 114: {fileID: 11400186}
   m_Layer: 0
   m_Name: StageManager_0_First
   m_TagString: Stage
@@ -9107,6 +9108,20 @@ MonoBehaviour:
   timeLine: 0
   refActionConditioner: {fileID: 0}
   prefab: {fileID: 100000, guid: 6089b662b186aa942ae88c26189ee950, type: 2}
+--- !u!114 &11400186
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd559503fb7402a40a974f809e743fa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  apply: 0
+  color: {r: 0, g: 0, b: 0, a: 0}
+  density: 0
 --- !u!114 &11400190
 MonoBehaviour:
   m_ObjectHideFlags: 1

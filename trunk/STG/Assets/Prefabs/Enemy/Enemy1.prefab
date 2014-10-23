@@ -116,7 +116,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400004}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!4 &400002
 Transform:
   m_ObjectHideFlags: 1
@@ -140,10 +140,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
-  - {fileID: 400008}
   - {fileID: 400010}
   - {fileID: 400006}
   - {fileID: 400000}
+  - {fileID: 400008}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &400006
@@ -157,7 +157,7 @@ Transform:
   m_LocalScale: {x: 60, y: 60, z: 1}
   m_Children: []
   m_Father: {fileID: 400004}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!4 &400008
 Transform:
   m_ObjectHideFlags: 1
@@ -165,11 +165,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100008}
   m_LocalRotation: {x: -.707106829, y: 0, z: 0, w: .707106829}
-  m_LocalPosition: {x: 0, y: 14.9394073, z: -8.3224586e-07}
+  m_LocalPosition: {x: 0, y: 14.7517395, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400004}
-  m_RootOrder: 1
+  m_RootOrder: 4
 --- !u!4 &400010
 Transform:
   m_ObjectHideFlags: 1
@@ -181,7 +181,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400004}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!23 &2300002
 Renderer:
   m_ObjectHideFlags: 1
@@ -480,7 +480,7 @@ ParticleSystem:
   InitialModule:
     enabled: 1
     startLifetime:
-      scalar: .100000001
+      scalar: .200000003
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -513,7 +513,7 @@ ParticleSystem:
         m_PostInfinity: 2
       minMaxState: 0
     startSpeed:
-      scalar: 90
+      scalar: 88.3399963
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -711,9 +711,9 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 2
     enabled: 1
-    type: 2
+    type: 4
     radius: 1
-    angle: 25
+    angle: 0
     length: 5
     boxX: 1
     boxY: 1
@@ -775,14 +775,14 @@ ParticleSystem:
         m_Curve:
         - time: 0
           value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
+          inSlope: -1
+          outSlope: -1
+          tangentMode: 10
         - time: 1
-          value: .0135941906
-          inSlope: -.0305753201
-          outSlope: -.0305753201
-          tangentMode: 0
+          value: 0
+          inSlope: -1
+          outSlope: -1
+          tangentMode: 10
         m_PreInfinity: 2
         m_PostInfinity: 2
       minCurve:

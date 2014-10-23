@@ -539,7 +539,7 @@ GameObject:
   - 114: {fileID: 11400238}
   - 114: {fileID: 11400188}
   m_Layer: 0
-  m_Name: '[380] Enemy16'
+  m_Name: '[385] Enemy16'
   m_TagString: Untagged
   m_Icon: {fileID: -1376725286, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1306,6 +1306,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400162}
   - 114: {fileID: 11400164}
+  - 114: {fileID: 11400490}
   m_Layer: 0
   m_Name: StageManager_2_First
   m_TagString: Stage
@@ -2766,7 +2767,7 @@ GameObject:
   - 114: {fileID: 11400344}
   - 114: {fileID: 11400068}
   m_Layer: 0
-  m_Name: '[2110] Enemy16'
+  m_Name: '[2130] Enemy16'
   m_TagString: Untagged
   m_Icon: {fileID: -1376725286, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -4112,7 +4113,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100066}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 380, z: 0}
+  m_LocalPosition: {x: 0, y: 385, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400162}
@@ -5949,7 +5950,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100344}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2110, z: 0}
+  m_LocalPosition: {x: 0, y: 2130, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400162}
@@ -14348,7 +14349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400066}
-  timeLine: 380
+  timeLine: 385
   refActionConditioner: {fileID: 11400188}
   enemyId: 16
   initialPosition: {x: 480.185638, y: 432.861664, z: 0}
@@ -17760,7 +17761,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400344}
-  timeLine: 2110
+  timeLine: 2130
   refActionConditioner: {fileID: 11400068}
   enemyId: 16
   initialPosition: {x: 480.185638, y: 432.861664, z: 0}
@@ -21589,6 +21590,20 @@ MonoBehaviour:
   timeLine: 0
   refActionConditioner: {fileID: 0}
   prefab: {fileID: 100080, guid: 5beb26bd0a63fd24dbc291c4bf6e2246, type: 2}
+--- !u!114 &11400490
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd559503fb7402a40a974f809e743fa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  apply: 0
+  color: {r: 0, g: 0, b: 0, a: 0}
+  density: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

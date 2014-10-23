@@ -1001,7 +1001,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100030}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 171.012268, z: 0}
+  m_LocalPosition: {x: 0, y: 170, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400028}
@@ -2292,7 +2292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
-  prefab: {fileID: 100002, guid: c302937e36dc5234e9ccbcfa5472cb72, type: 2}
+  prefab: {fileID: 100010, guid: a5e3df42a9a569a4c87a658e88816582, type: 2}
 --- !u!114 &11400064
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4478,7 +4478,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
-  shotId: 0
+  shotId: 3
   speed: 0
   interval: 20
   number: 1
@@ -4692,7 +4692,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
-  shotId: 0
+  shotId: 3
   speed: 0
   interval: 20
   number: 1
@@ -4712,7 +4712,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
-  shotId: 0
+  shotId: 3
   speed: 0
   interval: 20
   number: 1
@@ -4926,7 +4926,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
-  shotId: 0
+  shotId: 3
   speed: 0
   interval: 20
   number: 1
@@ -4946,7 +4946,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
-  shotId: 0
+  shotId: 3
   speed: 0
   interval: 20
   number: 1
@@ -5178,7 +5178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
-  shotId: 0
+  shotId: 3
   speed: 0
   interval: 20
   number: 1
@@ -5198,7 +5198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
-  shotId: 0
+  shotId: 3
   speed: 0
   interval: 20
   number: 1
@@ -5412,7 +5412,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
-  shotId: 0
+  shotId: 3
   speed: 0
   interval: 20
   number: 1
@@ -5432,7 +5432,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
-  shotId: 0
+  shotId: 3
   speed: 0
   interval: 20
   number: 1
@@ -5664,7 +5664,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
-  shotId: 0
+  shotId: 3
   speed: 0
   interval: 20
   number: 1
@@ -5685,6 +5685,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   refShadowMaterial: {fileID: 2100000, guid: 233d793ae6f6d664c9ec4da61a8fc9b6, type: 2}
+  offset: {x: 0, y: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
