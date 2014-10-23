@@ -2607,6 +2607,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 400310}
   - 114: {fileID: 11400012}
+  - 114: {fileID: 11400014}
+  - 114: {fileID: 11400016}
   m_Layer: 31
   m_Name: Background3
   m_TagString: Untagged
@@ -10960,6 +10962,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   origin: {x: 0, y: 0, z: 0}
+  applyX: 1
+  applyY: 1
+  applyZ: 1
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11099,6 +11104,9 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
   duration: 150
+  loopType: 1
+  path: {fileID: 0}
+  debugRange: 0
 --- !u!114 &11400012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11111,6 +11119,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   refMaterial: {fileID: 2100000, guid: a2126534b3a11b34e977105bd9e3cc03, type: 2}
+--- !u!114 &11400014
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 198c29c189dd22b469f80046bb88a362, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  refTarget: {fileID: 400310}
+  layerType: 6
+--- !u!114 &11400016
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 202774e2a72b9ef4db72088bc6a55524, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!124 &12400000
 Behaviour:
   m_ObjectHideFlags: 1

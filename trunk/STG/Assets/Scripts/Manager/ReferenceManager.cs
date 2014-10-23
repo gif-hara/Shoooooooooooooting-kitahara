@@ -132,6 +132,10 @@ public class ReferenceManager : A_Singleton<ReferenceManager>
 	[SerializeField]
 	private FrameCountRecorder refFrameCountRecorder;
 
+	public GameObject BackgroundLayer{ get{ return refBackgroundLayer; } }
+	[SerializeField]
+	private GameObject refBackgroundLayer;
+
 	/// <summary>
 	/// 敵プレハブリスト.
 	/// </summary>
@@ -158,7 +162,7 @@ public class ReferenceManager : A_Singleton<ReferenceManager>
 			refPlayerShotLayer,
 			refEffectLayer,
 			refUILayer,
-			null,	// BackgroundLayerは今のところ必要ない？.
+			refBackgroundLayer,
 		};
 
 		return layer[(int)type];

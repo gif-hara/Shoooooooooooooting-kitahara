@@ -14,7 +14,7 @@ using System.Collections.Generic;
 /// <summary>
 /// .
 /// </summary>
-[ExecuteInEditMode()]
+//[ExecuteInEditMode()]
 public class BackgroundCamera : MonoBehaviour
 {
 	[SerializeField]
