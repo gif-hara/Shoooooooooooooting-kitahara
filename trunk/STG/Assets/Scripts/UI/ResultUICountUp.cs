@@ -81,7 +81,7 @@ public class ResultUICountUp : ResultUIEffectExecuter
 		{
 			if( GameStatusInterfacer.GameMode == GameDefine.GameModeType.PlayerInput )
 			{
-				return MyInput.FireKeyDown;
+				return MyInput.FireKey;
 			}
 			else if( GameStatusInterfacer.GameMode == GameDefine.GameModeType.Replay )
 			{
