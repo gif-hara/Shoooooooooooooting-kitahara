@@ -274,7 +274,7 @@ public class GameManager : GameMonoBehaviour
 	{
 		get
 		{
-			int[] min = { 0, 0, 60, 100 };
+			int[] min = { 0, 0, 60, 100, 80 };
 			return min[(int)difficultyType];
 		}
 	}
@@ -282,7 +282,7 @@ public class GameManager : GameMonoBehaviour
 	{
 		get
 		{
-			int[] max = { 30, 60, 100, 100 };
+			int[] max = { 30, 60, 100, 100, 100 };
 			return max[(int)difficultyType];
 		}
 	}

@@ -19,6 +19,7 @@ public class GameDefine : A_Singleton<GameDefine>
 		Normal,
 		Hard,
 		Hell,
+		Extra,
 	}
 
 	public enum GameModeType : int

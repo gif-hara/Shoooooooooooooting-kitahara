@@ -30,15 +30,9 @@ public class SaveLoad
 
 	public const string ProgressesFilePath = "Save/Progresses.dat";
 
+	public const string RankingFilePath = "Save/Ranking.dat";
+
 	public const string ReplayDataFilePathFormat = "Save/Replay{0}.dat";
-	
-	
-	#region セーブデータ構造
-	
-	#endregion
-	
-	
-	#region セーブロードシステム(原則変更しない) 
 	
 	/// <summary>
 	/// セーブデータのインスタンス
@@ -80,7 +74,12 @@ public class SaveLoad
 	{
 		return Load<SaveData.Progresses>( ProgressesFilePath );
 	}
-
+	
+	public static SaveData.Ranking LoadRanking()
+	{
+		return Load<SaveData.Ranking>( RankingFilePath );
+	}
+	
 	public static ReplayData LoadReplayData( int id )
 	{
 		return Load<ReplayData>( string.Format( ReplayDataFilePathFormat, id.ToString( "00" ) ) );
@@ -161,6 +160,11 @@ public class SaveLoad
 		Save( ProgressesFilePath, SaveData.Progresses.Instance );
 	}
 	
+	public static void SaveRanking()
+	{
+		Save( RankingFilePath, SaveData.Ranking.Instance );
+	}
+	
 	public static void SaveReplayData( int id, ReplayData data )
 	{
 		Save( string.Format( ReplayDataFilePathFormat, id.ToString( "00" ) ), data );
@@ -199,6 +203,4 @@ public class SaveLoad
 		bf.Serialize(fs, data);
 		fs.Close();
 	}
-	#endregion	/// <summary>
-
 }
