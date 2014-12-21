@@ -33,10 +33,17 @@ namespace SaveData
 		}
 		private static Ranking instance = null;
 
-		public List<RankingData> DataList{ private set; get; }
+		public AllRankingData DataList{ private set; get; }
 
 		public Ranking()
 		{
+			InitializeDefault();
+		}
+
+		private void InitializeDefault()
+		{
+			var defaultData = (Resources.Load( "DefaultRankingData" ) as GameObject).GetComponent<DefaultRankingData>();
+			DataList = new AllRankingData( defaultData.AllRankingData );
 		}
 	}
 }

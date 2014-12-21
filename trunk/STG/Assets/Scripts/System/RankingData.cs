@@ -15,11 +15,53 @@ using System.Collections.Generic;
 [System.Serializable]
 public class RankingData
 {
-	public ulong Score{ private set; get; }
+	public int Rank
+	{
+		get
+		{
+			return rank;
+		}
+	}
+	[SerializeField]
+	private int rank;
 
-	public GameDefine.StageType ClearedStageType{ private set; get; }
+	public ulong Score
+	{
+		get
+		{
+			return ulong.Parse( scoreString );
+		}
+	}
+	[SerializeField]
+	private string scoreString;
 
-	public int PlayerId{ private set; get; }
+	public GameDefine.StageType ClearedStageType
+	{
+		get
+		{
+			return clearedStageType;
+		}
+	}
+	[SerializeField]
+	private GameDefine.StageType clearedStageType;
 
-	public string UserName{ private set; get; }
+	public int PlayerId
+	{
+		get
+		{
+			return playerId;
+		}
+	}
+	[SerializeField]
+	private int playerId;
+
+	public string UserName
+	{
+		get
+		{
+			return userName;
+		}
+	}
+	[SerializeField]
+	private string userName;
 }

@@ -1,0 +1,319 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400000}
+  - 114: {fileID: 11400000}
+  m_Layer: 0
+  m_Name: DefaultRankingData
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6aadeab93b62a874fbd2cf48717931c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allRankingData:
+    easyData:
+      data:
+      - rank: 1
+        scoreString: 50000000
+        clearedStageType: 5
+        playerId: 0
+        userName: ABC
+      - rank: 2
+        scoreString: 40000000
+        clearedStageType: 5
+        playerId: 0
+        userName: DEF
+      - rank: 3
+        scoreString: 30000000
+        clearedStageType: 5
+        playerId: 0
+        userName: GHI
+      - rank: 4
+        scoreString: 20000000
+        clearedStageType: 4
+        playerId: 0
+        userName: H.K
+      - rank: 5
+        scoreString: 10000000
+        clearedStageType: 4
+        playerId: 0
+        userName: C.I
+      - rank: 6
+        scoreString: 9000000
+        clearedStageType: 4
+        playerId: 0
+        userName: S.I
+      - rank: 7
+        scoreString: 8000000
+        clearedStageType: 3
+        playerId: 0
+        userName: R.K
+      - rank: 8
+        scoreString: 7000000
+        clearedStageType: 2
+        playerId: 0
+        userName: K.M
+      - rank: 9
+        scoreString: 6000000
+        clearedStageType: 2
+        playerId: 0
+        userName: T.N
+      - rank: 10
+        scoreString: 5000000
+        clearedStageType: 2
+        playerId: 0
+        userName: T.S
+      difficultyType: 0
+    normalData:
+      data:
+      - rank: 1
+        scoreString: 50000000
+        clearedStageType: 5
+        playerId: 0
+        userName: ABC
+      - rank: 2
+        scoreString: 40000000
+        clearedStageType: 5
+        playerId: 0
+        userName: DEF
+      - rank: 3
+        scoreString: 30000000
+        clearedStageType: 5
+        playerId: 0
+        userName: GHI
+      - rank: 4
+        scoreString: 20000000
+        clearedStageType: 4
+        playerId: 0
+        userName: H.K
+      - rank: 5
+        scoreString: 10000000
+        clearedStageType: 4
+        playerId: 0
+        userName: C.I
+      - rank: 6
+        scoreString: 9000000
+        clearedStageType: 4
+        playerId: 0
+        userName: S.I
+      - rank: 7
+        scoreString: 8000000
+        clearedStageType: 3
+        playerId: 0
+        userName: R.K
+      - rank: 8
+        scoreString: 7000000
+        clearedStageType: 2
+        playerId: 0
+        userName: K.M
+      - rank: 9
+        scoreString: 6000000
+        clearedStageType: 2
+        playerId: 0
+        userName: T.N
+      - rank: 10
+        scoreString: 5000000
+        clearedStageType: 2
+        playerId: 0
+        userName: T.S
+      difficultyType: 1
+    hardData:
+      data:
+      - rank: 1
+        scoreString: 50000000
+        clearedStageType: 5
+        playerId: 0
+        userName: ABC
+      - rank: 2
+        scoreString: 40000000
+        clearedStageType: 5
+        playerId: 0
+        userName: DEF
+      - rank: 3
+        scoreString: 30000000
+        clearedStageType: 5
+        playerId: 0
+        userName: GHI
+      - rank: 4
+        scoreString: 20000000
+        clearedStageType: 4
+        playerId: 0
+        userName: H.K
+      - rank: 5
+        scoreString: 10000000
+        clearedStageType: 4
+        playerId: 0
+        userName: C.I
+      - rank: 6
+        scoreString: 9000000
+        clearedStageType: 4
+        playerId: 0
+        userName: S.I
+      - rank: 7
+        scoreString: 8000000
+        clearedStageType: 3
+        playerId: 0
+        userName: R.K
+      - rank: 8
+        scoreString: 7000000
+        clearedStageType: 2
+        playerId: 0
+        userName: K.M
+      - rank: 9
+        scoreString: 6000000
+        clearedStageType: 2
+        playerId: 0
+        userName: T.N
+      - rank: 10
+        scoreString: 5000000
+        clearedStageType: 2
+        playerId: 0
+        userName: T.S
+      difficultyType: 2
+    hellData:
+      data:
+      - rank: 1
+        scoreString: 50000000
+        clearedStageType: 5
+        playerId: 0
+        userName: ABC
+      - rank: 2
+        scoreString: 40000000
+        clearedStageType: 5
+        playerId: 0
+        userName: DEF
+      - rank: 3
+        scoreString: 30000000
+        clearedStageType: 5
+        playerId: 0
+        userName: GHI
+      - rank: 4
+        scoreString: 20000000
+        clearedStageType: 4
+        playerId: 0
+        userName: H.K
+      - rank: 5
+        scoreString: 10000000
+        clearedStageType: 4
+        playerId: 0
+        userName: C.I
+      - rank: 6
+        scoreString: 9000000
+        clearedStageType: 4
+        playerId: 0
+        userName: S.I
+      - rank: 7
+        scoreString: 8000000
+        clearedStageType: 3
+        playerId: 0
+        userName: R.K
+      - rank: 8
+        scoreString: 7000000
+        clearedStageType: 2
+        playerId: 0
+        userName: K.M
+      - rank: 9
+        scoreString: 6000000
+        clearedStageType: 2
+        playerId: 0
+        userName: T.N
+      - rank: 10
+        scoreString: 5000000
+        clearedStageType: 2
+        playerId: 0
+        userName: T.S
+      difficultyType: 3
+    extraData:
+      data:
+      - rank: 1
+        scoreString: 50000000
+        clearedStageType: 5
+        playerId: 0
+        userName: ABC
+      - rank: 2
+        scoreString: 40000000
+        clearedStageType: 5
+        playerId: 0
+        userName: DEF
+      - rank: 3
+        scoreString: 30000000
+        clearedStageType: 5
+        playerId: 0
+        userName: GHI
+      - rank: 4
+        scoreString: 20000000
+        clearedStageType: 4
+        playerId: 0
+        userName: H.K
+      - rank: 5
+        scoreString: 10000000
+        clearedStageType: 4
+        playerId: 0
+        userName: C.I
+      - rank: 6
+        scoreString: 9000000
+        clearedStageType: 4
+        playerId: 0
+        userName: S.I
+      - rank: 7
+        scoreString: 8000000
+        clearedStageType: 3
+        playerId: 0
+        userName: R.K
+      - rank: 8
+        scoreString: 7000000
+        clearedStageType: 2
+        playerId: 0
+        userName: K.M
+      - rank: 9
+        scoreString: 6000000
+        clearedStageType: 2
+        playerId: 0
+        userName: T.N
+      - rank: 10
+        scoreString: 5000000
+        clearedStageType: 2
+        playerId: 0
+        userName: T.S
+      difficultyType: 4
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1
+  m_IsExploded: 1

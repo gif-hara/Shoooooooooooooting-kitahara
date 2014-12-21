@@ -38,7 +38,7 @@ public class ObjectMoveAttach : GameMonoBehaviour
 	/// <summary>
 	/// アタッチ処理.
 	/// </summary>
-	protected void Attach()
+	public void Attach()
 	{
 		currentObject = InstantiateAsChild( refTrans, prefabObjectMove.gameObject );
 		var list = currentObject.GetComponents<A_ObjectMove>();

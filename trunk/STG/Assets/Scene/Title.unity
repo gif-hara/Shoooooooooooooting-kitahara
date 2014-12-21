@@ -250,7 +250,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 20414794}
-  m_Text: Result
+  m_Text: Ranking
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -3929,7 +3929,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1202601371}
-  m_Text: Result
+  m_Text: Ranking
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -4002,6 +4002,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1228682366}
   - 114: {fileID: 1228682367}
+  - 114: {fileID: 1228682368}
   m_Layer: 0
   m_Name: DecideEvent
   m_TagString: Untagged
@@ -4033,6 +4034,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   label: CursorDecide
+--- !u!114 &1228682368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1228682365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cde6159592628ed4b99dafeed22b38f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startEffectType: 0
+  endEffectType: 0
+  sceneName: Ranking
+  refConditionObject: {fileID: 0}
 --- !u!1 &1238137612
 GameObject:
   m_ObjectHideFlags: 0
@@ -4396,7 +4412,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1317462948}
   m_Layer: 8
-  m_Name: 5_Result
+  m_Name: 5_Ranking
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

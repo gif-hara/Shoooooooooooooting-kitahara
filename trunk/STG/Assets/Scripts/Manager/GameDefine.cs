@@ -13,6 +13,7 @@ using System.Collections;
 
 public class GameDefine : A_Singleton<GameDefine>
 {
+	[System.Serializable]
 	public enum DifficultyType : int
 	{
 		Easy,
@@ -71,6 +72,16 @@ public class GameDefine : A_Singleton<GameDefine>
 	}
 
 	public static readonly Rect Screen = new Rect( -400.0f, 300.0f, 400.0f, -300.0f );
+
+	public static readonly string[] playerNames =
+	{
+		"Tri-act Z",
+		"Tri-act S",
+		"Tri-act G",
+		"Scissor Side Z",
+		"Scissor Side S",
+		"Scissor Side G",
+	};
 
 	/// <summary>
 	/// プレイヤーの無敵時間を設定した際のメッセージ.

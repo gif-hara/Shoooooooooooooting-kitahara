@@ -120,6 +120,66 @@ MonoBehaviour:
     parent: {fileID: 1058728}
     detachParent: 1
   delay: 0
+--- !u!1 &7944549
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 7944550}
+  - 20: {fileID: 7944551}
+  m_Layer: 8
+  m_Name: 3_EffectLv4Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7944550
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 7944549}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1353323493}
+  m_RootOrder: 4
+--- !u!20 &7944551
+Camera:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 7944549}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 3
+  m_BackGroundColor: {r: .5, g: .5, b: .5, a: 1}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: -500
+  far clip plane: 500
+  field of view: 60
+  orthographic: 1
+  orthographic size: 300
+  m_Depth: 3
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 393216
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_HDR: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: .0219999999
 --- !u!1 &18306597
 GameObject:
   m_ObjectHideFlags: 0
@@ -5388,6 +5448,7 @@ Transform:
   - {fileID: 284964699}
   - {fileID: 368712324}
   - {fileID: 1503804961}
+  - {fileID: 7944550}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!1 &1364212680
@@ -8195,7 +8256,7 @@ GameObject:
   - 4: {fileID: 2122912384}
   - 20: {fileID: 2122912385}
   m_Layer: 8
-  m_Name: 3_UICamera
+  m_Name: 4_UICamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8234,7 +8295,7 @@ Camera:
   field of view: 60
   orthographic: 1
   orthographic size: 300
-  m_Depth: 3
+  m_Depth: 4
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 256
