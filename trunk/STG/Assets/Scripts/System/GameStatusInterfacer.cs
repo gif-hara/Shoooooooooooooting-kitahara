@@ -60,6 +60,7 @@ public static class GameStatusInterfacer
 
 	/// <summary>
 	/// リトライ時に復帰するスコア.
+	/// ゲームオーバー時に評価されるスコア.
 	/// </summary>
 	/// <value>The score.</value>
 	public static ulong Score{ set; get; }

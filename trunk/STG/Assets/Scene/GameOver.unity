@@ -6670,6 +6670,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 1679598692}
   - 114: {fileID: 1679598691}
+  - 114: {fileID: 1679598693}
+  - 114: {fileID: 1679598694}
   m_Layer: 0
   m_Name: System
   m_TagString: Untagged
@@ -6701,6 +6703,31 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!114 &1679598693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1679598690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 288d8ab080fb8784cb287dde329b6640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startEffectType: 0
+  endEffectType: 0
+  sceneName: Title
+--- !u!114 &1679598694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1679598690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8402c3f0358437e4f9f62503937a25e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1682938454
 GameObject:
   m_ObjectHideFlags: 0
