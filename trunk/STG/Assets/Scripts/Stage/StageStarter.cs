@@ -19,6 +19,10 @@ public class StageStarter : GameMonoBehaviour
 
 	public override void Awake()
 	{
+		if( GameStatusInterfacer.StageId == -1 )
+		{
+			return;
+		}
 		InstantiateAsChild( gameObject, prefabStageList[GameStatusInterfacer.StageId].gameObject );
 	}
 }

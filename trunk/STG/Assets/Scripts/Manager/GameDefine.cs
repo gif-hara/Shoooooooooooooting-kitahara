@@ -71,6 +71,12 @@ public class GameDefine : A_Singleton<GameDefine>
 		Boss,
 	}
 
+	public enum UpdateType : int
+	{
+		Update,
+		LateUpdaye,
+	}
+
 	public static readonly Rect Screen = new Rect( -400.0f, 300.0f, 400.0f, -300.0f );
 
 	public static readonly string[] playerNames =

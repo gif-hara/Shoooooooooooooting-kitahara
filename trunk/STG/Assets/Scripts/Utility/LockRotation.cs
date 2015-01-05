@@ -23,13 +23,30 @@ public class LockRotation : MonoBehaviour
 	
 	[SerializeField]
 	private bool applyZ = true;
-	
-	// Use this for initialization
-	void Start()
+
+	[SerializeField]
+	private GameDefine.UpdateType updateType = GameDefine.UpdateType.LateUpdaye;
+
+	void Update()
 	{
+		if( updateType != GameDefine.UpdateType.Update )
+		{
+			return;
+		}
+
+		Lock();
+	}
+	void LateUpdate()
+	{
+		if( updateType != GameDefine.UpdateType.LateUpdaye )
+		{
+			return;
+		}
+		
+		Lock();
 	}
 
-	void LateUpdate()
+	private void Lock()
 	{
 		var rotation = transform.rotation.eulerAngles;
 		float x = applyX ? origin.x : rotation.x;
