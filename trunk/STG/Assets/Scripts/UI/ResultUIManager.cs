@@ -101,6 +101,7 @@ public class ResultUIManager : GameMonoBehaviour
 			this.createdBackgroundStartEffect.Add( obj.gameObject );
 		}
 
+		FrameRateUtility.StartCoroutine( startEffectEndDelay, () => SoundManager.Instance.PlayBGM( "Result" ) );
 		FrameRateUtility.StartCoroutine( startEffectEndDelay, EnumerateResultUI );
 	}
 
@@ -118,7 +119,6 @@ public class ResultUIManager : GameMonoBehaviour
 
 	private void EnumerateResultUI()
 	{
-		SoundManager.Instance.PlayBGM( "Result" );
 		var effectObject = this.refEffectObjects[this.effectObjectExecuteId];
 		Debug.Log( effectObject.name );
 		var effectData = new EffectData( this.effectSequenceId );

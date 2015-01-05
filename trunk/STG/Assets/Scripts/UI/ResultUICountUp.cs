@@ -73,6 +73,7 @@ public class ResultUICountUp : ResultUIEffectExecuter
 
 	protected virtual void CountUpped( int addedValue )
 	{
+		SoundManager.Instance.Play( "StarGet" );
 	}
 
 	private bool IsSkip
