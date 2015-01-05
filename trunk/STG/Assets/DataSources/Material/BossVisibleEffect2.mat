@@ -29,18 +29,18 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _Mask
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
           name: _MainTexture
         second:
           m_Texture: {fileID: 2800000, guid: 2f29abd176ecd7c4f85ec9d01bd3b469, type: 3}
           m_Scale: {x: .100000001, y: 1}
           m_Offset: {x: .899999976, y: 0}
+      data:
+        first:
+          name: _Mask
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
         first:
@@ -52,29 +52,29 @@ Material:
         second: .100000016
       data:
         first:
-          name: _Focus
-        second: -100
-      data:
-        first:
           name: _InvFade
         second: 1
+      data:
+        first:
+          name: _Focus
+        second: -100
     m_Colors:
       data:
         first:
           name: _Color
-        second: {r: 1, g: 1, b: 1, a: 0}
+        second: {r: 1, g: 1, b: 1, a: .713536739}
       data:
         first:
           name: _SpecColor
         second: {r: 1, g: 1, b: 1, a: 0}
       data:
         first:
-          name: _GroundColor
-        second: {r: 1, g: 0, b: 0, a: 1}
-      data:
-        first:
           name: _Emission
         second: {r: 0, g: 0, b: 0, a: 0}
+      data:
+        first:
+          name: _GroundColor
+        second: {r: 1, g: 0, b: 0, a: 1}
       data:
         first:
           name: _Specular

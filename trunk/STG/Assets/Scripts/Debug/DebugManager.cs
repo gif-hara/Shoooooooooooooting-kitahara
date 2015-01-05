@@ -147,6 +147,13 @@ public class DebugManager : A_GUIElement
 			SaveData.Progresses.Instance.DebugAllClear();
 		});
 		
+		// リザルト画面の表示.
+		KeyPush( KeyCode.K, () =>
+		        {
+			ReferenceManager.refUILayer.BroadcastMessage( GameDefine.StartResultMessage );
+			ReferenceManager.refPlayerLayer.BroadcastMessage( GameDefine.StartResultMessage );
+		});
+		
 		KeyPush( KeyCode.A, () => refPlayerStatusManager.DebugChange( 0 ) );
 		KeyPush( KeyCode.S, () => refPlayerStatusManager.DebugChange( 1 ) );
 		KeyPush( KeyCode.D, () => refPlayerStatusManager.DebugChange( 2 ) );

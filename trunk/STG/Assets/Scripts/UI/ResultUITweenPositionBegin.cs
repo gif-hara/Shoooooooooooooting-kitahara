@@ -19,6 +19,7 @@ public class ResultUITweenPositionBegin : ResultUIEffectExecuter
 
 	protected override void Action ()
 	{
+		refTweenPosition.transform.localPosition = refTweenPosition.from;
 		refTweenPosition.Play( true );
 	}
 }
