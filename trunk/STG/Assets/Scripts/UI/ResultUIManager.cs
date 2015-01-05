@@ -47,6 +47,9 @@ public class ResultUIManager : GameMonoBehaviour
 	private int startEffectEndDelay;
 
 	[SerializeField]
+	private string startEffectSELabel;
+
+	[SerializeField]
 	private List<GameObject> refEffectObjects;
 
 	private int effectObjectExecuteId = 0;
@@ -88,6 +91,8 @@ public class ResultUIManager : GameMonoBehaviour
 		this.effectObjectExecuteId = 0;
 		this.effectSequenceId = 0;
 
+		SoundManager.Instance.Play( startEffectSELabel );
+
 		for( int i=0; i<createNum; i++ )
 		{
 			var obj = InstantiateAsChild( Trans, prefabBackgroundStartEffect.gameObject ).GetComponent<TweenMeshColor>();
@@ -113,6 +118,7 @@ public class ResultUIManager : GameMonoBehaviour
 
 	private void EnumerateResultUI()
 	{
+		SoundManager.Instance.PlayBGM( "Result" );
 		var effectObject = this.refEffectObjects[this.effectObjectExecuteId];
 		Debug.Log( effectObject.name );
 		var effectData = new EffectData( this.effectSequenceId );
