@@ -54,6 +54,11 @@ namespace SaveData
 			this.StageClearFrag[(int)difficulty][id] = true;
 		}
 
+		public bool IsClear( GameDefine.DifficultyType difficulty, int id )
+		{
+			return this.StageClearFrag[(int)difficulty][id];
+		}
+
 		public void DebugAllClear()
 		{
 			var difficultyList = System.Enum.GetValues ( typeof( GameDefine.DifficultyType ) );
