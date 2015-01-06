@@ -2520,7 +2520,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 773441867}
-  - 114: {fileID: 773441868}
   m_Layer: 8
   m_Name: 0_EffectLayer
   m_TagString: Untagged
@@ -2540,31 +2539,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 58430346}
   m_RootOrder: 0
---- !u!114 &773441868
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 773441866}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca537c156ac197f4499d745979cfd2b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cachedTransform: {fileID: 0}
-  refParent: {fileID: 0}
-  isParentDetach: 0
-  prefabList:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  min: {x: -200, y: 200}
-  max: {x: 200, y: 250}
-  interval: 0
-  createNum: 1074855400
 --- !u!1 &791221099
 GameObject:
   m_ObjectHideFlags: 0
