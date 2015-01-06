@@ -33,6 +33,7 @@ public class GameDefine : A_Singleton<GameDefine>
 	{
 		NewGame,
 		Practice,
+		BossRush,
 	}
 
 	public enum StageType : int
