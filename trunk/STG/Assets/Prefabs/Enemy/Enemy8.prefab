@@ -247,6 +247,7 @@ GameObject:
   - 114: {fileID: 11400060}
   - 114: {fileID: 11400058}
   - 114: {fileID: 11400006}
+  - 114: {fileID: 11427204}
   m_Layer: 0
   m_Name: DeadEvent
   m_TagString: Untagged
@@ -3681,6 +3682,19 @@ MonoBehaviour:
   callWhenFinished: 
   from: {x: -147, y: 35, z: 0}
   to: {x: -116, y: -26, z: 0}
+--- !u!114 &11427204
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53ff0411e04564d868b82fa3f7ba8aaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  prefab: {fileID: 100004, guid: 4d30596acd68a6f4da4938fa96fc651b, type: 2}
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1

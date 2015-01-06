@@ -94,6 +94,7 @@ GameObject:
   - 4: {fileID: 400080}
   - 114: {fileID: 11400288}
   - 114: {fileID: 11400286}
+  - 114: {fileID: 11413060}
   m_Layer: 0
   m_Name: DeadEvent
   m_TagString: Untagged
@@ -315,6 +316,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   refShadowMaterial: {fileID: 2100000, guid: 53d411cf44e993a4dbe520d021444dc1, type: 2}
+  offset: {x: 0, y: 0}
 --- !u!114 &11400276
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -518,6 +520,19 @@ MonoBehaviour:
     height: -32
   refShotCreatorList:
   - {fileID: 11400284}
+--- !u!114 &11413060
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53ff0411e04564d868b82fa3f7ba8aaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  prefab: {fileID: 100004, guid: a8f06ee2a43ebdc49b7ed6a9384c7c89, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

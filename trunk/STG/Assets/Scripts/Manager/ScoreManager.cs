@@ -94,11 +94,12 @@ public class ScoreManager : GameMonoBehaviour
 	/// </param>
 	public void AddScoreRateGameLevel( ulong value )
 	{
-		int gameLevel = GameManager.GameLevel;
-		ulong fixedGameLevel = gameLevel <= 1 ? 1 : (ulong)gameLevel;
-		value = (value + (ulong)GameManager.GrazeCount) * fixedGameLevel;
+		value = value + (ulong)(GameManager.GrazeCount * GameManager.GameLevel);
 		AddScore( value );
 	}
+	/// <summary>
+	/// 星アイテム所持数の初期化.
+	/// </summary>
 	public void InitStarItem()
 	{
 		for( int i=0,imax=this.earnedStarItemList.Count; i<imax; i++ )
