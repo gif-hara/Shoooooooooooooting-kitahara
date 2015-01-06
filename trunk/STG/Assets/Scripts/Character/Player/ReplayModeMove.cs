@@ -1,4 +1,4 @@
-﻿/*===========================================================================*/
+/*===========================================================================*/
 /*
 *     * FileName    : ReplayModeMove.cs
 *
@@ -20,7 +20,7 @@ public class ReplayModeMove : GameMonoBehaviour
 	public override void Start ()
 	{
 		base.Start ();
-		enabled = GameStatusInterfacer.GameMode == GameDefine.GameModeType.Replay;
+		enabled = GameStatusInterfacer.GameMode == GameDefine.InputType.Replay;
 	}
 	
 	public override void Update ()

@@ -1,4 +1,4 @@
-﻿/*===========================================================================*/
+/*===========================================================================*/
 /*
 *     * FileName    : ResultUICountUp.cs
 *
@@ -80,11 +80,11 @@ public class ResultUICountUp : ResultUIEffectExecuter
 	{
 		get
 		{
-			if( GameStatusInterfacer.GameMode == GameDefine.GameModeType.PlayerInput )
+			if( GameStatusInterfacer.GameMode == GameDefine.InputType.User )
 			{
 				return MyInput.FireKey;
 			}
-			else if( GameStatusInterfacer.GameMode == GameDefine.GameModeType.Replay )
+			else if( GameStatusInterfacer.GameMode == GameDefine.InputType.Replay )
 			{
 				return ReferenceManager.ReplayDataLoader.CanInputFireKey( ReferenceManager.FrameCountRecorder.CurrentFrameCount );
 			}

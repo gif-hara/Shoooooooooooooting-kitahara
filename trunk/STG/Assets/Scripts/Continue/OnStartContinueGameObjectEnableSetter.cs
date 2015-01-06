@@ -1,4 +1,4 @@
-﻿/*===========================================================================*/
+/*===========================================================================*/
 /*
 *     * FileName    : OnStartContinueGameObjectEnableSetter.cs
 *
@@ -22,7 +22,7 @@ public class OnStartContinueGameObjectEnableSetter : MonoBehaviour
 
 	void OnStartContinue()
 	{
-		if (GameStatusInterfacer.GameMode == GameDefine.GameModeType.Replay) return;
+		if (GameStatusInterfacer.GameMode == GameDefine.InputType.Replay) return;
 
 		refTarget.SetActive( isActive );
 	}

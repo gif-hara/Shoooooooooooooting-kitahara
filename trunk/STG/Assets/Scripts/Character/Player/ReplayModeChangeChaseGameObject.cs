@@ -1,4 +1,4 @@
-﻿/*===========================================================================*/
+/*===========================================================================*/
 /*
 *     * FileName    : ReplayModeChangeChaseGameObject.cs
 *
@@ -23,7 +23,7 @@ public class ReplayModeChangeChaseGameObject : GameMonoBehaviour
 	public override void Start ()
 	{
 		base.Start ();
-		enabled = GameStatusInterfacer.GameMode == GameDefine.GameModeType.Replay;
+		enabled = GameStatusInterfacer.GameMode == GameDefine.InputType.Replay;
 	}
 	
 	public override void Update ()

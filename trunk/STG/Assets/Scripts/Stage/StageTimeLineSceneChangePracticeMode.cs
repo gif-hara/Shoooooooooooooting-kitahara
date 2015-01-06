@@ -1,4 +1,4 @@
-﻿/*===========================================================================*/
+/*===========================================================================*/
 /*
 *     * FileName    : StageTimeLineSceneChangePracticeMode.cs
 *
@@ -18,7 +18,7 @@ public class StageTimeLineSceneChangePracticeMode : A_StageTimeLineActionable
 	{
 		if( GameStatusInterfacer.PlayStyle != GameDefine.PlayStyleType.Practice )	return;
 
-		var sceneName = GameStatusInterfacer.GameMode == GameDefine.GameModeType.PlayerInput
+		var sceneName = GameStatusInterfacer.GameMode == GameDefine.InputType.User
 			? "SaveReplay"
 			: "LoadReplay";
 

@@ -1,4 +1,4 @@
-﻿/*===========================================================================*/
+/*===========================================================================*/
 /*
 *     * FileName    : ReplayDataLoader.cs
 *
@@ -63,7 +63,7 @@ public class ReplayDataLoader : GameMonoBehaviour
 
 	public override void Awake ()
 	{
-		if( GameStatusInterfacer.GameMode != GameDefine.GameModeType.Replay )
+		if( GameStatusInterfacer.GameMode != GameDefine.InputType.Replay )
 		{
 			enabled = false;
 			return;

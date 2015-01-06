@@ -1,4 +1,4 @@
-﻿/*===========================================================================*/
+/*===========================================================================*/
 /*
 *     * FileName    : CommandEventLoadReplayData.cs
 *
@@ -20,7 +20,7 @@ public class CommandEventLoadReplayData : MonoBehaviour
 		GameStatusInterfacer.PlayerId = data.PlayerId;
 		GameStatusInterfacer.ReplayId = id;
 		GameStatusInterfacer.StageId = data.StageId;
-		GameStatusInterfacer.GameMode = GameDefine.GameModeType.Replay;
+		GameStatusInterfacer.GameMode = GameDefine.InputType.Replay;
 	}
 
 	void OnCreatedReplayListElement( int id )

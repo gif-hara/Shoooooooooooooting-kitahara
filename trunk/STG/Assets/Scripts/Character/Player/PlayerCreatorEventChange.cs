@@ -1,4 +1,4 @@
-﻿/*===========================================================================*/
+/*===========================================================================*/
 /*
 *     * FileName    : PlayerCreatorEventChange.cs
 *
@@ -23,7 +23,7 @@ public class PlayerCreatorEventChange : MonoBehaviour
 
 	void Awake ()
 	{
-		string message = GameStatusInterfacer.GameMode == GameDefine.GameModeType.PlayerInput
+		string message = GameStatusInterfacer.GameMode == GameDefine.InputType.User
 			? PlayerInputModeMessage
 			: ReplayModeMessage;
 

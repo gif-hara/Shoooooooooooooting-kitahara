@@ -23,9 +23,9 @@ public class GameDefine : A_Singleton<GameDefine>
 		Extra,
 	}
 
-	public enum GameModeType : int
+	public enum InputType : int
 	{
-		PlayerInput,
+		User,
 		Replay,
 	}
 

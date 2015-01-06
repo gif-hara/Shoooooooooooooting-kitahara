@@ -193,7 +193,7 @@ public class GameManager : GameMonoBehaviour
 
 	public void Continue()
 	{
-		if (GameStatusInterfacer.GameMode == GameDefine.GameModeType.Replay)
+		if (GameStatusInterfacer.GameMode == GameDefine.InputType.Replay)
 		{
 			SceneManager.Instance.Change( SceneManager.EffectType.Fast, SceneManager.EffectType.Default, "LoadReplay" );
 			SoundManager.Instance.FadeBGM( 1, 0, 1 );

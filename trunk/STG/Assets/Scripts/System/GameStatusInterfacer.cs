@@ -1,4 +1,4 @@
-﻿/*===========================================================================*/
+/*===========================================================================*/
 /*
 *     * FileName    : GameStatusInterfacer.cs
 *
@@ -48,8 +48,8 @@ public static class GameStatusInterfacer
 	/// ゲームモード.
 	/// </summary>
 	/// <value>The game mode.</value>
-	public static GameDefine.GameModeType GameMode{ set{ gameMode = value; } get{ return gameMode; } }
-	private static GameDefine.GameModeType gameMode = GameDefine.GameModeType.PlayerInput;
+	public static GameDefine.InputType GameMode{ set{ gameMode = value; } get{ return gameMode; } }
+	private static GameDefine.InputType gameMode = GameDefine.InputType.User;
 
 	/// <summary>
 	/// プレイスタイル.

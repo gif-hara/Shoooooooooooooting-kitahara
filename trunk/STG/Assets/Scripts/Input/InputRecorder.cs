@@ -1,4 +1,4 @@
-﻿/*===========================================================================*/
+/*===========================================================================*/
 /*
 *     * FileName    : InputRecorder.cs
 *
@@ -16,7 +16,7 @@ public class InputRecorder : GameMonoBehaviour
 {
 	public override void Update ()
 	{
-		if( GameStatusInterfacer.GameMode == GameDefine.GameModeType.Replay )	return;
+		if( GameStatusInterfacer.GameMode == GameDefine.InputType.Replay )	return;
 		if( PauseManager.Instance.IsPause )	return;
 		
 		if( MyInput.UpKey )

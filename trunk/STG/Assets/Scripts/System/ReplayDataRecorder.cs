@@ -1,4 +1,4 @@
-﻿/*===========================================================================*/
+/*===========================================================================*/
 /*
 *     * FileName    : ReplayDataRecorder.cs
 *
@@ -21,7 +21,7 @@ public class ReplayDataRecorder : MonoBehaviour
 
 	void Awake()
 	{
-		if( GameStatusInterfacer.GameMode == GameDefine.GameModeType.Replay )
+		if( GameStatusInterfacer.GameMode == GameDefine.InputType.Replay )
 		{
 			enabled = false;
 			return;

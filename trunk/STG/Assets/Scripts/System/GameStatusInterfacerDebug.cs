@@ -30,7 +30,7 @@ public class GameStatusInterfacerDebug : MonoBehaviour
 	private int replayId;
 
 	[SerializeField]
-	private GameDefine.GameModeType gameMode;
+	private GameDefine.InputType gameMode;
 
 	void Awake()
 	{

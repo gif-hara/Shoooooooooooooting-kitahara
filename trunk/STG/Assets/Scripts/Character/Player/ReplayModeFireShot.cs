@@ -1,4 +1,4 @@
-﻿/*===========================================================================*/
+/*===========================================================================*/
 /*
 *     * FileName    : ReplayModeFireShot.cs
 *
@@ -20,7 +20,7 @@ public class ReplayModeFireShot : GameMonoBehaviour
 	public override void Start ()
 	{
 		base.Start ();
-		enabled = GameStatusInterfacer.GameMode == GameDefine.GameModeType.Replay;
+		enabled = GameStatusInterfacer.GameMode == GameDefine.InputType.Replay;
 	}
 
 	public override void Update ()

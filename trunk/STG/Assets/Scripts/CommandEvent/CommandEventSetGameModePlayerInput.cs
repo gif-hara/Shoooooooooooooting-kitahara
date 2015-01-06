@@ -1,4 +1,4 @@
-﻿/*===========================================================================*/
+/*===========================================================================*/
 /*
 *     * FileName    : CommandEventSetGameModePlayerInput.cs
 *
@@ -12,6 +12,6 @@ public class CommandEventSetGameModePlayerInput : MonoBehaviour
 {
 	void OnCommandEvent()
 	{
-		GameStatusInterfacer.GameMode = GameDefine.GameModeType.PlayerInput;
+		GameStatusInterfacer.GameMode = GameDefine.InputType.User;
 	}
 }
