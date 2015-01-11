@@ -22,8 +22,7 @@ public class BossRushConditioner : MonoBehaviour
 	{
 		get
 		{
-			// 未実装.
-			return false;
+			return SaveData.Progresses.Instance.IsClearGame( GameDefine.DifficultyType.Normal );
 		}
 	}
 }

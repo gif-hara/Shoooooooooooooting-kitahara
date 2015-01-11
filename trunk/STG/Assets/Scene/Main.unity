@@ -253,6 +253,11 @@ MonoBehaviour:
   - {fileID: 11400164, guid: 56a60e5be59fc4d6ba00d5017427b3c7, type: 2}
   - {fileID: 11400360, guid: 1a611a0d02c33d849b4101e47039671a, type: 2}
   - {fileID: 11400360, guid: 4137132c3b2164591982f973a8a06c98, type: 2}
+  prefabBossRushStageList:
+  - {fileID: 11455238, guid: f3162f78d1b5449928f70c5d07373cc3, type: 2}
+  - {fileID: 11400036, guid: 7c1c0de8014884825bd173c2f0455371, type: 2}
+  - {fileID: 11408172, guid: f13400176e9d24778af0d8600ff321e2, type: 2}
+  - {fileID: 11400360, guid: 2db2948cd62494f568dec8465afe5c09, type: 2}
 --- !u!1 &42097993
 GameObject:
   m_ObjectHideFlags: 0
@@ -9474,12 +9479,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22b76de7f6e138541a836620be57cd8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  apply: 0
-  difficulty: 3
-  stageId: 0
+  apply: 1
+  difficulty: 1
+  stageId: 1
   playerId: 0
   replayId: 0
   gameMode: 0
+  playStyle: 2
 --- !u!1 &1499841363
 GameObject:
   m_ObjectHideFlags: 0

@@ -32,6 +32,9 @@ public class GameStatusInterfacerDebug : MonoBehaviour
 	[SerializeField]
 	private GameDefine.InputType gameMode;
 
+	[SerializeField]
+	private GameDefine.PlayStyleType playStyle;
+
 	void Awake()
 	{
 		if( !apply )	return;
@@ -41,5 +44,6 @@ public class GameStatusInterfacerDebug : MonoBehaviour
 		GameStatusInterfacer.PlayerId = playerId;
 		GameStatusInterfacer.ReplayId = replayId;
 		GameStatusInterfacer.GameMode = gameMode;
+		GameStatusInterfacer.PlayStyle = playStyle;
 	}
 }

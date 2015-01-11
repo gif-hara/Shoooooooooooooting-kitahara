@@ -19,6 +19,7 @@ public class CommandEventSetPlayStyle : MonoBehaviour
 
 	void OnCommandEvent()
 	{
+		Debug.Log( "Set PlayStyle = " + playStyle );
 		GameStatusInterfacer.PlayStyle = playStyle;
 	}
 }
