@@ -1,6 +1,6 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    :EnemyHitPointInitialize.cs
+*     * FileName    :InitializeEnemyHitPoint.cs
 *
 *     * Description : .
 *
@@ -14,7 +14,7 @@ using System.Collections.Generic;
 /// <summary>
 /// .
 /// </summary>
-public class EnemyHitPointInitialize : MonoBehaviour
+public class InitializeEnemyHitPoint : MonoBehaviour
 {
 	[SerializeField]
 	private EnemyController refEnemy;

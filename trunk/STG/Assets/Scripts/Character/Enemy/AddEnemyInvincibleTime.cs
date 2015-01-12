@@ -1,6 +1,6 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    :EnemyInvincibleTimeSetter.cs
+*     * FileName    :AddEnemyInvincibleTime.cs
 *
 *     * Description : .
 *
@@ -14,7 +14,7 @@ using System.Collections.Generic;
 /// <summary>
 /// .
 /// </summary>
-public class EnemyInvincibleTimeSetter : MonoBehaviour
+public class AddEnemyInvincibleTime : MonoBehaviour
 {
 	[SerializeField]
 	private EnemyController refEnemy;
