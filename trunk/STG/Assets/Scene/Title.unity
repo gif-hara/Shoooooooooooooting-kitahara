@@ -477,6 +477,9 @@ GameObject:
   - 114: {fileID: 160302204}
   - 114: {fileID: 160302203}
   - 114: {fileID: 160302205}
+  - 114: {fileID: 160302207}
+  - 114: {fileID: 160302206}
+  - 114: {fileID: 160302208}
   m_Layer: 0
   m_Name: DecideEvent
   m_TagString: Untagged
@@ -532,6 +535,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb9981340b55bce43b96b99e9892a070, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &160302206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 160302201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a49775a64dad247ac910384e632106b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  refTarget: {fileID: 131320306}
+  isActive: 0
+  refConditionObject: {fileID: 160302201}
+--- !u!114 &160302207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 160302201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a49775a64dad247ac910384e632106b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  refTarget: {fileID: 445382507}
+  isActive: 1
+  refConditionObject: {fileID: 160302201}
+--- !u!114 &160302208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 160302201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 709bbe42776e26049ba7d64682a6420a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playStyle: 2
 --- !u!1 &171361290
 GameObject:
   m_ObjectHideFlags: 0

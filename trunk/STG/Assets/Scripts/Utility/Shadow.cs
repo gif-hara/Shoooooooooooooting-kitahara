@@ -58,7 +58,7 @@ public class Shadow : GameMonoBehaviour
 		this.initScale = chaseObject.localScale;
 		Trans.localScale = this.initScale;
 		renderer.sharedMaterial = material;
-		var destroyOnReferenceNull = gameObject.AddComponent<DestroyOnReferenceNull>();
+		var destroyOnReferenceNull = gameObject.AddComponent<DestroyOnNullReference>();
 		destroyOnReferenceNull.refTarget = chaseObject.gameObject;
 		destroyOnReferenceNull.refDestroyObject = Trans.gameObject;
 	}

@@ -22,9 +22,22 @@ public abstract class A_DelayEvent : GameMonoBehaviour
 
 	[SerializeField]
 	protected bool ignorePause;
-	
+
+	public override void Start ()
+	{
+		base.Start ();
+
+		Execute();
+	}
 	// Update is called once per frame
 	public override void Update()
+	{
+		Execute();
+
+		delay--;
+	}
+
+	private void Execute()
 	{
 		if( !ignorePause && PauseManager.Instance.IsPause )	return;
 		
@@ -33,8 +46,6 @@ public abstract class A_DelayEvent : GameMonoBehaviour
 			OnDelayEvent();
 			enabled = false;
 		}
-		
-		delay--;
 	}
 	
 	/// <summary>

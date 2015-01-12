@@ -1,6 +1,6 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : DestroyOnReferenceNull.cs
+*     * FileName    : DestroyOnNullReference.cs
 *
 *     * Description : 参照オブジェクトがNullになったら死亡するコンポーネント.
 *
@@ -12,7 +12,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 
-public class DestroyOnReferenceNull : MonoBehaviour
+public class DestroyOnNullReference : MonoBehaviour
 {
 	public GameObject refDestroyObject;
 	

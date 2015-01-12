@@ -1,8 +1,8 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : Stage3FinalChangeConditioner.cs
+*     * FileName    : BossRushDifficultyChangeConditioner.cs
 *
-*     * Description : ステージ1のステージ切り替え条件処理.
+*     * Description : .
 *
 *     * Author      : Hiroki_Kitahara.
 */
@@ -12,11 +12,12 @@ using System.Collections;
 using System.Collections.Generic;
 
 
-public class Stage3FinalChangeConditioner : A_StageChangeConditioner
+public class BossRushDifficultyChangeConditioner : A_StageChangeConditioner
 {
 	public override bool Condition()
 	{
-		Debug.Log( "IsAllReverseStageClear = " + GameManager.IsAllReverseStageClear );
-		return GameManager.IsAllReverseStageClear;
+		return
+			GameManager.DifficultyType == GameDefine.DifficultyType.Hard ||
+			GameManager.DifficultyType == GameDefine.DifficultyType.Hell;
 	}
 }
