@@ -1,6 +1,6 @@
 /*===========================================================================*/
 /*
-*     * FileName    : EnemyHitPointBarCreator.cs
+*     * FileName    : CreateEnemyHitPointBar.cs
 *
 *     * Description : .
 *
@@ -12,7 +12,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 
-public class EnemyHitPointBarCreator : GameMonoBehaviour
+public class CreateEnemyHitPointBar : GameMonoBehaviour
 {
 	public EnemyController refEnemy;
 	

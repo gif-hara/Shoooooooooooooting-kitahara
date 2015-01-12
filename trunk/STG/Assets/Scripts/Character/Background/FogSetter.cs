@@ -29,8 +29,4 @@ public class FogSetter : MonoBehaviour
 		RenderSettings.fogColor = color;
 		RenderSettings.fogDensity = density;
 	}
-	
-	void Update ()
-	{
-	}
 }
