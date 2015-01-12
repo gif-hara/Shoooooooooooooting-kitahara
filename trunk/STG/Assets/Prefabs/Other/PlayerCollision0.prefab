@@ -11,7 +11,7 @@ GameObject:
   - 198: {fileID: 19800000}
   - 199: {fileID: 19900000}
   m_Layer: 17
-  m_Name: Particle
+  m_Name: Particle0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -281,7 +281,7 @@ ParticleSystem:
       minMaxState: 0
     gravityModifier: 0
     inheritVelocity: 0
-    maxNumParticles: 360
+    maxNumParticles: 1000
   ShapeModule:
     serializedVersion: 2
     enabled: 1
@@ -299,7 +299,7 @@ ParticleSystem:
     enabled: 1
     m_Type: 0
     rate:
-      scalar: 2
+      scalar: 240
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -348,6 +348,11 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - time: 0
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+        - time: .5
           value: 1
           inSlope: 0
           outSlope: 0
@@ -409,7 +414,7 @@ ParticleSystem:
           rgba: 4294967295
         key1:
           serializedVersion: 2
-          rgba: 4278190335
+          rgba: 4294921216
         key2:
           serializedVersion: 2
           rgba: 16777215
@@ -428,8 +433,8 @@ ParticleSystem:
         key7:
           serializedVersion: 2
           rgba: 0
-        ctime0: 0
-        ctime1: 47995
+        ctime0: 14842
+        ctime1: 65342
         ctime2: 47995
         ctime3: 0
         ctime4: 0
@@ -538,7 +543,7 @@ ParticleSystem:
     cycles: 1
     randomRow: 1
   VelocityModule:
-    enabled: 0
+    enabled: 1
     x:
       scalar: 0
       maxCurve:
@@ -606,7 +611,7 @@ ParticleSystem:
         m_PostInfinity: 2
       minMaxState: 0
     z:
-      scalar: 0
+      scalar: -10
       maxCurve:
         serializedVersion: 2
         m_Curve:
