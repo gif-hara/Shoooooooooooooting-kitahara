@@ -8002,24 +8002,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &100910
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 400910}
-  - 33: {fileID: 3300786}
-  - 23: {fileID: 2300786}
-  - 114: {fileID: 11400004}
-  m_Layer: 31
-  m_Name: Daylight Water
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &100912
 GameObject:
   m_ObjectHideFlags: 1
@@ -18279,7 +18261,6 @@ Transform:
   - {fileID: 400006}
   - {fileID: 400000}
   - {fileID: 401600}
-  - {fileID: 400910}
   - {fileID: 400288}
   - {fileID: 400026}
   m_Father: {fileID: 0}
@@ -18393,7 +18374,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400010}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!4 &400028
 Transform:
   m_ObjectHideFlags: 1
@@ -18460,7 +18441,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100038}
-  m_LocalRotation: {x: .0104413293, y: -.134840131, z: -.0764297992, w: .987860203}
+  m_LocalRotation: {x: .0104413293, y: -.134840131, z: -.0764297992, w: .987860143}
   m_LocalPosition: {x: 1023.74353, y: 0, z: 522.168091}
   m_LocalScale: {x: 1.05999994, y: 1.05999994, z: 1.0599997}
   m_Children:
@@ -20091,7 +20072,7 @@ Transform:
   - {fileID: 400950}
   - {fileID: 401850}
   m_Father: {fileID: 400010}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!4 &400290
 Transform:
   m_ObjectHideFlags: 1
@@ -24152,18 +24133,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 400678}
   m_RootOrder: 2
---- !u!4 &400910
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100910}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 583.290527, y: -4.65999985, z: 333.569641}
-  m_LocalScale: {x: 1500, y: 1, z: 1500}
-  m_Children: []
-  m_Father: {fileID: 400010}
-  m_RootOrder: 4
 --- !u!4 &400912
 Transform:
   m_ObjectHideFlags: 1
@@ -24398,7 +24367,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100950}
-  m_LocalRotation: {x: -.591515899, y: .0913160145, z: .0169560201, w: .800926208}
+  m_LocalRotation: {x: -.591515958, y: .091316022, z: .016956022, w: .800926268}
   m_LocalPosition: {x: 290.833923, y: -.831556797, z: 186.97374}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -27309,7 +27278,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 101408}
-  m_LocalRotation: {x: .0104413293, y: -.134840131, z: -.0764297992, w: .987860203}
+  m_LocalRotation: {x: .0104413293, y: -.134840131, z: -.0764297992, w: .987860143}
   m_LocalPosition: {x: 576.221924, y: 0, z: 523.106628}
   m_LocalScale: {x: 1.05999994, y: 1.05999994, z: 1.05999959}
   m_Children:
@@ -29159,7 +29128,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 101690}
-  m_LocalRotation: {x: .0104413293, y: -.134840131, z: -.0764297992, w: .987860203}
+  m_LocalRotation: {x: .0104413293, y: -.134840131, z: -.0764297992, w: .987860143}
   m_LocalPosition: {x: 537.72229, y: 0, z: 633.263855}
   m_LocalScale: {x: 1.05999994, y: 1.05999994, z: 1.05999982}
   m_Children:
@@ -30979,7 +30948,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 101968}
-  m_LocalRotation: {x: .0104413293, y: -.134840131, z: -.0764297992, w: .987860203}
+  m_LocalRotation: {x: .0104413293, y: -.134840131, z: -.0764297992, w: .987860143}
   m_LocalPosition: {x: 573.83136, y: 0, z: 225.884827}
   m_LocalScale: {x: 1.05999994, y: 1.05999994, z: 1.0599997}
   m_Children:
@@ -39518,26 +39487,6 @@ Renderer:
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100002, guid: 08170dd4d8d521f49a99199199f35808, type: 2}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!23 &2300786
-Renderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100910}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 2100000, guid: ae162c0523ab4468bb03ef160eb672e2, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -52676,13 +52625,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100908}
   m_Mesh: {fileID: 4300000, guid: 08170dd4d8d521f49a99199199f35808, type: 2}
---- !u!33 &3300786
-MeshFilter:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100910}
-  m_Mesh: {fileID: 4300006, guid: ba6a41dc489914734857bb5924eb70ad, type: 3}
 --- !u!33 &3300788
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -58253,23 +58195,30 @@ MonoBehaviour:
   pathName: New Path 1
   pathColor: {r: 0, g: 1, b: 1, a: 1}
   nodes:
-  - {x: 358.755798, y: 200, z: 160.575256}
-  - {x: 225.323837, y: 200, z: 205.220428}
-  - {x: 249.02121, y: 200, z: 268.557373}
-  - {x: 391.628387, y: 180, z: 380.105743}
-  - {x: 410.41507, y: 160, z: 451.04422}
-  - {x: 360.25882, y: 160, z: 472.604797}
-  - {x: 426.271637, y: 160, z: 549.652832}
-  - {x: 520.138428, y: 160, z: 473.06488}
-  - {x: 756.662964, y: 160, z: 474.095703}
-  - {x: 889.178772, y: 160, z: 307.835022}
-  - {x: 843.609192, y: 160, z: 234.774353}
-  - {x: 756.666504, y: 160, z: 278.537292}
-  - {x: 578.654907, y: 160, z: 357.865356}
-  - {x: 536.643005, y: 160, z: 222.111435}
-  - {x: 482.495117, y: 160, z: 167.245026}
-  - {x: 358.755798, y: 200, z: 160.575256}
-  nodeCount: 16
+  - {x: 439.292328, y: 150, z: 43.9257164}
+  - {x: 162.312607, y: 150, z: 146.41893}
+  - {x: 105.877533, y: 150, z: 434.64801}
+  - {x: 210.035568, y: 150, z: 544.404053}
+  - {x: 320.893585, y: 150, z: 596.899719}
+  - {x: 474.609863, y: 150, z: 507.58139}
+  - {x: 630.794434, y: 150, z: 477.335327}
+  - {x: 737.732361, y: 150, z: 472.581268}
+  - {x: 982.317261, y: 150, z: 470.638}
+  - {x: 979.909363, y: 150, z: 620.958191}
+  - {x: 901.296082, y: 150, z: 619.28772}
+  - {x: 586.227173, y: 150, z: 375.281494}
+  - {x: 460.920654, y: 150, z: 276.017578}
+  - {x: 482.495117, y: 150, z: 167.245026}
+  - {x: 584.043152, y: 150, z: 186.694962}
+  - {x: 767.291199, y: 150, z: 193.509979}
+  - {x: 834.684021, y: 150, z: 254.087845}
+  - {x: 972.498718, y: 150, z: 344.95462}
+  - {x: 1021.71814, y: 150, z: 443.393646}
+  - {x: 1123.94336, y: 150, z: 442.636414}
+  - {x: 1070.18054, y: 150, z: 291.949036}
+  - {x: 974.770386, y: 150, z: 126.117188}
+  - {x: 439.292328, y: 150, z: 43.9257164}
+  nodeCount: 23
   initialized: 1
   initialName: New Path 1
 --- !u!114 &11400002
@@ -58297,28 +58246,8 @@ MonoBehaviour:
   m_LightmapIndex: 17
   m_LightmapSize: 2048
   m_DrawTreesAndFoliage: 1
+  m_CollectDetailPatches: 1
   m_MaterialTemplate: {fileID: 0}
---- !u!114 &11400004
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100910}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3d3ef1a5bbfb4e0a910fbbe5830b1f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_WaterMode: 2
-  m_DisablePixelLights: 1
-  m_TextureSize: 512
-  m_ClipPlaneOffset: .0700000003
-  m_ReflectLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RefractLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -58361,17 +58290,22 @@ MonoBehaviour:
     m_Curve:
     - time: 0
       value: 0
-      inSlope: 1
-      outSlope: 1
-      tangentMode: 10
+      inSlope: 3.46325374
+      outSlope: 3.46325374
+      tangentMode: 0
+    - time: .0972656161
+      value: .203290671
+      inSlope: .144001856
+      outSlope: .144001856
+      tangentMode: 0
     - time: 1
       value: 1
-      inSlope: 1
-      outSlope: 1
+      inSlope: .882551193
+      outSlope: .882551193
       tangentMode: 10
     m_PreInfinity: 2
     m_PostInfinity: 2
-  duration: 20000
+  duration: 9000
   loopType: 1
   path: {fileID: 0}
   debugRange: 0
