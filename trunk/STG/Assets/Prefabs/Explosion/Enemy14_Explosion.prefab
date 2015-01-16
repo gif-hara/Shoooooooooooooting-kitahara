@@ -162,6 +162,7 @@ GameObject:
   - 114: {fileID: 11400052}
   - 114: {fileID: 11400050}
   - 114: {fileID: 11400048}
+  - 114: {fileID: 11463096}
   m_Layer: 0
   m_Name: ExplosionEvent_Delay250
   m_TagString: Untagged
@@ -1130,6 +1131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   delay: 210
+  ignorePause: 0
   refTargetList:
   - {fileID: 100002}
   isEnable: 1
@@ -1310,9 +1312,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   delay: 240
+  ignorePause: 0
   from: {r: 1, g: 1, b: 1, a: 1}
   to: {r: 1, g: 1, b: 1, a: 0}
   duration: 15
+  layerMaskName: EffectLv4
 --- !u!114 &11400042
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1371,16 +1375,18 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100016}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32e927b1ceda44b42964d3dedf641609, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   delay: 250
+  ignorePause: 0
   from: {r: 1, g: 1, b: 1, a: 1}
   to: {r: 1, g: 1, b: 1, a: 0}
   duration: 60
+  layerMaskName: EffectLv4
 --- !u!114 &11400050
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1499,9 +1505,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   delay: 0
+  ignorePause: 0
   from: {r: 1, g: 1, b: 1, a: 1}
   to: {r: 1, g: 1, b: 1, a: 0}
   duration: 60
+  layerMaskName: EffectLv4
 --- !u!114 &11400064
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1554,6 +1562,24 @@ MonoBehaviour:
   max: {x: -103.07, y: 0}
   interval: 0
   createNum: 0
+--- !u!114 &11463096
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fafde7e7b5f40b4388b976f884aeffb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  createType: 2
+  elementList:
+  - prefab: {fileID: 154726, guid: 412ffb8df7d57b14588ddd635059a5a6, type: 2}
+    parent: {fileID: 400204}
+    detachParent: 1
+  delay: 250
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1

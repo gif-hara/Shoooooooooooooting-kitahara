@@ -1646,7 +1646,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 400182}
   - 114: {fileID: 11400446}
-  - 114: {fileID: 11400428}
   - 114: {fileID: 11400394}
   m_Layer: 17
   m_Name: Enemy44
@@ -3061,6 +3060,10 @@ GameObject:
   - 114: {fileID: 11400556}
   - 114: {fileID: 11400554}
   - 114: {fileID: 11400552}
+  - 114: {fileID: 11450038}
+  - 114: {fileID: 11450036}
+  - 114: {fileID: 11407972}
+  - 114: {fileID: 11407974}
   m_Layer: 0
   m_Name: VisibleEffectEvent
   m_TagString: Untagged
@@ -3077,6 +3080,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400356}
   - 114: {fileID: 11400426}
+  - 114: {fileID: 11407976}
   m_Layer: 0
   m_Name: CreateHitPointBarEvent
   m_TagString: Untagged
@@ -6980,6 +6984,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   refMeshFilter: {fileID: 3300022}
+  loop: 1
   lerpDataList:
   - color: {r: .991075039, g: 1, b: .838235259, a: .56078434}
     duration: 60
@@ -7136,6 +7141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   refMeshFilter: {fileID: 3300030}
+  loop: 1
   lerpDataList:
   - color: {r: .991075039, g: 1, b: .838235259, a: .56078434}
     duration: 60
@@ -7201,6 +7207,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   refMeshFilter: {fileID: 3300032}
+  loop: 1
   lerpDataList:
   - color: {r: .991075039, g: 1, b: .838235259, a: .56078434}
     duration: 60
@@ -7316,6 +7323,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   refMeshFilter: {fileID: 3300036}
+  loop: 1
   lerpDataList:
   - color: {r: .991075039, g: 1, b: .838235259, a: .56078434}
     duration: 60
@@ -7557,6 +7565,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   refMeshFilter: {fileID: 3300046}
+  loop: 1
   lerpDataList:
   - color: {r: .991075039, g: 1, b: .838235259, a: .56078434}
     duration: 60
@@ -7636,6 +7645,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   refMeshFilter: {fileID: 3300052}
+  loop: 1
   lerpDataList:
   - color: {r: .991075039, g: 1, b: .838235259, a: .56078434}
     duration: 60
@@ -7715,6 +7725,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   refMeshFilter: {fileID: 3300056}
+  loop: 1
   lerpDataList:
   - color: {r: .991075039, g: 1, b: .838235259, a: .56078434}
     duration: 60
@@ -7794,6 +7805,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   refMeshFilter: {fileID: 3300062}
+  loop: 1
   lerpDataList:
   - color: {r: .991075039, g: 1, b: .838235259, a: .56078434}
     duration: 60
@@ -8780,6 +8792,7 @@ MonoBehaviour:
   refParticle:
   - {fileID: 19800006}
   - {fileID: 19800026}
+  subtract: 0
 --- !u!114 &11400180
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8874,6 +8887,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   delay: 1
+  ignorePause: 0
 --- !u!114 &11400192
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8888,6 +8902,7 @@ MonoBehaviour:
   refParticle:
   - {fileID: 19800032}
   - {fileID: 19800036}
+  subtract: 0
 --- !u!114 &11400194
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10514,6 +10529,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   delay: 230
+  ignorePause: 0
   refTargetList:
   - {fileID: 100026}
   isEnable: 1
@@ -10577,6 +10593,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   delay: 210
+  ignorePause: 0
   refTargetList:
   - {fileID: 100064}
   isEnable: 1
@@ -11362,6 +11379,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   delay: 220
+  ignorePause: 0
   refTargetList:
   - {fileID: 100034}
   isEnable: 1
@@ -11489,6 +11507,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   delay: 240
+  ignorePause: 0
   refTargetList:
   - {fileID: 100128}
   isEnable: 1
@@ -11544,6 +11563,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   delay: 0
+  ignorePause: 0
   refTargetList:
   - {fileID: 100272}
   isEnable: 1
@@ -11560,6 +11580,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   delay: 0
+  ignorePause: 0
   refTargetList:
   - {fileID: 100278}
   - {fileID: 100094}
@@ -11578,6 +11599,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   delay: 0
+  ignorePause: 0
   refTargetList:
   - {fileID: 100174}
   - {fileID: 100204}
@@ -11635,19 +11657,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   refEnemy: {fileID: 11400446}
---- !u!114 &11400428
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51633c75a2ce84d7fbd745d645ce806e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cachedTransform: {fileID: 0}
-  bossType: 2
 --- !u!114 &11400430
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11674,6 +11683,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   delay: 179
+  ignorePause: 0
   refTargetList:
   - {fileID: 100264}
   isEnable: 1
@@ -11690,6 +11700,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   delay: 90
+  ignorePause: 0
   refTargetList:
   - {fileID: 100256}
   isEnable: 1
@@ -11706,6 +11717,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   delay: 179
+  ignorePause: 0
   refTargetList:
   - {fileID: 100110}
   isEnable: 1
@@ -11898,9 +11910,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   delay: 0
+  ignorePause: 0
   from: {r: 1, g: 1, b: 1, a: 1}
   to: {r: 1, g: 1, b: 1, a: 0}
   duration: 20
+  layerMaskName: EffectLv4
 --- !u!114 &11400460
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -12062,6 +12076,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   delay: 180
+  ignorePause: 0
   refTargetList:
   - {fileID: 100004}
   isEnable: 1
@@ -12628,6 +12643,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   delay: 10
+  ignorePause: 0
   refTargetList:
   - {fileID: 100000}
   - {fileID: 100148}
@@ -12963,6 +12979,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   delay: 350
+  ignorePause: 0
   refTargetList:
   - {fileID: 100210}
   - {fileID: 100356}
@@ -12980,9 +12997,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   delay: 300
+  ignorePause: 0
   from: {r: 1, g: 1, b: 1, a: 1}
   to: {r: 1, g: 1, b: 1, a: 0}
   duration: 10
+  layerMaskName: EffectLv4
 --- !u!114 &11400556
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -12996,9 +13015,84 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   delay: 320
+  ignorePause: 0
   refTargetList:
   - {fileID: 100348}
   isEnable: 1
+--- !u!114 &11407972
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d62f0a5f2093f0b4f8b1ae12c95a4861, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  label: Dead2
+  delay: 300
+--- !u!114 &11407974
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d62f0a5f2093f0b4f8b1ae12c95a4861, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  label: Visible0
+  delay: 300
+--- !u!114 &11407976
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51633c75a2ce84d7fbd745d645ce806e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  bossType: 2
+--- !u!114 &11450036
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b349565fa13cbca45b7fc754b689d7b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  delay: 320
+  rate: 30
+  duration: 2
+--- !u!114 &11450038
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fafde7e7b5f40b4388b976f884aeffb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  createType: 2
+  elementList:
+  - prefab: {fileID: 154726, guid: 412ffb8df7d57b14588ddd635059a5a6, type: 2}
+    parent: {fileID: 400182}
+    detachParent: 1
+  delay: 350
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1

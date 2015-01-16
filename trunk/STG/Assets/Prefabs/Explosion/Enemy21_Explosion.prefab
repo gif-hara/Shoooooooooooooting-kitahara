@@ -666,6 +666,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &168560
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 468560}
+  - 114: {fileID: 11468560}
+  m_Layer: 8
+  m_Name: ExplosionEvent_Delay180
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &400000
 Transform:
   m_ObjectHideFlags: 1
@@ -763,7 +779,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400188}
-  m_RootOrder: 22
+  m_RootOrder: 23
 --- !u!4 &400016
 Transform:
   m_ObjectHideFlags: 1
@@ -1129,6 +1145,7 @@ Transform:
   - {fileID: 400022}
   - {fileID: 400018}
   - {fileID: 400016}
+  - {fileID: 468560}
   - {fileID: 400014}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -1185,6 +1202,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 400196}
   m_RootOrder: 1
+--- !u!4 &468560
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 168560}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 160.047424, y: -58.9888229, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400188}
+  m_RootOrder: 22
 --- !u!23 &2300000
 Renderer:
   m_ObjectHideFlags: 1
@@ -1373,9 +1402,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   delay: 180
+  ignorePause: 0
   from: {r: 1, g: 1, b: 1, a: 1}
   to: {r: 1, g: 1, b: 1, a: 0}
   duration: 180
+  layerMaskName: EffectLv4
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1405,8 +1436,8 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   createType: 2
   elementList:
-  - prefab: {fileID: 100002, guid: d13eff1974ce079489bf01a195b1e0d0, type: 2}
-    parent: {fileID: 400014}
+  - prefab: {fileID: 154726, guid: 412ffb8df7d57b14588ddd635059a5a6, type: 2}
+    parent: {fileID: 400188}
     detachParent: 1
   delay: 180
 --- !u!114 &11400008
@@ -1580,6 +1611,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   delay: 150
+  ignorePause: 0
   refTargetList:
   - {fileID: 100040}
   - {fileID: 100034}
@@ -1986,6 +2018,8 @@ MonoBehaviour:
   duration: 180
   from: {r: 1, g: 1, b: 1, a: 1}
   to: {r: 1, g: 0, b: 0, a: 1}
+  refCompleteEventReceiver: {fileID: 0}
+  completeFunctionName: 
 --- !u!114 &11400076
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2017,9 +2051,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   delay: 0
+  ignorePause: 0
   from: {r: 1, g: 1, b: 1, a: 1}
   to: {r: 1, g: 1, b: 1, a: 0}
   duration: 20
+  layerMaskName: EffectLv4
+--- !u!114 &11468560
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 168560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fafde7e7b5f40b4388b976f884aeffb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  createType: 2
+  elementList:
+  - prefab: {fileID: 100002, guid: d13eff1974ce079489bf01a195b1e0d0, type: 2}
+    parent: {fileID: 468560}
+    detachParent: 1
+  delay: 180
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1

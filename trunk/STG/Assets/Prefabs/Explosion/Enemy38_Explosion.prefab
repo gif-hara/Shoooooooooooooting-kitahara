@@ -265,6 +265,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &129076
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 429076}
+  - 114: {fileID: 11429076}
+  m_Layer: 0
+  m_Name: Explosion_Delay80
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &400000
 Transform:
   m_ObjectHideFlags: 1
@@ -276,7 +292,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400052}
-  m_RootOrder: 11
+  m_RootOrder: 12
 --- !u!4 &400002
 Transform:
   m_ObjectHideFlags: 1
@@ -469,9 +485,22 @@ Transform:
   - {fileID: 400006}
   - {fileID: 400004}
   - {fileID: 400002}
+  - {fileID: 429076}
   - {fileID: 400000}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!4 &429076
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 129076}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 112.863083, y: 159.5224, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400052}
+  m_RootOrder: 11
 --- !u!23 &2300000
 Renderer:
   m_ObjectHideFlags: 1
@@ -567,8 +596,8 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   createType: 2
   elementList:
-  - prefab: {fileID: 100002, guid: da57d1383b005f145a8b500aa13ffe86, type: 2}
-    parent: {fileID: 400000}
+  - prefab: {fileID: 154726, guid: 412ffb8df7d57b14588ddd635059a5a6, type: 2}
+    parent: {fileID: 400052}
     detachParent: 1
   delay: 80
 --- !u!114 &11400002
@@ -843,6 +872,8 @@ MonoBehaviour:
   duration: 60
   from: {r: 1, g: 1, b: 1, a: 1}
   to: {r: 1, g: 0, b: 0, a: 1}
+  refCompleteEventReceiver: {fileID: 0}
+  completeFunctionName: 
 --- !u!114 &11400034
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -859,6 +890,8 @@ MonoBehaviour:
   duration: 60
   from: {r: 1, g: 1, b: 1, a: 1}
   to: {r: 1, g: 0, b: 0, a: 1}
+  refCompleteEventReceiver: {fileID: 0}
+  completeFunctionName: 
 --- !u!114 &11400036
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -875,6 +908,26 @@ MonoBehaviour:
   duration: 60
   from: {r: 1, g: 1, b: 1, a: 1}
   to: {r: 1, g: 0, b: 0, a: 1}
+  refCompleteEventReceiver: {fileID: 0}
+  completeFunctionName: 
+--- !u!114 &11429076
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 129076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fafde7e7b5f40b4388b976f884aeffb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  createType: 2
+  elementList:
+  - prefab: {fileID: 100002, guid: da57d1383b005f145a8b500aa13ffe86, type: 2}
+    parent: {fileID: 429076}
+    detachParent: 1
+  delay: 80
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

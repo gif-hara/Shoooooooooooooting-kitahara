@@ -228,6 +228,7 @@ GameObject:
   - 114: {fileID: 11400050}
   - 114: {fileID: 11400048}
   - 114: {fileID: 11400046}
+  - 114: {fileID: 11417676}
   m_Layer: 8
   m_Name: ExplosionEvent_Delay0
   m_TagString: Untagged
@@ -886,6 +887,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &117676
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 417676}
+  - 114: {fileID: 11417674}
+  m_Layer: 8
+  m_Name: ExplosionEvent_Delay90
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &400000
 Transform:
   m_ObjectHideFlags: 1
@@ -897,7 +914,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400216}
-  m_RootOrder: 15
+  m_RootOrder: 17
 --- !u!4 &400002
 Transform:
   m_ObjectHideFlags: 1
@@ -1353,7 +1370,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100138}
-  m_LocalRotation: {x: 0, y: 0, z: .104528733, w: -.994521856}
+  m_LocalRotation: {x: 0, y: 0, z: .10452874, w: -.994521916}
   m_LocalPosition: {x: 72.9316101, y: -1.6231308, z: -6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1367,7 +1384,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100144}
-  m_LocalRotation: {x: 0, y: 0, z: .104528733, w: -.994521856}
+  m_LocalRotation: {x: 0, y: 0, z: .10452874, w: -.994521916}
   m_LocalPosition: {x: 74, y: 15, z: -4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1381,7 +1398,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100150}
-  m_LocalRotation: {x: 0, y: 0, z: .104528733, w: -.994521856}
+  m_LocalRotation: {x: 0, y: 0, z: .10452874, w: -.994521916}
   m_LocalPosition: {x: 72.611351, y: 29.444931, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1557,10 +1574,23 @@ Transform:
   - {fileID: 400006}
   - {fileID: 400004}
   - {fileID: 400002}
-  - {fileID: 400000}
+  - {fileID: 417676}
   - {fileID: 400030}
+  - {fileID: 400000}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!4 &417676
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 117676}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 144.292755, y: -10.125824, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400216}
+  m_RootOrder: 15
 --- !u!23 &2300000
 Renderer:
   m_ObjectHideFlags: 1
@@ -2224,8 +2254,8 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   createType: 2
   elementList:
-  - prefab: {fileID: 100002, guid: d13eff1974ce079489bf01a195b1e0d0, type: 2}
-    parent: {fileID: 400000}
+  - prefab: {fileID: 154726, guid: 412ffb8df7d57b14588ddd635059a5a6, type: 2}
+    parent: {fileID: 400216}
     detachParent: 1
   delay: 90
 --- !u!114 &11400008
@@ -3234,6 +3264,41 @@ MonoBehaviour:
   callWhenFinished: 
   from: {x: 0, y: 0, z: 0}
   to: {x: 0, y: -5, z: 0}
+--- !u!114 &11417674
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 117676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fafde7e7b5f40b4388b976f884aeffb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  createType: 2
+  elementList:
+  - prefab: {fileID: 100002, guid: d13eff1974ce079489bf01a195b1e0d0, type: 2}
+    parent: {fileID: 417676}
+    detachParent: 1
+  delay: 90
+--- !u!114 &11417676
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01f49215f999ef249bdfc7a36b8d61ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  refTarget: {fileID: 400216}
+  isRandom: 0
+  velocity: {x: 0, y: -1, z: 0}
+  delay: 0
+  duration: 120
+  speed: 2
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
