@@ -1,6 +1,6 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    :BackgroundCamera.cs
+*     * FileName    :AttachiTweenPath.cs
 *
 *     * Description : .
 *
@@ -15,7 +15,7 @@ using System.Collections.Generic;
 /// .
 /// </summary>
 //[ExecuteInEditMode()]
-public class BackgroundCamera : MonoBehaviour
+public class AttachiTweenPath : MonoBehaviour
 {
 	[SerializeField]
 	private iTweenPath refPath;
