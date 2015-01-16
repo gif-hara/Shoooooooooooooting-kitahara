@@ -51,6 +51,8 @@ public class SceneManager : A_Singleton<SceneManager>
 
 	public const string StartEffectMessage = "OnStartSceneEffect";
 
+	private bool isChanging = false;
+
 	public override void Awake ()
 	{
 		Instance = this;
@@ -59,11 +61,16 @@ public class SceneManager : A_Singleton<SceneManager>
 
 	public void Change( EffectType startEffectType, EffectType endEffectType, string sceneName )
 	{
+		if( isChanging )
+		{
+			return;
+		}
 		StartCoroutine( ChangeCoroutine( startEffectType, endEffectType, sceneName ) );
 	}
 
 	private IEnumerator ChangeCoroutine( EffectType startEffectType, EffectType endEffectType, string sceneName )
 	{
+		isChanging = true;
 		var obj = Instantiate( prefabStartChangeEffectList[(int)startEffectType] ) as GameObject;
 		obj.transform.parent = Trans;
 		EventCatchData data = new EventCatchData();
@@ -90,5 +97,6 @@ public class SceneManager : A_Singleton<SceneManager>
 		}
 
 		Destroy( obj );
+		isChanging = false;
 	}
 }

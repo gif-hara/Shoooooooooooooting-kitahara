@@ -27,7 +27,12 @@ public class InputChangeScene : MonoBehaviour
 	{
 		if( MyInput.FireKeyDown )
 		{
-			SceneManager.Instance.Change( startEffectType, endEffectType, sceneName );
+			Press();
 		}
+	}
+
+	public void Press()
+	{
+		SceneManager.Instance.Change( startEffectType, endEffectType, sceneName );
 	}
 }
