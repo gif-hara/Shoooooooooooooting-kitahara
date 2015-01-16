@@ -32,7 +32,7 @@ public class StageTimeLineChangeScene : A_StageTimeLineActionable
 	{
 		get
 		{
-			return string.Format( "[{0}] SceneChangePracticeMode", timeLine );
+			return string.Format( "[{0}] ChangeScene", timeLine );
 		}
 	}
 }

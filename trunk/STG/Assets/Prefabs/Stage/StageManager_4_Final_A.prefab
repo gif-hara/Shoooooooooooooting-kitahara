@@ -8,10 +8,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400000}
-  - 114: {fileID: 11400002}
-  - 114: {fileID: 11400000}
+  - 114: {fileID: 11435594}
   m_Layer: 0
-  m_Name: '[1303] StageChange'
+  m_Name: '[1303] ChangeScene'
   m_TagString: Untagged
   m_Icon: {fileID: -1003283189, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -74,6 +73,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400008}
   - 114: {fileID: 11400010}
+  - 114: {fileID: 11435596}
   m_Layer: 0
   m_Name: StageManager_4_Final_A
   m_TagString: Stage
@@ -290,36 +290,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 400008}
   m_RootOrder: 8
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c83d69a130d0af64dad36c9d180c8dbf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cachedTransform: {fileID: 0}
-  isBasicRoot: 0
---- !u!114 &11400002
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28f087531f692844b93c66e75af4fc7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cachedTransform: {fileID: 400000}
-  timeLine: 1303
-  refActionConditioner: {fileID: 0}
-  prefabNextStage: {fileID: 100036, guid: 56adb3ac1d635644ba458fe3d237f62d, type: 2}
-  prefabExtensionStage: {fileID: 0}
-  refConditioner: {fileID: 11400000}
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -463,7 +433,40 @@ MonoBehaviour:
   cachedTransform: {fileID: 400018}
   timeLine: 1302
   refActionConditioner: {fileID: 0}
-  sceneName: SaveReplay
+--- !u!114 &11435594
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2546838f47f5643b0bdd501ca18fbf45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 400000}
+  timeLine: 1303
+  refActionConditioner: {fileID: 0}
+  startEffectType: 0
+  endEffectType: 0
+  sceneName: Ending
+--- !u!114 &11435596
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2546838f47f5643b0bdd501ca18fbf45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  timeLine: 0
+  refActionConditioner: {fileID: 0}
+  startEffectType: 0
+  endEffectType: 0
+  sceneName: 
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
