@@ -1,6 +1,6 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : SingletonSystemCreator.cs
+*     * FileName    : CreatePrefabSingleton.cs
 *
 *     * Author      : Hiroki_Kitahara.
 */
@@ -10,9 +10,9 @@ using System.Collections;
 using System.Collections.Generic;
 
 /// <summary>
-/// .
+/// シングルトン的なオブジェクトを生成するコンポーネント.
 /// </summary>
-public class SingletonSystemCreator : MonoBehaviour
+public class CreatePrefabSingleton : MonoBehaviour
 {
 	[SerializeField]
 	private GameObject prefabDontDestroyObject;
