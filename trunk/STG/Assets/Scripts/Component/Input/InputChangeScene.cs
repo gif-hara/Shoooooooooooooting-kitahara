@@ -1,6 +1,6 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : InputSceneChange.cs
+*     * FileName    : InputChangeScene.cs
 *
 *     * Author      : Hiroki_Kitahara.
 */
@@ -12,7 +12,7 @@ using System.Collections.Generic;
 /// <summary>
 /// .
 /// </summary>
-public class InputSceneChange : MonoBehaviour
+public class InputChangeScene : MonoBehaviour
 {
 	[SerializeField]
 	private SceneManager.EffectType startEffectType;

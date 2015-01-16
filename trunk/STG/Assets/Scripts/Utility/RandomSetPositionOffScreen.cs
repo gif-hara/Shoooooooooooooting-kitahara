@@ -10,7 +10,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 /// <summary>
-/// .
+/// 画面外の何処かに座標を設定するコンポーネント.
 /// </summary>
 public class SetPositionOffScreen : MonoBehaviour
 {

@@ -1,6 +1,6 @@
 /*===========================================================================*/
 /*
-*     * FileName    : PrefabCreatorInterval.cs
+*     * FileName    : CreatePrefabInterval.cs
 *
 *     * Description : 一定間隔でプレハブを生成するコンポーネント.
 *
@@ -12,7 +12,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 
-public class PrefabCreatorInterval : GameMonoBehaviour
+public class CreatePrefabInterval : GameMonoBehaviour
 {
 	/// <summary>
 	/// 親オブジェクト参照.

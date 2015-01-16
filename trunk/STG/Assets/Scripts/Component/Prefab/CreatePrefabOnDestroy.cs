@@ -1,6 +1,6 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : PrefabCreatorInDestroy.cs
+*     * FileName    : CreatePrefabOnDestroy.cs
 *
 *     * Description : 死亡時にプレハブを生成するコンポーネント.
 *
@@ -12,7 +12,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 
-public class PrefabCreatorInDestroy : MonoBehaviourExtension
+public class CreatePrefabOnDestroy : MonoBehaviourExtension
 {
 	/// <summary>
 	/// 生成するプレハブ.

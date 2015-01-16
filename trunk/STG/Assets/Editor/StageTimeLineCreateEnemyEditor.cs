@@ -1,6 +1,6 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : EnemyCreatorEditor.cs
+*     * FileName    : StageTimeLineCreateEnemyEditor.cs
 *
 *     * Description : .
 *
@@ -14,8 +14,8 @@ using System.Collections;
 using System.Collections.Generic;
 
 [CanEditMultipleObjects]
-[CustomEditor( typeof( EnemyCreator ) )]
-public class EnemyCreatorEditor : A_StageTimeLineActionEditor<EnemyCreator>
+[CustomEditor( typeof( StageTimeLineCreateEnemy ) )]
+public class StageTimeLineCreateEnemyEditor : A_StageTimeLineActionEditor<StageTimeLineCreateEnemy>
 {
 	/// <summary>
 	/// 移動データタイプID.
@@ -472,7 +472,7 @@ public class EnemyCreatorEditor : A_StageTimeLineActionEditor<EnemyCreator>
 		{
 			foreach( var t in targets )
 			{
-				var enemyCreator = t as EnemyCreator;
+				var enemyCreator = t as StageTimeLineCreateEnemy;
 				enemyCreator.initialPosition = pos;
 				SceneView.RepaintAll();
 			}

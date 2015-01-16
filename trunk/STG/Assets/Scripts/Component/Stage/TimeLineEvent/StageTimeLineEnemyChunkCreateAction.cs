@@ -55,7 +55,7 @@ public class StageTimeLineEnemyChunkCreateAction : A_StageTimeLineActionable
 		for( int i=0,imax=actionableListManager.ActionableList.Count; i<imax; i++ )
 		{
 			actionableListManager.ActionableList[i].timeLine += interval * i;
-			(actionableListManager.ActionableList[i] as EnemyCreator).OffsetPosition( offset );
+			(actionableListManager.ActionableList[i] as StageTimeLineCreateEnemy).OffsetPosition( offset );
 		}
 		
 		actionableListManager.SetNextActionableList();

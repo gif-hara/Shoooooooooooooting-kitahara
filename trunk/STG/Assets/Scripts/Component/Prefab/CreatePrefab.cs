@@ -1,6 +1,6 @@
 /*===========================================================================*/
 /*
-*     * FileName    : PrefabCreator.cs
+*     * FileName    : CreatePrefab.cs
 *
 *     * Description : .
 *
@@ -12,7 +12,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 
-public class PrefabCreator : GameMonoBehaviour
+public class CreatePrefab : GameMonoBehaviour
 {
 	[System.Serializable]
 	public class Element
@@ -74,11 +74,11 @@ public class PrefabCreator : GameMonoBehaviour
 	{
 		elementList.ForEach( (obj) => 
 		{
-			CreatePrefab( obj );
+			Create( obj );
 		});
 	}
 
-	private void CreatePrefab( Element element )
+	private void Create( Element element )
 	{
 		var obj = element.parent == null
 			? (Instantiate( element.prefab, element.prefab.transform.position, element.prefab.transform.rotation ) as GameObject).transform

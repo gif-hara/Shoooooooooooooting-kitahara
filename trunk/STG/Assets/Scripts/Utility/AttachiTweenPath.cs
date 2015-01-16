@@ -46,7 +46,6 @@ public class BackgroundCamera : MonoBehaviour
 			"path", nodes.ToArray(),
 			"time", duration,
 			"oncompletetarget", gameObject,
-			"oncomplete", "OnComplete",
 			"easetype", iTween.EaseType.animationCurve,
 			"looptype", loopType
 			)
@@ -69,9 +68,5 @@ public class BackgroundCamera : MonoBehaviour
 
 		transform.localRotation = Quaternion.LookRotation( transform.localPosition - oldPosition );
 		oldPosition = transform.localPosition;
-	}
-
-	public void OnComplete()
-	{
 	}
 }

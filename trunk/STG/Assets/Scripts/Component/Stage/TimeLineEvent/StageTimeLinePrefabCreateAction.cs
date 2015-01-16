@@ -30,7 +30,7 @@ public class StageTimeLinePrefabCreateAction : A_StageTimeLineActionable
 		get
 		{
 			var prefabName = prefab == null ? "" : prefab.name;
-			return string.Format( "[{0}] PrefabCreator [{1}]", timeLine, prefabName );
+			return string.Format( "[{0}] CreatePrefab [{1}]", timeLine, prefabName );
 		}
 	}
 }

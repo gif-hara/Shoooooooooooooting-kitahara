@@ -1,6 +1,6 @@
 /*===========================================================================*/
 /*
-*     * FileName    : EnemyCreator.cs
+*     * FileName    : StageTimeLineCreateEnemy.cs
 *
 *     * Description : .
 *
@@ -13,7 +13,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 
-public class EnemyCreator : A_StageTimeLineActionable
+public class StageTimeLineCreateEnemy : A_StageTimeLineActionable
 {
 	/// <summary>
 	/// 敵ID.
