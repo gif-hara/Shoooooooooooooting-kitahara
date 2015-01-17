@@ -24,6 +24,12 @@ public class MeshColorSetter : MonoBehaviourExtension
 	public override void Start()
 	{
 		base.Start();
+
+		if( refMeshFilter == null )
+		{
+			refMeshFilter = GetComponent<MeshFilter>();
+		}
+
 		meshManager = new MeshColorManager();
 		meshManager.Initialize( refMeshFilter );
 		meshManager.SetColor( color );
