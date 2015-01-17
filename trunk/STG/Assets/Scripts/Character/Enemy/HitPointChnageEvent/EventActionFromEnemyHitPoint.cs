@@ -35,7 +35,6 @@ public class EventActionFromEnemyHitPoint : GameMonoBehaviour
 		{
 			refActionableList.ForEach( a => a.Action() );
 			enabled = false;
-			Debug.Log( "EnemyHitPointEvent Frame = " + ReferenceManager.Instance.FrameCountRecorder.CurrentFrameCount );
 		}
 	}
 }
