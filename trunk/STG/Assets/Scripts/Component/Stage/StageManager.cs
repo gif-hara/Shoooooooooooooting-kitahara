@@ -42,6 +42,7 @@ public class StageManager : GameMonoBehaviour
 	{
 		base.Start();
 		actionableListManager.Initialize( Trans, timeLineManager );
+		Debug.Log( "Stage Start [" + gameObject.name + "] Frame = " + ReferenceManager.Instance.FrameCountRecorder.CurrentFrameCount );
 	}
 
 	// Update is called once per frame
