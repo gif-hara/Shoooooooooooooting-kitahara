@@ -51,6 +51,13 @@ public class SceneManager : A_Singleton<SceneManager>
 
 	public const string StartEffectMessage = "OnStartSceneEffect";
 
+	public bool CanChange
+	{
+		get
+		{
+			return isChanging == false;
+		}
+	}
 	private bool isChanging = false;
 
 	public override void Awake ()
