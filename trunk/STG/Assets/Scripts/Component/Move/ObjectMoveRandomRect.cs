@@ -14,9 +14,9 @@ using System.Collections.Generic;
 
 public class ObjectMoveRandomRect : A_ObjectMove
 {
-	private LookAtObject refLookAtObject;
+	private LookAtObject refLookAtObject = null;
 	
-	private Transform target;
+	private Transform target = null;
 
 	private int exceptionTimer = 0;
 

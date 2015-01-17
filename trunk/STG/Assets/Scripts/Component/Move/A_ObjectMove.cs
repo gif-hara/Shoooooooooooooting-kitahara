@@ -25,79 +25,79 @@ public abstract class A_ObjectMove : GameMonoBehaviour
 		/// <summary>
 		/// 目標座標.
 		/// </summary>
-		public Vector3 targetPosition;
+		public Vector3 targetPosition = new Vector3();
 		
 		/// <summary>
 		/// アニメーションカーブ0.
 		/// </summary>
-		public AnimationCurve curve0;
+		public AnimationCurve curve0 = new AnimationCurve();
 		
 		/// <summary>
 		/// アニメーションカーブ1.
 		/// </summary>
-		public AnimationCurve curve1;
+		public AnimationCurve curve1 = new AnimationCurve();
 		
 		/// <summary>
 		/// スピード.
 		/// </summary>
-		public float speed;
+		public float speed  = 0.0f;
 		
 		/// <summary>
 		/// 遅延時間（フレーム）.
 		/// </summary>
-		public int delayFrame;
+		public int delayFrame = 0;
 		
 		/// <summary>
 		/// 移動に必要な時間（フレーム）.
 		/// </summary>
-		public int durationFrame;
+		public int durationFrame = 0;
 		
 		/// <summary>
 		/// 移動させるオブジェクトを死亡させるか.
 		/// </summary>
-		public bool isDestroy;
+		public bool isDestroy = false;
 		
 		/// <summary>
 		/// 一定距離画面から離れた場合にオブジェクトを死亡させるか.
 		/// </summary>
-		public bool isOnOverDistance;
+		public bool isOnOverDistance = false;
 		
 		/// <summary>
 		/// 回転量の同期取りを行うか.
 		/// ObjectMoveChasePlayer.csにて使用.
 		/// </summary>
-		public bool isSyncRotation;
+		public bool isSyncRotation = false;
 		
 		/// <summary>
 		/// 矩形.
 		/// </summary>
-		public Rect rect;
+		public Rect rect = new Rect();
 		
 		/// <summary>
 		/// 移動タイプの名前.
 		/// </summary>
-		public ObjectMoveUtility.MoveType moveType;
+		public ObjectMoveUtility.MoveType moveType = ObjectMoveUtility.MoveType.ObjectMoveChasePlayer;
 		
 		/// <summary>
 		/// 初期化時にSendMessageで呼ばれる関数名.
 		/// </summary>
-		public string initFuncName;
+		public string initFuncName = "";
 		
 		/// <summary>
 		/// iTweenPathを包含しているプレハブ.
 		/// </summary>
-		public GameObject prefabiTweenPath;
+		public GameObject prefabiTweenPath = null;
 		
 		/// <summary>
 		/// オフセット.
 		/// iTweenのパスの移動に使用する.
 		/// </summary>
-		public Vector2 offset;
+		public Vector2 offset = new Vector2();
 		
 		/// <summary>
 		/// iTweenのパスを反転させるか.
 		/// </summary>
-		public bool isReverse;
+		public bool isReverse = false;
 		
 		public Data( ObjectMoveUtility.MoveType type )
 		{

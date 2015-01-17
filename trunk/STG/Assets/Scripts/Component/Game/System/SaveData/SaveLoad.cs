@@ -27,6 +27,8 @@ public class SaveLoad
 
 	public const string RankingFilePath = "Save/Ranking.dat";
 
+	public const string SeedRecordFilePath = "Save/SeedRecord.dat";
+
 	public const string ReplayDataFilePathFormat = "Save/Replay{0}.dat";
 	
 	/// <summary>
@@ -49,6 +51,11 @@ public class SaveLoad
 	public static SaveData.Ranking LoadRanking()
 	{
 		return Load<SaveData.Ranking>( RankingFilePath );
+	}
+	
+	public static SaveData.SeedRecord LoadSeedRecord()
+	{
+		return Load<SaveData.SeedRecord>( SeedRecordFilePath );
 	}
 	
 	public static ReplayData LoadReplayData( int id )
@@ -95,6 +102,11 @@ public class SaveLoad
 	public static void SaveRanking()
 	{
 		Save( RankingFilePath, SaveData.Ranking.Instance );
+	}
+	
+	public static void SaveSeedRecord()
+	{
+		Save( SeedRecordFilePath, SaveData.SeedRecord.Instance );
 	}
 	
 	public static void SaveReplayData( int id, ReplayData data )
