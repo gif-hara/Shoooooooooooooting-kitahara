@@ -15,8 +15,6 @@ using System.Collections.Generic;
 /// </summary>
 public class SeedRecorder : MonoBehaviour
 {
-	private bool isSave = false;
-
 	void Start()
 	{
 		if( GameStatusInterfacer.GameMode == GameDefine.InputType.User )

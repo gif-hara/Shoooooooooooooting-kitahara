@@ -1,25 +1,34 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : SetSeed.cs
+*     * FileName    : OutputLogErrorFromFrame.cs
 *
 *     * Description : .
 *
 *     * Author      : Hiroki_Kitahara.
 */
 /*===========================================================================*/
+#if UNITY_EDITOR
 using UnityEngine;
+using UnityEditor;
 using System.Collections;
 
 /// <summary>
 /// .
 /// </summary>
-public class SetSeed : MonoBehaviour
+public class OutputLogErrorFromFrame : MonoBehaviour
 {
+	[SerializeField]
+	private int frame;
+
 	// Update is called once per frame
 	void Update ()
 	{
-		var playerPosition = ReferenceManager.Instance.Player.Trans.position;
-		Random.seed = (int)playerPosition.x + (int)playerPosition.y;
-		Debug.Log( "seed = " + Random.seed );
+		if( ReferenceManager.Instance.FrameCountRecorder.CurrentFrameCount == frame )
+		{
+			Debug.LogError( "Stop : " + frame );
+			EditorApplication.isPaused = true;
+			enabled = false;
+		}
 	}
 }
+#endif
