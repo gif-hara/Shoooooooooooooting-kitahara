@@ -1,24 +1,25 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : InputChangeScene.cs
+*     * FileName    : CommandEventSetCanSaveReplay.cs
+*
+*     * Description : .
 *
 *     * Author      : Hiroki_Kitahara.
 */
 /*===========================================================================*/
 using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
 
 /// <summary>
 /// .
 /// </summary>
-public class InputChangeScene : ChangeScene
+public class CommandEventSetCanSaveReplay : MonoBehaviour
 {
-	void Update ()
+	[SerializeField]
+	private bool canSaveReplay;
+
+	void OnCommandEvent()
 	{
-		if( MyInput.FireKeyDown )
-		{
-			Change();
-		}
+		GameStatusInterfacer.CanSaveReplay = canSaveReplay;
 	}
 }

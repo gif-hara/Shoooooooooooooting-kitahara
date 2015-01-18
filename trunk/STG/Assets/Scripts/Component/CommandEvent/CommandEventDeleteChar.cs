@@ -1,24 +1,25 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : InputChangeScene.cs
+*     * FileName    : CommandEventDeleteChar.cs
+*
+*     * Description : .
 *
 *     * Author      : Hiroki_Kitahara.
 */
 /*===========================================================================*/
 using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
 
 /// <summary>
 /// .
 /// </summary>
-public class InputChangeScene : ChangeScene
+public class CommandEventDeleteChar : MonoBehaviour
 {
-	void Update ()
+	[SerializeField]
+	private CharListManager refManager;
+
+	void OnCommandEvent()
 	{
-		if( MyInput.FireKeyDown )
-		{
-			Change();
-		}
+		refManager.DeleteChar();
 	}
 }

@@ -96,6 +96,9 @@ public class CommandManager : MonoBehaviour
 	private Color selectColor;
 
 	[SerializeField]
+	private bool disableUpDownEvent;
+
+	[SerializeField]
 	private List<InputEvent> refInputEventList;
 
 	void Start ()
@@ -105,6 +108,10 @@ public class CommandManager : MonoBehaviour
 	
 	void Update ()
 	{
+		if( !SceneManager.Instance.CanChange )
+		{
+			return;
+		}
 		UpdateCursorId();
 	}
 
@@ -122,12 +129,12 @@ public class CommandManager : MonoBehaviour
 
 	private void UpdateCursorId()
 	{
-		if( MyInput.UpKeyDown )
+		if( MyInput.UpKeyDown && !disableUpDownEvent )
 		{
 			AddCursorId( -1 );
 			SoundManager.Instance.Play( "CursorSelect" );
 		}
-		if( MyInput.DownKeyDown )
+		if( MyInput.DownKeyDown && !disableUpDownEvent )
 		{
 			AddCursorId( 1 );
 			SoundManager.Instance.Play( "CursorSelect" );

@@ -1,24 +1,25 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : InputChangeScene.cs
+*     * FileName    : CommandEventSaveRanking.cs
+*
+*     * Description : .
 *
 *     * Author      : Hiroki_Kitahara.
 */
 /*===========================================================================*/
 using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
 
 /// <summary>
 /// .
 /// </summary>
-public class InputChangeScene : ChangeScene
+public class CommandEventSaveRanking : MonoBehaviour
 {
-	void Update ()
+	[SerializeField]
+	private RankingDataBuilder refRankingDataBuilder;
+
+	void OnCommandEvent()
 	{
-		if( MyInput.FireKeyDown )
-		{
-			Change();
-		}
+		refRankingDataBuilder.Save();
 	}
 }

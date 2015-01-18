@@ -913,6 +913,7 @@ MonoBehaviour:
   refCancelEventObject: {fileID: 288979911}
   defaultColor: {r: 1, g: 1, b: 1, a: 1}
   selectColor: {r: 1, g: 0, b: 0, a: 1}
+  disableUpDownEvent: 0
   refInputEventList:
   - refCommandTextMesh: {fileID: 1004144031}
     refSelectEvent: {fileID: 0}
@@ -2039,6 +2040,7 @@ MonoBehaviour:
   refCancelEventObject: {fileID: 1941210674}
   defaultColor: {r: 1, g: 1, b: 1, a: 1}
   selectColor: {r: 1, g: 0, b: 0, a: 1}
+  disableUpDownEvent: 0
   refInputEventList:
   - refCommandTextMesh: {fileID: 1305357165}
     refSelectEvent: {fileID: 0}
@@ -4357,6 +4359,7 @@ MonoBehaviour:
   refCancelEventObject: {fileID: 985764478}
   defaultColor: {r: 1, g: 1, b: 1, a: 1}
   selectColor: {r: 1, g: 0, b: 0, a: 1}
+  disableUpDownEvent: 0
   refInputEventList:
   - refCommandTextMesh: {fileID: 1359756031}
     refSelectEvent: {fileID: 0}
@@ -10647,6 +10650,7 @@ GameObject:
   - 114: {fileID: 1642571366}
   - 114: {fileID: 1642571365}
   - 114: {fileID: 1642571364}
+  - 114: {fileID: 1642571367}
   m_Layer: 0
   m_Name: DecideEvent
   m_TagString: Untagged
@@ -10704,6 +10708,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   label: CursorDecide
+--- !u!114 &1642571367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1642571362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac456559efe304a9d8064ea916a3740f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canSaveReplay: 0
 --- !u!1 &1643026676
 GameObject:
   m_ObjectHideFlags: 0
@@ -11112,6 +11128,7 @@ MonoBehaviour:
   refCancelEventObject: {fileID: 964281982}
   defaultColor: {r: 1, g: 1, b: 1, a: 1}
   selectColor: {r: 1, g: 0, b: 0, a: 1}
+  disableUpDownEvent: 0
   refInputEventList:
   - refCommandTextMesh: {fileID: 1389765479}
     refSelectEvent: {fileID: 0}
@@ -12808,6 +12825,7 @@ MonoBehaviour:
   refCancelEventObject: {fileID: 1894574743}
   defaultColor: {r: 1, g: 1, b: 1, a: 1}
   selectColor: {r: 1, g: 0, b: 0, a: 1}
+  disableUpDownEvent: 0
   refInputEventList:
   - refCommandTextMesh: {fileID: 1823431374}
     refSelectEvent: {fileID: 1699962744}

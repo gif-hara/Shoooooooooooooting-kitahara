@@ -32,6 +32,13 @@ public class GUIDrawer : MonoBehaviour
 		}
 		elementList.Sort( (x, y) => x.priority - y.priority );
 	}
+
+	void Start()
+	{
+#if !DEBUG
+		Destroy( gameObject );
+#endif
+	}
 	
 	void OnGUI()
 	{
