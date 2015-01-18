@@ -59,6 +59,12 @@ public static class GameStatusInterfacer
 	private static GameDefine.PlayStyleType playStyle = GameDefine.PlayStyleType.NewGame;
 
 	/// <summary>
+	/// リプレイデータをセーブ出来るか.
+	/// </summary>
+	/// <value><c>true</c> if can save replay; otherwise, <c>false</c>.</value>
+	public static bool CanSaveReplay{ set; get; }
+
+	/// <summary>
 	/// リトライ時に復帰するスコア.
 	/// ゲームオーバー時に評価されるスコア.
 	/// </summary>
