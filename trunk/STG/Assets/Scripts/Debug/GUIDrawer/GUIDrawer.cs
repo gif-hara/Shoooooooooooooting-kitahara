@@ -35,7 +35,7 @@ public class GUIDrawer : MonoBehaviour
 
 	void Start()
 	{
-#if !DEBUG
+#if !UNITY_EDITOR
 		Destroy( gameObject );
 #endif
 	}
