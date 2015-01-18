@@ -12,17 +12,8 @@ using System.Collections.Generic;
 /// <summary>
 /// .
 /// </summary>
-public class CommandEventSceneChange : MonoBehaviour
+public class CommandEventSceneChange : ChangeScene
 {
-	[SerializeField]
-	private SceneManager.EffectType startEffectType;
-
-	[SerializeField]
-	private SceneManager.EffectType endEffectType;
-
-	[SerializeField]
-	private string sceneName;
-
 	[SerializeField]
 	private GameObject refConditionObject;
 
@@ -38,7 +29,7 @@ public class CommandEventSceneChange : MonoBehaviour
 		if( holder.IsSuccess )
 		{
 			data.LockInput();
-			SceneManager.Instance.Change( startEffectType, endEffectType, sceneName );
+			Change();
 		}
 	}
 }

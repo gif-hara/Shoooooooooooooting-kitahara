@@ -2784,6 +2784,7 @@ GameObject:
   - 114: {fileID: 2045493192}
   - 114: {fileID: 2045493193}
   - 114: {fileID: 2045493194}
+  - 114: {fileID: 2045493195}
   m_Layer: 8
   m_Name: DecideCommandEvent
   m_TagString: Untagged
@@ -2842,6 +2843,19 @@ MonoBehaviour:
   endEffectType: 0
   sceneName: Ranking
   refConditionObject: {fileID: 0}
+--- !u!114 &2045493195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2045493190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3700bfbbec3a84b31bd7bdf17ecade51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  refChangeScene: {fileID: 2045493194}
+  saveReplaySceneName: SaveReplay
 --- !u!1 &2108895965
 GameObject:
   m_ObjectHideFlags: 0

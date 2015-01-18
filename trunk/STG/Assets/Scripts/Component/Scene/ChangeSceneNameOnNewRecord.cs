@@ -1,6 +1,6 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : SceneNameChangeOnNewRecord.cs
+*     * FileName    : ChangeSceneNameOnNewRecord.cs
 *
 *     * Author      : Hiroki_Kitahara.
 */
@@ -8,7 +8,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class SceneNameChangeOnNewRecord : MonoBehaviour
+public class ChangeSceneNameOnNewRecord : MonoBehaviour
 {
 	[SerializeField]
 	private ChangeScene refChangeScene;
