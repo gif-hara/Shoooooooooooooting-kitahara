@@ -12,7 +12,7 @@ GameObject:
   - 114: {fileID: 11400002}
   - 114: {fileID: 11403010}
   m_Layer: 0
-  m_Name: EnemyShot15
+  m_Name: EnemyShot16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,6 +27,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 433132}
   - 114: {fileID: 11433156}
+  - 114: {fileID: 11473838}
   m_Layer: 0
   m_Name: Muzzle0
   m_TagString: Untagged
@@ -206,8 +207,8 @@ MonoBehaviour:
   shotId: 5
   speed: 3
   interval: 30
-  number: 2
-  range: 180
+  number: 1
+  range: 270
   multipleNum: 1
   isLock: 0
   isPlayerTop: 0
@@ -227,6 +228,31 @@ MonoBehaviour:
   delayUpdate: 0
   refEnemyShot: {fileID: 11400004}
   grazeRadius: 50
+--- !u!114 &11473838
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 133132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0efcc6fe355f16c42a91cb830da309e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  setType: 0
+  enableTuning: 1
+  element:
+    min: 0
+    max: 0
+    current: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+  separate: 1
+  currentSeparate: 0
 --- !u!114 &11485744
 MonoBehaviour:
   m_ObjectHideFlags: 1
