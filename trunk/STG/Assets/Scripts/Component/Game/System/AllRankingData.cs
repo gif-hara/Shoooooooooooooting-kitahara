@@ -44,6 +44,10 @@ public class AllRankingData
 		this.extraData = other.extraData;
 	}
 
+	public RankingDataList GetData( GameDefine.DifficultyType difficulty )
+	{
+		return GetData( (int)difficulty );
+	}
 	public RankingDataList GetData( int index )
 	{
 		RankingDataList[] result =
@@ -56,6 +60,11 @@ public class AllRankingData
 		};
 
 		return result[index % result.Length];
+	}
+
+	public void Insert( GameDefine.DifficultyType difficulty, int rank, RankingData data )
+	{
+		GetData( difficulty ).Data[rank] = data;
 	}
 
 	public void SameThing( RankingDataList other )

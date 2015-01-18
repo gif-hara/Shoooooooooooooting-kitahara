@@ -10,10 +10,29 @@ using System.Collections.Generic;
 
 public class SceneNameChangeOnNewRecord : MonoBehaviour
 {
+	[SerializeField]
+	private ChangeScene refChangeScene;
+
+	[SerializeField]
+	private string nonSaveReplaySceneName;
+
+	[SerializeField]
+	private string saveRankingSceneName;
 
 	// Use this for initialization
 	void Start ()
 	{
-		Debug.Log ( "Score = " + GameStatusInterfacer.Score );
+		var rank = GameStatusInterfacer.Rank;
+		if( rank == -1 )
+		{
+			if( !GameStatusInterfacer.CanSaveReplay )
+			{
+				refChangeScene.SetSceneName( nonSaveReplaySceneName );
+			}
+
+			return;
+		}
+
+		refChangeScene.SetSceneName( saveRankingSceneName );
 	}
 }

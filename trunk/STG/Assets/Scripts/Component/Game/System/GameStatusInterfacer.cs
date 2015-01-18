@@ -65,6 +65,11 @@ public static class GameStatusInterfacer
 	public static bool CanSaveReplay{ set; get; }
 
 	/// <summary>
+	/// 到達したステージ.
+	/// </summary>
+	/// <value>The type of the cleared stage.</value>
+	public static GameDefine.StageType ClearedStageType{ set; get; }
+	/// <summary>
 	/// リトライ時に復帰するスコア.
 	/// ゲームオーバー時に評価されるスコア.
 	/// </summary>
@@ -126,6 +131,28 @@ public static class GameStatusInterfacer
 	/// <value>The miss count.</value>
 	public static int MissCount{ set; get; }
 
+	/// <summary>
+	/// 現在のスコアからランキングの順位を返す.
+	/// </summary>
+	/// <value>The rank.</value>
+	public static int Rank
+	{
+		get
+		{
+			var rankingData = SaveData.Ranking.Instance.DataList.GetData( GameStatusInterfacer.Difficulty );
+			var score = GameStatusInterfacer.Score;
+			for( int i=0,imax=rankingData.Data.Count; i<imax; i++ )
+			{
+				if( score > rankingData.Data[i].Score )
+				{
+					return i;
+				}
+			}
+			
+			return -1;
+		}
+	}
+
 	public static void ResetRetryData()
 	{
 		Score = 0;
@@ -134,9 +161,10 @@ public static class GameStatusInterfacer
 		GameLevelExperience = 0;
 		GrazeCount = 0;
 		ReverseStageFlagList = new List<bool>();
-		Life = 3;
+		Life = SaveData.Settings.Instance.Life;
 		SpecialPoint = 0;
 		ExtendCount = 0;
 		MissCount = 0;
+		CanSaveReplay = Life == SaveData.Settings.DefaultLife;
 	}
 }

@@ -1,24 +1,28 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : InputChangeScene.cs
+*     * FileName    : CommandEventAddCharSelectCursorId.cs
+*
+*     * Description : .
 *
 *     * Author      : Hiroki_Kitahara.
 */
 /*===========================================================================*/
 using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
 
 /// <summary>
 /// .
 /// </summary>
-public class InputChangeScene : ChangeScene
+public class CommandEventAddCharSelectCursorId : MonoBehaviour
 {
-	void Update ()
+	[SerializeField]
+	private CharListManager refManager;
+
+	[SerializeField]
+	private int value;
+
+	void OnCommandEvent()
 	{
-		if( MyInput.FireKeyDown )
-		{
-			Change();
-		}
+		refManager.AddCursorId( value );
 	}
 }

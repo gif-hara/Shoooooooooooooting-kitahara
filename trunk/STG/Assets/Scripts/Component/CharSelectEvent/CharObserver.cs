@@ -1,24 +1,27 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : InputChangeScene.cs
+*     * FileName    : CharObserver.cs
+*
+*     * Description : .
 *
 *     * Author      : Hiroki_Kitahara.
 */
 /*===========================================================================*/
 using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
 
 /// <summary>
 /// .
 /// </summary>
-public class InputChangeScene : ChangeScene
+public class CharObserver : MonoBehaviour
 {
-	void Update ()
+	public const string Message = "OnModifyChar";
+
+	public char Content
 	{
-		if( MyInput.FireKeyDown )
+		set
 		{
-			Change();
+			gameObject.BroadcastMessage( Message, value );
 		}
 	}
 }

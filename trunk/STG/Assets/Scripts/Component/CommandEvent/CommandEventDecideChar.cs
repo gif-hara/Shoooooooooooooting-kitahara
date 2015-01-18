@@ -1,24 +1,25 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : InputChangeScene.cs
+*     * FileName    : CommandEventDecideChar.cs
+*
+*     * Description : .
 *
 *     * Author      : Hiroki_Kitahara.
 */
 /*===========================================================================*/
 using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
 
 /// <summary>
 /// .
 /// </summary>
-public class InputChangeScene : ChangeScene
+public class CommandEventDecideChar : MonoBehaviour
 {
-	void Update ()
+	[SerializeField]
+	private CharListManager refCharListManager;
+
+	void OnCommandEvent()
 	{
-		if( MyInput.FireKeyDown )
-		{
-			Change();
-		}
+		refCharListManager.AddChar();
 	}
 }

@@ -57,6 +57,10 @@ public class RankingData
 
 	public string UserName
 	{
+		set
+		{
+			userName = value;
+		}
 		get
 		{
 			return userName;
@@ -64,4 +68,13 @@ public class RankingData
 	}
 	[SerializeField]
 	private string userName;
+
+	public RankingData( int rank, ulong score, GameDefine.StageType clearedStageType, int playerId, string userName )
+	{
+		this.rank = rank;
+		this.scoreString = score.ToString();
+		this.clearedStageType = clearedStageType;
+		this.playerId = playerId;
+		this.userName = userName;
+	}
 }
