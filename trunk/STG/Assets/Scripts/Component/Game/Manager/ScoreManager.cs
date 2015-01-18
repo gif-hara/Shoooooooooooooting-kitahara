@@ -71,6 +71,8 @@ public class ScoreManager : GameMonoBehaviour
 		{
 			this.earnedStarItemList.Add( 0 );
 		}
+
+		this.highScore = SaveData.Ranking.Instance.DataList.GetData( GameStatusInterfacer.Difficulty ).Data[0].Score;
 	}
 	/// <summary>
 	/// スコアの加算.
