@@ -14,12 +14,19 @@ using System.Collections;
 public class EnemyShot : A_Shot
 {
 	public GameObject prefabExplosion;
+
+	public bool NotRemove{ get{ return notRemove; } }
+	[SerializeField]
+	private bool notRemove;
 	
 	private bool isExplosion = false;
 	
 	public void Explosion()
 	{
-		if( isExplosion )	return;
+		if( isExplosion )
+		{
+			return;
+		}
 
 		isExplosion = true;
 		Destroy( gameObject );
@@ -29,7 +36,10 @@ public class EnemyShot : A_Shot
 
 	public void ExplosionFromRangeShotRemove()
 	{
-		if( isExplosion )	return;
+		if( isExplosion )
+		{
+			return;
+		}
 
 		Explosion();
 

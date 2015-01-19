@@ -74,6 +74,10 @@ public class EnemyShotCollider : A_Collider
 	}
 	private void OnCollisionPlayer( A_Collider target )
 	{
+		if( radius <= 0.0f )
+		{
+			return;
+		}
 		if( target.Type != EType.Player )
 		{
 			return;

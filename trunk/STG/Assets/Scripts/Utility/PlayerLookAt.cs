@@ -14,7 +14,10 @@ using System.Collections;
 public class PlayerLookAt : GameMonoBehaviour
 {
 	public float lookSpeed;
-	
+
+	[SerializeField]
+	private Vector3 offset;
+
 	private LookAtObject refLookAtObject;
 	
 	// Use this for initialization
@@ -29,5 +32,6 @@ public class PlayerLookAt : GameMonoBehaviour
 	{
 		base.Update();
 		Trans.rotation = refLookAtObject.Trans.rotation;
+		Trans.rotation *= Quaternion.Euler( offset );
 	}
 }

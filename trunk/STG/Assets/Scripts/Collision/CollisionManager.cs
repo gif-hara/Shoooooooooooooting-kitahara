@@ -162,7 +162,7 @@ public class CollisionManager : GameMonoBehaviour
 
 		enemyShotColliderList.RemoveAll( e => e == null );
 		enemyShotColliderList.ForEach( e =>
-		                              {
+		{
 			e.refEnemyShot.Explosion();
 		});
 	}

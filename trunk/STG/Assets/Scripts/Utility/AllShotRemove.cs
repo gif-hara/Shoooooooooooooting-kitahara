@@ -32,7 +32,13 @@ public class AllShotRemove : A_DelayEvent
 
 	public static int AllRemoveFromBomb()
 	{
-		return Remove( s => s.ExplosionFromRangeShotRemove() );
+		return Remove( s =>
+		{
+			if( !s.NotRemove )
+			{
+				s.ExplosionFromRangeShotRemove();
+			}
+		});
 	}
 
 	private static int Remove( System.Action<EnemyShot> func )
