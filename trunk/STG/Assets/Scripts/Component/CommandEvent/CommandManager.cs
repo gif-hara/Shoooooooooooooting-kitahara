@@ -51,6 +51,11 @@ public class CommandManager : MonoBehaviour
 
 		public void SetCommandTextMeshColor( Color color )
 		{
+			if( refCommandTextMesh == null )
+			{
+				return;
+			}
+
 			refCommandTextMesh.color = color;
 		}
 		public CommandEventData SelectEventExecute()

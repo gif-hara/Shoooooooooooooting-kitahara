@@ -52,4 +52,9 @@ public class ObjectMoveAttach : GameMonoBehaviour
 			refExtensionEventObject.SendMessage( ExtensionMessage, currentObject, SendMessageOptions.DontRequireReceiver );
 		}
 	}
+
+	public void Detach()
+	{
+		Destroy( currentObject );
+	}
 }

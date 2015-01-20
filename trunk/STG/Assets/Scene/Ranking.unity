@@ -927,6 +927,88 @@ Transform:
   - {fileID: 988137776}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!1 &1386940060
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1386940061}
+  - 114: {fileID: 1386940062}
+  m_Layer: 8
+  m_Name: LeftEvent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1386940061
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1386940060}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2084440532}
+  m_RootOrder: 0
+--- !u!114 &1386940062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1386940060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a85c1e7c32465481d93c1b2a554f35a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  refRankingDataListAutoChange: {fileID: 720399256}
+  value: -1
+--- !u!1 &1501503793
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1501503794}
+  - 114: {fileID: 1501503795}
+  m_Layer: 8
+  m_Name: RightEvent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1501503794
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1501503793}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2084440532}
+  m_RootOrder: 1
+--- !u!114 &1501503795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1501503793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a85c1e7c32465481d93c1b2a554f35a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  refRankingDataListAutoChange: {fileID: 720399256}
+  value: 1
 --- !u!1 &1503804960
 GameObject:
   m_ObjectHideFlags: 0
@@ -1288,8 +1370,61 @@ Transform:
   m_Children:
   - {fileID: 1558489756}
   - {fileID: 720399254}
+  - {fileID: 2084440532}
   m_Father: {fileID: 58430346}
   m_RootOrder: 1
+--- !u!1 &2084440531
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2084440532}
+  - 114: {fileID: 2084440533}
+  m_Layer: 8
+  m_Name: MainCommand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2084440532
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2084440531}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1386940061}
+  - {fileID: 1501503794}
+  m_Father: {fileID: 1957406506}
+  m_RootOrder: 2
+--- !u!114 &2084440533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2084440531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69257a553a77d9448b50353b6d888f4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorId: 0
+  refCancelEventObject: {fileID: 0}
+  defaultColor: {r: 0, g: 0, b: 0, a: 0}
+  selectColor: {r: 0, g: 0, b: 0, a: 0}
+  disableUpDownEvent: 1
+  refInputEventList:
+  - refCommandTextMesh: {fileID: 0}
+    refSelectEvent: {fileID: 0}
+    refLeftEvent: {fileID: 1386940060}
+    refRightEvent: {fileID: 1501503793}
+    refDecideEvent: {fileID: 0}
 --- !u!1 &2122912383
 GameObject:
   m_ObjectHideFlags: 0

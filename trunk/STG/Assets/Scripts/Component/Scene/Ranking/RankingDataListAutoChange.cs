@@ -34,10 +34,22 @@ public class RankingDataListAutoChange : MonoBehaviour
 	{
 		if( currentDelay <= 0 )
 		{
+			listIndex++;
 			Set();
 		}
 
 		currentDelay--;
+	}
+
+	public void AddListIndex( int value )
+	{
+		listIndex += value;
+		if( listIndex < 0 )
+		{
+			listIndex = (int)GameDefine.DifficultyType.Extra;
+		}
+
+		Set();
 	}
 
 	private void Set()
@@ -45,6 +57,5 @@ public class RankingDataListAutoChange : MonoBehaviour
 		var data = SaveData.Ranking.Instance;
 		refObserver.Content = data.DataList.GetData( listIndex );
 		currentDelay = delay;
-		listIndex++;
 	}
 }

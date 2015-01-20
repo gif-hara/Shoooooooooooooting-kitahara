@@ -1,29 +1,28 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : RankingListMove.cs
+*     * FileName    : CommandEventRankingAddListIndex.cs
+*
+*     * Description : .
 *
 *     * Author      : Hiroki_Kitahara.
 */
 /*===========================================================================*/
 using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
 
 /// <summary>
 /// .
 /// </summary>
-public class RankingListMove : MonoBehaviour
+public class CommandEventRankingAddListIndex : MonoBehaviour
 {
 	[SerializeField]
-	private Vector3 initialPosition;
+	private RankingDataListAutoChange refRankingDataListAutoChange;
 
 	[SerializeField]
-	private ObjectMoveAttach refAttach;
-	
-	void OnModifyRankingDataList( RankingDataList data )
+	private int value;
+
+	void OnCommandEvent()
 	{
-		refAttach.Detach();
-		transform.localPosition = initialPosition;
-		refAttach.Attach();
+		refRankingDataListAutoChange.AddListIndex( value );
 	}
 }
