@@ -26,6 +26,7 @@ public class RankingDataListAutoChange : MonoBehaviour
 
 	void Start ()
 	{
+		listIndex = (int)GameStatusInterfacer.Difficulty;
 		Set();
 	}
 
