@@ -16,6 +16,6 @@ public class SetTextMeshReplayFileId : MonoBehaviour
 {
 	void OnCreatedReplayListElement( int id )
 	{
-		GetComponent<TextMesh>().text = "No." + id.ToString( "00" );
+		GetComponent<TextMesh>().text = "No." + (id + 1).ToString( "00" );
 	}
 }
