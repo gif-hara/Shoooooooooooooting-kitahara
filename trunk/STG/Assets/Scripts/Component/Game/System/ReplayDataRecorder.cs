@@ -69,7 +69,7 @@ public class ReplayDataRecorder : MonoBehaviour
 
 	public static void Save( int id )
 	{
-		replayData.End( GameDefine.StageType.Stage1 );
+		replayData.End( GameStatusInterfacer.ClearedStageType );
 		SaveLoad.SaveReplayData( id, replayData );
 	}
 }

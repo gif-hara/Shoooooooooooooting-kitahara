@@ -155,6 +155,7 @@ public static class GameStatusInterfacer
 
 	public static void ResetRetryData()
 	{
+		ClearedStageType = GameDefine.StageType.Stage1;
 		Score = 0;
 		HighScore = 0;
 		GameLevel = 0;
