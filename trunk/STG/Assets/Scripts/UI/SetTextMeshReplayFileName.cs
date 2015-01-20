@@ -39,7 +39,7 @@ public class SetTextMeshReplayFileName : MonoBehaviour
 				timeStamp.ToString( "yyyy/MM/dd  HH:mm" ),
 				StringAsset.Get( string.Format( "Player{0}_Name", replayData.PlayerId ) ),
 				replayData.Difficulty.ToString(),
-				GameDefine.StageTypeString( replayData.StageType ).PadRight( 10 )
+				"-- " + GameDefine.StageTypeString( replayData.StageType ) + " --"
 				);
 		}
 	}
