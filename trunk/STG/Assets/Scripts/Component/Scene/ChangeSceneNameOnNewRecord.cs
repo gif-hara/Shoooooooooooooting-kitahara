@@ -23,7 +23,7 @@ public class ChangeSceneNameOnNewRecord : MonoBehaviour
 	void Start ()
 	{
 		var rank = GameStatusInterfacer.Rank;
-		if( rank == -1 )
+		if( rank == -1 || GameStatusInterfacer.PlayStyle == GameDefine.PlayStyleType.BossRush )
 		{
 			if( !GameStatusInterfacer.CanSaveReplay )
 			{
