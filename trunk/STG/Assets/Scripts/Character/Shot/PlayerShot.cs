@@ -15,7 +15,7 @@ public class PlayerShot : A_Shot
 {
 	private PlayerShotFire refPlayerShotFire;
 	
-	public void Initialize( PlayerShotFire playerShotFire, float speed, Transform position, Transform angle )
+	public void Initialize( PlayerShotFire playerShotFire, float speed, Vector3 position, Transform angle )
 	{
 		base.Initialize( speed, position, angle, 0.0f );
 		this.refPlayerShotFire = playerShotFire;

@@ -84,12 +84,12 @@ public class MeshUVOffsetTile : MonoBehaviourExtension
 		float top = 1.0f - (intervalY * (float)(offset / tileX));
 		float right = (intervalX * (offset % tileX)) + intervalX;
 		float bottom = 1.0f - (intervalY * (float)((offset / tileX) + 1));
-		
-		Vector2[] uvList = new Vector2[4];
-		uvList[0] = new Vector2( left, bottom );
-		uvList[1] = new Vector2( right, bottom );
-		uvList[2] = new Vector2( left, top );
-		uvList[3] = new Vector2( right, top );
-		mesh.uv = uvList;
+		mesh.uv = new Vector2[]
+        {
+            new Vector2( left, bottom ),
+            new Vector2( right, bottom ),
+            new Vector2( left, top ),
+            new Vector2( right, top )
+        };
 	}
 }

@@ -197,11 +197,8 @@ public class EnemyShotCreator : GameMonoBehaviour, I_MuzzleEventActinable
 	}
 	protected void CreateShot( float _fixedAngle )
 	{
-		GameObject shot = (GameObject)InstantiateAsChild(
-			ReferenceManager.refEnemyLayer,
-			ReferenceManager.prefabEnemyShotList[shotId]
-			);
-		shot.GetComponent<EnemyShot>().Initialize( speed, transform, transform, _fixedAngle );
+		GameObject shot = Instantiate( ReferenceManager.prefabEnemyShotList[shotId] ) as GameObject;
+		shot.GetComponent<EnemyShot>().Initialize( speed, transform.position, transform, _fixedAngle );
 	}
 	
 	private void UpdateCreateShot()
