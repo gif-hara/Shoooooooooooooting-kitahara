@@ -146,7 +146,7 @@ public class Player : GameMonoBehaviour
 
 	public void Graze( Transform grazeObject )
 	{
-		var particleGraze = InstantiateAsChild( Trans, prefabParticleGraze );
+		var particleGraze = Instantiate( prefabParticleGraze ) as GameObject;
 		particleGraze.transform.position = Vector3.Lerp( grazeObject.position, Trans.position, 0.5f );
 	}
 	/// <summary>

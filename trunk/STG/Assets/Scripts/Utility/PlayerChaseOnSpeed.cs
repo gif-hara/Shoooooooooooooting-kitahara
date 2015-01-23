@@ -20,15 +20,14 @@ public class PlayerChaseOnSpeed : GameMonoBehaviour
 	
 	[SerializeField]
 	private float speed = 0.0f;
-	
+
 	public override void LateUpdate()
 	{
 		base.LateUpdate();
 
 		if( PauseManager.Instance.IsPause )	return;
 		
-		var playerPos = ReferenceManager.Player.Trans.position;
-		var targetPos = playerPos + fixedPosition;
+		var targetPos = ReferenceManager.Player.cachedTransform.position + fixedPosition;
 		
 		if( speed <= 1.0f )
 		{
@@ -36,7 +35,7 @@ public class PlayerChaseOnSpeed : GameMonoBehaviour
 		}
 		else
 		{
-			var velocity = (targetPos - Trans.position);
+			var velocity = (targetPos - cachedTransform.position);
 			if( velocity.sqrMagnitude <= speed )
 			{
 				Trans.position = targetPos;

@@ -34,8 +34,10 @@ public abstract class A_ItemController : GameMonoBehaviour
 	// Use this for initialization
 	public override void Start ()
 	{
-		refFirstTween.data.targetPosition += Trans.localPosition;
-		refFallTween.data.targetPosition += Trans.localPosition + Vector3.right * Random.Range( -random, random );
+        base.Start();
+        var localPosition = cachedTransform.localPosition;
+		refFirstTween.data.targetPosition += localPosition;
+		refFallTween.data.targetPosition += localPosition + Vector3.right * Random.Range( -random, random );
 	}
 
 	public bool IsFirstMove

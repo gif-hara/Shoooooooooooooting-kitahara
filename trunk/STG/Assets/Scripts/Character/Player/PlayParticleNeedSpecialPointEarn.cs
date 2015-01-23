@@ -27,10 +27,10 @@ public class PlayParticleNeedSpecialPointEarn : GameMonoBehaviour
 		}
 		else if( !isPlay && value >= ReferenceManager.Instance.Player.PrefabSpecialModeContent.NeedPoint )
 		{
-			refParticleList.ForEach( p =>
-			{
-				p.Play( true );
-			});
+            for( int i = 0, imax = refParticleList.Count; i < imax; i++ )
+            {
+                refParticleList[i].Play( true );
+            }
 			isPlay = true;
 		}
 	}

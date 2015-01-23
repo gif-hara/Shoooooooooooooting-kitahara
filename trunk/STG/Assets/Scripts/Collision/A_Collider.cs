@@ -28,16 +28,15 @@ public abstract class A_Collider : GameMonoBehaviour
 	
 	public override void Update()
 	{
-		if( delayUpdate <= 0 )
+		if( delayUpdate > 0 )
 		{
-			base.Update();
-			var pos = cachedTransform.position;
-			cachedTransform.position = new Vector3( pos.x, pos.y, 0.0f );
-		}
-		else
-		{
-			delayUpdate--;
-		}
+            delayUpdate--;
+            return;
+        }
+
+		base.Update();
+		var pos = cachedTransform.position;
+		cachedTransform.position = new Vector3( pos.x, pos.y, 0.0f );
 	}
 
 	public virtual void Hit( A_Collider target )

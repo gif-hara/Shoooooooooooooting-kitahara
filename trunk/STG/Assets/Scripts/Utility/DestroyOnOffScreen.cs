@@ -19,6 +19,8 @@ public class DestroyOnOffScreen : GameMonoBehaviour
 	[SerializeField]
 	private Rect bounds;
 
+    private static Rect fixedBounds;
+
 	void OnDrawGizmos()
 	{
 		var pos = new Rect(
@@ -53,12 +55,14 @@ public class DestroyOnOffScreen : GameMonoBehaviour
 	{
 		base.Update();
 
-		var fixedBounds = new Rect(
-			Trans.position.x + bounds.x,
-			Trans.position.y + bounds.y,
-			Trans.position.x + bounds.width,
-			Trans.position.y + bounds.height
-			);
+        var pos = Trans.position;
+        fixedBounds.Set(
+            pos.x + bounds.x,
+            pos.y + bounds.y,
+            pos.x + bounds.width,
+            pos.y + bounds.height
+            );
+
 
 		var range = GameDefine.Screen;
 		if( range.y < fixedBounds.height || range.height > fixedBounds.y ||

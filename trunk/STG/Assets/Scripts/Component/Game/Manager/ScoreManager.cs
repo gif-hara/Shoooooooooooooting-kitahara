@@ -121,7 +121,7 @@ public class ScoreManager : GameMonoBehaviour
 
 	public void CreateStarItem( Vector3 position )
 	{
-		var starItem = InstantiateAsChild( ReferenceManager.refEffectLayer, PrefabStarItem );
+        var starItem = Instantiate( PrefabStarItem ) as GameObject;
 		starItem.transform.position = position;
 	}
 
