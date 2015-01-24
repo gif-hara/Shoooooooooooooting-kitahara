@@ -90,16 +90,6 @@ public class GameManager : GameMonoBehaviour
 		}
 	}
 	
-	// Update is called once per frame
-	public override void Update()
-	{
-		base.Update();
-
-		if( Application.targetFrameRate != frameRate )
-		{
-			Application.targetFrameRate = frameRate;
-		}
-	}
 	/// <summary>
 	/// ゲームレベル経験値の加算処理.
 	/// </summary>
