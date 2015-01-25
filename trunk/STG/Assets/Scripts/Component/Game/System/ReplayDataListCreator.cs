@@ -30,7 +30,7 @@ public class ReplayDataListCreator : MonoBehaviour
 
 	void Start ()
 	{
-		for( int i=0; i<=ReplayData.Capacity; i++ )
+		for( int i=0; i<ReplayData.Capacity; i++ )
 		{
 			var element = transform.InstantiateAsChild( transform, prefabElement );
 			element.transform.localPosition = origin + Vector3.down * (interval * i);
