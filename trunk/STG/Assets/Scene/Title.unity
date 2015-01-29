@@ -3299,6 +3299,9 @@ GameObject:
   - 114: {fileID: 907938072}
   - 114: {fileID: 907938073}
   - 114: {fileID: 907938074}
+  - 114: {fileID: 907938075}
+  - 114: {fileID: 907938077}
+  - 114: {fileID: 907938076}
   m_Layer: 0
   m_Name: DecideEvent
   m_TagString: Untagged
@@ -3344,6 +3347,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &907938074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 907938070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb9981340b55bce43b96b99e9892a070, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &907938075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 907938070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d69371bb03c3e9b4fb953b535b1f73bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 4
+--- !u!114 &907938076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 907938070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cde6159592628ed4b99dafeed22b38f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startEffectType: 0
+  endEffectType: 0
+  sceneName: PlayerSelect
+  refConditionObject: {fileID: 0}
+--- !u!114 &907938077
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}

@@ -16,12 +16,12 @@ public class ObjectNumGUI : A_GUIElement
 {
 	private string[] header =
 	{
-		"EnemyShot\t\t",
-		"Enemy\t\t\t\t",
-		"PlayerShot\t\t",
-		"Player\t\t\t\t",
-		"Effect\t\t\t\t",
-		"Total\t\t\t\t\t",
+		"EnemyShot   ",
+		"Enemy       ",
+		"PlayerShot  ",
+		"Player      ",
+		"Effect      ",
+		"Total       ",
 	};
 
 	void OnDrawGizmos()

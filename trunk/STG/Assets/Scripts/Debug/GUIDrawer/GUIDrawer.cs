@@ -25,17 +25,14 @@ public class GUIDrawer : MonoBehaviour
 	
 	void Awake()
 	{
+#if STG_DEBUG
 		elementList = new List<A_GUIElement>();
 		for( int i=0,imax=transform.childCount; i<imax; i++ )
 		{
 			elementList.Add( transform.GetChild( i ).GetComponent<A_GUIElement>() );
 		}
 		elementList.Sort( (x, y) => x.priority - y.priority );
-	}
-
-	void Start()
-	{
-#if !UNITY_EDITOR
+#else
 		Destroy( gameObject );
 #endif
 	}
