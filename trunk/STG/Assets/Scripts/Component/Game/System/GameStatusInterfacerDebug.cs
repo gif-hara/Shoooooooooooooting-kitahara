@@ -37,6 +37,7 @@ public class GameStatusInterfacerDebug : MonoBehaviour
 
 	void Awake()
 	{
+#if STG_DEBUG
 		if( !apply )	return;
 
 		GameStatusInterfacer.Difficulty = difficulty;
@@ -45,5 +46,8 @@ public class GameStatusInterfacerDebug : MonoBehaviour
 		GameStatusInterfacer.ReplayId = replayId;
 		GameStatusInterfacer.GameMode = gameMode;
 		GameStatusInterfacer.PlayStyle = playStyle;
+#else
+		Destroy( gameObject );
+#endif
 	}
 }

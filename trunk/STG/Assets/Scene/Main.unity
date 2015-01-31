@@ -222,7 +222,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &27513320
 Transform:
   m_ObjectHideFlags: 0
@@ -259,6 +259,8 @@ MonoBehaviour:
   - {fileID: 11408172, guid: f13400176e9d24778af0d8600ff321e2, type: 2}
   - {fileID: 11400360, guid: 2db2948cd62494f568dec8465afe5c09, type: 2}
   - {fileID: 11400360, guid: e20536132f0594d22a6a0e5583914cff, type: 2}
+  prefabExtraStageList:
+  - {fileID: 11493962, guid: 4462d0724d21b4963a53bcdfd9f1ab16, type: 2}
 --- !u!1 &42097993
 GameObject:
   m_ObjectHideFlags: 0
@@ -3374,6 +3376,22 @@ MonoBehaviour:
   - {fileID: 100026, guid: 28ab59a32742c7c4fbeb8e7b66da851d, type: 2}
   - {fileID: 100014, guid: ddbf70e0a9bcba44382719fcac1812eb, type: 2}
   - {fileID: 100014, guid: 073bff9aadeb112468a7d28efd6e87cc, type: 2}
+  - {fileID: 100012, guid: 86fc1e6e53a80344e989ef379ac094b0, type: 2}
+  - {fileID: 100010, guid: a1f9374faeaf6a84da937c87e3f38b59, type: 2}
+  - {fileID: 100024, guid: efb09ac03f38d0342b09a653d8ae09a7, type: 2}
+  - {fileID: 100026, guid: 098a82181a319ce458bf119464727469, type: 2}
+  - {fileID: 100038, guid: 3d9058f791d88f445bb146308319caeb, type: 2}
+  - {fileID: 100012, guid: c80eb6cf60bfb0f43a2cc1ea8a9ee840, type: 2}
+  - {fileID: 100042, guid: bac4569f00c559f48853704e087f7bf6, type: 2}
+  - {fileID: 100076, guid: 997c441fc52943b48a8c7108123ae5b3, type: 2}
+  - {fileID: 100042, guid: bde9047560937eb419b56349ddc72035, type: 2}
+  - {fileID: 100018, guid: ea7625efda2578e4f91efa54ae80e0f1, type: 2}
+  - {fileID: 100018, guid: 4830e3ebf6f469740b7b5c830361f475, type: 2}
+  - {fileID: 100030, guid: a30859ef230a5f64f88fddd90def0f33, type: 2}
+  - {fileID: 100030, guid: c31649030f37016428593c6ddb939d65, type: 2}
+  - {fileID: 100084, guid: b21088ccadd033f4aa94992aacfbf17f, type: 2}
+  - {fileID: 100048, guid: 7b6c8b74f1ec4d74c873810a80a25949, type: 2}
+  - {fileID: 139958, guid: 61bf10aef6ed14f91bf5d8c79d2437c1, type: 2}
   prefabEnemyShotList:
   - {fileID: 100000, guid: 65c56707767a468409479b0da85c1967, type: 2}
   - {fileID: 100002, guid: 71e4e1c327b402546918837eb45d35d5, type: 2}
@@ -3466,7 +3484,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &383794917
 Transform:
   m_ObjectHideFlags: 0
@@ -3488,7 +3506,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: .113611072, g: .153666273, b: .634328365, a: 1}
+  m_BackGroundColor: {r: .426470578, g: .426470578, b: .426470578, a: 1}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -3772,7 +3790,7 @@ GameObject:
   - 114: {fileID: 402793162}
   m_Layer: 0
   m_Name: SingletonObject
-  m_TagString: EditorOnly
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9767,7 +9785,7 @@ GameObject:
   - 114: {fileID: 1490034765}
   m_Layer: 0
   m_Name: Debug
-  m_TagString: EditorOnly
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -9797,11 +9815,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   apply: 1
-  difficulty: 1
+  difficulty: 4
   stageId: 0
-  playerId: 2
+  playerId: 0
   replayId: 0
-  gameMode: 1
+  gameMode: 0
   playStyle: 0
 --- !u!1 &1499841363
 GameObject:

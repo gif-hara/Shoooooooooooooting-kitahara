@@ -23,7 +23,7 @@ public class ExtraModeConditioner : MonoBehaviour
 		get
 		{
 			// 未実装.
-			return false;
+			return true;
 		}
 	}
 }

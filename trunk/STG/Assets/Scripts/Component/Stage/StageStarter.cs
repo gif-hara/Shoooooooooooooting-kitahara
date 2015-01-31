@@ -26,6 +26,9 @@ public class StageStarter : GameMonoBehaviour
 	[SerializeField]
 	private List<StageManager> prefabBossRushStageList;
 
+	[SerializeField]
+	private List<StageManager> prefabExtraStageList;
+
 	public override void Awake()
 	{
 		if( GameStatusInterfacer.StageId == -1 )
@@ -39,7 +42,14 @@ public class StageStarter : GameMonoBehaviour
 			GameStatusInterfacer.PlayStyle == GameDefine.PlayStyleType.Practice
 		   )
 		{
-			InstantiateAsChild( gameObject, prefabStageList[GameStatusInterfacer.StageId].gameObject );
+			if( GameStatusInterfacer.Difficulty == GameDefine.DifficultyType.Extra )
+			{
+				InstantiateAsChild( gameObject, prefabExtraStageList[GameStatusInterfacer.StageId].gameObject );
+			}
+			else
+			{
+				InstantiateAsChild( gameObject, prefabStageList[GameStatusInterfacer.StageId].gameObject );
+			}
 		}
 		else
 		{

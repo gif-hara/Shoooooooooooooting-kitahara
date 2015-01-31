@@ -92,22 +92,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &100008
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 400008}
-  - 114: {fileID: 11400000}
-  m_Layer: 0
-  m_Name: TextureEvent
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &100010
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,22 +121,6 @@ GameObject:
   - 114: {fileID: 11400022}
   m_Layer: 11
   m_Name: Texture
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &100014
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 400014}
-  - 114: {fileID: 11400080}
-  m_Layer: 0
-  m_Name: DamageEvent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -289,18 +257,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 400010}
   m_RootOrder: 0
---- !u!4 &400008
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100008}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -191.168869, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 400024}
-  m_RootOrder: 7
 --- !u!4 &400010
 Transform:
   m_ObjectHideFlags: 1
@@ -316,7 +272,7 @@ Transform:
   - {fileID: 400002}
   - {fileID: 400000}
   m_Father: {fileID: 400024}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!4 &400012
 Transform:
   m_ObjectHideFlags: 1
@@ -326,18 +282,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 160, y: 120, z: 1}
-  m_Children: []
-  m_Father: {fileID: 400024}
-  m_RootOrder: 5
---- !u!4 &400014
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100014}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400024}
   m_RootOrder: 4
@@ -403,10 +347,8 @@ Transform:
   - {fileID: 400020}
   - {fileID: 400018}
   - {fileID: 400016}
-  - {fileID: 400014}
   - {fileID: 400012}
   - {fileID: 400010}
-  - {fileID: 400008}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!23 &2300000
@@ -436,21 +378,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100012}
   m_Mesh: {fileID: 4300000, guid: 1c28b765b865feb469b53d7fa4778b81, type: 2}
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100008}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b29d56e166ade3c48a9ea009c4724f5a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cachedTransform: {fileID: 0}
-  refEnemy: {fileID: 11400088}
-  refRendererList:
-  - {fileID: 2300000}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1395,21 +1322,6 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   refShadowMaterial: {fileID: 2100000, guid: 1a35904ec418a9c4d82866660706cb0c, type: 2}
   offset: {x: 0, y: 0}
---- !u!114 &11400080
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100014}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff8691a54faa74741aa31af3b5f0dbe0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cachedTransform: {fileID: 0}
-  refEnemy: {fileID: 11400088}
-  refRendererList:
-  - {fileID: 2300000}
 --- !u!114 &11400082
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1472,7 +1384,7 @@ MonoBehaviour:
   addGameLevelExperience: 10
   invincibleTimer: 20
   deadEventObject: {fileID: 100016}
-  damageEventObject: {fileID: 100014}
+  damageEventObject: {fileID: 0}
   bounds:
     serializedVersion: 2
     x: -80
