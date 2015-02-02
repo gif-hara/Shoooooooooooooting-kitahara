@@ -501,6 +501,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   lookSpeed: 1
+  offset: {x: 0, y: 0, z: 0}
 --- !u!114 &11400020
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -557,7 +558,7 @@ MonoBehaviour:
   enableTuning: 1
   element:
     min: 90
-    max: 0
+    max: 3
     current: 0
     curve:
       serializedVersion: 2
@@ -578,7 +579,7 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   element:
     min: 60
-    max: 0
+    max: 3
     current: 0
     curve:
       serializedVersion: 2
