@@ -117,6 +117,9 @@ public class GameManager : GameMonoBehaviour
 	{
 		AddGameLevelExperience( deleteNum );
 	}
+	/// <summary>
+	/// グレイズ回数の加算.
+	/// </summary>
 	public void AddGrazeCount()
 	{
 		grazeCount++;

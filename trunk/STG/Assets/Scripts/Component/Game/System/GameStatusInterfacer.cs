@@ -132,6 +132,12 @@ public static class GameStatusInterfacer
 	public static int MissCount{ set; get; }
 
 	/// <summary>
+	/// リトライ時に復帰するSPモードを使用した回数.
+	/// </summary>
+	/// <value>The used special mode count.</value>
+	public static int UsedSpecialModeCount{ set; get; }
+
+	/// <summary>
 	/// 現在のスコアからランキングの順位を返す.
 	/// </summary>
 	/// <value>The rank.</value>

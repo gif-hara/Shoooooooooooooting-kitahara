@@ -78,6 +78,12 @@ public class PlayerStatusManager : GameMonoBehaviour
 	private int missCount = 0;
 
 	/// <summary>
+	/// SPモードを使用した回数.
+	/// </summary>
+	public int UsedSpecialModeCount{ get{ return usedSpecialModeCount; } }
+	private int usedSpecialModeCount = 0;
+
+	/// <summary>
 	/// SPポイント最大値.
 	/// </summary>
 	public const float MaxSpecialPoint = 100.0f;
@@ -99,15 +105,14 @@ public class PlayerStatusManager : GameMonoBehaviour
 
 	public void AddSpecialPoint( float value )
 	{
+		specialPoint += value / (1.0f + (float)usedSpecialModeCount * 0.1f);
+		specialPoint = specialPoint > MaxSpecialPoint ? MaxSpecialPoint : specialPoint;
+
 		// デバッグが有効なら常に最大値にする.
 		if( DebugManager.IsSpecialPointInfinity )
 		{
 			specialPoint = MaxSpecialPoint;
-			return;
 		}
-
-		specialPoint += value;
-		specialPoint = specialPoint > MaxSpecialPoint ? MaxSpecialPoint : specialPoint;
 
 		ReferenceManager.Instance.Player.BroadcastMessage( GameDefine.ModifiedSpecialPointMessage, specialPoint, SendMessageOptions.DontRequireReceiver );
 	}
@@ -115,6 +120,7 @@ public class PlayerStatusManager : GameMonoBehaviour
 	public void UseSpecialMode( float needPoint )
 	{
 		specialPoint -= needPoint;
+		usedSpecialModeCount++;
 		ReferenceManager.Instance.Player.BroadcastMessage( GameDefine.ModifiedSpecialPointMessage, specialPoint, SendMessageOptions.DontRequireReceiver );
 	}
 
@@ -128,6 +134,7 @@ public class PlayerStatusManager : GameMonoBehaviour
 		life--;
 		life = life < 0 ? 0 : life;
 		missCount++;
+		usedSpecialModeCount = 0;
 
 		ReferenceManager.Instance.refUILayer.BroadcastMessage( GameDefine.MissEventMessage, SendMessageOptions.DontRequireReceiver );
 	}
@@ -218,6 +225,7 @@ public class PlayerStatusManager : GameMonoBehaviour
 		this.specialPoint = GameStatusInterfacer.SpecialPoint;
 		this.missCount = GameStatusInterfacer.MissCount;
 		this.extendCount = GameStatusInterfacer.ExtendCount;
+		this.usedSpecialModeCount = GameStatusInterfacer.UsedSpecialModeCount;
 	}
 
 	private float AddSpecialPointGraze
