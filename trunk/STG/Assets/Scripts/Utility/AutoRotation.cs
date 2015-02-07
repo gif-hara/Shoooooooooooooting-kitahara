@@ -19,15 +19,27 @@ public class AutoRotation : MonoBehaviour
 
 	[SerializeField]
 	private float addSpeed;
+
+	[SerializeField]
+	private int interval = 0;
+
+	private int currentInterval = 0;
 	
 	// Update is called once per frame
 	void Update()
 	{
 		if( PauseManager.Instance.IsPause )	return;
 
+		if( currentInterval < interval )
+		{
+			currentInterval++;
+			return;
+		}
+
 		transform.localRotation *= Quaternion.AngleAxis( speed, axis );
 
 		speed += addSpeed;
+		currentInterval = 0;
 	}
 
 }
