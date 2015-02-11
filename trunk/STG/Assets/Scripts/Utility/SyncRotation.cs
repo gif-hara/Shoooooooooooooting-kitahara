@@ -17,6 +17,9 @@ public class SyncRotation : MonoBehaviour
 	[SerializeField]
 	private Transform refTarget;
 
+	[SerializeField]
+	private Vector3 offset;
+
 	private Transform cachedTransform;
 
 	void Start()
@@ -26,7 +29,10 @@ public class SyncRotation : MonoBehaviour
 
 	void LateUpdate ()
 	{
+		if( this.refTarget == null )	return;
+
 		this.cachedTransform.rotation = refTarget.rotation;
+		this.cachedTransform.rotation *= Quaternion.Euler( offset );
 	}
 
 	public void ChangeTarget( Transform target )
