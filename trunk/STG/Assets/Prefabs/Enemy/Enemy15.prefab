@@ -116,8 +116,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400016}
+  - 114: {fileID: 11446756}
   m_Layer: 0
-  m_Name: BarrageList
+  m_Name: MuzzleList
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -270,7 +271,7 @@ GameObject:
   - 114: {fileID: 11400230}
   - 114: {fileID: 11400216}
   m_Layer: 0
-  m_Name: Muzzle1_B
+  m_Name: Muzzle1_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -310,7 +311,7 @@ GameObject:
   - 114: {fileID: 11400228}
   - 114: {fileID: 11400214}
   m_Layer: 0
-  m_Name: Muzzle0_B
+  m_Name: Muzzle0_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -332,7 +333,7 @@ GameObject:
   - 114: {fileID: 11400258}
   - 114: {fileID: 11400240}
   m_Layer: 0
-  m_Name: Muzzle1_C
+  m_Name: Muzzle1_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -354,7 +355,7 @@ GameObject:
   - 114: {fileID: 11400268}
   - 114: {fileID: 11400250}
   m_Layer: 0
-  m_Name: Muzzle0_C
+  m_Name: Muzzle0_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -376,7 +377,7 @@ GameObject:
   - 114: {fileID: 11400260}
   - 114: {fileID: 11400242}
   m_Layer: 0
-  m_Name: Muzzle0_B
+  m_Name: Muzzle0_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -398,7 +399,7 @@ GameObject:
   - 114: {fileID: 11400270}
   - 114: {fileID: 11400252}
   m_Layer: 0
-  m_Name: Muzzle1_B
+  m_Name: Muzzle1_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -420,7 +421,7 @@ GameObject:
   - 114: {fileID: 11400226}
   - 114: {fileID: 11400212}
   m_Layer: 0
-  m_Name: Muzzle0_A
+  m_Name: Muzzle0_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -442,7 +443,7 @@ GameObject:
   - 114: {fileID: 11400224}
   - 114: {fileID: 11400210}
   m_Layer: 0
-  m_Name: Muzzle1_A
+  m_Name: Muzzle1_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -582,7 +583,7 @@ GameObject:
   - 114: {fileID: 11400262}
   - 114: {fileID: 11400244}
   m_Layer: 0
-  m_Name: Muzzle1_A
+  m_Name: Muzzle1_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -603,9 +604,8 @@ GameObject:
   - 114: {fileID: 11400190}
   - 114: {fileID: 11400266}
   - 114: {fileID: 11400248}
-  - 114: {fileID: 11400206}
   m_Layer: 0
-  m_Name: Muzzle0_A
+  m_Name: Muzzle0_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1732,7 +1732,7 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   shotId: 8
   speed: 3
-  interval: 330
+  interval: 150
   number: 1
   range: 0
   multipleNum: 1
@@ -1864,7 +1864,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 1
   currentSeparate: 0
-  awakeFreeze: 1
+  awakeFreeze: 0
   freezedInterval: 390
 --- !u!114 &11400024
 MonoBehaviour:
@@ -2006,7 +2006,7 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   shotId: 8
   speed: 3
-  interval: 300
+  interval: 120
   number: 1
   range: 0
   multipleNum: 1
@@ -2037,7 +2037,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 1
   currentSeparate: 0
-  awakeFreeze: 1
+  awakeFreeze: 0
   freezedInterval: 360
 --- !u!114 &11400036
 MonoBehaviour:
@@ -2064,7 +2064,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 1
   currentSeparate: 0
-  awakeFreeze: 1
+  awakeFreeze: 0
   freezedInterval: 90
 --- !u!114 &11400038
 MonoBehaviour:
@@ -2091,7 +2091,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 1
   currentSeparate: 0
-  awakeFreeze: 1
+  awakeFreeze: 0
   freezedInterval: 60
 --- !u!114 &11400040
 MonoBehaviour:
@@ -2107,7 +2107,7 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   shotId: 1
   speed: 3
-  interval: 180
+  interval: 0
   number: 1
   range: 0
   multipleNum: 1
@@ -2334,7 +2334,7 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   shotId: 7
   speed: 3
-  interval: 180
+  interval: 0
   number: 1
   range: 0
   multipleNum: 1
@@ -2420,7 +2420,7 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   shotId: 6
   speed: 3
-  interval: 90
+  interval: 0
   number: 1
   range: 0
   multipleNum: 1
@@ -2540,7 +2540,7 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   shotId: 6
   speed: 3
-  interval: 90
+  interval: 0
   number: 1
   range: 0
   multipleNum: 1
@@ -2626,7 +2626,7 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   shotId: 0
   speed: 3
-  interval: 90
+  interval: 0
   number: 1
   range: 0
   multipleNum: 1
@@ -2914,7 +2914,7 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   shotId: 0
   speed: 3
-  interval: 90
+  interval: 0
   number: 1
   range: 0
   multipleNum: 1
@@ -2934,7 +2934,7 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   shotId: 0
   speed: 3
-  interval: 94
+  interval: 4
   number: 1
   range: 0
   multipleNum: 1
@@ -3222,7 +3222,7 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   shotId: 0
   speed: 3
-  interval: 94
+  interval: 4
   number: 1
   range: 0
   multipleNum: 1
@@ -3242,7 +3242,7 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   shotId: 0
   speed: 3
-  interval: 92
+  interval: 2
   number: 1
   range: 0
   multipleNum: 1
@@ -3530,7 +3530,7 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   shotId: 0
   speed: 3
-  interval: 92
+  interval: 2
   number: 1
   range: 0
   multipleNum: 1
@@ -3550,7 +3550,7 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   shotId: 0
   speed: 3
-  interval: 90
+  interval: 0
   number: 1
   range: 0
   multipleNum: 1
@@ -3838,7 +3838,7 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   shotId: 0
   speed: 3
-  interval: 90
+  interval: 0
   number: 1
   range: 0
   multipleNum: 1
@@ -3924,7 +3924,7 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   shotId: 5
   speed: 3
-  interval: 90
+  interval: 0
   number: 1
   range: 0
   multipleNum: 1
@@ -3944,7 +3944,7 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   shotId: 5
   speed: 3
-  interval: 90
+  interval: 0
   number: 1
   range: 0
   multipleNum: 1
@@ -4096,7 +4096,7 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   shotId: 3
   speed: 3
-  interval: 300
+  interval: 120
   number: 2
   range: 0
   multipleNum: 1
@@ -4116,7 +4116,7 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   shotId: 3
   speed: 3
-  interval: 300
+  interval: 120
   number: 2
   range: 0
   multipleNum: 1
@@ -4202,7 +4202,7 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   shotId: 0
   speed: 3
-  interval: 90
+  interval: 0
   number: 1
   range: 0
   multipleNum: 1
@@ -4490,7 +4490,7 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   shotId: 0
   speed: 3
-  interval: 90
+  interval: 0
   number: 1
   range: 0
   multipleNum: 1
@@ -4550,36 +4550,6 @@ MonoBehaviour:
   damageRate: 1
   refEnemyControllerBaseList:
   - {fileID: 11400008}
---- !u!114 &11400206
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100060}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70fa5b7aaa0e46e448e7ddccef816514, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cachedTransform: {fileID: 0}
-  setType: 0
-  enableTuning: 1
-  element:
-    min: 0
-    max: 0
-    current: 0
-    curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-  separate: 0
-  currentSeparate: 0
-  refCreator:
-  - {fileID: 11400054}
-  - {fileID: 11400014}
-  - {fileID: 11400032}
-  - {fileID: 11400354}
 --- !u!114 &11400208
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5222,7 +5192,6 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   targetList:
   - {fileID: 11400266}
-  - {fileID: 11400206}
   element:
     min: 70
     max: 200
@@ -5360,7 +5329,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 0
   currentSeparate: 0
-  awakeFreeze: 1
+  awakeFreeze: 0
   freezedInterval: 160
 --- !u!114 &11400258
 MonoBehaviour:
@@ -5468,7 +5437,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 0
   currentSeparate: 0
-  awakeFreeze: 1
+  awakeFreeze: 0
   freezedInterval: 160
 --- !u!114 &11400266
 MonoBehaviour:
@@ -5976,7 +5945,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 0
   currentSeparate: 0
-  awakeFreeze: 1
+  awakeFreeze: 0
   freezedInterval: 160
 --- !u!114 &11400298
 MonoBehaviour:
@@ -6058,7 +6027,7 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   shotId: 3
   speed: 3
-  interval: 300
+  interval: 120
   number: 2
   range: 0
   multipleNum: 1
@@ -6255,7 +6224,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 0
   currentSeparate: 0
-  awakeFreeze: 1
+  awakeFreeze: 0
   freezedInterval: 160
 --- !u!114 &11400316
 MonoBehaviour:
@@ -6337,7 +6306,7 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   shotId: 3
   speed: 3
-  interval: 300
+  interval: 120
   number: 2
   range: 0
   multipleNum: 1
@@ -6556,7 +6525,7 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   shotId: 5
   speed: 3
-  interval: 90
+  interval: 0
   number: 1
   range: 0
   multipleNum: 1
@@ -6772,7 +6741,7 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   shotId: 5
   speed: 3
-  interval: 90
+  interval: 0
   number: 1
   range: 0
   multipleNum: 1
@@ -6860,7 +6829,7 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   shotId: 7
   speed: 3
-  interval: 210
+  interval: 30
   number: 1
   range: 0
   multipleNum: 1
@@ -6986,7 +6955,7 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   shotId: 1
   speed: 3
-  interval: 180
+  interval: 0
   number: 1
   range: 0
   multipleNum: 1
@@ -7158,7 +7127,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 0
   currentSeparate: 0
-  awakeFreeze: 1
+  awakeFreeze: 0
   freezedInterval: 160
 --- !u!114 &11400374
 MonoBehaviour:
@@ -7185,7 +7154,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 0
   currentSeparate: 0
-  awakeFreeze: 1
+  awakeFreeze: 0
   freezedInterval: 160
 --- !u!114 &11400376
 MonoBehaviour:
@@ -7255,6 +7224,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   bossType: 1
+--- !u!114 &11446756
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2514b3dd0cd993c41a34067253c4eeac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  id: 0
+  delay: 90
+  refMuzzleList:
+  - {fileID: 100062}
+  - {fileID: 100006}
+  - {fileID: 100088}
+  waitList: 780000007800000078000000
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
