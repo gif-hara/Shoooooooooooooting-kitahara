@@ -1,0 +1,254 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &193954
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 493954}
+  - 114: {fileID: 11493962}
+  - 114: {fileID: 11493782}
+  m_Layer: 0
+  m_Name: Extra_0_B
+  m_TagString: Stage
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!1 &193958
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 493958}
+  - 114: {fileID: 11493966}
+  - 114: {fileID: 11493846}
+  m_Layer: 0
+  m_Name: '[99999] StageChange'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &493954
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 193954}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 493958}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!4 &493958
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 193958}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -400, y: 100299, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 493954}
+  m_RootOrder: 0
+--- !u!114 &11493782
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 193954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd559503fb7402a40a974f809e743fa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  apply: 0
+  color: {r: 0, g: 0, b: 0, a: 0}
+  density: 0
+--- !u!114 &11493846
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 193958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47e4fccc9e0b89e44b7f732724d1e017, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  isBasicRoot: 1
+  extensionNeedEnemyId: 49
+  extensionDestroyNum: 2
+--- !u!114 &11493962
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 193954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2999f9db84bd9498daea21bb24aa1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 493954}
+  prefabActionableObjectList:
+  - {fileID: 11400006, guid: 2598960b682d9430e9b1bdc58c395b94, type: 2}
+  - {fileID: 11400010, guid: 7f55ef05819a14eb7bf5c02d29e946e2, type: 2}
+  - {fileID: 11400010, guid: 6544dc8006db84051abef9d8c91be664, type: 2}
+  - {fileID: 11400016, guid: 39a0f882fd6204a24a7c62a3e9eb3d55, type: 2}
+  - {fileID: 11400016, guid: fd236ed675a7043219e62813e084e32c, type: 2}
+  - {fileID: 11400006, guid: ce8e99a2259414013ba1928ef7a8ce8f, type: 2}
+  - {fileID: 11400014, guid: bd46cf1c876654e3fa2304c34c5409bb, type: 2}
+  - {fileID: 11400010, guid: 5634e3c3598684a5ca0318b69fee463f, type: 2}
+  - {fileID: 11400018, guid: 9e53f64b2251d4df892928602cf1017d, type: 2}
+  - {fileID: 11400018, guid: 504d4bcf3ae1d4f4d869d9e166e94071, type: 2}
+  - {fileID: 11400008, guid: 6f3599d2604b7451f9becad15c9a197e, type: 2}
+  - {fileID: 11400008, guid: 7ad7381ed481c4948891e35f18115019, type: 2}
+  - {fileID: 11400000, guid: de0d615372913478ab8cacbcc1e466d8, type: 2}
+  - {fileID: 11400000, guid: 982460fdc64b97f449b5e794459d4fea, type: 2}
+  - {fileID: 11400000, guid: 3515c1006dcea3c4799ecfb30889b46f, type: 2}
+  - {fileID: 11400002, guid: 8ed4f5a0f37ac4e4e8460b72d23517fa, type: 2}
+  timeLineManager:
+    timeLine: 0
+  actionableListManager:
+    actionableList:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 11493966}
+  stageId: 0
+--- !u!114 &11493966
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 193958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28f087531f692844b93c66e75af4fc7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 493958}
+  timeLine: 99999
+  refActionConditioner: {fileID: 0}
+  prefabNextStage: {fileID: 100006, guid: 4686f35f33a0c0444b48400ab279b8d1, type: 2}
+  prefabExtensionStage: {fileID: 100006, guid: 48693e88f766bb44aa80fdab7a8d067b, type: 2}
+  refConditioner: {fileID: 11493846}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 193954}
+  m_IsPrefabParent: 1
+  m_IsExploded: 1

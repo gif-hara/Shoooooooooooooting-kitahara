@@ -7855,9 +7855,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 493958}
   - 114: {fileID: 11493966}
-  - 114: {fileID: 11493846}
+  - 114: {fileID: 11497584}
   m_Layer: 0
-  m_Name: '[99999] StageChange'
+  m_Name: '[7450] StageChange'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16366,7 +16366,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 193958}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -400, y: 100299, z: 0}
+  m_LocalPosition: {x: -400, y: 7750, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 493954}
@@ -48860,21 +48860,6 @@ MonoBehaviour:
   cachedTransform: {fileID: 493838}
   timeLine: 1
   refActionConditioner: {fileID: 0}
---- !u!114 &11493846
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 193958}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47e4fccc9e0b89e44b7f732724d1e017, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cachedTransform: {fileID: 0}
-  isBasicRoot: 1
-  extensionNeedEnemyId: 49
-  extensionDestroyNum: 2
 --- !u!114 &11493962
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -48905,7 +48890,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3515c1006dcea3c4799ecfb30889b46f, type: 2}
   - {fileID: 11400002, guid: 8ed4f5a0f37ac4e4e8460b72d23517fa, type: 2}
   timeLineManager:
-    timeLine: 5640
+    timeLine: 0
   actionableListManager:
     actionableList:
     - {fileID: 11493740}
@@ -49022,11 +49007,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 493958}
-  timeLine: 99999
+  timeLine: 7450
   refActionConditioner: {fileID: 0}
-  prefabNextStage: {fileID: 100006, guid: 4686f35f33a0c0444b48400ab279b8d1, type: 2}
-  prefabExtensionStage: {fileID: 100006, guid: 48693e88f766bb44aa80fdab7a8d067b, type: 2}
-  refConditioner: {fileID: 11493846}
+  prefabNextStage: {fileID: 193954, guid: 537446e26abd0420fa1f147d3c97eb28, type: 2}
+  prefabExtensionStage: {fileID: 193954, guid: af8ead09e4cab4c9995baf808252d719, type: 2}
+  refConditioner: {fileID: 0}
+--- !u!114 &11497584
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 193958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5a8d9611440a4978adb14c3a808b4c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  isBasicRoot: 0
 --- !u!114 &11499116
 MonoBehaviour:
   m_ObjectHideFlags: 1
