@@ -239,6 +239,7 @@ GameObject:
   - 4: {fileID: 400026}
   - 114: {fileID: 11400084}
   - 114: {fileID: 11400082}
+  - 114: {fileID: 11400096}
   m_Layer: 0
   m_Name: DeadEvent
   m_TagString: Untagged
@@ -1822,6 +1823,19 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   refMeshFilter: {fileID: 3300000}
   color: {r: .742647052, g: .136516005, b: .136516005, a: 1}
+--- !u!114 &11400096
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53ff0411e04564d868b82fa3f7ba8aaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  prefab: {fileID: 100004, guid: 4613779c239a8ee49a98288038e39a17, type: 2}
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1

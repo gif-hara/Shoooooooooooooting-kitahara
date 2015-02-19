@@ -202,6 +202,7 @@ GameObject:
   - 4: {fileID: 400020}
   - 114: {fileID: 11400060}
   - 114: {fileID: 11400058}
+  - 114: {fileID: 11441208}
   m_Layer: 0
   m_Name: DeadEvent
   m_TagString: Untagged
@@ -335,7 +336,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_LocalRotation: {x: 0, y: 0, z: .88069278, w: .473687887}
+  m_LocalRotation: {x: 0, y: 0, z: .88069284, w: .473687917}
   m_LocalPosition: {x: 62.4869385, y: -27.5229492, z: .0157999992}
   m_LocalScale: {x: 1.00093806, y: 1.00151801, z: 1.00049496}
   m_Children: []
@@ -724,6 +725,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   refTarget: {fileID: 400032}
+  offset: {x: 0, y: 0, z: 0}
 --- !u!114 &11400010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -986,6 +988,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   refTarget: {fileID: 400032}
+  offset: {x: 0, y: 0, z: 0}
 --- !u!114 &11400028
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1691,6 +1694,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   refTarget: {fileID: 400032}
+  offset: {x: 0, y: 0, z: 0}
 --- !u!114 &11400084
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1953,6 +1957,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   refTarget: {fileID: 400032}
+  offset: {x: 0, y: 0, z: 0}
 --- !u!114 &11400102
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2297,6 +2302,19 @@ MonoBehaviour:
   multipleNum: 1
   isLock: 0
   isPlayerTop: 0
+--- !u!114 &11441208
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53ff0411e04564d868b82fa3f7ba8aaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  prefab: {fileID: 100004, guid: 4613779c239a8ee49a98288038e39a17, type: 2}
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1

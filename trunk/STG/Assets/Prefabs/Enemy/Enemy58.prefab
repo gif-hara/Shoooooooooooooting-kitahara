@@ -299,6 +299,7 @@ GameObject:
   - 4: {fileID: 400034}
   - 114: {fileID: 11400048}
   - 114: {fileID: 11400046}
+  - 114: {fileID: 11400076}
   m_Layer: 0
   m_Name: DeadEvent
   m_TagString: Untagged
@@ -774,6 +775,7 @@ MonoBehaviour:
   applyX: 1
   applyY: 1
   applyZ: 1
+  updateType: 1
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -789,6 +791,7 @@ MonoBehaviour:
   applyX: 1
   applyY: 1
   applyZ: 1
+  updateType: 1
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -804,6 +807,7 @@ MonoBehaviour:
   applyX: 1
   applyY: 1
   applyZ: 1
+  updateType: 1
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -818,6 +822,7 @@ MonoBehaviour:
   speed: -2.25999999
   axis: {x: 0, y: 1, z: 0}
   addSpeed: 0
+  interval: 0
 --- !u!114 &11400010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -833,6 +838,7 @@ MonoBehaviour:
   applyX: 1
   applyY: 1
   applyZ: 1
+  updateType: 1
 --- !u!114 &11400012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1522,6 +1528,19 @@ MonoBehaviour:
   multipleNum: 1
   isLock: 0
   isPlayerTop: 0
+--- !u!114 &11400076
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53ff0411e04564d868b82fa3f7ba8aaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  prefab: {fileID: 100004, guid: 4613779c239a8ee49a98288038e39a17, type: 2}
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1
