@@ -102,7 +102,14 @@ public class StageCreator : A_EditorMonoBehaviour<StageManager>
 				enemyPrefabList = new List<string>( Directory.GetFiles( Directory.GetCurrentDirectory() + "/Assets/Prefabs/Enemy" ) );
 				for( int i=0,imax=enemyPrefabList.Count; i<imax; i++ )
 				{
+#if UNITY_EDITOR_OSX
+					int slashIndex = enemyPrefabList[i].LastIndexOf( "/" ) + 1;
+
+#else
 					int slashIndex = enemyPrefabList[i].LastIndexOf( "\\" );
+#endif
+
+
 					enemyPrefabList[i] = enemyPrefabList[i].Substring( slashIndex );
 					enemyPrefabList[i] = enemyPrefabList[i].Replace( ".prefab", "" );
 				};
