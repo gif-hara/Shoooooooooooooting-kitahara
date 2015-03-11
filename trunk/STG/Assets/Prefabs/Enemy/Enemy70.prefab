@@ -908,7 +908,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100052}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 164.280365, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400048}
@@ -1614,7 +1614,7 @@ MonoBehaviour:
     x: -202
     y: 209
     width: 202
-    height: -250
+    height: -260
   refShotCreatorList: []
 --- !u!114 &11412448
 MonoBehaviour:
@@ -1758,6 +1758,7 @@ MonoBehaviour:
   speed: 9
   axis: {x: 0, y: 1, z: 0}
   addSpeed: 0
+  interval: 0
 --- !u!114 &11412462
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2976,6 +2977,7 @@ MonoBehaviour:
   speed: -9
   axis: {x: 0, y: 1, z: 0}
   addSpeed: 0
+  interval: 0
 --- !u!114 &11412548
 MonoBehaviour:
   m_ObjectHideFlags: 1
