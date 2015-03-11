@@ -10463,7 +10463,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 493954}
   - 114: {fileID: 11493962}
-  - 114: {fileID: 11493782}
   m_Layer: 0
   m_Name: Extra_1
   m_TagString: Stage
@@ -10482,7 +10481,7 @@ GameObject:
   - 114: {fileID: 11493966}
   - 114: {fileID: 11497584}
   m_Layer: 0
-  m_Name: '[99999] StageChange'
+  m_Name: '[6840] StageChange'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18997,7 +18996,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 193958}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -400, y: 100299, z: 0}
+  m_LocalPosition: {x: -400, y: 7140, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 493954}
@@ -57927,20 +57926,6 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
---- !u!114 &11493782
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 193954}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd559503fb7402a40a974f809e743fa0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  apply: 0
-  color: {r: 0, g: 0, b: 0, a: 0}
-  density: 0
 --- !u!114 &11493962
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -58088,10 +58073,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 493958}
-  timeLine: 99999
+  timeLine: 6840
   refActionConditioner: {fileID: 0}
-  prefabNextStage: {fileID: 193954, guid: 537446e26abd0420fa1f147d3c97eb28, type: 2}
-  prefabExtensionStage: {fileID: 193954, guid: af8ead09e4cab4c9995baf808252d719, type: 2}
+  prefabNextStage: {fileID: 100046, guid: b4e6e21dd683f4c1297687de0ea01849, type: 2}
+  prefabExtensionStage: {fileID: 100028, guid: 49be3c86de95143de898e3a1d3131f55, type: 2}
   refConditioner: {fileID: 11497584}
 --- !u!114 &11497584
 MonoBehaviour:
