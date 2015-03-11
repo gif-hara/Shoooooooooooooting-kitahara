@@ -525,8 +525,6 @@ GameObject:
   - 114: {fileID: 11400458}
   - 114: {fileID: 11400456}
   - 114: {fileID: 11400450}
-  - 114: {fileID: 11400452}
-  - 114: {fileID: 11400454}
   m_Layer: 0
   m_Name: Muzzle0
   m_TagString: Untagged
@@ -3942,68 +3940,8 @@ MonoBehaviour:
   setType: 0
   enableTuning: 1
   element:
-    min: 9
-    max: 17
-    current: 0
-    curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 0
-        inSlope: 1
-        outSlope: 1
-        tangentMode: 10
-      - time: 1
-        value: 1
-        inSlope: 1
-        outSlope: 1
-        tangentMode: 10
-      m_PreInfinity: 2
-      m_PostInfinity: 2
---- !u!114 &11400452
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100176}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b87181dbc1642064aa0f99d84f544296, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cachedTransform: {fileID: 0}
-  setType: 0
-  enableTuning: 1
-  element:
-    min: 0
-    max: 0
-    current: 0
-    curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-  separate: 10
-  currentSeparate: 0
-  awakeFreeze: 0
-  freezedInterval: 0
---- !u!114 &11400454
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100176}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d55bcc93048a6184fb9a1d1756ef8db2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cachedTransform: {fileID: 0}
-  targetList:
-  - {fileID: 11400452}
-  element:
     min: 10
-    max: 25
+    max: 19
     current: 0
     curve:
       serializedVersion: 2
@@ -4093,8 +4031,8 @@ MonoBehaviour:
   setType: 0
   enableTuning: 1
   element:
-    min: 1
-    max: 3
+    min: 4
+    max: 5
     current: 8
     curve:
       serializedVersion: 2
@@ -4736,7 +4674,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   id: 0
-  delay: 260
+  delay: 140
   refMuzzleList:
   - {fileID: 100194}
   waitList: c8000000
