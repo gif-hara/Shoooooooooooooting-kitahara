@@ -31,14 +31,14 @@ public class EnemyMuzzleManager : GameMonoBehaviour, I_EnemyShotCreatorEvent
 	/// <summary>
 	/// 銃口リスト.
 	/// </summary>
-	[SerializeField]
-	private List<GameObject> refMuzzleList;
+	[SerializeField][HideInInspector]
+	public List<GameObject> refMuzzleList;
 
 	/// <summary>
 	/// 待機時間リスト.
 	/// </summary>
-	[SerializeField]
-	private List<int> waitList;
+	[SerializeField][HideInInspector]
+	public List<int> waitList;
 
 	/// <summary>
 	/// 今起動しているEnemyShotCreatorの数.
@@ -117,4 +117,17 @@ public class EnemyMuzzleManager : GameMonoBehaviour, I_EnemyShotCreatorEvent
 		refMuzzleList[id].BroadcastMessage( GameDefine.DeactiveMuzzleMessage, SendMessageOptions.DontRequireReceiver );
 		refMuzzleList[id].SetActive( false );
 	}
+
+#if UNITY_EDITOR
+	public void AddMuzzleList( GameObject muzzleObject, int wait )
+	{
+		refMuzzleList.Add( muzzleObject );
+		waitList.Add( wait );
+	}
+	public void DeleteMuzzleList( int index )
+	{
+		refMuzzleList.RemoveAt( index );
+		waitList.RemoveAt( index );
+	}
+#endif
 }
