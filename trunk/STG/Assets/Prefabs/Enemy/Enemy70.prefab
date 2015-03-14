@@ -131,6 +131,7 @@ GameObject:
   - 114: {fileID: 11400068}
   - 114: {fileID: 11400066}
   - 114: {fileID: 11412594}
+  - 114: {fileID: 11473218}
   m_Layer: 0
   m_Name: Muzzle5
   m_TagString: Untagged
@@ -619,6 +620,7 @@ GameObject:
   - 114: {fileID: 11412556}
   - 114: {fileID: 11412554}
   - 114: {fileID: 11412560}
+  - 114: {fileID: 11473220}
   m_Layer: 0
   m_Name: Muzzle0
   m_TagString: Untagged
@@ -638,6 +640,7 @@ GameObject:
   - 114: {fileID: 11412566}
   - 114: {fileID: 11412568}
   - 114: {fileID: 11412562}
+  - 114: {fileID: 11473212}
   m_Layer: 0
   m_Name: Muzzle1
   m_TagString: Untagged
@@ -657,6 +660,7 @@ GameObject:
   - 114: {fileID: 11412574}
   - 114: {fileID: 11412576}
   - 114: {fileID: 11412570}
+  - 114: {fileID: 11473210}
   m_Layer: 0
   m_Name: Muzzle2
   m_TagString: Untagged
@@ -676,6 +680,7 @@ GameObject:
   - 114: {fileID: 11412580}
   - 114: {fileID: 11412578}
   - 114: {fileID: 11412584}
+  - 114: {fileID: 11473216}
   m_Layer: 0
   m_Name: Muzzle3
   m_TagString: Untagged
@@ -695,6 +700,7 @@ GameObject:
   - 114: {fileID: 11412588}
   - 114: {fileID: 11412586}
   - 114: {fileID: 11412592}
+  - 114: {fileID: 11473214}
   m_Layer: 0
   m_Name: Muzzle4
   m_TagString: Untagged
@@ -3717,6 +3723,192 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   prefab: {fileID: 100004, guid: 4d30596acd68a6f4da4938fa96fc651b, type: 2}
+--- !u!114 &11473210
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 112590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7882f03685351c4eb890db6e0f91ef5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  element:
+    min: 180
+    max: 40
+    current: 0
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 10
+      - time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+--- !u!114 &11473212
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 112588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7882f03685351c4eb890db6e0f91ef5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  element:
+    min: 90
+    max: 20
+    current: 0
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 10
+      - time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+--- !u!114 &11473214
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 112594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7882f03685351c4eb890db6e0f91ef5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  element:
+    min: 270
+    max: 60
+    current: 0
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 10
+      - time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+--- !u!114 &11473216
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 112592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7882f03685351c4eb890db6e0f91ef5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  element:
+    min: 180
+    max: 40
+    current: 0
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 10
+      - time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+--- !u!114 &11473218
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7882f03685351c4eb890db6e0f91ef5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  element:
+    min: 270
+    max: 60
+    current: 0
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 10
+      - time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+--- !u!114 &11473220
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 112586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7882f03685351c4eb890db6e0f91ef5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  element:
+    min: 90
+    max: 20
+    current: 0
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 10
+      - time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1
