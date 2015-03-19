@@ -1,6 +1,6 @@
 ﻿/*===========================================================================*/
 /*
-*     * FileName    : RandomSetPositionOffScreen.cs
+*     * FileName    : SetPositionRandomOffScreen.cs
 *
 *     * Author      : Hiroki_Kitahara.
 */
@@ -12,7 +12,7 @@ using System.Collections.Generic;
 /// <summary>
 /// 画面外の何処かに座標を設定するコンポーネント.
 /// </summary>
-public class RandomSetPositionOffScreen : MonoBehaviour
+public class SetPositionRandomOffScreen : MonoBehaviour
 {
 	public enum OffScreenType : int
 	{
