@@ -43,7 +43,10 @@ public class FrameRateUtility : A_Singleton<FrameRateUtility>
 				i--;
 			}
 		}
-		
-		func();
+
+		if( func.Target.ToString() != "null" )
+		{
+			func();
+		}
 	}
 }
