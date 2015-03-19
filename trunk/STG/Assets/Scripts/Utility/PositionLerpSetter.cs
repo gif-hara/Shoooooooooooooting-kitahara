@@ -23,6 +23,9 @@ namespace MyProject
 		private Transform refTo;
 
 		[SerializeField]
+		private GameDefine.WorldSpaceType worldSpaceType = GameDefine.WorldSpaceType.Local;
+
+		[SerializeField]
 		private float duration;
 		
 		private Transform cachedTrans;
@@ -34,7 +37,14 @@ namespace MyProject
 		
 		void Update ()
 		{
-			this.cachedTrans.localPosition = Vector3.Lerp( refFrom.localPosition, refTo.localPosition, this.duration );
+			if( this.worldSpaceType == GameDefine.WorldSpaceType.Local )
+			{
+				this.cachedTrans.localPosition = Vector3.Lerp( refFrom.localPosition, refTo.localPosition, this.duration );
+			}
+			else
+			{
+				this.cachedTrans.position = Vector3.Lerp( refFrom.position, refTo.position, this.duration );
+			}
 		}
 	}
 }
