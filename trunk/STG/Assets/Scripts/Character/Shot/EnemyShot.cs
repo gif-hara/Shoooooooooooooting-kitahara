@@ -29,7 +29,7 @@ public class EnemyShot : A_Shot
 		}
 
 		isExplosion = true;
-		Destroy( gameObject );
+		ObjectPool.Instance.ReleaseGameObject( gameObject );
 		var explosion = InstantiateAsChild( ReferenceManager.refEffectLayer, prefabExplosion );
 		explosion.transform.position = Trans.position;
 	}

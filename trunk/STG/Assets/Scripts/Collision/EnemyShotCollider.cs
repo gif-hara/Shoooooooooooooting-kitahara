@@ -11,7 +11,7 @@ using UnityEngine;
 using System.Collections;
 
 
-public class EnemyShotCollider : A_Collider
+public class EnemyShotCollider : A_Collider, I_Poolable
 {
 	public enum CollisionType : int
 	{
@@ -36,19 +36,26 @@ public class EnemyShotCollider : A_Collider
 		//Gizmos.DrawWireSphere( transform.position, grazeRadius );
 	}
 
-	public override void Start()
+	public override void Start ()
 	{
-		base.Start();
+		base.Start ();
 		this.cachedRadius = this.radius;
-		this.radius = grazeRadius;
+		this.OnReuse();
 		ReferenceManager.Instance.refCollisionManager.AddEnemyShotCollider( this );
-		//varianceId = ReferenceManager.refCollisionManager.AddEnemyShotCollider( this );
 	}
-	public override void Update()
+
+	public void OnReuse()
 	{
-		base.Update();
-		//varianceId = ReferenceManager.refCollisionManager.VarianceEnemyShotColliderList( this, varianceId );
+		this.radius = grazeRadius;
+		this.collisionType = CollisionType.Graze;
+		this.enabled = true;
 	}
+
+	public void OnRelease()
+	{
+		this.enabled = false;
+	}
+
 	public override void OnCollision (A_Collider target)
 	{
 		OnCollisionBarrier( target );
@@ -96,6 +103,7 @@ public class EnemyShotCollider : A_Collider
 		{
 			target.Hit( this );
 			refEnemyShot.Explosion();
+			Debug.Log( "Hit" );
 		}
 	}
 }

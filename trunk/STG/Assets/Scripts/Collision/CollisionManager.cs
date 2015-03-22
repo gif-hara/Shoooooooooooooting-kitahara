@@ -144,11 +144,23 @@ public class CollisionManager : GameMonoBehaviour
 	{
 		barrierColliderList.Add( col );
 	}
-
+	/// <summary>
+	/// アイテムコライダーの追加.
+	/// </summary>
+	/// <param name="col">Col.</param>
 	public void AddItemCollider( A_Collider col )
 	{
 		itemColliderList.Add( col );
 	}
+	/// <summary>
+	/// 敵弾コライダーの削除.
+	/// </summary>
+	/// <param name="col">Col.</param>
+	public void RemoveEnemyShotCollider( EnemyShotCollider col )
+	{
+		enemyShotColliderList.Remove( col );
+	}
+
 	/// <summary>
 	/// 敵弾を全て死亡させる.
 	/// </summary>

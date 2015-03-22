@@ -9,8 +9,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 400004}
   - 114: {fileID: 11400004}
-  - 114: {fileID: 11400002}
   - 114: {fileID: 11411108}
+  - 114: {fileID: 11474164}
   m_Layer: 0
   m_Name: EnemyShot18
   m_TagString: Untagged
@@ -639,24 +639,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 188422}
   m_Mesh: {fileID: 4300000, guid: 1c28b765b865feb469b53d7fa4778b81, type: 2}
---- !u!114 &11400002
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9077959a8efc6c248a1aece3754d9200, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cachedTransform: {fileID: 0}
-  bounds:
-    serializedVersion: 2
-    x: -200
-    y: 200
-    width: 200
-    height: -200
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -935,6 +917,24 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 30
   currentSeparate: 0
+--- !u!114 &11474164
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a9b6176670374a4b8fff7a4018ea2c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  bounds:
+    serializedVersion: 2
+    x: -200
+    y: 200
+    width: 200
+    height: -200
 --- !u!114 &11485750
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1114,6 +1114,7 @@ MonoBehaviour:
   speed: 1.20000005
   axis: {x: 0, y: 0, z: 1}
   addSpeed: 0
+  interval: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
