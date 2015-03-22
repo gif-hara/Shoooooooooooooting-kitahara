@@ -65,6 +65,7 @@ Transform:
   m_LocalScale: {x: 32, y: 32, z: 1}
   m_Children: []
   m_Father: {fileID: 400004}
+  m_RootOrder: 0
 --- !u!4 &400002
 Transform:
   m_ObjectHideFlags: 1
@@ -77,6 +78,7 @@ Transform:
   m_Children:
   - {fileID: 400004}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
 --- !u!4 &400004
 Transform:
   m_ObjectHideFlags: 1
@@ -89,6 +91,7 @@ Transform:
   m_Children:
   - {fileID: 400000}
   m_Father: {fileID: 400002}
+  m_RootOrder: 0
 --- !u!23 &2300000
 Renderer:
   m_ObjectHideFlags: 1
@@ -107,9 +110,8 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
   m_SortingLayerID: 0
+  m_SortingOrder: 0
 --- !u!33 &3300000
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -150,7 +152,7 @@ MonoBehaviour:
   - {fileID: 100018, guid: 4335657d6eafab44c83557c711c1b359, type: 2}
   min: {x: 0, y: 0}
   max: {x: 0, y: 0}
-  interval: 10
+  interval: 15
   createNum: 15
 --- !u!114 &11400006
 MonoBehaviour:
@@ -170,7 +172,7 @@ MonoBehaviour:
   - {fileID: 100002, guid: 4e39cc41ea100fd49b4fd655b07a63f5, type: 2}
   min: {x: 0, y: 0}
   max: {x: 0, y: 0}
-  interval: 10
+  interval: 15
   createNum: 15
 --- !u!114 &11400008
 MonoBehaviour:
@@ -185,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   prefabExplosion: {fileID: 100002, guid: 01128dc588fe58c46a0a3de362043c1d, type: 2}
-  prefabStarItem: {fileID: 100004, guid: a8f06ee2a43ebdc49b7ed6a9384c7c89, type: 2}
+  notRemove: 0
 --- !u!114 &11400010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -253,6 +255,7 @@ MonoBehaviour:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+  isLoop: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
