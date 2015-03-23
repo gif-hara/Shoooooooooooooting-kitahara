@@ -100,7 +100,10 @@ public class GameMonoBehaviour : MonoBehaviourExtension
 	{
 //		GameObject obj = ObjectPool.Reuse( prefab.GetComponent<PoolEntity>() ).gameObject;
 //		obj.transform.parent = parent.transform;
-		GameObject obj = NGUITools.AddChild( parent, prefab );
+		GameObject obj = ObjectPool.Instance.GetGameObject( prefab, Vector3.zero, Quaternion.identity );
+		obj.transform.parent = parent.transform;
+		obj.transform.localPosition = Vector3.zero;
+		obj.transform.localRotation = Quaternion.identity;
 		obj.transform.localScale = prefab.transform.localScale;
 		obj.layer = prefab.layer;
 		

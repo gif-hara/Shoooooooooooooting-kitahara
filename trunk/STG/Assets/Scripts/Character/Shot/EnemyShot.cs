@@ -11,7 +11,7 @@ using UnityEngine;
 using System.Collections;
 
 
-public class EnemyShot : A_Shot
+public class EnemyShot : A_Shot, I_Poolable
 {
 	public GameObject prefabExplosion;
 
@@ -20,6 +20,15 @@ public class EnemyShot : A_Shot
 	private bool notRemove;
 	
 	private bool isExplosion = false;
+
+	public void OnReuse()
+	{
+		this.isExplosion = false;
+	}
+
+	public void OnRelease()
+	{
+	}
 	
 	public void Explosion()
 	{

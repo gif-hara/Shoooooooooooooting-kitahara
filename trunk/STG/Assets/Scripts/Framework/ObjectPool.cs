@@ -58,7 +58,7 @@ public class ObjectPool : MonoBehaviour
 
 		for( int i=0,imax=gameObjects.Count; i<imax; i++ )
 		{
-			if( gameObjects[i].activeInHierarchy )
+			if( gameObjects[i] == null || gameObjects[i].activeInHierarchy )
 			{
 				continue;
 			}
@@ -76,6 +76,11 @@ public class ObjectPool : MonoBehaviour
 		gameObjects.Add( go );
 
 		return go;
+	}
+
+	public GameObject GetGameObject( GameObject prefab )
+	{
+		return GetGameObject( prefab, prefab.transform.position, prefab.transform.rotation );
 	}
 
 	public void ReleaseGameObject( GameObject go )

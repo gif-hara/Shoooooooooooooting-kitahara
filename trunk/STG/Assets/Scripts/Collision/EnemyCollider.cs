@@ -12,7 +12,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 
-public class EnemyCollider : A_Collider
+public class EnemyCollider : A_Collider, I_Poolable
 {
 	public EnemyController refEnemy;
 	
@@ -25,7 +25,17 @@ public class EnemyCollider : A_Collider
 		base.Awake();
 		ReferenceManager.refCollisionManager.AddEnemyCollider( this );
 	}
-	
+
+	public void OnReuse()
+	{
+		this.enabled = true;
+	}
+
+	public void OnRelease()
+	{
+		this.enabled = false;
+	}
+
 	public override void OnCollision (A_Collider target)
 	{
 		if( target.Type == A_Collider.EType.Player )
@@ -36,11 +46,12 @@ public class EnemyCollider : A_Collider
 		if( target.Type == A_Collider.EType.PlayerShot )
 		{
 			var playerShot = target as PlayerShotCollider;
-			if( playerShot.IsEnemyCollision )	return;
+			if( playerShot.IsEnemyCollision )
+			{
+				return;
+			}
 		}
 
-
-		
 		float damage = GetDamage( target );
 		refEnemyControllerBaseList.ForEach( (obj) =>
 		{

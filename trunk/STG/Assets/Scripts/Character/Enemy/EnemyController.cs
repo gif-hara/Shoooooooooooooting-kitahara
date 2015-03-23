@@ -12,7 +12,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 
-public class EnemyController : EnemyControllerBase
+public class EnemyController : EnemyControllerBase, I_Poolable
 {
 	/// <summary>
 	/// 敵ID.
@@ -185,9 +185,22 @@ public class EnemyController : EnemyControllerBase
 
 	void OnDestroy()
 	{
-		DefectionStage();
+		Debug.LogError( "... That has died." + gameObject.name );
 	}
 
+	public void OnReuse()
+	{
+		this.hp = this.maxHp;
+		this.isDead = false;
+		AttachComponent();
+		JoinStage();
+	}
+
+	public void OnRelease()
+	{
+		DefectionStage();
+	}
+	
 	void OnEnemyDestroyOnDeactiveMuzzleMessage( int destroyEnemyId )
 	{
 		if( id != destroyEnemyId )	return;
@@ -306,8 +319,8 @@ public class EnemyController : EnemyControllerBase
 	public void ForceDead()
 	{
 		isDead = true;
-		Destroy( gameObject );
-		
+		ObjectPool.Instance.ReleaseGameObject( gameObject );
+
 		// 死亡イベントの発行.
 		deadEventObject.BroadcastMessage( GameDefine.DeadEventMessage, SendMessageOptions.DontRequireReceiver );
 	}
@@ -330,8 +343,7 @@ public class EnemyController : EnemyControllerBase
 	protected void Destroy()
 	{
 		isDead = true;
-		Destroy( gameObject );
-		
+
 		// スコアの加算.
 		ScoreManager.AddScoreRateGameLevel( (ulong)addScore );
 
@@ -348,6 +360,8 @@ public class EnemyController : EnemyControllerBase
 		{
 			ReferenceManager.Instance.RefPlayerStatusManager.AddSpecialPoint( AddSpecialPoint );
 		}
+
+		ObjectPool.Instance.ReleaseGameObject( gameObject );
 	}
 	/// <summary>
 	/// 移動コンポーネントアタッチ.

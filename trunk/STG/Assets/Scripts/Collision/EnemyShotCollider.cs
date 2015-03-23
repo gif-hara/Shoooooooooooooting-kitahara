@@ -103,7 +103,6 @@ public class EnemyShotCollider : A_Collider, I_Poolable
 		{
 			target.Hit( this );
 			refEnemyShot.Explosion();
-			Debug.Log( "Hit" );
 		}
 	}
 }
