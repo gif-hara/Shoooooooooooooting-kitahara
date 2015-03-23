@@ -6001,7 +6001,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   apply: 1
-  difficulty: 3
+  difficulty: 2
   stageId: 4
   playerId: 0
   replayId: 0
@@ -7505,13 +7505,14 @@ GameObject:
   m_Component:
   - 4: {fileID: 1099210980}
   - 114: {fileID: 1099210979}
+  - 114: {fileID: 1099210981}
   m_Layer: 0
   m_Name: TestEnemyShotCreator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1099210979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7544,6 +7545,39 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!114 &1099210981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1099210978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59eaebccda4b27e41a3b86d70bec6477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  setType: 0
+  enableTuning: 1
+  element:
+    min: 1
+    max: 100
+    current: 0
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 10
+      - time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
 --- !u!1 &1112519487
 GameObject:
   m_ObjectHideFlags: 0
@@ -8940,7 +8974,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1353942475}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca537c156ac197f4499d745979cfd2b3, type: 3}
   m_Name: 
@@ -8953,7 +8987,7 @@ MonoBehaviour:
   min: {x: -200, y: 200}
   max: {x: 200, y: 200}
   interval: 10
-  createNum: 999999
+  createNum: 1
 --- !u!1 &1358268087
 GameObject:
   m_ObjectHideFlags: 0

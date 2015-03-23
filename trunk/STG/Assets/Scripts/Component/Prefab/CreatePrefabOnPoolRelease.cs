@@ -23,11 +23,11 @@ public class CreatePrefabOnPoolRelease : MonoBehaviour, I_Poolable
 	/// </summary>
 	public Transform refTarget;
 
-	public void OnReuse()
+	public void OnAwakeByPool( bool used )
 	{
 	}
 
-	public void OnRelease()
+	public void OnReleaseByPool()
 	{
 		ObjectPool.Instance.GetGameObject( prefab, refTarget.position, prefab.transform.rotation );
 	}

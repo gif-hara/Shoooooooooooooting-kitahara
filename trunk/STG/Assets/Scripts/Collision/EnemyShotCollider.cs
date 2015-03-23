@@ -36,22 +36,19 @@ public class EnemyShotCollider : A_Collider, I_Poolable
 		//Gizmos.DrawWireSphere( transform.position, grazeRadius );
 	}
 
-	public override void Start ()
+	public void OnAwakeByPool( bool used )
 	{
-		base.Start ();
-		this.cachedRadius = this.radius;
-		this.OnReuse();
-		ReferenceManager.Instance.refCollisionManager.AddEnemyShotCollider( this );
-	}
-
-	public void OnReuse()
-	{
+		if( !used )
+		{
+			this.cachedRadius = this.radius;
+			ReferenceManager.Instance.refCollisionManager.AddEnemyShotCollider( this );
+		}
 		this.radius = grazeRadius;
 		this.collisionType = CollisionType.Graze;
 		this.enabled = true;
 	}
 
-	public void OnRelease()
+	public void OnReleaseByPool()
 	{
 		this.enabled = false;
 	}
@@ -81,11 +78,7 @@ public class EnemyShotCollider : A_Collider, I_Poolable
 	}
 	private void OnCollisionPlayer( A_Collider target )
 	{
-		if( radius <= 0.0f )
-		{
-			return;
-		}
-		if( target.Type != EType.Player )
+		if( radius <= 0.0f || target.Type != EType.Player )
 		{
 			return;
 		}

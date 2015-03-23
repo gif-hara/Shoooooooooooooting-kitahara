@@ -21,12 +21,12 @@ public class EnemyShot : A_Shot, I_Poolable
 	
 	private bool isExplosion = false;
 
-	public void OnReuse()
+	public void OnAwakeByPool( bool used )
 	{
 		this.isExplosion = false;
 	}
 
-	public void OnRelease()
+	public void OnReleaseByPool()
 	{
 	}
 	

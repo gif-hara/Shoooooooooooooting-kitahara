@@ -188,7 +188,7 @@ public class EnemyController : EnemyControllerBase, I_Poolable
 		Debug.LogError( "... That has died." + gameObject.name );
 	}
 
-	public void OnReuse()
+	public void OnAwakeByPool( bool used )
 	{
 		this.hp = this.maxHp;
 		this.isDead = false;
@@ -196,7 +196,7 @@ public class EnemyController : EnemyControllerBase, I_Poolable
 		JoinStage();
 	}
 
-	public void OnRelease()
+	public void OnReleaseByPool()
 	{
 		DefectionStage();
 	}

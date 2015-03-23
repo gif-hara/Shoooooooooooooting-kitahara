@@ -56,24 +56,21 @@ public class ObjectPool : MonoBehaviour
 		List<GameObject> gameObjects = pooledGameObjects[key];
 		GameObject go = null;
 
-		for( int i=0,imax=gameObjects.Count; i<imax; i++ )
+		if( gameObjects.Count <= 0 )
 		{
-			if( gameObjects[i] == null || gameObjects[i].activeInHierarchy )
-			{
-				continue;
-			}
-
-			go = gameObjects[i];
+			go = Instantiate( prefab, position, rotation ) as GameObject;
+			go.AddComponent<PoolEntity>().Initialize( key );
+			PoolableComponentsAction( go, (poolable) => poolable.OnAwakeByPool( false ) );
+		}
+		else
+		{
+			go = gameObjects[0];
 			go.transform.position = position;
 			go.transform.rotation = rotation;
 			go.SetActive( true );
-			PoolableComponentsAction( go, (poolable) => poolable.OnReuse() );
-
-			return go;
+			PoolableComponentsAction( go, (poolable) => poolable.OnAwakeByPool( true ) );
+			gameObjects.RemoveAt( 0 );
 		}
-
-		go = Instantiate( prefab, position, rotation ) as GameObject;
-		gameObjects.Add( go );
 
 		return go;
 	}
@@ -85,7 +82,8 @@ public class ObjectPool : MonoBehaviour
 
 	public void ReleaseGameObject( GameObject go )
 	{
-		PoolableComponentsAction( go, (poolable) => poolable.OnRelease() );
+		PoolableComponentsAction( go, (poolable) => poolable.OnReleaseByPool() );
+		pooledGameObjects[go.GetComponent<PoolEntity>().Key].Add( go );
 		go.SetActive( false );
 		go.transform.parent = transform;
 	}
@@ -98,9 +96,9 @@ public class ObjectPool : MonoBehaviour
 			return;
 		}
 
-		for( int j=0,jmax=poolableComponents.Length; j<jmax; j++ )
+		for( int i=0,imax=poolableComponents.Length; i<imax; i++ )
 		{
-			func( poolableComponents[j] as I_Poolable );
+			func( poolableComponents[i] as I_Poolable );
 		}
 	}
 }

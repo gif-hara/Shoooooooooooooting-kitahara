@@ -26,12 +26,12 @@ public class EnemyCollider : A_Collider, I_Poolable
 		ReferenceManager.refCollisionManager.AddEnemyCollider( this );
 	}
 
-	public void OnReuse()
+	public void OnAwakeByPool( bool used )
 	{
 		this.enabled = true;
 	}
 
-	public void OnRelease()
+	public void OnReleaseByPool()
 	{
 		this.enabled = false;
 	}

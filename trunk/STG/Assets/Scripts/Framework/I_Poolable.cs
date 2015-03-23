@@ -14,12 +14,13 @@ using System.Collections.Generic;
 public interface I_Poolable
 {
 	/// <summary>
-	/// 再利用されたタイミングで呼び出されるイベント.
+	/// 生成または再利用されたタイミングで呼び出されるイベント.
 	/// </summary>
-	void OnReuse();
+	/// <param name="used">再利用されたか</param>
+	void OnAwakeByPool( bool used );
 
 	/// <summary>
 	/// 開放されたタイミングで呼び出されるイベント.
 	/// </summary>
-	void OnRelease();
+	void OnReleaseByPool();
 }
