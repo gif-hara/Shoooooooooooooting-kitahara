@@ -587,6 +587,7 @@ MonoBehaviour:
   max: {x: 0, y: 0}
   interval: 36
   createNum: 0
+  createType: 1
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -607,6 +608,7 @@ MonoBehaviour:
   max: {x: 0, y: 0}
   interval: 30
   createNum: 0
+  createType: 1
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -652,11 +654,6 @@ MonoBehaviour:
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
-    curve1:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
     speed: 0
     delayFrame: 0
     durationFrame: 240
@@ -688,6 +685,7 @@ MonoBehaviour:
   speed: -.5
   axis: {x: 0, y: 0, z: 1}
   addSpeed: 0
+  interval: 0
 --- !u!114 &11400012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -716,11 +714,6 @@ MonoBehaviour:
         inSlope: 2
         outSlope: 2
         tangentMode: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    curve1:
-      serializedVersion: 2
-      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
     speed: 0
@@ -754,6 +747,7 @@ MonoBehaviour:
   speed: -.300000012
   axis: {x: 0, y: 0, z: 1}
   addSpeed: 0
+  interval: 0
 --- !u!114 &11400016
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -782,11 +776,6 @@ MonoBehaviour:
         inSlope: 0
         outSlope: 0
         tangentMode: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    curve1:
-      serializedVersion: 2
-      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
     speed: 0
@@ -841,6 +830,7 @@ MonoBehaviour:
   max: {x: -103.07, y: 0}
   interval: 0
   createNum: 0
+  createType: 1
 --- !u!114 &11400022
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -855,6 +845,7 @@ MonoBehaviour:
   speed: .899999976
   axis: {x: 0, y: 0, z: 1}
   addSpeed: 0
+  interval: 0
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1

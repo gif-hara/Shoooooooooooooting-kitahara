@@ -28,6 +28,9 @@ public class CreatePrefabOnDestroy : MonoBehaviourExtension
 	/// アプリケーションが終了しているか？.
 	/// </summary>
 	private bool isApplicationQuit = false;
+
+	[SerializeField]
+	private GameDefine.CreateType createType = GameDefine.CreateType.Instantiate;
 	
 	void OnApplicationQuit()
 	{
@@ -38,7 +41,14 @@ public class CreatePrefabOnDestroy : MonoBehaviourExtension
 	{
 		if( !isApplicationQuit )
 		{
-			Instantiate( prefab, refTarget.position, prefab.transform.rotation );
+			if( this.createType == GameDefine.CreateType.Instantiate )
+			{
+				Instantiate( prefab, refTarget.position, prefab.transform.rotation );
+			}
+			else
+			{
+				ObjectPool.Instance.GetGameObject( prefab, refTarget.position, prefab.transform.rotation );
+			}
 		}
 	}
 }
