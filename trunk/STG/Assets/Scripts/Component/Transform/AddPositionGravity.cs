@@ -63,4 +63,9 @@ public class AddPositionGravity : GameMonoBehaviour, I_Poolable
 	{
 
 	}
+
+	public void Limit( float limit )
+	{
+		this.power = this.power > limit ? limit : this.power;
+	}
 }

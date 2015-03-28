@@ -43,10 +43,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 400004}
   - 114: {fileID: 11400008}
-  - 114: {fileID: 11400006}
-  - 114: {fileID: 11400004}
   - 114: {fileID: 11400012}
   - 114: {fileID: 11446834}
+  - 114: {fileID: 11464372}
+  - 114: {fileID: 11454108}
+  - 114: {fileID: 11428822}
+  - 114: {fileID: 11461718}
   m_Layer: 0
   m_Name: StarItem2
   m_TagString: Untagged
@@ -155,100 +157,6 @@ MonoBehaviour:
   delayUpdate: 0
   chasedRadius: 30
   refController: {fileID: 11400008}
---- !u!114 &11400004
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fa1ea50f8effcc43820fedd49e6389f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cachedTransform: {fileID: 0}
-  refTrans: {fileID: 400004}
-  data:
-    targetPosition: {x: 0, y: -800, z: 0}
-    curve0:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - time: 1
-        value: 1
-        inSlope: 2
-        outSlope: 2
-        tangentMode: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    speed: 0
-    delayFrame: 30
-    durationFrame: 120
-    isDestroy: 1
-    isOnOverDistance: 0
-    isSyncRotation: 0
-    rect:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-    moveType: 0
-    initFuncName: 
-    prefabiTweenPath: {fileID: 0}
-    offset: {x: 0, y: 0}
-    isReverse: 0
---- !u!114 &11400006
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fa1ea50f8effcc43820fedd49e6389f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cachedTransform: {fileID: 0}
-  refTrans: {fileID: 400004}
-  data:
-    targetPosition: {x: 0, y: 180, z: 0}
-    curve0:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 0
-        inSlope: 2
-        outSlope: 2
-        tangentMode: 0
-      - time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    speed: 0
-    delayFrame: 0
-    durationFrame: 30
-    isDestroy: 0
-    isOnOverDistance: 0
-    isSyncRotation: 0
-    rect:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-    moveType: 0
-    initFuncName: 
-    prefabiTweenPath: {fileID: 0}
-    offset: {x: 0, y: 0}
-    isReverse: 0
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -261,13 +169,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
-  refFirstTween: {fileID: 11400006}
-  refFallTween: {fileID: 11400004}
-  random: 200
-  outputLog: 0
+  refAddPositionGravityList:
+  - {fileID: 11464372}
+  - {fileID: 11454108}
   id: 2
   addScoreRate: 100
   refChasePlayer: {fileID: 11400012}
+  completeFirstMoveDelay: 30
 --- !u!114 &11400012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -282,6 +190,24 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   fixedPosition: {x: 0, y: 0, z: 0}
   speed: 15
+--- !u!114 &11428822
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a9b6176670374a4b8fff7a4018ea2c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  bounds:
+    serializedVersion: 2
+    x: -60
+    y: 60
+    width: 60
+    height: -60
 --- !u!114 &11446834
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -296,6 +222,51 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   refTarget: {fileID: 400004}
   layerType: 7
+--- !u!114 &11454108
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b6c9e4e4c4ce44f990f55f967e3967b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  refTarget: {fileID: 400004}
+  gravity: {x: 0, y: -1, z: 0}
+  power: 0
+  addPower: .219999999
+--- !u!114 &11461718
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b4419396ebb143389c57b042e5285bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  limit: 20
+  refTarget: {fileID: 11454108}
+--- !u!114 &11464372
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b6c9e4e4c4ce44f990f55f967e3967b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  refTarget: {fileID: 400004}
+  gravity: {x: 0, y: 1, z: 0}
+  power: 6
+  addPower: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
