@@ -19,12 +19,21 @@ public class CreatePrefabFromDead : GameMonoBehaviour, I_DeadEvent
 	[SerializeField]
 	public GameObject prefab;
 
+	[SerializeField]
+	private GameDefine.CreateType createType = GameDefine.CreateType.Pool;
+
 	/// <summary>
 	/// 死亡処理.
 	/// </summary>
 	public void OnDead()
 	{
-		var obj = InstantiateAsChild( ReferenceManager.refEffectLayer, prefab );
-		obj.transform.position = transform.position;
+		if( createType == GameDefine.CreateType.Instantiate )
+		{
+			Instantiate( prefab, transform.position, prefab.transform.rotation );
+		}
+		else
+		{
+			ObjectPool.Instance.GetGameObject( prefab, transform.position, prefab.transform.rotation );
+		}
 	}
 }

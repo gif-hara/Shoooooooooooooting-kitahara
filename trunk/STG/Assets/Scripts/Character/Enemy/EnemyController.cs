@@ -185,7 +185,6 @@ public class EnemyController : EnemyControllerBase, I_Poolable
 
 	void OnDestroy()
 	{
-		Debug.LogError( "... That has died." + gameObject.name );
 	}
 
 	public void OnAwakeByPool( bool used )
@@ -286,7 +285,6 @@ public class EnemyController : EnemyControllerBase, I_Poolable
 		
 		for( int i=0,imax=moveDataList.Count; i<imax; i++ )
 		{
-			
 			this.moveDataList.Add( moveDataList[i] );
 		}
 	}
@@ -319,7 +317,7 @@ public class EnemyController : EnemyControllerBase, I_Poolable
 	public void ForceDead()
 	{
 		isDead = true;
-		ObjectPool.Instance.ReleaseGameObject( gameObject );
+		Destroy( gameObject );
 
 		// 死亡イベントの発行.
 		deadEventObject.BroadcastMessage( GameDefine.DeadEventMessage, SendMessageOptions.DontRequireReceiver );
@@ -361,7 +359,7 @@ public class EnemyController : EnemyControllerBase, I_Poolable
 			ReferenceManager.Instance.RefPlayerStatusManager.AddSpecialPoint( AddSpecialPoint );
 		}
 
-		ObjectPool.Instance.ReleaseGameObject( gameObject );
+		Destroy( gameObject );
 	}
 	/// <summary>
 	/// 移動コンポーネントアタッチ.

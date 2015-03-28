@@ -36,6 +36,9 @@ public class CreatePrefab : GameMonoBehaviour
 	public List<Element> elementList;
 	
 	public int delay;
+
+	[SerializeField]
+	private GameDefine.CreateType objectCreateType = GameDefine.CreateType.Instantiate;
 	
 	public override void Awake()
 	{
@@ -80,9 +83,22 @@ public class CreatePrefab : GameMonoBehaviour
 
 	private void Create( Element element )
 	{
-		var obj = element.parent == null
-			? (Instantiate( element.prefab, element.prefab.transform.position, element.prefab.transform.rotation ) as GameObject).transform
-			: InstantiateAsChild( element.parent, element.prefab ).transform;
+		Transform obj = null;
+
+		if( this.objectCreateType == GameDefine.CreateType.Pool )
+		{
+			obj = ObjectPool.Instance.GetGameObject( element.prefab ).transform;
+			if( element.parent != null )
+			{
+				obj.parent = element.parent;
+			}
+		}
+		else
+		{
+			obj = element.parent == null
+				? (Instantiate( element.prefab, element.prefab.transform.position, element.prefab.transform.rotation ) as GameObject).transform
+				: InstantiateAsChild( element.parent, element.prefab ).transform;
+		}
 
 		obj.gameObject.layer = element.prefab.layer;
 

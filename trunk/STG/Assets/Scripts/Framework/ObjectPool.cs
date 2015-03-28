@@ -60,7 +60,10 @@ public class ObjectPool : MonoBehaviour
 		{
 			go = Instantiate( prefab, position, rotation ) as GameObject;
 			go.AddComponent<PoolEntity>().Initialize( key );
-			PoolableComponentsAction( go, (poolable) => poolable.OnAwakeByPool( false ) );
+			PoolableComponentsAction( go, (poolable) =>
+			{
+				poolable.OnAwakeByPool( false );
+			});
 		}
 		else
 		{
@@ -68,10 +71,12 @@ public class ObjectPool : MonoBehaviour
 			go.transform.position = position;
 			go.transform.rotation = rotation;
 			go.SetActive( true );
-			PoolableComponentsAction( go, (poolable) => poolable.OnAwakeByPool( true ) );
+			PoolableComponentsAction( go, (poolable) =>
+			{
+				poolable.OnAwakeByPool( true );
+			});
 			gameObjects.RemoveAt( 0 );
 		}
-
 		return go;
 	}
 

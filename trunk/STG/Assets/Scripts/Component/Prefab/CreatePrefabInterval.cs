@@ -55,6 +55,9 @@ public class CreatePrefabInterval : GameMonoBehaviour
 	/// </summary>
 	[SerializeField]
 	public int createNum;
+
+	[SerializeField]
+	private GameDefine.CreateType createType = GameDefine.CreateType.Instantiate;
 	
 	private int currentInterval = 0;
 	
@@ -78,7 +81,19 @@ public class CreatePrefabInterval : GameMonoBehaviour
 		if( currentInterval >= interval )
 		{
 			Vector3 pos = new Vector3( Random.Range( min.x, max.x ), Random.Range( min.y, max.y ), 0.0f );
-			var obj = InstantiateAsChild( Trans, prefabList[Random.Range( 0, prefabList.Count)] ).transform;
+
+			Transform obj = null;
+
+			if( this.createType == GameDefine.CreateType.Instantiate )
+			{
+				obj = InstantiateAsChild( Trans, prefabList[Random.Range( 0, prefabList.Count)] ).transform;
+			}
+			else
+			{
+				obj = ObjectPool.Instance.GetGameObject( prefabList[Random.Range( 0, prefabList.Count)] ).transform;
+				obj.parent = Trans;
+			}
+
 			obj.localPosition = pos;
 			
 			if( isParentDetach )

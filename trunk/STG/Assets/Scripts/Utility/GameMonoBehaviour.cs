@@ -98,9 +98,7 @@ public class GameMonoBehaviour : MonoBehaviourExtension
 	/// </param>
 	public static GameObject InstantiateAsChild( GameObject parent, GameObject prefab )
 	{
-//		GameObject obj = ObjectPool.Reuse( prefab.GetComponent<PoolEntity>() ).gameObject;
-//		obj.transform.parent = parent.transform;
-		GameObject obj = ObjectPool.Instance.GetGameObject( prefab, Vector3.zero, Quaternion.identity );
+		GameObject obj = Instantiate( prefab, Vector3.zero, Quaternion.identity ) as GameObject;
 		obj.transform.parent = parent.transform;
 		obj.transform.localPosition = Vector3.zero;
 		obj.transform.localRotation = Quaternion.identity;

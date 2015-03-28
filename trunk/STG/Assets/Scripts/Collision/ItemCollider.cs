@@ -13,7 +13,7 @@ using System.Collections;
 /// <summary>
 /// .
 /// </summary>
-public class ItemCollider : A_Collider
+public class ItemCollider : A_Collider, I_Poolable
 {
 	[SerializeField]
 	private float chasedRadius;
@@ -23,11 +23,24 @@ public class ItemCollider : A_Collider
 
 	private System.Action collisionFunc;
 
-	public override void Awake()
+	private float cachedFallRadius;
+
+	public void OnAwakeByPool( bool used )
 	{
-		base.Awake();
-		ReferenceManager.refCollisionManager.AddItemCollider( this );
-		collisionFunc = FallCollision;
+		if( !used )
+		{
+			ReferenceManager.refCollisionManager.AddItemCollider( this );
+			this.cachedFallRadius = this.radius;
+		}
+
+		this.collisionFunc = FallCollision;
+		this.enabled = true;
+		this.radius = this.cachedFallRadius;
+	}
+
+	public void OnReleaseByPool()
+	{
+		this.enabled = false;
 	}
 
 	public override void OnCollision (A_Collider target)
@@ -57,7 +70,7 @@ public class ItemCollider : A_Collider
 
 	private void ChaseCollision()
 	{
-		Destroy( refController.gameObject );
+		ObjectPool.Instance.ReleaseGameObject( refController.gameObject );
 		refController.OnPlayerCollide();
 	}
 }

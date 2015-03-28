@@ -254,6 +254,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   delay: 30
+  ignorePause: 0
   refTargetList:
   - {fileID: 2300002}
   isVisible: 0
@@ -277,6 +278,7 @@ MonoBehaviour:
   max: {x: 0, y: 0}
   interval: 30
   createNum: 1
+  createType: 1
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -297,6 +299,7 @@ MonoBehaviour:
   max: {x: 80, y: 80}
   interval: 3
   createNum: 5
+  createType: 1
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -342,6 +345,7 @@ MonoBehaviour:
     parent: {fileID: 400010}
     detachParent: 1
   delay: 360
+  objectCreateType: 1
 --- !u!114 &11400012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -389,6 +393,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   delay: 20
+  ignorePause: 0
   refTargetList:
   - {fileID: 2300000}
   isVisible: 0
@@ -412,6 +417,7 @@ MonoBehaviour:
   max: {x: 0, y: 0}
   interval: 20
   createNum: 1
+  createType: 1
 --- !u!114 &11400020
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -432,6 +438,7 @@ MonoBehaviour:
   max: {x: 80, y: 80}
   interval: 3
   createNum: 5
+  createType: 1
 --- !u!114 &11400022
 MonoBehaviour:
   m_ObjectHideFlags: 1

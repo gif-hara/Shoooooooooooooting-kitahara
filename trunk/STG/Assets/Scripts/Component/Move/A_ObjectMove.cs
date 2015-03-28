@@ -14,7 +14,7 @@ using System.Collections.Generic;
 using System.Runtime.Serialization;
 
 
-public abstract class A_ObjectMove : GameMonoBehaviour
+public abstract class A_ObjectMove : GameMonoBehaviour, I_Poolable
 {
 	/// <summary>
 	/// コンポーネントに必要なデータの抽象クラス.
@@ -31,12 +31,7 @@ public abstract class A_ObjectMove : GameMonoBehaviour
 		/// アニメーションカーブ0.
 		/// </summary>
 		public AnimationCurve curve0 = new AnimationCurve();
-		
-		/// <summary>
-		/// アニメーションカーブ1.
-		/// </summary>
-		public AnimationCurve curve1 = new AnimationCurve();
-		
+
 		/// <summary>
 		/// スピード.
 		/// </summary>
@@ -112,7 +107,18 @@ public abstract class A_ObjectMove : GameMonoBehaviour
 		{
 			this.targetPosition = other.targetPosition;
 			this.curve0 = other.curve0;
+			this.speed = other.speed;
 			this.durationFrame = other.durationFrame;
+			this.delayFrame = other.delayFrame;
+			this.isDestroy = other.isDestroy;
+			this.isOnOverDistance = other.isOnOverDistance;
+			this.isSyncRotation = other.isSyncRotation;
+			this.rect = other.rect;
+			this.moveType = other.moveType;
+			this.initFuncName = other.initFuncName;
+			this.prefabiTweenPath = other.prefabiTweenPath;
+			this.offset = other.offset;
+			this.isReverse = other.isReverse;
 		}
 	}
 	
@@ -146,6 +152,8 @@ public abstract class A_ObjectMove : GameMonoBehaviour
 	/// 画面外判定の距離.
 	/// </summary>
 	protected const float OverDistance = 1500.0f;
+
+	private Data cachedData;
 	
 	// Update is called once per frame
 	public override void Update()
@@ -173,7 +181,33 @@ public abstract class A_ObjectMove : GameMonoBehaviour
 			Finish();
 		}
 	}
+
+	public void OnAwakeByPool( bool used )
+	{
+		if( !used )
+		{
+			if( this.data != null )
+			{
+				this.cachedData = new Data( this.data );
+			}
+		}
+		else
+		{
+			if( this.cachedData != null )
+			{
+				this.data = new Data( this.cachedData );
+			}
+		}
+		this.isInitMove = false;
+		this.enabled = true;
+		this.currentDuration = 0;
+		this.isComplete = false;
+	}
 	
+	public void OnReleaseByPool()
+	{
+	}
+
 	public void InitData( Data data )
 	{
 		this.data = data;

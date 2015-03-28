@@ -30,7 +30,7 @@ public class EnemyCollider : A_Collider, I_Poolable
 	{
 		this.enabled = true;
 	}
-
+	
 	public void OnReleaseByPool()
 	{
 		this.enabled = false;

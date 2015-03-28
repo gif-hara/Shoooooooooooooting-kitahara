@@ -25,7 +25,7 @@ public class EnemyShot : A_Shot, I_Poolable
 	{
 		this.isExplosion = false;
 	}
-
+	
 	public void OnReleaseByPool()
 	{
 	}
