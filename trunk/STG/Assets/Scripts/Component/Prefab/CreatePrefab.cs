@@ -12,7 +12,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 
-public class CreatePrefab : GameMonoBehaviour
+public class CreatePrefab : GameMonoBehaviour, I_Poolable
 {
 	[System.Serializable]
 	public class Element
@@ -39,7 +39,9 @@ public class CreatePrefab : GameMonoBehaviour
 
 	[SerializeField]
 	private GameDefine.CreateType objectCreateType = GameDefine.CreateType.Instantiate;
-	
+
+	private int cachedDelay;
+
 	public override void Awake()
 	{
 		base.Awake();
@@ -73,6 +75,31 @@ public class CreatePrefab : GameMonoBehaviour
 		
 		delay--;
 	}
+
+	public void OnAwakeByPool( bool used )
+	{
+		if( !used )
+		{
+			this.cachedDelay = this.delay;
+			return;
+		}
+
+		if( createType == CreateType.Awake || createType == CreateType.Start )
+		{
+			Create();
+		}
+		else
+		{
+			this.delay = this.cachedDelay;
+			enabled = true;
+		}
+	}
+
+	public void OnReleaseByPool()
+	{
+
+	}
+
 	private void Create()
 	{
 		elementList.ForEach( (obj) => 

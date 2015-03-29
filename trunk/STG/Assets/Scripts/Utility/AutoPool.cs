@@ -43,6 +43,8 @@ public class AutoPool : MonoBehaviour, I_Poolable
 		{
 			this.delay = this.cachedDelay;
 		}
+
+		enabled = true;
 	}
 	
 	public void OnReleaseByPool()

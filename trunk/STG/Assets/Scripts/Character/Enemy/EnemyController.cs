@@ -12,7 +12,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 
-public class EnemyController : EnemyControllerBase, I_Poolable
+public class EnemyController : EnemyControllerBase
 {
 	/// <summary>
 	/// 敵ID.
@@ -185,20 +185,20 @@ public class EnemyController : EnemyControllerBase, I_Poolable
 
 	void OnDestroy()
 	{
-	}
-
-	public void OnAwakeByPool( bool used )
-	{
-		this.hp = this.maxHp;
-		this.isDead = false;
-		AttachComponent();
-		JoinStage();
-	}
-
-	public void OnReleaseByPool()
-	{
 		DefectionStage();
 	}
+
+//	public void OnAwakeByPool( bool used )
+//	{
+//		this.hp = this.maxHp;
+//		this.isDead = false;
+//		AttachComponent();
+//		JoinStage();
+//	}
+//
+//	public void OnReleaseByPool()
+//	{
+//	}
 	
 	void OnEnemyDestroyOnDeactiveMuzzleMessage( int destroyEnemyId )
 	{
