@@ -39,7 +39,7 @@ public class EnemyShot : A_Shot, I_Poolable
 
 		isExplosion = true;
 		ObjectPool.Instance.ReleaseGameObject( gameObject );
-		var explosion = InstantiateAsChild( ReferenceManager.refEffectLayer, prefabExplosion );
+		var explosion = ObjectPool.Instance.GetGameObject( prefabExplosion );
 		explosion.transform.position = Trans.position;
 	}
 

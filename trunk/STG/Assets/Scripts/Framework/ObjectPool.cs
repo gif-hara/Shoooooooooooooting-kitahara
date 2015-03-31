@@ -42,7 +42,7 @@ public class ObjectPool : MonoBehaviour
 		}
 	}
 
-	private Dictionary<int, List<GameObject>> pooledGameObjects = new Dictionary<int, List<GameObject>>();
+	private Dictionary<int, Stack<GameObject>> pooledGameObjects = new Dictionary<int, Stack<GameObject>>();
 
 	public GameObject GetGameObject( GameObject prefab, Vector3 position, Quaternion rotation )
 	{
@@ -50,32 +50,29 @@ public class ObjectPool : MonoBehaviour
 
 		if( !pooledGameObjects.ContainsKey( key ) )
 		{
-			pooledGameObjects.Add( key, new List<GameObject>() );
+			pooledGameObjects.Add( key, new Stack<GameObject>() );
 		}
 
-		List<GameObject> gameObjects = pooledGameObjects[key];
+		var gameObjects = pooledGameObjects[key];
 		GameObject go = null;
 
 		if( gameObjects.Count <= 0 )
 		{
 			go = Instantiate( prefab, position, rotation ) as GameObject;
 			go.AddComponent<PoolEntity>().Initialize( key );
-			PoolableComponentsAction( go, (poolable) =>
-			{
-				poolable.OnAwakeByPool( false );
-			});
+			PoolableComponentsAction( go, (poolable) => poolable.OnAwakeByPool( false ) );
 		}
 		else
 		{
-			go = gameObjects[0];
+			go = gameObjects.Pop();
+			if( go.activeInHierarchy )
+			{
+				Debug.LogError( "go is already active. go = " + go.name );
+			}
 			go.transform.position = position;
 			go.transform.rotation = rotation;
 			go.SetActive( true );
-			PoolableComponentsAction( go, (poolable) =>
-			{
-				poolable.OnAwakeByPool( true );
-			});
-			gameObjects.RemoveAt( 0 );
+			PoolableComponentsAction( go, (poolable) => poolable.OnAwakeByPool( true ) );
 		}
 		return go;
 	}
@@ -87,8 +84,13 @@ public class ObjectPool : MonoBehaviour
 
 	public void ReleaseGameObject( GameObject go )
 	{
+		if( !go.activeInHierarchy )
+		{
+			return;
+		}
+
 		PoolableComponentsAction( go, (poolable) => poolable.OnReleaseByPool() );
-		pooledGameObjects[go.GetComponent<PoolEntity>().Key].Add( go );
+		pooledGameObjects[go.GetComponent<PoolEntity>().Key].Push( go );
 		go.SetActive( false );
 		go.transform.parent = transform;
 	}

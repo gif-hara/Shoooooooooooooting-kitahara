@@ -6030,9 +6030,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22b76de7f6e138541a836620be57cd8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  apply: 0
-  difficulty: 2
-  stageId: 4
+  apply: 1
+  difficulty: 1
+  stageId: 2
   playerId: 0
   replayId: 0
   gameMode: 0
@@ -9012,12 +9012,12 @@ MonoBehaviour:
   refParent: {fileID: 1353942476}
   isParentDetach: 0
   prefabList:
-  - {fileID: 100000, guid: adbc7ee75eb90ac48af8e6b74a765308, type: 2}
+  - {fileID: 100004, guid: e6c14e4e20f64d44a9b432f56c0581a8, type: 2}
   min: {x: -200, y: 200}
   max: {x: 200, y: 200}
-  interval: 10
+  interval: 300
   createNum: 99999
-  createType: 1
+  createType: 0
 --- !u!1 &1358268087
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,7 +15,10 @@ public abstract class EventOnOffScreen : GameMonoBehaviour
 {
 	[SerializeField]
 	protected Rect bounds;
-	
+
+	[SerializeField]
+	private int delay;
+
 	private static Rect fixedBounds;
 
 #if UNITY_EDITOR
@@ -58,7 +61,7 @@ public abstract class EventOnOffScreen : GameMonoBehaviour
 	public override void Update()
 	{
 		base.Update();
-		
+
 		var pos = Trans.position;
 		fixedBounds.Set(
 			pos.x + bounds.x,
@@ -75,6 +78,6 @@ public abstract class EventOnOffScreen : GameMonoBehaviour
 			Action ();
 		}
 	}
-
+	
 	protected abstract void Action();
 }

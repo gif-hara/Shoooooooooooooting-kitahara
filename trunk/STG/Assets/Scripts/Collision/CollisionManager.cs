@@ -152,14 +152,6 @@ public class CollisionManager : GameMonoBehaviour
 	{
 		itemColliderList.Add( col );
 	}
-	/// <summary>
-	/// 敵弾コライダーの削除.
-	/// </summary>
-	/// <param name="col">Col.</param>
-	public void RemoveEnemyShotCollider( EnemyShotCollider col )
-	{
-		enemyShotColliderList.Remove( col );
-	}
 
 	/// <summary>
 	/// 敵弾を全て死亡させる.
@@ -172,7 +164,7 @@ public class CollisionManager : GameMonoBehaviour
 	{
 		yield return new WaitForEndOfFrame();
 
-		enemyShotColliderList.RemoveAll( e => e == null );
+		//enemyShotColliderList.RemoveAll( e => e == null );
 		enemyShotColliderList.ForEach( e =>
 		{
 			e.refEnemyShot.Explosion();
