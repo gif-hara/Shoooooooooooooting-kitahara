@@ -1959,6 +1959,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   prefab: {fileID: 100002, guid: 9c34980ebaf998b43a95929a879b6f1c, type: 2}
+  createType: 1
 --- !u!114 &11400040
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2079,6 +2080,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 1
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11400048
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2319,6 +2321,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 90
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11400066
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2490,6 +2493,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 90
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11400078
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2661,6 +2665,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 90
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11400090
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3226,6 +3231,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 90
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11400136
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3470,6 +3476,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 1
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11400158
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3728,11 +3735,6 @@ MonoBehaviour:
         inSlope: 0
         outSlope: 0
         tangentMode: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    curve1:
-      serializedVersion: 2
-      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
     speed: 0
@@ -4042,6 +4044,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 1
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11400230
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4152,6 +4155,7 @@ MonoBehaviour:
     parent: {fileID: 408976}
     detachParent: 0
   delay: 6
+  objectCreateType: 1
 --- !u!114 &11408978
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4209,6 +4213,7 @@ MonoBehaviour:
   delay: 0
   rate: 10
   duration: 6
+  cachedDelay: 0
 --- !u!114 &11408986
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4242,6 +4247,7 @@ MonoBehaviour:
     parent: {fileID: 408980}
     detachParent: 1
   delay: 6
+  objectCreateType: 1
 --- !u!114 &11408990
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4274,6 +4280,7 @@ MonoBehaviour:
     parent: {fileID: 408982}
     detachParent: 1
   delay: 0
+  objectCreateType: 1
 --- !u!114 &11475584
 MonoBehaviour:
   m_ObjectHideFlags: 1
