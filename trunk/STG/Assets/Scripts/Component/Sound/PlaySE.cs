@@ -12,11 +12,13 @@ using System.Collections;
 using System.Collections.Generic;
 
 
-public class PlaySE : GameMonoBehaviour
+public class PlaySE : GameMonoBehaviour, I_Poolable
 {
 	public string label;
 	
 	public int delay;
+
+	private int cachedDelay;
 	
 	// Update is called once per frame
 	public override void Update()
@@ -32,5 +34,24 @@ public class PlaySE : GameMonoBehaviour
 		}
 		
 		delay--;
+	}
+
+	public void OnAwakeByPool( bool used )
+	{
+		if( !used )
+		{
+			this.cachedDelay = this.delay;
+		}
+		else
+		{
+			this.delay = this.cachedDelay;
+		}
+
+		this.enabled = true;
+	}
+
+	public void OnReleaseByPool()
+	{
+
 	}
 }
