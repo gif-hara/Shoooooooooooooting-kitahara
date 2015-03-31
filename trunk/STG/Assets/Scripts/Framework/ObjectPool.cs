@@ -42,38 +42,39 @@ public class ObjectPool : MonoBehaviour
 		}
 	}
 
-	private Dictionary<int, Stack<GameObject>> pooledGameObjects = new Dictionary<int, Stack<GameObject>>();
+	private Dictionary<int, Stack<PoolEntity>> pooledEntities = new Dictionary<int, Stack<PoolEntity>>();
 
 	public GameObject GetGameObject( GameObject prefab, Vector3 position, Quaternion rotation )
 	{
 		int key = prefab.GetInstanceID();
 
-		if( !pooledGameObjects.ContainsKey( key ) )
+		if( !pooledEntities.ContainsKey( key ) )
 		{
-			pooledGameObjects.Add( key, new Stack<GameObject>() );
+			pooledEntities.Add( key, new Stack<PoolEntity>() );
 		}
 
-		var gameObjects = pooledGameObjects[key];
+		var entities = pooledEntities[key];
 		GameObject go = null;
+		PoolEntity entity = null;
 
-		if( gameObjects.Count <= 0 )
+		if( entities.Count <= 0 )
 		{
 			go = Instantiate( prefab, position, rotation ) as GameObject;
-			go.AddComponent<PoolEntity>().Initialize( key );
+			entity = go.AddComponent( typeof( PoolEntity ) ) as PoolEntity;
+			entity.Initialize( key );
 			PoolableComponentsAction( go, (poolable) => poolable.OnAwakeByPool( false ) );
 		}
 		else
 		{
-			go = gameObjects.Pop();
-			if( go.activeInHierarchy )
-			{
-				Debug.LogError( "go is already active. go = " + go.name );
-			}
+			entity = entities.Pop();
+			entity.Reuse();
+			go = entity.gameObject;
 			go.transform.position = position;
 			go.transform.rotation = rotation;
 			go.SetActive( true );
 			PoolableComponentsAction( go, (poolable) => poolable.OnAwakeByPool( true ) );
 		}
+
 		return go;
 	}
 
@@ -84,13 +85,20 @@ public class ObjectPool : MonoBehaviour
 
 	public void ReleaseGameObject( GameObject go )
 	{
-		if( !go.activeInHierarchy )
+		var entity = go.GetComponent( typeof( PoolEntity ) ) as PoolEntity;
+		if( !entity )
+		{
+			Debug.LogException( new System.InvalidCastException( "PoolEntity did not exist. go = " + go.name ) );
+			return;
+		}
+		if( entity.IsPooled )
 		{
 			return;
 		}
 
 		PoolableComponentsAction( go, (poolable) => poolable.OnReleaseByPool() );
-		pooledGameObjects[go.GetComponent<PoolEntity>().Key].Push( go );
+		entity.Pool();
+		pooledEntities[entity.Key].Push( entity );
 		go.SetActive( false );
 		go.transform.parent = transform;
 	}

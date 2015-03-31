@@ -222,7 +222,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &27513320
 Transform:
   m_ObjectHideFlags: 0
@@ -2684,6 +2684,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 295027762}
+  - 114: {fileID: 295027763}
   m_Layer: 8
   m_Name: 7_ItemLayer
   m_TagString: Untagged
@@ -2703,6 +2704,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 58430346}
   m_RootOrder: 7
+--- !u!114 &295027763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 295027761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca537c156ac197f4499d745979cfd2b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  refParent: {fileID: 295027762}
+  isParentDetach: 0
+  prefabList:
+  - {fileID: 100004, guid: a8f06ee2a43ebdc49b7ed6a9384c7c89, type: 2}
+  min: {x: -200, y: 200}
+  max: {x: 200, y: 200}
+  interval: 10
+  createNum: 99999
+  createType: 1
 --- !u!1 &302958797
 GameObject:
   m_ObjectHideFlags: 0
