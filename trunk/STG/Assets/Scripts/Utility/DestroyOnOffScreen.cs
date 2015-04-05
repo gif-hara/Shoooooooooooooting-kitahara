@@ -16,11 +16,13 @@ using System.Collections.Generic;
 /// </summary>
 public class DestroyOnOffScreen : EventOnOffScreen
 {
+#if UNITY_EDITOR
 	[ContextMenu( "Replace PoolOnOffScreen." )]
 	void OnReplasePoolOnOffScreen()
 	{
 		gameObject.AddComponent<PoolOnOffScreen>().SetBounds( this.bounds );
 	}
+#endif
 
 	protected override void Action ()
 	{

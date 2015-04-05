@@ -12,7 +12,7 @@ using System.Collections.Generic;
 /// <summary>
 /// 移動量付きで回転量をランダムで設定するコンポーネント.
 /// </summary>
-public class RandomVelocityRotation : MonoBehaviour
+public class RandomVelocityRotation : MonoBehaviour, I_Poolable
 {
 	[SerializeField]
 	private Transform refTarget;
@@ -37,14 +37,10 @@ public class RandomVelocityRotation : MonoBehaviour
 
 	private float t;
 
-	void Start ()
-	{
-		initialAngle = refTarget.localRotation.eulerAngles.z;
-		min += initialAngle;
-		max += initialAngle;
-		SetTargetAngle();
-	}
-	
+	private float cachedMin;
+
+	private float cachedMax;
+
 	void Update ()
 	{
 		if( PauseManager.Instance.IsPause )	return;
@@ -59,6 +55,29 @@ public class RandomVelocityRotation : MonoBehaviour
 
 
 		t += 1.0f / duration;
+	}
+
+	public void OnAwakeByPool( bool used )
+	{
+		if( !used )
+		{
+			this.cachedMin = this.min;
+			this.cachedMax = this.max;
+		}
+		else
+		{
+			this.min = this.cachedMin;
+			this.max = this.cachedMax;
+		}
+		initialAngle = refTarget.localRotation.eulerAngles.z;
+		min += initialAngle;
+		max += initialAngle;
+		SetTargetAngle();
+	}
+
+	public void OnReleaseByPool()
+	{
+
 	}
 
 	private void SetTargetAngle()

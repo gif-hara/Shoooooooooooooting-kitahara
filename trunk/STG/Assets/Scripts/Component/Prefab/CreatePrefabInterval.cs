@@ -12,7 +12,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 
-public class CreatePrefabInterval : GameMonoBehaviour
+public class CreatePrefabInterval : GameMonoBehaviour, I_Poolable
 {
 	/// <summary>
 	/// 親オブジェクト参照.
@@ -60,16 +60,8 @@ public class CreatePrefabInterval : GameMonoBehaviour
 	private GameDefine.CreateType createType = GameDefine.CreateType.Instantiate;
 	
 	private int currentInterval = 0;
-	
-	// Use this for initialization
-	public override void Start()
-	{
-		base.Start();
-		if( refParent == null )
-		{
-			refParent = transform;
-		}
-	}
+
+	private int cachedCreateNum;
 
 	// Update is called once per frame
 	public override void Update()
@@ -114,6 +106,31 @@ public class CreatePrefabInterval : GameMonoBehaviour
 		}
 		
 		currentInterval++;
+	}
+
+	public void OnAwakeByPool( bool used )
+	{
+		if( !used )
+		{
+			if( refParent == null )
+			{
+				refParent = transform;
+			}
+
+			this.cachedCreateNum = this.createNum;
+		}
+		else
+		{
+			this.createNum = this.cachedCreateNum;
+		}
+
+		this.enabled = true;
+		this.currentInterval = 0;
+	}
+
+	public void OnReleaseByPool()
+	{
+
 	}
 	
 	void OnDrawGizmosSelected()

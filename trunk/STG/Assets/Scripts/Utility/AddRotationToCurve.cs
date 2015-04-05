@@ -12,7 +12,7 @@ using System.Collections.Generic;
 /// <summary>
 /// アニメーションカーブによって回転量を加算するコンポーネント.
 /// </summary>
-public class AddRotationToCurve : GameMonoBehaviour
+public class AddRotationToCurve : GameMonoBehaviour, I_Poolable
 {
 	[SerializeField]
 	private int duration;
@@ -31,18 +31,7 @@ public class AddRotationToCurve : GameMonoBehaviour
 	private Quaternion toRotation;
 
 	private int currentDuration = 0;
-
-	public override void Start ()
-	{
-		base.Start ();
-		this.initialRotation = transform.localRotation;
-		this.toRotation = Quaternion.Euler( new Vector3(
-			this.initialRotation.eulerAngles.x + addRotation.x,
-			this.initialRotation.eulerAngles.y + addRotation.y,
-			this.initialRotation.eulerAngles.z + addRotation.z
-			));
-	}
-
+	
 	public override void Update ()
 	{
 		base.Update ();
@@ -63,5 +52,20 @@ public class AddRotationToCurve : GameMonoBehaviour
 				currentDuration = 0;
 			}
 		}
+	}
+
+	public void OnAwakeByPool( bool used )
+	{
+		this.currentDuration = 0;
+		this.initialRotation = transform.localRotation;
+		this.toRotation = Quaternion.Euler( new Vector3(
+			this.initialRotation.eulerAngles.x + addRotation.x,
+			this.initialRotation.eulerAngles.y + addRotation.y,
+			this.initialRotation.eulerAngles.z + addRotation.z
+			));
+	}
+
+	public void OnReleaseByPool()
+	{
 	}
 }
