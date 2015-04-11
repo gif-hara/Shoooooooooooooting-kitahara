@@ -26,6 +26,8 @@ public class MeshUVOffsetTile : MonoBehaviourExtension, I_Poolable
 	
 	public bool loop;
 
+	public int initialOffset = 0;
+
 	[SerializeField]
 	private GameDefine.CreateType createType = GameDefine.CreateType.Instantiate;
 	
@@ -83,7 +85,7 @@ public class MeshUVOffsetTile : MonoBehaviourExtension, I_Poolable
 	{
 		this.refMesh.renderer.enabled = true;
 		this.enabled = true;
-		this.offset = 0;
+		this.offset = this.initialOffset;
 		this.refMesh.gameObject.SetActive( true );
 	}
 

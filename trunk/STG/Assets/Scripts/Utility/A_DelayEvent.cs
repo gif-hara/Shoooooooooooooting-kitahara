@@ -12,7 +12,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 
-public abstract class A_DelayEvent : GameMonoBehaviour
+public abstract class A_DelayEvent : GameMonoBehaviour, I_Poolable
 {
 	/// <summary>
 	/// ディレイ.
@@ -23,18 +23,41 @@ public abstract class A_DelayEvent : GameMonoBehaviour
 	[SerializeField]
 	protected bool ignorePause;
 
+	private int cachedDelay;
+
 	public override void Start ()
 	{
 		base.Start ();
 
-		Execute();
+		this.Execute();
 	}
+
 	// Update is called once per frame
 	public override void Update()
 	{
-		Execute();
+		this.Execute();
 
 		delay--;
+	}
+
+	public void OnAwakeByPool( bool used )
+	{
+		if( !used )
+		{
+			this.cachedDelay = this.delay;
+		}
+		else
+		{
+			this.delay = this.cachedDelay;
+			this.enabled = true;
+			this.Execute();
+		}
+
+	}
+
+	public void OnReleaseByPool()
+	{
+
 	}
 
 	private void Execute()
