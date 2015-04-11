@@ -404,6 +404,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 1
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -450,7 +451,7 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   element:
     min: 15
-    max: 15
+    max: 5
     current: 0
     curve:
       serializedVersion: 2
@@ -483,7 +484,7 @@ MonoBehaviour:
   enableTuning: 1
   element:
     min: 30
-    max: 0
+    max: 2
     current: 0
     curve:
       serializedVersion: 2
@@ -579,6 +580,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   prefab: {fileID: 100002, guid: 9c34980ebaf998b43a95929a879b6f1c, type: 2}
+  createType: 1
 --- !u!114 &11400290
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -634,6 +636,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   prefab: {fileID: 100004, guid: a8f06ee2a43ebdc49b7ed6a9384c7c89, type: 2}
+  createType: 1
 --- !u!114 &11489314
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -659,6 +662,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 1
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11489316
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -673,7 +677,7 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   element:
     min: 15
-    max: 15
+    max: 5
     current: 0
     curve:
       serializedVersion: 2
@@ -706,7 +710,7 @@ MonoBehaviour:
   enableTuning: 1
   element:
     min: 30
-    max: 0
+    max: 2
     current: 0
     curve:
       serializedVersion: 2
@@ -845,7 +849,7 @@ MonoBehaviour:
   enableTuning: 1
   element:
     min: 30
-    max: 0
+    max: 2
     current: 0
     curve:
       serializedVersion: 2
@@ -876,7 +880,7 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   element:
     min: 15
-    max: 15
+    max: 5
     current: 0
     curve:
       serializedVersion: 2
@@ -918,6 +922,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 1
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11489334
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -943,6 +948,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 1
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11489336
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -957,7 +963,7 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   element:
     min: 15
-    max: 15
+    max: 5
     current: 0
     curve:
       serializedVersion: 2
@@ -990,7 +996,7 @@ MonoBehaviour:
   enableTuning: 1
   element:
     min: 30
-    max: 0
+    max: 2
     current: 0
     curve:
       serializedVersion: 2
