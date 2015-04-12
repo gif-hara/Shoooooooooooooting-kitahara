@@ -363,6 +363,7 @@ Transform:
   - {fileID: 1522776630}
   - {fileID: 1968817576}
   - {fileID: 1957406506}
+  - {fileID: 295027762}
   m_Father: {fileID: 0}
   m_RootOrder: 1
 --- !u!1 &60309878
@@ -2675,6 +2676,55 @@ Transform:
   - {fileID: 1465679161}
   m_Father: {fileID: 525133656}
   m_RootOrder: 2
+--- !u!1 &295027761
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 295027762}
+  - 114: {fileID: 295027763}
+  m_Layer: 8
+  m_Name: 7_ItemLayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &295027762
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 295027761}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 58430346}
+  m_RootOrder: 7
+--- !u!114 &295027763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 295027761}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca537c156ac197f4499d745979cfd2b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  refParent: {fileID: 295027762}
+  isParentDetach: 0
+  prefabList:
+  - {fileID: 100004, guid: a8f06ee2a43ebdc49b7ed6a9384c7c89, type: 2}
+  min: {x: -200, y: 200}
+  max: {x: 200, y: 200}
+  interval: 10
+  createNum: 99999
+  createType: 1
 --- !u!1 &302958797
 GameObject:
   m_ObjectHideFlags: 0
@@ -3323,6 +3373,7 @@ MonoBehaviour:
   refReplayDataLoader: {fileID: 1885496530}
   refFrameCountRecorder: {fileID: 976221743}
   refBackgroundLayer: {fileID: 1655857005}
+  refItemLayer: {fileID: 295027761}
   prefabEnemyList:
   - {fileID: 100000, guid: adbc7ee75eb90ac48af8e6b74a765308, type: 2}
   - {fileID: 100004, guid: 2d31931c9bc8cbc44ba32ec3c882354a, type: 2}
@@ -5783,6 +5834,7 @@ MonoBehaviour:
   max: {x: 200, y: 250}
   interval: 0
   createNum: 1074855400
+  createType: 0
 --- !u!1 &778891093
 GameObject:
   m_ObjectHideFlags: 0
@@ -6000,9 +6052,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22b76de7f6e138541a836620be57cd8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  apply: 1
-  difficulty: 2
-  stageId: 1
+  apply: 0
+  difficulty: 4
+  stageId: 3
   playerId: 0
   replayId: 0
   gameMode: 0
@@ -8854,7 +8906,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2122912384}
   - {fileID: 1409095644}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -8866,6 +8917,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1353942476}
+  - 114: {fileID: 1353942477}
   m_Layer: 8
   m_Name: 1_EnemyLayer
   m_TagString: Untagged
@@ -8885,6 +8937,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 58430346}
   m_RootOrder: 3
+--- !u!114 &1353942477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1353942475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca537c156ac197f4499d745979cfd2b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  refParent: {fileID: 1353942476}
+  isParentDetach: 0
+  prefabList:
+  - {fileID: 100000, guid: adbc7ee75eb90ac48af8e6b74a765308, type: 2}
+  min: {x: -200, y: 200}
+  max: {x: 200, y: 200}
+  interval: 20
+  createNum: 99999
+  createType: 0
 --- !u!1 &1358268087
 GameObject:
   m_ObjectHideFlags: 0
@@ -9264,8 +9337,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1169415464}
+  - {fileID: 2122912384}
   m_Father: {fileID: 1353323493}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!1 &1409785763
 GameObject:
   m_ObjectHideFlags: 0
@@ -12522,8 +12596,8 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: -1
-  far clip plane: 1
+  near clip plane: -10
+  far clip plane: 10
   field of view: 60
   orthographic: 1
   orthographic size: 300
@@ -14264,8 +14338,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1353323493}
-  m_RootOrder: 0
+  m_Father: {fileID: 1409095644}
+  m_RootOrder: 1
 --- !u!20 &2122912385
 Camera:
   m_ObjectHideFlags: 0

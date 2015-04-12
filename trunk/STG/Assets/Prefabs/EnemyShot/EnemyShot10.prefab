@@ -31,7 +31,7 @@ GameObject:
   - 114: {fileID: 11400004}
   - 114: {fileID: 11400006}
   - 114: {fileID: 11400010}
-  - 114: {fileID: 11400012}
+  - 114: {fileID: 11474164}
   m_Layer: 0
   m_Name: EnemyShot10
   m_TagString: Untagged
@@ -65,6 +65,7 @@ Transform:
   m_LocalScale: {x: 32, y: 32, z: 1}
   m_Children: []
   m_Father: {fileID: 400004}
+  m_RootOrder: 0
 --- !u!4 &400002
 Transform:
   m_ObjectHideFlags: 1
@@ -77,6 +78,7 @@ Transform:
   m_Children:
   - {fileID: 400004}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
 --- !u!4 &400004
 Transform:
   m_ObjectHideFlags: 1
@@ -89,6 +91,7 @@ Transform:
   m_Children:
   - {fileID: 400000}
   m_Father: {fileID: 400002}
+  m_RootOrder: 0
 --- !u!23 &2300000
 Renderer:
   m_ObjectHideFlags: 1
@@ -107,9 +110,8 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
   m_SortingLayerID: 0
+  m_SortingOrder: 0
 --- !u!33 &3300000
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -182,6 +184,7 @@ MonoBehaviour:
   max: {x: 0, y: 0}
   interval: 17
   createNum: 99999
+  createType: 0
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -202,6 +205,7 @@ MonoBehaviour:
   max: {x: 0, y: 0}
   interval: 17
   createNum: 99999
+  createType: 1
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -215,7 +219,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   prefabExplosion: {fileID: 100002, guid: 01128dc588fe58c46a0a3de362043c1d, type: 2}
-  prefabStarItem: {fileID: 100004, guid: a8f06ee2a43ebdc49b7ed6a9384c7c89, type: 2}
+  notRemove: 0
 --- !u!114 &11400010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -236,7 +240,8 @@ MonoBehaviour:
   max: {x: 0, y: 0}
   interval: 1
   createNum: 99999
---- !u!114 &11400012
+  createType: 1
+--- !u!114 &11474164
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -244,7 +249,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 100002}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9077959a8efc6c248a1aece3754d9200, type: 3}
+  m_Script: {fileID: 11500000, guid: 6a9b6176670374a4b8fff7a4018ea2c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
@@ -254,6 +259,7 @@ MonoBehaviour:
     y: 20
     width: 20
     height: -20
+  delay: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

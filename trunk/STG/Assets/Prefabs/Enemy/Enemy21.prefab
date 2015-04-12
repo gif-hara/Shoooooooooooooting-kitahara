@@ -9538,11 +9538,6 @@ MonoBehaviour:
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
-    curve1:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
     speed: 0
     delayFrame: 0
     durationFrame: 140
@@ -9590,11 +9585,6 @@ MonoBehaviour:
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
-    curve1:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
     speed: 0
     delayFrame: 160
     durationFrame: 180
@@ -9628,11 +9618,6 @@ MonoBehaviour:
   data:
     targetPosition: {x: 0, y: 80, z: 0}
     curve0:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    curve1:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -10446,6 +10431,7 @@ MonoBehaviour:
     parent: {fileID: 400162}
     detachParent: 0
   delay: 0
+  objectCreateType: 1
 --- !u!114 &11400386
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10495,6 +10481,7 @@ MonoBehaviour:
     parent: {fileID: 400168}
     detachParent: 0
   delay: 0
+  objectCreateType: 1
 --- !u!114 &11400392
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10865,6 +10852,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   prefab: {fileID: 100188, guid: f8d4b23daeebac947ae651b62ce7bc99, type: 2}
+  createType: 1
 --- !u!114 &11400718
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -12826,6 +12814,7 @@ MonoBehaviour:
   delay: 0
   rate: 20
   duration: 30
+  cachedDelay: 0
 --- !u!114 &11433352
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -12841,6 +12830,7 @@ MonoBehaviour:
   delay: 0
   rate: 20
   duration: 20
+  cachedDelay: 0
 --- !u!114 &11433354
 MonoBehaviour:
   m_ObjectHideFlags: 1

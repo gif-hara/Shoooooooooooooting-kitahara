@@ -12,7 +12,7 @@ using System.Collections.Generic;
 /// <summary>
 /// 指定したゲームオブジェクトの親を設定するコンポーネント.
 /// </summary>
-public class SetParentInLayer : GameMonoBehaviour
+public class SetParentInLayer : GameMonoBehaviour, I_Poolable
 {
 	[SerializeField]
 	private Transform refTarget;
@@ -22,8 +22,23 @@ public class SetParentInLayer : GameMonoBehaviour
 
 	public override void Start ()
 	{
-		if( ReferenceManager == null )	return;
+		base.Start ();
+		Set ();
+	}
 
+	public void OnAwakeByPool( bool used )
+	{
+		Set();
+	}
+
+	public void OnReleaseByPool()
+	{
+	}
+
+	private void Set()
+	{
+		if( ReferenceManager == null )	return;
+		
 		refTarget.parent = ReferenceManager.GetLayerObject( layerType ).transform;
 	}
 }

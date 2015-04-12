@@ -684,6 +684,7 @@ MonoBehaviour:
   speed: -.319999993
   axis: {x: 0, y: 0, z: 1}
   addSpeed: 0
+  interval: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -712,11 +713,6 @@ MonoBehaviour:
         inSlope: 2
         outSlope: 2
         tangentMode: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    curve1:
-      serializedVersion: 2
-      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
     speed: 0
@@ -751,6 +747,7 @@ MonoBehaviour:
   delay: 250
   rate: 10
   duration: 180
+  cachedDelay: 0
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -817,6 +814,7 @@ MonoBehaviour:
   max: {x: 0, y: 0}
   interval: 250
   createNum: 0
+  createType: 1
 --- !u!114 &11400014
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -854,6 +852,7 @@ MonoBehaviour:
   max: {x: 80, y: 50}
   interval: 240
   createNum: 0
+  createType: 1
 --- !u!114 &11400018
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -904,6 +903,7 @@ MonoBehaviour:
   max: {x: -80, y: 50}
   interval: 230
   createNum: 0
+  createType: 1
 --- !u!114 &11400024
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -958,6 +958,7 @@ MonoBehaviour:
   max: {x: 80, y: 50}
   interval: 210
   createNum: 0
+  createType: 1
 --- !u!114 &11400030
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1026,6 +1027,7 @@ MonoBehaviour:
   max: {x: -65, y: 50}
   interval: 180
   createNum: 0
+  createType: 1
 --- !u!114 &11400038
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1078,6 +1080,7 @@ MonoBehaviour:
   max: {x: 80, y: 0}
   interval: 120
   createNum: 0
+  createType: 1
 --- !u!114 &11400044
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1147,6 +1150,7 @@ MonoBehaviour:
   max: {x: -103.07, y: 0}
   interval: 0
   createNum: 0
+  createType: 1
 --- !u!114 &11400052
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1162,6 +1166,7 @@ MonoBehaviour:
   delay: 0
   rate: 10
   duration: 60
+  cachedDelay: 0
 --- !u!114 &11400054
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1227,6 +1232,7 @@ MonoBehaviour:
   delay: 240
   rate: 10
   duration: 5
+  cachedDelay: 0
 --- !u!114 &11400062
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1242,6 +1248,7 @@ MonoBehaviour:
   delay: 230
   rate: 10
   duration: 5
+  cachedDelay: 0
 --- !u!114 &11400064
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1257,6 +1264,7 @@ MonoBehaviour:
   delay: 210
   rate: 10
   duration: 5
+  cachedDelay: 0
 --- !u!114 &11400066
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1272,6 +1280,7 @@ MonoBehaviour:
   delay: 180
   rate: 10
   duration: 5
+  cachedDelay: 0
 --- !u!114 &11400068
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1287,6 +1296,7 @@ MonoBehaviour:
   delay: 120
   rate: 10
   duration: 5
+  cachedDelay: 0
 --- !u!114 &11400070
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1379,6 +1389,7 @@ MonoBehaviour:
   max: {x: 0, y: 0}
   interval: 250
   createNum: 0
+  createType: 1
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1

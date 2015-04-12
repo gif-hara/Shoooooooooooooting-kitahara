@@ -48,6 +48,6 @@ public class SetPositionRandomRect : MonoBehaviour
 				this.duration = this.delay;
 				Action();
 			}
-		});
+		}, true);
 	}
 }

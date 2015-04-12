@@ -14,7 +14,7 @@ using System.Collections.Generic;
 /// <summary>
 /// .
 /// </summary>
-public class TweenMeshColor : MonoBehaviour
+public class TweenMeshColor : MonoBehaviour, I_Poolable
 {
 	[SerializeField]
 	private MeshFilter refMeshFIlter;
@@ -41,21 +41,22 @@ public class TweenMeshColor : MonoBehaviour
 
 	private int currentDuration;
 
+	private int cachedDelay;
+
 	[ContextMenu( "Attach MeshFilter" )]
 	void AttachMeshFilter()
 	{
 		this.refMeshFIlter = gameObject.GetComponent<MeshFilter>();
 	}
 
-	// Use this for initialization
-	void Start ()
+	void Start()
 	{
 		meshManager = new MeshColorManager();
 		meshManager.Initialize( refMeshFIlter );
 		meshManager.SetColor( from );
-		currentDuration = 0;
+		this.SetColorImmediate();
 	}
-	
+
 	// Update is called once per frame
 	void Update ()
 	{
@@ -80,6 +81,27 @@ public class TweenMeshColor : MonoBehaviour
 		currentDuration++;
 	}
 
+	public void OnAwakeByPool( bool used )
+	{
+		currentDuration = 0;
+		this.enabled = true;
+
+		if( !used )
+		{
+			this.cachedDelay = this.delay;
+		}
+		else
+		{
+			this.delay = this.cachedDelay;
+			this.SetColorImmediate();
+		}
+	}
+
+	public void OnReleaseByPool()
+	{
+
+	}
+
 	public void SetDelay( int value )
 	{
 		this.delay = value;
@@ -89,5 +111,15 @@ public class TweenMeshColor : MonoBehaviour
 	{
 		enabled = true;
 		currentDuration = 0;
+	}
+
+	private void SetColorImmediate()
+	{
+		if( this.delay > 0 )
+		{
+			return;
+		}
+
+		meshManager.SetColor( Color.Lerp( from, to, (float)currentDuration / (float)duration ) );
 	}
 }

@@ -60,6 +60,7 @@ public class GameDefine : A_Singleton<GameDefine>
 		Effect,
 		UI,
 		Background,
+		Item,
 	}
 
 	/// <summary>
@@ -82,6 +83,12 @@ public class GameDefine : A_Singleton<GameDefine>
 	{
 		Local,
 		World,
+	}
+
+	public enum CreateType : int
+	{
+		Instantiate,
+		Pool,
 	}
 
 	public static readonly Rect Screen = new Rect( -400.0f, 300.0f, 400.0f, -300.0f );

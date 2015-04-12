@@ -188,6 +188,18 @@ public class EnemyController : EnemyControllerBase
 		DefectionStage();
 	}
 
+//	public void OnAwakeByPool( bool used )
+//	{
+//		this.hp = this.maxHp;
+//		this.isDead = false;
+//		AttachComponent();
+//		JoinStage();
+//	}
+//
+//	public void OnReleaseByPool()
+//	{
+//	}
+	
 	void OnEnemyDestroyOnDeactiveMuzzleMessage( int destroyEnemyId )
 	{
 		if( id != destroyEnemyId )	return;
@@ -273,7 +285,6 @@ public class EnemyController : EnemyControllerBase
 		
 		for( int i=0,imax=moveDataList.Count; i<imax; i++ )
 		{
-			
 			this.moveDataList.Add( moveDataList[i] );
 		}
 	}
@@ -307,7 +318,7 @@ public class EnemyController : EnemyControllerBase
 	{
 		isDead = true;
 		Destroy( gameObject );
-		
+
 		// 死亡イベントの発行.
 		deadEventObject.BroadcastMessage( GameDefine.DeadEventMessage, SendMessageOptions.DontRequireReceiver );
 	}
@@ -330,8 +341,7 @@ public class EnemyController : EnemyControllerBase
 	protected void Destroy()
 	{
 		isDead = true;
-		Destroy( gameObject );
-		
+
 		// スコアの加算.
 		ScoreManager.AddScoreRateGameLevel( (ulong)addScore );
 
@@ -348,6 +358,8 @@ public class EnemyController : EnemyControllerBase
 		{
 			ReferenceManager.Instance.RefPlayerStatusManager.AddSpecialPoint( AddSpecialPoint );
 		}
+
+		Destroy( gameObject );
 	}
 	/// <summary>
 	/// 移動コンポーネントアタッチ.

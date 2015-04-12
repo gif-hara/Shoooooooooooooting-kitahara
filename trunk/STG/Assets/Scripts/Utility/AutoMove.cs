@@ -22,7 +22,7 @@ public class AutoMove : MonoBehaviourExtension
 	public override void Start()
 	{
 		base.Start();
-		cachedVelocity = velocity * speed;
+		this.Initialize();
 	}
 		
 	// Update is called once per frame
@@ -33,6 +33,11 @@ public class AutoMove : MonoBehaviourExtension
 		if( PauseManager.Instance.IsPause )	return;
 
 		cachedTransform.localPosition += cachedVelocity;
+	}
+
+	public void Initialize()
+	{
+		cachedVelocity = velocity * speed;
 	}
 	
 //	void OnDrawGizmos()

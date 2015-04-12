@@ -11,7 +11,7 @@ using UnityEngine;
 using System.Collections;
 
 
-public class EnemyShot : A_Shot
+public class EnemyShot : A_Shot, I_Poolable
 {
 	public GameObject prefabExplosion;
 
@@ -20,6 +20,15 @@ public class EnemyShot : A_Shot
 	private bool notRemove;
 	
 	private bool isExplosion = false;
+
+	public void OnAwakeByPool( bool used )
+	{
+		this.isExplosion = false;
+	}
+	
+	public void OnReleaseByPool()
+	{
+	}
 	
 	public void Explosion()
 	{
@@ -29,8 +38,8 @@ public class EnemyShot : A_Shot
 		}
 
 		isExplosion = true;
-		Destroy( gameObject );
-		var explosion = InstantiateAsChild( ReferenceManager.refEffectLayer, prefabExplosion );
+		ObjectPool.Instance.ReleaseGameObject( gameObject );
+		var explosion = ObjectPool.Instance.GetGameObject( prefabExplosion );
 		explosion.transform.position = Trans.position;
 	}
 
