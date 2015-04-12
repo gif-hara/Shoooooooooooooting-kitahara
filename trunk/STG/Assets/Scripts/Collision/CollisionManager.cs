@@ -164,11 +164,16 @@ public class CollisionManager : GameMonoBehaviour
 	{
 		yield return new WaitForEndOfFrame();
 
-		//enemyShotColliderList.RemoveAll( e => e == null );
-		enemyShotColliderList.ForEach( e =>
+		for( int i=0,imax=this.enemyShotColliderList.Count; i<imax; i++ )
 		{
+			var e = this.enemyShotColliderList[i];
+			if( !e.refEnemyShot.gameObject.activeInHierarchy )
+			{
+				continue;
+			}
+
 			e.refEnemyShot.Explosion();
-		});
+		}
 	}
 	public Vector2 VarianceEnemyShotColliderList( A_Collider enemyShot, Vector2 id )
 	{
