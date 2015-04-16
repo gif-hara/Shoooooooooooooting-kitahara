@@ -169,7 +169,7 @@ public class CollisionManager : GameMonoBehaviour
 	{
 		yield return new WaitForEndOfFrame();
 
-		for( int i=0,imax=this.enemyShotColliderList.Count; i<imax; i++ )
+		for( int i=0; i<this.enemyShotColliderList.Count; )
 		{
 			var e = this.enemyShotColliderList[i];
 			if( !e.refEnemyShot.gameObject.activeInHierarchy )
