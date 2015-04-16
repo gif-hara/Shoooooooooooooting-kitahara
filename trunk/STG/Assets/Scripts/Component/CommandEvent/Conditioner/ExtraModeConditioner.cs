@@ -22,8 +22,7 @@ public class ExtraModeConditioner : MonoBehaviour
 	{
 		get
 		{
-			// 未実装.
-			return true;
+			return SaveData.Progresses.Instance.IsClearGame( GameDefine.DifficultyType.Hard );
 		}
 	}
 }
