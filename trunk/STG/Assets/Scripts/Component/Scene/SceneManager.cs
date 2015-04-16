@@ -49,6 +49,15 @@ public class SceneManager : A_Singleton<SceneManager>
 	[SerializeField]
 	private List<GameObject> prefabEndChangeEffectList;
 
+	/// <summary>
+	/// 親オブジェクト参照.
+	/// </summary>
+	[SerializeField]
+	private GameObject refParentObject;
+
+	/// <summary>
+	/// シーン開始演出をする際のメッセージ.
+	/// </summary>
 	public const string StartEffectMessage = "OnStartSceneEffect";
 
 	public bool CanChange
@@ -88,6 +97,7 @@ public class SceneManager : A_Singleton<SceneManager>
 			yield return new WaitForEndOfFrame();
 		}
 
+		this.refParentObject.BroadcastMessage( GameDefine.ChangeSceneMessage, sceneName, SendMessageOptions.DontRequireReceiver );
 		Application.LoadLevel( sceneName );
 		PauseManager.Instance.UnPause();
 

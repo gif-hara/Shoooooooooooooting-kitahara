@@ -235,6 +235,11 @@ public class GameDefine : A_Singleton<GameDefine>
 	/// コンティニューした際のメッセージ.
 	/// </summary>
 	public const string ContinueMessage = "OnContinue";
+
+	/// <summary>
+	/// シーン切替時のメッセージ.
+	/// </summary>
+	public const string ChangeSceneMessage = "OnChangeScene";
 	
 	public override void Awake()
 	{

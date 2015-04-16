@@ -42,7 +42,29 @@ public class ObjectPool : MonoBehaviour
 		}
 	}
 
+	/// <summary>
+	/// プールされたエンティティ.
+	/// </summary>
 	private Dictionary<int, Stack<PoolEntity>> pooledEntities = new Dictionary<int, Stack<PoolEntity>>();
+
+	/// <summary>
+	/// プールエンティティ.
+	/// </summary>
+	private List<PoolEntity> poolEntities = new List<PoolEntity>();
+
+	void OnChangeScene( string sceneName )
+	{
+		for( int i=0,imax=this.poolEntities.Count; i<imax; i++ )
+		{
+			var entity = this.poolEntities[i];
+			if( entity.IsPooled )
+			{
+				continue;
+			}
+
+			this.ReleaseGameObject( entity.gameObject );
+		}
+	}
 
 	public GameObject GetGameObject( GameObject prefab, Vector3 position, Quaternion rotation )
 	{
@@ -62,6 +84,7 @@ public class ObjectPool : MonoBehaviour
 			go = Instantiate( prefab, position, rotation ) as GameObject;
 			entity = go.AddComponent( typeof( PoolEntity ) ) as PoolEntity;
 			entity.Initialize( key );
+			this.poolEntities.Add( entity );
 			PoolableComponentsAction( go, (poolable) => poolable.OnAwakeByPool( false ) );
 		}
 		else
@@ -102,7 +125,7 @@ public class ObjectPool : MonoBehaviour
 		go.SetActive( false );
 		go.transform.parent = transform;
 	}
-
+	
 	private void PoolableComponentsAction( GameObject go, System.Action<I_Poolable> func )
 	{
 		var poolableComponents = go.GetComponentsInChildren( typeof( I_Poolable ) );

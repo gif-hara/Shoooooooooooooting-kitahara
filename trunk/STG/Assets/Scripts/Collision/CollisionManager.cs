@@ -153,6 +153,11 @@ public class CollisionManager : GameMonoBehaviour
 		itemColliderList.Add( col );
 	}
 
+	public void RemoveEnemyShotCollider( EnemyShotCollider col )
+	{
+		this.enemyShotColliderList.Remove( col );
+	}
+
 	/// <summary>
 	/// 敵弾を全て死亡させる.
 	/// </summary>
@@ -266,9 +271,9 @@ public class CollisionManager : GameMonoBehaviour
 		xList.RemoveAll( (obj) => obj == null );
 		yList.RemoveAll( (obj) => obj == null );
 		
-		for( int i=0,imax=xList.Count; i<imax; i++ )
+		for( int i=0; i<xList.Count; i++ )
 		{
-			for( int j=0,jmax=yList.Count; j<jmax; j++ )
+			for( int j=0; j<yList.Count; j++ )
 			{
 				if( !xList[i].enabled || !yList[j].enabled )	continue;
 				

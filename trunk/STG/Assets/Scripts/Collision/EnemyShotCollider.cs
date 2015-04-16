@@ -41,8 +41,8 @@ public class EnemyShotCollider : A_Collider, I_Poolable
 		if( !used )
 		{
 			this.cachedRadius = this.radius;
-			ReferenceManager.Instance.refCollisionManager.AddEnemyShotCollider( this );
 		}
+		ReferenceManager.Instance.refCollisionManager.AddEnemyShotCollider( this );
 		this.radius = grazeRadius;
 		this.collisionType = CollisionType.Graze;
 		this.enabled = true;
@@ -50,6 +50,7 @@ public class EnemyShotCollider : A_Collider, I_Poolable
 
 	public void OnReleaseByPool()
 	{
+		ReferenceManager.Instance.refCollisionManager.RemoveEnemyShotCollider( this );
 		this.enabled = false;
 	}
 
