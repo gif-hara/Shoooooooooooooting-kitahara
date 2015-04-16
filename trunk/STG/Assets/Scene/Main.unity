@@ -222,7 +222,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &27513320
 Transform:
   m_ObjectHideFlags: 0
@@ -1608,6 +1608,86 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   priority: 4
   sceneName: Main
+--- !u!1 &205471176
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 108344, guid: e7ed52a4d76b64a918f711bc8579c79d, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 205471177}
+  - 114: {fileID: 205471179}
+  - 114: {fileID: 205471178}
+  m_Layer: 0
+  m_Name: '[1100~1160] EnemyChunkCreate_Enemy52_Chunk7'
+  m_TagString: Untagged
+  m_Icon: {fileID: -1376725286, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &205471177
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 408344, guid: e7ed52a4d76b64a918f711bc8579c79d, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 205471176}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -400, y: 1400, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 379252817}
+  - {fileID: 2115031866}
+  - {fileID: 1845655067}
+  - {fileID: 652466820}
+  - {fileID: 1372641655}
+  - {fileID: 1538049355}
+  - {fileID: 455530956}
+  m_Father: {fileID: 1666668420}
+  m_RootOrder: 1
+--- !u!114 &205471178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11408318, guid: e7ed52a4d76b64a918f711bc8579c79d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 205471176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a9c2a1c9670eb44e80db08407b8cae7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  existAction: 0
+  enemyId: 77
+  number: 1
+  inequality: 2
+--- !u!114 &205471179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11408302, guid: e7ed52a4d76b64a918f711bc8579c79d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 205471176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbbfdae6f6fe8406f9784f8073f1ada3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 205471177}
+  timeLine: 1100
+  refActionConditioner: {fileID: 205471178}
+  actionableListManager:
+    actionableList:
+    - {fileID: 379252818}
+    - {fileID: 2115031867}
+    - {fileID: 1845655068}
+    - {fileID: 652466821}
+    - {fileID: 1372641656}
+    - {fileID: 1538049356}
+    - {fileID: 455530957}
+  interval: 10
+  extensionName: Enemy52_Chunk7
+  offset: {x: 200, y: 0}
 --- !u!1 &214405528
 GameObject:
   m_ObjectHideFlags: 0
@@ -3483,6 +3563,118 @@ MonoBehaviour:
   - {fileID: 100004, guid: 06b93c79934b0400da3787c84df14f6f, type: 2}
   - {fileID: 100004, guid: e14fa8ebe773941eb98b78a21f7a2ece, type: 2}
   - {fileID: 100004, guid: a6db511d28273453b96ffc2ec03d824b, type: 2}
+--- !u!1 &379252816
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 108346, guid: e7ed52a4d76b64a918f711bc8579c79d, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 379252817}
+  - 114: {fileID: 379252818}
+  m_Layer: 0
+  m_Name: '[0] Enemy52'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &379252817
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 408346, guid: e7ed52a4d76b64a918f711bc8579c79d, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 379252816}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -2100, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 205471177}
+  m_RootOrder: 0
+--- !u!114 &379252818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11408304, guid: e7ed52a4d76b64a918f711bc8579c79d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 379252816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7e4d4175ee4e3b46beec3d1444a9deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 379252817}
+  timeLine: 0
+  refActionConditioner: {fileID: 0}
+  enemyId: 52
+  initialPosition: {x: -50, y: 350, z: 0}
+  dataList:
+  - targetPosition: {x: -50, y: 100, z: 0}
+    curve0:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 2
+        outSlope: 2
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    speed: 0
+    delayFrame: 0
+    durationFrame: 60
+    isDestroy: 0
+    isOnOverDistance: 0
+    isSyncRotation: 0
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    moveType: 0
+    initFuncName: 
+    prefabiTweenPath: {fileID: 0}
+    offset: {x: 0, y: 0}
+    isReverse: 0
+  - targetPosition: {x: 0, y: 0, z: 0}
+    curve0:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 2
+        outSlope: 2
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    speed: 6
+    delayFrame: 120
+    durationFrame: 60
+    isDestroy: 0
+    isOnOverDistance: 1
+    isSyncRotation: 1
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    moveType: 1
+    initFuncName: 
+    prefabiTweenPath: {fileID: 0}
+    offset: {x: 0, y: 0}
+    isReverse: 0
 --- !u!1 &382673536
 GameObject:
   m_ObjectHideFlags: 0
@@ -4065,6 +4257,118 @@ TextMesh:
   m_Color:
     serializedVersion: 2
     rgba: 4278190080
+--- !u!1 &455530955
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 108358, guid: e7ed52a4d76b64a918f711bc8579c79d, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 455530956}
+  - 114: {fileID: 455530957}
+  m_Layer: 0
+  m_Name: '[0] Enemy52'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &455530956
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 408358, guid: e7ed52a4d76b64a918f711bc8579c79d, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 455530955}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -2100, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 205471177}
+  m_RootOrder: 6
+--- !u!114 &455530957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11408316, guid: e7ed52a4d76b64a918f711bc8579c79d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 455530955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7e4d4175ee4e3b46beec3d1444a9deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 455530956}
+  timeLine: 0
+  refActionConditioner: {fileID: 0}
+  enemyId: 52
+  initialPosition: {x: 50, y: 450, z: 0}
+  dataList:
+  - targetPosition: {x: 50, y: 200, z: 0}
+    curve0:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 2
+        outSlope: 2
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    speed: 0
+    delayFrame: 0
+    durationFrame: 60
+    isDestroy: 0
+    isOnOverDistance: 0
+    isSyncRotation: 0
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    moveType: 0
+    initFuncName: 
+    prefabiTweenPath: {fileID: 0}
+    offset: {x: 0, y: 0}
+    isReverse: 0
+  - targetPosition: {x: 0, y: 0, z: 0}
+    curve0:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 2
+        outSlope: 2
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    speed: 6
+    delayFrame: 120
+    durationFrame: 60
+    isDestroy: 0
+    isOnOverDistance: 1
+    isSyncRotation: 1
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    moveType: 1
+    initFuncName: 
+    prefabiTweenPath: {fileID: 0}
+    offset: {x: 0, y: 0}
+    isReverse: 0
 --- !u!1 &461151918
 GameObject:
   m_ObjectHideFlags: 0
@@ -4718,6 +5022,7 @@ Transform:
   - {fileID: 976221742}
   - {fileID: 851772799}
   - {fileID: 1885496531}
+  - {fileID: 1666668420}
   m_Father: {fileID: 0}
   m_RootOrder: 2
 --- !u!1 &571524249
@@ -5148,6 +5453,118 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!1 &652466819
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 108352, guid: e7ed52a4d76b64a918f711bc8579c79d, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 652466820}
+  - 114: {fileID: 652466821}
+  m_Layer: 0
+  m_Name: '[0] Enemy52'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &652466820
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 408352, guid: e7ed52a4d76b64a918f711bc8579c79d, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 652466819}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -2100, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 205471177}
+  m_RootOrder: 3
+--- !u!114 &652466821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11408310, guid: e7ed52a4d76b64a918f711bc8579c79d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 652466819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7e4d4175ee4e3b46beec3d1444a9deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 652466820}
+  timeLine: 0
+  refActionConditioner: {fileID: 0}
+  enemyId: 52
+  initialPosition: {x: -100, y: 400, z: 0}
+  dataList:
+  - targetPosition: {x: -100, y: 150, z: 0}
+    curve0:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 2
+        outSlope: 2
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    speed: 0
+    delayFrame: 0
+    durationFrame: 60
+    isDestroy: 0
+    isOnOverDistance: 0
+    isSyncRotation: 0
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    moveType: 0
+    initFuncName: 
+    prefabiTweenPath: {fileID: 0}
+    offset: {x: 0, y: 0}
+    isReverse: 0
+  - targetPosition: {x: 0, y: 0, z: 0}
+    curve0:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 2
+        outSlope: 2
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    speed: 6
+    delayFrame: 120
+    durationFrame: 60
+    isDestroy: 0
+    isOnOverDistance: 1
+    isSyncRotation: 1
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    moveType: 1
+    initFuncName: 
+    prefabiTweenPath: {fileID: 0}
+    offset: {x: 0, y: 0}
+    isReverse: 0
 --- !u!1 &673963659
 GameObject:
   m_ObjectHideFlags: 0
@@ -6013,6 +6430,67 @@ TextMesh:
   m_Color:
     serializedVersion: 2
     rgba: 4294967295
+--- !u!1 &802882554
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100158, guid: e7ed52a4d76b64a918f711bc8579c79d, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 802882555}
+  - 114: {fileID: 802882556}
+  - 114: {fileID: 802882557}
+  m_Layer: 0
+  m_Name: '[2740] StageChange'
+  m_TagString: Untagged
+  m_Icon: {fileID: -1003283189, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &802882555
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400158, guid: e7ed52a4d76b64a918f711bc8579c79d, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 802882554}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -400, y: 3040, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1666668420}
+  m_RootOrder: 0
+--- !u!114 &802882556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400160, guid: e7ed52a4d76b64a918f711bc8579c79d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 802882554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28f087531f692844b93c66e75af4fc7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 802882555}
+  timeLine: 2740
+  refActionConditioner: {fileID: 0}
+  prefabNextStage: {fileID: 100162, guid: 78ce86438935743a7b7fa3784588f4cc, type: 2}
+  prefabExtensionStage: {fileID: 0}
+  refConditioner: {fileID: 802882557}
+--- !u!114 &802882557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400328, guid: e7ed52a4d76b64a918f711bc8579c79d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 802882554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c83d69a130d0af64dad36c9d180c8dbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  isBasicRoot: 0
 --- !u!1 &813580487
 GameObject:
   m_ObjectHideFlags: 0
@@ -6052,8 +6530,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22b76de7f6e138541a836620be57cd8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  apply: 0
-  difficulty: 1
+  apply: 1
+  difficulty: 4
   stageId: 0
   playerId: 0
   replayId: 0
@@ -9121,6 +9599,118 @@ Transform:
   - {fileID: 220042656}
   m_Father: {fileID: 1347492915}
   m_RootOrder: 1
+--- !u!1 &1372641654
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 108354, guid: e7ed52a4d76b64a918f711bc8579c79d, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1372641655}
+  - 114: {fileID: 1372641656}
+  m_Layer: 0
+  m_Name: '[0] Enemy52'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1372641655
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 408354, guid: e7ed52a4d76b64a918f711bc8579c79d, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1372641654}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -2100, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 205471177}
+  m_RootOrder: 4
+--- !u!114 &1372641656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11408312, guid: e7ed52a4d76b64a918f711bc8579c79d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1372641654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7e4d4175ee4e3b46beec3d1444a9deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 1372641655}
+  timeLine: 0
+  refActionConditioner: {fileID: 0}
+  enemyId: 52
+  initialPosition: {x: 100, y: 400, z: 0}
+  dataList:
+  - targetPosition: {x: 100, y: 150, z: 0}
+    curve0:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 2
+        outSlope: 2
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    speed: 0
+    delayFrame: 0
+    durationFrame: 60
+    isDestroy: 0
+    isOnOverDistance: 0
+    isSyncRotation: 0
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    moveType: 0
+    initFuncName: 
+    prefabiTweenPath: {fileID: 0}
+    offset: {x: 0, y: 0}
+    isReverse: 0
+  - targetPosition: {x: 0, y: 0, z: 0}
+    curve0:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 2
+        outSlope: 2
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    speed: 6
+    delayFrame: 120
+    durationFrame: 60
+    isDestroy: 0
+    isOnOverDistance: 1
+    isSyncRotation: 1
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    moveType: 1
+    initFuncName: 
+    prefabiTweenPath: {fileID: 0}
+    offset: {x: 0, y: 0}
+    isReverse: 0
 --- !u!1 &1379255903
 GameObject:
   m_ObjectHideFlags: 0
@@ -10398,6 +10988,118 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!1 &1538049354
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 108356, guid: e7ed52a4d76b64a918f711bc8579c79d, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1538049355}
+  - 114: {fileID: 1538049356}
+  m_Layer: 0
+  m_Name: '[0] Enemy52'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1538049355
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 408356, guid: e7ed52a4d76b64a918f711bc8579c79d, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1538049354}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -2100, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 205471177}
+  m_RootOrder: 5
+--- !u!114 &1538049356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11408314, guid: e7ed52a4d76b64a918f711bc8579c79d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1538049354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7e4d4175ee4e3b46beec3d1444a9deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 1538049355}
+  timeLine: 0
+  refActionConditioner: {fileID: 0}
+  enemyId: 52
+  initialPosition: {x: -50, y: 450, z: 0}
+  dataList:
+  - targetPosition: {x: -50, y: 200, z: 0}
+    curve0:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 2
+        outSlope: 2
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    speed: 0
+    delayFrame: 0
+    durationFrame: 60
+    isDestroy: 0
+    isOnOverDistance: 0
+    isSyncRotation: 0
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    moveType: 0
+    initFuncName: 
+    prefabiTweenPath: {fileID: 0}
+    offset: {x: 0, y: 0}
+    isReverse: 0
+  - targetPosition: {x: 0, y: 0, z: 0}
+    curve0:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 2
+        outSlope: 2
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    speed: 6
+    delayFrame: 120
+    durationFrame: 60
+    isDestroy: 0
+    isOnOverDistance: 1
+    isSyncRotation: 1
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    moveType: 1
+    initFuncName: 
+    prefabiTweenPath: {fileID: 0}
+    offset: {x: 0, y: 0}
+    isReverse: 0
 --- !u!1 &1538578740
 GameObject:
   m_ObjectHideFlags: 0
@@ -11395,6 +12097,72 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
+--- !u!1 &1666668419
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100046, guid: e7ed52a4d76b64a918f711bc8579c79d, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1666668420}
+  - 114: {fileID: 1666668421}
+  m_Layer: 0
+  m_Name: Extra_2_A
+  m_TagString: Stage
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &1666668420
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400046, guid: e7ed52a4d76b64a918f711bc8579c79d, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1666668419}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 802882555}
+  - {fileID: 205471177}
+  - {fileID: 1986634446}
+  m_Father: {fileID: 571275239}
+  m_RootOrder: 12
+--- !u!114 &1666668421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400046, guid: e7ed52a4d76b64a918f711bc8579c79d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1666668419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2999f9db84bd9498daea21bb24aa1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 1666668420}
+  prefabActionableObjectList:
+  - {fileID: 11400006, guid: 2598960b682d9430e9b1bdc58c395b94, type: 2}
+  - {fileID: 11400010, guid: 7f55ef05819a14eb7bf5c02d29e946e2, type: 2}
+  - {fileID: 11400010, guid: 6544dc8006db84051abef9d8c91be664, type: 2}
+  - {fileID: 11400016, guid: 39a0f882fd6204a24a7c62a3e9eb3d55, type: 2}
+  - {fileID: 11400016, guid: fd236ed675a7043219e62813e084e32c, type: 2}
+  - {fileID: 11400006, guid: ce8e99a2259414013ba1928ef7a8ce8f, type: 2}
+  - {fileID: 11400014, guid: bd46cf1c876654e3fa2304c34c5409bb, type: 2}
+  - {fileID: 11400010, guid: 5634e3c3598684a5ca0318b69fee463f, type: 2}
+  - {fileID: 11400018, guid: 9e53f64b2251d4df892928602cf1017d, type: 2}
+  - {fileID: 11400018, guid: 504d4bcf3ae1d4f4d869d9e166e94071, type: 2}
+  - {fileID: 11400008, guid: 6f3599d2604b7451f9becad15c9a197e, type: 2}
+  - {fileID: 11400008, guid: 7ad7381ed481c4948891e35f18115019, type: 2}
+  - {fileID: 11400000, guid: de0d615372913478ab8cacbcc1e466d8, type: 2}
+  timeLineManager:
+    timeLine: 0
+  actionableListManager:
+    actionableList:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 802882556}
+  stageId: 1
 --- !u!1 &1677527657
 GameObject:
   m_ObjectHideFlags: 0
@@ -12407,6 +13175,118 @@ MonoBehaviour:
   starId: 1
   rate: 1
   refResultManager: {fileID: 1347492914}
+--- !u!1 &1845655066
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 108350, guid: e7ed52a4d76b64a918f711bc8579c79d, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1845655067}
+  - 114: {fileID: 1845655068}
+  m_Layer: 0
+  m_Name: '[0] Enemy52'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1845655067
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 408350, guid: e7ed52a4d76b64a918f711bc8579c79d, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1845655066}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -2100, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 205471177}
+  m_RootOrder: 2
+--- !u!114 &1845655068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11408308, guid: e7ed52a4d76b64a918f711bc8579c79d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1845655066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7e4d4175ee4e3b46beec3d1444a9deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 1845655067}
+  timeLine: 0
+  refActionConditioner: {fileID: 0}
+  enemyId: 52
+  initialPosition: {x: 0, y: 400, z: 0}
+  dataList:
+  - targetPosition: {x: 0, y: 150, z: 0}
+    curve0:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 2
+        outSlope: 2
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    speed: 0
+    delayFrame: 0
+    durationFrame: 60
+    isDestroy: 0
+    isOnOverDistance: 0
+    isSyncRotation: 0
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    moveType: 0
+    initFuncName: 
+    prefabiTweenPath: {fileID: 0}
+    offset: {x: 0, y: 0}
+    isReverse: 0
+  - targetPosition: {x: 0, y: 0, z: 0}
+    curve0:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 2
+        outSlope: 2
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    speed: 6
+    delayFrame: 120
+    durationFrame: 60
+    isDestroy: 0
+    isOnOverDistance: 1
+    isSyncRotation: 1
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    moveType: 1
+    initFuncName: 
+    prefabiTweenPath: {fileID: 0}
+    offset: {x: 0, y: 0}
+    isReverse: 0
 --- !u!1 &1853440462
 GameObject:
   m_ObjectHideFlags: 0
@@ -13708,6 +14588,118 @@ Transform:
   - {fileID: 957799947}
   m_Father: {fileID: 632338771}
   m_RootOrder: 1
+--- !u!1 &1986634445
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 147350, guid: e7ed52a4d76b64a918f711bc8579c79d, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1986634446}
+  - 114: {fileID: 1986634447}
+  m_Layer: 0
+  m_Name: '[0] Enemy77'
+  m_TagString: Untagged
+  m_Icon: {fileID: -1376725286, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &1986634446
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 447350, guid: e7ed52a4d76b64a918f711bc8579c79d, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1986634445}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -400, y: 300, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1666668420}
+  m_RootOrder: 2
+--- !u!114 &1986634447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11447350, guid: e7ed52a4d76b64a918f711bc8579c79d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1986634445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7e4d4175ee4e3b46beec3d1444a9deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 1986634446}
+  timeLine: 0
+  refActionConditioner: {fileID: 0}
+  enemyId: 77
+  initialPosition: {x: 0, y: 120, z: 0}
+  dataList:
+  - targetPosition: {x: 0, y: 0, z: 0}
+    curve0:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 1
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    speed: .300000012
+    delayFrame: 280
+    durationFrame: 2200
+    isDestroy: 0
+    isOnOverDistance: 0
+    isSyncRotation: 0
+    rect:
+      serializedVersion: 2
+      x: -150
+      y: 180
+      width: 150
+      height: 80
+    moveType: 2
+    initFuncName: 
+    prefabiTweenPath: {fileID: 0}
+    offset: {x: 0, y: 0}
+    isReverse: 0
+  - targetPosition: {x: 0, y: 440, z: 0}
+    curve0:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 1
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    speed: 0
+    delayFrame: 0
+    durationFrame: 60
+    isDestroy: 1
+    isOnOverDistance: 0
+    isSyncRotation: 0
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    moveType: 0
+    initFuncName: Fallout
+    prefabiTweenPath: {fileID: 0}
+    offset: {x: 0, y: 0}
+    isReverse: 0
 --- !u!1 &1994865645
 GameObject:
   m_ObjectHideFlags: 0
@@ -14311,6 +15303,118 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2088789833}
   m_Mesh: {fileID: 4300000, guid: 1c28b765b865feb469b53d7fa4778b81, type: 2}
+--- !u!1 &2115031865
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 108348, guid: e7ed52a4d76b64a918f711bc8579c79d, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2115031866}
+  - 114: {fileID: 2115031867}
+  m_Layer: 0
+  m_Name: '[0] Enemy52'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2115031866
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 408348, guid: e7ed52a4d76b64a918f711bc8579c79d, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2115031865}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -2100, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 205471177}
+  m_RootOrder: 1
+--- !u!114 &2115031867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11408306, guid: e7ed52a4d76b64a918f711bc8579c79d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2115031865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7e4d4175ee4e3b46beec3d1444a9deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 2115031866}
+  timeLine: 0
+  refActionConditioner: {fileID: 0}
+  enemyId: 52
+  initialPosition: {x: 50, y: 350, z: 0}
+  dataList:
+  - targetPosition: {x: 50, y: 100, z: 0}
+    curve0:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 2
+        outSlope: 2
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    speed: 0
+    delayFrame: 0
+    durationFrame: 60
+    isDestroy: 0
+    isOnOverDistance: 0
+    isSyncRotation: 0
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    moveType: 0
+    initFuncName: 
+    prefabiTweenPath: {fileID: 0}
+    offset: {x: 0, y: 0}
+    isReverse: 0
+  - targetPosition: {x: 0, y: 0, z: 0}
+    curve0:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 2
+        outSlope: 2
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    speed: 6
+    delayFrame: 120
+    durationFrame: 60
+    isDestroy: 0
+    isOnOverDistance: 1
+    isSyncRotation: 1
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    moveType: 1
+    initFuncName: 
+    prefabiTweenPath: {fileID: 0}
+    offset: {x: 0, y: 0}
+    isReverse: 0
 --- !u!1 &2122912383
 GameObject:
   m_ObjectHideFlags: 0

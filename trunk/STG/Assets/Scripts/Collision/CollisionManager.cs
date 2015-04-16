@@ -172,11 +172,6 @@ public class CollisionManager : GameMonoBehaviour
 		for( int i=0; i<this.enemyShotColliderList.Count; )
 		{
 			var e = this.enemyShotColliderList[i];
-			if( !e.refEnemyShot.gameObject.activeInHierarchy )
-			{
-				continue;
-			}
-
 			e.refEnemyShot.Explosion();
 		}
 	}
