@@ -13,10 +13,10 @@ GameObject:
   - 114: {fileID: 11400026}
   - 114: {fileID: 11400038}
   - 114: {fileID: 11400044}
-  - 114: {fileID: 11400062}
   - 114: {fileID: 11400032}
   - 114: {fileID: 11400022}
   - 114: {fileID: 11400006}
+  - 114: {fileID: 11409938}
   m_Layer: 0
   m_Name: Muzzle2
   m_TagString: Untagged
@@ -90,10 +90,10 @@ GameObject:
   - 114: {fileID: 11400010}
   - 114: {fileID: 11400040}
   - 114: {fileID: 11400046}
-  - 114: {fileID: 11400060}
   - 114: {fileID: 11400056}
   - 114: {fileID: 11400018}
   - 114: {fileID: 11400002}
+  - 114: {fileID: 11409940}
   m_Layer: 0
   m_Name: Muzzle1
   m_TagString: Untagged
@@ -1052,8 +1052,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   element:
-    min: 120
-    max: 20
+    min: 121
+    max: 21
     current: 0
     curve:
       serializedVersion: 2
@@ -1083,8 +1083,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   element:
-    min: 120
-    max: 20
+    min: 121
+    max: 21
     current: 0
     curve:
       serializedVersion: 2
@@ -1323,30 +1323,6 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 5
   currentSeparate: 0
---- !u!114 &11400060
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100008}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fae1cc5a76168b3449dcbd07241eb72a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  refTarget: {fileID: 400010}
---- !u!114 &11400062
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fae1cc5a76168b3449dcbd07241eb72a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  refTarget: {fileID: 400010}
 --- !u!114 &11400064
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1376,6 +1352,60 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   refShadowMaterial: {fileID: 2100000, guid: bf5d9f6fa9ed3e147914a5327d64d708, type: 2}
   offset: {x: 0, y: 0}
+--- !u!114 &11409938
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5abc846382711453fbeece046d18679f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  setType: 0
+  enableTuning: 1
+  element:
+    min: 0
+    max: 0
+    current: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+  separate: 1
+  currentSeparate: 0
+  refTarget: {fileID: 400010}
+  offset: {x: 0, y: 0, z: 0}
+--- !u!114 &11409940
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5abc846382711453fbeece046d18679f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  setType: 0
+  enableTuning: 1
+  element:
+    min: 0
+    max: 0
+    current: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+  separate: 1
+  currentSeparate: 0
+  refTarget: {fileID: 400010}
+  offset: {x: 0, y: 0, z: 0}
 --- !u!114 &11433910
 MonoBehaviour:
   m_ObjectHideFlags: 1

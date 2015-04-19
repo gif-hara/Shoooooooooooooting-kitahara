@@ -33,7 +33,10 @@ public class RangeShotRemove : A_DelayEvent
 	/// </returns>
 	public static int Remove( Transform trans, float _range )
 	{
-		if( ReferenceManager.refEnemyShotLayer == null )	return 0;
+		if( ReferenceManager.refEnemyShotLayer == null )
+		{
+			return 0;
+		}
 		
 		int result = 0;
 		var shotList = ReferenceManager.refEnemyShotLayer.GetComponentsInChildren<EnemyShot>();

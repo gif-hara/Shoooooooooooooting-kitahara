@@ -12,7 +12,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 
-public class CreatePrefab : GameMonoBehaviour
+public class CreatePrefab : GameMonoBehaviour, I_Poolable
 {
 	[System.Serializable]
 	public class Element
@@ -36,7 +36,12 @@ public class CreatePrefab : GameMonoBehaviour
 	public List<Element> elementList;
 	
 	public int delay;
-	
+
+	[SerializeField]
+	private GameDefine.CreateType objectCreateType = GameDefine.CreateType.Instantiate;
+
+	private int cachedDelay;
+
 	public override void Awake()
 	{
 		base.Awake();
@@ -70,6 +75,31 @@ public class CreatePrefab : GameMonoBehaviour
 		
 		delay--;
 	}
+
+	public void OnAwakeByPool( bool used )
+	{
+		if( !used )
+		{
+			this.cachedDelay = this.delay;
+			return;
+		}
+
+		if( createType == CreateType.Awake || createType == CreateType.Start )
+		{
+			Create();
+		}
+		else
+		{
+			this.delay = this.cachedDelay;
+			enabled = true;
+		}
+	}
+
+	public void OnReleaseByPool()
+	{
+
+	}
+
 	private void Create()
 	{
 		elementList.ForEach( (obj) => 
@@ -80,9 +110,22 @@ public class CreatePrefab : GameMonoBehaviour
 
 	private void Create( Element element )
 	{
-		var obj = element.parent == null
-			? (Instantiate( element.prefab, element.prefab.transform.position, element.prefab.transform.rotation ) as GameObject).transform
-			: InstantiateAsChild( element.parent, element.prefab ).transform;
+		Transform obj = null;
+
+		if( this.objectCreateType == GameDefine.CreateType.Pool )
+		{
+			obj = ObjectPool.Instance.GetGameObject( element.prefab ).transform;
+			if( element.parent != null )
+			{
+				obj.parent = element.parent;
+			}
+		}
+		else
+		{
+			obj = element.parent == null
+				? (Instantiate( element.prefab, element.prefab.transform.position, element.prefab.transform.rotation ) as GameObject).transform
+				: InstantiateAsChild( element.parent, element.prefab ).transform;
+		}
 
 		obj.gameObject.layer = element.prefab.layer;
 

@@ -9,16 +9,13 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace MyProject
+/// <summary>
+/// OnGameObjectDestroyOnHitPointChangeEventをキャッチして死亡するコンポーネント.
+/// </summary>
+public class OnDestroyFromEnemyHitPoint : MonoBehaviour
 {
-	/// <summary>
-	/// OnGameObjectDestroyOnHitPointChangeEventをキャッチして死亡するコンポーネント.
-	/// </summary>
-	public class OnDestroyFromEnemyHitPoint : MonoBehaviour
+	void OnGameObjectDestroyOnHitPointChangeEvent()
 	{
-		void OnGameObjectDestroyOnHitPointChangeEvent()
-		{
-			Destroy( gameObject );
-		}
+		Destroy( gameObject );
 	}
 }

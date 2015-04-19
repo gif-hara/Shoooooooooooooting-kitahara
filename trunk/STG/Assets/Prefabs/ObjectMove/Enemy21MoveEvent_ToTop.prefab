@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 400000}
   - 114: {fileID: 11400000}
   m_Layer: 0
-  m_Name: Enemy77MoveEvent_ToCenter
+  m_Name: Enemy21MoveEvent_ToTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42,7 +42,7 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   refTrans: {fileID: 0}
   data:
-    targetPosition: {x: 0, y: 135, z: 0}
+    targetPosition: {x: 0, y: 240, z: 0}
     curve0:
       serializedVersion: 2
       m_Curve:
@@ -65,7 +65,7 @@ MonoBehaviour:
       m_PostInfinity: 2
     speed: 0
     delayFrame: 0
-    durationFrame: 60
+    durationFrame: 90
     isDestroy: 0
     isOnOverDistance: 0
     isSyncRotation: 0

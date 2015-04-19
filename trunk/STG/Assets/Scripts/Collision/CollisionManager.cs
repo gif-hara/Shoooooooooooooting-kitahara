@@ -144,11 +144,20 @@ public class CollisionManager : GameMonoBehaviour
 	{
 		barrierColliderList.Add( col );
 	}
-
+	/// <summary>
+	/// アイテムコライダーの追加.
+	/// </summary>
+	/// <param name="col">Col.</param>
 	public void AddItemCollider( A_Collider col )
 	{
 		itemColliderList.Add( col );
 	}
+
+	public void RemoveEnemyShotCollider( EnemyShotCollider col )
+	{
+		this.enemyShotColliderList.Remove( col );
+	}
+
 	/// <summary>
 	/// 敵弾を全て死亡させる.
 	/// </summary>
@@ -160,11 +169,11 @@ public class CollisionManager : GameMonoBehaviour
 	{
 		yield return new WaitForEndOfFrame();
 
-		enemyShotColliderList.RemoveAll( e => e == null );
-		enemyShotColliderList.ForEach( e =>
+		for( int i=0; i<this.enemyShotColliderList.Count; )
 		{
+			var e = this.enemyShotColliderList[i];
 			e.refEnemyShot.Explosion();
-		});
+		}
 	}
 	public Vector2 VarianceEnemyShotColliderList( A_Collider enemyShot, Vector2 id )
 	{
@@ -257,9 +266,9 @@ public class CollisionManager : GameMonoBehaviour
 		xList.RemoveAll( (obj) => obj == null );
 		yList.RemoveAll( (obj) => obj == null );
 		
-		for( int i=0,imax=xList.Count; i<imax; i++ )
+		for( int i=0; i<xList.Count; i++ )
 		{
-			for( int j=0,jmax=yList.Count; j<jmax; j++ )
+			for( int j=0; j<yList.Count; j++ )
 			{
 				if( !xList[i].enabled || !yList[j].enabled )	continue;
 				

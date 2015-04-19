@@ -5561,6 +5561,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   delay: 0
+  ignorePause: 0
   refTargetList:
   - {fileID: 100164}
   isEnable: 1
@@ -5923,6 +5924,7 @@ MonoBehaviour:
   speed: 1.77999997
   axis: {x: 0, y: 0, z: 1}
   addSpeed: 0
+  interval: 0
 --- !u!114 &11400182
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6578,6 +6580,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   prefab: {fileID: 100008, guid: 5c66294ba122e3a4ab42bfe6d63b6610, type: 2}
+  createType: 1
 --- !u!114 &11400238
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6695,6 +6698,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 1
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11400250
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7069,6 +7073,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 1
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11400276
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7415,6 +7420,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 1
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11400298
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8382,6 +8388,7 @@ MonoBehaviour:
   max: {x: 0, y: 0}
   interval: 140
   createNum: 0
+  createType: 1
 --- !u!114 &11400372
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8397,6 +8404,7 @@ MonoBehaviour:
   delay: 140
   rate: 15
   duration: 90
+  cachedDelay: 0
 --- !u!114 &11400374
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8845,6 +8853,7 @@ MonoBehaviour:
   max: {x: 0, y: 0}
   interval: 0
   createNum: 0
+  createType: 1
 --- !u!114 &11400410
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8882,6 +8891,7 @@ MonoBehaviour:
   max: {x: 200, y: -200}
   interval: 6
   createNum: 6
+  createType: 1
 --- !u!114 &11400414
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8917,6 +8927,7 @@ MonoBehaviour:
   max: {x: 200, y: -200}
   interval: 2
   createNum: 38
+  createType: 1
 --- !u!114 &11400418
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8932,6 +8943,7 @@ MonoBehaviour:
   delay: 0
   rate: 10
   duration: 30
+  cachedDelay: 0
 --- !u!114 &11400420
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8990,6 +9002,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 1
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11400424
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9096,9 +9109,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   delay: 240
+  ignorePause: 0
   from: {r: 1, g: 1, b: 1, a: 1}
   to: {r: 1, g: 1, b: 1, a: 0}
   duration: 20
+  layerMaskName: EffectLv4
 --- !u!114 &11400432
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9127,6 +9142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   delay: 140
+  ignorePause: 0
   refTargetList:
   - {fileID: 2300002}
   isVisible: 1
@@ -9143,6 +9159,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   delay: 140
+  ignorePause: 0
   refTargetList:
   - {fileID: 2300020}
   isVisible: 0
@@ -9159,6 +9176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   delay: 1
+  ignorePause: 0
 --- !u!114 &11400440
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9172,6 +9190,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   delay: 0
+  ignorePause: 0
   refTargetList:
   - {fileID: 100118}
   isEnable: 0
@@ -9188,6 +9207,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   delay: 260
+  ignorePause: 0
   refTargetList:
   - {fileID: 100170}
   isEnable: 1
@@ -9204,6 +9224,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   delay: 0
+  ignorePause: 0
   refTargetList:
   - {fileID: 100166}
   isEnable: 0
@@ -9221,6 +9242,7 @@ MonoBehaviour:
   speed: -1.63999999
   axis: {x: 0, y: 0, z: 1}
   addSpeed: 0
+  interval: 0
 --- !u!114 &11400448
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9299,6 +9321,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 1
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11400454
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9487,6 +9510,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 5
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11400468
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10328,9 +10352,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   delay: 140
+  ignorePause: 0
   from: {r: 1, g: 1, b: 1, a: 1}
   to: {r: 1, g: 1, b: 1, a: 0}
   duration: 5
+  layerMaskName: EffectLv4
 --- !u!114 &11400534
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10998,6 +11024,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   delay: 220
+  ignorePause: 0
   refTargetList:
   - {fileID: 100196}
   isEnable: 1
@@ -11019,6 +11046,7 @@ MonoBehaviour:
     parent: {fileID: 0}
     detachParent: 0
   delay: 0
+  objectCreateType: 0
 --- !u!114 &11400586
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11166,6 +11194,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   prefab: {fileID: 100198, guid: 2f3bd3779c7649340bf78ccaa4aa0704, type: 2}
+  createType: 1
 --- !u!114 &11400606
 MonoBehaviour:
   m_ObjectHideFlags: 1

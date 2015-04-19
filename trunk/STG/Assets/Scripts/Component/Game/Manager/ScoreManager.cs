@@ -121,8 +121,7 @@ public class ScoreManager : GameMonoBehaviour
 
 	public void CreateStarItem( Vector3 position )
 	{
-        var starItem = Instantiate( PrefabStarItem ) as GameObject;
-		starItem.transform.position = position;
+        var starItem = ObjectPool.Instance.GetGameObject( PrefabStarItem, position, Quaternion.identity ) as GameObject;
 	}
 
 	public void RegistGameStatus()

@@ -19,7 +19,13 @@ public class MeshColorSetter : MonoBehaviourExtension
 	public Color color;
 
 	private MeshColorManager meshManager;
-	
+
+	[ContextMenu( "AttachMeshFilter" )]
+	void AttachMeshFilter()
+	{
+		this.refMeshFilter = GetComponent( typeof( MeshFilter ) ) as MeshFilter;
+	}
+
 	// Use this for initialization
 	public override void Start()
 	{

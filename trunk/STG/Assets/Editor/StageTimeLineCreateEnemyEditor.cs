@@ -307,10 +307,6 @@ public class StageTimeLineCreateEnemyEditor : A_StageTimeLineActionEditor<StageT
 	{
 		data.curve0 = EditorGUILayout.CurveField( text, data.curve0 );
 	}
-	private void DrawOnInspectorObjectMoveCurve1( A_ObjectMove.Data data, string text = "Curve 1" )
-	{
-		data.curve1 = EditorGUILayout.CurveField( text, data.curve1 );
-	}
 	private void DrawOnInspectorObjectMoveDurationFrame( A_ObjectMove.Data data )
 	{
 		data.durationFrame = EditorGUILayout.IntField( "Duration Frame", data.durationFrame );

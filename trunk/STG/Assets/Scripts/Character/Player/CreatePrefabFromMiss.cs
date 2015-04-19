@@ -20,7 +20,6 @@ public class CreatePrefabFromMiss : GameMonoBehaviour, I_MissEvent
 	/// </summary>
 	public void OnMiss()
 	{
-		var obj = InstantiateAsChild (gameObject, prefab);
-		obj.transform.parent = ReferenceManager.Instance.refEffectLayer.transform;
+		ObjectPool.Instance.GetGameObject( prefab, transform.position, prefab.transform.rotation );
 	}
 }

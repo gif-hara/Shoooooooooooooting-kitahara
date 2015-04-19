@@ -14,38 +14,19 @@ using System.Collections.Generic;
 /// <summary>
 /// .
 /// </summary>
-public abstract class A_ItemController : GameMonoBehaviour
+public abstract class A_ItemController : GameMonoBehaviour, I_Poolable
 {
-	/// <summary>
-	/// 最初のツイーン処理.
-	/// </summary>
-	[SerializeField]
-	protected ObjectMoveTween refFirstTween;
-	
-	/// <summary>
-	/// 落ちるツイーン処理.
-	/// </summary>
-	[SerializeField]
-	protected ObjectMoveTween refFallTween;
-
-	[SerializeField]
-	private float random;
-
-	// Use this for initialization
-	public override void Start ()
+	public virtual void OnAwakeByPool( bool used )
 	{
-        base.Start();
-        var localPosition = cachedTransform.localPosition;
-		refFirstTween.data.targetPosition += localPosition;
-		refFallTween.data.targetPosition += localPosition + Vector3.right * Random.Range( -random, random );
 	}
 
-	public bool IsFirstMove
+	public virtual void OnReleaseByPool()
 	{
-		get
-		{
-			return !refFirstTween.IsComplete;
-		}
+	}
+
+	public abstract bool IsFirstMove
+	{
+		get;
 	}
 
 	public abstract void StartChasePlayer();

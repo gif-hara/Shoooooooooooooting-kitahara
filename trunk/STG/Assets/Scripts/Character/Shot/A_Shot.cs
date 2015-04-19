@@ -30,9 +30,10 @@ public abstract class A_Shot : GameMonoBehaviour
 		SetAngle( vector );
 		angle.localRotation *= Quaternion.AngleAxis( -fixedAngle, Vector3.forward );
 		
-		AutoMove autoMove = gameObject.AddComponent<AutoMove>();
+		AutoMove autoMove = gameObject.GetComponent<AutoMove>() ?? gameObject.AddComponent<AutoMove>();
 		autoMove.speed = speed;
 		autoMove.velocity = vector.normalized;
+		autoMove.Initialize();
 	}
 	private void SetAngle( Vector3 euler )
 	{

@@ -19,21 +19,21 @@ public class FrameRateUtility : A_Singleton<FrameRateUtility>
 		base.Awake();
 		Instance = this;
 	}
-	public static void StartCoroutine( int frame, System.Action func )
+	public static void StartCoroutine( int frame, System.Action func, bool isSafetyReference = false )
 	{
-		FrameRateUtility.Instance._StartCoroutine( frame, func );
+		FrameRateUtility.Instance._StartCoroutine( frame, func, false, isSafetyReference );
 	}
-	public static void StartCoroutineIgnorePause( int frame, System.Action func )
+	public static void StartCoroutineIgnorePause( int frame, System.Action func, bool isSafetyReference = false )
 	{
-		FrameRateUtility.Instance._StartCoroutine( frame, func, true );
+		FrameRateUtility.Instance._StartCoroutine( frame, func, true, isSafetyReference );
 	}
 
-	private void _StartCoroutine( int frame, System.Action func, bool isPauseActive = false )
+	private void _StartCoroutine( int frame, System.Action func, bool isPauseActive, bool isSafetyReference )
 	{
-		StartCoroutine( __StartCoroutine( frame, func, isPauseActive ) );
+		StartCoroutine( __StartCoroutine( frame, func, isPauseActive, isSafetyReference ) );
 	}
 	
-	private IEnumerator __StartCoroutine( int frame, System.Action func, bool isPauseActive = false )
+	private IEnumerator __StartCoroutine( int frame, System.Action func, bool isPauseActive, bool isSafetyReference )
 	{
 		for( int i=0; i<frame; i++ )
 		{
@@ -43,7 +43,17 @@ public class FrameRateUtility : A_Singleton<FrameRateUtility>
 				i--;
 			}
 		}
-		
-		func();
+
+		if( isSafetyReference )
+		{
+			if( func.Target.ToString() != "null" )
+			{
+				func();
+			}
+		}
+		else
+		{
+			func();
+		}
 	}
 }

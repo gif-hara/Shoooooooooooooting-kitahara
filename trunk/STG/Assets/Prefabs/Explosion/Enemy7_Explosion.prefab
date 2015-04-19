@@ -254,6 +254,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   delay: 30
+  ignorePause: 0
   refTargetList:
   - {fileID: 2300002}
   isVisible: 0
@@ -263,7 +264,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100006}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca537c156ac197f4499d745979cfd2b3, type: 3}
   m_Name: 
@@ -277,6 +278,7 @@ MonoBehaviour:
   max: {x: 0, y: 0}
   interval: 30
   createNum: 1
+  createType: 1
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -290,13 +292,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   refParent: {fileID: 0}
-  isParentDetach: 1
+  isParentDetach: 0
   prefabList:
   - {fileID: 100002, guid: 9c34980ebaf998b43a95929a879b6f1c, type: 2}
   min: {x: -80, y: -80}
   max: {x: 80, y: 80}
   interval: 3
   createNum: 5
+  createType: 1
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -342,6 +345,7 @@ MonoBehaviour:
     parent: {fileID: 400010}
     detachParent: 1
   delay: 360
+  objectCreateType: 1
 --- !u!114 &11400012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -389,6 +393,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   delay: 20
+  ignorePause: 0
   refTargetList:
   - {fileID: 2300000}
   isVisible: 0
@@ -398,7 +403,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca537c156ac197f4499d745979cfd2b3, type: 3}
   m_Name: 
@@ -412,26 +417,28 @@ MonoBehaviour:
   max: {x: 0, y: 0}
   interval: 20
   createNum: 1
+  createType: 1
 --- !u!114 &11400020
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca537c156ac197f4499d745979cfd2b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   refParent: {fileID: 0}
-  isParentDetach: 1
+  isParentDetach: 0
   prefabList:
   - {fileID: 100002, guid: 9c34980ebaf998b43a95929a879b6f1c, type: 2}
   min: {x: -80, y: -80}
   max: {x: 80, y: 80}
   interval: 3
   createNum: 5
+  createType: 1
 --- !u!114 &11400022
 MonoBehaviour:
   m_ObjectHideFlags: 1

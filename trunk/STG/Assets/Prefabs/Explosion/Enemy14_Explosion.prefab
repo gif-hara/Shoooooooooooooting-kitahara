@@ -999,6 +999,7 @@ MonoBehaviour:
   delay: 120
   rate: 10
   duration: 5
+  cachedDelay: 0
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1034,6 +1035,7 @@ MonoBehaviour:
   max: {x: 80, y: 0}
   interval: 120
   createNum: 0
+  createType: 1
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1066,6 +1068,7 @@ MonoBehaviour:
   delay: 180
   rate: 10
   duration: 5
+  cachedDelay: 0
 --- !u!114 &11400012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1101,6 +1104,7 @@ MonoBehaviour:
   max: {x: -65, y: 50}
   interval: 180
   createNum: 0
+  createType: 1
 --- !u!114 &11400016
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1165,6 +1169,7 @@ MonoBehaviour:
   delay: 210
   rate: 10
   duration: 5
+  cachedDelay: 0
 --- !u!114 &11400024
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1200,6 +1205,7 @@ MonoBehaviour:
   max: {x: 80, y: 50}
   interval: 210
   createNum: 0
+  createType: 1
 --- !u!114 &11400028
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1232,6 +1238,7 @@ MonoBehaviour:
   delay: 230
   rate: 10
   duration: 5
+  cachedDelay: 0
 --- !u!114 &11400032
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1267,6 +1274,7 @@ MonoBehaviour:
   max: {x: -80, y: 50}
   interval: 230
   createNum: 0
+  createType: 1
 --- !u!114 &11400036
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1299,6 +1307,7 @@ MonoBehaviour:
   delay: 240
   rate: 10
   duration: 5
+  cachedDelay: 0
 --- !u!114 &11400040
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1352,6 +1361,7 @@ MonoBehaviour:
   max: {x: 80, y: 50}
   interval: 240
   createNum: 0
+  createType: 1
 --- !u!114 &11400046
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1416,6 +1426,7 @@ MonoBehaviour:
   delay: 250
   rate: 10
   duration: 180
+  cachedDelay: 0
 --- !u!114 &11400054
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1477,6 +1488,7 @@ MonoBehaviour:
     parent: {fileID: 400022}
     detachParent: 1
   delay: 250
+  objectCreateType: 1
 --- !u!114 &11400060
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1492,6 +1504,7 @@ MonoBehaviour:
   delay: 0
   rate: 10
   duration: 60
+  cachedDelay: 0
 --- !u!114 &11400062
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1562,6 +1575,7 @@ MonoBehaviour:
   max: {x: -103.07, y: 0}
   interval: 0
   createNum: 0
+  createType: 1
 --- !u!114 &11463096
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1580,6 +1594,7 @@ MonoBehaviour:
     parent: {fileID: 400204}
     detachParent: 1
   delay: 250
+  objectCreateType: 1
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1

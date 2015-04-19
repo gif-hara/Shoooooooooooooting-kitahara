@@ -84,6 +84,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400006}
+  m_RootOrder: 0
 --- !u!4 &400002
 Transform:
   m_ObjectHideFlags: 1
@@ -95,6 +96,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400006}
+  m_RootOrder: 1
 --- !u!4 &400004
 Transform:
   m_ObjectHideFlags: 1
@@ -106,6 +108,7 @@ Transform:
   m_LocalScale: {x: -128, y: 512, z: 1}
   m_Children: []
   m_Father: {fileID: 400006}
+  m_RootOrder: 2
 --- !u!4 &400006
 Transform:
   m_ObjectHideFlags: 1
@@ -120,6 +123,7 @@ Transform:
   - {fileID: 400002}
   - {fileID: 400004}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
 --- !u!23 &2300000
 Renderer:
   m_ObjectHideFlags: 1
@@ -138,9 +142,8 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
   m_SortingLayerID: 0
+  m_SortingOrder: 0
 --- !u!33 &3300000
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -163,6 +166,7 @@ MonoBehaviour:
   delay: 74
   rate: 10
   duration: 30
+  cachedDelay: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -205,6 +209,7 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   prefab: {fileID: 100002, guid: d13eff1974ce079489bf01a195b1e0d0, type: 2}
   refTarget: {fileID: 400002}
+  createType: 1
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -232,6 +237,7 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   prefab: {fileID: 100002, guid: d13eff1974ce079489bf01a195b1e0d0, type: 2}
   refTarget: {fileID: 400000}
+  createType: 1
 --- !u!114 &11400012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -252,6 +258,7 @@ MonoBehaviour:
   max: {x: 73, y: -236.800003}
   interval: 4
   createNum: 10
+  createType: 1
 --- !u!114 &11400014
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -284,6 +291,7 @@ MonoBehaviour:
   delay: 0
   rate: 10
   duration: 20
+  cachedDelay: 0
 --- !u!114 &11400018
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -304,6 +312,7 @@ MonoBehaviour:
   max: {x: -53.2999992, y: 25.6000004}
   interval: 1
   createNum: 1
+  createType: 1
 --- !u!114 &11400020
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -320,6 +329,8 @@ MonoBehaviour:
   duration: 30
   from: {r: 1, g: 1, b: 1, a: 1}
   to: {r: 1, g: 0, b: 0, a: 1}
+  refCompleteEventReceiver: {fileID: 0}
+  completeFunctionName: 
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

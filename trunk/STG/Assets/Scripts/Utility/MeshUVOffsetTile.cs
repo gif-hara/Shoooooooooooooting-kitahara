@@ -12,7 +12,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 
-public class MeshUVOffsetTile : MonoBehaviourExtension
+public class MeshUVOffsetTile : MonoBehaviourExtension, I_Poolable
 {
 	public GameObject refDestroyObject;
 	
@@ -25,6 +25,11 @@ public class MeshUVOffsetTile : MonoBehaviourExtension
 	public int interval;
 	
 	public bool loop;
+
+	public int initialOffset = 0;
+
+	[SerializeField]
+	private GameDefine.CreateType createType = GameDefine.CreateType.Instantiate;
 	
 	private Mesh mesh;
 	
@@ -35,15 +40,14 @@ public class MeshUVOffsetTile : MonoBehaviourExtension
 	private float intervalX = 0.0f;
 	
 	private float intervalY = 0.0f;
-		
-	// Use this for initialization
-	public override void Start()
+
+	public override void Start ()
 	{
-		mesh = refMesh.mesh;
+		base.Start ();
+		this.mesh = refMesh.mesh;
 		Initialize();
 		UpdateUv();
 	}
-	
 	// Update is called once per frame
 	public override void Update ()
 	{
@@ -51,20 +55,43 @@ public class MeshUVOffsetTile : MonoBehaviourExtension
 
 		if( PauseManager.Instance.IsPause )	return;
 
-		if( timer >= interval )
+		if( this.timer >= this.interval )
 		{
-			offset++;
+			this.offset++;
 			if( !loop && offset >= (tileX * tileY) )
 			{
-				Destroy( refDestroyObject );
-				refMesh.gameObject.SetActive( false );
-				enabled = false;
+				if( createType == GameDefine.CreateType.Instantiate )
+				{
+					Destroy( refDestroyObject );
+				}
+				else
+				{
+					if( refDestroyObject != null )
+					{
+						ObjectPool.Instance.ReleaseGameObject( refDestroyObject );
+					}
+				}
+				this.refMesh.renderer.enabled = false;
+				this.enabled = false;
 			}
 			UpdateUv();
-			timer = 0;
+			this.timer = 0;
 			return;
 		}
-		timer++;
+		this.timer++;
+	}
+
+	public void OnAwakeByPool( bool used )
+	{
+		this.refMesh.renderer.enabled = true;
+		this.enabled = true;
+		this.offset = this.initialOffset;
+		this.refMesh.gameObject.SetActive( true );
+	}
+
+	public void OnReleaseByPool()
+	{
+
 	}
 	
 	void OnDestroy()

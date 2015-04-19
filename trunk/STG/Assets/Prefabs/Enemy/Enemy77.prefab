@@ -4676,6 +4676,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   prefab: {fileID: 100002, guid: d717111d068512948b926a5325c9ace2, type: 2}
+  createType: 1
 --- !u!114 &11400070
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4781,6 +4782,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 20
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11400088
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4837,7 +4839,7 @@ MonoBehaviour:
       m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
-  separate: 22
+  separate: 50
   currentSeparate: 0
   awakeFreeze: 0
   freezedInterval: 80
@@ -5023,10 +5025,11 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   createType: 0
   elementList:
-  - prefab: {fileID: 100066, guid: 4d956b07dd44e3f45b6e69ff4f397d22, type: 2}
+  - prefab: {fileID: 100066, guid: 43bc945dccc684f64af2b3bfb6c617f6, type: 2}
     parent: {fileID: 400122}
     detachParent: 1
   delay: 0
+  objectCreateType: 0
 --- !u!114 &11400214
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5236,6 +5239,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 1
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11400254
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5728,6 +5732,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 20
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11499216
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5899,6 +5904,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 1
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11499228
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6072,6 +6078,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 1
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11499240
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6245,6 +6252,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 1
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11499252
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6423,6 +6431,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 1
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11499264
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6596,6 +6605,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 1
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11499276
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6769,6 +6779,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 20
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11499288
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6968,6 +6979,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 20
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11499304
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7139,6 +7151,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 1
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11499316
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7312,6 +7325,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 20
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11499328
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7483,6 +7497,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 1
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11499340
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7621,6 +7636,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 1
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11499350
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7794,6 +7810,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 1
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11499362
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8017,6 +8034,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 20
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11499380
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8188,6 +8206,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 1
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11499392
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8326,6 +8345,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 20
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11499402
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8497,6 +8517,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 1
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11499414
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8635,6 +8656,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 1
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11499424
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8808,6 +8830,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 1
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11499436
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8946,6 +8969,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 20
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11499446
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9117,6 +9141,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 1
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11499458
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14739,8 +14764,8 @@ MonoBehaviour:
   setType: 0
   enableTuning: 1
   element:
-    min: 300
-    max: 90
+    min: 150
+    max: 45
     current: 0
     curve:
       serializedVersion: 2
@@ -14840,7 +14865,7 @@ MonoBehaviour:
       m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
-  separate: 22
+  separate: 50
   currentSeparate: 0
   awakeFreeze: 0
   freezedInterval: 80
@@ -14933,7 +14958,7 @@ MonoBehaviour:
       m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
-  separate: 22
+  separate: 50
   currentSeparate: 0
   awakeFreeze: 0
   freezedInterval: 80
@@ -15005,8 +15030,8 @@ MonoBehaviour:
   setType: 0
   enableTuning: 1
   element:
-    min: 300
-    max: 90
+    min: 150
+    max: 45
     current: 0
     curve:
       serializedVersion: 2
@@ -15045,8 +15070,8 @@ MonoBehaviour:
   setType: 0
   enableTuning: 1
   element:
-    min: 300
-    max: 90
+    min: 150
+    max: 45
     current: 0
     curve:
       serializedVersion: 2

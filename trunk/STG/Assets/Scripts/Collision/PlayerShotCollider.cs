@@ -63,7 +63,7 @@ public class PlayerShotCollider : A_Collider
 	{
 		if( !isCollisionDead )	return;
 		
-		Instantiate( prefabExplosion, refParent.transform.position, prefabExplosion.transform.rotation );
+		ObjectPool.Instance.GetGameObject( prefabExplosion, refParent.transform.position, prefabExplosion.transform.rotation );
 		Destroy( refParent );
 		SendMessage( CollisionMessage, SendMessageOptions.DontRequireReceiver );
 		isEnemyCollision = true;

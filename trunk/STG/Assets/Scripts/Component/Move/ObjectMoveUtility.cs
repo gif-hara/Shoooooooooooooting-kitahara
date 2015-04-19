@@ -83,7 +83,7 @@ public class ObjectMoveUtility
 			}
 		});
 	}
-	public static void Attach( Transform trans, A_ObjectMove objectMoveOnPrefab )
+	public static A_ObjectMove[] Attach( Transform trans, A_ObjectMove objectMoveOnPrefab )
 	{
 		var currentObject = GameMonoBehaviour.InstantiateAsChild( trans, objectMoveOnPrefab.gameObject );
 		var list = currentObject.GetComponents<A_ObjectMove>();
@@ -91,5 +91,7 @@ public class ObjectMoveUtility
 		{
 			a.refTrans = trans;
 		});
+
+		return list;
 	}
 }

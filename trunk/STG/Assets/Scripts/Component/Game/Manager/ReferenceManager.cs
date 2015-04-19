@@ -136,6 +136,9 @@ public class ReferenceManager : A_Singleton<ReferenceManager>
 	[SerializeField]
 	private GameObject refBackgroundLayer;
 
+	[SerializeField]
+	private GameObject refItemLayer;
+
 	/// <summary>
 	/// 敵プレハブリスト.
 	/// </summary>
@@ -163,6 +166,7 @@ public class ReferenceManager : A_Singleton<ReferenceManager>
 			refEffectLayer,
 			refUILayer,
 			refBackgroundLayer,
+			refItemLayer,
 		};
 
 		return layer[(int)type];
