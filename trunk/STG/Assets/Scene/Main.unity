@@ -222,7 +222,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &27513320
 Transform:
   m_ObjectHideFlags: 0
@@ -1437,6 +1437,66 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!1 &131070313
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 131070314}
+  - 20: {fileID: 131070315}
+  m_Layer: 8
+  m_Name: 4_ItemCamera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &131070314
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 131070313}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1169415464}
+  m_RootOrder: 13
+--- !u!20 &131070315
+Camera:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 131070313}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 3
+  m_BackGroundColor: {r: .5, g: .5, b: .5, a: 1}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: -500
+  far clip plane: 500
+  field of view: 60
+  orthographic: 1
+  orthographic size: 300
+  m_Depth: 4
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 2097152
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_HDR: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: .0219999999
 --- !u!1 &133495863
 GameObject:
   m_ObjectHideFlags: 0
@@ -1750,7 +1810,7 @@ GameObject:
   - 4: {fileID: 225729664}
   - 20: {fileID: 225729665}
   m_Layer: 8
-  m_Name: 11_EffectLv4Camera
+  m_Name: 12_EffectLv4Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1789,7 +1849,7 @@ Camera:
   field of view: 60
   orthographic: 1
   orthographic size: 300
-  m_Depth: 11
+  m_Depth: 12
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 131072
@@ -6053,8 +6113,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   apply: 1
-  difficulty: 4
-  stageId: 0
+  difficulty: 3
+  stageId: 3
   playerId: 0
   replayId: 0
   gameMode: 0
@@ -6801,7 +6861,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63a5fbdc93350994f9a462a1eb2e06ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDraw: 1
+  isDraw: 0
   boxRect:
     serializedVersion: 2
     x: 0
@@ -7498,7 +7558,7 @@ GameObject:
   - 4: {fileID: 1097550559}
   - 20: {fileID: 1097550560}
   m_Layer: 8
-  m_Name: 13_EffectLv5Camera
+  m_Name: 14_EffectLv5Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7537,7 +7597,7 @@ Camera:
   field of view: 60
   orthographic: 1
   orthographic size: 300
-  m_Depth: 13
+  m_Depth: 14
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 262144
@@ -7817,6 +7877,7 @@ Transform:
   - {fileID: 225729664}
   - {fileID: 1097550559}
   - {fileID: 767613152}
+  - {fileID: 131070314}
   m_Father: {fileID: 1409095644}
   m_RootOrder: 0
 --- !u!114 &1169415465
@@ -8131,7 +8192,7 @@ GameObject:
   - 4: {fileID: 1239146431}
   - 20: {fileID: 1239146432}
   m_Layer: 8
-  m_Name: 6_PlayerShotCamera
+  m_Name: 7_PlayerShotCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8170,7 +8231,7 @@ Camera:
   field of view: 60
   orthographic: 1
   orthographic size: 300
-  m_Depth: 6
+  m_Depth: 7
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 1024
@@ -8968,7 +9029,7 @@ GameObject:
   - 4: {fileID: 1358268088}
   - 20: {fileID: 1358268089}
   m_Layer: 8
-  m_Name: 7_EffectLv2Camera
+  m_Name: 8_EffectLv2Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9007,7 +9068,7 @@ Camera:
   field of view: 60
   orthographic: 1
   orthographic size: 300
-  m_Depth: 7
+  m_Depth: 8
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 32768
@@ -9474,7 +9535,7 @@ GameObject:
   - 4: {fileID: 1424270708}
   - 20: {fileID: 1424270709}
   m_Layer: 8
-  m_Name: 5_EffectLv1Camera
+  m_Name: 6_EffectLv1Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9513,7 +9574,7 @@ Camera:
   field of view: 60
   orthographic: 1
   orthographic size: 300
-  m_Depth: 5
+  m_Depth: 6
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 16384
@@ -9982,7 +10043,7 @@ GameObject:
   - 4: {fileID: 1500096879}
   - 20: {fileID: 1500096880}
   m_Layer: 0
-  m_Name: 4_EnemyCamera
+  m_Name: 5_EnemyCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10021,7 +10082,7 @@ Camera:
   field of view: 60
   orthographic: 1
   orthographic size: 300
-  m_Depth: 4
+  m_Depth: 5
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 2048
@@ -11345,7 +11406,7 @@ GameObject:
   - 4: {fileID: 1665498435}
   - 20: {fileID: 1665498436}
   m_Layer: 8
-  m_Name: 9_EffectLv3Camera
+  m_Name: 10_EffectLv3Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11384,7 +11445,7 @@ Camera:
   field of view: 60
   orthographic: 1
   orthographic size: 300
-  m_Depth: 9
+  m_Depth: 10
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 65536
@@ -12562,7 +12623,7 @@ GameObject:
   - 4: {fileID: 1860165555}
   - 20: {fileID: 1860165556}
   m_Layer: 8
-  m_Name: 10_EnemyShotCamera
+  m_Name: 11_EnemyShotCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12601,7 +12662,7 @@ Camera:
   field of view: 60
   orthographic: 1
   orthographic size: 300
-  m_Depth: 10
+  m_Depth: 11
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4096
@@ -13067,7 +13128,7 @@ GameObject:
   - 4: {fileID: 1896487690}
   - 20: {fileID: 1896487691}
   m_Layer: 8
-  m_Name: 8_PlayerCamera
+  m_Name: 9_PlayerCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13106,7 +13167,7 @@ Camera:
   field of view: 60
   orthographic: 1
   orthographic size: 300
-  m_Depth: 8
+  m_Depth: 9
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 512
@@ -14322,7 +14383,7 @@ GameObject:
   - 20: {fileID: 2122912385}
   - 92: {fileID: 2122912386}
   m_Layer: 8
-  m_Name: 12_UICamera
+  m_Name: 13_UICamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14361,7 +14422,7 @@ Camera:
   field of view: 60
   orthographic: 1
   orthographic size: 300
-  m_Depth: 12
+  m_Depth: 13
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 256

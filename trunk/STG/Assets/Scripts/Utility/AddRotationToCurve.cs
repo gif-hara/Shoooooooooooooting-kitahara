@@ -31,6 +31,15 @@ public class AddRotationToCurve : GameMonoBehaviour, I_Poolable
 	private Quaternion toRotation;
 
 	private int currentDuration = 0;
+
+	private bool isInitialize = false;
+
+	public override void Start ()
+	{
+		base.Start ();
+
+		Initialize();
+	}
 	
 	public override void Update ()
 	{
@@ -56,6 +65,22 @@ public class AddRotationToCurve : GameMonoBehaviour, I_Poolable
 
 	public void OnAwakeByPool( bool used )
 	{
+		Initialize();
+	}
+
+	public void OnReleaseByPool()
+	{
+		isInitialize = false;
+	}
+
+	private void Initialize()
+	{
+		if( this.isInitialize )
+		{
+			return;
+		}
+
+		this.isInitialize = true;
 		this.currentDuration = 0;
 		this.initialRotation = transform.localRotation;
 		this.toRotation = Quaternion.Euler( new Vector3(
@@ -63,9 +88,5 @@ public class AddRotationToCurve : GameMonoBehaviour, I_Poolable
 			this.initialRotation.eulerAngles.y + addRotation.y,
 			this.initialRotation.eulerAngles.z + addRotation.z
 			));
-	}
-
-	public void OnReleaseByPool()
-	{
 	}
 }
