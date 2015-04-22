@@ -35,6 +35,11 @@ public class AddPositionGravity : GameMonoBehaviour, I_Poolable
 
 	public override void Update ()
 	{
+		if( PauseManager.Instance.IsPause )
+		{
+			return;
+		}
+
 		base.Update ();
 
 		var localPosition = this.refTarget.localPosition;
