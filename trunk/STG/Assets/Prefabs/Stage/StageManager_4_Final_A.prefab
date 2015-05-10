@@ -73,7 +73,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 400008}
   - 114: {fileID: 11400010}
-  - 114: {fileID: 11435596}
   m_Layer: 0
   m_Name: StageManager_4_Final_A
   m_TagString: Stage
@@ -479,23 +478,6 @@ MonoBehaviour:
   startEffectType: 0
   endEffectType: 0
   sceneName: Ending
---- !u!114 &11435596
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100008}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2546838f47f5643b0bdd501ca18fbf45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cachedTransform: {fileID: 0}
-  timeLine: 0
-  refActionConditioner: {fileID: 0}
-  startEffectType: 0
-  endEffectType: 0
-  sceneName: 
 --- !u!114 &11485802
 MonoBehaviour:
   m_ObjectHideFlags: 1
