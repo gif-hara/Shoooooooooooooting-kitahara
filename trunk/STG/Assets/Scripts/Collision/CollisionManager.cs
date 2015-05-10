@@ -106,11 +106,6 @@ public class CollisionManager : GameMonoBehaviour
 	public void AddEnemyShotCollider( EnemyShotCollider col )
 	{
 		enemyShotColliderList.Add( col );
-//		var id = GetEnemyShotVarianceId( col.cachedTransform );
-//		enemyShotVarianceList[(int)id.y][(int)id.x].Add( col );
-//		Debug.Log( "Init id = " + id );
-		
-//		return id;
 	}
 	/// <summary>
 	/// プレイヤーコライダーの追加.
@@ -214,36 +209,6 @@ public class CollisionManager : GameMonoBehaviour
 	private void CollisionEnemyShotAndPlayer()
 	{
 		CollisionXAndY( enemyShotColliderList, PlayerColliderListNonInvincible );
-//		enemyShotColliderList.RemoveAll( e => e == null );
-//		var id = GetEnemyShotVarianceId( ReferenceManager.Player.cachedTransform );
-//		var playerList = PlayerColliderListNonInvincible;
-//		List<A_Collider> enemyShotList = new List<A_Collider>();
-//
-//		for( int y = (int)id.y - 1; y<=(int)id.y + 1; y++ )
-//		{
-//			if( y < 0 || y >= enemyShotCollisionTileY )	continue;
-//			for( int x = (int)id.x - 1; x<=(int)id.x + 1; x++ )
-//			{
-//				if( x < 0 || x >= enemyShotCollisionTileX )	continue;
-//				enemyShotList.AddRange( enemyShotVarianceList[y][x] );
-//			}
-//		}
-//		
-//		enemyShotList.RemoveAll( (obj) => obj == null );
-//		
-//		for( int i=0,imax=playerList.Count; i<imax; i++ )
-//		{
-//			for( int j=0,jmax=enemyShotList.Count; j<jmax; j++ )
-//			{
-//				if( !playerList[i].enabled || !enemyShotList[j].enabled )	continue;
-//				
-//				if( IsCollision( playerList[i], enemyShotList[j] ) )
-//				{
-//					playerList[i].OnCollision( enemyShotList[j] );
-//					enemyShotList[j].OnCollision( playerList[i] );
-//				}
-//			}
-//		}
 	}
 	/// <summary>
 	/// 敵弾とバリアの衝突処理.

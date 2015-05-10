@@ -22,18 +22,15 @@ public class EnemyShotCollider : A_Collider, I_Poolable
 
 	[SerializeField]
 	private float grazeRadius;
-	
-	private Vector2 varianceId;
 
 	private CollisionType collisionType = CollisionType.Graze;
 
 	private float cachedRadius;
 
-	void OnDrawGizmos()
+	void OnDrawGizmosSelected()
 	{
 		Gizmos.color = GizmosColor;
 		Gizmos.DrawWireSphere( transform.position, radius );
-		//Gizmos.DrawWireSphere( transform.position, grazeRadius );
 	}
 
 	public void OnAwakeByPool( bool used )
