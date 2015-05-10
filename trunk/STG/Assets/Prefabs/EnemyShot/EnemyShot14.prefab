@@ -25,6 +25,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 433126}
+  - 114: {fileID: 11476544}
   - 114: {fileID: 11433130}
   - 114: {fileID: 11433132}
   - 114: {fileID: 11433128}
@@ -44,6 +45,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 433128}
+  - 114: {fileID: 11476546}
   - 114: {fileID: 11433140}
   - 114: {fileID: 11433138}
   - 114: {fileID: 11433142}
@@ -63,6 +65,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 433130}
+  - 114: {fileID: 11476540}
   - 114: {fileID: 11433146}
   - 114: {fileID: 11433148}
   - 114: {fileID: 11433144}
@@ -160,6 +163,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 485742}
+  - 114: {fileID: 11476542}
   - 114: {fileID: 11485738}
   - 114: {fileID: 11485740}
   - 114: {fileID: 11433126}
@@ -180,6 +184,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 485744}
   - 114: {fileID: 11436810}
+  - 114: {fileID: 11402186}
   m_Layer: 0
   m_Name: Shot0
   m_TagString: Untagged
@@ -214,6 +219,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 485750}
   - 114: {fileID: 11436806}
+  - 114: {fileID: 11402190}
   m_Layer: 0
   m_Name: Shot1
   m_TagString: Untagged
@@ -266,6 +272,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 485756}
   - 114: {fileID: 11436804}
+  - 114: {fileID: 11402184}
   m_Layer: 0
   m_Name: Shot2
   m_TagString: Untagged
@@ -282,6 +289,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 485762}
   - 114: {fileID: 11436808}
+  - 114: {fileID: 11402188}
   m_Layer: 0
   m_Name: Shot3
   m_TagString: Untagged
@@ -316,6 +324,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 486036}
   - 114: {fileID: 11486052}
+  - 114: {fileID: 11441058}
   m_Layer: 0
   m_Name: Rotation
   m_TagString: Untagged
@@ -784,6 +793,54 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   prefabExplosion: {fileID: 100002, guid: 01128dc588fe58c46a0a3de362043c1d, type: 2}
   notRemove: 0
+--- !u!114 &11402184
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 185756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93dcd77acbeab4146b508eb0108af4ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position: {x: 0, y: 0, z: 0}
+--- !u!114 &11402186
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 185744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93dcd77acbeab4146b508eb0108af4ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position: {x: 0, y: 0, z: 0}
+--- !u!114 &11402188
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 185762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93dcd77acbeab4146b508eb0108af4ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position: {x: 0, y: 0, z: 0}
+--- !u!114 &11402190
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 185750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93dcd77acbeab4146b508eb0108af4ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position: {x: 0, y: 0, z: 0}
 --- !u!114 &11412182
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -927,7 +984,7 @@ MonoBehaviour:
   separate: 6
   currentSeparate: 0
   awakeFreeze: 0
-  freezedInterval: 0
+  freezedInterval: 120
 --- !u!114 &11433128
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -954,7 +1011,7 @@ MonoBehaviour:
   separate: 6
   currentSeparate: 0
   awakeFreeze: 0
-  freezedInterval: 0
+  freezedInterval: 120
 --- !u!114 &11433130
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1091,7 +1148,7 @@ MonoBehaviour:
   separate: 6
   currentSeparate: 0
   awakeFreeze: 0
-  freezedInterval: 0
+  freezedInterval: 120
 --- !u!114 &11433144
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1118,7 +1175,7 @@ MonoBehaviour:
   separate: 6
   currentSeparate: 0
   awakeFreeze: 0
-  freezedInterval: 0
+  freezedInterval: 120
 --- !u!114 &11433146
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1298,6 +1355,18 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   refChaseObject: {fileID: 436810}
   speed: .100000001
+--- !u!114 &11441058
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 186036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18211cd1c08c44e94bad1a7b813c83cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotate: {x: 60, y: 0, z: 0}
 --- !u!114 &11474164
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1316,6 +1385,63 @@ MonoBehaviour:
     y: 200
     width: 200
     height: -200
+  delay: 0
+--- !u!114 &11476540
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 133130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f04e6c0deab3427fb8bad224fa34954, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  refTarget: {fileID: 11433146}
+  isAwakeActiveType: 1
+  isReleaseActiveType: 0
+--- !u!114 &11476542
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 185742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f04e6c0deab3427fb8bad224fa34954, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  refTarget: {fileID: 11485738}
+  isAwakeActiveType: 1
+  isReleaseActiveType: 0
+--- !u!114 &11476544
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 133126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f04e6c0deab3427fb8bad224fa34954, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  refTarget: {fileID: 11433130}
+  isAwakeActiveType: 1
+  isReleaseActiveType: 0
+--- !u!114 &11476546
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 133128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f04e6c0deab3427fb8bad224fa34954, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  refTarget: {fileID: 11433140}
+  isAwakeActiveType: 1
+  isReleaseActiveType: 0
 --- !u!114 &11485738
 MonoBehaviour:
   m_ObjectHideFlags: 1
