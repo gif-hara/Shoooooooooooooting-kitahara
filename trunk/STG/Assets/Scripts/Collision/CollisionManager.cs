@@ -60,13 +60,11 @@ public class CollisionManager : GameMonoBehaviour
 
 		if( PauseManager.Instance.IsPause )	return;
 		
-		int benchMarkId = ScriptProfiler.Begin( this );
 		CollisionEnemyAndPlayer();
 		CollisionEnemyAndPlayerShot();
 		CollisionEnemyShotAndPlayer();
 		CollisionEnemyShotAndBarrier();
 		CollisionPlayerAndItem();
-		ScriptProfiler.End( this, benchMarkId );
 	}
 	
 #if OnDrawGizmos
