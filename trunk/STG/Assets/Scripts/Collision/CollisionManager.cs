@@ -150,10 +150,21 @@ public class CollisionManager : GameMonoBehaviour
 	{
 		itemColliderList.Add( col );
 	}
-
+	/// <summary>
+	/// 敵弾コライダーの削除.
+	/// </summary>
+	/// <param name="col">Col.</param>
 	public void RemoveEnemyShotCollider( EnemyShotCollider col )
 	{
 		this.enemyShotColliderList.Remove( col );
+	}
+	/// <summary>
+	/// アイテムコライダーの削除.
+	/// </summary>
+	/// <param name="col">Col.</param>
+	public void RemoveItemCollider( ItemCollider col )
+	{
+		this.itemColliderList.Remove( col );
 	}
 
 	/// <summary>
