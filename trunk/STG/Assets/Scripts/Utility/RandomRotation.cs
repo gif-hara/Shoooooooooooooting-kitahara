@@ -12,7 +12,7 @@ using System.Collections.Generic;
 /// <summary>
 /// ランダムで回転量を設定するコンポーネント.
 /// </summary>
-public class RandomRotation : MonoBehaviour
+public class RandomRotation : MonoBehaviour, I_Poolable
 {
 	[SerializeField]
 	private Transform refTarget;
@@ -24,6 +24,23 @@ public class RandomRotation : MonoBehaviour
 	private Vector3 max;
 
 	void Start ()
+	{
+		Set ();
+	}
+
+	public void OnAwakeByPool( bool used )
+	{
+		if( used )
+		{
+			Set ();
+		}
+	}
+
+	public void OnReleaseByPool()
+	{
+	}
+
+	private void Set()
 	{
 		refTarget.localRotation = Quaternion.Euler( new Vector3(
 			Random.Range( min.x, max.x ),
