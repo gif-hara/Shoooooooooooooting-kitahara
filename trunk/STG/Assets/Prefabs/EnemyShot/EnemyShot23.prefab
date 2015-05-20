@@ -63,7 +63,6 @@ GameObject:
   - 4: {fileID: 485746}
   - 33: {fileID: 3385756}
   - 23: {fileID: 2385756}
-  - 114: {fileID: 11485744}
   - 114: {fileID: 11499888}
   m_Layer: 12
   m_Name: Texture
@@ -339,20 +338,7 @@ MonoBehaviour:
     y: 200
     width: 200
     height: -200
---- !u!114 &11485744
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 185746}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc16bdeb8f028d74793ed2e7c6b8786a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cachedTransform: {fileID: 0}
-  refShadowMaterial: {fileID: 2100000, guid: e72a5bdcc582249b4a45aeee366aaf91, type: 2}
-  offset: {x: 0, y: 0}
+  delay: 0
 --- !u!114 &11499888
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -77,7 +77,7 @@ public class ObjectMoveUtility
 		var components = go.GetComponentsInChildren<A_ObjectMove>();
 		System.Array.ForEach<A_ObjectMove>( components, (obj) =>
 		{
-			if( obj.data.initFuncName != "FallOut" )
+			if( obj.data.initFuncName != "FallOut" && !obj.data.isIgnoreDetach )
 			{
 				UnityEngine.Object.Destroy( obj.gameObject );
 			}

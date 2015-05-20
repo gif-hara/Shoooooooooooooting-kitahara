@@ -93,6 +93,11 @@ public abstract class A_ObjectMove : GameMonoBehaviour, I_Poolable
 		/// iTweenのパスを反転させるか.
 		/// </summary>
 		public bool isReverse = false;
+
+		/// <summary>
+		/// AllDetachで削除を無視するか.
+		/// </summary>
+		public bool isIgnoreDetach = false;
 		
 		public Data( ObjectMoveUtility.MoveType type )
 		{
