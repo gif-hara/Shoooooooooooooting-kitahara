@@ -43,7 +43,7 @@ public class Shadow : GameMonoBehaviour
 
 		base.LateUpdate ();
 
-		this.refRenderer.enabled = chaseObjectRenderer.enabled;
+		this.refRenderer.enabled = chaseObject.gameObject.activeSelf && chaseObjectRenderer.enabled;
 		SyncPosition();
 		SyncScale();
 		SyncRotation();
