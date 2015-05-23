@@ -28,6 +28,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 455126}
   - 114: {fileID: 11455126}
+  - 114: {fileID: 11472748}
+  - 114: {fileID: 11478700}
   m_Layer: 8
   m_Name: EnemyShot27ShotCreator
   m_TagString: Untagged
@@ -146,6 +148,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   refTarget: {fileID: 155126}
   delay: 61
+--- !u!114 &11472748
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82e8e04e2f9684044a613cb965a55be8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11478700
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 198c29c189dd22b469f80046bb88a362, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  refTarget: {fileID: 455126}
+  layerType: 0
 --- !u!114 &11490214
 MonoBehaviour:
   m_ObjectHideFlags: 1
