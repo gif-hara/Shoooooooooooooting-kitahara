@@ -45,6 +45,9 @@ namespace SaveData
 		public int Life{ get{ return life; } }
 		private int life;
 
+		public GameDefine.WindowStyle WindowStyle{ get{ return this.windowStyle; } }
+		private GameDefine.WindowStyle windowStyle;
+
 		public const float DefaultSEVolume = 1.0f;
 		
 		public const float DefaultBGMVolume = 1.0f;
@@ -56,6 +59,7 @@ namespace SaveData
 			seVolume = DefaultSEVolume;
 			bgmVolume = DefaultBGMVolume;
 			life = DefaultLife;
+			windowStyle = GameDefine.WindowStyle.Window;
 		}
 		
 		public Settings( Settings other )
@@ -63,6 +67,7 @@ namespace SaveData
 			seVolume = other.seVolume;
 			bgmVolume = other.bgmVolume;
 			life = other.life;
+			windowStyle = other.windowStyle;
 		}
 		
 		public void AddSEVolume( float value )
@@ -76,6 +81,19 @@ namespace SaveData
 		public void AddLifeVolume( int value )
 		{
 			life = Mathf.Clamp( life + value, 1, 6 );
+		}
+		public void ChangeWindowStyle()
+		{
+			if( this.windowStyle == GameDefine.WindowStyle.Window )
+			{
+				this.windowStyle = GameDefine.WindowStyle.FullScreen;
+			}
+			else
+			{
+				this.windowStyle = GameDefine.WindowStyle.Window;
+			}
+
+			Screen.fullScreen = this.windowStyle == GameDefine.WindowStyle.FullScreen;
 		}
 
 		public void Apply( Settings other )

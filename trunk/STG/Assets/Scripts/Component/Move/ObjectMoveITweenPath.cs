@@ -14,12 +14,6 @@ using System.Collections.Generic;
 
 public class ObjectMoveITweenPath : A_ObjectMove
 {
-	public override void Awake ()
-	{
-		base.Awake ();
-		this.cachedTransform = transform;
-		this.cachedTransform.localPosition = data.prefabiTweenPath.GetComponent<iTweenPath>().nodes[0];
-	}
 	protected override void InitMove()
 	{
 		base.InitMove();
