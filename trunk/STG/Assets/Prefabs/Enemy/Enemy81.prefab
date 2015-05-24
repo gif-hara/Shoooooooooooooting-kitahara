@@ -738,6 +738,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &156552
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 456552}
+  m_Layer: 0
+  m_Name: ParentVisibleEffect
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &165320
 GameObject:
   m_ObjectHideFlags: 1
@@ -3226,6 +3241,7 @@ Transform:
   - {fileID: 400076}
   - {fileID: 400090}
   - {fileID: 422052}
+  - {fileID: 456552}
   m_Father: {fileID: 400042}
   m_RootOrder: 0
 --- !u!4 &400198
@@ -3378,6 +3394,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 401864}
   m_RootOrder: 1
+--- !u!4 &456552
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 156552}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -800, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400196}
+  m_RootOrder: 9
 --- !u!4 &465320
 Transform:
   m_ObjectHideFlags: 1
@@ -7319,7 +7347,7 @@ MonoBehaviour:
   createType: 1
   elementList:
   - prefab: {fileID: 189308, guid: bedebb0aa6ca8a44383143109543c97e, type: 2}
-    parent: {fileID: 400042}
+    parent: {fileID: 456552}
     detachParent: 1
   delay: 0
   objectCreateType: 0

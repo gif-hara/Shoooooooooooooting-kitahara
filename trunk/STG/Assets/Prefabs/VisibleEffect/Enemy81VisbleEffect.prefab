@@ -44,6 +44,7 @@ GameObject:
   - 4: {fileID: 489316}
   - 114: {fileID: 11429294}
   - 114: {fileID: 11461152}
+  - 114: {fileID: 11426292}
   m_Layer: 8
   m_Name: Enemy81VisbleEffect
   m_TagString: Untagged
@@ -65,7 +66,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &189312
 GameObject:
   m_ObjectHideFlags: 1
@@ -807,6 +808,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 189362}
   m_Mesh: {fileID: 4300000, guid: 1c28b765b865feb469b53d7fa4778b81, type: 2}
+--- !u!114 &11426292
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 189308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 544b3ceeff4343a4b9952d6e05a42463, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  delay: 5
+  ignorePause: 0
+  refTargetList:
+  - {fileID: 189310}
+  isEnable: 1
 --- !u!114 &11429294
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -901,7 +919,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
-  delay: 1
+  delay: 3
 --- !u!114 &11488700
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -928,7 +946,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
-  delay: 1
+  delay: 3
 --- !u!114 &11488704
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -955,7 +973,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
-  delay: 1
+  delay: 3
 --- !u!114 &11488714
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1002,7 +1020,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
-  delay: 1
+  delay: 3
 --- !u!114 &11488720
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1391,7 +1409,7 @@ ParticleSystem:
   startDelay: 0
   speed: 1
   randomSeed: 0
-  looping: 0
+  looping: 1
   prewarm: 0
   playOnAwake: 1
   moveWithTransform: 0
@@ -2413,7 +2431,7 @@ ParticleSystem:
   startDelay: 0
   speed: 1
   randomSeed: 0
-  looping: 0
+  looping: 1
   prewarm: 0
   playOnAwake: 1
   moveWithTransform: 0

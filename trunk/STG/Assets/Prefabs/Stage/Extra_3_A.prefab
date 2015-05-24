@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 400000}
   - 114: {fileID: 11435594}
   m_Layer: 0
-  m_Name: '[1303] ChangeScene'
+  m_Name: '[804] ChangeScene'
   m_TagString: Untagged
   m_Icon: {fileID: -1003283189, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -58,7 +58,7 @@ GameObject:
   - 4: {fileID: 400004}
   - 114: {fileID: 11400006}
   m_Layer: 0
-  m_Name: '[500] Enemy41'
+  m_Name: '[500] Enemy81'
   m_TagString: Untagged
   m_Icon: {fileID: -1376725286, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -90,7 +90,7 @@ GameObject:
   - 4: {fileID: 400010}
   - 114: {fileID: 11400012}
   m_Layer: 0
-  m_Name: '[1300] StartResult'
+  m_Name: '[801] StartResult'
   m_TagString: Untagged
   m_Icon: {fileID: -1203168336, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -106,7 +106,7 @@ GameObject:
   - 4: {fileID: 400012}
   - 114: {fileID: 11400014}
   m_Layer: 0
-  m_Name: '[1301] TimeLineStopByResult'
+  m_Name: '[802] TimeLineStopByResult'
   m_TagString: Untagged
   m_Icon: {fileID: -1203168336, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -154,7 +154,7 @@ GameObject:
   - 4: {fileID: 400018}
   - 114: {fileID: 11400020}
   m_Layer: 0
-  m_Name: '[1302] SceneChangePracticeMode'
+  m_Name: '[803] SceneChangePracticeMode'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -170,7 +170,7 @@ GameObject:
   - 4: {fileID: 485802}
   - 114: {fileID: 11485802}
   m_Layer: 0
-  m_Name: '[1299] SetClearedStageType'
+  m_Name: '[800] SetClearedStageType'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -183,7 +183,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -400, y: 1603, z: 0}
+  m_LocalPosition: {x: -400, y: 1104, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400008}
@@ -253,7 +253,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100010}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -400, y: 1600, z: 0}
+  m_LocalPosition: {x: -400, y: 1101, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400008}
@@ -265,7 +265,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100012}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -400, y: 1601, z: 0}
+  m_LocalPosition: {x: -400, y: 1102, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400008}
@@ -301,7 +301,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100018}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -400, y: 1602, z: 0}
+  m_LocalPosition: {x: -400, y: 1103, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400008}
@@ -313,7 +313,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 185802}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -400, y: 1599, z: 0}
+  m_LocalPosition: {x: -400, y: 1100, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400008}
@@ -334,7 +334,7 @@ MonoBehaviour:
   refActionConditioner: {fileID: 0}
   delayDuration: 0
   exceptionDuration: 999999999
-  needDestroyEnemyId: 41
+  needDestroyEnemyId: 81
   needDestroyEnemyNum: 1
 --- !u!114 &11400006
 MonoBehaviour:
@@ -350,8 +350,8 @@ MonoBehaviour:
   cachedTransform: {fileID: 400004}
   timeLine: 500
   refActionConditioner: {fileID: 0}
-  enemyId: 41
-  initialPosition: {x: 0, y: 146, z: 0}
+  enemyId: 81
+  initialPosition: {x: 0, y: 120, z: 0}
   dataList: []
 --- !u!114 &11400008
 MonoBehaviour:
@@ -408,7 +408,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400010}
-  timeLine: 1300
+  timeLine: 801
   refActionConditioner: {fileID: 0}
   stageId: 4
 --- !u!114 &11400014
@@ -423,7 +423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400012}
-  timeLine: 1301
+  timeLine: 802
   refActionConditioner: {fileID: 0}
 --- !u!114 &11400016
 MonoBehaviour:
@@ -469,7 +469,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400018}
-  timeLine: 1302
+  timeLine: 803
   refActionConditioner: {fileID: 0}
 --- !u!114 &11435594
 MonoBehaviour:
@@ -483,7 +483,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400000}
-  timeLine: 1303
+  timeLine: 804
   refActionConditioner: {fileID: 0}
   startEffectType: 0
   endEffectType: 0
@@ -500,7 +500,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 485802}
-  timeLine: 1299
+  timeLine: 800
   refActionConditioner: {fileID: 0}
   type: 5
 --- !u!1001 &100100000
