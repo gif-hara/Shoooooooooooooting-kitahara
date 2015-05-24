@@ -23,7 +23,9 @@ public class CommandEventSetDefaultOption : MonoBehaviour
 		modifiedEventObject.BroadcastMessage( "OnModifiedSEVolume" );
 		modifiedEventObject.BroadcastMessage( "OnModifiedBGMVolume" );
 		modifiedEventObject.BroadcastMessage( "OnModifiedLife" );
+		modifiedEventObject.BroadcastMessage( "OnModifiedWindowStyle" );
 		SoundManager.Instance.SetBGMVolume( OptionData.Settings.BGMVolume );
 		SoundManager.Instance.SetSEVolume( OptionData.Settings.SEVolume );
+		Screen.fullScreen = OptionData.Settings.WindowStyle == GameDefine.WindowStyle.FullScreen;
 	}
 }

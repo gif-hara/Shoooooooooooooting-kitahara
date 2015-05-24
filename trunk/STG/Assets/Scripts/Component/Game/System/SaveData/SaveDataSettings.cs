@@ -46,7 +46,7 @@ namespace SaveData
 		private int life;
 
 		public GameDefine.WindowStyle WindowStyle{ get{ return this.windowStyle; } }
-		private GameDefine.WindowStyle windowStyle;
+		private GameDefine.WindowStyle windowStyle = GameDefine.WindowStyle.Window;
 
 		public const float DefaultSEVolume = 1.0f;
 		
@@ -68,6 +68,7 @@ namespace SaveData
 			bgmVolume = other.bgmVolume;
 			life = other.life;
 			windowStyle = other.windowStyle;
+			Screen.fullScreen = this.windowStyle == GameDefine.WindowStyle.FullScreen;
 		}
 		
 		public void AddSEVolume( float value )
@@ -92,7 +93,6 @@ namespace SaveData
 			{
 				this.windowStyle = GameDefine.WindowStyle.Window;
 			}
-
 			Screen.fullScreen = this.windowStyle == GameDefine.WindowStyle.FullScreen;
 		}
 

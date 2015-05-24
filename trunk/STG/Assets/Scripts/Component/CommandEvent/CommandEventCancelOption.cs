@@ -18,5 +18,6 @@ public class CommandEventCancelOption : MonoBehaviour
 	{
 		SoundManager.Instance.SetSEVolume( SaveData.Settings.Instance.SEVolume );
 		SoundManager.Instance.SetBGMVolume( SaveData.Settings.Instance.BGMVolume );
+		Screen.fullScreen = SaveData.Settings.Instance.WindowStyle == GameDefine.WindowStyle.FullScreen;
 	}
 }
