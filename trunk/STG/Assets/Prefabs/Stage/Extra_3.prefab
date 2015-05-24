@@ -3601,6 +3601,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &130566
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 430566}
+  - 114: {fileID: 11430566}
+  m_Layer: 0
+  m_Name: '[8020] FadeBGM'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &131234
 GameObject:
   m_ObjectHideFlags: 0
@@ -7366,6 +7382,7 @@ Transform:
   - {fileID: 475810}
   - {fileID: 475584}
   - {fileID: 475672}
+  - {fileID: 430566}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &400358
@@ -10185,6 +10202,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 440254}
   m_RootOrder: 4
+--- !u!4 &430566
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 130566}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 8020, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400162}
+  m_RootOrder: 155
 --- !u!4 &431234
 Transform:
   m_ObjectHideFlags: 1
@@ -13308,6 +13337,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409398
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13382,6 +13412,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409402
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13456,6 +13487,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: -100, y: -380, z: 0}
     curve0:
       serializedVersion: 2
@@ -13489,6 +13521,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409406
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13539,6 +13572,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409408
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13594,6 +13628,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409410
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13649,6 +13684,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409412
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13699,6 +13735,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409414
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13749,6 +13786,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409416
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13799,6 +13837,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409418
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13849,6 +13888,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409420
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13899,6 +13939,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409422
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13954,6 +13995,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409424
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14004,6 +14046,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 40, y: -365, z: 0}
     curve0:
       serializedVersion: 2
@@ -14037,6 +14080,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409426
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14092,6 +14136,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409428
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14142,6 +14187,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: -80, y: -365, z: 0}
     curve0:
       serializedVersion: 2
@@ -14175,6 +14221,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409430
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14225,6 +14272,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409432
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14275,6 +14323,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409434
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14349,6 +14398,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409438
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14399,6 +14449,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409440
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14497,6 +14548,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: -190, y: -380, z: 0}
     curve0:
       serializedVersion: 2
@@ -14530,6 +14582,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409446
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14580,6 +14633,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409448
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14654,6 +14708,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409452
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14704,6 +14759,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 120, y: -365, z: 0}
     curve0:
       serializedVersion: 2
@@ -14737,6 +14793,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409454
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14787,6 +14844,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409456
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14837,6 +14895,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409458
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14887,6 +14946,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409460
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14942,6 +15002,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409462
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14992,6 +15053,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409464
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -15042,6 +15104,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 130, y: -365, z: 0}
     curve0:
       serializedVersion: 2
@@ -15075,6 +15138,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409466
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -15130,6 +15194,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409468
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -15204,6 +15269,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409472
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -15254,6 +15320,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409474
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -15304,6 +15371,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409476
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -15354,6 +15422,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409478
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -15404,6 +15473,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409480
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -15454,6 +15524,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409482
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -15528,6 +15599,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409486
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -15578,6 +15650,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 0, y: -380, z: 0}
     curve0:
       serializedVersion: 2
@@ -15611,6 +15684,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409488
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -15661,6 +15735,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: -480, y: 180, z: 0}
     curve0:
       serializedVersion: 2
@@ -15694,6 +15769,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409490
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -15744,6 +15820,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409492
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -15794,6 +15871,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409494
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -15844,6 +15922,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409496
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -15894,6 +15973,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409498
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -15944,6 +16024,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409500
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -15994,6 +16075,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409502
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16044,6 +16126,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 450, y: -380, z: 0}
     curve0:
       serializedVersion: 2
@@ -16077,6 +16160,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409504
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16127,6 +16211,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409506
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16201,6 +16286,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409510
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16251,6 +16337,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 0, y: 0, z: 0}
     curve0:
       serializedVersion: 2
@@ -16284,6 +16371,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409512
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16334,6 +16422,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 480, y: -40, z: 0}
     curve0:
       serializedVersion: 2
@@ -16367,6 +16456,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409514
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16417,6 +16507,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409516
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16491,6 +16582,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 130, y: -380, z: 0}
     curve0:
       serializedVersion: 2
@@ -16524,6 +16616,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409520
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16574,6 +16667,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409522
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16624,6 +16718,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409524
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16674,6 +16769,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409526
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16724,6 +16820,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409528
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16774,6 +16871,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409530
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16824,6 +16922,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409532
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16874,6 +16973,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409534
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16924,6 +17024,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409536
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16974,6 +17075,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409538
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -17024,6 +17126,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409540
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -17074,6 +17177,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409542
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -17124,6 +17228,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409544
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -17174,6 +17279,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409546
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -17224,6 +17330,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409548
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -17274,6 +17381,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409550
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -17324,6 +17432,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409552
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -17374,6 +17483,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 480, y: 180, z: 0}
     curve0:
       serializedVersion: 2
@@ -17407,6 +17517,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409554
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -17457,6 +17568,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409556
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -17507,6 +17619,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409558
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -17581,6 +17694,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409562
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -17631,6 +17745,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409564
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -17681,6 +17796,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: -50, y: 120, z: 0}
     curve0:
       serializedVersion: 2
@@ -17714,6 +17830,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: -600, y: 0, z: 0}
     curve0:
       serializedVersion: 2
@@ -17747,6 +17864,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409566
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -17797,6 +17915,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409568
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -17847,6 +17966,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409570
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -17897,6 +18017,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: -50, y: 120, z: 0}
     curve0:
       serializedVersion: 2
@@ -17930,6 +18051,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: -600, y: 0, z: 0}
     curve0:
       serializedVersion: 2
@@ -17963,6 +18085,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409572
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18013,6 +18136,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409574
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18091,6 +18215,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409578
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18141,6 +18266,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409580
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18191,6 +18317,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409582
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18241,6 +18368,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409584
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18291,6 +18419,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409586
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18341,6 +18470,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 40, y: -365, z: 0}
     curve0:
       serializedVersion: 2
@@ -18374,6 +18504,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409588
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18424,6 +18555,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409590
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18474,6 +18606,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 130, y: -365, z: 0}
     curve0:
       serializedVersion: 2
@@ -18507,6 +18640,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409592
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18557,6 +18691,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409594
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18607,6 +18742,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 130, y: -365, z: 0}
     curve0:
       serializedVersion: 2
@@ -18640,6 +18776,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409596
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18690,6 +18827,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409598
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18740,6 +18878,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409600
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18790,6 +18929,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409602
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18840,6 +18980,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409604
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18895,6 +19036,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409606
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18969,6 +19111,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409610
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -19019,6 +19162,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409612
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -19069,6 +19213,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409614
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -19119,6 +19264,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409616
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -19169,6 +19315,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409618
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -19219,6 +19366,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409620
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -19269,6 +19417,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: -180, y: -380, z: 0}
     curve0:
       serializedVersion: 2
@@ -19302,6 +19451,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409622
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -19352,6 +19502,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409624
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -19402,6 +19553,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409626
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -19452,6 +19604,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409628
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -19526,6 +19679,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409632
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -19576,6 +19730,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409634
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -19626,6 +19781,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409636
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -19702,6 +19858,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409640
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -19752,6 +19909,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: -130, y: -365, z: 0}
     curve0:
       serializedVersion: 2
@@ -19785,6 +19943,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409642
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -19835,6 +19994,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 0, y: 0, z: 0}
     curve0:
       serializedVersion: 2
@@ -19868,6 +20028,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409644
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -19918,6 +20079,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 0, y: 0, z: 0}
     curve0:
       serializedVersion: 2
@@ -19951,6 +20113,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409646
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -20001,6 +20164,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409648
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -20051,6 +20215,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 250, y: -380, z: 0}
     curve0:
       serializedVersion: 2
@@ -20084,6 +20249,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409650
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -20134,6 +20300,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409652
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -20184,6 +20351,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409654
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -20234,6 +20402,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: -250, y: -380, z: 0}
     curve0:
       serializedVersion: 2
@@ -20267,6 +20436,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409656
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -20317,6 +20487,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409658
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -20367,6 +20538,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409660
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -20422,6 +20594,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409662
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -20477,6 +20650,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409664
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -20527,6 +20701,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409666
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -20577,6 +20752,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409668
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -20627,6 +20803,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409670
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -20677,6 +20854,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409672
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -20727,6 +20905,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409674
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -20777,6 +20956,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409676
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -20827,6 +21007,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409678
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -20877,6 +21058,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: -350, y: -380, z: 0}
     curve0:
       serializedVersion: 2
@@ -20910,6 +21092,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409680
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -20960,6 +21143,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409682
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -21010,6 +21194,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409684
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -21060,6 +21245,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 390, y: -380, z: 0}
     curve0:
       serializedVersion: 2
@@ -21093,6 +21279,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409686
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -21143,6 +21330,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409688
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -21221,6 +21409,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409692
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -21295,6 +21484,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409696
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -21345,6 +21535,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409698
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -21395,6 +21586,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409700
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -21445,6 +21637,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409702
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -21495,6 +21688,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 0, y: 0, z: 0}
     curve0:
       serializedVersion: 2
@@ -21528,6 +21722,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409704
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -21578,6 +21773,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 50, y: 200, z: 0}
     curve0:
       serializedVersion: 2
@@ -21611,6 +21807,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 600, y: 0, z: 0}
     curve0:
       serializedVersion: 2
@@ -21644,6 +21841,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409706
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -21694,6 +21892,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409708
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -21744,6 +21943,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 60, y: -380, z: 0}
     curve0:
       serializedVersion: 2
@@ -21777,6 +21977,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409710
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -21827,6 +22028,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409712
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -21877,6 +22079,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409714
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -21927,6 +22130,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: -40, y: -365, z: 0}
     curve0:
       serializedVersion: 2
@@ -21960,6 +22164,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409716
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -22010,6 +22215,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409718
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -22060,6 +22266,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409720
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -22110,6 +22317,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409722
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -22160,6 +22368,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409724
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -22210,6 +22419,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409726
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -22260,6 +22470,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409728
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -22310,6 +22521,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 0, y: 0, z: 0}
     curve0:
       serializedVersion: 2
@@ -22343,6 +22555,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409730
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -22393,6 +22606,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409732
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -22443,6 +22657,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409734
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -22493,6 +22708,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409736
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -22543,6 +22759,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: -180, y: -380, z: 0}
     curve0:
       serializedVersion: 2
@@ -22576,6 +22793,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409738
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -22626,6 +22844,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409740
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -22676,6 +22895,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409742
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -22726,6 +22946,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409744
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -22776,6 +22997,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409746
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -22826,6 +23048,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409748
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -22876,6 +23099,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409750
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -22926,6 +23150,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409752
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -22976,6 +23201,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: -600, y: -50, z: 0}
     curve0:
       serializedVersion: 2
@@ -23009,6 +23235,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409754
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -23059,6 +23286,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409756
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -23109,6 +23337,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409758
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -23159,6 +23388,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409760
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -23209,6 +23439,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409762
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -23259,6 +23490,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409764
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -23309,6 +23541,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409766
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -23364,6 +23597,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409768
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -23414,6 +23648,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409770
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -23488,6 +23723,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409774
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -23538,6 +23774,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 0, y: 0, z: 0}
     curve0:
       serializedVersion: 2
@@ -23571,6 +23808,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409776
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -23621,6 +23859,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409778
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -23671,6 +23910,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 130, y: -365, z: 0}
     curve0:
       serializedVersion: 2
@@ -23704,6 +23944,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409780
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -23754,6 +23995,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409782
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -23804,6 +24046,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409784
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -23859,6 +24102,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409786
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -23909,6 +24153,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409788
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -23983,6 +24228,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 120, y: -365, z: 0}
     curve0:
       serializedVersion: 2
@@ -24016,6 +24262,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409792
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -24066,6 +24313,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409794
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -24116,6 +24364,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409796
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -24166,6 +24415,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409798
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -24216,6 +24466,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409800
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -24290,6 +24541,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 40, y: -365, z: 0}
     curve0:
       serializedVersion: 2
@@ -24323,6 +24575,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409804
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -24373,6 +24626,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409806
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -24428,6 +24682,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409808
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -24506,6 +24761,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409812
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -24580,6 +24836,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409816
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -24630,6 +24887,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409818
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -24680,6 +24938,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409820
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -24730,6 +24989,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409822
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -24780,6 +25040,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: -130, y: -365, z: 0}
     curve0:
       serializedVersion: 2
@@ -24813,6 +25074,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409824
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -24863,6 +25125,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409826
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -24913,6 +25176,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409828
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -24963,6 +25227,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409830
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -25037,6 +25302,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409834
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -25087,6 +25353,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: -100, y: -380, z: 0}
     curve0:
       serializedVersion: 2
@@ -25120,6 +25387,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409836
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -25170,6 +25438,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 120, y: -365, z: 0}
     curve0:
       serializedVersion: 2
@@ -25203,6 +25472,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11409838
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -25253,6 +25523,24 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
+--- !u!114 &11430566
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 130566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be7044256668e45499bbdba0931f34a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 430566}
+  timeLine: 8020
+  refActionConditioner: {fileID: 0}
+  from: 1
+  to: 0
+  duration: 300
 --- !u!114 &11431234
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -25303,6 +25591,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: -20, y: 130, z: 0}
     curve0:
       serializedVersion: 2
@@ -25336,6 +25625,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: -240, y: -385, z: 0}
     curve0:
       serializedVersion: 2
@@ -25369,6 +25659,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440090
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -25419,6 +25710,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 50, y: 200, z: 0}
     curve0:
       serializedVersion: 2
@@ -25452,6 +25744,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 600, y: 0, z: 0}
     curve0:
       serializedVersion: 2
@@ -25485,6 +25778,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440092
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -25540,6 +25834,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440094
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -25590,6 +25885,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: -100, y: -380, z: 0}
     curve0:
       serializedVersion: 2
@@ -25623,6 +25919,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440096
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -25673,6 +25970,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440098
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -25723,6 +26021,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440100
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -25778,6 +26077,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440102
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -25852,6 +26152,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440106
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -25907,6 +26208,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440108
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -25957,6 +26259,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 150, y: -380, z: 0}
     curve0:
       serializedVersion: 2
@@ -25990,6 +26293,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440110
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -26040,6 +26344,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440112
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -26090,6 +26395,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440114
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -26140,6 +26446,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440116
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -26190,6 +26497,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440118
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -26240,6 +26548,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440120
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -26290,6 +26599,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440122
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -26340,6 +26650,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440124
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -26395,6 +26706,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440126
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -26445,6 +26757,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440128
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -26495,6 +26808,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440130
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -26550,6 +26864,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440132
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -26600,6 +26915,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440134
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -26650,6 +26966,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440136
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -26700,6 +27017,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440138
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -26750,6 +27068,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440140
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -26805,6 +27124,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440142
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -26855,6 +27175,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440144
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -26905,6 +27226,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440146
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -26979,6 +27301,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440150
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -27029,6 +27352,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: -130, y: -365, z: 0}
     curve0:
       serializedVersion: 2
@@ -27062,6 +27386,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440152
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -27169,6 +27494,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440158
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -27243,6 +27569,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440162
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -27293,6 +27620,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440164
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -27343,6 +27671,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440166
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -27393,6 +27722,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440168
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -27443,6 +27773,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: -40, y: -365, z: 0}
     curve0:
       serializedVersion: 2
@@ -27476,6 +27807,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440170
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -27526,6 +27858,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440172
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -27581,6 +27914,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440174
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -27631,6 +27965,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440176
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -27681,6 +28016,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440178
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -27755,6 +28091,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440182
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -27805,6 +28142,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 600, y: 0, z: 0}
     curve0:
       serializedVersion: 2
@@ -27838,6 +28176,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440184
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -27888,6 +28227,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440186
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -27938,6 +28278,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440188
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -28040,6 +28381,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440194
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -28095,6 +28437,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440196
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -28145,6 +28488,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: -130, y: -365, z: 0}
     curve0:
       serializedVersion: 2
@@ -28178,6 +28522,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440198
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -28252,6 +28597,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: -320, y: -380, z: 0}
     curve0:
       serializedVersion: 2
@@ -28285,6 +28631,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440202
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -28335,6 +28682,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440204
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -28385,6 +28733,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 0, y: 0, z: 0}
     curve0:
       serializedVersion: 2
@@ -28418,6 +28767,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440206
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -28492,6 +28842,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440210
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -28542,6 +28893,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440212
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -28592,6 +28944,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440214
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -28642,6 +28995,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440216
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -28692,6 +29046,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440218
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -28742,6 +29097,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440220
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -28792,6 +29148,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440222
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -28847,6 +29204,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440224
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -28897,6 +29255,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440226
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -28947,6 +29306,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440228
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -28997,6 +29357,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: -80, y: -365, z: 0}
     curve0:
       serializedVersion: 2
@@ -29030,6 +29391,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440230
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -29080,6 +29442,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440232
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -29130,6 +29493,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440234
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -29180,6 +29544,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440236
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -29235,6 +29600,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440238
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -29285,6 +29651,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440240
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -29335,6 +29702,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440242
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -29390,6 +29758,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440244
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -29440,6 +29809,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 220, y: -380, z: 0}
     curve0:
       serializedVersion: 2
@@ -29473,6 +29843,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440246
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -29547,6 +29918,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440250
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -29597,6 +29969,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440252
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -29647,6 +30020,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: -40, y: -365, z: 0}
     curve0:
       serializedVersion: 2
@@ -29680,6 +30054,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440254
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -29730,6 +30105,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440256
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -29808,6 +30184,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440260
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -29858,6 +30235,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440262
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -29908,6 +30286,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440264
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -29958,6 +30337,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440266
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -30008,6 +30388,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: -80, y: -365, z: 0}
     curve0:
       serializedVersion: 2
@@ -30041,6 +30422,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440268
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -30091,6 +30473,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440270
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -30141,6 +30524,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440272
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -30215,6 +30599,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440276
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -30270,6 +30655,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440278
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -30320,6 +30706,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440280
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -30370,6 +30757,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11440282
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -30420,6 +30808,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475556
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -30470,6 +30859,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 0, y: 0, z: 0}
     curve0:
       serializedVersion: 2
@@ -30503,6 +30893,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475558
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -30553,6 +30944,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475560
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -30631,6 +31023,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 0, y: 0, z: 0}
     curve0:
       serializedVersion: 2
@@ -30664,6 +31057,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475564
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -30714,6 +31108,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475566
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -30764,6 +31159,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 0, y: 0, z: 0}
     curve0:
       serializedVersion: 2
@@ -30797,6 +31193,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475568
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -30847,6 +31244,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 0, y: 0, z: 0}
     curve0:
       serializedVersion: 2
@@ -30880,6 +31278,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475570
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -30930,6 +31329,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475572
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -30980,6 +31380,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475574
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -31030,6 +31431,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 0, y: 0, z: 0}
     curve0:
       serializedVersion: 2
@@ -31063,6 +31465,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475576
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -31141,6 +31544,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475580
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -31191,6 +31595,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475582
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -31241,6 +31646,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475584
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -31291,6 +31697,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 0, y: -416, z: 0}
     curve0:
       serializedVersion: 2
@@ -31324,6 +31731,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475586
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -31374,6 +31782,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: -480, y: 380, z: 0}
     curve0:
       serializedVersion: 2
@@ -31407,6 +31816,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475588
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -31457,6 +31867,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 480, y: -40, z: 0}
     curve0:
       serializedVersion: 2
@@ -31490,6 +31901,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475590
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -31540,6 +31952,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475592
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -31595,6 +32008,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475594
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -31665,6 +32079,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475598
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -31743,6 +32158,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475602
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -31793,6 +32209,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475604
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -31843,6 +32260,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475606
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -31893,6 +32311,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475608
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -31943,6 +32362,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 0, y: 0, z: 0}
     curve0:
       serializedVersion: 2
@@ -31976,6 +32396,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475610
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -32026,6 +32447,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475612
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -32076,6 +32498,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475614
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -32126,6 +32549,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 0, y: 0, z: 0}
     curve0:
       serializedVersion: 2
@@ -32159,6 +32583,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475616
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -32229,6 +32654,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: -480, y: 180, z: 0}
     curve0:
       serializedVersion: 2
@@ -32262,6 +32688,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475620
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -32312,6 +32739,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475622
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -32362,6 +32790,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475624
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -32412,6 +32841,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 0, y: -380, z: 0}
     curve0:
       serializedVersion: 2
@@ -32445,6 +32875,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475626
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -32495,6 +32926,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 480, y: 180, z: 0}
     curve0:
       serializedVersion: 2
@@ -32528,6 +32960,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475628
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -32578,6 +33011,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: -200, y: -380, z: 0}
     curve0:
       serializedVersion: 2
@@ -32611,6 +33045,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475630
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -32661,6 +33096,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475632
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -32711,6 +33147,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475634
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -32761,6 +33198,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 0, y: -380, z: 0}
     curve0:
       serializedVersion: 2
@@ -32794,6 +33232,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475636
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -32844,6 +33283,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475638
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -32894,6 +33334,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475640
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -32944,6 +33385,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475642
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -32994,6 +33436,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475644
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -33090,6 +33533,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475650
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -33140,6 +33584,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 0, y: 0, z: 0}
     curve0:
       serializedVersion: 2
@@ -33173,6 +33618,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475652
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -33223,6 +33669,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475654
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -33273,6 +33720,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 0, y: 0, z: 0}
     curve0:
       serializedVersion: 2
@@ -33306,6 +33754,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475656
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -33356,6 +33805,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 0, y: 0, z: 0}
     curve0:
       serializedVersion: 2
@@ -33389,6 +33839,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475658
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -33439,6 +33890,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475660
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -33489,6 +33941,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 0, y: 0, z: 0}
     curve0:
       serializedVersion: 2
@@ -33522,6 +33975,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475662
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -33572,6 +34026,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 0, y: 0, z: 0}
     curve0:
       serializedVersion: 2
@@ -33605,6 +34060,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475664
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -33655,6 +34111,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475666
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -33705,6 +34162,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475668
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -33755,6 +34213,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475670
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -33805,6 +34264,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475672
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -33855,6 +34315,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 100, y: -416, z: 0}
     curve0:
       serializedVersion: 2
@@ -33888,6 +34349,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475674
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -33938,6 +34400,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: -100, y: -380, z: 0}
     curve0:
       serializedVersion: 2
@@ -33971,6 +34434,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475676
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -34021,6 +34485,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 0, y: 0, z: 0}
     curve0:
       serializedVersion: 2
@@ -34054,6 +34519,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475678
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -34104,6 +34570,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 0, y: 0, z: 0}
     curve0:
       serializedVersion: 2
@@ -34137,6 +34604,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475680
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -34187,6 +34655,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 200, y: -380, z: 0}
     curve0:
       serializedVersion: 2
@@ -34220,6 +34689,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475682
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -34270,6 +34740,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 200, y: -380, z: 0}
     curve0:
       serializedVersion: 2
@@ -34303,6 +34774,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475684
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -34353,6 +34825,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475686
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -34403,6 +34876,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 0, y: 0, z: 0}
     curve0:
       serializedVersion: 2
@@ -34436,6 +34910,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475688
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -34486,6 +34961,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 0, y: 0, z: 0}
     curve0:
       serializedVersion: 2
@@ -34519,6 +34995,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475690
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -34569,6 +35046,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: -100, y: 100, z: 0}
     curve0:
       serializedVersion: 2
@@ -34602,6 +35080,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: -240, y: -385, z: 0}
     curve0:
       serializedVersion: 2
@@ -34635,6 +35114,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475692
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -34685,6 +35165,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475694
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -34763,6 +35244,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475698
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -34813,6 +35295,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 0, y: 0, z: 0}
     curve0:
       serializedVersion: 2
@@ -34846,6 +35329,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475700
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -34896,6 +35380,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 480, y: 0, z: 0}
     curve0:
       serializedVersion: 2
@@ -34929,6 +35414,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475702
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -34979,6 +35465,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475704
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -35029,6 +35516,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 0, y: 0, z: 0}
     curve0:
       serializedVersion: 2
@@ -35062,6 +35550,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475706
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -35112,6 +35601,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 0, y: 0, z: 0}
     curve0:
       serializedVersion: 2
@@ -35145,6 +35635,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475708
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -35195,6 +35686,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 0, y: 0, z: 0}
     curve0:
       serializedVersion: 2
@@ -35228,6 +35720,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475710
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -35278,6 +35771,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475712
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -35328,6 +35822,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 0, y: 0, z: 0}
     curve0:
       serializedVersion: 2
@@ -35361,6 +35856,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475714
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -35411,6 +35907,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475716
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -35487,6 +35984,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 0, y: 0, z: 0}
     curve0:
       serializedVersion: 2
@@ -35520,6 +36018,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475720
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -35570,6 +36069,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 0, y: 0, z: 0}
     curve0:
       serializedVersion: 2
@@ -35603,6 +36103,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475722
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -35653,6 +36154,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475724
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -35703,6 +36205,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 100, y: -380, z: 0}
     curve0:
       serializedVersion: 2
@@ -35736,6 +36239,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475726
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -35786,6 +36290,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475728
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -35856,6 +36361,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475732
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -35906,6 +36412,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475734
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -35956,6 +36463,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475736
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -36006,6 +36514,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 100, y: -380, z: 0}
     curve0:
       serializedVersion: 2
@@ -36039,6 +36548,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475738
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -36089,6 +36599,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475740
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -36159,6 +36670,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475744
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -36209,6 +36721,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: -480, y: 380, z: 0}
     curve0:
       serializedVersion: 2
@@ -36242,6 +36755,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475746
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -36292,6 +36806,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475748
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -36342,6 +36857,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475750
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -36420,6 +36936,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475754
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -36490,6 +37007,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: -200, y: -380, z: 0}
     curve0:
       serializedVersion: 2
@@ -36523,6 +37041,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475758
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -36573,6 +37092,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475760
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -36649,6 +37169,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475764
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -36699,6 +37220,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: -480, y: 0, z: 0}
     curve0:
       serializedVersion: 2
@@ -36732,6 +37254,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475766
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -36782,6 +37305,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: -480, y: 0, z: 0}
     curve0:
       serializedVersion: 2
@@ -36815,6 +37339,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475768
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -36865,6 +37390,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 0, y: 0, z: 0}
     curve0:
       serializedVersion: 2
@@ -36898,6 +37424,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475770
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -36948,6 +37475,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475772
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -36998,6 +37526,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 0, y: 0, z: 0}
     curve0:
       serializedVersion: 2
@@ -37031,6 +37560,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475774
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -37081,6 +37611,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475776
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -37131,6 +37662,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475778
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -37209,6 +37741,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475782
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -37259,6 +37792,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 0, y: 0, z: 0}
     curve0:
       serializedVersion: 2
@@ -37292,6 +37826,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475784
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -37342,6 +37877,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475786
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -37392,6 +37928,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 0, y: 0, z: 0}
     curve0:
       serializedVersion: 2
@@ -37425,6 +37962,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475788
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -37501,6 +38039,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475792
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -37551,6 +38090,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475794
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -37601,6 +38141,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 0, y: 0, z: 0}
     curve0:
       serializedVersion: 2
@@ -37634,6 +38175,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475796
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -37684,6 +38226,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475798
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -37734,6 +38277,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475800
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -37784,6 +38328,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475802
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -37834,6 +38379,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475804
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -37884,6 +38430,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 480, y: 0, z: 0}
     curve0:
       serializedVersion: 2
@@ -37917,6 +38464,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475806
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -37967,6 +38515,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 0, y: 200, z: 0}
     curve0:
       serializedVersion: 2
@@ -38000,6 +38549,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: -100, y: -509, z: 0}
     curve0:
       serializedVersion: 2
@@ -38033,6 +38583,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475808
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -38083,6 +38634,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11475810
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -38133,6 +38685,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: -100, y: -416, z: 0}
     curve0:
       serializedVersion: 2
@@ -38166,6 +38719,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11481496
 MonoBehaviour:
   m_ObjectHideFlags: 1
