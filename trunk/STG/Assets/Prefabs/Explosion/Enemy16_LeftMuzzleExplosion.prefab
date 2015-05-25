@@ -40,7 +40,7 @@ GameObject:
   - 4: {fileID: 400004}
   - 33: {fileID: 3300000}
   - 23: {fileID: 2300000}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Texture
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 128, y: 512, z: 1}
   m_Children: []
   m_Father: {fileID: 400006}
@@ -165,7 +165,7 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   delay: 74
   rate: 10
-  duration: 30
+  duration: 5
   cachedDelay: 0
 --- !u!114 &11400002
 MonoBehaviour:
@@ -207,7 +207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
-  prefab: {fileID: 100002, guid: d13eff1974ce079489bf01a195b1e0d0, type: 2}
+  prefab: {fileID: 100002, guid: da57d1383b005f145a8b500aa13ffe86, type: 2}
   refTarget: {fileID: 400000}
   createType: 1
 --- !u!114 &11400008
@@ -235,7 +235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
-  prefab: {fileID: 100002, guid: d13eff1974ce079489bf01a195b1e0d0, type: 2}
+  prefab: {fileID: 100002, guid: da57d1383b005f145a8b500aa13ffe86, type: 2}
   refTarget: {fileID: 400002}
   createType: 1
 --- !u!114 &11400012
@@ -253,7 +253,7 @@ MonoBehaviour:
   refParent: {fileID: 400006}
   isParentDetach: 1
   prefabList:
-  - {fileID: 100002, guid: 4b67fad1fc8426f48882c95f8e4e7c27, type: 2}
+  - {fileID: 100002, guid: c302937e36dc5234e9ccbcfa5472cb72, type: 2}
   min: {x: -62.7000008, y: 205.979996}
   max: {x: 73, y: -236.800003}
   interval: 4
@@ -290,7 +290,7 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   delay: 0
   rate: 10
-  duration: 20
+  duration: 5
   cachedDelay: 0
 --- !u!114 &11400018
 MonoBehaviour:
@@ -307,7 +307,7 @@ MonoBehaviour:
   refParent: {fileID: 400006}
   isParentDetach: 1
   prefabList:
-  - {fileID: 100002, guid: 4b67fad1fc8426f48882c95f8e4e7c27, type: 2}
+  - {fileID: 100002, guid: c302937e36dc5234e9ccbcfa5472cb72, type: 2}
   min: {x: 42, y: 137}
   max: {x: 53.2999992, y: 25.6000004}
   interval: 1
