@@ -76,7 +76,7 @@ public class EnemyShotCollider : A_Collider, I_Poolable
 	}
 	private void OnCollisionPlayer( A_Collider target )
 	{
-		if( radius <= 0.0f || target.Type != EType.Player )
+		if( this.radius <= 0.0f || target.Type != EType.Player )
 		{
 			return;
 		}
@@ -86,14 +86,28 @@ public class EnemyShotCollider : A_Collider, I_Poolable
 			this.radius = this.cachedRadius;
 			collisionType = CollisionType.Miss;
 
+			var sub = this.cachedTransform.position - target.cachedTransform.position;
+			float distance = sub.x * sub.x + sub.y * sub.y + sub.z * sub.z;
+			float radius = this.radius * this.radius + target.radius * target.radius;
+			
+			if( distance < radius )
+			{
+				this.InternalHit( target );
+			}
+
 			ReferenceManager.RefPlayerStatusManager.Graze( Trans );
 			ReferenceManager.refScoreManager.CreateStarItem( Trans.position );
 			GameManager.AddGrazeCount();
 		}
 		else
 		{
-			target.Hit( this );
-			refEnemyShot.Explosion();
+			this.InternalHit( target );
 		}
+	}
+
+	private void InternalHit( A_Collider target )
+	{
+		target.Hit( this );
+		refEnemyShot.Explosion();
 	}
 }

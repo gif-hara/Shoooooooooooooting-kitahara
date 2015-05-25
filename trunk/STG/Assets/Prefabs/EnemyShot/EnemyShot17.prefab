@@ -26,7 +26,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 401632}
-  - 114: {fileID: 11401632}
   m_Layer: 0
   m_Name: Shot0ChaseObject
   m_TagString: Untagged
@@ -164,7 +163,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 436804}
-  - 114: {fileID: 11401638}
   m_Layer: 0
   m_Name: Shot3ChaseObject
   m_TagString: Untagged
@@ -180,7 +178,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 436806}
-  - 114: {fileID: 11401636}
   m_Layer: 0
   m_Name: Shot2ChaseObject
   m_TagString: Untagged
@@ -196,7 +193,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 436808}
-  - 114: {fileID: 11401634}
   m_Layer: 0
   m_Name: Shot1ChaseObject
   m_TagString: Untagged
@@ -513,7 +509,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 101632}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -160, y: 0, z: 0}
+  m_LocalPosition: {x: -100, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 486036}
@@ -608,8 +604,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 136804}
-  m_LocalRotation: {x: -1.33158053e-07, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -160, z: 0}
+  m_LocalRotation: {x: -1.33158068e-07, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -100, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 486036}
@@ -620,8 +616,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 136806}
-  m_LocalRotation: {x: -1.33158053e-07, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 160, z: 0}
+  m_LocalRotation: {x: -1.33158068e-07, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 100, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 486036}
@@ -633,7 +629,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 136808}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 160, y: 0, z: 0}
+  m_LocalPosition: {x: 100, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 486036}
@@ -976,62 +972,6 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   prefabExplosion: {fileID: 100002, guid: 01128dc588fe58c46a0a3de362043c1d, type: 2}
   notRemove: 1
---- !u!114 &11401632
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 101632}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ebadeba3e69d8d46be922c77ab2741c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cachedTransform: {fileID: 0}
-  refChaseObject: {fileID: 401634}
-  speed: .00100000005
---- !u!114 &11401634
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 136808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ebadeba3e69d8d46be922c77ab2741c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cachedTransform: {fileID: 0}
-  refChaseObject: {fileID: 401636}
-  speed: .00100000005
---- !u!114 &11401636
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 136806}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ebadeba3e69d8d46be922c77ab2741c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cachedTransform: {fileID: 0}
-  refChaseObject: {fileID: 401638}
-  speed: .00100000005
---- !u!114 &11401638
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 136804}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ebadeba3e69d8d46be922c77ab2741c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cachedTransform: {fileID: 0}
-  refChaseObject: {fileID: 436810}
-  speed: .00100000005
 --- !u!114 &11415810
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1445,7 +1385,7 @@ MonoBehaviour:
   enableTuning: 1
   element:
     min: 120
-    max: 45
+    max: 25
     current: 0
     curve:
       serializedVersion: 2
@@ -1455,9 +1395,9 @@ MonoBehaviour:
         inSlope: 43.54739
         outSlope: 43.54739
         tangentMode: 0
-      - time: .00300000003
+      - time: .00150000001
         value: 1
-        inSlope: 333.333344
+        inSlope: 666.666687
         outSlope: -0
         tangentMode: 21
       - time: 1
@@ -1485,7 +1425,7 @@ MonoBehaviour:
   enableTuning: 1
   element:
     min: 120
-    max: 45
+    max: 25
     current: 0
     curve:
       serializedVersion: 2
@@ -1495,9 +1435,9 @@ MonoBehaviour:
         inSlope: 43.54739
         outSlope: 43.54739
         tangentMode: 0
-      - time: .00300000003
+      - time: .00150000001
         value: 1
-        inSlope: 333.333344
+        inSlope: 666.666687
         outSlope: -0
         tangentMode: 21
       - time: 1
@@ -1525,7 +1465,7 @@ MonoBehaviour:
   enableTuning: 1
   element:
     min: 120
-    max: 45
+    max: 25
     current: 0
     curve:
       serializedVersion: 2
@@ -1535,9 +1475,9 @@ MonoBehaviour:
         inSlope: 43.54739
         outSlope: 43.54739
         tangentMode: 0
-      - time: .00300000003
+      - time: .00150000001
         value: 1
-        inSlope: 333.333344
+        inSlope: 666.666687
         outSlope: -0
         tangentMode: 21
       - time: 1
@@ -1565,7 +1505,7 @@ MonoBehaviour:
   enableTuning: 1
   element:
     min: 120
-    max: 45
+    max: 25
     current: 0
     curve:
       serializedVersion: 2
@@ -1575,9 +1515,9 @@ MonoBehaviour:
         inSlope: 43.54739
         outSlope: 43.54739
         tangentMode: 0
-      - time: .00300000003
+      - time: .00150000001
         value: 1
-        inSlope: 333.333344
+        inSlope: 666.666687
         outSlope: -0
         tangentMode: 21
       - time: 1
@@ -2551,6 +2491,7 @@ MonoBehaviour:
     y: 200
     width: 200
     height: -200
+  delay: 0
 --- !u!114 &11485738
 MonoBehaviour:
   m_ObjectHideFlags: 1
