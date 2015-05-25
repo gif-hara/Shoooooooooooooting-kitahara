@@ -86,14 +86,14 @@ public class EnemyShotCollider : A_Collider, I_Poolable
 			this.radius = this.cachedRadius;
 			collisionType = CollisionType.Miss;
 
-			var sub = this.cachedTransform.position - target.cachedTransform.position;
-			float distance = sub.x * sub.x + sub.y * sub.y + sub.z * sub.z;
-			float radius = this.radius * this.radius + target.radius * target.radius;
-			
-			if( distance < radius )
-			{
-				this.InternalHit( target );
-			}
+//			var sub = this.cachedTransform.position - target.cachedTransform.position;
+//			float distance = sub.x * sub.x + sub.y * sub.y + sub.z * sub.z;
+//			float radius = this.radius * this.radius + target.radius * target.radius;
+//			
+//			if( distance < radius )
+//			{
+//				this.InternalHit( target );
+//			}
 
 			ReferenceManager.RefPlayerStatusManager.Graze( Trans );
 			ReferenceManager.refScoreManager.CreateStarItem( Trans.position );
