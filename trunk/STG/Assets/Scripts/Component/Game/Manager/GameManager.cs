@@ -191,6 +191,10 @@ public class GameManager : GameMonoBehaviour
 			SceneManager.Instance.Change( SceneManager.EffectType.Fast, SceneManager.EffectType.Default, "LoadReplay" );
 			SoundManager.Instance.FadeBGM( 1, 0, 1 );
 		}
+		else if(GameStatusInterfacer.Difficulty == GameDefine.DifficultyType.Extra)
+		{
+			SceneManager.Instance.Change( SceneManager.EffectType.Fast, SceneManager.EffectType.Default, "GameOver" );
+		}
 	}
 
 	/// <summary>

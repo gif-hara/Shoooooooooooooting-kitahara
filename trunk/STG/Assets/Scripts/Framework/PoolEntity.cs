@@ -24,7 +24,7 @@ public class PoolEntity : MonoBehaviour
 	/// </summary>
 	/// <value><c>true</c> if this instance is pooled; otherwise, <c>false</c>.</value>
 	public bool IsPooled{ private set; get; }
-
+	
 	/// <summary>
 	/// 初期化.
 	/// </summary>
