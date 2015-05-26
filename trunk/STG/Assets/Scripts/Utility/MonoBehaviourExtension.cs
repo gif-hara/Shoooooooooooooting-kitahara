@@ -49,11 +49,10 @@ public class MonoBehaviourExtension : MonoBehaviour
 	
 	public virtual void Awake()
 	{
-		
+		cachedTransform = transform;
 	}
 	public virtual void Start()
 	{
-		cachedTransform = transform;
 	}
 	public virtual void Update()	
 	{
