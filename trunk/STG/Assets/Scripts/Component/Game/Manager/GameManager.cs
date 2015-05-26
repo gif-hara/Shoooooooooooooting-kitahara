@@ -194,6 +194,7 @@ public class GameManager : GameMonoBehaviour
 		else if(GameStatusInterfacer.Difficulty == GameDefine.DifficultyType.Extra)
 		{
 			SceneManager.Instance.Change( SceneManager.EffectType.Fast, SceneManager.EffectType.Default, "GameOver" );
+			SoundManager.Instance.FadeBGM( 1.0f, 0.0f, 1 );
 		}
 	}
 
