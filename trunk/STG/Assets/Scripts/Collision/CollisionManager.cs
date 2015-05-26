@@ -244,24 +244,21 @@ public class CollisionManager : GameMonoBehaviour
 		{
 			for( int j=0; j<yList.Count; j++ )
 			{
-				if( !xList[i].enabled || !yList[j].enabled )	continue;
-				
-				if( IsCollision( xList[i], yList[j] ) )
+                var x = xList[i];
+                var y = yList[j];
+				if( !x.enabled || !y.enabled )	continue;
+
+                var sub = x.cachedTransform.position - y.cachedTransform.position;
+                float distance = sub.x * sub.x + sub.y * sub.y + sub.z * sub.z;
+                float radius = x.radius * x.radius + y.radius * y.radius;
+                if( distance < radius )
 				{
-					xList[i].OnCollision( yList[j] );
-					yList[j].OnCollision( xList[i] );
+					x.OnCollision( yList[j] );
+					y.OnCollision( xList[i] );
 				}
 			}
 		}
 		
-	}
-	private bool IsCollision( A_Collider a, A_Collider b )
-	{
-		var sub = a.Trans.position - b.Trans.position;
-		float distance = sub.x * sub.x + sub.y * sub.y + sub.z * sub.z;
-		float radius = a.radius * a.radius + b.radius * b.radius;
-		
-		return distance < radius;
 	}
 	
 	private List<A_Collider> PlayerColliderListNonInvincible

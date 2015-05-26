@@ -16,8 +16,10 @@ public abstract class EventOnOffScreen : GameMonoBehaviour
 	[SerializeField]
 	protected Rect bounds;
 
-	[SerializeField]
-	private int delay;
+    [SerializeField]
+    protected int updateInterval;
+
+    private int cachedUpdateInterval;
 
 	private static Rect fixedBounds;
 
@@ -57,9 +59,22 @@ public abstract class EventOnOffScreen : GameMonoBehaviour
 		// 下.
 		Gizmos.DrawLine( new Vector3( range.x, range.height, 0.0f ), new Vector3( range.width, range.height, 0.0f ) );
 	}
-	
+
+    public override void Start()
+    {
+        base.Start();
+        this.cachedUpdateInterval = this.updateInterval;
+    }
 	public override void Update()
 	{
+        if( this.updateInterval > 0 )
+        {
+            this.updateInterval--;
+            return;
+        }
+
+        this.updateInterval = this.cachedUpdateInterval;
+
 		base.Update();
 
 		var pos = Trans.position;

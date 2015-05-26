@@ -41,6 +41,8 @@ public class MeshUVOffsetTile : MonoBehaviourExtension, I_Poolable
 	
 	private float intervalY = 0.0f;
 
+    private static Vector2[] uv = new Vector2[4]{ new Vector2(), new Vector2(), new Vector2(), new Vector2() };
+
 	public override void Start ()
 	{
 		base.Start ();
@@ -111,12 +113,22 @@ public class MeshUVOffsetTile : MonoBehaviourExtension, I_Poolable
 		float top = 1.0f - (intervalY * (float)(offset / tileX));
 		float right = (intervalX * (offset % tileX)) + intervalX;
 		float bottom = 1.0f - (intervalY * (float)((offset / tileX) + 1));
-		mesh.uv = new Vector2[]
-        {
-            new Vector2( left, bottom ),
-            new Vector2( right, bottom ),
-            new Vector2( left, top ),
-            new Vector2( right, top )
-        };
+        uv[0].x = left;
+        uv[0].y = bottom;
+        uv[1].x = right;
+        uv[1].y = bottom;
+        uv[2].x = left;
+        uv[2].y = top;
+        uv[3].x = right;
+        uv[3].y = top;
+        mesh.uv = uv;
+        //mesh.uv = new Vector2[]
+        //{
+        //    new Vector2( left, bottom ),
+        //    new Vector2( right, bottom ),
+        //    new Vector2( left, top ),
+        //    new Vector2( right, top )
+        //};
 	}
+
 }
