@@ -43,7 +43,7 @@ GameObject:
   - 114: {fileID: 11400160}
   - 114: {fileID: 11400328}
   m_Layer: 0
-  m_Name: '[500] StageChange'
+  m_Name: '[380] StageChange'
   m_TagString: Untagged
   m_Icon: {fileID: -1003283189, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -116,7 +116,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100158}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -400, y: 800, z: 0}
+  m_LocalPosition: {x: -400, y: 680, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400046}
@@ -304,11 +304,6 @@ MonoBehaviour:
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
-    curve1:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
     speed: 0
     delayFrame: 0
     durationFrame: 60
@@ -326,6 +321,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 0, y: 174.160004, z: 0}
     curve0:
       serializedVersion: 2
@@ -342,11 +338,6 @@ MonoBehaviour:
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
-    curve1:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
     speed: 0
     delayFrame: 0
     durationFrame: 60
@@ -364,6 +355,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 0, y: 0, z: 0}
     curve0:
       serializedVersion: 2
@@ -378,11 +370,6 @@ MonoBehaviour:
         inSlope: 1
         outSlope: 0
         tangentMode: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    curve1:
-      serializedVersion: 2
-      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
     speed: .5
@@ -402,6 +389,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 0, y: 473.02475, z: 0}
     curve0:
       serializedVersion: 2
@@ -416,11 +404,6 @@ MonoBehaviour:
         inSlope: 1
         outSlope: 0
         tangentMode: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    curve1:
-      serializedVersion: 2
-      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
     speed: 0
@@ -440,6 +423,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11400160
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -452,7 +436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 400158}
-  timeLine: 500
+  timeLine: 380
   refActionConditioner: {fileID: 0}
   prefabNextStage: {fileID: 100004, guid: 93161f42c7e1d448f91f2c2ef34334f6, type: 2}
   prefabExtensionStage: {fileID: 0}
