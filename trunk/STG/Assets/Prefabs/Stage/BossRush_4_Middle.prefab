@@ -43,7 +43,7 @@ GameObject:
   - 114: {fileID: 11407520}
   - 114: {fileID: 11407522}
   m_Layer: 0
-  m_Name: '[500] StageChange'
+  m_Name: '[240] StageChange'
   m_TagString: Untagged
   m_Icon: {fileID: -1003283189, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -65,6 +65,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &164764
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 464764}
+  - 114: {fileID: 11464764}
+  m_Layer: 0
+  m_Name: '[60] FadeBGM'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &407518
 Transform:
   m_ObjectHideFlags: 1
@@ -78,6 +94,7 @@ Transform:
   - {fileID: 407520}
   - {fileID: 407522}
   - {fileID: 407524}
+  - {fileID: 464764}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &407520
@@ -99,7 +116,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 107522}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -400, y: 800, z: 0}
+  m_LocalPosition: {x: -400, y: 540, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 407518}
@@ -116,6 +133,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 407518}
   m_RootOrder: 2
+--- !u!4 &464764
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 164764}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -400, y: 360, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 407518}
+  m_RootOrder: 3
 --- !u!114 &11407516
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -396,11 +425,6 @@ MonoBehaviour:
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
-    curve1:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
     speed: 0
     delayFrame: 0
     durationFrame: 260
@@ -418,6 +442,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 100000, guid: eec2e064b44113647be5b71a3380f00a, type: 2}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 0, y: 0, z: 0}
     curve0:
       serializedVersion: 2
@@ -432,11 +457,6 @@ MonoBehaviour:
         inSlope: 1
         outSlope: 0
         tangentMode: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    curve1:
-      serializedVersion: 2
-      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
     speed: .239999995
@@ -456,6 +476,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
   - targetPosition: {x: 0, y: 478, z: 0}
     curve0:
       serializedVersion: 2
@@ -470,11 +491,6 @@ MonoBehaviour:
         inSlope: 1
         outSlope: 0
         tangentMode: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    curve1:
-      serializedVersion: 2
-      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
     speed: 0
@@ -494,6 +510,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11407520
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -506,10 +523,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 407522}
-  timeLine: 500
+  timeLine: 240
   refActionConditioner: {fileID: 0}
-  prefabNextStage: {fileID: 100008, guid: dc266471ee138d346bae4983c9e5fe09, type: 2}
-  prefabExtensionStage: {fileID: 100008, guid: ad45c03d3730c7e4880003f82c6f8590, type: 2}
+  prefabNextStage: {fileID: 100008, guid: 30eae58fe7c1348e88e79914eb157fe4, type: 2}
+  prefabExtensionStage: {fileID: 100008, guid: b497bb2e5f02d4c169079f5ecca25893, type: 2}
   refConditioner: {fileID: 11407522}
 --- !u!114 &11407522
 MonoBehaviour:
@@ -542,6 +559,23 @@ MonoBehaviour:
   exceptionDuration: 99999
   needDestroyEnemyId: 37
   needDestroyEnemyNum: 1
+--- !u!114 &11464764
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 164764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be7044256668e45499bbdba0931f34a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 464764}
+  timeLine: 60
+  refActionConditioner: {fileID: 0}
+  from: 1
+  to: 0
+  duration: 140
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
