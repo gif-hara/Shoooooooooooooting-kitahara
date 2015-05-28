@@ -24,13 +24,16 @@ public class PoolEntity : MonoBehaviour
 	/// </summary>
 	/// <value><c>true</c> if this instance is pooled; otherwise, <c>false</c>.</value>
 	public bool IsPooled{ private set; get; }
-	
+
+	public string TargetName{ private set; get; }
+
 	/// <summary>
 	/// 初期化.
 	/// </summary>
 	/// <param name="key">Key.</param>
 	public void Initialize( int key )
 	{
+		this.TargetName = this.gameObject.name;
 		this.Key = key;
 		this.IsPooled = false;
 	}

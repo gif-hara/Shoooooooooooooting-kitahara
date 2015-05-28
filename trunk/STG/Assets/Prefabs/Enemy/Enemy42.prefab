@@ -427,7 +427,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
-  prefab: {fileID: 100090, guid: 18f8c84583fffd9428d34b453d9a5dd2, type: 2}
+  prefab: {fileID: 100002, guid: 9c34980ebaf998b43a95929a879b6f1c, type: 2}
+  createType: 1
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -779,6 +780,7 @@ MonoBehaviour:
     y: 20
     width: 20
     height: -20
+  updateInterval: 0
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1

@@ -8087,6 +8087,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11400368
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9797,6 +9798,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11400482
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9846,7 +9848,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   prefab: {fileID: 100204, guid: fea4ccdac150b494986e31ab43c759d5, type: 2}
-  createType: 1
+  createType: 0
 --- !u!114 &11400488
 MonoBehaviour:
   m_ObjectHideFlags: 1

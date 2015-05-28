@@ -31,4 +31,13 @@ public class AutoDestroy : MonoBehaviour
 		
 		delay--;
 	}
+
+	[ContextMenu("Replace AutoPool")]
+	void ReplaceAutoPool()
+	{
+		var autoPool = gameObject.AddComponent<AutoPool>();
+		autoPool.refTarget = this.refTarget;
+		autoPool.delay = this.delay;
+		DestroyImmediate( this );
+	}
 }

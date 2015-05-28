@@ -61,7 +61,7 @@ public class ObjectPool : MonoBehaviour
 			{
 				continue;
 			}
-
+			Debug.Log( "pool TargetName = " + entity.TargetName, entity );
 			this.ReleaseGameObject( entity.gameObject );
 		}
 	}
