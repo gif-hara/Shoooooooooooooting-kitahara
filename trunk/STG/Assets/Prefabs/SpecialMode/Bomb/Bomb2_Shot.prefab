@@ -163,7 +163,7 @@ MonoBehaviour:
   radius: 15
   delayUpdate: 0
   refParent: {fileID: 100006}
-  power: 3000
+  power: 30
   prefabExplosion: {fileID: 100002, guid: 4e39cc41ea100fd49b4fd655b07a63f5, type: 2}
   isCollisionDead: 1
 --- !u!114 &11400002
@@ -238,7 +238,7 @@ MonoBehaviour:
     y: 64
     width: 32
     height: -64
-  delay: 0
+  updateInterval: 0
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1
