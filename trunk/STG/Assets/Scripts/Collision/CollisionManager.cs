@@ -253,8 +253,8 @@ public class CollisionManager : GameMonoBehaviour
                 float radius = x.radius * x.radius + y.radius * y.radius;
                 if( distance < radius )
 				{
-					x.OnCollision( yList[j] );
-					y.OnCollision( xList[i] );
+					x.OnCollision( y );
+					y.OnCollision( x );
 				}
 			}
 		}
