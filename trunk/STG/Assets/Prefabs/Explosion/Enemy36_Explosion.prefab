@@ -17,22 +17,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!1 &100002
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 400006}
-  - 114: {fileID: 11400000}
-  m_Layer: 0
-  m_Name: ExplosionEvent_Delay560
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
 --- !u!1 &100004
 GameObject:
   m_ObjectHideFlags: 0
@@ -164,7 +148,6 @@ GameObject:
   - 114: {fileID: 11400066}
   - 114: {fileID: 11400064}
   - 114: {fileID: 11400062}
-  - 114: {fileID: 11400060}
   - 114: {fileID: 11400058}
   - 114: {fileID: 11400070}
   m_Layer: 0
@@ -461,18 +444,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 400014}
   m_RootOrder: 0
---- !u!4 &400006
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100002}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 400090}
-  m_RootOrder: 7
 --- !u!4 &400008
 Transform:
   m_ObjectHideFlags: 1
@@ -599,7 +570,7 @@ Transform:
   - {fileID: 400034}
   - {fileID: 400032}
   m_Father: {fileID: 400090}
-  m_RootOrder: 9
+  m_RootOrder: 8
 --- !u!4 &400028
 Transform:
   m_ObjectHideFlags: 1
@@ -713,7 +684,7 @@ Transform:
   - {fileID: 400028}
   - {fileID: 400012}
   m_Father: {fileID: 400090}
-  m_RootOrder: 8
+  m_RootOrder: 7
 --- !u!4 &400090
 Transform:
   m_ObjectHideFlags: 1
@@ -731,7 +702,6 @@ Transform:
   - {fileID: 400024}
   - {fileID: 400040}
   - {fileID: 400030}
-  - {fileID: 400006}
   - {fileID: 400080}
   - {fileID: 400026}
   m_Father: {fileID: 0}
@@ -871,20 +841,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100036}
   m_Mesh: {fileID: 4300000, guid: 1c28b765b865feb469b53d7fa4778b81, type: 2}
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbb63d1c6f5d1094ab5dda6de67ba8bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cachedTransform: {fileID: 0}
-  delay: 560
-  frameRate: 60
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1385,20 +1341,6 @@ MonoBehaviour:
   to: {r: 1, g: 1, b: 1, a: 0}
   duration: 60
   layerMaskName: EffectLv4
---- !u!114 &11400060
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbb63d1c6f5d1094ab5dda6de67ba8bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cachedTransform: {fileID: 0}
-  delay: 440
-  frameRate: 30
 --- !u!114 &11400062
 MonoBehaviour:
   m_ObjectHideFlags: 1

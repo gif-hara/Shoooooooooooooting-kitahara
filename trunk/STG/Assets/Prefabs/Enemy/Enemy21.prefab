@@ -309,8 +309,9 @@ GameObject:
   - 4: {fileID: 400034}
   - 114: {fileID: 11400092}
   - 114: {fileID: 11400094}
-  - 114: {fileID: 11400390}
   - 114: {fileID: 11433352}
+  - 114: {fileID: 11400390}
+  - 114: {fileID: 11458888}
   m_Layer: 0
   m_Name: Event
   m_TagString: Untagged
@@ -534,8 +535,9 @@ GameObject:
   - 4: {fileID: 400058}
   - 114: {fileID: 11400190}
   - 114: {fileID: 11400188}
-  - 114: {fileID: 11400384}
   - 114: {fileID: 11433350}
+  - 114: {fileID: 11400384}
+  - 114: {fileID: 11439032}
   m_Layer: 0
   m_Name: Event
   m_TagString: Untagged
@@ -10424,17 +10426,11 @@ MonoBehaviour:
   - prefab: {fileID: 100000, guid: ad4c657d005b14d4cb88803dd112e497, type: 2}
     parent: {fileID: 400164}
     detachParent: 0
-  - prefab: {fileID: 100002, guid: 4b67fad1fc8426f48882c95f8e4e7c27, type: 2}
-    parent: {fileID: 400164}
-    detachParent: 0
   - prefab: {fileID: 100000, guid: ad4c657d005b14d4cb88803dd112e497, type: 2}
     parent: {fileID: 400162}
     detachParent: 0
-  - prefab: {fileID: 100002, guid: 4b67fad1fc8426f48882c95f8e4e7c27, type: 2}
-    parent: {fileID: 400162}
-    detachParent: 0
   delay: 0
-  objectCreateType: 1
+  objectCreateType: 0
 --- !u!114 &11400386
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10477,9 +10473,6 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   createType: 1
   elementList:
-  - prefab: {fileID: 100000, guid: ad4c657d005b14d4cb88803dd112e497, type: 2}
-    parent: {fileID: 400168}
-    detachParent: 0
   - prefab: {fileID: 100002, guid: 4b67fad1fc8426f48882c95f8e4e7c27, type: 2}
     parent: {fileID: 400168}
     detachParent: 0
@@ -13256,6 +13249,47 @@ MonoBehaviour:
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
+--- !u!114 &11439032
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fafde7e7b5f40b4388b976f884aeffb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  createType: 1
+  elementList:
+  - prefab: {fileID: 100002, guid: 4b67fad1fc8426f48882c95f8e4e7c27, type: 2}
+    parent: {fileID: 400164}
+    detachParent: 0
+  - prefab: {fileID: 100002, guid: 4b67fad1fc8426f48882c95f8e4e7c27, type: 2}
+    parent: {fileID: 400162}
+    detachParent: 0
+  delay: 0
+  objectCreateType: 1
+--- !u!114 &11458888
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fafde7e7b5f40b4388b976f884aeffb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  createType: 1
+  elementList:
+  - prefab: {fileID: 100000, guid: ad4c657d005b14d4cb88803dd112e497, type: 2}
+    parent: {fileID: 400168}
+    detachParent: 0
+  delay: 0
+  objectCreateType: 0
 --- !u!114 &11474940
 MonoBehaviour:
   m_ObjectHideFlags: 1

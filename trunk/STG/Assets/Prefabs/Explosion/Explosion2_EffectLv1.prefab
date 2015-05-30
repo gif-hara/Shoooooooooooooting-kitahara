@@ -27,6 +27,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400002}
   - 114: {fileID: 11400002}
+  - 114: {fileID: 11406864}
   m_Layer: 14
   m_Name: Explosion2_EffectLv1
   m_TagString: Untagged
@@ -104,6 +105,7 @@ MonoBehaviour:
   tileY: 6
   interval: 1
   loop: 0
+  initialOffset: 0
   createType: 1
 --- !u!114 &11400002
 MonoBehaviour:
@@ -124,6 +126,17 @@ MonoBehaviour:
     detachParent: 1
   delay: 1
   objectCreateType: 1
+--- !u!114 &11406864
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b28960d8bbd12452883773c82ebac0fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
