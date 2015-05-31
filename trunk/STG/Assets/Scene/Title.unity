@@ -3302,6 +3302,7 @@ GameObject:
   - 114: {fileID: 907938075}
   - 114: {fileID: 907938077}
   - 114: {fileID: 907938076}
+  - 114: {fileID: 907938078}
   m_Layer: 0
   m_Name: DecideEvent
   m_TagString: Untagged
@@ -3395,6 +3396,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb9981340b55bce43b96b99e9892a070, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &907938078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 907938070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 709bbe42776e26049ba7d64682a6420a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playStyle: 0
 --- !u!1 &915951376
 GameObject:
   m_ObjectHideFlags: 0
