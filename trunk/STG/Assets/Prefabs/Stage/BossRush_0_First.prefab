@@ -34,6 +34,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
+--- !u!1 &167750
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 467750}
+  - 114: {fileID: 11467750}
+  m_Layer: 0
+  m_Name: '[0] CreatePrefab [Background_BossRush0]'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &182664
 GameObject:
   m_ObjectHideFlags: 0
@@ -62,6 +78,7 @@ Transform:
   m_Children:
   - {fileID: 455244}
   - {fileID: 482664}
+  - {fileID: 467750}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &455244
@@ -76,6 +93,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 455242}
   m_RootOrder: 0
+--- !u!4 &467750
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167750}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -400, y: 300, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 455242}
+  m_RootOrder: 2
 --- !u!4 &482664
 Transform:
   m_ObjectHideFlags: 1
@@ -260,6 +289,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   isBasicRoot: 0
+--- !u!114 &11467750
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dedbb67f214ef5144824d6110cab7de4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 467750}
+  timeLine: 0
+  refActionConditioner: {fileID: 0}
+  prefab: {fileID: 126218, guid: d6954451f1dc54a9ca73ff41a47616d0, type: 2}
 --- !u!114 &11482664
 MonoBehaviour:
   m_ObjectHideFlags: 1
