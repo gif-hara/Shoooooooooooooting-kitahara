@@ -73,6 +73,7 @@ public class ObjectMoveChasePlayer : A_ObjectMove
 	}
 	protected override void Finish ()
 	{
+		refTrans.SendMessage( "OnCompleteChasePlayer", SendMessageOptions.DontRequireReceiver );
 	}
 	/// <summary>
 	/// プレイヤー座標との同期取り.

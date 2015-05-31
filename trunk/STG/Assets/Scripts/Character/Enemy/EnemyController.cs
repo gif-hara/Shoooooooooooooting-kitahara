@@ -152,6 +152,23 @@ public class EnemyController : EnemyControllerBase
 		});
 	}
 
+	[ContextMenu( "Set ShotComponent" )]
+	void SetShotComponent()
+	{
+		this.refShotCreatorList.Clear();
+		transform.AllVisit( (t) =>
+		{
+			var shotCreators = t.GetComponents<EnemyShotCreator>();
+			if( shotCreators.Length > 0 )
+			{
+				foreach( var s in shotCreators )
+				{
+					this.refShotCreatorList.Add( s );
+				}
+			}
+		});
+	}
+
 	public override void Awake()
 	{
 		base.Awake();
@@ -360,6 +377,20 @@ public class EnemyController : EnemyControllerBase
 		}
 
 		Destroy( gameObject );
+	}
+
+	/// <summary>
+	/// プレイヤー追従移動が完了した際のイベント.
+	/// </summary>
+	void OnCompleteChasePlayer()
+	{
+		refShotCreatorList.ForEach( (obj) =>
+		{
+			if( obj != null )
+			{
+				obj.enabled = false;
+			}
+		});
 	}
 	/// <summary>
 	/// 移動コンポーネントアタッチ.
