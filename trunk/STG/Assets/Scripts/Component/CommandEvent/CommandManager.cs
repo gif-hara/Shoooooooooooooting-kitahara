@@ -82,7 +82,7 @@ public class CommandManager : MonoBehaviour
 
 			CommandManager.CommandEventData data = new CommandEventData();
 			targetObject.SendMessage( CommandEventMessage, data );
-
+			Debug.Log( targetObject.name, targetObject );
 			return data;
 		}
 	}

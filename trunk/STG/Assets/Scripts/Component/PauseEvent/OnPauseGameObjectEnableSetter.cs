@@ -23,6 +23,7 @@ public class OnPauseGameObjectEnableSetter : MonoBehaviour
 	void OnPause()
 	{
 		refTarget.SetActive( isPauseActive );
+		Debug.Log( refTarget.name, refTarget );
 	}
 
 	void OnUnPause()
