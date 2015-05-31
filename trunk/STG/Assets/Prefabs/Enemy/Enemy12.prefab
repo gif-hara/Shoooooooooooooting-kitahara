@@ -869,6 +869,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   prefab: {fileID: 100002, guid: c302937e36dc5234e9ccbcfa5472cb72, type: 2}
+  createType: 1
 --- !u!114 &11400014
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -959,8 +960,8 @@ MonoBehaviour:
     height: -65
   refShotCreatorList:
   - {fileID: 11400072}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400042}
+  - {fileID: 11400032}
 --- !u!114 &11400024
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1011,6 +1012,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 1
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11400028
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1277,6 +1279,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 1
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11400048
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1487,6 +1490,7 @@ MonoBehaviour:
     parent: {fileID: 400000}
     detachParent: 1
   delay: 90
+  objectCreateType: 0
 --- !u!114 &11400066
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1537,6 +1541,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 1
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11400070
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1883,6 +1888,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   prefab: {fileID: 100004, guid: 4613779c239a8ee49a98288038e39a17, type: 2}
+  createType: 1
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1

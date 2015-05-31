@@ -277,11 +277,6 @@ MonoBehaviour:
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
-    curve1:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
     speed: 0
     delayFrame: 0
     durationFrame: 60
@@ -299,6 +294,7 @@ MonoBehaviour:
     prefabiTweenPath: {fileID: 0}
     offset: {x: 0, y: 0}
     isReverse: 0
+    isIgnoreDetach: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -482,6 +478,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 1
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11400016
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -613,6 +610,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 1
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11400026
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -698,6 +696,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 1
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11400574
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -795,6 +794,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   prefab: {fileID: 100002, guid: 4e39cc41ea100fd49b4fd655b07a63f5, type: 2}
+  createType: 1
 --- !u!114 &11400724
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -822,6 +822,8 @@ MonoBehaviour:
     height: -32
   refShotCreatorList:
   - {fileID: 11400020}
+  - {fileID: 11400018}
+  - {fileID: 11400678}
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1

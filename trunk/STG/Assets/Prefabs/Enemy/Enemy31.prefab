@@ -1038,6 +1038,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   prefab: {fileID: 100002, guid: 9c34980ebaf998b43a95929a879b6f1c, type: 2}
+  createType: 1
 --- !u!114 &11400020
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1080,6 +1081,17 @@ MonoBehaviour:
     height: -46
   refShotCreatorList:
   - {fileID: 11400136}
+  - {fileID: 11400132}
+  - {fileID: 11400150}
+  - {fileID: 11400102}
+  - {fileID: 11400118}
+  - {fileID: 11400116}
+  - {fileID: 11400028}
+  - {fileID: 11400014}
+  - {fileID: 11400030}
+  - {fileID: 11400044}
+  - {fileID: 11400060}
+  - {fileID: 11400046}
 --- !u!114 &11400024
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2597,6 +2609,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   lookSpeed: 1
+  offset: {x: 0, y: 0, z: 0}
 --- !u!114 &11400136
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2858,6 +2871,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   prefab: {fileID: 100004, guid: 4613779c239a8ee49a98288038e39a17, type: 2}
+  createType: 1
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1

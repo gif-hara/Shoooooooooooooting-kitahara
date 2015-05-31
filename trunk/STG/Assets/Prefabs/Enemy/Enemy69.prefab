@@ -1117,6 +1117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   prefab: {fileID: 100002, guid: c302937e36dc5234e9ccbcfa5472cb72, type: 2}
+  createType: 1
 --- !u!114 &11400040
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1390,8 +1391,11 @@ MonoBehaviour:
     height: -70
   refShotCreatorList:
   - {fileID: 11400054}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400022}
+  - {fileID: 11400078}
+  - {fileID: 11400050}
+  - {fileID: 11400032}
+  - {fileID: 11400008}
 --- !u!114 &11400072
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1616,6 +1620,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   prefab: {fileID: 100004, guid: 4613779c239a8ee49a98288038e39a17, type: 2}
+  createType: 1
 --- !u!114 &11489000
 MonoBehaviour:
   m_ObjectHideFlags: 1

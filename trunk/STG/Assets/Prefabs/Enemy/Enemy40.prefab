@@ -1539,6 +1539,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   refFrom: {fileID: 400058}
   refTo: {fileID: 400080}
+  worldSpaceType: 0
   duration: .200000003
 --- !u!114 &11400004
 MonoBehaviour:
@@ -1553,6 +1554,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   refFrom: {fileID: 400058}
   refTo: {fileID: 400080}
+  worldSpaceType: 0
   duration: .400000006
 --- !u!114 &11400006
 MonoBehaviour:
@@ -1567,6 +1569,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   refFrom: {fileID: 400058}
   refTo: {fileID: 400080}
+  worldSpaceType: 0
   duration: .600000024
 --- !u!114 &11400008
 MonoBehaviour:
@@ -1581,6 +1584,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   refFrom: {fileID: 400058}
   refTo: {fileID: 400078}
+  worldSpaceType: 0
   duration: .600000024
 --- !u!114 &11400010
 MonoBehaviour:
@@ -1595,6 +1599,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   refFrom: {fileID: 400058}
   refTo: {fileID: 400078}
+  worldSpaceType: 0
   duration: .400000006
 --- !u!114 &11400012
 MonoBehaviour:
@@ -1609,6 +1614,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   refFrom: {fileID: 400058}
   refTo: {fileID: 400078}
+  worldSpaceType: 0
   duration: .200000003
 --- !u!114 &11400014
 MonoBehaviour:
@@ -1623,6 +1629,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   refFrom: {fileID: 400058}
   refTo: {fileID: 400076}
+  worldSpaceType: 0
   duration: .200000003
 --- !u!114 &11400016
 MonoBehaviour:
@@ -1637,6 +1644,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   refFrom: {fileID: 400058}
   refTo: {fileID: 400076}
+  worldSpaceType: 0
   duration: .400000006
 --- !u!114 &11400018
 MonoBehaviour:
@@ -1651,6 +1659,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   refFrom: {fileID: 400058}
   refTo: {fileID: 400076}
+  worldSpaceType: 0
   duration: .600000024
 --- !u!114 &11400020
 MonoBehaviour:
@@ -1665,6 +1674,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   refFrom: {fileID: 400058}
   refTo: {fileID: 400082}
+  worldSpaceType: 0
   duration: .600000024
 --- !u!114 &11400022
 MonoBehaviour:
@@ -1679,6 +1689,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   refFrom: {fileID: 400058}
   refTo: {fileID: 400082}
+  worldSpaceType: 0
   duration: .400000006
 --- !u!114 &11400024
 MonoBehaviour:
@@ -1693,6 +1704,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   refFrom: {fileID: 400058}
   refTo: {fileID: 400082}
+  worldSpaceType: 0
   duration: .200000003
 --- !u!114 &11400026
 MonoBehaviour:
@@ -2535,6 +2547,7 @@ MonoBehaviour:
   speed: 2.0999999
   axis: {x: 0, y: 0, z: 1}
   addSpeed: 0
+  interval: 0
 --- !u!114 &11400088
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2561,6 +2574,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   prefab: {fileID: 100002, guid: c302937e36dc5234e9ccbcfa5472cb72, type: 2}
+  createType: 1
 --- !u!114 &11400092
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2622,7 +2636,15 @@ MonoBehaviour:
     y: 80
     width: 80
     height: -80
-  refShotCreatorList: []
+  refShotCreatorList:
+  - {fileID: 11400146}
+  - {fileID: 11400106}
+  - {fileID: 11400128}
+  - {fileID: 11400050}
+  - {fileID: 11400126}
+  - {fileID: 11400048}
+  - {fileID: 11400108}
+  - {fileID: 11400026}
 --- !u!114 &11400098
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3447,6 +3469,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   prefab: {fileID: 100004, guid: 4613779c239a8ee49a98288038e39a17, type: 2}
+  createType: 1
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1

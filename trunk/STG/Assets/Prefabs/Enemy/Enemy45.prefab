@@ -1884,16 +1884,44 @@ MonoBehaviour:
     width: 76
     height: -178
   refShotCreatorList:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400018}
+  - {fileID: 11400028}
+  - {fileID: 11400146}
+  - {fileID: 11400040}
+  - {fileID: 11400046}
+  - {fileID: 11400052}
+  - {fileID: 11400058}
+  - {fileID: 11400064}
+  - {fileID: 11400070}
+  - {fileID: 11400076}
+  - {fileID: 11400082}
+  - {fileID: 11400090}
+  - {fileID: 11400096}
+  - {fileID: 11400102}
+  - {fileID: 11400108}
+  - {fileID: 11400114}
+  - {fileID: 11400120}
+  - {fileID: 11400126}
+  - {fileID: 11400132}
+  - {fileID: 11400278}
+  - {fileID: 11400268}
+  - {fileID: 11400150}
+  - {fileID: 11400256}
+  - {fileID: 11400250}
+  - {fileID: 11400244}
+  - {fileID: 11400238}
+  - {fileID: 11400232}
+  - {fileID: 11400226}
+  - {fileID: 11400220}
+  - {fileID: 11400214}
+  - {fileID: 11400206}
+  - {fileID: 11400200}
+  - {fileID: 11400194}
+  - {fileID: 11400188}
+  - {fileID: 11400182}
+  - {fileID: 11400176}
+  - {fileID: 11400170}
+  - {fileID: 11400164}
 --- !u!114 &11400010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1907,6 +1935,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   prefab: {fileID: 100090, guid: 18f8c84583fffd9428d34b453d9a5dd2, type: 2}
+  createType: 1
 --- !u!114 &11400012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2263,6 +2292,7 @@ MonoBehaviour:
   speed: 0
   axis: {x: 0, y: 0, z: 1}
   addSpeed: .0549999997
+  interval: 0
 --- !u!114 &11400040
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2917,6 +2947,7 @@ MonoBehaviour:
   speed: 0
   axis: {x: 0, y: 0, z: 1}
   addSpeed: -.0549999997
+  interval: 0
 --- !u!114 &11400090
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4520,6 +4551,7 @@ MonoBehaviour:
   speed: 0
   axis: {x: 0, y: 0, z: 1}
   addSpeed: -.0549999997
+  interval: 0
 --- !u!114 &11400210
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5174,6 +5206,7 @@ MonoBehaviour:
   speed: 0
   axis: {x: 0, y: 0, z: 1}
   addSpeed: .0549999997
+  interval: 0
 --- !u!114 &11400260
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5481,6 +5514,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   refShadowMaterial: {fileID: 2100000, guid: 89e812463e8bb0641bc22314a3ce006c, type: 2}
+  offset: {x: 0, y: 0}
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1

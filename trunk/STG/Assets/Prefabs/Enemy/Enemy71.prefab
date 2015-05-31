@@ -1678,6 +1678,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   refFrom: {fileID: 400026}
   refTo: {fileID: 400062}
+  worldSpaceType: 0
   duration: .200000003
 --- !u!114 &11400004
 MonoBehaviour:
@@ -1692,6 +1693,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   refFrom: {fileID: 400026}
   refTo: {fileID: 400062}
+  worldSpaceType: 0
   duration: .400000006
 --- !u!114 &11400006
 MonoBehaviour:
@@ -1706,6 +1708,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   refFrom: {fileID: 400026}
   refTo: {fileID: 400062}
+  worldSpaceType: 0
   duration: .600000024
 --- !u!114 &11400008
 MonoBehaviour:
@@ -1720,6 +1723,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   refFrom: {fileID: 400026}
   refTo: {fileID: 400054}
+  worldSpaceType: 0
   duration: .600000024
 --- !u!114 &11400010
 MonoBehaviour:
@@ -1734,6 +1738,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   refFrom: {fileID: 400026}
   refTo: {fileID: 400054}
+  worldSpaceType: 0
   duration: .400000006
 --- !u!114 &11400012
 MonoBehaviour:
@@ -1748,6 +1753,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   refFrom: {fileID: 400026}
   refTo: {fileID: 400054}
+  worldSpaceType: 0
   duration: .200000003
 --- !u!114 &11400014
 MonoBehaviour:
@@ -1762,6 +1768,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   refFrom: {fileID: 400026}
   refTo: {fileID: 400064}
+  worldSpaceType: 0
   duration: .200000003
 --- !u!114 &11400016
 MonoBehaviour:
@@ -1776,6 +1783,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   refFrom: {fileID: 400026}
   refTo: {fileID: 400064}
+  worldSpaceType: 0
   duration: .400000006
 --- !u!114 &11400018
 MonoBehaviour:
@@ -1790,6 +1798,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   refFrom: {fileID: 400026}
   refTo: {fileID: 400064}
+  worldSpaceType: 0
   duration: .600000024
 --- !u!114 &11400020
 MonoBehaviour:
@@ -1804,6 +1813,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   refFrom: {fileID: 400026}
   refTo: {fileID: 400024}
+  worldSpaceType: 0
   duration: .600000024
 --- !u!114 &11400022
 MonoBehaviour:
@@ -1818,6 +1828,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   refFrom: {fileID: 400026}
   refTo: {fileID: 400024}
+  worldSpaceType: 0
   duration: .400000006
 --- !u!114 &11400024
 MonoBehaviour:
@@ -1832,6 +1843,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   refFrom: {fileID: 400026}
   refTo: {fileID: 400024}
+  worldSpaceType: 0
   duration: .200000003
 --- !u!114 &11400026
 MonoBehaviour:
@@ -1858,6 +1870,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 1
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11400028
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2019,6 +2032,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 1
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11400038
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2216,6 +2230,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 1
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11400052
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2626,6 +2641,7 @@ MonoBehaviour:
   speed: 3
   axis: {x: 0, y: 0, z: 1}
   addSpeed: 0
+  interval: 0
 --- !u!114 &11400082
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2773,6 +2789,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 1
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11400094
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2832,6 +2849,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   prefab: {fileID: 100002, guid: c302937e36dc5234e9ccbcfa5472cb72, type: 2}
+  createType: 1
 --- !u!114 &11400102
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2857,7 +2875,23 @@ MonoBehaviour:
     y: 80
     width: 80
     height: -80
-  refShotCreatorList: []
+  refShotCreatorList:
+  - {fileID: 11405608}
+  - {fileID: 11405654}
+  - {fileID: 11405630}
+  - {fileID: 11405680}
+  - {fileID: 11405656}
+  - {fileID: 11405632}
+  - {fileID: 11405726}
+  - {fileID: 11405702}
+  - {fileID: 11405678}
+  - {fileID: 11405728}
+  - {fileID: 11405704}
+  - {fileID: 11400088}
+  - {fileID: 11405606}
+  - {fileID: 11400042}
+  - {fileID: 11400044}
+  - {fileID: 11400106}
 --- !u!114 &11400104
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2992,6 +3026,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 1
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11405598
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3325,6 +3360,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 1
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11405620
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3350,6 +3386,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 1
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11405622
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3683,6 +3720,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 1
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11405644
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3708,6 +3746,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 1
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11405646
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4041,6 +4080,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 1
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11405668
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4066,6 +4106,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 1
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11405670
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4399,6 +4440,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 1
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11405692
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4424,6 +4466,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 1
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11405694
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4757,6 +4800,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 1
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11405716
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4782,6 +4826,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 1
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11405718
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5115,6 +5160,7 @@ MonoBehaviour:
       m_PostInfinity: 2
   separate: 1
   currentSeparate: 0
+  offset: 0
 --- !u!114 &11405740
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5184,6 +5230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cachedTransform: {fileID: 0}
   prefab: {fileID: 100004, guid: 4613779c239a8ee49a98288038e39a17, type: 2}
+  createType: 1
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1
