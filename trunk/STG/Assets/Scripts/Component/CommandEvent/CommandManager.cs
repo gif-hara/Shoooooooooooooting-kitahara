@@ -159,7 +159,10 @@ public class CommandManager : MonoBehaviour
 		if( MyInput.BombKeyDown )
 		{
 			var data = new CommandEventData();
-			refCancelEventObject.BroadcastMessage( InputEvent.CommandEventMessage, data );
+			if( refCancelEventObject != null )
+			{
+				refCancelEventObject.BroadcastMessage( InputEvent.CommandEventMessage, data );
+			}
 			LockInput( data );
 		}
 	}
