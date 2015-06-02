@@ -154,6 +154,14 @@ public class DebugManager : A_GUIElement
 			ReferenceManager.refPlayerLayer.BroadcastMessage( GameDefine.StartResultMessage );
 		});
 		
+		// フレームレート変更.
+		KeyPush( KeyCode.J, () =>
+		        {
+			Application.targetFrameRate = Application.targetFrameRate == 60
+				? 0
+				: 60;
+		});
+		
 		KeyPush( KeyCode.A, () => refPlayerStatusManager.DebugChange( 0 ) );
 		KeyPush( KeyCode.S, () => refPlayerStatusManager.DebugChange( 1 ) );
 		KeyPush( KeyCode.D, () => refPlayerStatusManager.DebugChange( 2 ) );
@@ -184,6 +192,8 @@ public class DebugManager : A_GUIElement
 		builder.Append( StringAsset.Get( "Format_DebugAllDestroyEnemyShot" ) );
 		builder.AppendLine();
 		builder.Append( StringAsset.Get( "Format_DebugReverseStageClear" ) );
+		builder.AppendLine();
+		builder.AppendFormat( StringAsset.Get( "Format_DebugFrameRate" ), Application.targetFrameRate );
 		builder.AppendLine();
 		builder.Append( StringAsset.Get( "Format_DebugPlayerCreate" ) );
 		Label( builder.ToString() );
