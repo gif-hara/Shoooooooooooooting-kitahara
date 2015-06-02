@@ -196,6 +196,7 @@ MonoBehaviour:
   refCancelEventObject: {fileID: 1770624025}
   defaultColor: {r: 1, g: 1, b: 1, a: 1}
   selectColor: {r: 1, g: 0, b: 0, a: 1}
+  disableUpDownEvent: 0
   refInputEventList:
   - refCommandTextMesh: {fileID: 1864733940}
     refSelectEvent: {fileID: 32469243}
@@ -346,6 +347,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 231814076}
+  - 114: {fileID: 231814077}
   m_Layer: 8
   m_Name: CommandWindow
   m_TagString: Untagged
@@ -360,13 +362,61 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 231814075}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 140, y: -160, z: 0}
+  m_LocalPosition: {x: 140, y: -455, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1485690482}
   - {fileID: 131320307}
   m_Father: {fileID: 1957406506}
   m_RootOrder: 1
+--- !u!114 &231814077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 231814075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fa1ea50f8effcc43820fedd49e6389f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedTransform: {fileID: 0}
+  refTrans: {fileID: 231814076}
+  data:
+    targetPosition: {x: 140, y: -160, z: 0}
+    curve0:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 2
+        outSlope: 2
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    speed: 0
+    delayFrame: 10
+    durationFrame: 20
+    isDestroy: 0
+    isOnOverDistance: 0
+    isSyncRotation: 0
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    moveType: 0
+    initFuncName: 
+    prefabiTweenPath: {fileID: 0}
+    offset: {x: 0, y: 0}
+    isReverse: 0
+    isIgnoreDetach: 0
 --- !u!1 &276353393
 GameObject:
   m_ObjectHideFlags: 0
