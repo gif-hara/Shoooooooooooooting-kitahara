@@ -208,17 +208,17 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!1 &196136
+--- !u!1 &196562
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 496136}
-  - 114: {fileID: 11496136}
+  - 4: {fileID: 496562}
+  - 114: {fileID: 11496562}
   m_Layer: 0
-  m_Name: '[1859] SetClearedStageType'
+  m_Name: '[1287] SetClearedStageType'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -287,7 +287,7 @@ Transform:
   - {fileID: 400020}
   - {fileID: 400018}
   - {fileID: 400026}
-  - {fileID: 496136}
+  - {fileID: 496562}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &400010
@@ -410,14 +410,14 @@ Transform:
   m_Children: []
   m_Father: {fileID: 400008}
   m_RootOrder: 6
---- !u!4 &496136
+--- !u!4 &496562
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 196136}
+  m_GameObject: {fileID: 196562}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -400, y: 2159, z: 0}
+  m_LocalPosition: {x: -400, y: 1587, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400008}
@@ -654,21 +654,21 @@ MonoBehaviour:
   startEffectType: 0
   endEffectType: 0
   sceneName: Ending
---- !u!114 &11496136
+--- !u!114 &11496562
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 196136}
+  m_GameObject: {fileID: 196562}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff7a2d252c11f4c87af1c186badb22e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cachedTransform: {fileID: 496136}
-  timeLine: 1859
+  cachedTransform: {fileID: 496562}
+  timeLine: 1287
   refActionConditioner: {fileID: 0}
-  type: 6
+  type: 10
 --- !u!114 &11498662
 MonoBehaviour:
   m_ObjectHideFlags: 1
