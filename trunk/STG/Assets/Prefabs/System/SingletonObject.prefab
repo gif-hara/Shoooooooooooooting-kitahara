@@ -219,6 +219,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 453102}
   - 114: {fileID: 11453102}
+  - 114: {fileID: 11476090}
   m_Layer: 0
   m_Name: ObjectPool
   m_TagString: Untagged
@@ -796,6 +797,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d00dca022f56490a8ee026696f34c7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11476090
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 153102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6039534fd5bc06f449bc0a55b8b6c2be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  database:
+  - prefab: {fileID: 100002, guid: 01128dc588fe58c46a0a3de362043c1d, type: 2}
+    poolNumber: 1000
+  - prefab: {fileID: 100004, guid: a8f06ee2a43ebdc49b7ed6a9384c7c89, type: 2}
+    poolNumber: 1000
+  - prefab: {fileID: 100004, guid: 4613779c239a8ee49a98288038e39a17, type: 2}
+    poolNumber: 1000
+  - prefab: {fileID: 100004, guid: 4d30596acd68a6f4da4938fa96fc651b, type: 2}
+    poolNumber: 1000
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
