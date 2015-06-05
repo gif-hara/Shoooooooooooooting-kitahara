@@ -32,7 +32,10 @@ public class ItemCollider : A_Collider, I_Poolable
 			this.cachedFallRadius = this.radius;
 		}
 
-		ReferenceManager.refCollisionManager.AddItemCollider( this );
+        if(ReferenceManager.Instance != null)
+        {
+    		ReferenceManager.refCollisionManager.AddItemCollider( this );
+        }
 		this.collisionFunc = FallCollision;
 		this.enabled = true;
 		this.radius = this.cachedFallRadius;
@@ -40,7 +43,10 @@ public class ItemCollider : A_Collider, I_Poolable
 
 	public void OnReleaseByPool()
 	{
-		ReferenceManager.Instance.refCollisionManager.RemoveItemCollider( this );
+        if(ReferenceManager.Instance != null)
+        {
+    		ReferenceManager.Instance.refCollisionManager.RemoveItemCollider( this );
+        }
 		this.enabled = false;
 	}
 
