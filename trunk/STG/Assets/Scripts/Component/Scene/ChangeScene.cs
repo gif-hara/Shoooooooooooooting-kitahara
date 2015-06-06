@@ -24,6 +24,17 @@ public class ChangeScene : MonoBehaviour
 	[SerializeField]
 	protected string sceneName;
 
+	[SerializeField]
+	private bool isImmediate = false;
+
+	void Start()
+	{
+		if( this.isImmediate )
+		{
+			this.Change();
+		}
+	}
+
 	public void Change()
 	{
 		SceneManager.Instance.Change( startEffectType, endEffectType, sceneName );
