@@ -25,11 +25,13 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 433132}
+  - 114: {fileID: 11479484}
   - 114: {fileID: 11433156}
   - 114: {fileID: 11426432}
   - 114: {fileID: 11426426}
   - 114: {fileID: 11426428}
   - 114: {fileID: 11426430}
+  - 114: {fileID: 11490292}
   m_Layer: 0
   m_Name: Muzzle0
   m_TagString: Untagged
@@ -344,6 +346,51 @@ MonoBehaviour:
     width: 200
     height: -200
   updateInterval: 60
+--- !u!114 &11479484
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 133132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f04e6c0deab3427fb8bad224fa34954, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  refTarget: {fileID: 11433156}
+  isAwakeActiveType: 1
+  isReleaseActiveType: 0
+--- !u!114 &11490292
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 133132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb07c676ecc944385bca1dfe14fe85c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  refCreator: {fileID: 11433156}
+  element:
+    min: 0
+    max: 0
+    current: 0
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 10
+      - time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
 --- !u!114 &11499888
 MonoBehaviour:
   m_ObjectHideFlags: 1
