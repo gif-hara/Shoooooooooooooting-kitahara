@@ -19,6 +19,12 @@ public class FrameRateUtility : A_Singleton<FrameRateUtility>
 		base.Awake();
 		Instance = this;
 	}
+
+	void OnChangeScene()
+	{
+		this.StopAllCoroutines();
+	}
+
 	public static void StartCoroutine( int frame, System.Action func, bool isSafetyReference = false )
 	{
 		FrameRateUtility.Instance._StartCoroutine( frame, func, false, isSafetyReference );
