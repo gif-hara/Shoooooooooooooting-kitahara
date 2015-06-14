@@ -12,15 +12,28 @@ using System.Collections;
 using System.Collections.Generic;
 
 
-public class EnemyShotInitialInterval : MonoBehaviourExtension
+public class EnemyShotInitialInterval : MonoBehaviourExtension, I_Poolable
 {
 	/// <summary>
 	/// 要素.
 	/// </summary>
 	public EnemyShotCreateComponent.Element element;
-	
+
 	public override void Start()
 	{
 		GetComponent<EnemyShotCreator>().interval = element.EvaluteFloorToInt();
+	}
+
+	public void OnAwakeByPool( bool used )
+	{
+		if( used )
+		{
+			this.Start();
+		}
+	}
+
+	public void OnReleaseByPool()
+	{
+
 	}
 }

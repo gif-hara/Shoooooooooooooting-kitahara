@@ -12,7 +12,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 
-public class EnemyShotCreator : GameMonoBehaviour, I_MuzzleEventActinable
+public class EnemyShotCreator : GameMonoBehaviour, I_MuzzleEventActinable, I_Poolable
 {
 	/// <summary>
 	/// ショットID.
@@ -117,6 +117,18 @@ public class EnemyShotCreator : GameMonoBehaviour, I_MuzzleEventActinable
 		gameObject.SendMessageUpwards( GameDefine.EnemyShotCreatorFreezeMessage, SendMessageOptions.DontRequireReceiver );
 	}
 
+	public void OnAwakeByPool( bool used )
+	{
+		this.currentInterval = 0;
+		this.sleepFrame = 0;
+		this.totalShotCount = 0;
+	}
+
+	public void OnReleaseByPool()
+	{
+
+	}
+
 	/// <summary>
 	/// 強制的に弾を発射させる.
 	/// </summary>
@@ -144,7 +156,7 @@ public class EnemyShotCreator : GameMonoBehaviour, I_MuzzleEventActinable
 		this.interval = interval;
 		gameObject.SendMessageUpwards( GameDefine.EnemyShotCreatorFreezeMessage, SendMessageOptions.DontRequireReceiver );
 	}
-	
+
 	public int Sleep
 	{
 		set

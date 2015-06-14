@@ -26,7 +26,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 433132}
   - 114: {fileID: 11433156}
-  - 114: {fileID: 11426426}
   - 114: {fileID: 11456142}
   m_Layer: 0
   m_Name: Muzzle0
@@ -161,39 +160,6 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   prefabExplosion: {fileID: 100002, guid: 01128dc588fe58c46a0a3de362043c1d, type: 2}
   notRemove: 0
---- !u!114 &11426426
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 133132}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b329a0e87c477b4419c99f849669c54d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cachedTransform: {fileID: 0}
-  setType: 0
-  enableTuning: 1
-  element:
-    min: 1
-    max: 1
-    current: 0
-    curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 0
-        inSlope: 1
-        outSlope: 1
-        tangentMode: 10
-      - time: 1
-        value: 1
-        inSlope: 1
-        outSlope: 1
-        tangentMode: 10
-      m_PreInfinity: 2
-      m_PostInfinity: 2
 --- !u!114 &11433156
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -208,7 +174,7 @@ MonoBehaviour:
   cachedTransform: {fileID: 0}
   shotId: 21
   speed: 3
-  interval: 0
+  interval: 1
   number: 2
   range: 180
   multipleNum: 1
