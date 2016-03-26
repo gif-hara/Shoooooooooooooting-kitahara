@@ -32,7 +32,7 @@ public class TweenTextureScale : MonoBehaviour
 
 	void Start ()
 	{
-		refMaterial = renderer.material;
+		refMaterial = GetComponent<Renderer>().material;
 		trans = transform;
 	}
 	

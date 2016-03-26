@@ -27,7 +27,7 @@ class CameraMotionBlurEditor extends Editor
 		
     filterType = serObj.FindProperty ("filterType");
 
-    preview = serObj.FindProperty ("preview");
+//    preview = serObj.FindProperty ("preview");
     previewScale = serObj.FindProperty ("previewScale");
 
     movementScale = serObj.FindProperty ("movementScale");
@@ -88,9 +88,9 @@ class CameraMotionBlurEditor extends Editor
 
     EditorGUILayout.Separator ();
 
-    EditorGUILayout.PropertyField (preview, new GUIContent("Preview"));
-    if (preview.boolValue)
-      EditorGUILayout.PropertyField (previewScale, new GUIContent(" Preview Scale"));    
+//    EditorGUILayout.PropertyField (preview, new GUIContent("Preview"));
+//    if (preview.boolValue)
+//      EditorGUILayout.PropertyField (previewScale, new GUIContent(" Preview Scale"));    
         	
     serObj.ApplyModifiedProperties();
     }

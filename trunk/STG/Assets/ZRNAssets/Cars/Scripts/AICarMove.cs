@@ -29,7 +29,7 @@ public class AICarMove : MonoBehaviour {
 	public void InitAICar () {
 
 		navMeshAgentCompornent.speed = 0.0f;
-		targetAICar.animation.Play("00_Stop");
+		targetAICar.GetComponent<Animation>().Play("00_Stop");
 		StartCoroutine(startCar(3.0f));
 
 	}
@@ -37,7 +37,7 @@ public class AICarMove : MonoBehaviour {
 	IEnumerator startCar (float startDelayTime) {
 
 		navMeshAgentCompornent.speed = 0.0f;
-		targetAICar.animation.Play("00_Stop");
+		targetAICar.GetComponent<Animation>().Play("00_Stop");
 		yield return new WaitForSeconds(startDelayTime);
 
 		// Set destination
@@ -48,7 +48,7 @@ public class AICarMove : MonoBehaviour {
 
 		yield return new WaitForSeconds(0.5f);
 		navMeshAgentCompornent.speed = CAR_SPEED_MAX;
-		targetAICar.animation.Play("01_Run");
+		targetAICar.GetComponent<Animation>().Play("01_Run");
 
 	}
 

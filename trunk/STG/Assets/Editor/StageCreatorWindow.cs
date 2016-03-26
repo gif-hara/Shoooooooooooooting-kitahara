@@ -279,7 +279,7 @@ public class StageCreatorWindow : A_EditorWindowBase
 		}
 		if( GUI.Button( new Rect( leftMenuWidthNum + 12 + actionableButtonWidth + 20, buttonY, 20, 20 ), "C" ) )
 		{
-			var copy = Instantiate( actionableObject ) as GameObject;
+			var copy = Instantiate( actionableObject.gameObject ) as GameObject;
 			copy.transform.parent = StageManager.transform;
 		}
 		if( GUI.Button( new Rect( leftMenuWidthNum + 12 + actionableButtonWidth + 20 + 20, buttonY, 20, 20 ), "D" ) )

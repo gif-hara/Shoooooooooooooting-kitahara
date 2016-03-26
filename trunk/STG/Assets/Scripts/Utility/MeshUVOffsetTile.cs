@@ -73,7 +73,7 @@ public class MeshUVOffsetTile : MonoBehaviourExtension, I_Poolable
 						ObjectPool.Instance.ReleaseGameObject( refDestroyObject );
 					}
 				}
-				this.refMesh.renderer.enabled = false;
+				this.refMesh.GetComponent<Renderer>().enabled = false;
 				this.enabled = false;
 			}
 			UpdateUv();
@@ -85,7 +85,7 @@ public class MeshUVOffsetTile : MonoBehaviourExtension, I_Poolable
 
 	public void OnAwakeByPool( bool used )
 	{
-		this.refMesh.renderer.enabled = true;
+		this.refMesh.GetComponent<Renderer>().enabled = true;
 		this.enabled = true;
 		this.offset = this.initialOffset;
 		this.refMesh.gameObject.SetActive( true );

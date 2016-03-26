@@ -54,19 +54,19 @@ public class AmbientController : MonoBehaviour {
 
 		if (skyNumber == AmbientType.AMBIENT_SKYBOX_SUNNY)
 		{
-			lightObject.light.intensity = 0.5f;
+			lightObject.GetComponent<Light>().intensity = 0.5f;
 			spotLightObject.SetActive(false);
 			changeShadow(true);
 		}
 		else if (skyNumber == AmbientType.AMBIENT_SKYBOX_CLOUD)
 		{
-			lightObject.light.intensity = 0.3f;
+			lightObject.GetComponent<Light>().intensity = 0.3f;
 			spotLightObject.SetActive(false);
 			changeShadow(true);
 		}
 		else if (skyNumber == AmbientType.AMBIENT_SKYBOX_NIGHT)
 		{
-			lightObject.light.intensity = 0.1f;
+			lightObject.GetComponent<Light>().intensity = 0.1f;
 			spotLightObject.SetActive(true);
 			changeShadow(false);
 		}
@@ -77,11 +77,11 @@ public class AmbientController : MonoBehaviour {
 
 		if (shadowOn == true)
 		{
-			lightObject.light.shadows = LightShadows.Soft;
+			lightObject.GetComponent<Light>().shadows = LightShadows.Soft;
 		}
 		else
 		{
-			lightObject.light.shadows = LightShadows.None;
+			lightObject.GetComponent<Light>().shadows = LightShadows.None;
 		}
 
 	}

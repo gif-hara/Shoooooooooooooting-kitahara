@@ -82,13 +82,13 @@ public class QueryAnimationController : MonoBehaviour {
 		
 
 		List<string> targetAnimations = new List<string>();
-		foreach (AnimationState targetState in queryBodyParts.animation)
+		foreach (AnimationState targetState in queryBodyParts.GetComponent<Animation>())
 		{
 			targetAnimations.Add(targetState.name);
 		}
 		targetAnimations.Sort();
 
-		queryBodyParts.animation.CrossFade(targetAnimations[(int)animNumber]);
+		queryBodyParts.GetComponent<Animation>().CrossFade(targetAnimations[(int)animNumber]);
 
 	}
 

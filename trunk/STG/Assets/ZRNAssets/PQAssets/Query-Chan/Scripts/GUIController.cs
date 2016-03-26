@@ -95,13 +95,13 @@ public class GUIController : MonoBehaviour {
 		{
 			if (cameraUp == true)
 			{
-				CameraObj.camera.fieldOfView = 60;
+				CameraObj.GetComponent<Camera>().fieldOfView = 60;
 				CameraObj.transform.localPosition = new Vector3(PosDefault.x, PosDefault.y, PosDefault.z);
 				cameraUp = false;
 			}
 			else
 			{
-				CameraObj.camera.fieldOfView = 25;
+				CameraObj.GetComponent<Camera>().fieldOfView = 25;
 				CameraObj.transform.localPosition = new Vector3(PosDefault.x, PosDefault.y + 0.5f, PosDefault.z);
 				cameraUp = true;
 			}

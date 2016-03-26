@@ -434,7 +434,7 @@ public class StageTimeLineCreateEnemyEditor : A_StageTimeLineActionEditor<StageT
 	{
 		get
 		{
-			var prefab = Resources.LoadAssetAtPath<GameObject>( string.Format( "Assets/Prefabs/Enemy/Enemy{0}.prefab", Target.enemyId ) );
+			var prefab = AssetDatabase.LoadAssetAtPath<GameObject>( string.Format( "Assets/Prefabs/Enemy/Enemy{0}.prefab", Target.enemyId ) );
 			return prefab.GetComponent<EnemyController>();
 		}
 	}

@@ -56,7 +56,7 @@ public class TextureOffsetAnimationTile : MonoBehaviour
 	// Use this for initialization
 	void Start()
 	{
-		myMaterial = renderer.material;
+		myMaterial = GetComponent<Renderer>().material;
 		myMaterial.mainTextureScale = new Vector2( 1.0f / tileX, 1.0f / tileY );
 		UpdateOffset();
 	}

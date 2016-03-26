@@ -8,6 +8,7 @@
 */
 /*===========================================================================*/
 using UnityEngine;
+using UnityEngine.Assertions;
 using System.Collections;
 using System.Collections.Generic;
 using System;
@@ -27,7 +28,7 @@ public class ObjectMoveUtility
 	{
 		var obj = new GameObject( data.ToString() );
 		obj.transform.parent = parent;
-		A_ObjectMove moveComponent = obj.AddComponent( data.moveType.ToString() ) as A_ObjectMove;
+		var moveComponent = AddComponent(obj, data.moveType);
 		moveComponent.InitData( data );
 		
 		return moveComponent;
@@ -93,5 +94,28 @@ public class ObjectMoveUtility
 		});
 
 		return list;
+	}
+
+	public static A_ObjectMove AddComponent(GameObject obj, MoveType moveType)
+	{
+		if(moveType == MoveType.ObjectMoveTween)
+		{
+			return obj.AddComponent<ObjectMoveTween>();
+		}
+		else if(moveType == MoveType.ObjectMoveChasePlayer)
+		{
+			return obj.AddComponent<ObjectMoveChasePlayer>();
+		}
+		else if(moveType == MoveType.ObjectMoveITweenPath)
+		{
+			return obj.AddComponent<ObjectMoveITweenPath>();
+		}
+		else if(moveType == MoveType.ObjectMoveRandomRect)
+		{
+			return obj.AddComponent<ObjectMoveRandomRect>();
+		}
+
+		Assert.IsTrue(false, "不正な値です. moveType = " + moveType.ToString());
+		return null;
 	}
 }

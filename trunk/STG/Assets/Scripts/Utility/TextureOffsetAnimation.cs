@@ -32,7 +32,7 @@ public class TextureOffsetAnimation : MonoBehaviour
 	// Use this for initialization
 	void Start()
 	{
-		myMaterial = renderer.material;
+		myMaterial = GetComponent<Renderer>().material;
 	}
 
 	// Update is called once per frame

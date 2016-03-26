@@ -64,9 +64,9 @@ public class DamageEventTextureFlash : GameMonoBehaviour, I_DamageEvent
 		refRendererList.Clear();
 		refEnemy.Trans.AllVisit( (t) =>
 		{
-			if( t.renderer != null )
+			if( t.GetComponent<Renderer>() != null )
 			{
-				refRendererList.Add( t.renderer );
+				refRendererList.Add( t.GetComponent<Renderer>() );
 			}
 		});
 	}

@@ -112,6 +112,7 @@ public class EnemyController : EnemyControllerBase
 	/// </summary>
 	private const float AddSpecialPoint = 0.5f;
 
+#if UNITY_EDITOR
 	[ContextMenu( "Add Texture Event" )]
 	void AddTextureEvent()
 	{
@@ -127,7 +128,7 @@ public class EnemyController : EnemyControllerBase
 		textureFlashEvent.SelectEnemy( this );
 		textureFlashEvent.AllSelect();
 	}
-
+		
 	[ContextMenu( "Add Shadow" )]
 	void AddShadow()
 	{
@@ -139,8 +140,8 @@ public class EnemyController : EnemyControllerBase
 				if( t.gameObject.GetComponent<ShadowCreator>() == null )
 				{
 					var shadowCreater = t.gameObject.AddComponent<ShadowCreator>();
-					var originalMaterial = t.renderer.sharedMaterial;
-					var shadowMaterial = Resources.LoadAssetAtPath<Material>( "Assets/DataSources/Material/" + originalMaterial.name + "Shadow.mat" );
+					var originalMaterial = t.GetComponent<Renderer>().sharedMaterial;
+					var shadowMaterial = UnityEditor.AssetDatabase.LoadAssetAtPath<Material>( "Assets/DataSources/Material/" + originalMaterial.name + "Shadow.mat" );
 					shadowCreater.SetShadowMaterial( shadowMaterial );
 					Debug.Log( "Create Shadow " + originalMaterial.name );
 				}
@@ -168,6 +169,7 @@ public class EnemyController : EnemyControllerBase
 			}
 		});
 	}
+#endif
 
 	public override void Awake()
 	{

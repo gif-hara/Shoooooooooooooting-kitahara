@@ -91,23 +91,23 @@ public class QuerySoundController : MonoBehaviour {
 	
 	public void PlaySoundByType (QueryChanSoundType soundNumber) {
 
-		this.audio.Stop();
-		this.audio.PlayOneShot(soundData[(int)soundNumber]);
+		this.GetComponent<AudioSource>().Stop();
+		this.GetComponent<AudioSource>().PlayOneShot(soundData[(int)soundNumber]);
 		
 	}
 
 
 	public void PlaySoundByNumber (int soundNumber) {
 		
-		this.audio.Stop();
-		this.audio.PlayOneShot(soundData[soundNumber]);
+		this.GetComponent<AudioSource>().Stop();
+		this.GetComponent<AudioSource>().PlayOneShot(soundData[soundNumber]);
 		
 	}
 
 
 	public void StopSound () {
 
-		this.audio.Stop();
+		this.GetComponent<AudioSource>().Stop();
 		
 	}
 	
