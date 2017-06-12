@@ -1,3 +1,5 @@
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
 // Upgrade NOTE: replaced 'glstate.matrix.mvp' with 'UNITY_MATRIX_MVP'
 
 // Original shader by cboe - Mar, 23, 2009 
@@ -46,6 +48,6 @@ void computeWave (inout appdata_full v, inout v2f o)
 //	v.vertex.x+=sin(t*1.45+sinOff)*fx*0.5; 
 //	v.vertex.y=(sin(t*3.12+sinOff)*fx*0.5); 
 //	v.vertex.z-=(sin(t*2.2+sinOff)*fx*0.2); 
-	o.pos = mul( UNITY_MATRIX_MVP, v.vertex ); 
+	o.pos = UnityObjectToClipPos( v.vertex ); 
 	o.uv = v.texcoord;
 }

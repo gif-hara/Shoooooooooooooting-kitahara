@@ -13,13 +13,13 @@ public class AICarMove : MonoBehaviour {
 	Vector3 startPos;
 	Vector3 startRot;
 
-	NavMeshAgent navMeshAgentCompornent;
+	UnityEngine.AI.NavMeshAgent navMeshAgentCompornent;
 	const float CAR_SPEED_MAX = 1.0f;
 
 	// Use this for initialization
 	void Start () {
 
-		navMeshAgentCompornent = this.GetComponent<NavMeshAgent>();
+		navMeshAgentCompornent = this.GetComponent<UnityEngine.AI.NavMeshAgent>();
 		startPos = targetNavMeshObjects[0].transform.localPosition;
 		startRot = targetNavMeshObjects[0].transform.localEulerAngles;
 		targetNavMeshObjectCounts = targetNavMeshObjects.Length -1;
